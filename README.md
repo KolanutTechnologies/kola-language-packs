@@ -5,11 +5,69 @@
 **Public open-source package** · Apache 2.0 · [Kolanut Technologies Ltd](https://kolacode.africa)
 
 [![npm](https://img.shields.io/npm/v/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)
-[![npm downloads](https://img.shields.io/npm/dw/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)
 
 Language packs for African-language programming: a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **JavaScript, Python, TypeScript, Go, and Rust**.
 
 If you’re building an editor, a transpiler, a linter, or a learning tool, this repo is the shared “source of truth”.
+
+Africa-first:
+
+<p>
+  <img alt="Algeria" src="https://flagcdn.com/16x12/dz.png" width="16" height="12" />
+  <img alt="Angola" src="https://flagcdn.com/16x12/ao.png" width="16" height="12" />
+  <img alt="Benin" src="https://flagcdn.com/16x12/bj.png" width="16" height="12" />
+  <img alt="Botswana" src="https://flagcdn.com/16x12/bw.png" width="16" height="12" />
+  <img alt="Burkina Faso" src="https://flagcdn.com/16x12/bf.png" width="16" height="12" />
+  <img alt="Burundi" src="https://flagcdn.com/16x12/bi.png" width="16" height="12" />
+  <img alt="Cabo Verde" src="https://flagcdn.com/16x12/cv.png" width="16" height="12" />
+  <img alt="Cameroon" src="https://flagcdn.com/16x12/cm.png" width="16" height="12" />
+  <img alt="Central African Republic" src="https://flagcdn.com/16x12/cf.png" width="16" height="12" />
+  <img alt="Chad" src="https://flagcdn.com/16x12/td.png" width="16" height="12" />
+  <img alt="Comoros" src="https://flagcdn.com/16x12/km.png" width="16" height="12" />
+  <img alt="Congo (Republic)" src="https://flagcdn.com/16x12/cg.png" width="16" height="12" />
+  <img alt="Congo (DRC)" src="https://flagcdn.com/16x12/cd.png" width="16" height="12" />
+  <img alt="Djibouti" src="https://flagcdn.com/16x12/dj.png" width="16" height="12" />
+  <img alt="Egypt" src="https://flagcdn.com/16x12/eg.png" width="16" height="12" />
+  <img alt="Equatorial Guinea" src="https://flagcdn.com/16x12/gq.png" width="16" height="12" />
+  <img alt="Eritrea" src="https://flagcdn.com/16x12/er.png" width="16" height="12" />
+  <img alt="Eswatini" src="https://flagcdn.com/16x12/sz.png" width="16" height="12" />
+  <img alt="Ethiopia" src="https://flagcdn.com/16x12/et.png" width="16" height="12" />
+  <img alt="Gabon" src="https://flagcdn.com/16x12/ga.png" width="16" height="12" />
+  <img alt="Gambia" src="https://flagcdn.com/16x12/gm.png" width="16" height="12" />
+  <img alt="Ghana" src="https://flagcdn.com/16x12/gh.png" width="16" height="12" />
+  <img alt="Guinea" src="https://flagcdn.com/16x12/gn.png" width="16" height="12" />
+  <img alt="Guinea-Bissau" src="https://flagcdn.com/16x12/gw.png" width="16" height="12" />
+  <img alt="Ivory Coast" src="https://flagcdn.com/16x12/ci.png" width="16" height="12" />
+  <img alt="Kenya" src="https://flagcdn.com/16x12/ke.png" width="16" height="12" />
+  <img alt="Lesotho" src="https://flagcdn.com/16x12/ls.png" width="16" height="12" />
+  <img alt="Liberia" src="https://flagcdn.com/16x12/lr.png" width="16" height="12" />
+  <img alt="Libya" src="https://flagcdn.com/16x12/ly.png" width="16" height="12" />
+  <img alt="Madagascar" src="https://flagcdn.com/16x12/mg.png" width="16" height="12" />
+  <img alt="Malawi" src="https://flagcdn.com/16x12/mw.png" width="16" height="12" />
+  <img alt="Mali" src="https://flagcdn.com/16x12/ml.png" width="16" height="12" />
+  <img alt="Mauritania" src="https://flagcdn.com/16x12/mr.png" width="16" height="12" />
+  <img alt="Mauritius" src="https://flagcdn.com/16x12/mu.png" width="16" height="12" />
+  <img alt="Morocco" src="https://flagcdn.com/16x12/ma.png" width="16" height="12" />
+  <img alt="Mozambique" src="https://flagcdn.com/16x12/mz.png" width="16" height="12" />
+  <img alt="Namibia" src="https://flagcdn.com/16x12/na.png" width="16" height="12" />
+  <img alt="Niger" src="https://flagcdn.com/16x12/ne.png" width="16" height="12" />
+  <img alt="Nigeria" src="https://flagcdn.com/16x12/ng.png" width="16" height="12" />
+  <img alt="Rwanda" src="https://flagcdn.com/16x12/rw.png" width="16" height="12" />
+  <img alt="São Tomé and Príncipe" src="https://flagcdn.com/16x12/st.png" width="16" height="12" />
+  <img alt="Senegal" src="https://flagcdn.com/16x12/sn.png" width="16" height="12" />
+  <img alt="Seychelles" src="https://flagcdn.com/16x12/sc.png" width="16" height="12" />
+  <img alt="Sierra Leone" src="https://flagcdn.com/16x12/sl.png" width="16" height="12" />
+  <img alt="Somalia" src="https://flagcdn.com/16x12/so.png" width="16" height="12" />
+  <img alt="South Africa" src="https://flagcdn.com/16x12/za.png" width="16" height="12" />
+  <img alt="South Sudan" src="https://flagcdn.com/16x12/ss.png" width="16" height="12" />
+  <img alt="Sudan" src="https://flagcdn.com/16x12/sd.png" width="16" height="12" />
+  <img alt="Tanzania" src="https://flagcdn.com/16x12/tz.png" width="16" height="12" />
+  <img alt="Togo" src="https://flagcdn.com/16x12/tg.png" width="16" height="12" />
+  <img alt="Tunisia" src="https://flagcdn.com/16x12/tn.png" width="16" height="12" />
+  <img alt="Uganda" src="https://flagcdn.com/16x12/ug.png" width="16" height="12" />
+  <img alt="Zambia" src="https://flagcdn.com/16x12/zm.png" width="16" height="12" />
+  <img alt="Zimbabwe" src="https://flagcdn.com/16x12/zw.png" width="16" height="12" />
+</p>
 
 ## Why this exists (the gap we’re filling)
 
