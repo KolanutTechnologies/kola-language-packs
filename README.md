@@ -1,4 +1,6 @@
-![@kolanut/language-packs](./assets/banner.svg)
+<p align="center">
+  <img alt="@kolanut/language-packs" src="./assets/banner.svg" />
+</p>
 
 # @kolanut/language-packs
 
@@ -94,7 +96,9 @@ The data lives under [`packs/`](./packs/). The package published to npm is `@kol
 
 ## How it fits together
 
-![Architecture diagram](./assets/architecture.svg)
+<p>
+  <img alt="Architecture diagram" src="./assets/architecture.svg" />
+</p>
 
 <!-- metrics:start -->
 
@@ -277,7 +281,9 @@ Full guide: [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ### Contribution flow (visual)
 
-![Contribution flow diagram](./assets/contributing-flow.svg)
+<p>
+  <img alt="Contribution flow diagram" src="./assets/contributing-flow.svg" />
+</p>
 
 ## Contributors
 

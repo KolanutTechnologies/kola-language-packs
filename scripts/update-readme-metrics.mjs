@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -8,7 +8,6 @@ const README_PATH = join(root, 'README.md');
 const COVERAGE_PATH = join(root, 'packs', 'coverage-summary.json');
 const ROADMAP_PATH = join(root, 'packs', 'languages-roadmap.json');
 const TOKENS_PATH = join(root, 'packs', 'logical-tokens.json');
-const BADGES_DIR = join(root, 'badges');
 
 const START = '<!-- metrics:start -->';
 const END = '<!-- metrics:end -->';
@@ -35,48 +34,6 @@ function buildMetricsBlock({ shippedPacks, plannedPacks, shippedTargets, planned
     '',
     END,
   ].join('\n');
-}
-
-function badge({ label, message, color }) {
-  return {
-    schemaVersion: 1,
-    label,
-    message,
-    color,
-  };
-}
-
-async function writeBadges({ shippedPacks, shippedTargets, plannedPacks, plannedTargets, tokenCount, gapCount }) {
-  await mkdir(BADGES_DIR, { recursive: true });
-
-  const badges = {
-    'packs.json': badge({
-      label: 'packs',
-      message: `${shippedPacks} shipped (+${plannedPacks})`,
-      color: '#2563eb',
-    }),
-    'targets.json': badge({
-      label: 'targets',
-      message: `${shippedTargets} shipped (+${plannedTargets})`,
-      color: '#7c3aed',
-    }),
-    'tokens.json': badge({
-      label: 'logical tokens',
-      message: `${tokenCount}`,
-      color: '#0ea5e9',
-    }),
-    'coverage.json': badge({
-      label: 'coverage',
-      message: gapCount === 0 ? '0 gaps' : `${gapCount} gap(s)`,
-      color: gapCount === 0 ? '#16a34a' : '#dc2626',
-    }),
-  };
-
-  await Promise.all(
-    Object.entries(badges).map(([name, json]) =>
-      writeFile(join(BADGES_DIR, name), JSON.stringify(json, null, 2) + '\n', 'utf8'),
-    ),
-  );
 }
 
 async function main() {
@@ -117,15 +74,6 @@ async function main() {
     gapCount,
   });
 
-  await writeBadges({
-    shippedPacks,
-    plannedPacks,
-    shippedTargets,
-    plannedTargets,
-    tokenCount,
-    gapCount,
-  });
-
   const hasMarkers = readme.includes(START) && readme.includes(END);
   let updated;
   if (hasMarkers) {
@@ -144,7 +92,7 @@ async function main() {
 
   await writeFile(README_PATH, updated, 'utf8');
   // eslint-disable-next-line no-console
-  console.log('README metrics updated (and badges written).');
+  console.log('README metrics updated.');
 }
 
 main().catch((err) => {
