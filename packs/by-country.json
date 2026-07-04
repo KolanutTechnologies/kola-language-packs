@@ -1,0 +1,183 @@
+{
+  "version": "0.1.0",
+  "byCountry": {
+    "NG": [
+      "fulfulde",
+      "hausa",
+      "igbo",
+      "nigerian-pidgin",
+      "yoruba"
+    ],
+    "BJ": [
+      "french",
+      "yoruba"
+    ],
+    "TG": [
+      "french",
+      "yoruba"
+    ],
+    "NE": [
+      "french",
+      "fulfulde",
+      "hausa"
+    ],
+    "GH": [
+      "hausa",
+      "twi"
+    ],
+    "SD": [
+      "arabic",
+      "hausa"
+    ],
+    "KE": [
+      "oromo",
+      "somali",
+      "swahili"
+    ],
+    "TZ": [
+      "swahili"
+    ],
+    "UG": [
+      "luganda",
+      "swahili"
+    ],
+    "CD": [
+      "french",
+      "lingala",
+      "swahili"
+    ],
+    "RW": [
+      "french",
+      "kinyarwanda",
+      "swahili"
+    ],
+    "ET": [
+      "amharic",
+      "oromo",
+      "somali",
+      "tigrinya"
+    ],
+    "ZA": [
+      "afrikaans",
+      "sesotho",
+      "setswana",
+      "xhosa",
+      "zulu"
+    ],
+    "SO": [
+      "arabic",
+      "somali"
+    ],
+    "DJ": [
+      "arabic",
+      "french",
+      "somali"
+    ],
+    "SN": [
+      "bambara",
+      "french",
+      "fulfulde",
+      "wolof"
+    ],
+    "GM": [
+      "fulfulde",
+      "wolof"
+    ],
+    "MR": [
+      "arabic",
+      "french",
+      "wolof"
+    ],
+    "CG": [
+      "french",
+      "lingala"
+    ],
+    "ZW": [
+      "shona"
+    ],
+    "ER": [
+      "tigrinya"
+    ],
+    "NA": [
+      "afrikaans",
+      "setswana"
+    ],
+    "EG": [
+      "arabic"
+    ],
+    "LY": [
+      "arabic"
+    ],
+    "TN": [
+      "arabic"
+    ],
+    "DZ": [
+      "arabic"
+    ],
+    "MA": [
+      "arabic"
+    ],
+    "KM": [
+      "arabic",
+      "french"
+    ],
+    "CI": [
+      "bambara",
+      "french"
+    ],
+    "ML": [
+      "bambara",
+      "french",
+      "fulfulde"
+    ],
+    "BF": [
+      "bambara",
+      "french",
+      "fulfulde"
+    ],
+    "CM": [
+      "french",
+      "fulfulde"
+    ],
+    "GA": [
+      "french"
+    ],
+    "MG": [
+      "french"
+    ],
+    "BI": [
+      "french"
+    ],
+    "TD": [
+      "french"
+    ],
+    "CF": [
+      "french"
+    ],
+    "GN": [
+      "french",
+      "fulfulde"
+    ],
+    "LS": [
+      "sesotho"
+    ],
+    "BW": [
+      "setswana"
+    ],
+    "AO": [
+      "portuguese-africa"
+    ],
+    "MZ": [
+      "portuguese-africa"
+    ],
+    "CV": [
+      "portuguese-africa"
+    ],
+    "GW": [
+      "portuguese-africa"
+    ],
+    "ST": [
+      "portuguese-africa"
+    ]
+  }
+}

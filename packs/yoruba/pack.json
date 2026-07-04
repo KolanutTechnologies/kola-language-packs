@@ -1,0 +1,363 @@
+{
+  "name": "yoruba",
+  "languageCode": "yo",
+  "locale": "yo-NG",
+  "countries": [
+    "NG",
+    "BJ",
+    "TG"
+  ],
+  "regions": [
+    "West Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Yorùbá",
+  "description": "Yoruba keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "ṣé",
+      "if"
+    ],
+    "ELSE": [
+      "bẹ́ẹ̀kọ́",
+      "else"
+    ],
+    "FOR": [
+      "fun",
+      "for"
+    ],
+    "WHILE": [
+      "nígbà tí",
+      "while"
+    ],
+    "BREAK": [
+      "dá",
+      "break"
+    ],
+    "CONTINUE": [
+      "tẹ̀síwájú",
+      "continue"
+    ],
+    "SWITCH": [
+      "yàn",
+      "switch"
+    ],
+    "CASE": [
+      "ìpò",
+      "case"
+    ],
+    "DEFAULT": [
+      "àìyípadà",
+      "default"
+    ],
+    "FUNCTION": [
+      "iṣẹ",
+      "function"
+    ],
+    "RETURN": [
+      "padà",
+      "return"
+    ],
+    "ASYNC": [
+      "nígbà",
+      "async"
+    ],
+    "AWAIT": [
+      "dúró",
+      "await"
+    ],
+    "TRY": [
+      "gbìyànjú",
+      "try"
+    ],
+    "CATCH": [
+      "tì",
+      "catch"
+    ],
+    "FINALLY": [
+      "ìparí",
+      "finally"
+    ],
+    "THROW": [
+      "jù",
+      "throw"
+    ],
+    "LET": [
+      "jẹ́ kí",
+      "let"
+    ],
+    "CONST": [
+      "àìyípadà",
+      "const"
+    ],
+    "CLASS": [
+      "ìlò",
+      "class"
+    ],
+    "EXTENDS": [
+      "ṣe àfikún",
+      "extends"
+    ],
+    "NEW": [
+      "tuntun",
+      "new"
+    ],
+    "THIS": [
+      "èyí",
+      "this"
+    ],
+    "IMPORT": [
+      "gba",
+      "import"
+    ],
+    "EXPORT": [
+      "fi sílẹ̀",
+      "export"
+    ],
+    "PRINT": [
+      "ìfìdísílẹ̀",
+      "print"
+    ],
+    "TRUE": [
+      "ìtọ́",
+      "true"
+    ],
+    "FALSE": [
+      "ìtàn",
+      "false"
+    ],
+    "NULL": [
+      "ohun kan",
+      "null"
+    ],
+    "UNDEFINED": [
+      "àìfìdíò",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Nigeria-focused Yorùbá. Benin and Togo variants welcome as aliases, not separate national forms in one PR.",
+  "recommendedPartners": [
+    "ALT-I",
+    "ACALAN",
+    "CASAS",
+    "University of Ibadan (Linguistics)"
+  ]
+}

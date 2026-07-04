@@ -1,0 +1,424 @@
+{
+  "generatedAt": "2026-07-04T01:48:53.716Z",
+  "logicalTokenCount": 99,
+  "africanLanguagePackCount": 25,
+  "transpileTargets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "perTarget": {
+    "javascript": {
+      "officialKeywordCount": 38,
+      "mappedCount": 37,
+      "structuralCount": 1,
+      "gapCount": 0,
+      "gaps": []
+    },
+    "python": {
+      "officialKeywordCount": 39,
+      "mappedCount": 38,
+      "structuralCount": 1,
+      "gapCount": 0,
+      "gaps": []
+    },
+    "typescript": {
+      "officialKeywordCount": 64,
+      "mappedCount": 63,
+      "structuralCount": 1,
+      "gapCount": 0,
+      "gaps": []
+    },
+    "go": {
+      "officialKeywordCount": 25,
+      "mappedCount": 25,
+      "structuralCount": 0,
+      "gapCount": 0,
+      "gaps": []
+    },
+    "rust": {
+      "officialKeywordCount": 39,
+      "mappedCount": 38,
+      "structuralCount": 1,
+      "gapCount": 0,
+      "gaps": []
+    }
+  },
+  "africanLanguages": [
+    {
+      "name": "yoruba",
+      "displayName": "Yorùbá",
+      "languageCode": "yo",
+      "locale": "yo-NG",
+      "countries": [
+        "NG",
+        "BJ",
+        "TG"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "nigerian-pidgin",
+      "displayName": "Nigerian Pidgin",
+      "languageCode": "pcm",
+      "locale": "pcm-NG",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "hausa",
+      "displayName": "Hausa",
+      "languageCode": "ha",
+      "locale": "ha-NG",
+      "countries": [
+        "NG",
+        "NE",
+        "GH",
+        "SD"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "igbo",
+      "displayName": "Igbo",
+      "languageCode": "ig",
+      "locale": "ig-NG",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "swahili",
+      "displayName": "Swahili",
+      "languageCode": "sw",
+      "locale": "sw-KE",
+      "countries": [
+        "KE",
+        "TZ",
+        "UG",
+        "CD",
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ]
+    },
+    {
+      "name": "amharic",
+      "displayName": "Amharic",
+      "languageCode": "am",
+      "locale": "am-ET",
+      "countries": [
+        "ET"
+      ],
+      "regions": [
+        "East Africa"
+      ]
+    },
+    {
+      "name": "zulu",
+      "displayName": "isiZulu",
+      "languageCode": "zu",
+      "locale": "zu-ZA",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ]
+    },
+    {
+      "name": "xhosa",
+      "displayName": "isiXhosa",
+      "languageCode": "xh",
+      "locale": "xh-ZA",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ]
+    },
+    {
+      "name": "twi",
+      "displayName": "Twi",
+      "languageCode": "tw",
+      "locale": "tw-GH",
+      "countries": [
+        "GH"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "somali",
+      "displayName": "Somali",
+      "languageCode": "so",
+      "locale": "so-SO",
+      "countries": [
+        "SO",
+        "ET",
+        "KE",
+        "DJ"
+      ],
+      "regions": [
+        "Horn of Africa"
+      ]
+    },
+    {
+      "name": "wolof",
+      "displayName": "Wolof",
+      "languageCode": "wo",
+      "locale": "wo-SN",
+      "countries": [
+        "SN",
+        "GM",
+        "MR"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "lingala",
+      "displayName": "Lingala",
+      "languageCode": "ln",
+      "locale": "ln-CD",
+      "countries": [
+        "CD",
+        "CG"
+      ],
+      "regions": [
+        "Central Africa"
+      ]
+    },
+    {
+      "name": "kinyarwanda",
+      "displayName": "Kinyarwanda",
+      "languageCode": "rw",
+      "locale": "rw-RW",
+      "countries": [
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ]
+    },
+    {
+      "name": "luganda",
+      "displayName": "Luganda",
+      "languageCode": "lg",
+      "locale": "lg-UG",
+      "countries": [
+        "UG"
+      ],
+      "regions": [
+        "East Africa"
+      ]
+    },
+    {
+      "name": "shona",
+      "displayName": "Shona",
+      "languageCode": "sn",
+      "locale": "sn-ZW",
+      "countries": [
+        "ZW"
+      ],
+      "regions": [
+        "Southern Africa"
+      ]
+    },
+    {
+      "name": "oromo",
+      "displayName": "Oromo",
+      "languageCode": "om",
+      "locale": "om-ET",
+      "countries": [
+        "ET",
+        "KE"
+      ],
+      "regions": [
+        "East Africa"
+      ]
+    },
+    {
+      "name": "tigrinya",
+      "displayName": "Tigrinya",
+      "languageCode": "ti",
+      "locale": "ti-ER",
+      "countries": [
+        "ER",
+        "ET"
+      ],
+      "regions": [
+        "East Africa"
+      ]
+    },
+    {
+      "name": "afrikaans",
+      "displayName": "Afrikaans",
+      "languageCode": "af",
+      "locale": "af-ZA",
+      "countries": [
+        "ZA",
+        "NA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ]
+    },
+    {
+      "name": "arabic",
+      "displayName": "Arabic",
+      "languageCode": "ar",
+      "locale": "ar-EG",
+      "countries": [
+        "EG",
+        "SD",
+        "LY",
+        "TN",
+        "DZ",
+        "MA",
+        "MR",
+        "SO",
+        "DJ",
+        "KM"
+      ],
+      "regions": [
+        "North Africa",
+        "East Africa"
+      ]
+    },
+    {
+      "name": "french",
+      "displayName": "French",
+      "languageCode": "fr",
+      "locale": "fr-SN",
+      "countries": [
+        "SN",
+        "CI",
+        "ML",
+        "BF",
+        "NE",
+        "TG",
+        "BJ",
+        "CM",
+        "GA",
+        "CG",
+        "CD",
+        "MG",
+        "RW",
+        "BI",
+        "TD",
+        "CF",
+        "GN",
+        "MR",
+        "DJ",
+        "KM"
+      ],
+      "regions": [
+        "West Africa",
+        "Central Africa",
+        "East Africa",
+        "Indian Ocean"
+      ]
+    },
+    {
+      "name": "fulfulde",
+      "displayName": "Fulfulde",
+      "languageCode": "ff",
+      "locale": "ff-NG",
+      "countries": [
+        "NG",
+        "NE",
+        "CM",
+        "BF",
+        "ML",
+        "GN",
+        "SN",
+        "GM"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "sesotho",
+      "displayName": "Sesotho",
+      "languageCode": "st",
+      "locale": "st-LS",
+      "countries": [
+        "LS",
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ]
+    },
+    {
+      "name": "setswana",
+      "displayName": "Setswana",
+      "languageCode": "tn",
+      "locale": "tn-BW",
+      "countries": [
+        "BW",
+        "ZA",
+        "NA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ]
+    },
+    {
+      "name": "bambara",
+      "displayName": "Bambara",
+      "languageCode": "bm",
+      "locale": "bm-ML",
+      "countries": [
+        "ML",
+        "SN",
+        "CI",
+        "BF"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "portuguese-africa",
+      "displayName": "Portuguese (Africa)",
+      "languageCode": "pt",
+      "locale": "pt-AO",
+      "countries": [
+        "AO",
+        "MZ",
+        "CV",
+        "GW",
+        "ST"
+      ],
+      "regions": [
+        "Southern Africa",
+        "West Africa"
+      ]
+    }
+  ],
+  "tierCounts": {
+    "core": 30,
+    "standard": 33,
+    "advanced": 36
+  }
+}

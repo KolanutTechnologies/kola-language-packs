@@ -1,0 +1,360 @@
+{
+  "name": "lingala",
+  "languageCode": "ln",
+  "locale": "ln-CD",
+  "countries": [
+    "CD",
+    "CG"
+  ],
+  "regions": [
+    "Central Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Lingala",
+  "description": "Lingala keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "soki",
+      "if"
+    ],
+    "ELSE": [
+      "soki te",
+      "else"
+    ],
+    "FOR": [
+      "mpo na",
+      "for"
+    ],
+    "WHILE": [
+      "ntango",
+      "while"
+    ],
+    "BREAK": [
+      "kata",
+      "break"
+    ],
+    "CONTINUE": [
+      "kobaluka",
+      "continue"
+    ],
+    "SWITCH": [
+      "pona",
+      "switch"
+    ],
+    "CASE": [
+      "likambo",
+      "case"
+    ],
+    "DEFAULT": [
+      "mokonzi",
+      "default"
+    ],
+    "FUNCTION": [
+      "mosala",
+      "function"
+    ],
+    "RETURN": [
+      "zongisa",
+      "return"
+    ],
+    "ASYNC": [
+      "async",
+      "async"
+    ],
+    "AWAIT": [
+      "zela",
+      "await"
+    ],
+    "TRY": [
+      "meka",
+      "try"
+    ],
+    "CATCH": [
+      "kanga",
+      "catch"
+    ],
+    "FINALLY": [
+      "nsuka",
+      "finally"
+    ],
+    "THROW": [
+      "tia",
+      "throw"
+    ],
+    "LET": [
+      "tika",
+      "let"
+    ],
+    "CONST": [
+      "makasi",
+      "const"
+    ],
+    "CLASS": [
+      "kelasi",
+      "class"
+    ],
+    "EXTENDS": [
+      "kolongola",
+      "extends"
+    ],
+    "NEW": [
+      "sika",
+      "new"
+    ],
+    "THIS": [
+      "oyo",
+      "this"
+    ],
+    "IMPORT": [
+      "kota",
+      "import"
+    ],
+    "EXPORT": [
+      "bima",
+      "export"
+    ],
+    "PRINT": [
+      "koloba",
+      "print"
+    ],
+    "TRUE": [
+      "solo",
+      "true"
+    ],
+    "FALSE": [
+      "lobi",
+      "false"
+    ],
+    "NULL": [
+      "eloko te",
+      "null"
+    ],
+    "UNDEFINED": [
+      "eponami te",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Lingala of DRC and Republic of Congo.",
+  "recommendedPartners": [
+    "ACALAN",
+    "Université de Kinshasa"
+  ]
+}

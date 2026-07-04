@@ -1,0 +1,1137 @@
+/**
+ * Writes all language pack files from in-repo definitions.
+ * Run: node scripts/bootstrap-packs.mjs
+ */
+import { spawnSync } from 'node:child_process';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
+const packsRoot = join(root, 'packs');
+const docsRoot = join(root, 'docs');
+
+const VERSION = '0.1.0';
+
+/** Maps packs to recommended partner orgs for terminology review */
+const RECOMMENDED_PARTNERS = {
+  yoruba: ['ALT-I', 'ACALAN', 'CASAS', 'University of Ibadan (Linguistics)'],
+  'nigerian-pidgin': ['Masakhane', 'Community Naija reviewers'],
+  hausa: ['ALT-I', 'ACALAN', 'Bayero University Kano'],
+  igbo: ['ALT-I', 'ACALAN', 'University of Nigeria Nsukka (Linguistics)'],
+  swahili: ['BAKITA', 'CHAKITA', 'ACALAN', 'Masakhane'],
+  amharic: ['Ethiopian Languages Academy', 'Addis Ababa University'],
+  zulu: ['PanSALB', 'Translate.org.za', 'UKZN isiZulu NLU'],
+  xhosa: ['PanSALB', 'Translate.org.za', 'Fort Hare isiXhosa NLU'],
+  afrikaans: ['PanSALB', 'Translate.org.za', 'Stellenbosch University'],
+  twi: ['ACALAN', 'University of Ghana (Linguistics)', 'CASAS'],
+  somali: ['Masakhane', 'ACALAN'],
+  wolof: ['ACALAN', 'Université Cheikh Anta Diop'],
+  lingala: ['ACALAN', 'Université de Kinshasa'],
+  kinyarwanda: ['ACALAN', 'University of Rwanda'],
+  luganda: ['ACALAN', 'Makerere University'],
+  shona: ['ACALAN', 'University of Zimbabwe'],
+  oromo: ['ACALAN', 'Addis Ababa University'],
+  tigrinya: ['ACALAN', 'Eritrea / Ethiopia language institutes'],
+  arabic: ['ACALAN', 'AALCO Arabic language academies'],
+  french: ['OIF', 'ACALAN'],
+  fulfulde: ['ACALAN', 'Masakhane'],
+  sesotho: ['PanSALB', 'Translate.org.za'],
+  setswana: ['PanSALB', 'Translate.org.za'],
+  bambara: ['ACALAN', 'Université de Bamako'],
+  'portuguese-africa': ['ACALAN', 'Community Lusophone Africa reviewers'],
+};
+
+const FALLBACK_LABEL = {
+  LAMBDA: 'lambda',
+  MATCH: 'match',
+  CASE: 'case',
+  DEFAULT: 'default',
+  THROW: 'throw',
+  PRINT: 'print',
+  IMPORT: 'import',
+  EXPORT: 'export',
+  AND: 'and',
+  OR: 'or',
+  NOT: 'not',
+  DEL: 'del',
+  TYPEOF: 'typeof',
+  VOID: 'void',
+  INSTANCEOF: 'instanceof',
+  DEBUGGER: 'debugger',
+  ASSERTS: 'asserts',
+  NAMESPACE: 'namespace',
+  INFER: 'infer',
+  KEYOF: 'keyof',
+  UNIQUE: 'unique',
+  SATISFIES: 'satisfies',
+};
+
+async function loadTokenRegistry() {
+  const registry = JSON.parse(await readFile(join(packsRoot, 'logical-tokens.json'), 'utf8'));
+  return registry;
+}
+
+function englishFallback(entry) {
+  if (FALLBACK_LABEL[entry.logical]) {
+    return FALLBACK_LABEL[entry.logical];
+  }
+  for (const target of registryTargets) {
+    const value = entry.targets[target];
+    if (typeof value === 'string' && value.trim()) {
+      return value.split(/[.!()\s]/)[0].toLowerCase();
+    }
+  }
+  return entry.logical.toLowerCase();
+}
+
+let registryTargets = ['javascript', 'python', 'typescript', 'go', 'rust'];
+
+function completeKeywords(keywords, registry) {
+  const completed = { ...keywords };
+  for (const entry of registry.tokens) {
+    if (entry.logical in completed) continue;
+    const label = englishFallback(entry);
+    completed[entry.logical] = [label];
+  }
+  return completed;
+}
+
+/** @type {Record<string, Record<string, string[]>>} */
+const PACKS = {
+  yoruba: {
+    IF: ['ṣé', 'if'],
+    ELSE: ['bẹ́ẹ̀kọ́', 'else'],
+    FOR: ['fun', 'for'],
+    WHILE: ['nígbà tí', 'while'],
+    BREAK: ['dá', 'break'],
+    CONTINUE: ['tẹ̀síwájú', 'continue'],
+    SWITCH: ['yàn', 'switch'],
+    CASE: ['ìpò', 'case'],
+    DEFAULT: ['àìyípadà', 'default'],
+    FUNCTION: ['iṣẹ', 'function'],
+    RETURN: ['padà', 'return'],
+    ASYNC: ['nígbà', 'async'],
+    AWAIT: ['dúró', 'await'],
+    TRY: ['gbìyànjú', 'try'],
+    CATCH: ['tì', 'catch'],
+    FINALLY: ['ìparí', 'finally'],
+    THROW: ['jù', 'throw'],
+    LET: ['jẹ́ kí', 'let'],
+    CONST: ['àìyípadà', 'const'],
+    CLASS: ['ìlò', 'class'],
+    EXTENDS: ['ṣe àfikún', 'extends'],
+    NEW: ['tuntun', 'new'],
+    THIS: ['èyí', 'this'],
+    IMPORT: ['gba', 'import'],
+    EXPORT: ['fi sílẹ̀', 'export'],
+    PRINT: ['ìfìdísílẹ̀', 'print'],
+    TRUE: ['ìtọ́', 'true'],
+    FALSE: ['ìtàn', 'false'],
+    NULL: ['ohun kan', 'null'],
+    UNDEFINED: ['àìfìdíò', 'undefined'],
+  },
+  'nigerian-pidgin': {
+    IF: ['if case say', 'if'],
+    ELSE: ['if e no be so', 'else'],
+    FOR: ['do am again again', 'do am', 'for'],
+    WHILE: ['keep doing am while', 'while'],
+    BREAK: ['stop am', 'break'],
+    CONTINUE: ['continue am', 'continue'],
+    SWITCH: ['check which one', 'switch'],
+    CASE: ['when e be', 'case'],
+    DEFAULT: ['if nothing match', 'default'],
+    FUNCTION: ['make function for', 'function'],
+    RETURN: ['bring back', 'return'],
+    ASYNC: ['wait small first', 'async'],
+    AWAIT: ['wait for am', 'await'],
+    TRY: ['try am', 'try'],
+    CATCH: ['if e fail catch am', 'catch'],
+    FINALLY: ['last last', 'finally'],
+    THROW: ['throw am', 'throw'],
+    LET: ['make we say', 'make', 'let'],
+    CONST: ['e no go change say', 'const'],
+    CLASS: ['kind of thing', 'class'],
+    EXTENDS: ['e come from', 'extends'],
+    NEW: ['new new', 'new'],
+    THIS: ['this one here', 'this'],
+    IMPORT: ['carry come', 'import'],
+    EXPORT: ['send out', 'export'],
+    PRINT: ['show for screen', 'show', 'print'],
+    TRUE: ['e correct', 'true'],
+    FALSE: ['e no correct', 'false'],
+    NULL: ['nothing dey', 'null'],
+    UNDEFINED: ['e no define', 'undefined'],
+  },
+  hausa: {
+    IF: ['idan', 'if'],
+    ELSE: ['in ba haka ba', 'else'],
+    FOR: ['domi', 'for'],
+    WHILE: ['yayin da', 'while'],
+    BREAK: ['tsaya', 'break'],
+    CONTINUE: ['ci gaba', 'continue'],
+    SWITCH: ['zaɓi', 'switch'],
+    CASE: ['lokaci', 'case'],
+    DEFAULT: ['tsoho', 'default'],
+    FUNCTION: ['aiki', 'function'],
+    RETURN: ['dawo', 'return'],
+    ASYNC: ['jira', 'async'],
+    AWAIT: ['jira don', 'await'],
+    TRY: ['gwada', 'try'],
+    CATCH: ['kama', 'catch'],
+    FINALLY: ['a ƙarshe', 'finally'],
+    THROW: ['jefa', 'throw'],
+    LET: ['bari', 'let'],
+    CONST: ['tabbatacce', 'const'],
+    CLASS: ['rukuni', 'class'],
+    EXTENDS: ['kara', 'extends'],
+    NEW: ['sabo', 'new'],
+    THIS: ['wannan', 'this'],
+    IMPORT: ['shigo da', 'import'],
+    EXPORT: ['fitar da', 'export'],
+    PRINT: ['nuna', 'print'],
+    TRUE: ['gaskiya', 'true'],
+    FALSE: ['karya', 'false'],
+    NULL: ['babu komai', 'null'],
+    UNDEFINED: ['ba a bayyana ba', 'undefined'],
+  },
+  igbo: {
+    IF: ['ọ bụrụ na', 'if'],
+    ELSE: ['ọ bụghị ma ọ bụ', 'else'],
+    FOR: ['maka', 'for'],
+    WHILE: ['mgbe', 'while'],
+    BREAK: ['kwụsị', 'break'],
+    CONTINUE: ['ga n\'ihu', 'continue'],
+    SWITCH: ['họrọ', 'switch'],
+    CASE: ['ọnọdụ', 'case'],
+    DEFAULT: ['ndabara', 'default'],
+    FUNCTION: ['ọrụ', 'function'],
+    RETURN: ['lọghachi', 'return'],
+    ASYNC: ['ngwa ngwa', 'async'],
+    AWAIT: ['chere', 'await'],
+    TRY: ['nwaa', 'try'],
+    CATCH: ['jide', 'catch'],
+    FINALLY: ['ikpeazụ', 'finally'],
+    THROW: ['tụba', 'throw'],
+    LET: ['ka', 'let'],
+    CONST: ['nkịtị', 'const'],
+    CLASS: ['klasi', 'class'],
+    EXTENDS: ['gbatịa', 'extends'],
+    NEW: ['ọhụrụ', 'new'],
+    THIS: ['nke a', 'this'],
+    IMPORT: ['bubata', 'import'],
+    EXPORT: ['pụta', 'export'],
+    PRINT: ['gosipụta', 'print'],
+    TRUE: ['eziokwu', 'true'],
+    FALSE: ['ụgha', 'false'],
+    NULL: ['efu', 'null'],
+    UNDEFINED: ['akọwaghị', 'undefined'],
+  },
+  swahili: {
+    IF: ['ikiwa', 'if'],
+    ELSE: ['vinginevyo', 'else'],
+    FOR: ['kwa', 'for'],
+    WHILE: ['wakati', 'while'],
+    BREAK: ['vunja', 'break'],
+    CONTINUE: ['endelea', 'continue'],
+    SWITCH: ['chagua', 'switch'],
+    CASE: ['kesi', 'case'],
+    DEFAULT: ['chaguo msingi', 'default'],
+    FUNCTION: ['kazi', 'function'],
+    RETURN: ['rudisha', 'return'],
+    ASYNC: ['asynchronous', 'async'],
+    AWAIT: ['subiri', 'await'],
+    TRY: ['jaribu', 'try'],
+    CATCH: ['kamata', 'catch'],
+    FINALLY: ['hatimaye', 'finally'],
+    THROW: ['tupa', 'throw'],
+    LET: ['acha', 'let'],
+    CONST: ['thabiti', 'const'],
+    CLASS: ['darasa', 'class'],
+    EXTENDS: ['panua', 'extends'],
+    NEW: ['mpya', 'new'],
+    THIS: ['hii', 'this'],
+    IMPORT: ['agiza', 'import'],
+    EXPORT: ['hamisha', 'export'],
+    PRINT: ['chapisha', 'print'],
+    TRUE: ['kweli', 'true'],
+    FALSE: ['uongo', 'false'],
+    NULL: ['tupu', 'null'],
+    UNDEFINED: ['haijabainishwa', 'undefined'],
+  },
+  amharic: {
+    IF: ['ከሆነ', 'if'],
+    ELSE: ['ካልሆነ', 'else'],
+    FOR: ['ለ', 'for'],
+    WHILE: ['በሚሆንበት', 'while'],
+    BREAK: ['ሰብር', 'break'],
+    CONTINUE: ['ቀጥል', 'continue'],
+    SWITCH: ['ምረጥ', 'switch'],
+    CASE: ['ጉዳይ', 'case'],
+    DEFAULT: ['ነባሪ', 'default'],
+    FUNCTION: ['ተግባር', 'function'],
+    RETURN: ['መልስ', 'return'],
+    ASYNC: ['ማስመ', 'async'],
+    AWAIT: ['ጠብቅ', 'await'],
+    TRY: ['ሞክር', 'try'],
+    CATCH: ['ያዝ', 'catch'],
+    FINALLY: ['መጨረሻ', 'finally'],
+    THROW: ['ድርድር', 'throw'],
+    LET: ['ተው', 'let'],
+    CONST: ['ቋሚ', 'const'],
+    CLASS: ['ክፍል', 'class'],
+    EXTENDS: ['ዘርጋ', 'extends'],
+    NEW: ['አዲስ', 'new'],
+    THIS: ['ይህ', 'this'],
+    IMPORT: ['አስመጣ', 'import'],
+    EXPORT: ['ላክ', 'export'],
+    PRINT: ['አትም', 'print'],
+    TRUE: ['እውነት', 'true'],
+    FALSE: ['ሐሰት', 'false'],
+    NULL: ['ባዶ', 'null'],
+    UNDEFINED: ['ያልተገለጸ', 'undefined'],
+  },
+  zulu: {
+    IF: ['uma', 'if'],
+    ELSE: ['kungenjalo', 'else'],
+    FOR: ['ngoba', 'for'],
+    WHILE: ['ngenkathi', 'while'],
+    BREAK: ['phula', 'break'],
+    CONTINUE: ['qhubeka', 'continue'],
+    SWITCH: ['khetha', 'switch'],
+    CASE: ['icala', 'case'],
+    DEFAULT: ['okuzenzakalelayo', 'default'],
+    FUNCTION: ['umsebenzi', 'function'],
+    RETURN: ['buyisa', 'return'],
+    ASYNC: ['ngokulandelana', 'async'],
+    AWAIT: ['linda', 'await'],
+    TRY: ['zama', 'try'],
+    CATCH: ['bamba', 'catch'],
+    FINALLY: ['ekugcineni', 'finally'],
+    THROW: ['phonsa', 'throw'],
+    LET: ['vumela', 'let'],
+    CONST: ['okuqinile', 'const'],
+    CLASS: ['ikilasi', 'class'],
+    EXTENDS: ['andisa', 'extends'],
+    NEW: ['okusha', 'new'],
+    THIS: ['lokhu', 'this'],
+    IMPORT: ['ngenisa', 'import'],
+    EXPORT: ['khipha', 'export'],
+    PRINT: ['printa', 'print'],
+    TRUE: ['iqiniso', 'true'],
+    FALSE: ['amanga', 'false'],
+    NULL: ['lutho', 'null'],
+    UNDEFINED: ['akuchazwanga', 'undefined'],
+  },
+  xhosa: {
+    IF: ['ukuba', 'if'],
+    ELSE: ['kungenjalo', 'else'],
+    FOR: ['ngenxa', 'for'],
+    WHILE: ['ngelixa', 'while'],
+    BREAK: ['phula', 'break'],
+    CONTINUE: ['qhubeka', 'continue'],
+    SWITCH: ['khetha', 'switch'],
+    CASE: ['ityala', 'case'],
+    DEFAULT: ['ngokuzenzekelayo', 'default'],
+    FUNCTION: ['umsebenzi', 'function'],
+    RETURN: ['buyisa', 'return'],
+    ASYNC: ['ngokulandelelanayo', 'async'],
+    AWAIT: ['linda', 'await'],
+    TRY: ['zama', 'try'],
+    CATCH: ['bamba', 'catch'],
+    FINALLY: ['ekugqibeleni', 'finally'],
+    THROW: ['phosa', 'throw'],
+    LET: ['vumela', 'let'],
+    CONST: ['sisigqibo', 'const'],
+    CLASS: ['iklasi', 'class'],
+    EXTENDS: ['andisa', 'extends'],
+    NEW: ['entsha', 'new'],
+    THIS: ['le', 'this'],
+    IMPORT: ['ngenisa', 'import'],
+    EXPORT: ['rhweba', 'export'],
+    PRINT: ['tyhila', 'print'],
+    TRUE: ['inyani', 'true'],
+    FALSE: ['amanga', 'false'],
+    NULL: ['into', 'null'],
+    UNDEFINED: ['ingachazwanga', 'undefined'],
+  },
+  twi: {
+    IF: ['sɛ', 'if'],
+    ELSE: ['sɛ ɛnyɛ saa a', 'else'],
+    FOR: ['ma', 'for'],
+    WHILE: ['bere a', 'while'],
+    BREAK: ['bua', 'break'],
+    CONTINUE: ['toa so', 'continue'],
+    SWITCH: ['paw', 'switch'],
+    CASE: ['sɛbea', 'case'],
+    DEFAULT: ['deɛ ɛwɔ hɔ', 'default'],
+    FUNCTION: ['adwuma', 'function'],
+    RETURN: ['san kɔ', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['twɛn', 'await'],
+    TRY: ['bɔ mmɔden', 'try'],
+    CATCH: ['kyere', 'catch'],
+    FINALLY: ['ewie', 'finally'],
+    THROW: ['to gu', 'throw'],
+    LET: ['ma', 'let'],
+    CONST: ['gyina pintinn', 'const'],
+    CLASS: ['kuw', 'class'],
+    EXTENDS: ['toa so', 'extends'],
+    NEW: ['foforo', 'new'],
+    THIS: ['wei', 'this'],
+    IMPORT: ['fa ba', 'import'],
+    EXPORT: ['ma kɔ', 'export'],
+    PRINT: ['kyerɛ', 'print'],
+    TRUE: ['nokware', 'true'],
+    FALSE: ['atoro', 'false'],
+    NULL: ['hwee', 'null'],
+    UNDEFINED: ['nnyɛ nkyerɛase', 'undefined'],
+  },
+  somali: {
+    IF: ['haddii', 'if'],
+    ELSE: ['haddii kale', 'else'],
+    FOR: ['u', 'for'],
+    WHILE: ['intii', 'while'],
+    BREAK: ['jebi', 'break'],
+    CONTINUE: ['sii wad', 'continue'],
+    SWITCH: ['dooro', 'switch'],
+    CASE: ['kiis', 'case'],
+    DEFAULT: ['asal ahaan', 'default'],
+    FUNCTION: ['shaqo', 'function'],
+    RETURN: ['soo celi', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['sug', 'await'],
+    TRY: ['isku day', 'try'],
+    CATCH: ['qab', 'catch'],
+    FINALLY: ['ugu dambeyn', 'finally'],
+    THROW: ['tuur', 'throw'],
+    LET: ['u oggol', 'let'],
+    CONST: ['joogto ah', 'const'],
+    CLASS: ['fasal', 'class'],
+    EXTENDS: ['kordhi', 'extends'],
+    NEW: ['cusub', 'new'],
+    THIS: ['kan', 'this'],
+    IMPORT: ['soo deji', 'import'],
+    EXPORT: ['dhoof', 'export'],
+    PRINT: ['daabac', 'print'],
+    TRUE: ['run', 'true'],
+    FALSE: ['been', 'false'],
+    NULL: ['waxba', 'null'],
+    UNDEFINED: ['aan la qeexin', 'undefined'],
+  },
+  wolof: {
+    IF: ['su', 'if'],
+    ELSE: ['du ko', 'else'],
+    FOR: ['ngir', 'for'],
+    WHILE: ['bi', 'while'],
+    BREAK: ['tàgg', 'break'],
+    CONTINUE: ['dem', 'continue'],
+    SWITCH: ['tann', 'switch'],
+    CASE: ['mbir', 'case'],
+    DEFAULT: ['defo', 'default'],
+    FUNCTION: ['liggéey', 'function'],
+    RETURN: ['dellu', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['xar', 'await'],
+    TRY: ['jéem', 'try'],
+    CATCH: ['jël', 'catch'],
+    FINALLY: ['gannaaw', 'finally'],
+    THROW: ['yóbb', 'throw'],
+    LET: ['may', 'let'],
+    CONST: ['dëgg', 'const'],
+    CLASS: ['class', 'class'],
+    EXTENDS: ['yokk', 'extends'],
+    NEW: ['bu bees', 'new'],
+    THIS: ['lii', 'this'],
+    IMPORT: ['jël', 'import'],
+    EXPORT: ['génne', 'export'],
+    PRINT: ['wone', 'print'],
+    TRUE: ['dëgg', 'true'],
+    FALSE: ['dul dëgg', 'false'],
+    NULL: ['dara', 'null'],
+    UNDEFINED: ['du am', 'undefined'],
+  },
+  lingala: {
+    IF: ['soki', 'if'],
+    ELSE: ['soki te', 'else'],
+    FOR: ['mpo na', 'for'],
+    WHILE: ['ntango', 'while'],
+    BREAK: ['kata', 'break'],
+    CONTINUE: ['kobaluka', 'continue'],
+    SWITCH: ['pona', 'switch'],
+    CASE: ['likambo', 'case'],
+    DEFAULT: ['mokonzi', 'default'],
+    FUNCTION: ['mosala', 'function'],
+    RETURN: ['zongisa', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['zela', 'await'],
+    TRY: ['meka', 'try'],
+    CATCH: ['kanga', 'catch'],
+    FINALLY: ['nsuka', 'finally'],
+    THROW: ['tia', 'throw'],
+    LET: ['tika', 'let'],
+    CONST: ['makasi', 'const'],
+    CLASS: ['kelasi', 'class'],
+    EXTENDS: ['kolongola', 'extends'],
+    NEW: ['sika', 'new'],
+    THIS: ['oyo', 'this'],
+    IMPORT: ['kota', 'import'],
+    EXPORT: ['bima', 'export'],
+    PRINT: ['koloba', 'print'],
+    TRUE: ['solo', 'true'],
+    FALSE: ['lobi', 'false'],
+    NULL: ['eloko te', 'null'],
+    UNDEFINED: ['eponami te', 'undefined'],
+  },
+  kinyarwanda: {
+    IF: ['niba', 'if'],
+    ELSE: ['ubundi', 'else'],
+    FOR: ['kuri', 'for'],
+    WHILE: ['igihe', 'while'],
+    BREAK: ['vunika', 'break'],
+    CONTINUE: ['komeza', 'continue'],
+    SWITCH: ['hitamo', 'switch'],
+    CASE: ['urubanza', 'case'],
+    DEFAULT: ['bisanzwe', 'default'],
+    FUNCTION: ['akazi', 'function'],
+    RETURN: ['garuka', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['tegereza', 'await'],
+    TRY: ['gerageza', 'try'],
+    CATCH: ['fata', 'catch'],
+    FINALLY: ['amaherezo', 'finally'],
+    THROW: ['terera', 'throw'],
+    LET: ['reka', 'let'],
+    CONST: ['ikomeye', 'const'],
+    CLASS: ['ishuri', 'class'],
+    EXTENDS: ['ongera', 'extends'],
+    NEW: ['gishya', 'new'],
+    THIS: ['ibi', 'this'],
+    IMPORT: ['injiza', 'import'],
+    EXPORT: ['ohereza', 'export'],
+    PRINT: ['andika', 'print'],
+    TRUE: ['ukuri', 'true'],
+    FALSE: ['ikinyoma', 'false'],
+    NULL: ['nta kintu', 'null'],
+    UNDEFINED: ['ntibisobanurwa', 'undefined'],
+  },
+  luganda: {
+    IF: ['singa', 'if'],
+    ELSE: ['wabula', 'else'],
+    FOR: ['okulaga', 'for'],
+    WHILE: ['ekiseera', 'while'],
+    BREAK: ['menya', 'break'],
+    CONTINUE: ['eyongera', 'continue'],
+    SWITCH: ['londa', 'switch'],
+    CASE: ['omulamwa', 'case'],
+    DEFAULT: ['ekintu ekisooka', 'default'],
+    FUNCTION: ['omulimu', 'function'],
+    RETURN: ['komawo', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['linda', 'await'],
+    TRY: ['gezaako', 'try'],
+    CATCH: ['kwata', 'catch'],
+    FINALLY: ['oluvannyuma', 'finally'],
+    THROW: ['suula', 'throw'],
+    LET: ['leka', 'let'],
+    CONST: ['ekigumu', 'const'],
+    CLASS: ['ekibiina', 'class'],
+    EXTENDS: ['gattako', 'extends'],
+    NEW: ['kipya', 'new'],
+    THIS: ['kino', 'this'],
+    IMPORT: ['yingiza', 'import'],
+    EXPORT: ['fulumya ebweru', 'export'],
+    PRINT: ['fulumya ku skrini', 'print'],
+    TRUE: ['amazima', 'true'],
+    FALSE: ['obulimba', 'false'],
+    NULL: ['tewali kintu', 'null'],
+    UNDEFINED: ['tekinnyonnyoddwa', 'undefined'],
+  },
+  shona: {
+    IF: ['kana', 'if'],
+    ELSE: ['kana zvisina kudaro', 'else'],
+    FOR: ['kuti', 'for'],
+    WHILE: ['panguva', 'while'],
+    BREAK: ['pambura', 'break'],
+    CONTINUE: ['ramba', 'continue'],
+    SWITCH: ['sarudza', 'switch'],
+    CASE: ['mamiriro', 'case'],
+    DEFAULT: ['chikamu', 'default'],
+    FUNCTION: ['basa', 'function'],
+    RETURN: ['dzosa', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['mirira', 'await'],
+    TRY: ['edza', 'try'],
+    CATCH: ['bata', 'catch'],
+    FINALLY: ['pakupedzisira', 'finally'],
+    THROW: ['tonga', 'throw'],
+    LET: ['regai', 'let'],
+    CONST: ['chakavakwa', 'const'],
+    CLASS: ['chikamu', 'class'],
+    EXTENDS: ['wedzera', 'extends'],
+    NEW: ['itsva', 'new'],
+    THIS: ['ichi', 'this'],
+    IMPORT: ['isa', 'import'],
+    EXPORT: ['buda', 'export'],
+    PRINT: ['printa', 'print'],
+    TRUE: ['chokwadi', 'true'],
+    FALSE: ['nhema', 'false'],
+    NULL: ['hapana', 'null'],
+    UNDEFINED: ['hazvisi', 'undefined'],
+  },
+  oromo: {
+    IF: ['yoo', 'if'],
+    ELSE: ['kana malee', 'else'],
+    FOR: ['waan', 'for'],
+    WHILE: ['yeroo', 'while'],
+    BREAK: ['cabsi', 'break'],
+    CONTINUE: ['itti fufi', 'continue'],
+    SWITCH: ['filadhu', 'switch'],
+    CASE: ['dhimma', 'case'],
+    DEFAULT: ['baramaa', 'default'],
+    FUNCTION: ['hojii', 'function'],
+    RETURN: ['deebisi', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['eegi', 'await'],
+    TRY: ['yaali', 'try'],
+    CATCH: ['qabachuu', 'catch'],
+    FINALLY: ['dhumarratti', 'finally'],
+    THROW: ['darbi', 'throw'],
+    LET: ['hayyami', 'let'],
+    CONST: ['dhabbataa', 'const'],
+    CLASS: ['garee', 'class'],
+    EXTENDS: ['dabalata', 'extends'],
+    NEW: ['haaraa', 'new'],
+    THIS: ['kana', 'this'],
+    IMPORT: ['galchi', 'import'],
+    EXPORT: ['ergi', 'export'],
+    PRINT: ['maxxansi', 'print'],
+    TRUE: ['dhugaa', 'true'],
+    FALSE: ['soba', 'false'],
+    NULL: ['homaa', 'null'],
+    UNDEFINED: ['hin ibsamne', 'undefined'],
+  },
+  tigrinya: {
+    IF: ['ከ', 'if'],
+    ELSE: ['ካልእ', 'else'],
+    FOR: ['ን', 'for'],
+    WHILE: ['ሰዓት', 'while'],
+    BREAK: ['ሰብር', 'break'],
+    CONTINUE: ['ቀጽል', 'continue'],
+    SWITCH: ['ምረጽ', 'switch'],
+    CASE: ['ጉዳይ', 'case'],
+    DEFAULT: ['ነባሪ', 'default'],
+    FUNCTION: ['ተግባር', 'function'],
+    RETURN: ['መልስ', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['ጽበ', 'await'],
+    TRY: ['ፈትን', 'try'],
+    CATCH: ['ዓቅም', 'catch'],
+    FINALLY: ['ናይ መወዳእታ', 'finally'],
+    THROW: ['ደርድር', 'throw'],
+    LET: ['ተው', 'let'],
+    CONST: ['ቋሚ', 'const'],
+    CLASS: ['ክፍሊ', 'class'],
+    EXTENDS: ['ዘርግ', 'extends'],
+    NEW: ['ሓድሽ', 'new'],
+    THIS: ['እዚ', 'this'],
+    IMPORT: ['ኣእት', 'import'],
+    EXPORT: ['ላእ', 'export'],
+    PRINT: ['ሓትም', 'print'],
+    TRUE: ['ሓቂ', 'true'],
+    FALSE: ['ሓሶት', 'false'],
+    NULL: ['ባዶ', 'null'],
+    UNDEFINED: ['ዘይተገልጸ', 'undefined'],
+  },
+  afrikaans: {
+    IF: ['as', 'if'],
+    ELSE: ['anders', 'else'],
+    FOR: ['vir', 'for'],
+    WHILE: ['terwyl', 'while'],
+    BREAK: ['breek', 'break'],
+    CONTINUE: ['gaan voort', 'continue'],
+    SWITCH: ['kies', 'switch'],
+    CASE: ['geval', 'case'],
+    DEFAULT: ['verstek', 'default'],
+    FUNCTION: ['funksie', 'function'],
+    RETURN: ['gee terug', 'return'],
+    ASYNC: ['async', 'async'],
+    AWAIT: ['wag', 'await'],
+    TRY: ['probeer', 'try'],
+    CATCH: ['vang', 'catch'],
+    FINALLY: ['uiteindelik', 'finally'],
+    THROW: ['gooi', 'throw'],
+    LET: ['laat', 'let'],
+    CONST: ['konstant', 'const'],
+    CLASS: ['klas', 'class'],
+    EXTENDS: ['brei uit', 'extends'],
+    NEW: ['nuut', 'new'],
+    THIS: ['hierdie', 'this'],
+    IMPORT: ['voer in', 'import'],
+    EXPORT: ['voer uit', 'export'],
+    PRINT: ['druk', 'print'],
+    TRUE: ['waar', 'true'],
+    FALSE: ['onwaar', 'false'],
+    NULL: ['leeg', 'null'],
+    UNDEFINED: ['ongedefinieerd', 'undefined'],
+  },
+  arabic: {
+    IF: ['إذا', 'if'],
+    ELSE: ['وإلا', 'else'],
+    FOR: ['ل', 'for'],
+    WHILE: ['بينما', 'while'],
+    BREAK: ['اكسر', 'break'],
+    CONTINUE: ['استمر', 'continue'],
+    SWITCH: ['اختر', 'switch'],
+    CASE: ['حالة', 'case'],
+    DEFAULT: ['افتراضي', 'default'],
+    FUNCTION: ['دالة', 'function'],
+    RETURN: ['ارجع', 'return'],
+    ASYNC: ['غير متزامن', 'async'],
+    AWAIT: ['انتظر', 'await'],
+    TRY: ['حاول', 'try'],
+    CATCH: ['امسك', 'catch'],
+    FINALLY: ['أخيرا', 'finally'],
+    THROW: ['ارم', 'throw'],
+    LET: ['دع', 'let'],
+    CONST: ['ثابت', 'const'],
+    CLASS: ['فئة', 'class'],
+    EXTENDS: ['يمتد', 'extends'],
+    NEW: ['جديد', 'new'],
+    THIS: ['هذا', 'this'],
+    IMPORT: ['استورد', 'import'],
+    EXPORT: ['صدّر', 'export'],
+    PRINT: ['اطبع', 'print'],
+    TRUE: ['صحيح', 'true'],
+    FALSE: ['خطأ', 'false'],
+    NULL: ['فارغ', 'null'],
+    UNDEFINED: ['غير معرّف', 'undefined'],
+  },
+  french: {
+    IF: ['si', 'if'],
+    ELSE: ['sinon', 'else'],
+    FOR: ['pour', 'for'],
+    WHILE: ['tant que', 'while'],
+    BREAK: ['casser', 'break'],
+    CONTINUE: ['continuer', 'continue'],
+    SWITCH: ['choisir', 'switch'],
+    CASE: ['cas', 'case'],
+    DEFAULT: ['par défaut', 'default'],
+    FUNCTION: ['fonction', 'function'],
+    RETURN: ['retourner', 'return'],
+    ASYNC: ['asynchrone', 'async'],
+    AWAIT: ['attendre', 'await'],
+    TRY: ['essayer', 'try'],
+    CATCH: ['attraper', 'catch'],
+    FINALLY: ['enfin', 'finally'],
+    THROW: ['lancer', 'throw'],
+    LET: ['soit', 'let'],
+    CONST: ['constante', 'const'],
+    CLASS: ['classe', 'class'],
+    EXTENDS: ['étend', 'extends'],
+    NEW: ['nouveau', 'new'],
+    THIS: ['ceci', 'this'],
+    IMPORT: ['importer', 'import'],
+    EXPORT: ['exporter', 'export'],
+    PRINT: ['afficher', 'print'],
+    TRUE: ['vrai', 'true'],
+    FALSE: ['faux', 'false'],
+    NULL: ['nul', 'null'],
+    UNDEFINED: ['indéfini', 'undefined'],
+  },
+  fulfulde: {},
+  sesotho: {},
+  setswana: {},
+  bambara: {},
+  'portuguese-africa': {},
+};
+
+/** @type {Record<string, {
+  displayName: string;
+  languageCode: string;
+  locale: string;
+  countries: string[];
+  regions: string[];
+  scopeNote?: string;
+  description: string;
+}>} */
+const META = {
+  yoruba: {
+    displayName: 'Yorùbá',
+    languageCode: 'yo',
+    locale: 'yo-NG',
+    countries: ['NG', 'BJ', 'TG'],
+    regions: ['West Africa'],
+    scopeNote: 'Nigeria-focused Yorùbá. Benin and Togo variants welcome as aliases, not separate national forms in one PR.',
+    description: 'Yoruba keyword map — starter pack (community contributions welcome)',
+  },
+  'nigerian-pidgin': {
+    displayName: 'Nigerian Pidgin',
+    languageCode: 'pcm',
+    locale: 'pcm-NG',
+    countries: ['NG'],
+    regions: ['West Africa'],
+    scopeNote: 'Nigerian Pidgin (Naija) only. Not Cameroon Pidgin, Ghanaian Pidgin, or other West African creoles — those need separate packs.',
+    description: 'Nigerian Pidgin keyword map — bridge language for Nigerian developers',
+  },
+  hausa: {
+    displayName: 'Hausa',
+    languageCode: 'ha',
+    locale: 'ha-NG',
+    countries: ['NG', 'NE', 'GH', 'SD'],
+    regions: ['West Africa'],
+    scopeNote: 'Hausa across West and Central Africa. Prefer inclusive alias arrays for Nigeria vs Niger spelling differences.',
+    description: 'Hausa keyword map — starter pack (community contributions welcome)',
+  },
+  igbo: {
+    displayName: 'Igbo',
+    languageCode: 'ig',
+    locale: 'ig-NG',
+    countries: ['NG'],
+    regions: ['West Africa'],
+    scopeNote: 'Igbo of southeastern Nigeria.',
+    description: 'Igbo keyword map — starter pack (community contributions welcome)',
+  },
+  swahili: {
+    displayName: 'Swahili',
+    languageCode: 'sw',
+    locale: 'sw-KE',
+    countries: ['KE', 'TZ', 'UG', 'CD', 'RW'],
+    regions: ['East Africa'],
+    scopeNote: 'KiSwahili with Kenya/Tanzania baseline. Note your country or dialect in PRs when proposing changes.',
+    description: 'Swahili keyword map — starter pack (community contributions welcome)',
+  },
+  amharic: {
+    displayName: 'Amharic',
+    languageCode: 'am',
+    locale: 'am-ET',
+    countries: ['ET'],
+    regions: ['East Africa'],
+    scopeNote: 'Amharic of Ethiopia.',
+    description: 'Amharic keyword map — starter pack (community contributions welcome)',
+  },
+  zulu: {
+    displayName: 'isiZulu',
+    languageCode: 'zu',
+    locale: 'zu-ZA',
+    countries: ['ZA'],
+    regions: ['Southern Africa'],
+    scopeNote: 'isiZulu of South Africa.',
+    description: 'Zulu keyword map — starter pack (community contributions welcome)',
+  },
+  xhosa: {
+    displayName: 'isiXhosa',
+    languageCode: 'xh',
+    locale: 'xh-ZA',
+    countries: ['ZA'],
+    regions: ['Southern Africa'],
+    scopeNote: 'isiXhosa of South Africa.',
+    description: 'Xhosa keyword map — starter pack (community contributions welcome)',
+  },
+  twi: {
+    displayName: 'Twi',
+    languageCode: 'tw',
+    locale: 'tw-GH',
+    countries: ['GH'],
+    regions: ['West Africa'],
+    scopeNote: 'Twi (Akan) of Ghana.',
+    description: 'Twi keyword map — starter pack (community contributions welcome)',
+  },
+  somali: {
+    displayName: 'Somali',
+    languageCode: 'so',
+    locale: 'so-SO',
+    countries: ['SO', 'ET', 'KE', 'DJ'],
+    regions: ['Horn of Africa'],
+    scopeNote: 'Somali across the Horn of Africa. Note regional variant in PRs.',
+    description: 'Somali keyword map — starter pack (community contributions welcome)',
+  },
+  wolof: {
+    displayName: 'Wolof',
+    languageCode: 'wo',
+    locale: 'wo-SN',
+    countries: ['SN', 'GM', 'MR'],
+    regions: ['West Africa'],
+    scopeNote: 'Wolof of Senegal and Gambia.',
+    description: 'Wolof keyword map — starter pack (community contributions welcome)',
+  },
+  lingala: {
+    displayName: 'Lingala',
+    languageCode: 'ln',
+    locale: 'ln-CD',
+    countries: ['CD', 'CG'],
+    regions: ['Central Africa'],
+    scopeNote: 'Lingala of DRC and Republic of Congo.',
+    description: 'Lingala keyword map — starter pack (community contributions welcome)',
+  },
+  kinyarwanda: {
+    displayName: 'Kinyarwanda',
+    languageCode: 'rw',
+    locale: 'rw-RW',
+    countries: ['RW'],
+    regions: ['East Africa'],
+    scopeNote: 'Kinyarwanda of Rwanda.',
+    description: 'Kinyarwanda keyword map — starter pack (community contributions welcome)',
+  },
+  luganda: {
+    displayName: 'Luganda',
+    languageCode: 'lg',
+    locale: 'lg-UG',
+    countries: ['UG'],
+    regions: ['East Africa'],
+    scopeNote: 'Luganda of Uganda.',
+    description: 'Luganda keyword map — starter pack (community contributions welcome)',
+  },
+  shona: {
+    displayName: 'Shona',
+    languageCode: 'sn',
+    locale: 'sn-ZW',
+    countries: ['ZW'],
+    regions: ['Southern Africa'],
+    scopeNote: 'Shona of Zimbabwe.',
+    description: 'Shona keyword map — starter pack (community contributions welcome)',
+  },
+  oromo: {
+    displayName: 'Oromo',
+    languageCode: 'om',
+    locale: 'om-ET',
+    countries: ['ET', 'KE'],
+    regions: ['East Africa'],
+    scopeNote: 'Oromo of Ethiopia and Kenya.',
+    description: 'Oromo keyword map — starter pack (community contributions welcome)',
+  },
+  tigrinya: {
+    displayName: 'Tigrinya',
+    languageCode: 'ti',
+    locale: 'ti-ER',
+    countries: ['ER', 'ET'],
+    regions: ['East Africa'],
+    scopeNote: 'Tigrinya of Eritrea and Ethiopia.',
+    description: 'Tigrinya keyword map — starter pack (community contributions welcome)',
+  },
+  afrikaans: {
+    displayName: 'Afrikaans',
+    languageCode: 'af',
+    locale: 'af-ZA',
+    countries: ['ZA', 'NA'],
+    regions: ['Southern Africa'],
+    scopeNote: 'Afrikaans of South Africa and Namibia.',
+    description: 'Afrikaans keyword map — starter pack (community contributions welcome)',
+  },
+  arabic: {
+    displayName: 'Arabic',
+    languageCode: 'ar',
+    locale: 'ar-EG',
+    countries: ['EG', 'SD', 'LY', 'TN', 'DZ', 'MA', 'MR', 'SO', 'DJ', 'KM'],
+    regions: ['North Africa', 'East Africa'],
+    scopeNote: 'Modern Standard Arabic baseline for African contexts. Regional dialects differ — note your country in PRs.',
+    description: 'Arabic keyword map for North and East Africa — starter pack',
+  },
+  french: {
+    displayName: 'French',
+    languageCode: 'fr',
+    locale: 'fr-SN',
+    countries: ['SN', 'CI', 'ML', 'BF', 'NE', 'TG', 'BJ', 'CM', 'GA', 'CG', 'CD', 'MG', 'RW', 'BI', 'TD', 'CF', 'GN', 'MR', 'DJ', 'KM'],
+    regions: ['West Africa', 'Central Africa', 'East Africa', 'Indian Ocean'],
+    scopeNote: 'International French baseline for Francophone Africa. Vocabulary varies by country — prefer aliases over one national form.',
+    description: 'French keyword map for Francophone Africa — starter pack',
+  },
+  fulfulde: {
+    displayName: 'Fulfulde',
+    languageCode: 'ff',
+    locale: 'ff-NG',
+    countries: ['NG', 'NE', 'CM', 'BF', 'ML', 'GN', 'SN', 'GM'],
+    regions: ['West Africa'],
+    scopeNote: 'Fulfulde / Pulaar / Fulani across West Africa — note regional dialect in PRs.',
+    description: 'Fulfulde keyword map — starter pack (community contributions welcome)',
+  },
+  sesotho: {
+    displayName: 'Sesotho',
+    languageCode: 'st',
+    locale: 'st-LS',
+    countries: ['LS', 'ZA'],
+    regions: ['Southern Africa'],
+    scopeNote: 'Sesotho of Lesotho and South Africa.',
+    description: 'Sesotho keyword map — starter pack (community contributions welcome)',
+  },
+  setswana: {
+    displayName: 'Setswana',
+    languageCode: 'tn',
+    locale: 'tn-BW',
+    countries: ['BW', 'ZA', 'NA'],
+    regions: ['Southern Africa'],
+    scopeNote: 'Setswana / Tswana of Botswana and South Africa.',
+    description: 'Setswana keyword map — starter pack (community contributions welcome)',
+  },
+  bambara: {
+    displayName: 'Bambara',
+    languageCode: 'bm',
+    locale: 'bm-ML',
+    countries: ['ML', 'SN', 'CI', 'BF'],
+    regions: ['West Africa'],
+    scopeNote: 'Bambara of Mali and West Africa.',
+    description: 'Bambara keyword map — starter pack (community contributions welcome)',
+  },
+  'portuguese-africa': {
+    displayName: 'Portuguese (Africa)',
+    languageCode: 'pt',
+    locale: 'pt-AO',
+    countries: ['AO', 'MZ', 'CV', 'GW', 'ST'],
+    regions: ['Southern Africa', 'West Africa'],
+    scopeNote: 'European Portuguese baseline for Lusophone Africa (Angola, Mozambique, Cape Verde, Guinea-Bissau, São Tomé).',
+    description: 'Portuguese keyword map for Lusophone Africa — starter pack',
+  },
+};
+
+async function writePack(name, registry) {
+  const meta = META[name];
+  const rawKeywords = PACKS[name];
+  if (!meta || !rawKeywords) {
+    throw new Error(`Missing metadata or keywords for pack: ${name}`);
+  }
+
+  const keywords = completeKeywords(rawKeywords, registry);
+  const targets = registry.targets;
+
+  const pack = {
+    name,
+    languageCode: meta.languageCode,
+    locale: meta.locale,
+    countries: meta.countries,
+    regions: meta.regions,
+    version: VERSION,
+    displayName: meta.displayName,
+    description: meta.description,
+    reviewStatus: 'starter',
+    contributors: ['kolanutTechnologies'],
+    targets,
+    keywords,
+  };
+
+  if (meta.scopeNote) {
+    pack.scopeNote = meta.scopeNote;
+  }
+
+  const partners = RECOMMENDED_PARTNERS[name];
+  if (partners) {
+    pack.recommendedPartners = partners;
+  }
+
+  const dir = join(packsRoot, name);
+  await mkdir(dir, { recursive: true });
+  const json = JSON.stringify(pack, null, 2) + '\n';
+  await writeFile(join(dir, 'pack.json'), json);
+  await writeFile(join(dir, 'keywords.json'), JSON.stringify(keywords, null, 2) + '\n');
+}
+
+async function writeIndex() {
+  const packs = Object.keys(META).map((name) => {
+    const meta = META[name];
+    return {
+      name,
+      languageCode: meta.languageCode,
+      locale: meta.locale,
+      displayName: meta.displayName,
+      countries: meta.countries,
+      regions: meta.regions,
+      version: VERSION,
+    };
+  });
+
+  const index = { packs };
+  await writeFile(join(packsRoot, 'index.json'), JSON.stringify(index, null, 2) + '\n');
+  return index;
+}
+
+async function writeLookups(index) {
+  /** @type {Record<string, string[]>} */
+  const byCountry = {};
+  /** @type {Record<string, string[]>} */
+  const byRegion = {};
+
+  for (const pack of index.packs) {
+    for (const country of pack.countries) {
+      if (!byCountry[country]) byCountry[country] = [];
+      byCountry[country].push(pack.name);
+    }
+    for (const region of pack.regions) {
+      if (!byRegion[region]) byRegion[region] = [];
+      byRegion[region].push(pack.name);
+    }
+  }
+
+  for (const map of [byCountry, byRegion]) {
+    for (const key of Object.keys(map)) {
+      map[key].sort();
+    }
+  }
+
+  await writeFile(
+    join(packsRoot, 'by-country.json'),
+    JSON.stringify({ version: VERSION, byCountry }, null, 2) + '\n',
+  );
+  await writeFile(
+    join(packsRoot, 'by-region.json'),
+    JSON.stringify({ version: VERSION, byRegion }, null, 2) + '\n',
+  );
+}
+
+async function writeTargetCoverage(registry) {
+  const summary = {
+    version: registry.version,
+    targets: registry.targets,
+    tokenCount: registry.tokens.length,
+    byTarget: {},
+    byTier: { core: 0, standard: 0, advanced: 0 },
+    byGroup: {},
+  };
+
+  for (const entry of registry.tokens) {
+    summary.byTier[entry.tier] = (summary.byTier[entry.tier] ?? 0) + 1;
+    summary.byGroup[entry.group] = (summary.byGroup[entry.group] ?? 0) + 1;
+
+    for (const target of registry.targets) {
+      if (!summary.byTarget[target]) {
+        summary.byTarget[target] = { mapped: 0, unmapped: 0, tokens: [] };
+      }
+      const value = entry.targets[target];
+      if (value && value.trim()) {
+        summary.byTarget[target].mapped += 1;
+        summary.byTarget[target].tokens.push({ logical: entry.logical, emits: value });
+      } else {
+        summary.byTarget[target].unmapped += 1;
+      }
+    }
+  }
+
+  await writeFile(
+    join(packsRoot, 'target-coverage.json'),
+    JSON.stringify(summary, null, 2) + '\n',
+  );
+}
+
+async function main() {
+  const registry = await loadTokenRegistry();
+  registryTargets = registry.targets;
+
+  for (const name of Object.keys(META)) {
+    await writePack(name, registry);
+  }
+  const index = await writeIndex();
+  await writeLookups(index);
+  await writeTargetCoverage(registry);
+  // Regenerate official-keyword coverage summary (must pass)
+  const result = spawnSync(process.execPath, [join(root, 'scripts', 'generate-coverage.mjs')], {
+    cwd: root,
+    stdio: 'inherit',
+  });
+  if (result.status !== 0) process.exit(result.status ?? 1);
+  console.log(
+    `Bootstrapped ${Object.keys(META).length} pack(s), ${registry.tokens.length} logical token(s), ${registry.targets.length} transpile target(s).`,
+  );
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

@@ -1,0 +1,359 @@
+{
+  "name": "shona",
+  "languageCode": "sn",
+  "locale": "sn-ZW",
+  "countries": [
+    "ZW"
+  ],
+  "regions": [
+    "Southern Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Shona",
+  "description": "Shona keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "kana",
+      "if"
+    ],
+    "ELSE": [
+      "kana zvisina kudaro",
+      "else"
+    ],
+    "FOR": [
+      "kuti",
+      "for"
+    ],
+    "WHILE": [
+      "panguva",
+      "while"
+    ],
+    "BREAK": [
+      "pambura",
+      "break"
+    ],
+    "CONTINUE": [
+      "ramba",
+      "continue"
+    ],
+    "SWITCH": [
+      "sarudza",
+      "switch"
+    ],
+    "CASE": [
+      "mamiriro",
+      "case"
+    ],
+    "DEFAULT": [
+      "chikamu",
+      "default"
+    ],
+    "FUNCTION": [
+      "basa",
+      "function"
+    ],
+    "RETURN": [
+      "dzosa",
+      "return"
+    ],
+    "ASYNC": [
+      "async",
+      "async"
+    ],
+    "AWAIT": [
+      "mirira",
+      "await"
+    ],
+    "TRY": [
+      "edza",
+      "try"
+    ],
+    "CATCH": [
+      "bata",
+      "catch"
+    ],
+    "FINALLY": [
+      "pakupedzisira",
+      "finally"
+    ],
+    "THROW": [
+      "tonga",
+      "throw"
+    ],
+    "LET": [
+      "regai",
+      "let"
+    ],
+    "CONST": [
+      "chakavakwa",
+      "const"
+    ],
+    "CLASS": [
+      "chikamu",
+      "class"
+    ],
+    "EXTENDS": [
+      "wedzera",
+      "extends"
+    ],
+    "NEW": [
+      "itsva",
+      "new"
+    ],
+    "THIS": [
+      "ichi",
+      "this"
+    ],
+    "IMPORT": [
+      "isa",
+      "import"
+    ],
+    "EXPORT": [
+      "buda",
+      "export"
+    ],
+    "PRINT": [
+      "printa",
+      "print"
+    ],
+    "TRUE": [
+      "chokwadi",
+      "true"
+    ],
+    "FALSE": [
+      "nhema",
+      "false"
+    ],
+    "NULL": [
+      "hapana",
+      "null"
+    ],
+    "UNDEFINED": [
+      "hazvisi",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Shona of Zimbabwe.",
+  "recommendedPartners": [
+    "ACALAN",
+    "University of Zimbabwe"
+  ]
+}

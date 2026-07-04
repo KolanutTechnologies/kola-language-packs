@@ -1,0 +1,329 @@
+{
+  "IF": [
+    "ọ bụrụ na",
+    "if"
+  ],
+  "ELSE": [
+    "ọ bụghị ma ọ bụ",
+    "else"
+  ],
+  "FOR": [
+    "maka",
+    "for"
+  ],
+  "WHILE": [
+    "mgbe",
+    "while"
+  ],
+  "BREAK": [
+    "kwụsị",
+    "break"
+  ],
+  "CONTINUE": [
+    "ga n'ihu",
+    "continue"
+  ],
+  "SWITCH": [
+    "họrọ",
+    "switch"
+  ],
+  "CASE": [
+    "ọnọdụ",
+    "case"
+  ],
+  "DEFAULT": [
+    "ndabara",
+    "default"
+  ],
+  "FUNCTION": [
+    "ọrụ",
+    "function"
+  ],
+  "RETURN": [
+    "lọghachi",
+    "return"
+  ],
+  "ASYNC": [
+    "ngwa ngwa",
+    "async"
+  ],
+  "AWAIT": [
+    "chere",
+    "await"
+  ],
+  "TRY": [
+    "nwaa",
+    "try"
+  ],
+  "CATCH": [
+    "jide",
+    "catch"
+  ],
+  "FINALLY": [
+    "ikpeazụ",
+    "finally"
+  ],
+  "THROW": [
+    "tụba",
+    "throw"
+  ],
+  "LET": [
+    "ka",
+    "let"
+  ],
+  "CONST": [
+    "nkịtị",
+    "const"
+  ],
+  "CLASS": [
+    "klasi",
+    "class"
+  ],
+  "EXTENDS": [
+    "gbatịa",
+    "extends"
+  ],
+  "NEW": [
+    "ọhụrụ",
+    "new"
+  ],
+  "THIS": [
+    "nke a",
+    "this"
+  ],
+  "IMPORT": [
+    "bubata",
+    "import"
+  ],
+  "EXPORT": [
+    "pụta",
+    "export"
+  ],
+  "PRINT": [
+    "gosipụta",
+    "print"
+  ],
+  "TRUE": [
+    "eziokwu",
+    "true"
+  ],
+  "FALSE": [
+    "ụgha",
+    "false"
+  ],
+  "NULL": [
+    "efu",
+    "null"
+  ],
+  "UNDEFINED": [
+    "akọwaghị",
+    "undefined"
+  ],
+  "ELIF": [
+    "else"
+  ],
+  "LOOP": [
+    "loop"
+  ],
+  "MATCH": [
+    "match"
+  ],
+  "GOTO": [
+    "goto"
+  ],
+  "FALLTHROUGH": [
+    "fallthrough"
+  ],
+  "SELECT": [
+    "select"
+  ],
+  "RANGE": [
+    "range"
+  ],
+  "YIELD": [
+    "yield"
+  ],
+  "LAMBDA": [
+    "lambda"
+  ],
+  "DEFER": [
+    "defer"
+  ],
+  "GO": [
+    "go"
+  ],
+  "VAR": [
+    "var"
+  ],
+  "MUT": [
+    "mut"
+  ],
+  "GLOBAL": [
+    "global"
+  ],
+  "NONLOCAL": [
+    "nonlocal"
+  ],
+  "STRUCT": [
+    "struct"
+  ],
+  "TRAIT": [
+    "trait"
+  ],
+  "IMPL": [
+    "impl"
+  ],
+  "INTERFACE": [
+    "interface"
+  ],
+  "ENUM": [
+    "enum"
+  ],
+  "TYPE": [
+    "type"
+  ],
+  "IMPLEMENTS": [
+    "implements"
+  ],
+  "SELF": [
+    "self"
+  ],
+  "SUPER": [
+    "super"
+  ],
+  "STATIC": [
+    "static"
+  ],
+  "FROM": [
+    "from"
+  ],
+  "AS": [
+    "as"
+  ],
+  "MODULE": [
+    "module"
+  ],
+  "NAMESPACE": [
+    "namespace"
+  ],
+  "PACKAGE": [
+    "package"
+  ],
+  "USE": [
+    "use"
+  ],
+  "PUB": [
+    "public"
+  ],
+  "CRATE": [
+    "crate"
+  ],
+  "WITH": [
+    "with"
+  ],
+  "PASS": [
+    "pass"
+  ],
+  "ASSERT": [
+    "assert"
+  ],
+  "ASSERTS": [
+    "asserts"
+  ],
+  "NIL": [
+    "null"
+  ],
+  "UNSAFE": [
+    "unsafe"
+  ],
+  "EXTERN": [
+    "declare"
+  ],
+  "CHAN": [
+    "chan"
+  ],
+  "MAP": [
+    "map"
+  ],
+  "AND": [
+    "and"
+  ],
+  "OR": [
+    "or"
+  ],
+  "NOT": [
+    "not"
+  ],
+  "IN": [
+    "in"
+  ],
+  "IS": [
+    "is"
+  ],
+  "DEL": [
+    "del"
+  ],
+  "DO": [
+    "do"
+  ],
+  "DEBUGGER": [
+    "debugger"
+  ],
+  "TYPEOF": [
+    "typeof"
+  ],
+  "VOID": [
+    "void"
+  ],
+  "INSTANCEOF": [
+    "instanceof"
+  ],
+  "PRIVATE": [
+    "private"
+  ],
+  "PROTECTED": [
+    "protected"
+  ],
+  "PUBLIC": [
+    "public"
+  ],
+  "READONLY": [
+    "readonly"
+  ],
+  "ABSTRACT": [
+    "abstract"
+  ],
+  "DECLARE": [
+    "declare"
+  ],
+  "GET": [
+    "get"
+  ],
+  "SET": [
+    "set"
+  ],
+  "INFER": [
+    "infer"
+  ],
+  "KEYOF": [
+    "keyof"
+  ],
+  "UNIQUE": [
+    "unique"
+  ],
+  "SATISFIES": [
+    "satisfies"
+  ],
+  "DYN": [
+    "dyn"
+  ],
+  "MOVE": [
+    "move"
+  ],
+  "REF": [
+    "ref"
+  ],
+  "WHERE": [
+    "where"
+  ]
+}

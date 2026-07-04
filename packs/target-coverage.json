@@ -1,0 +1,1083 @@
+{
+  "version": "3.0.0",
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "tokenCount": 99,
+  "byTarget": {
+    "javascript": {
+      "mapped": 53,
+      "unmapped": 46,
+      "tokens": [
+        {
+          "logical": "IF",
+          "emits": "if"
+        },
+        {
+          "logical": "ELSE",
+          "emits": "else"
+        },
+        {
+          "logical": "ELIF",
+          "emits": "else if"
+        },
+        {
+          "logical": "FOR",
+          "emits": "for"
+        },
+        {
+          "logical": "WHILE",
+          "emits": "while"
+        },
+        {
+          "logical": "BREAK",
+          "emits": "break"
+        },
+        {
+          "logical": "CONTINUE",
+          "emits": "continue"
+        },
+        {
+          "logical": "SWITCH",
+          "emits": "switch"
+        },
+        {
+          "logical": "CASE",
+          "emits": "case"
+        },
+        {
+          "logical": "DEFAULT",
+          "emits": "default"
+        },
+        {
+          "logical": "FUNCTION",
+          "emits": "function"
+        },
+        {
+          "logical": "RETURN",
+          "emits": "return"
+        },
+        {
+          "logical": "ASYNC",
+          "emits": "async"
+        },
+        {
+          "logical": "AWAIT",
+          "emits": "await"
+        },
+        {
+          "logical": "YIELD",
+          "emits": "yield"
+        },
+        {
+          "logical": "LAMBDA",
+          "emits": "=>"
+        },
+        {
+          "logical": "TRY",
+          "emits": "try"
+        },
+        {
+          "logical": "CATCH",
+          "emits": "catch"
+        },
+        {
+          "logical": "FINALLY",
+          "emits": "finally"
+        },
+        {
+          "logical": "THROW",
+          "emits": "throw"
+        },
+        {
+          "logical": "LET",
+          "emits": "let"
+        },
+        {
+          "logical": "CONST",
+          "emits": "const"
+        },
+        {
+          "logical": "VAR",
+          "emits": "var"
+        },
+        {
+          "logical": "CLASS",
+          "emits": "class"
+        },
+        {
+          "logical": "EXTENDS",
+          "emits": "extends"
+        },
+        {
+          "logical": "NEW",
+          "emits": "new"
+        },
+        {
+          "logical": "THIS",
+          "emits": "this"
+        },
+        {
+          "logical": "SUPER",
+          "emits": "super"
+        },
+        {
+          "logical": "STATIC",
+          "emits": "static"
+        },
+        {
+          "logical": "IMPORT",
+          "emits": "import"
+        },
+        {
+          "logical": "EXPORT",
+          "emits": "export"
+        },
+        {
+          "logical": "FROM",
+          "emits": "from"
+        },
+        {
+          "logical": "AS",
+          "emits": "as"
+        },
+        {
+          "logical": "WITH",
+          "emits": "with"
+        },
+        {
+          "logical": "PRINT",
+          "emits": "console.log"
+        },
+        {
+          "logical": "TRUE",
+          "emits": "true"
+        },
+        {
+          "logical": "FALSE",
+          "emits": "false"
+        },
+        {
+          "logical": "NULL",
+          "emits": "null"
+        },
+        {
+          "logical": "NIL",
+          "emits": "null"
+        },
+        {
+          "logical": "UNDEFINED",
+          "emits": "undefined"
+        },
+        {
+          "logical": "AND",
+          "emits": "&&"
+        },
+        {
+          "logical": "OR",
+          "emits": "||"
+        },
+        {
+          "logical": "NOT",
+          "emits": "!"
+        },
+        {
+          "logical": "IN",
+          "emits": "in"
+        },
+        {
+          "logical": "DEL",
+          "emits": "delete"
+        },
+        {
+          "logical": "DO",
+          "emits": "do"
+        },
+        {
+          "logical": "DEBUGGER",
+          "emits": "debugger"
+        },
+        {
+          "logical": "TYPEOF",
+          "emits": "typeof"
+        },
+        {
+          "logical": "VOID",
+          "emits": "void"
+        },
+        {
+          "logical": "INSTANCEOF",
+          "emits": "instanceof"
+        },
+        {
+          "logical": "PRIVATE",
+          "emits": "private"
+        },
+        {
+          "logical": "PROTECTED",
+          "emits": "protected"
+        },
+        {
+          "logical": "PUBLIC",
+          "emits": "public"
+        }
+      ]
+    },
+    "python": {
+      "mapped": 45,
+      "unmapped": 54,
+      "tokens": [
+        {
+          "logical": "IF",
+          "emits": "if"
+        },
+        {
+          "logical": "ELSE",
+          "emits": "else"
+        },
+        {
+          "logical": "ELIF",
+          "emits": "elif"
+        },
+        {
+          "logical": "FOR",
+          "emits": "for"
+        },
+        {
+          "logical": "WHILE",
+          "emits": "while"
+        },
+        {
+          "logical": "BREAK",
+          "emits": "break"
+        },
+        {
+          "logical": "CONTINUE",
+          "emits": "continue"
+        },
+        {
+          "logical": "SWITCH",
+          "emits": "match"
+        },
+        {
+          "logical": "MATCH",
+          "emits": "match"
+        },
+        {
+          "logical": "CASE",
+          "emits": "case"
+        },
+        {
+          "logical": "DEFAULT",
+          "emits": "case _"
+        },
+        {
+          "logical": "FUNCTION",
+          "emits": "def"
+        },
+        {
+          "logical": "RETURN",
+          "emits": "return"
+        },
+        {
+          "logical": "ASYNC",
+          "emits": "async"
+        },
+        {
+          "logical": "AWAIT",
+          "emits": "await"
+        },
+        {
+          "logical": "YIELD",
+          "emits": "yield"
+        },
+        {
+          "logical": "LAMBDA",
+          "emits": "lambda"
+        },
+        {
+          "logical": "TRY",
+          "emits": "try"
+        },
+        {
+          "logical": "CATCH",
+          "emits": "except"
+        },
+        {
+          "logical": "FINALLY",
+          "emits": "finally"
+        },
+        {
+          "logical": "THROW",
+          "emits": "raise"
+        },
+        {
+          "logical": "GLOBAL",
+          "emits": "global"
+        },
+        {
+          "logical": "NONLOCAL",
+          "emits": "nonlocal"
+        },
+        {
+          "logical": "CLASS",
+          "emits": "class"
+        },
+        {
+          "logical": "THIS",
+          "emits": "self"
+        },
+        {
+          "logical": "SELF",
+          "emits": "self"
+        },
+        {
+          "logical": "SUPER",
+          "emits": "super"
+        },
+        {
+          "logical": "IMPORT",
+          "emits": "import"
+        },
+        {
+          "logical": "FROM",
+          "emits": "from"
+        },
+        {
+          "logical": "AS",
+          "emits": "as"
+        },
+        {
+          "logical": "WITH",
+          "emits": "with"
+        },
+        {
+          "logical": "PASS",
+          "emits": "pass"
+        },
+        {
+          "logical": "ASSERT",
+          "emits": "assert"
+        },
+        {
+          "logical": "PRINT",
+          "emits": "print"
+        },
+        {
+          "logical": "TRUE",
+          "emits": "True"
+        },
+        {
+          "logical": "FALSE",
+          "emits": "False"
+        },
+        {
+          "logical": "NULL",
+          "emits": "None"
+        },
+        {
+          "logical": "NIL",
+          "emits": "None"
+        },
+        {
+          "logical": "UNDEFINED",
+          "emits": "None"
+        },
+        {
+          "logical": "AND",
+          "emits": "and"
+        },
+        {
+          "logical": "OR",
+          "emits": "or"
+        },
+        {
+          "logical": "NOT",
+          "emits": "not"
+        },
+        {
+          "logical": "IN",
+          "emits": "in"
+        },
+        {
+          "logical": "IS",
+          "emits": "is"
+        },
+        {
+          "logical": "DEL",
+          "emits": "del"
+        }
+      ]
+    },
+    "typescript": {
+      "mapped": 72,
+      "unmapped": 27,
+      "tokens": [
+        {
+          "logical": "IF",
+          "emits": "if"
+        },
+        {
+          "logical": "ELSE",
+          "emits": "else"
+        },
+        {
+          "logical": "ELIF",
+          "emits": "else if"
+        },
+        {
+          "logical": "FOR",
+          "emits": "for"
+        },
+        {
+          "logical": "WHILE",
+          "emits": "while"
+        },
+        {
+          "logical": "BREAK",
+          "emits": "break"
+        },
+        {
+          "logical": "CONTINUE",
+          "emits": "continue"
+        },
+        {
+          "logical": "SWITCH",
+          "emits": "switch"
+        },
+        {
+          "logical": "CASE",
+          "emits": "case"
+        },
+        {
+          "logical": "DEFAULT",
+          "emits": "default"
+        },
+        {
+          "logical": "FUNCTION",
+          "emits": "function"
+        },
+        {
+          "logical": "RETURN",
+          "emits": "return"
+        },
+        {
+          "logical": "ASYNC",
+          "emits": "async"
+        },
+        {
+          "logical": "AWAIT",
+          "emits": "await"
+        },
+        {
+          "logical": "YIELD",
+          "emits": "yield"
+        },
+        {
+          "logical": "LAMBDA",
+          "emits": "=>"
+        },
+        {
+          "logical": "TRY",
+          "emits": "try"
+        },
+        {
+          "logical": "CATCH",
+          "emits": "catch"
+        },
+        {
+          "logical": "FINALLY",
+          "emits": "finally"
+        },
+        {
+          "logical": "THROW",
+          "emits": "throw"
+        },
+        {
+          "logical": "LET",
+          "emits": "let"
+        },
+        {
+          "logical": "CONST",
+          "emits": "const"
+        },
+        {
+          "logical": "VAR",
+          "emits": "var"
+        },
+        {
+          "logical": "CLASS",
+          "emits": "class"
+        },
+        {
+          "logical": "INTERFACE",
+          "emits": "interface"
+        },
+        {
+          "logical": "ENUM",
+          "emits": "enum"
+        },
+        {
+          "logical": "TYPE",
+          "emits": "type"
+        },
+        {
+          "logical": "EXTENDS",
+          "emits": "extends"
+        },
+        {
+          "logical": "IMPLEMENTS",
+          "emits": "implements"
+        },
+        {
+          "logical": "NEW",
+          "emits": "new"
+        },
+        {
+          "logical": "THIS",
+          "emits": "this"
+        },
+        {
+          "logical": "SUPER",
+          "emits": "super"
+        },
+        {
+          "logical": "STATIC",
+          "emits": "static"
+        },
+        {
+          "logical": "IMPORT",
+          "emits": "import"
+        },
+        {
+          "logical": "EXPORT",
+          "emits": "export"
+        },
+        {
+          "logical": "FROM",
+          "emits": "from"
+        },
+        {
+          "logical": "AS",
+          "emits": "as"
+        },
+        {
+          "logical": "MODULE",
+          "emits": "module"
+        },
+        {
+          "logical": "NAMESPACE",
+          "emits": "namespace"
+        },
+        {
+          "logical": "PUB",
+          "emits": "public"
+        },
+        {
+          "logical": "WITH",
+          "emits": "with"
+        },
+        {
+          "logical": "ASSERTS",
+          "emits": "asserts"
+        },
+        {
+          "logical": "PRINT",
+          "emits": "console.log"
+        },
+        {
+          "logical": "TRUE",
+          "emits": "true"
+        },
+        {
+          "logical": "FALSE",
+          "emits": "false"
+        },
+        {
+          "logical": "NULL",
+          "emits": "null"
+        },
+        {
+          "logical": "NIL",
+          "emits": "null"
+        },
+        {
+          "logical": "UNDEFINED",
+          "emits": "undefined"
+        },
+        {
+          "logical": "EXTERN",
+          "emits": "declare"
+        },
+        {
+          "logical": "AND",
+          "emits": "&&"
+        },
+        {
+          "logical": "OR",
+          "emits": "||"
+        },
+        {
+          "logical": "NOT",
+          "emits": "!"
+        },
+        {
+          "logical": "IN",
+          "emits": "in"
+        },
+        {
+          "logical": "IS",
+          "emits": "is"
+        },
+        {
+          "logical": "DEL",
+          "emits": "delete"
+        },
+        {
+          "logical": "DO",
+          "emits": "do"
+        },
+        {
+          "logical": "DEBUGGER",
+          "emits": "debugger"
+        },
+        {
+          "logical": "TYPEOF",
+          "emits": "typeof"
+        },
+        {
+          "logical": "VOID",
+          "emits": "void"
+        },
+        {
+          "logical": "INSTANCEOF",
+          "emits": "instanceof"
+        },
+        {
+          "logical": "PRIVATE",
+          "emits": "private"
+        },
+        {
+          "logical": "PROTECTED",
+          "emits": "protected"
+        },
+        {
+          "logical": "PUBLIC",
+          "emits": "public"
+        },
+        {
+          "logical": "READONLY",
+          "emits": "readonly"
+        },
+        {
+          "logical": "ABSTRACT",
+          "emits": "abstract"
+        },
+        {
+          "logical": "DECLARE",
+          "emits": "declare"
+        },
+        {
+          "logical": "GET",
+          "emits": "get"
+        },
+        {
+          "logical": "SET",
+          "emits": "set"
+        },
+        {
+          "logical": "INFER",
+          "emits": "infer"
+        },
+        {
+          "logical": "KEYOF",
+          "emits": "keyof"
+        },
+        {
+          "logical": "UNIQUE",
+          "emits": "unique"
+        },
+        {
+          "logical": "SATISFIES",
+          "emits": "satisfies"
+        }
+      ]
+    },
+    "go": {
+      "mapped": 34,
+      "unmapped": 65,
+      "tokens": [
+        {
+          "logical": "IF",
+          "emits": "if"
+        },
+        {
+          "logical": "ELSE",
+          "emits": "else"
+        },
+        {
+          "logical": "ELIF",
+          "emits": "else if"
+        },
+        {
+          "logical": "FOR",
+          "emits": "for"
+        },
+        {
+          "logical": "WHILE",
+          "emits": "while"
+        },
+        {
+          "logical": "BREAK",
+          "emits": "break"
+        },
+        {
+          "logical": "CONTINUE",
+          "emits": "continue"
+        },
+        {
+          "logical": "SWITCH",
+          "emits": "switch"
+        },
+        {
+          "logical": "CASE",
+          "emits": "case"
+        },
+        {
+          "logical": "DEFAULT",
+          "emits": "default"
+        },
+        {
+          "logical": "GOTO",
+          "emits": "goto"
+        },
+        {
+          "logical": "FALLTHROUGH",
+          "emits": "fallthrough"
+        },
+        {
+          "logical": "SELECT",
+          "emits": "select"
+        },
+        {
+          "logical": "RANGE",
+          "emits": "range"
+        },
+        {
+          "logical": "FUNCTION",
+          "emits": "func"
+        },
+        {
+          "logical": "RETURN",
+          "emits": "return"
+        },
+        {
+          "logical": "DEFER",
+          "emits": "defer"
+        },
+        {
+          "logical": "GO",
+          "emits": "go"
+        },
+        {
+          "logical": "CONST",
+          "emits": "const"
+        },
+        {
+          "logical": "VAR",
+          "emits": "var"
+        },
+        {
+          "logical": "STRUCT",
+          "emits": "struct"
+        },
+        {
+          "logical": "INTERFACE",
+          "emits": "interface"
+        },
+        {
+          "logical": "TYPE",
+          "emits": "type"
+        },
+        {
+          "logical": "IMPORT",
+          "emits": "import"
+        },
+        {
+          "logical": "PACKAGE",
+          "emits": "package"
+        },
+        {
+          "logical": "PRINT",
+          "emits": "fmt.Println"
+        },
+        {
+          "logical": "TRUE",
+          "emits": "true"
+        },
+        {
+          "logical": "FALSE",
+          "emits": "false"
+        },
+        {
+          "logical": "NULL",
+          "emits": "nil"
+        },
+        {
+          "logical": "NIL",
+          "emits": "nil"
+        },
+        {
+          "logical": "UNDEFINED",
+          "emits": "nil"
+        },
+        {
+          "logical": "CHAN",
+          "emits": "chan"
+        },
+        {
+          "logical": "MAP",
+          "emits": "map"
+        },
+        {
+          "logical": "NOT",
+          "emits": "!"
+        }
+      ]
+    },
+    "rust": {
+      "mapped": 51,
+      "unmapped": 48,
+      "tokens": [
+        {
+          "logical": "IF",
+          "emits": "if"
+        },
+        {
+          "logical": "ELSE",
+          "emits": "else"
+        },
+        {
+          "logical": "ELIF",
+          "emits": "else if"
+        },
+        {
+          "logical": "FOR",
+          "emits": "for"
+        },
+        {
+          "logical": "WHILE",
+          "emits": "while"
+        },
+        {
+          "logical": "LOOP",
+          "emits": "loop"
+        },
+        {
+          "logical": "BREAK",
+          "emits": "break"
+        },
+        {
+          "logical": "CONTINUE",
+          "emits": "continue"
+        },
+        {
+          "logical": "SWITCH",
+          "emits": "match"
+        },
+        {
+          "logical": "MATCH",
+          "emits": "match"
+        },
+        {
+          "logical": "CASE",
+          "emits": "=>"
+        },
+        {
+          "logical": "DEFAULT",
+          "emits": "_"
+        },
+        {
+          "logical": "FUNCTION",
+          "emits": "fn"
+        },
+        {
+          "logical": "RETURN",
+          "emits": "return"
+        },
+        {
+          "logical": "ASYNC",
+          "emits": "async"
+        },
+        {
+          "logical": "AWAIT",
+          "emits": "await"
+        },
+        {
+          "logical": "LAMBDA",
+          "emits": "|"
+        },
+        {
+          "logical": "THROW",
+          "emits": "panic!"
+        },
+        {
+          "logical": "LET",
+          "emits": "let"
+        },
+        {
+          "logical": "CONST",
+          "emits": "const"
+        },
+        {
+          "logical": "MUT",
+          "emits": "mut"
+        },
+        {
+          "logical": "STRUCT",
+          "emits": "struct"
+        },
+        {
+          "logical": "TRAIT",
+          "emits": "trait"
+        },
+        {
+          "logical": "IMPL",
+          "emits": "impl"
+        },
+        {
+          "logical": "ENUM",
+          "emits": "enum"
+        },
+        {
+          "logical": "TYPE",
+          "emits": "type"
+        },
+        {
+          "logical": "SELF",
+          "emits": "self"
+        },
+        {
+          "logical": "SUPER",
+          "emits": "super"
+        },
+        {
+          "logical": "IMPORT",
+          "emits": "use"
+        },
+        {
+          "logical": "EXPORT",
+          "emits": "pub"
+        },
+        {
+          "logical": "AS",
+          "emits": "as"
+        },
+        {
+          "logical": "MODULE",
+          "emits": "mod"
+        },
+        {
+          "logical": "USE",
+          "emits": "use"
+        },
+        {
+          "logical": "PUB",
+          "emits": "pub"
+        },
+        {
+          "logical": "CRATE",
+          "emits": "crate"
+        },
+        {
+          "logical": "ASSERT",
+          "emits": "assert!"
+        },
+        {
+          "logical": "PRINT",
+          "emits": "println!"
+        },
+        {
+          "logical": "TRUE",
+          "emits": "true"
+        },
+        {
+          "logical": "FALSE",
+          "emits": "false"
+        },
+        {
+          "logical": "NULL",
+          "emits": "None"
+        },
+        {
+          "logical": "NIL",
+          "emits": "None"
+        },
+        {
+          "logical": "UNDEFINED",
+          "emits": "None"
+        },
+        {
+          "logical": "UNSAFE",
+          "emits": "unsafe"
+        },
+        {
+          "logical": "EXTERN",
+          "emits": "extern"
+        },
+        {
+          "logical": "NOT",
+          "emits": "!"
+        },
+        {
+          "logical": "IN",
+          "emits": "in"
+        },
+        {
+          "logical": "PUBLIC",
+          "emits": "pub"
+        },
+        {
+          "logical": "DYN",
+          "emits": "dyn"
+        },
+        {
+          "logical": "MOVE",
+          "emits": "move"
+        },
+        {
+          "logical": "REF",
+          "emits": "ref"
+        },
+        {
+          "logical": "WHERE",
+          "emits": "where"
+        }
+      ]
+    }
+  },
+  "byTier": {
+    "core": 30,
+    "standard": 33,
+    "advanced": 36
+  },
+  "byGroup": {
+    "control": 17,
+    "functions": 8,
+    "errors": 4,
+    "variables": 6,
+    "types": 21,
+    "modules": 11,
+    "blocks": 4,
+    "io": 1,
+    "literals": 5,
+    "systems": 8,
+    "operators": 9,
+    "debug": 1,
+    "visibility": 4
+  }
+}

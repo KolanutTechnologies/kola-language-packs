@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kolanutTechnologies/kola-language-packs/pack.schema.json",
+  "title": "Kola Language Pack",
+  "type": "object",
+  "required": ["name", "languageCode", "locale", "countries", "regions", "version", "targets", "keywords"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Pack identifier, e.g. yoruba, pidgin"
+    },
+    "languageCode": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}$",
+      "description": "ISO 639 primary language subtag (e.g. yo, pcm, ha). Not a country code."
+    },
+    "locale": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$",
+      "description": "BCP-47 language tag with optional region (e.g. pcm-NG, yo-NG)"
+    },
+    "countries": {
+      "type": "array",
+      "description": "ISO 3166-1 alpha-2 country codes where this pack variant applies",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2}$"
+      },
+      "minItems": 1
+    },
+    "regions": {
+      "type": "array",
+      "description": "Broad geographic scope for browsing (e.g. West Africa)",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "scopeNote": {
+      "type": "string",
+      "description": "Contributor guidance when a language spans countries or has distinct regional variants"
+    },
+    "reviewStatus": {
+      "type": "string",
+      "enum": ["starter", "community-reviewed", "partner-verified"],
+      "description": "Verification level of keyword translations"
+    },
+    "recommendedPartners": {
+      "type": "array",
+      "description": "Organizations to contact for verified terminology (language academies, universities, community NLP groups)",
+      "items": { "type": "string" }
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "displayName": { "type": "string" },
+    "description": { "type": "string" },
+    "contributors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["javascript", "python", "typescript", "go", "rust"]
+      },
+      "minItems": 1
+    },
+    "keywords": {
+      "type": "object",
+      "description": "Logical token → native phrase(s). Value is string or string[].",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string", "minLength": 1 },
+          {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

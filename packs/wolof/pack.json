@@ -1,0 +1,361 @@
+{
+  "name": "wolof",
+  "languageCode": "wo",
+  "locale": "wo-SN",
+  "countries": [
+    "SN",
+    "GM",
+    "MR"
+  ],
+  "regions": [
+    "West Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Wolof",
+  "description": "Wolof keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "su",
+      "if"
+    ],
+    "ELSE": [
+      "du ko",
+      "else"
+    ],
+    "FOR": [
+      "ngir",
+      "for"
+    ],
+    "WHILE": [
+      "bi",
+      "while"
+    ],
+    "BREAK": [
+      "tàgg",
+      "break"
+    ],
+    "CONTINUE": [
+      "dem",
+      "continue"
+    ],
+    "SWITCH": [
+      "tann",
+      "switch"
+    ],
+    "CASE": [
+      "mbir",
+      "case"
+    ],
+    "DEFAULT": [
+      "defo",
+      "default"
+    ],
+    "FUNCTION": [
+      "liggéey",
+      "function"
+    ],
+    "RETURN": [
+      "dellu",
+      "return"
+    ],
+    "ASYNC": [
+      "async",
+      "async"
+    ],
+    "AWAIT": [
+      "xar",
+      "await"
+    ],
+    "TRY": [
+      "jéem",
+      "try"
+    ],
+    "CATCH": [
+      "jël",
+      "catch"
+    ],
+    "FINALLY": [
+      "gannaaw",
+      "finally"
+    ],
+    "THROW": [
+      "yóbb",
+      "throw"
+    ],
+    "LET": [
+      "may",
+      "let"
+    ],
+    "CONST": [
+      "dëgg",
+      "const"
+    ],
+    "CLASS": [
+      "class",
+      "class"
+    ],
+    "EXTENDS": [
+      "yokk",
+      "extends"
+    ],
+    "NEW": [
+      "bu bees",
+      "new"
+    ],
+    "THIS": [
+      "lii",
+      "this"
+    ],
+    "IMPORT": [
+      "jël",
+      "import"
+    ],
+    "EXPORT": [
+      "génne",
+      "export"
+    ],
+    "PRINT": [
+      "wone",
+      "print"
+    ],
+    "TRUE": [
+      "dëgg",
+      "true"
+    ],
+    "FALSE": [
+      "dul dëgg",
+      "false"
+    ],
+    "NULL": [
+      "dara",
+      "null"
+    ],
+    "UNDEFINED": [
+      "du am",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Wolof of Senegal and Gambia.",
+  "recommendedPartners": [
+    "ACALAN",
+    "Université Cheikh Anta Diop"
+  ]
+}

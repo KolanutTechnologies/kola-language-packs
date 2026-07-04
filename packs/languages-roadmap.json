@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "description": "African human-language packs: shipped vs planned. Programming targets are separate — see official-target-keywords.json.",
+  "shippedCount": 25,
+  "plannedCount": 40,
+  "shipped": "See packs/index.json and packs/coverage-summary.json",
+  "planned": [
+    { "name": "akan", "languageCode": "ak", "locale": "ak-GH", "regions": ["West Africa"], "priority": "high" },
+    { "name": "efik", "languageCode": "efi", "locale": "efi-NG", "regions": ["West Africa"], "priority": "medium" },
+    { "name": "hausa-niger", "languageCode": "ha", "locale": "ha-NE", "regions": ["West Africa"], "priority": "medium", "note": "Separate pack if Niger Hausa diverges from ha-NG" },
+    { "name": "chichewa", "languageCode": "ny", "locale": "ny-MW", "regions": ["East Africa"], "priority": "medium" },
+    { "name": "malagasy", "languageCode": "mg", "locale": "mg-MG", "regions": ["Indian Ocean"], "priority": "medium" },
+    { "name": "tamazight", "languageCode": "ber", "locale": "ber-MA", "regions": ["North Africa"], "priority": "medium" },
+    { "name": "kirundi", "languageCode": "rn", "locale": "rn-BI", "regions": ["East Africa"], "priority": "low" },
+    { "name": "kikongo", "languageCode": "kg", "locale": "kg-CD", "regions": ["Central Africa"], "priority": "low" },
+    { "name": "umbundu", "languageCode": "umb", "locale": "umb-AO", "regions": ["Southern Africa"], "priority": "low" },
+    { "name": "cameroon-pidgin", "languageCode": "wes", "locale": "wes-CM", "regions": ["Central Africa"], "priority": "high", "note": "Kamtok — not nigerian-pidgin" },
+    { "name": "berber-tifinagh", "languageCode": "tzm", "locale": "tzm-MA", "regions": ["North Africa"], "priority": "low" },
+    { "name": "ndebele", "languageCode": "nr", "locale": "nr-ZA", "regions": ["Southern Africa"], "priority": "low" },
+    { "name": "tsonga", "languageCode": "ts", "locale": "ts-ZA", "regions": ["Southern Africa"], "priority": "low" },
+    { "name": "venda", "languageCode": "ve", "locale": "ve-ZA", "regions": ["Southern Africa"], "priority": "low" },
+    { "name": "sotho-northern", "languageCode": "nso", "locale": "nso-ZA", "regions": ["Southern Africa"], "priority": "low" }
+  ],
+  "programmingTargets": {
+    "shipped": ["javascript", "python", "typescript", "go", "rust"],
+    "planned": ["c", "cpp", "kotlin", "swift", "dart", "ruby", "php", "csharp", "java"]
+  }
+}

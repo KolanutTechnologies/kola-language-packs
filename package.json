@@ -1,0 +1,61 @@
+{
+  "name": "@kolanut/language-packs",
+  "version": "0.1.0",
+  "description": "Community-governed keyword maps for native African language programming — by Kolanut Technologies",
+  "license": "Apache-2.0",
+  "author": "Kolanut Technologies Ltd (https://kolacode.africa)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./packs/*": "./packs/*",
+    "./schema": "./pack.schema.json"
+  },
+  "files": [
+    "dist",
+    "packs",
+    "badges",
+    "pack.schema.json",
+    "LICENSE",
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "validate": "node scripts/validate.mjs",
+    "coverage": "node scripts/generate-coverage.mjs",
+    "bootstrap": "node scripts/bootstrap-packs.mjs",
+    "readme:metrics": "node scripts/update-readme-metrics.mjs",
+    "test": "npm run validate && npm run coverage",
+    "prepublishOnly": "npm run build && npm run validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kolanutTechnologies/kola-language-packs.git"
+  },
+  "keywords": [
+    "kolanut",
+    "kola-code",
+    "kolatech",
+    "african-languages",
+    "yoruba",
+    "pidgin",
+    "hausa",
+    "igbo",
+    "swahili",
+    "localization",
+    "programming-languages",
+    "definition-maps"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

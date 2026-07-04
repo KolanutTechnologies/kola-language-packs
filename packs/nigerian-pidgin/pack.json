@@ -1,0 +1,362 @@
+{
+  "name": "nigerian-pidgin",
+  "languageCode": "pcm",
+  "locale": "pcm-NG",
+  "countries": [
+    "NG"
+  ],
+  "regions": [
+    "West Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Nigerian Pidgin",
+  "description": "Nigerian Pidgin keyword map — bridge language for Nigerian developers",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "if case say",
+      "if"
+    ],
+    "ELSE": [
+      "if e no be so",
+      "else"
+    ],
+    "FOR": [
+      "do am again again",
+      "do am",
+      "for"
+    ],
+    "WHILE": [
+      "keep doing am while",
+      "while"
+    ],
+    "BREAK": [
+      "stop am",
+      "break"
+    ],
+    "CONTINUE": [
+      "continue am",
+      "continue"
+    ],
+    "SWITCH": [
+      "check which one",
+      "switch"
+    ],
+    "CASE": [
+      "when e be",
+      "case"
+    ],
+    "DEFAULT": [
+      "if nothing match",
+      "default"
+    ],
+    "FUNCTION": [
+      "make function for",
+      "function"
+    ],
+    "RETURN": [
+      "bring back",
+      "return"
+    ],
+    "ASYNC": [
+      "wait small first",
+      "async"
+    ],
+    "AWAIT": [
+      "wait for am",
+      "await"
+    ],
+    "TRY": [
+      "try am",
+      "try"
+    ],
+    "CATCH": [
+      "if e fail catch am",
+      "catch"
+    ],
+    "FINALLY": [
+      "last last",
+      "finally"
+    ],
+    "THROW": [
+      "throw am",
+      "throw"
+    ],
+    "LET": [
+      "make we say",
+      "make",
+      "let"
+    ],
+    "CONST": [
+      "e no go change say",
+      "const"
+    ],
+    "CLASS": [
+      "kind of thing",
+      "class"
+    ],
+    "EXTENDS": [
+      "e come from",
+      "extends"
+    ],
+    "NEW": [
+      "new new",
+      "new"
+    ],
+    "THIS": [
+      "this one here",
+      "this"
+    ],
+    "IMPORT": [
+      "carry come",
+      "import"
+    ],
+    "EXPORT": [
+      "send out",
+      "export"
+    ],
+    "PRINT": [
+      "show for screen",
+      "show",
+      "print"
+    ],
+    "TRUE": [
+      "e correct",
+      "true"
+    ],
+    "FALSE": [
+      "e no correct",
+      "false"
+    ],
+    "NULL": [
+      "nothing dey",
+      "null"
+    ],
+    "UNDEFINED": [
+      "e no define",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Nigerian Pidgin (Naija) only. Not Cameroon Pidgin, Ghanaian Pidgin, or other West African creoles — those need separate packs.",
+  "recommendedPartners": [
+    "Masakhane",
+    "Community Naija reviewers"
+  ]
+}

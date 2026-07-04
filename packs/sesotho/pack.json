@@ -1,0 +1,330 @@
+{
+  "name": "sesotho",
+  "languageCode": "st",
+  "locale": "st-LS",
+  "countries": [
+    "LS",
+    "ZA"
+  ],
+  "regions": [
+    "Southern Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Sesotho",
+  "description": "Sesotho keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "if"
+    ],
+    "ELSE": [
+      "else"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "FOR": [
+      "for"
+    ],
+    "WHILE": [
+      "while"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "BREAK": [
+      "break"
+    ],
+    "CONTINUE": [
+      "continue"
+    ],
+    "SWITCH": [
+      "switch"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "CASE": [
+      "case"
+    ],
+    "DEFAULT": [
+      "default"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "FUNCTION": [
+      "function"
+    ],
+    "RETURN": [
+      "return"
+    ],
+    "ASYNC": [
+      "async"
+    ],
+    "AWAIT": [
+      "await"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "TRY": [
+      "try"
+    ],
+    "CATCH": [
+      "catch"
+    ],
+    "FINALLY": [
+      "finally"
+    ],
+    "THROW": [
+      "throw"
+    ],
+    "LET": [
+      "let"
+    ],
+    "CONST": [
+      "const"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "CLASS": [
+      "class"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "EXTENDS": [
+      "extends"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "NEW": [
+      "new"
+    ],
+    "THIS": [
+      "this"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "IMPORT": [
+      "import"
+    ],
+    "EXPORT": [
+      "export"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "PRINT": [
+      "print"
+    ],
+    "TRUE": [
+      "true"
+    ],
+    "FALSE": [
+      "false"
+    ],
+    "NULL": [
+      "null"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNDEFINED": [
+      "undefined"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Sesotho of Lesotho and South Africa.",
+  "recommendedPartners": [
+    "PanSALB",
+    "Translate.org.za"
+  ]
+}

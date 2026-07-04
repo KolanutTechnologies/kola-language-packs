@@ -1,0 +1,360 @@
+{
+  "name": "tigrinya",
+  "languageCode": "ti",
+  "locale": "ti-ER",
+  "countries": [
+    "ER",
+    "ET"
+  ],
+  "regions": [
+    "East Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Tigrinya",
+  "description": "Tigrinya keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "ከ",
+      "if"
+    ],
+    "ELSE": [
+      "ካልእ",
+      "else"
+    ],
+    "FOR": [
+      "ን",
+      "for"
+    ],
+    "WHILE": [
+      "ሰዓት",
+      "while"
+    ],
+    "BREAK": [
+      "ሰብር",
+      "break"
+    ],
+    "CONTINUE": [
+      "ቀጽል",
+      "continue"
+    ],
+    "SWITCH": [
+      "ምረጽ",
+      "switch"
+    ],
+    "CASE": [
+      "ጉዳይ",
+      "case"
+    ],
+    "DEFAULT": [
+      "ነባሪ",
+      "default"
+    ],
+    "FUNCTION": [
+      "ተግባር",
+      "function"
+    ],
+    "RETURN": [
+      "መልስ",
+      "return"
+    ],
+    "ASYNC": [
+      "async",
+      "async"
+    ],
+    "AWAIT": [
+      "ጽበ",
+      "await"
+    ],
+    "TRY": [
+      "ፈትን",
+      "try"
+    ],
+    "CATCH": [
+      "ዓቅም",
+      "catch"
+    ],
+    "FINALLY": [
+      "ናይ መወዳእታ",
+      "finally"
+    ],
+    "THROW": [
+      "ደርድር",
+      "throw"
+    ],
+    "LET": [
+      "ተው",
+      "let"
+    ],
+    "CONST": [
+      "ቋሚ",
+      "const"
+    ],
+    "CLASS": [
+      "ክፍሊ",
+      "class"
+    ],
+    "EXTENDS": [
+      "ዘርግ",
+      "extends"
+    ],
+    "NEW": [
+      "ሓድሽ",
+      "new"
+    ],
+    "THIS": [
+      "እዚ",
+      "this"
+    ],
+    "IMPORT": [
+      "ኣእት",
+      "import"
+    ],
+    "EXPORT": [
+      "ላእ",
+      "export"
+    ],
+    "PRINT": [
+      "ሓትም",
+      "print"
+    ],
+    "TRUE": [
+      "ሓቂ",
+      "true"
+    ],
+    "FALSE": [
+      "ሓሶት",
+      "false"
+    ],
+    "NULL": [
+      "ባዶ",
+      "null"
+    ],
+    "UNDEFINED": [
+      "ዘይተገልጸ",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Tigrinya of Eritrea and Ethiopia.",
+  "recommendedPartners": [
+    "ACALAN",
+    "Eritrea / Ethiopia language institutes"
+  ]
+}

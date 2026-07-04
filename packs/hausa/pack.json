@@ -1,0 +1,363 @@
+{
+  "name": "hausa",
+  "languageCode": "ha",
+  "locale": "ha-NG",
+  "countries": [
+    "NG",
+    "NE",
+    "GH",
+    "SD"
+  ],
+  "regions": [
+    "West Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Hausa",
+  "description": "Hausa keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "idan",
+      "if"
+    ],
+    "ELSE": [
+      "in ba haka ba",
+      "else"
+    ],
+    "FOR": [
+      "domi",
+      "for"
+    ],
+    "WHILE": [
+      "yayin da",
+      "while"
+    ],
+    "BREAK": [
+      "tsaya",
+      "break"
+    ],
+    "CONTINUE": [
+      "ci gaba",
+      "continue"
+    ],
+    "SWITCH": [
+      "zaɓi",
+      "switch"
+    ],
+    "CASE": [
+      "lokaci",
+      "case"
+    ],
+    "DEFAULT": [
+      "tsoho",
+      "default"
+    ],
+    "FUNCTION": [
+      "aiki",
+      "function"
+    ],
+    "RETURN": [
+      "dawo",
+      "return"
+    ],
+    "ASYNC": [
+      "jira",
+      "async"
+    ],
+    "AWAIT": [
+      "jira don",
+      "await"
+    ],
+    "TRY": [
+      "gwada",
+      "try"
+    ],
+    "CATCH": [
+      "kama",
+      "catch"
+    ],
+    "FINALLY": [
+      "a ƙarshe",
+      "finally"
+    ],
+    "THROW": [
+      "jefa",
+      "throw"
+    ],
+    "LET": [
+      "bari",
+      "let"
+    ],
+    "CONST": [
+      "tabbatacce",
+      "const"
+    ],
+    "CLASS": [
+      "rukuni",
+      "class"
+    ],
+    "EXTENDS": [
+      "kara",
+      "extends"
+    ],
+    "NEW": [
+      "sabo",
+      "new"
+    ],
+    "THIS": [
+      "wannan",
+      "this"
+    ],
+    "IMPORT": [
+      "shigo da",
+      "import"
+    ],
+    "EXPORT": [
+      "fitar da",
+      "export"
+    ],
+    "PRINT": [
+      "nuna",
+      "print"
+    ],
+    "TRUE": [
+      "gaskiya",
+      "true"
+    ],
+    "FALSE": [
+      "karya",
+      "false"
+    ],
+    "NULL": [
+      "babu komai",
+      "null"
+    ],
+    "UNDEFINED": [
+      "ba a bayyana ba",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Hausa across West and Central Africa. Prefer inclusive alias arrays for Nigeria vs Niger spelling differences.",
+  "recommendedPartners": [
+    "ALT-I",
+    "ACALAN",
+    "Bayero University Kano"
+  ]
+}

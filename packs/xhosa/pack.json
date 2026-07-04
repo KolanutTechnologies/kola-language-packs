@@ -1,0 +1,360 @@
+{
+  "name": "xhosa",
+  "languageCode": "xh",
+  "locale": "xh-ZA",
+  "countries": [
+    "ZA"
+  ],
+  "regions": [
+    "Southern Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "isiXhosa",
+  "description": "Xhosa keyword map — starter pack (community contributions welcome)",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "ukuba",
+      "if"
+    ],
+    "ELSE": [
+      "kungenjalo",
+      "else"
+    ],
+    "FOR": [
+      "ngenxa",
+      "for"
+    ],
+    "WHILE": [
+      "ngelixa",
+      "while"
+    ],
+    "BREAK": [
+      "phula",
+      "break"
+    ],
+    "CONTINUE": [
+      "qhubeka",
+      "continue"
+    ],
+    "SWITCH": [
+      "khetha",
+      "switch"
+    ],
+    "CASE": [
+      "ityala",
+      "case"
+    ],
+    "DEFAULT": [
+      "ngokuzenzekelayo",
+      "default"
+    ],
+    "FUNCTION": [
+      "umsebenzi",
+      "function"
+    ],
+    "RETURN": [
+      "buyisa",
+      "return"
+    ],
+    "ASYNC": [
+      "ngokulandelelanayo",
+      "async"
+    ],
+    "AWAIT": [
+      "linda",
+      "await"
+    ],
+    "TRY": [
+      "zama",
+      "try"
+    ],
+    "CATCH": [
+      "bamba",
+      "catch"
+    ],
+    "FINALLY": [
+      "ekugqibeleni",
+      "finally"
+    ],
+    "THROW": [
+      "phosa",
+      "throw"
+    ],
+    "LET": [
+      "vumela",
+      "let"
+    ],
+    "CONST": [
+      "sisigqibo",
+      "const"
+    ],
+    "CLASS": [
+      "iklasi",
+      "class"
+    ],
+    "EXTENDS": [
+      "andisa",
+      "extends"
+    ],
+    "NEW": [
+      "entsha",
+      "new"
+    ],
+    "THIS": [
+      "le",
+      "this"
+    ],
+    "IMPORT": [
+      "ngenisa",
+      "import"
+    ],
+    "EXPORT": [
+      "rhweba",
+      "export"
+    ],
+    "PRINT": [
+      "tyhila",
+      "print"
+    ],
+    "TRUE": [
+      "inyani",
+      "true"
+    ],
+    "FALSE": [
+      "amanga",
+      "false"
+    ],
+    "NULL": [
+      "into",
+      "null"
+    ],
+    "UNDEFINED": [
+      "ingachazwanga",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "isiXhosa of South Africa.",
+  "recommendedPartners": [
+    "PanSALB",
+    "Translate.org.za",
+    "Fort Hare isiXhosa NLU"
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "packs": [
+    {
+      "name": "yoruba",
+      "languageCode": "yo",
+      "locale": "yo-NG",
+      "displayName": "Yorùbá",
+      "countries": [
+        "NG",
+        "BJ",
+        "TG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "nigerian-pidgin",
+      "languageCode": "pcm",
+      "locale": "pcm-NG",
+      "displayName": "Nigerian Pidgin",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "hausa",
+      "languageCode": "ha",
+      "locale": "ha-NG",
+      "displayName": "Hausa",
+      "countries": [
+        "NG",
+        "NE",
+        "GH",
+        "SD"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "igbo",
+      "languageCode": "ig",
+      "locale": "ig-NG",
+      "displayName": "Igbo",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "swahili",
+      "languageCode": "sw",
+      "locale": "sw-KE",
+      "displayName": "Swahili",
+      "countries": [
+        "KE",
+        "TZ",
+        "UG",
+        "CD",
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "amharic",
+      "languageCode": "am",
+      "locale": "am-ET",
+      "displayName": "Amharic",
+      "countries": [
+        "ET"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "zulu",
+      "languageCode": "zu",
+      "locale": "zu-ZA",
+      "displayName": "isiZulu",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "xhosa",
+      "languageCode": "xh",
+      "locale": "xh-ZA",
+      "displayName": "isiXhosa",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "twi",
+      "languageCode": "tw",
+      "locale": "tw-GH",
+      "displayName": "Twi",
+      "countries": [
+        "GH"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "somali",
+      "languageCode": "so",
+      "locale": "so-SO",
+      "displayName": "Somali",
+      "countries": [
+        "SO",
+        "ET",
+        "KE",
+        "DJ"
+      ],
+      "regions": [
+        "Horn of Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "wolof",
+      "languageCode": "wo",
+      "locale": "wo-SN",
+      "displayName": "Wolof",
+      "countries": [
+        "SN",
+        "GM",
+        "MR"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "lingala",
+      "languageCode": "ln",
+      "locale": "ln-CD",
+      "displayName": "Lingala",
+      "countries": [
+        "CD",
+        "CG"
+      ],
+      "regions": [
+        "Central Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "kinyarwanda",
+      "languageCode": "rw",
+      "locale": "rw-RW",
+      "displayName": "Kinyarwanda",
+      "countries": [
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "luganda",
+      "languageCode": "lg",
+      "locale": "lg-UG",
+      "displayName": "Luganda",
+      "countries": [
+        "UG"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "shona",
+      "languageCode": "sn",
+      "locale": "sn-ZW",
+      "displayName": "Shona",
+      "countries": [
+        "ZW"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "oromo",
+      "languageCode": "om",
+      "locale": "om-ET",
+      "displayName": "Oromo",
+      "countries": [
+        "ET",
+        "KE"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "tigrinya",
+      "languageCode": "ti",
+      "locale": "ti-ER",
+      "displayName": "Tigrinya",
+      "countries": [
+        "ER",
+        "ET"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "afrikaans",
+      "languageCode": "af",
+      "locale": "af-ZA",
+      "displayName": "Afrikaans",
+      "countries": [
+        "ZA",
+        "NA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "arabic",
+      "languageCode": "ar",
+      "locale": "ar-EG",
+      "displayName": "Arabic",
+      "countries": [
+        "EG",
+        "SD",
+        "LY",
+        "TN",
+        "DZ",
+        "MA",
+        "MR",
+        "SO",
+        "DJ",
+        "KM"
+      ],
+      "regions": [
+        "North Africa",
+        "East Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "french",
+      "languageCode": "fr",
+      "locale": "fr-SN",
+      "displayName": "French",
+      "countries": [
+        "SN",
+        "CI",
+        "ML",
+        "BF",
+        "NE",
+        "TG",
+        "BJ",
+        "CM",
+        "GA",
+        "CG",
+        "CD",
+        "MG",
+        "RW",
+        "BI",
+        "TD",
+        "CF",
+        "GN",
+        "MR",
+        "DJ",
+        "KM"
+      ],
+      "regions": [
+        "West Africa",
+        "Central Africa",
+        "East Africa",
+        "Indian Ocean"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "fulfulde",
+      "languageCode": "ff",
+      "locale": "ff-NG",
+      "displayName": "Fulfulde",
+      "countries": [
+        "NG",
+        "NE",
+        "CM",
+        "BF",
+        "ML",
+        "GN",
+        "SN",
+        "GM"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "sesotho",
+      "languageCode": "st",
+      "locale": "st-LS",
+      "displayName": "Sesotho",
+      "countries": [
+        "LS",
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "setswana",
+      "languageCode": "tn",
+      "locale": "tn-BW",
+      "displayName": "Setswana",
+      "countries": [
+        "BW",
+        "ZA",
+        "NA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "bambara",
+      "languageCode": "bm",
+      "locale": "bm-ML",
+      "displayName": "Bambara",
+      "countries": [
+        "ML",
+        "SN",
+        "CI",
+        "BF"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    },
+    {
+      "name": "portuguese-africa",
+      "languageCode": "pt",
+      "locale": "pt-AO",
+      "displayName": "Portuguese (Africa)",
+      "countries": [
+        "AO",
+        "MZ",
+        "CV",
+        "GW",
+        "ST"
+      ],
+      "regions": [
+        "Southern Africa",
+        "West Africa"
+      ],
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "name": "arabic",
+  "languageCode": "ar",
+  "locale": "ar-EG",
+  "countries": [
+    "EG",
+    "SD",
+    "LY",
+    "TN",
+    "DZ",
+    "MA",
+    "MR",
+    "SO",
+    "DJ",
+    "KM"
+  ],
+  "regions": [
+    "North Africa",
+    "East Africa"
+  ],
+  "version": "0.1.0",
+  "displayName": "Arabic",
+  "description": "Arabic keyword map for North and East Africa — starter pack",
+  "reviewStatus": "starter",
+  "contributors": [
+    "kolanutTechnologies"
+  ],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust"
+  ],
+  "keywords": {
+    "IF": [
+      "إذا",
+      "if"
+    ],
+    "ELSE": [
+      "وإلا",
+      "else"
+    ],
+    "FOR": [
+      "ل",
+      "for"
+    ],
+    "WHILE": [
+      "بينما",
+      "while"
+    ],
+    "BREAK": [
+      "اكسر",
+      "break"
+    ],
+    "CONTINUE": [
+      "استمر",
+      "continue"
+    ],
+    "SWITCH": [
+      "اختر",
+      "switch"
+    ],
+    "CASE": [
+      "حالة",
+      "case"
+    ],
+    "DEFAULT": [
+      "افتراضي",
+      "default"
+    ],
+    "FUNCTION": [
+      "دالة",
+      "function"
+    ],
+    "RETURN": [
+      "ارجع",
+      "return"
+    ],
+    "ASYNC": [
+      "غير متزامن",
+      "async"
+    ],
+    "AWAIT": [
+      "انتظر",
+      "await"
+    ],
+    "TRY": [
+      "حاول",
+      "try"
+    ],
+    "CATCH": [
+      "امسك",
+      "catch"
+    ],
+    "FINALLY": [
+      "أخيرا",
+      "finally"
+    ],
+    "THROW": [
+      "ارم",
+      "throw"
+    ],
+    "LET": [
+      "دع",
+      "let"
+    ],
+    "CONST": [
+      "ثابت",
+      "const"
+    ],
+    "CLASS": [
+      "فئة",
+      "class"
+    ],
+    "EXTENDS": [
+      "يمتد",
+      "extends"
+    ],
+    "NEW": [
+      "جديد",
+      "new"
+    ],
+    "THIS": [
+      "هذا",
+      "this"
+    ],
+    "IMPORT": [
+      "استورد",
+      "import"
+    ],
+    "EXPORT": [
+      "صدّر",
+      "export"
+    ],
+    "PRINT": [
+      "اطبع",
+      "print"
+    ],
+    "TRUE": [
+      "صحيح",
+      "true"
+    ],
+    "FALSE": [
+      "خطأ",
+      "false"
+    ],
+    "NULL": [
+      "فارغ",
+      "null"
+    ],
+    "UNDEFINED": [
+      "غير معرّف",
+      "undefined"
+    ],
+    "ELIF": [
+      "else"
+    ],
+    "LOOP": [
+      "loop"
+    ],
+    "MATCH": [
+      "match"
+    ],
+    "GOTO": [
+      "goto"
+    ],
+    "FALLTHROUGH": [
+      "fallthrough"
+    ],
+    "SELECT": [
+      "select"
+    ],
+    "RANGE": [
+      "range"
+    ],
+    "YIELD": [
+      "yield"
+    ],
+    "LAMBDA": [
+      "lambda"
+    ],
+    "DEFER": [
+      "defer"
+    ],
+    "GO": [
+      "go"
+    ],
+    "VAR": [
+      "var"
+    ],
+    "MUT": [
+      "mut"
+    ],
+    "GLOBAL": [
+      "global"
+    ],
+    "NONLOCAL": [
+      "nonlocal"
+    ],
+    "STRUCT": [
+      "struct"
+    ],
+    "TRAIT": [
+      "trait"
+    ],
+    "IMPL": [
+      "impl"
+    ],
+    "INTERFACE": [
+      "interface"
+    ],
+    "ENUM": [
+      "enum"
+    ],
+    "TYPE": [
+      "type"
+    ],
+    "IMPLEMENTS": [
+      "implements"
+    ],
+    "SELF": [
+      "self"
+    ],
+    "SUPER": [
+      "super"
+    ],
+    "STATIC": [
+      "static"
+    ],
+    "FROM": [
+      "from"
+    ],
+    "AS": [
+      "as"
+    ],
+    "MODULE": [
+      "module"
+    ],
+    "NAMESPACE": [
+      "namespace"
+    ],
+    "PACKAGE": [
+      "package"
+    ],
+    "USE": [
+      "use"
+    ],
+    "PUB": [
+      "public"
+    ],
+    "CRATE": [
+      "crate"
+    ],
+    "WITH": [
+      "with"
+    ],
+    "PASS": [
+      "pass"
+    ],
+    "ASSERT": [
+      "assert"
+    ],
+    "ASSERTS": [
+      "asserts"
+    ],
+    "NIL": [
+      "null"
+    ],
+    "UNSAFE": [
+      "unsafe"
+    ],
+    "EXTERN": [
+      "declare"
+    ],
+    "CHAN": [
+      "chan"
+    ],
+    "MAP": [
+      "map"
+    ],
+    "AND": [
+      "and"
+    ],
+    "OR": [
+      "or"
+    ],
+    "NOT": [
+      "not"
+    ],
+    "IN": [
+      "in"
+    ],
+    "IS": [
+      "is"
+    ],
+    "DEL": [
+      "del"
+    ],
+    "DO": [
+      "do"
+    ],
+    "DEBUGGER": [
+      "debugger"
+    ],
+    "TYPEOF": [
+      "typeof"
+    ],
+    "VOID": [
+      "void"
+    ],
+    "INSTANCEOF": [
+      "instanceof"
+    ],
+    "PRIVATE": [
+      "private"
+    ],
+    "PROTECTED": [
+      "protected"
+    ],
+    "PUBLIC": [
+      "public"
+    ],
+    "READONLY": [
+      "readonly"
+    ],
+    "ABSTRACT": [
+      "abstract"
+    ],
+    "DECLARE": [
+      "declare"
+    ],
+    "GET": [
+      "get"
+    ],
+    "SET": [
+      "set"
+    ],
+    "INFER": [
+      "infer"
+    ],
+    "KEYOF": [
+      "keyof"
+    ],
+    "UNIQUE": [
+      "unique"
+    ],
+    "SATISFIES": [
+      "satisfies"
+    ],
+    "DYN": [
+      "dyn"
+    ],
+    "MOVE": [
+      "move"
+    ],
+    "REF": [
+      "ref"
+    ],
+    "WHERE": [
+      "where"
+    ]
+  },
+  "scopeNote": "Modern Standard Arabic baseline for African contexts. Regional dialects differ — note your country in PRs.",
+  "recommendedPartners": [
+    "ACALAN",
+    "AALCO Arabic language academies"
+  ]
+}
