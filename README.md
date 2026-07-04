@@ -1,7 +1,3 @@
-<p align="center">
-  <img alt="@kolanut/language-packs" src="./assets/banner.svg" />
-</p>
-
 # @kolanut/language-packs
 
 **Public open-source package** · Apache 2.0 · [Kolanut Technologies Ltd](https://kolacode.africa)
@@ -96,9 +92,12 @@ The data lives under [`packs/`](./packs/). The package published to npm is `@kol
 
 ## How it fits together
 
-<p>
-  <img alt="Architecture diagram" src="./assets/architecture.svg" />
-</p>
+In short:
+
+- **Logical token registry**: a shared list of concepts (the “meaning layer”)
+- **Official keyword lists**: spec-backed reserved words for each target language
+- **African language packs**: native-language phrases mapped to those concepts
+- **Validation**: ensures packs are complete and spec coverage stays at 0 gaps
 
 <!-- metrics:start -->
 
@@ -279,11 +278,12 @@ npm run build
 
 Full guide: [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
-### Contribution flow (visual)
+### Contribution flow (quick)
 
-<p>
-  <img alt="Contribution flow diagram" src="./assets/contributing-flow.svg" />
-</p>
+1. Choose a pack scope (or create a new variant)
+2. Translate tokens (use aliases for dialect differences)
+3. Run `npm test` (validate + coverage)
+4. Open a PR for native-speaker review
 
 ## Contributors
 

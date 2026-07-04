@@ -18,7 +18,6 @@
   "files": [
     "dist",
     "packs",
-    "assets",
     "pack.schema.json",
     "LICENSE",
     "README.md",
