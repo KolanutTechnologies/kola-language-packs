@@ -11,7 +11,7 @@ const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const packsRoot = join(root, 'packs');
 const docsRoot = join(root, 'docs');
 
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 
 /** Maps packs to recommended partner orgs for terminology review */
 const RECOMMENDED_PARTNERS = {
