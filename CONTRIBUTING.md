@@ -51,7 +51,7 @@ You can browse packs in `packs/index.json`, filter by country in `packs/by-count
 
 ### The token registry: What you need to translate
 
-**Every pack must translate all logical tokens in `packs/logical-tokens.json`** (currently **99 tokens** across core, standard, and advanced tiers).
+**Every pack must translate all logical tokens in `packs/logical-tokens.json`** (currently **112 tokens** across core, standard, advanced, and typescript-types tiers).
 
 **Important rules:**
 - Don't create custom token keys — propose new tokens in a separate PR

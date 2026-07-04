@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Contribution flow">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .card { fill: #0f172a; stroke: #1f2a44; stroke-width: 2; }
+      .title { fill: #ffffff; font: 800 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+      .body { fill: #cbd5e1; font: 500 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+      .line { stroke: #334155; stroke-width: 3; fill: none; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="420"/>
+  <text x="72" y="74" class="title" font-size="28">Contribution flow</text>
+  <text x="72" y="104" class="body">A simple, repeatable path from I speak this language to pack shipped and credited.</text>
+
+  <!-- Steps -->
+  <g transform="translate(72 150)">
+    <rect class="card" x="0" y="0" width="210" height="110" rx="16"/>
+    <text class="title" x="20" y="38">1) Choose scope</text>
+    <text class="body" x="20" y="64">Pick a pack (or create a</text>
+    <text class="body" x="20" y="84">new variant if needed)</text>
+  </g>
+
+  <g transform="translate(312 150)">
+    <rect class="card" x="0" y="0" width="210" height="110" rx="16"/>
+    <text class="title" x="20" y="38">2) Translate tokens</text>
+    <text class="body" x="20" y="64">Map all logical tokens</text>
+    <text class="body" x="20" y="84">Use aliases for dialects</text>
+  </g>
+
+  <g transform="translate(552 150)">
+    <rect class="card" x="0" y="0" width="210" height="110" rx="16"/>
+    <text class="title" x="20" y="38">3) Run checks</text>
+    <text class="body" x="20" y="64">npm test</text>
+    <text class="body" x="20" y="84">validate + coverage</text>
+  </g>
+
+  <g transform="translate(792 150)">
+    <rect class="card" x="0" y="0" width="210" height="110" rx="16"/>
+    <text class="title" x="20" y="38">4) Review</text>
+    <text class="body" x="20" y="64">Native speaker review</text>
+    <text class="body" x="20" y="84">Citations if used</text>
+  </g>
+
+  <g transform="translate(1032 150)">
+    <rect class="card" x="0" y="0" width="210" height="110" rx="16"/>
+    <text class="title" x="20" y="38">5) Merge + release</text>
+    <text class="body" x="20" y="64">Pack ships</text>
+    <text class="body" x="20" y="84">Youre credited</text>
+  </g>
+
+  <!-- Arrows -->
+  <path class="line" marker-end="url(#arrow)" d="M 282 205 L 312 205"/>
+  <path class="line" marker-end="url(#arrow)" d="M 522 205 L 552 205"/>
+  <path class="line" marker-end="url(#arrow)" d="M 762 205 L 792 205"/>
+  <path class="line" marker-end="url(#arrow)" d="M 1002 205 L 1032 205"/>
+
+  <text x="72" y="340" class="body">Tip: if a language spans many countries, use <tspan font-weight="700">aliases</tspan> first. Create a new pack only when the variant diverges meaningfully.</text>
+</svg>
+

@@ -317,6 +317,45 @@
   "SATISFIES": [
     "satisfies"
   ],
+  "ANY": [
+    "any"
+  ],
+  "BOOLEAN": [
+    "boolean"
+  ],
+  "NUMBER": [
+    "number"
+  ],
+  "STRING": [
+    "string"
+  ],
+  "SYMBOL": [
+    "symbol"
+  ],
+  "OBJECT": [
+    "object"
+  ],
+  "NEVER": [
+    "never"
+  ],
+  "UNKNOWN": [
+    "unknown"
+  ],
+  "BIGINT": [
+    "bigint"
+  ],
+  "CONSTRUCTOR": [
+    "constructor"
+  ],
+  "REQUIRE": [
+    "require"
+  ],
+  "USING": [
+    "using"
+  ],
+  "OF": [
+    "of"
+  ],
   "DYN": [
     "dyn"
   ],

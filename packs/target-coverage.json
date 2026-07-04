@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "4.0.0",
   "targets": [
     "javascript",
     "python",
@@ -7,11 +7,11 @@
     "go",
     "rust"
   ],
-  "tokenCount": 99,
+  "tokenCount": 112,
   "byTarget": {
     "javascript": {
-      "mapped": 53,
-      "unmapped": 46,
+      "mapped": 54,
+      "unmapped": 58,
       "tokens": [
         {
           "logical": "IF",
@@ -108,6 +108,10 @@
         {
           "logical": "CLASS",
           "emits": "class"
+        },
+        {
+          "logical": "ENUM",
+          "emits": "enum"
         },
         {
           "logical": "EXTENDS",
@@ -228,8 +232,8 @@
       ]
     },
     "python": {
-      "mapped": 45,
-      "unmapped": 54,
+      "mapped": 46,
+      "unmapped": 66,
       "tokens": [
         {
           "logical": "IF",
@@ -328,6 +332,10 @@
           "emits": "class"
         },
         {
+          "logical": "TYPE",
+          "emits": "type"
+        },
+        {
           "logical": "THIS",
           "emits": "self"
         },
@@ -414,8 +422,8 @@
       ]
     },
     "typescript": {
-      "mapped": 72,
-      "unmapped": 27,
+      "mapped": 88,
+      "unmapped": 24,
       "tokens": [
         {
           "logical": "IF",
@@ -482,6 +490,10 @@
           "emits": "=>"
         },
         {
+          "logical": "DEFER",
+          "emits": "defer"
+        },
+        {
           "logical": "TRY",
           "emits": "try"
         },
@@ -508,6 +520,10 @@
         {
           "logical": "VAR",
           "emits": "var"
+        },
+        {
+          "logical": "GLOBAL",
+          "emits": "global"
         },
         {
           "logical": "CLASS",
@@ -572,6 +588,10 @@
         {
           "logical": "NAMESPACE",
           "emits": "namespace"
+        },
+        {
+          "logical": "PACKAGE",
+          "emits": "package"
         },
         {
           "logical": "PUB",
@@ -704,12 +724,64 @@
         {
           "logical": "SATISFIES",
           "emits": "satisfies"
+        },
+        {
+          "logical": "ANY",
+          "emits": "any"
+        },
+        {
+          "logical": "BOOLEAN",
+          "emits": "boolean"
+        },
+        {
+          "logical": "NUMBER",
+          "emits": "number"
+        },
+        {
+          "logical": "STRING",
+          "emits": "string"
+        },
+        {
+          "logical": "SYMBOL",
+          "emits": "symbol"
+        },
+        {
+          "logical": "OBJECT",
+          "emits": "object"
+        },
+        {
+          "logical": "NEVER",
+          "emits": "never"
+        },
+        {
+          "logical": "UNKNOWN",
+          "emits": "unknown"
+        },
+        {
+          "logical": "BIGINT",
+          "emits": "bigint"
+        },
+        {
+          "logical": "CONSTRUCTOR",
+          "emits": "constructor"
+        },
+        {
+          "logical": "REQUIRE",
+          "emits": "require"
+        },
+        {
+          "logical": "USING",
+          "emits": "using"
+        },
+        {
+          "logical": "OF",
+          "emits": "of"
         }
       ]
     },
     "go": {
       "mapped": 34,
-      "unmapped": 65,
+      "unmapped": 78,
       "tokens": [
         {
           "logical": "IF",
@@ -850,8 +922,8 @@
       ]
     },
     "rust": {
-      "mapped": 51,
-      "unmapped": 48,
+      "mapped": 52,
+      "unmapped": 60,
       "tokens": [
         {
           "logical": "IF",
@@ -966,6 +1038,10 @@
           "emits": "super"
         },
         {
+          "logical": "STATIC",
+          "emits": "static"
+        },
+        {
           "logical": "IMPORT",
           "emits": "use"
         },
@@ -1063,7 +1139,7 @@
   "byTier": {
     "core": 30,
     "standard": 33,
-    "advanced": 36
+    "advanced": 49
   },
   "byGroup": {
     "control": 17,
@@ -1078,6 +1154,7 @@
     "systems": 8,
     "operators": 9,
     "debug": 1,
-    "visibility": 4
+    "visibility": 4,
+    "typescript-types": 13
   }
 }
