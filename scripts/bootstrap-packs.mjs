@@ -85,7 +85,7 @@ function englishFallback(entry) {
   return entry.logical.toLowerCase();
 }
 
-let registryTargets = ['javascript', 'python', 'typescript', 'go', 'rust'];
+let registryTargets = ['javascript', 'python', 'typescript', 'go', 'rust', 'java'];
 
 function completeKeywords(keywords, registry) {
   const completed = { ...keywords };

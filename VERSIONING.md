@@ -2,16 +2,44 @@
 
 How version numbers work in `@kolanut/language-packs`.
 
+**Before citing any version:** read `package.json` on disk. Do not guess. Internal JSON files have their own `version` fields — see below.
+
 ---
 
-## Two version numbers (today they stay in sync)
+## npm release (the one users care about)
+
+| Where | Source of truth | Meaning |
+|-------|-----------------|---------|
+| `package.json` → `version` | **Read this file** | **npm package** `@kolanut/language-packs` |
+| Each `packs/*/pack.json` → `version` | Synced via `npm run sync-versions` | Same as npm at last sync |
+| `CHANGELOG.md` latest `## [x.y.z]` | Dated section | Last **published** release on npm |
+| `[Unreleased]` in CHANGELOG | Working tree | Not on npm until Release PR merges |
+
+**Current npm version:** check `package.json` — do not hard-code in docs.
+
+When we publish to npm, **all packs get the same `version`** as `package.json`.
+
+---
+
+## Internal JSON versions (not npm)
+
+These track registry document generations. They **do not** match npm semver.
+
+| File | Field | Purpose |
+|------|-------|---------|
+| `packs/logical-tokens.json` | `version` | Logical token registry schema generation |
+| `packs/official-target-keywords.json` | `version` | Official keyword list document generation |
+
+Example: npm `0.3.0` can coexist with `logical-tokens.json` `4.4.0` and `official-target-keywords.json` `1.6.0`. Say which file you mean.
+
+---
+
+## Two version numbers (packs follow npm)
 
 | Where | Example | What it means |
 |-------|---------|---------------|
-| `package.json` → `version` | `0.1.1` | **npm package release** — the whole repo publish |
-| Each `pack.json` → `version` | `0.1.1` | Copy of the package version at last release |
-
-**Current policy:** when we publish to npm, **all packs get the same `version`** as `package.json`.
+| `package.json` → `version` | *(read file)* | **npm package release** — the whole repo publish |
+| Each `pack.json` → `version` | *(same as package.json after sync)* | Copy of the package version at last release |
 
 ---
 

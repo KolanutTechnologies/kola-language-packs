@@ -11,7 +11,7 @@ All commands run from the **repo root** (`kola-language-packs/`).
 **What it does:** Reads every pack and checks:
 
 - Required fields exist (`displayName`, `locale`, `keywords`, …)
-- All 112 logical tokens are translated
+- All 128 logical tokens are translated
 - `keywords.json` matches `pack.json`
 - `index.json` matches each pack
 - No duplicate locales
@@ -51,6 +51,14 @@ All commands run from the **repo root** (`kola-language-packs/`).
 **Does it change files?** Yes — **many files at once**. Community hand-edits in pack folders can be **lost**.
 
 **When:** Only when intentionally regenerating from the bootstrap source. **Contributors must not run this.**
+
+---
+
+### `add-java-target.mjs` — maintainer (one-time / reference)
+
+**What it does:** Adds Java as a transpile target — updates `logical-tokens.json`, `official-target-keywords.json`, pack schema, and all pack `targets` arrays; runs `ensure-pack-tokens` + coverage.
+
+**When:** Already applied in v0.3.0. Re-run only if setting up a fresh fork without Java.
 
 ---
 

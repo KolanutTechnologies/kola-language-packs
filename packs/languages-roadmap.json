@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Roadmap for African human-language packs and programming-target / logical-token registry growth. Shipped state: see packs/index.json, logical-tokens.json, official-target-keywords.json.",
   "shippedCount": 25,
   "plannedCount": 40,
@@ -144,14 +144,16 @@
     }
   ],
   "logicalTokenRoadmap": {
-    "shippedVersion": "4.2.0",
-    "shippedCount": 114,
+    "shippedVersion": "4.5.0",
+    "shippedCount": 149,
     "shippedTargets": [
       "javascript",
       "python",
       "typescript",
       "go",
-      "rust"
+      "rust",
+      "java",
+      "c"
     ],
     "plannedTokens": [
       {
@@ -228,10 +230,11 @@
       "python",
       "typescript",
       "go",
-      "rust"
+      "rust",
+      "java",
+      "c"
     ],
     "planned": [
-      "c",
       "cpp",
       "kotlin",
       "swift",
@@ -239,16 +242,15 @@
       "ruby",
       "php",
       "csharp",
-      "java",
       "r",
       "clojure"
     ],
     "plannedDetails": [
       {
         "id": "java",
-        "release": "v0.3.0+",
+        "release": "v0.3.0",
         "priority": "high",
-        "status": "planned",
+        "status": "shipped",
         "specSource": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html#jls-3.9",
         "workItems": [
           "Add targets.java column to logical-tokens.json + pack schema",
@@ -290,9 +292,10 @@
       },
       {
         "id": "c",
-        "release": "v0.3.0+",
+        "release": "v0.4.0",
         "priority": "medium",
-        "status": "planned",
+        "status": "shipped",
+        "specSource": "https://en.cppreference.com/w/c/keyword",
         "workItems": [
           "Same target-add pipeline as java",
           "Map C89/C11 reserved words + common extensions"
@@ -549,12 +552,22 @@
       "status": "shipped"
     },
     {
-      "release": "v0.3.0+",
-      "focus": "First new programming target (Java or C — one per release)",
-      "status": "current"
+      "release": "v0.3.0",
+      "focus": "Java programming target (JLS §3.9 keywords)",
+      "status": "shipped"
+    },
+    {
+      "release": "v0.4.0",
+      "focus": "C programming target (C11 §6.4.1 keywords)",
+      "status": "shipped"
     },
     {
       "release": "v0.4.0+",
+      "focus": "Next programming target (C++ — one per release)",
+      "status": "current"
+    },
+    {
+      "release": "v0.5.0+",
       "focus": "C#, Kotlin, Swift, Dart, Ruby, PHP (one per release)",
       "status": "planned"
     },

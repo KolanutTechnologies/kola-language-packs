@@ -1,136 +1,2108 @@
 {
-  "version": "4.2.0",
+  "version": "4.5.0",
   "description": "Canonical logical tokens every language pack must map. targets.* values are emitted keywords; empty string means no direct keyword (transpiler uses another construct). Includes a typescript-types tier for TS-only type keywords.",
-  "targets": ["javascript", "python", "typescript", "go", "rust"],
-  "required": ["IF", "FOR", "FUNCTION", "RETURN", "PRINT"],
+  "targets": [
+    "javascript",
+    "python",
+    "typescript",
+    "go",
+    "rust",
+    "java",
+    "c"
+  ],
+  "required": [
+    "IF",
+    "FOR",
+    "FUNCTION",
+    "RETURN",
+    "PRINT"
+  ],
   "tokens": [
-    { "logical": "IF", "tier": "core", "group": "control", "targets": { "javascript": "if", "python": "if", "typescript": "if", "go": "if", "rust": "if" } },
-    { "logical": "ELSE", "tier": "core", "group": "control", "targets": { "javascript": "else", "python": "else", "typescript": "else", "go": "else", "rust": "else" } },
-    { "logical": "ELIF", "tier": "standard", "group": "control", "targets": { "javascript": "else if", "python": "elif", "typescript": "else if", "go": "else if", "rust": "else if" } },
-    { "logical": "FOR", "tier": "core", "group": "control", "targets": { "javascript": "for", "python": "for", "typescript": "for", "go": "for", "rust": "for" } },
-    { "logical": "WHILE", "tier": "core", "group": "control", "targets": { "javascript": "while", "python": "while", "typescript": "while", "go": "while", "rust": "while" } },
-    { "logical": "LOOP", "tier": "advanced", "group": "control", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "loop" } },
-    { "logical": "BREAK", "tier": "core", "group": "control", "targets": { "javascript": "break", "python": "break", "typescript": "break", "go": "break", "rust": "break" } },
-    { "logical": "CONTINUE", "tier": "core", "group": "control", "targets": { "javascript": "continue", "python": "continue", "typescript": "continue", "go": "continue", "rust": "continue" } },
-    { "logical": "SWITCH", "tier": "core", "group": "control", "targets": { "javascript": "switch", "python": "match", "typescript": "switch", "go": "switch", "rust": "match" } },
-    { "logical": "MATCH", "tier": "standard", "group": "control", "targets": { "javascript": "", "python": "match", "typescript": "", "go": "", "rust": "match" } },
-    { "logical": "CASE", "tier": "core", "group": "control", "targets": { "javascript": "case", "python": "case", "typescript": "case", "go": "case", "rust": "=>" } },
-    { "logical": "DEFAULT", "tier": "core", "group": "control", "targets": { "javascript": "default", "python": "case _", "typescript": "default", "go": "default", "rust": "_" } },
-    { "logical": "GOTO", "tier": "advanced", "group": "control", "targets": { "javascript": "", "python": "", "typescript": "", "go": "goto", "rust": "" } },
-    { "logical": "FALLTHROUGH", "tier": "advanced", "group": "control", "targets": { "javascript": "", "python": "", "typescript": "", "go": "fallthrough", "rust": "" } },
-    { "logical": "SELECT", "tier": "standard", "group": "control", "targets": { "javascript": "", "python": "", "typescript": "", "go": "select", "rust": "" } },
-    { "logical": "RANGE", "tier": "standard", "group": "control", "targets": { "javascript": "", "python": "", "typescript": "", "go": "range", "rust": "" } },
-
-    { "logical": "FUNCTION", "tier": "core", "group": "functions", "targets": { "javascript": "function", "python": "def", "typescript": "function", "go": "func", "rust": "fn" } },
-    { "logical": "RETURN", "tier": "core", "group": "functions", "targets": { "javascript": "return", "python": "return", "typescript": "return", "go": "return", "rust": "return" } },
-    { "logical": "ASYNC", "tier": "core", "group": "functions", "targets": { "javascript": "async", "python": "async", "typescript": "async", "go": "", "rust": "async" } },
-    { "logical": "AWAIT", "tier": "core", "group": "functions", "targets": { "javascript": "await", "python": "await", "typescript": "await", "go": "", "rust": "await" } },
-    { "logical": "YIELD", "tier": "standard", "group": "functions", "targets": { "javascript": "yield", "python": "yield", "typescript": "yield", "go": "", "rust": "" } },
-    { "logical": "LAMBDA", "tier": "standard", "group": "functions", "targets": { "javascript": "=>", "python": "lambda", "typescript": "=>", "go": "", "rust": "|" } },
-    { "logical": "DEFER", "tier": "standard", "group": "functions", "targets": { "javascript": "", "python": "", "typescript": "defer", "go": "defer", "rust": "" } },
-    { "logical": "GO", "tier": "standard", "group": "functions", "targets": { "javascript": "", "python": "", "typescript": "", "go": "go", "rust": "" } },
-
-    { "logical": "TRY", "tier": "core", "group": "errors", "targets": { "javascript": "try", "python": "try", "typescript": "try", "go": "", "rust": "" } },
-    { "logical": "CATCH", "tier": "core", "group": "errors", "targets": { "javascript": "catch", "python": "except", "typescript": "catch", "go": "", "rust": "" } },
-    { "logical": "FINALLY", "tier": "core", "group": "errors", "targets": { "javascript": "finally", "python": "finally", "typescript": "finally", "go": "", "rust": "" } },
-    { "logical": "THROW", "tier": "core", "group": "errors", "targets": { "javascript": "throw", "python": "raise", "typescript": "throw", "go": "", "rust": "panic!" } },
-
-    { "logical": "LET", "tier": "core", "group": "variables", "targets": { "javascript": "let", "python": "", "typescript": "let", "go": "", "rust": "let" } },
-    { "logical": "CONST", "tier": "core", "group": "variables", "targets": { "javascript": "const", "python": "", "typescript": "const", "go": "const", "rust": "const" } },
-    { "logical": "VAR", "tier": "standard", "group": "variables", "targets": { "javascript": "var", "python": "", "typescript": "var", "go": "var", "rust": "" } },
-    { "logical": "MUT", "tier": "standard", "group": "variables", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "mut" } },
-    { "logical": "GLOBAL", "tier": "advanced", "group": "variables", "targets": { "javascript": "", "python": "global", "typescript": "global", "go": "", "rust": "" } },
-    { "logical": "NONLOCAL", "tier": "advanced", "group": "variables", "targets": { "javascript": "", "python": "nonlocal", "typescript": "", "go": "", "rust": "" } },
-
-    { "logical": "CLASS", "tier": "core", "group": "types", "targets": { "javascript": "class", "python": "class", "typescript": "class", "go": "", "rust": "" } },
-    { "logical": "STRUCT", "tier": "standard", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "", "go": "struct", "rust": "struct" } },
-    { "logical": "TRAIT", "tier": "standard", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "trait" } },
-    { "logical": "IMPL", "tier": "standard", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "impl" } },
-    { "logical": "INTERFACE", "tier": "standard", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "interface", "go": "interface", "rust": "" } },
-    { "logical": "ENUM", "tier": "standard", "group": "types", "targets": { "javascript": "enum", "python": "", "typescript": "enum", "go": "", "rust": "enum" } },
-    { "logical": "TYPE", "tier": "standard", "group": "types", "targets": { "javascript": "", "python": "type", "typescript": "type", "go": "type", "rust": "type" } },
-    { "logical": "EXTENDS", "tier": "core", "group": "types", "targets": { "javascript": "extends", "python": "", "typescript": "extends", "go": "", "rust": "" } },
-    { "logical": "IMPLEMENTS", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "implements", "go": "", "rust": "" } },
-    { "logical": "NEW", "tier": "core", "group": "types", "targets": { "javascript": "new", "python": "", "typescript": "new", "go": "", "rust": "" } },
-    { "logical": "THIS", "tier": "core", "group": "types", "targets": { "javascript": "this", "python": "self", "typescript": "this", "go": "", "rust": "" } },
-    { "logical": "SELF", "tier": "standard", "group": "types", "targets": { "javascript": "", "python": "self", "typescript": "", "go": "", "rust": "self" } },
-    { "logical": "SUPER", "tier": "standard", "group": "types", "targets": { "javascript": "super", "python": "super", "typescript": "super", "go": "", "rust": "super" } },
-    { "logical": "STATIC", "tier": "advanced", "group": "types", "targets": { "javascript": "static", "python": "", "typescript": "static", "go": "", "rust": "static" } },
-
-    { "logical": "IMPORT", "tier": "core", "group": "modules", "targets": { "javascript": "import", "python": "import", "typescript": "import", "go": "import", "rust": "use" } },
-    { "logical": "EXPORT", "tier": "core", "group": "modules", "targets": { "javascript": "export", "python": "", "typescript": "export", "go": "", "rust": "pub" } },
-    { "logical": "FROM", "tier": "standard", "group": "modules", "targets": { "javascript": "from", "python": "from", "typescript": "from", "go": "", "rust": "" } },
-    { "logical": "AS", "tier": "standard", "group": "modules", "targets": { "javascript": "as", "python": "as", "typescript": "as", "go": "", "rust": "as" } },
-    { "logical": "MODULE", "tier": "standard", "group": "modules", "targets": { "javascript": "", "python": "", "typescript": "module", "go": "", "rust": "mod" } },
-    { "logical": "NAMESPACE", "tier": "advanced", "group": "modules", "targets": { "javascript": "", "python": "", "typescript": "namespace", "go": "", "rust": "" } },
-    { "logical": "PACKAGE", "tier": "standard", "group": "modules", "targets": { "javascript": "", "python": "", "typescript": "package", "go": "package", "rust": "" } },
-    { "logical": "USE", "tier": "standard", "group": "modules", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "use" } },
-    { "logical": "PUB", "tier": "standard", "group": "modules", "targets": { "javascript": "", "python": "", "typescript": "public", "go": "", "rust": "pub" } },
-    { "logical": "CRATE", "tier": "advanced", "group": "modules", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "crate" } },
-
-    { "logical": "WITH", "tier": "standard", "group": "blocks", "targets": { "javascript": "with", "python": "with", "typescript": "with", "go": "", "rust": "" } },
-    { "logical": "PASS", "tier": "standard", "group": "blocks", "targets": { "javascript": "", "python": "pass", "typescript": "", "go": "", "rust": "" } },
-    { "logical": "ASSERT", "tier": "advanced", "group": "blocks", "targets": { "javascript": "", "python": "assert", "typescript": "", "go": "", "rust": "assert!" } },
-    { "logical": "ASSERTS", "tier": "advanced", "group": "blocks", "targets": { "javascript": "", "python": "", "typescript": "asserts", "go": "", "rust": "" } },
-
-    { "logical": "PRINT", "tier": "core", "group": "io", "targets": { "javascript": "console.log", "python": "print", "typescript": "console.log", "go": "fmt.Println", "rust": "println!" } },
-
-    { "logical": "TRUE", "tier": "core", "group": "literals", "targets": { "javascript": "true", "python": "True", "typescript": "true", "go": "true", "rust": "true" } },
-    { "logical": "FALSE", "tier": "core", "group": "literals", "targets": { "javascript": "false", "python": "False", "typescript": "false", "go": "false", "rust": "false" } },
-    { "logical": "NULL", "tier": "core", "group": "literals", "targets": { "javascript": "null", "python": "None", "typescript": "null", "go": "nil", "rust": "None" } },
-    { "logical": "NIL", "tier": "standard", "group": "literals", "targets": { "javascript": "null", "python": "None", "typescript": "null", "go": "nil", "rust": "None" } },
-    { "logical": "UNDEFINED", "tier": "core", "group": "literals", "targets": { "javascript": "undefined", "python": "None", "typescript": "undefined", "go": "nil", "rust": "None" } },
-
-    { "logical": "UNSAFE", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "unsafe" } },
-    { "logical": "EXTERN", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "declare", "go": "", "rust": "extern" } },
-    { "logical": "CHAN", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "chan", "rust": "" } },
-    { "logical": "MAP", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "map", "rust": "" } },
-
-    { "logical": "AND", "tier": "standard", "group": "operators", "targets": { "javascript": "&&", "python": "and", "typescript": "&&", "go": "", "rust": "" } },
-    { "logical": "OR", "tier": "standard", "group": "operators", "targets": { "javascript": "||", "python": "or", "typescript": "||", "go": "", "rust": "" } },
-    { "logical": "NOT", "tier": "standard", "group": "operators", "targets": { "javascript": "!", "python": "not", "typescript": "!", "go": "!", "rust": "!" } },
-    { "logical": "IN", "tier": "standard", "group": "operators", "targets": { "javascript": "in", "python": "in", "typescript": "in", "go": "", "rust": "in" } },
-    { "logical": "IS", "tier": "standard", "group": "operators", "targets": { "javascript": "", "python": "is", "typescript": "is", "go": "", "rust": "" } },
-    { "logical": "DEL", "tier": "standard", "group": "operators", "targets": { "javascript": "delete", "python": "del", "typescript": "delete", "go": "", "rust": "" } },
-
-    { "logical": "DO", "tier": "advanced", "group": "control", "targets": { "javascript": "do", "python": "", "typescript": "do", "go": "", "rust": "" } },
-    { "logical": "DEBUGGER", "tier": "advanced", "group": "debug", "targets": { "javascript": "debugger", "python": "", "typescript": "debugger", "go": "", "rust": "" } },
-    { "logical": "TYPEOF", "tier": "advanced", "group": "operators", "targets": { "javascript": "typeof", "python": "", "typescript": "typeof", "go": "", "rust": "" } },
-    { "logical": "VOID", "tier": "advanced", "group": "operators", "targets": { "javascript": "void", "python": "", "typescript": "void", "go": "", "rust": "" } },
-    { "logical": "INSTANCEOF", "tier": "advanced", "group": "operators", "targets": { "javascript": "instanceof", "python": "", "typescript": "instanceof", "go": "", "rust": "" } },
-
-    { "logical": "PRIVATE", "tier": "advanced", "group": "visibility", "targets": { "javascript": "private", "python": "", "typescript": "private", "go": "", "rust": "" } },
-    { "logical": "PROTECTED", "tier": "advanced", "group": "visibility", "targets": { "javascript": "protected", "python": "", "typescript": "protected", "go": "", "rust": "" } },
-    { "logical": "PUBLIC", "tier": "advanced", "group": "visibility", "targets": { "javascript": "public", "python": "", "typescript": "public", "go": "", "rust": "pub" } },
-    { "logical": "READONLY", "tier": "advanced", "group": "visibility", "targets": { "javascript": "", "python": "", "typescript": "readonly", "go": "", "rust": "" } },
-    { "logical": "ABSTRACT", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "abstract", "go": "", "rust": "" } },
-    { "logical": "DECLARE", "tier": "advanced", "group": "modules", "targets": { "javascript": "", "python": "", "typescript": "declare", "go": "", "rust": "" } },
-    { "logical": "GET", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "get", "go": "", "rust": "" } },
-    { "logical": "SET", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "set", "go": "", "rust": "" } },
-    { "logical": "INFER", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "infer", "go": "", "rust": "" } },
-    { "logical": "KEYOF", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "keyof", "go": "", "rust": "" } },
-    { "logical": "UNIQUE", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "unique", "go": "", "rust": "" } },
-    { "logical": "SATISFIES", "tier": "advanced", "group": "types", "targets": { "javascript": "", "python": "", "typescript": "satisfies", "go": "", "rust": "" } },
-
-    { "logical": "ANY", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "any", "go": "", "rust": "" } },
-    { "logical": "BOOLEAN", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "boolean", "go": "", "rust": "" } },
-    { "logical": "NUMBER", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "number", "go": "", "rust": "" } },
-    { "logical": "STRING", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "string", "go": "", "rust": "" } },
-    { "logical": "SYMBOL", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "symbol", "go": "", "rust": "" } },
-    { "logical": "OBJECT", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "object", "go": "", "rust": "" } },
-    { "logical": "NEVER", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "never", "go": "", "rust": "" } },
-    { "logical": "UNKNOWN", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "unknown", "go": "", "rust": "" } },
-    { "logical": "BIGINT", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "bigint", "go": "", "rust": "" } },
-    { "logical": "CONSTRUCTOR", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "constructor", "go": "", "rust": "" } },
-    { "logical": "REQUIRE", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "require", "go": "", "rust": "" } },
-    { "logical": "USING", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "using", "go": "", "rust": "" } },
-    { "logical": "OF", "tier": "advanced", "group": "typescript-types", "targets": { "javascript": "", "python": "", "typescript": "of", "go": "", "rust": "" } },
-
-    { "logical": "DYN", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "dyn" } },
-    { "logical": "MOVE", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "move" } },
-    { "logical": "REF", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "ref" } },
-    { "logical": "WHERE", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "where" } },
-    { "logical": "GEN", "tier": "advanced", "group": "generics", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "gen" } },
-    { "logical": "LAZY", "tier": "advanced", "group": "evaluation", "targets": { "javascript": "", "python": "lazy", "typescript": "", "go": "", "rust": "" } }
+    {
+      "logical": "IF",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "if",
+        "python": "if",
+        "typescript": "if",
+        "go": "if",
+        "rust": "if",
+        "java": "if",
+        "c": "if"
+      }
+    },
+    {
+      "logical": "ELSE",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "else",
+        "python": "else",
+        "typescript": "else",
+        "go": "else",
+        "rust": "else",
+        "java": "else",
+        "c": "else"
+      }
+    },
+    {
+      "logical": "ELIF",
+      "tier": "standard",
+      "group": "control",
+      "targets": {
+        "javascript": "else if",
+        "python": "elif",
+        "typescript": "else if",
+        "go": "else if",
+        "rust": "else if",
+        "java": "else if",
+        "c": "else if"
+      }
+    },
+    {
+      "logical": "FOR",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "for",
+        "python": "for",
+        "typescript": "for",
+        "go": "for",
+        "rust": "for",
+        "java": "for",
+        "c": "for"
+      }
+    },
+    {
+      "logical": "WHILE",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "while",
+        "python": "while",
+        "typescript": "while",
+        "go": "while",
+        "rust": "while",
+        "java": "while",
+        "c": "while"
+      }
+    },
+    {
+      "logical": "LOOP",
+      "tier": "advanced",
+      "group": "control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "loop",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "BREAK",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "break",
+        "python": "break",
+        "typescript": "break",
+        "go": "break",
+        "rust": "break",
+        "java": "break",
+        "c": "break"
+      }
+    },
+    {
+      "logical": "CONTINUE",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "continue",
+        "python": "continue",
+        "typescript": "continue",
+        "go": "continue",
+        "rust": "continue",
+        "java": "continue",
+        "c": "continue"
+      }
+    },
+    {
+      "logical": "SWITCH",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "switch",
+        "python": "match",
+        "typescript": "switch",
+        "go": "switch",
+        "rust": "match",
+        "java": "switch",
+        "c": "switch"
+      }
+    },
+    {
+      "logical": "MATCH",
+      "tier": "standard",
+      "group": "control",
+      "targets": {
+        "javascript": "",
+        "python": "match",
+        "typescript": "",
+        "go": "",
+        "rust": "match",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "CASE",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "case",
+        "python": "case",
+        "typescript": "case",
+        "go": "case",
+        "rust": "=>",
+        "java": "case",
+        "c": "case"
+      }
+    },
+    {
+      "logical": "DEFAULT",
+      "tier": "core",
+      "group": "control",
+      "targets": {
+        "javascript": "default",
+        "python": "case _",
+        "typescript": "default",
+        "go": "default",
+        "rust": "_",
+        "java": "default",
+        "c": "default"
+      }
+    },
+    {
+      "logical": "GOTO",
+      "tier": "advanced",
+      "group": "control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "goto",
+        "rust": "",
+        "java": "goto",
+        "c": "goto"
+      }
+    },
+    {
+      "logical": "FALLTHROUGH",
+      "tier": "advanced",
+      "group": "control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "fallthrough",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "SELECT",
+      "tier": "standard",
+      "group": "control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "select",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "RANGE",
+      "tier": "standard",
+      "group": "control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "range",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "FUNCTION",
+      "tier": "core",
+      "group": "functions",
+      "targets": {
+        "javascript": "function",
+        "python": "def",
+        "typescript": "function",
+        "go": "func",
+        "rust": "fn",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "RETURN",
+      "tier": "core",
+      "group": "functions",
+      "targets": {
+        "javascript": "return",
+        "python": "return",
+        "typescript": "return",
+        "go": "return",
+        "rust": "return",
+        "java": "return",
+        "c": "return"
+      }
+    },
+    {
+      "logical": "ASYNC",
+      "tier": "core",
+      "group": "functions",
+      "targets": {
+        "javascript": "async",
+        "python": "async",
+        "typescript": "async",
+        "go": "",
+        "rust": "async",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "AWAIT",
+      "tier": "core",
+      "group": "functions",
+      "targets": {
+        "javascript": "await",
+        "python": "await",
+        "typescript": "await",
+        "go": "",
+        "rust": "await",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "YIELD",
+      "tier": "standard",
+      "group": "functions",
+      "targets": {
+        "javascript": "yield",
+        "python": "yield",
+        "typescript": "yield",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "LAMBDA",
+      "tier": "standard",
+      "group": "functions",
+      "targets": {
+        "javascript": "=>",
+        "python": "lambda",
+        "typescript": "=>",
+        "go": "",
+        "rust": "|",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "DEFER",
+      "tier": "standard",
+      "group": "functions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "defer",
+        "go": "defer",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "GO",
+      "tier": "standard",
+      "group": "functions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "go",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "TRY",
+      "tier": "core",
+      "group": "errors",
+      "targets": {
+        "javascript": "try",
+        "python": "try",
+        "typescript": "try",
+        "go": "",
+        "rust": "",
+        "java": "try",
+        "c": ""
+      }
+    },
+    {
+      "logical": "CATCH",
+      "tier": "core",
+      "group": "errors",
+      "targets": {
+        "javascript": "catch",
+        "python": "except",
+        "typescript": "catch",
+        "go": "",
+        "rust": "",
+        "java": "catch",
+        "c": ""
+      }
+    },
+    {
+      "logical": "FINALLY",
+      "tier": "core",
+      "group": "errors",
+      "targets": {
+        "javascript": "finally",
+        "python": "finally",
+        "typescript": "finally",
+        "go": "",
+        "rust": "",
+        "java": "finally",
+        "c": ""
+      }
+    },
+    {
+      "logical": "THROW",
+      "tier": "core",
+      "group": "errors",
+      "targets": {
+        "javascript": "throw",
+        "python": "raise",
+        "typescript": "throw",
+        "go": "",
+        "rust": "panic!",
+        "java": "throw",
+        "c": ""
+      }
+    },
+    {
+      "logical": "LET",
+      "tier": "core",
+      "group": "variables",
+      "targets": {
+        "javascript": "let",
+        "python": "",
+        "typescript": "let",
+        "go": "",
+        "rust": "let",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "CONST",
+      "tier": "core",
+      "group": "variables",
+      "targets": {
+        "javascript": "const",
+        "python": "",
+        "typescript": "const",
+        "go": "const",
+        "rust": "const",
+        "java": "const",
+        "c": "const"
+      }
+    },
+    {
+      "logical": "VAR",
+      "tier": "standard",
+      "group": "variables",
+      "targets": {
+        "javascript": "var",
+        "python": "",
+        "typescript": "var",
+        "go": "var",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "MUT",
+      "tier": "standard",
+      "group": "variables",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "mut",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "GLOBAL",
+      "tier": "advanced",
+      "group": "variables",
+      "targets": {
+        "javascript": "",
+        "python": "global",
+        "typescript": "global",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NONLOCAL",
+      "tier": "advanced",
+      "group": "variables",
+      "targets": {
+        "javascript": "",
+        "python": "nonlocal",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "CLASS",
+      "tier": "core",
+      "group": "types",
+      "targets": {
+        "javascript": "class",
+        "python": "class",
+        "typescript": "class",
+        "go": "",
+        "rust": "",
+        "java": "class",
+        "c": ""
+      }
+    },
+    {
+      "logical": "STRUCT",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "struct",
+        "rust": "struct",
+        "java": "",
+        "c": "struct"
+      }
+    },
+    {
+      "logical": "TRAIT",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "trait",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "IMPL",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "impl",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "INTERFACE",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "interface",
+        "go": "interface",
+        "rust": "",
+        "java": "interface",
+        "c": ""
+      }
+    },
+    {
+      "logical": "ENUM",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "enum",
+        "python": "",
+        "typescript": "enum",
+        "go": "",
+        "rust": "enum",
+        "java": "enum",
+        "c": "enum"
+      }
+    },
+    {
+      "logical": "TYPE",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "type",
+        "typescript": "type",
+        "go": "type",
+        "rust": "type",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "EXTENDS",
+      "tier": "core",
+      "group": "types",
+      "targets": {
+        "javascript": "extends",
+        "python": "",
+        "typescript": "extends",
+        "go": "",
+        "rust": "",
+        "java": "extends",
+        "c": ""
+      }
+    },
+    {
+      "logical": "IMPLEMENTS",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "implements",
+        "go": "",
+        "rust": "",
+        "java": "implements",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NEW",
+      "tier": "core",
+      "group": "types",
+      "targets": {
+        "javascript": "new",
+        "python": "",
+        "typescript": "new",
+        "go": "",
+        "rust": "",
+        "java": "new",
+        "c": ""
+      }
+    },
+    {
+      "logical": "THIS",
+      "tier": "core",
+      "group": "types",
+      "targets": {
+        "javascript": "this",
+        "python": "self",
+        "typescript": "this",
+        "go": "",
+        "rust": "",
+        "java": "this",
+        "c": ""
+      }
+    },
+    {
+      "logical": "SELF",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "self",
+        "typescript": "",
+        "go": "",
+        "rust": "self",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "SUPER",
+      "tier": "standard",
+      "group": "types",
+      "targets": {
+        "javascript": "super",
+        "python": "super",
+        "typescript": "super",
+        "go": "",
+        "rust": "super",
+        "java": "super",
+        "c": ""
+      }
+    },
+    {
+      "logical": "STATIC",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "static",
+        "python": "",
+        "typescript": "static",
+        "go": "",
+        "rust": "static",
+        "java": "static",
+        "c": "static"
+      }
+    },
+    {
+      "logical": "IMPORT",
+      "tier": "core",
+      "group": "modules",
+      "targets": {
+        "javascript": "import",
+        "python": "import",
+        "typescript": "import",
+        "go": "import",
+        "rust": "use",
+        "java": "import",
+        "c": ""
+      }
+    },
+    {
+      "logical": "EXPORT",
+      "tier": "core",
+      "group": "modules",
+      "targets": {
+        "javascript": "export",
+        "python": "",
+        "typescript": "export",
+        "go": "",
+        "rust": "pub",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "FROM",
+      "tier": "standard",
+      "group": "modules",
+      "targets": {
+        "javascript": "from",
+        "python": "from",
+        "typescript": "from",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "AS",
+      "tier": "standard",
+      "group": "modules",
+      "targets": {
+        "javascript": "as",
+        "python": "as",
+        "typescript": "as",
+        "go": "",
+        "rust": "as",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "MODULE",
+      "tier": "standard",
+      "group": "modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "module",
+        "go": "",
+        "rust": "mod",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NAMESPACE",
+      "tier": "advanced",
+      "group": "modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "namespace",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "PACKAGE",
+      "tier": "standard",
+      "group": "modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "package",
+        "go": "package",
+        "rust": "",
+        "java": "package",
+        "c": ""
+      }
+    },
+    {
+      "logical": "USE",
+      "tier": "standard",
+      "group": "modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "use",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "PUB",
+      "tier": "standard",
+      "group": "modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "public",
+        "go": "",
+        "rust": "pub",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "CRATE",
+      "tier": "advanced",
+      "group": "modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "crate",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "WITH",
+      "tier": "standard",
+      "group": "blocks",
+      "targets": {
+        "javascript": "with",
+        "python": "with",
+        "typescript": "with",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "PASS",
+      "tier": "standard",
+      "group": "blocks",
+      "targets": {
+        "javascript": "",
+        "python": "pass",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "ASSERT",
+      "tier": "advanced",
+      "group": "blocks",
+      "targets": {
+        "javascript": "",
+        "python": "assert",
+        "typescript": "",
+        "go": "",
+        "rust": "assert!",
+        "java": "assert",
+        "c": ""
+      }
+    },
+    {
+      "logical": "ASSERTS",
+      "tier": "advanced",
+      "group": "blocks",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "asserts",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "PRINT",
+      "tier": "core",
+      "group": "io",
+      "targets": {
+        "javascript": "console.log",
+        "python": "print",
+        "typescript": "console.log",
+        "go": "fmt.Println",
+        "rust": "println!",
+        "java": "System.out.println",
+        "c": "printf"
+      }
+    },
+    {
+      "logical": "TRUE",
+      "tier": "core",
+      "group": "literals",
+      "targets": {
+        "javascript": "true",
+        "python": "True",
+        "typescript": "true",
+        "go": "true",
+        "rust": "true",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "FALSE",
+      "tier": "core",
+      "group": "literals",
+      "targets": {
+        "javascript": "false",
+        "python": "False",
+        "typescript": "false",
+        "go": "false",
+        "rust": "false",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NULL",
+      "tier": "core",
+      "group": "literals",
+      "targets": {
+        "javascript": "null",
+        "python": "None",
+        "typescript": "null",
+        "go": "nil",
+        "rust": "None",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NIL",
+      "tier": "standard",
+      "group": "literals",
+      "targets": {
+        "javascript": "null",
+        "python": "None",
+        "typescript": "null",
+        "go": "nil",
+        "rust": "None",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "UNDEFINED",
+      "tier": "core",
+      "group": "literals",
+      "targets": {
+        "javascript": "undefined",
+        "python": "None",
+        "typescript": "undefined",
+        "go": "nil",
+        "rust": "None",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "UNSAFE",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "unsafe",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "EXTERN",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "declare",
+        "go": "",
+        "rust": "extern",
+        "java": "",
+        "c": "extern"
+      }
+    },
+    {
+      "logical": "CHAN",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "chan",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "MAP",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "map",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "AND",
+      "tier": "standard",
+      "group": "operators",
+      "targets": {
+        "javascript": "&&",
+        "python": "and",
+        "typescript": "&&",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "OR",
+      "tier": "standard",
+      "group": "operators",
+      "targets": {
+        "javascript": "||",
+        "python": "or",
+        "typescript": "||",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NOT",
+      "tier": "standard",
+      "group": "operators",
+      "targets": {
+        "javascript": "!",
+        "python": "not",
+        "typescript": "!",
+        "go": "!",
+        "rust": "!",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "IN",
+      "tier": "standard",
+      "group": "operators",
+      "targets": {
+        "javascript": "in",
+        "python": "in",
+        "typescript": "in",
+        "go": "",
+        "rust": "in",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "IS",
+      "tier": "standard",
+      "group": "operators",
+      "targets": {
+        "javascript": "",
+        "python": "is",
+        "typescript": "is",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "DEL",
+      "tier": "standard",
+      "group": "operators",
+      "targets": {
+        "javascript": "delete",
+        "python": "del",
+        "typescript": "delete",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "DO",
+      "tier": "advanced",
+      "group": "control",
+      "targets": {
+        "javascript": "do",
+        "python": "",
+        "typescript": "do",
+        "go": "",
+        "rust": "",
+        "java": "do",
+        "c": "do"
+      }
+    },
+    {
+      "logical": "DEBUGGER",
+      "tier": "advanced",
+      "group": "debug",
+      "targets": {
+        "javascript": "debugger",
+        "python": "",
+        "typescript": "debugger",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "TYPEOF",
+      "tier": "advanced",
+      "group": "operators",
+      "targets": {
+        "javascript": "typeof",
+        "python": "",
+        "typescript": "typeof",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "VOID",
+      "tier": "advanced",
+      "group": "operators",
+      "targets": {
+        "javascript": "void",
+        "python": "",
+        "typescript": "void",
+        "go": "",
+        "rust": "",
+        "java": "void",
+        "c": "void"
+      }
+    },
+    {
+      "logical": "INSTANCEOF",
+      "tier": "advanced",
+      "group": "operators",
+      "targets": {
+        "javascript": "instanceof",
+        "python": "",
+        "typescript": "instanceof",
+        "go": "",
+        "rust": "",
+        "java": "instanceof",
+        "c": ""
+      }
+    },
+    {
+      "logical": "PRIVATE",
+      "tier": "advanced",
+      "group": "visibility",
+      "targets": {
+        "javascript": "private",
+        "python": "",
+        "typescript": "private",
+        "go": "",
+        "rust": "",
+        "java": "private",
+        "c": ""
+      }
+    },
+    {
+      "logical": "PROTECTED",
+      "tier": "advanced",
+      "group": "visibility",
+      "targets": {
+        "javascript": "protected",
+        "python": "",
+        "typescript": "protected",
+        "go": "",
+        "rust": "",
+        "java": "protected",
+        "c": ""
+      }
+    },
+    {
+      "logical": "PUBLIC",
+      "tier": "advanced",
+      "group": "visibility",
+      "targets": {
+        "javascript": "public",
+        "python": "",
+        "typescript": "public",
+        "go": "",
+        "rust": "pub",
+        "java": "public",
+        "c": ""
+      }
+    },
+    {
+      "logical": "READONLY",
+      "tier": "advanced",
+      "group": "visibility",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "readonly",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "ABSTRACT",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "abstract",
+        "go": "",
+        "rust": "",
+        "java": "abstract",
+        "c": ""
+      }
+    },
+    {
+      "logical": "DECLARE",
+      "tier": "advanced",
+      "group": "modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "declare",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "GET",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "get",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "SET",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "set",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "INFER",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "infer",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "KEYOF",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "keyof",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "UNIQUE",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "unique",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "SATISFIES",
+      "tier": "advanced",
+      "group": "types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "satisfies",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "ANY",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "any",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "BOOLEAN",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "boolean",
+        "go": "",
+        "rust": "",
+        "java": "boolean",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NUMBER",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "number",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "STRING",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "string",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "SYMBOL",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "symbol",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "OBJECT",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "object",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NEVER",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "never",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "UNKNOWN",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "unknown",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "BIGINT",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "bigint",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "CONSTRUCTOR",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "constructor",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "REQUIRE",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "require",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "USING",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "using",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "OF",
+      "tier": "advanced",
+      "group": "typescript-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "of",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "DYN",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "dyn",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "MOVE",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "move",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "REF",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "ref",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "WHERE",
+      "tier": "advanced",
+      "group": "systems",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "where",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "GEN",
+      "tier": "advanced",
+      "group": "generics",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "gen",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "LAZY",
+      "tier": "advanced",
+      "group": "evaluation",
+      "targets": {
+        "javascript": "",
+        "python": "lazy",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": ""
+      }
+    },
+    {
+      "logical": "BYTE",
+      "tier": "advanced",
+      "group": "java-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "byte",
+        "c": ""
+      }
+    },
+    {
+      "logical": "CHAR",
+      "tier": "advanced",
+      "group": "java-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "char",
+        "c": "char"
+      }
+    },
+    {
+      "logical": "SHORT",
+      "tier": "advanced",
+      "group": "java-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "short",
+        "c": "short"
+      }
+    },
+    {
+      "logical": "INT",
+      "tier": "advanced",
+      "group": "java-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "int",
+        "c": "int"
+      }
+    },
+    {
+      "logical": "LONG",
+      "tier": "advanced",
+      "group": "java-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "long",
+        "c": "long"
+      }
+    },
+    {
+      "logical": "FLOAT",
+      "tier": "advanced",
+      "group": "java-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "float",
+        "c": "float"
+      }
+    },
+    {
+      "logical": "DOUBLE",
+      "tier": "advanced",
+      "group": "java-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "double",
+        "c": "double"
+      }
+    },
+    {
+      "logical": "FINAL",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "final",
+        "c": ""
+      }
+    },
+    {
+      "logical": "NATIVE",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "native",
+        "c": ""
+      }
+    },
+    {
+      "logical": "STRICTFP",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "strictfp",
+        "c": ""
+      }
+    },
+    {
+      "logical": "SYNCHRONIZED",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "synchronized",
+        "c": ""
+      }
+    },
+    {
+      "logical": "THROWS",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "throws",
+        "c": ""
+      }
+    },
+    {
+      "logical": "TRANSIENT",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "transient",
+        "c": ""
+      }
+    },
+    {
+      "logical": "VOLATILE",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "volatile",
+        "c": "volatile"
+      }
+    },
+    {
+      "logical": "UNDERSCORE",
+      "tier": "advanced",
+      "group": "java-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "_",
+        "typescript": "",
+        "go": "",
+        "rust": "_",
+        "java": "_",
+        "c": ""
+      }
+    },
+    {
+      "logical": "AUTO",
+      "tier": "advanced",
+      "group": "c-storage",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "auto"
+      }
+    },
+    {
+      "logical": "REGISTER",
+      "tier": "advanced",
+      "group": "c-storage",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "register"
+      }
+    },
+    {
+      "logical": "SIGNED",
+      "tier": "advanced",
+      "group": "c-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "signed"
+      }
+    },
+    {
+      "logical": "UNSIGNED",
+      "tier": "advanced",
+      "group": "c-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "unsigned"
+      }
+    },
+    {
+      "logical": "SIZEOF",
+      "tier": "advanced",
+      "group": "c-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "sizeof"
+      }
+    },
+    {
+      "logical": "TYPEDEF",
+      "tier": "advanced",
+      "group": "c-declarations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "typedef"
+      }
+    },
+    {
+      "logical": "UNION",
+      "tier": "advanced",
+      "group": "c-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "union"
+      }
+    },
+    {
+      "logical": "INLINE",
+      "tier": "advanced",
+      "group": "c-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "inline"
+      }
+    },
+    {
+      "logical": "RESTRICT",
+      "tier": "advanced",
+      "group": "c-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "restrict"
+      }
+    },
+    {
+      "logical": "C_BOOL",
+      "tier": "advanced",
+      "group": "c-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Bool"
+      }
+    },
+    {
+      "logical": "C_COMPLEX",
+      "tier": "advanced",
+      "group": "c-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Complex"
+      }
+    },
+    {
+      "logical": "C_IMAGINARY",
+      "tier": "advanced",
+      "group": "c-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Imaginary"
+      }
+    },
+    {
+      "logical": "C_ALIGNAS",
+      "tier": "advanced",
+      "group": "c11",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Alignas"
+      }
+    },
+    {
+      "logical": "C_ALIGNOF",
+      "tier": "advanced",
+      "group": "c11",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Alignof"
+      }
+    },
+    {
+      "logical": "C_ATOMIC",
+      "tier": "advanced",
+      "group": "c11",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Atomic"
+      }
+    },
+    {
+      "logical": "C_GENERIC",
+      "tier": "advanced",
+      "group": "c11",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Generic"
+      }
+    },
+    {
+      "logical": "C_NORETURN",
+      "tier": "advanced",
+      "group": "c11",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Noreturn"
+      }
+    },
+    {
+      "logical": "C_STATIC_ASSERT",
+      "tier": "advanced",
+      "group": "c11",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Static_assert"
+      }
+    },
+    {
+      "logical": "C_THREAD_LOCAL",
+      "tier": "advanced",
+      "group": "c11",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "_Thread_local"
+      }
+    },
+    {
+      "logical": "ASM",
+      "tier": "advanced",
+      "group": "c-extensions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "asm"
+      }
+    }
   ]
 }

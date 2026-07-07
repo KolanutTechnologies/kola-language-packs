@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.2.0",
+  "version": "0.4.0",
   "displayName": "Nigerian Pidgin",
   "description": "Nigerian Pidgin keyword map — bridge language for Nigerian developers",
   "reviewStatus": "starter",
@@ -20,7 +20,9 @@
     "python",
     "typescript",
     "go",
-    "rust"
+    "rust",
+    "java",
+    "c"
   ],
   "keywords": {
     "IF": [
@@ -397,6 +399,111 @@
     ],
     "LAZY": [
       "lazy"
+    ],
+    "BYTE": [
+      "byte"
+    ],
+    "CHAR": [
+      "char"
+    ],
+    "SHORT": [
+      "short"
+    ],
+    "INT": [
+      "int"
+    ],
+    "LONG": [
+      "long"
+    ],
+    "FLOAT": [
+      "float"
+    ],
+    "DOUBLE": [
+      "double"
+    ],
+    "FINAL": [
+      "final"
+    ],
+    "NATIVE": [
+      "native"
+    ],
+    "STRICTFP": [
+      "strictfp"
+    ],
+    "SYNCHRONIZED": [
+      "synchronized"
+    ],
+    "THROWS": [
+      "throws"
+    ],
+    "TRANSIENT": [
+      "transient"
+    ],
+    "VOLATILE": [
+      "volatile"
+    ],
+    "UNDERSCORE": [
+      "_"
+    ],
+    "AUTO": [
+      "auto"
+    ],
+    "REGISTER": [
+      "register"
+    ],
+    "SIGNED": [
+      "signed"
+    ],
+    "UNSIGNED": [
+      "unsigned"
+    ],
+    "SIZEOF": [
+      "sizeof"
+    ],
+    "TYPEDEF": [
+      "typedef"
+    ],
+    "UNION": [
+      "union"
+    ],
+    "INLINE": [
+      "inline"
+    ],
+    "RESTRICT": [
+      "restrict"
+    ],
+    "C_BOOL": [
+      "c_bool"
+    ],
+    "C_COMPLEX": [
+      "c_complex"
+    ],
+    "C_IMAGINARY": [
+      "c_imaginary"
+    ],
+    "C_ALIGNAS": [
+      "c_alignas"
+    ],
+    "C_ALIGNOF": [
+      "c_alignof"
+    ],
+    "C_ATOMIC": [
+      "c_atomic"
+    ],
+    "C_GENERIC": [
+      "c_generic"
+    ],
+    "C_NORETURN": [
+      "c_noreturn"
+    ],
+    "C_STATIC_ASSERT": [
+      "c_static_assert"
+    ],
+    "C_THREAD_LOCAL": [
+      "c_thread_local"
+    ],
+    "ASM": [
+      "asm"
     ]
   },
   "scopeNote": "Nigerian Pidgin (Naija) only. Not Cameroon Pidgin, Ghanaian Pidgin, or other West African creoles — those need separate packs.",

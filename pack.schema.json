@@ -3,7 +3,16 @@
   "$id": "https://github.com/KolanutTechnologies/kola-language-packs/pack.schema.json",
   "title": "Kola Language Pack",
   "type": "object",
-  "required": ["name", "languageCode", "locale", "countries", "regions", "version", "targets", "keywords"],
+  "required": [
+    "name",
+    "languageCode",
+    "locale",
+    "countries",
+    "regions",
+    "version",
+    "targets",
+    "keywords"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -32,7 +41,10 @@
     "regions": {
       "type": "array",
       "description": "Broad geographic scope for browsing (e.g. West Africa)",
-      "items": { "type": "string", "minLength": 1 },
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
       "minItems": 1
     },
     "scopeNote": {
@@ -41,29 +53,49 @@
     },
     "reviewStatus": {
       "type": "string",
-      "enum": ["starter", "community-reviewed", "partner-verified"],
+      "enum": [
+        "starter",
+        "community-reviewed",
+        "partner-verified"
+      ],
       "description": "Verification level of keyword translations"
     },
     "recommendedPartners": {
       "type": "array",
       "description": "Organizations to contact for verified terminology (language academies, universities, community NLP groups)",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "version": {
       "type": "string",
       "pattern": "^\\d+\\.\\d+\\.\\d+$"
     },
-    "displayName": { "type": "string" },
-    "description": { "type": "string" },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
     "contributors": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "targets": {
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["javascript", "python", "typescript", "go", "rust"]
+        "enum": [
+          "javascript",
+          "python",
+          "typescript",
+          "go",
+          "rust",
+          "java",
+          "c"
+        ]
       },
       "minItems": 1
     },
@@ -72,10 +104,16 @@
       "description": "Logical token → native phrase(s). Value is string or string[].",
       "additionalProperties": {
         "oneOf": [
-          { "type": "string", "minLength": 1 },
+          {
+            "type": "string",
+            "minLength": 1
+          },
           {
             "type": "array",
-            "items": { "type": "string", "minLength": 1 },
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
             "minItems": 1
           }
         ]

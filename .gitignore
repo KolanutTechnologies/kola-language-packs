@@ -1,11 +1,11 @@
 node_modules/
 dist/
-research/
 review-harness/
 *.tsbuildinfo
 .DS_Store
 .env
 .env.*
 
-# Cursor IDE — local only (skills, settings, cache)
+# Local only — never commit, never CHANGELOG, never link from tracked docs
+research/
 .cursor/

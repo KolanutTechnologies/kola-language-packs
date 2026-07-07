@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const packsRoot = join(root, 'packs');
 
-const TARGETS = ['javascript', 'python', 'typescript', 'go', 'rust'];
+const TARGETS = ['javascript', 'python', 'typescript', 'go', 'rust', 'java'];
 
 const FALLBACK_LABEL = {
   LAMBDA: 'lambda',
