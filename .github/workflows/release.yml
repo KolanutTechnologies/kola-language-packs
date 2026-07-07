@@ -4,12 +4,19 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      republish_version:
+        description: 'Re-publish an existing tag to npm (e.g. 0.3.0). Leave empty for auto catch-up.'
+        required: false
+        type: string
 
 permissions:
   contents: write
 
 jobs:
   release:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     outputs:
       released: ${{ steps.direct.outputs.released }}
@@ -47,9 +54,43 @@ jobs:
           body_path: release-body.md
           generate_release_notes: false
 
-  publish-npm:
+  resolve-publish:
+    runs-on: ubuntu-latest
     needs: release
-    if: needs.release.outputs.released == 'true'
+    if: always() && (github.event_name == 'workflow_dispatch' || needs.release.result != 'skipped')
+    outputs:
+      publish: ${{ steps.pick.outputs.publish }}
+      version: ${{ steps.pick.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Pick npm version to publish
+        id: pick
+        env:
+          RELEASED: ${{ needs.release.outputs.released }}
+          RELEASE_VERSION: ${{ needs.release.outputs.version }}
+        run: |
+          if [ -n "${{ github.event.inputs.republish_version }}" ]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+            echo "version=${{ github.event.inputs.republish_version }}" >> "$GITHUB_OUTPUT"
+            echo "Manual republish: v${{ github.event.inputs.republish_version }}"
+          elif [ "$RELEASED" = "true" ] && [ -n "$RELEASE_VERSION" ]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+            echo "version=$RELEASE_VERSION" >> "$GITHUB_OUTPUT"
+            echo "Fresh release: v$RELEASE_VERSION"
+          else
+            node scripts/npm-publish-catchup.mjs
+          fi
+
+  publish-npm:
+    needs: resolve-publish
+    if: needs.resolve-publish.outputs.publish == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -57,14 +98,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: v${{ needs.release.outputs.version }}
+          ref: v${{ needs.resolve-publish.outputs.version }}
 
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: npm
 
-      # Trusted Publisher (OIDC): no NPM_TOKEN. Workflow filename must match npm settings: release.yml
+      # Trusted Publisher (OIDC): workflow filename must match npm settings: release.yml
       - name: Ensure npm supports OIDC trusted publishing
         run: npm install -g npm@latest
 

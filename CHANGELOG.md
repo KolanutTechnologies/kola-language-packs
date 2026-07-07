@@ -9,6 +9,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 ### Changed
 
 - CI npm publish: Trusted Publisher (OIDC) via `release.yml`; no `NPM_TOKEN` secret required
+- CI npm publish: catch-up job when git tag exists but npm is behind; manual republish via workflow dispatch
 
 ## [0.3.0] - 2026-07-07
 
