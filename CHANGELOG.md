@@ -27,6 +27,7 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 
 - Java: missing reserved keyword `_` — **51** JLS §3.9 reserved keywords (not 50); added `UNDERSCORE` logical token
 - release-please: reset manifest/package to last tag (`v0.2.0`); add `bootstrap-sha`; do not manual-bump ahead of tags
+- release-please: direct release on push (`skip-github-pull-request`); auto `vX.Y.Z` tags; formatted release body; Node 24 in CI
 
 ## [0.2.0] - 2026-07-07
 

@@ -71,15 +71,27 @@ Examples:
 
 ## Automated releases (release-please)
 
-Releases are automated on merge to `main` using [release-please](https://github.com/googleapis/release-please).
+Releases are **automatic on push to `main`** — no Release PR to merge, no manual `git tag`.
 
-### How it works
+### What happens on push
 
-1. PRs merge to `main` with [Conventional Commits](https://www.conventionalcommits.org/) in the **squash merge title**
-2. **release-please** opens or updates a **Release PR** with `CHANGELOG.md` + `package.json` bumps
-3. A companion workflow syncs all `pack.json` versions into that Release PR
-4. A maintainer **merges the Release PR** when ready to ship (batch patches weekly, or merge immediately for features)
-5. On merge: GitHub tag + Release are created, then **npm publish** runs
+1. Conventional commits since the last tag (`v0.2.0`, `v0.3.0`, …) are collected
+2. **release-please** bumps `package.json`, dates `CHANGELOG.md`, creates **`vX.Y.Z` git tag** + GitHub Release
+3. CI formats the release body (stats line + Install — same format as v0.2.0)
+4. **npm publish** runs from the tagged commit
+5. A follow-up commit syncs all `pack.json` versions on `main`
+
+**You never create tags manually.** If `v0.3.0` is missing, the Release workflow did not succeed — check Actions → Release.
+
+### One-time repo setup
+
+| Setting | Where | Value |
+|---------|-------|-------|
+| Workflow permissions | Settings → Actions → General | **Read and write permissions** |
+| `NPM_TOKEN` | Settings → Secrets | npm automation token with publish access |
+| `RELEASE_PLEASE_TOKEN` (optional) | Settings → Secrets | PAT with `contents: write` if org restricts `GITHUB_TOKEN` |
+
+We use `skip-github-pull-request: true` so release-please does **not** open a Release PR (avoids “Actions not permitted to create pull requests”).
 
 ### Commit / PR title prefixes
 
@@ -92,7 +104,9 @@ Releases are automated on merge to `main` using [release-please](https://github.
 
 ### Maintainer setup (one-time)
 
-Add an **`NPM_TOKEN`** secret in GitHub repo settings (npm automation token with publish access to `@kolanut/language-packs`).
+Add **`NPM_TOKEN`** in GitHub repo secrets (npm automation token with publish access to `@kolanut/language-packs`).
+
+Enable **Read and write permissions** for GitHub Actions (Settings → Actions → General → Workflow permissions).
 
 ### Manual fallback
 
@@ -131,7 +145,7 @@ node scripts/release-notes-snippet.mjs 0.3.0
 **Install:** `npm install @kolanut/language-packs@0.3.0`
 ```
 
-- **File:** [`CHANGELOG.md`](./CHANGELOG.md) — `[Unreleased]` on feature PRs; release-please dates it on Release PR
+- **File:** [`CHANGELOG.md`](./CHANGELOG.md) — `[Unreleased]` on feature PRs; release-please dates it on tag
 - **Contributors:** conventional commit squash titles; release-please summarizes into CHANGELOG
 
 ### release-please must stay aligned
@@ -142,7 +156,7 @@ node scripts/release-notes-snippet.mjs 0.3.0
 | `package.json` `version` | Same as manifest until Release PR merges |
 | `CHANGELOG.md` | `[Unreleased]` only — do not pre-date future versions on `main` |
 
-Manual `bump-version.mjs` ahead of tags causes **Release workflow failures**.
+Manual `bump-version.mjs` or manual `git tag` causes **Release workflow drift**. Tags are CI-owned.
 
 ---
 
