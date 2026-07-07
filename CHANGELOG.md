@@ -6,10 +6,13 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-07-07
+
 ### Changed
 
 - CI npm publish: Trusted Publisher (OIDC) via `release.yml`; no `NPM_TOKEN` secret required
 - CI npm publish: catch-up job when git tag exists but npm is behind; manual republish via workflow dispatch
+
 
 ## [0.3.0] - 2026-07-07
 
@@ -66,8 +69,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
-
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.3.0...HEAD
+[0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.3.1...HEAD
 [0.3.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.0
 [0.2.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.2.0
 [0.1.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.1.1

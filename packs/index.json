@@ -13,7 +13,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "nigerian-pidgin",
@@ -26,7 +26,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "hausa",
@@ -42,7 +42,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "igbo",
@@ -55,7 +55,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "swahili",
@@ -72,7 +72,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "amharic",
@@ -85,7 +85,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "zulu",
@@ -98,7 +98,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "xhosa",
@@ -111,7 +111,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "twi",
@@ -124,7 +124,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "somali",
@@ -140,7 +140,7 @@
       "regions": [
         "Horn of Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "wolof",
@@ -155,7 +155,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "lingala",
@@ -169,7 +169,7 @@
       "regions": [
         "Central Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "kinyarwanda",
@@ -182,7 +182,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "luganda",
@@ -195,7 +195,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "shona",
@@ -208,7 +208,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "oromo",
@@ -222,7 +222,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "tigrinya",
@@ -236,7 +236,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "afrikaans",
@@ -250,7 +250,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "arabic",
@@ -273,7 +273,7 @@
         "North Africa",
         "East Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "french",
@@ -308,7 +308,7 @@
         "East Africa",
         "Indian Ocean"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "fulfulde",
@@ -328,7 +328,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "sesotho",
@@ -342,7 +342,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "setswana",
@@ -357,7 +357,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "bambara",
@@ -373,7 +373,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "name": "portuguese-africa",
@@ -391,7 +391,7 @@
         "Southern Africa",
         "West Africa"
       ],
-      "version": "0.3.0"
+      "version": "0.3.1"
     }
   ]
 }
