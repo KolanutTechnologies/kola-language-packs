@@ -69,19 +69,19 @@ Examples:
 
 ---
 
-## Automated releases (release-please)
+## Automated releases (direct — no Release PR)
 
-Releases are **automatic on push to `main`** — no Release PR to merge, no manual `git tag`.
+Releases run on **push to `main`** via [`scripts/direct-release.mjs`](./scripts/direct-release.mjs).  
+We do **not** use release-please Release PRs (org policy blocks GITHUB_TOKEN from opening PRs).
 
 ### What happens on push
 
-1. Conventional commits since the last tag (`v0.2.0`, `v0.3.0`, …) are collected
-2. **release-please** bumps `package.json`, dates `CHANGELOG.md`, creates **`vX.Y.Z` git tag** + GitHub Release
-3. CI formats the release body (stats line + Install — same format as v0.2.0)
+1. Script checks conventional commits since the last tag (`v0.2.0`, `v0.3.0`, …)
+2. If `feat:` / `fix:` found: bumps version, dates `CHANGELOG.md`, syncs pack versions
+3. CI commits `chore(release): publish vX.Y.Z`, creates **`vX.Y.Z` git tag** + GitHub Release (v0.2.0 notes format)
 4. **npm publish** runs from the tagged commit
-5. A follow-up commit syncs all `pack.json` versions on `main`
 
-**You never create tags manually.** If `v0.3.0` is missing, the Release workflow did not succeed — check Actions → Release.
+**You never create tags manually.** If a tag is missing, check Actions → **Release**.
 
 ### One-time repo setup
 
@@ -89,9 +89,9 @@ Releases are **automatic on push to `main`** — no Release PR to merge, no manu
 |---------|-------|-------|
 | Workflow permissions | Settings → Actions → General | **Read and write permissions** |
 | `NPM_TOKEN` | Settings → Secrets | npm automation token with publish access |
-| `RELEASE_PLEASE_TOKEN` (optional) | Settings → Secrets | PAT with `contents: write` if org restricts `GITHUB_TOKEN` |
 
-We use `skip-github-pull-request: true` so release-please does **not** open a Release PR (avoids “Actions not permitted to create pull requests”).
+Preview next release locally: `node scripts/direct-release.mjs --dry-run`  
+Preview release notes: `node scripts/release-notes-snippet.mjs 0.3.0`
 
 ### Commit / PR title prefixes
 
@@ -156,7 +156,7 @@ node scripts/release-notes-snippet.mjs 0.3.0
 | `package.json` `version` | Same as manifest until Release PR merges |
 | `CHANGELOG.md` | `[Unreleased]` only — do not pre-date future versions on `main` |
 
-Manual `bump-version.mjs` or manual `git tag` causes **Release workflow drift**. Tags are CI-owned.
+Manual `bump-version.mjs`, manual `git tag`, or release-please Release PRs cause drift. Tags are CI-owned via **direct-release**.
 
 ---
 

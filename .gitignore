@@ -9,3 +9,4 @@ review-harness/
 # Local only — never commit, never CHANGELOG, never link from tracked docs
 research/
 .cursor/
+release-body.md

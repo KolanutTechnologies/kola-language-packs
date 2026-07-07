@@ -9,70 +9,47 @@ permissions:
   contents: write
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
-      tag_name: ${{ steps.release.outputs.tag_name }}
-      version: ${{ steps.release.outputs.version }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: googleapis/release-please-action@v4
-        id: release
-        with:
-          # Prefer PAT if org blocks GITHUB_TOKEN from writing releases; optional secret.
-          token: ${{ secrets.RELEASE_PLEASE_TOKEN || secrets.GITHUB_TOKEN }}
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
-
-  format-release-notes:
-    needs: release-please
-    if: ${{ needs.release-please.outputs.release_created }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+      released: ${{ steps.direct.outputs.released }}
+      version: ${{ steps.direct.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ needs.release-please.outputs.tag_name }}
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Generate release notes (v0.2.0 format)
-        run: |
-          VERSION="${{ needs.release-please.outputs.version }}"
-          node scripts/release-notes-snippet.mjs "$VERSION" > release-body.md
+      - name: Prepare release (tag vX.Y.Z, no Release PR)
+        id: direct
+        run: node scripts/direct-release.mjs
 
-      - name: Update GitHub release body
-        uses: actions/github-script@v7
+      - name: Commit, tag, and push
+        if: steps.direct.outputs.released == 'true'
+        env:
+          VERSION: ${{ steps.direct.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore(release): publish v${VERSION}"
+          git tag "v${VERSION}"
+          git push origin main --follow-tags
+
+      - name: Create GitHub Release
+        if: steps.direct.outputs.released == 'true'
+        uses: softprops/action-gh-release@v2
         with:
-          script: |
-            const fs = require('fs');
-            const tag = '${{ needs.release-please.outputs.tag_name }}';
-            const body = fs.readFileSync('release-body.md', 'utf8');
-            const { data: releases } = await github.rest.repos.listReleases({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              per_page: 20,
-            });
-            const release = releases.find((r) => r.tag_name === tag);
-            if (!release) {
-              core.setFailed(`Release not found for tag ${tag}`);
-              return;
-            }
-            await github.rest.repos.updateRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: release.id,
-              body,
-            });
+          tag_name: v${{ steps.direct.outputs.version }}
+          body_path: release-body.md
+          generate_release_notes: false
 
   publish-npm:
-    needs: release-please
-    if: ${{ needs.release-please.outputs.release_created }}
+    needs: release
+    if: needs.release.outputs.released == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -80,7 +57,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ needs.release-please.outputs.tag_name }}
+          ref: v${{ needs.release.outputs.version }}
 
       - uses: actions/setup-node@v4
         with:
@@ -93,32 +70,3 @@ jobs:
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  sync-packs-on-main:
-    needs: [release-please, publish-npm]
-    if: ${{ needs.release-please.outputs.release_created }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - run: node scripts/sync-pack-versions.mjs
-
-      - name: Commit synced pack versions
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add packs/
-          if git diff --staged --quiet; then
-            echo "Pack versions already in sync."
-          else
-            git commit -m "chore: sync pack versions after ${{ needs.release-please.outputs.tag_name }}"
-            git push
-          fi
