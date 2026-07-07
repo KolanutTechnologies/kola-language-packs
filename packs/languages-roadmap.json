@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Roadmap for African human-language packs and programming-target / logical-token registry growth. Shipped state: see packs/index.json, logical-tokens.json, official-target-keywords.json.",
   "shippedCount": 25,
   "plannedCount": 40,
