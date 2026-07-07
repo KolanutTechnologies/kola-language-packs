@@ -26,15 +26,19 @@
   "scripts": {
     "build": "tsc",
     "validate": "node scripts/validate.mjs",
+    "registry": "node scripts/generate-language-registry.mjs",
     "coverage": "node scripts/generate-coverage.mjs",
     "bootstrap": "node scripts/bootstrap-packs.mjs",
     "readme:metrics": "node scripts/update-readme-metrics.mjs",
+    "sync-versions": "node scripts/sync-pack-versions.mjs",
+    "bump-version": "node scripts/bump-version.mjs",
+    "ensure-tokens": "node scripts/ensure-pack-tokens.mjs",
     "test": "npm run validate && npm run coverage",
-    "prepublishOnly": "npm run build && npm run validate"
+    "prepublishOnly": "npm run sync-versions && npm run build && npm run validate"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kolanutTechnologies/kola-language-packs.git"
+    "url": "https://github.com/KolanutTechnologies/kola-language-packs.git"
   },
   "keywords": [
     "kolanut",

@@ -16,7 +16,7 @@
   "description": "Hausa keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -391,6 +391,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "Hausa across West and Central Africa. Prefer inclusive alias arrays for Nigeria vs Niger spelling differences.",

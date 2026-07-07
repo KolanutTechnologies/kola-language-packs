@@ -15,7 +15,7 @@
   "description": "Setswana keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -360,6 +360,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "Setswana / Tswana of Botswana and South Africa.",

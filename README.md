@@ -81,10 +81,22 @@ This project is our attempt to fix that properly:
 - A growing set of **African language packs** (the human-language layer)
 - Validation so everyone can build on top of the same foundation with confidence
 
+## Standards-aligned metadata
+
+Pack metadata follows international conventions so tools worldwide can consume our data:
+
+| Standard | Field | Example |
+|----------|-------|---------|
+| [ISO 639](https://www.loc.gov/standards/iso639-2/php/code_list.php) | `languageCode` | `sw` (Swahili), `wo` (Wolof), `zu` (isiZulu) |
+| [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | `countries` | `KE`, `SN`, `ZA`, `EG` |
+| [BCP-47](https://www.rfc-editor.org/info/bcp47) | `locale` | `sw-KE`, `wo-SN`, `ar-EG` |
+
+We use the same code systems as major platforms and localization projects — **standards-aligned**, not a custom Kolanut-only format. Plain English: [`packs/GLOSSARY.md`](./packs/GLOSSARY.md).
+
 ## What’s in this repo
 
 - **25 shipped African language packs** (and a roadmap for more)
-- **112 logical tokens** that every pack maps (shared across all programming targets)
+- **113 logical tokens** that every pack maps (shared across all programming targets)
 - **Schemas + validation** to keep packs consistent
 - **Coverage checks** against official keyword lists for each target language
 
@@ -106,8 +118,8 @@ In short:
 | What we cover | Shipped | Planned | Source of truth |
 |---|---:|---:|---|
 | **African language packs** | 25 | +40 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
-| **Programming targets** | 5 | +9 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
-| **Logical tokens** | 112 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
+| **Programming targets** | 5 | +11 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
+| **Logical tokens** | 113 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
 | **Keyword coverage gaps** | 0 | — | [`packs/coverage-summary.json`](./packs/coverage-summary.json) |
 
 <!-- metrics:end -->
@@ -154,7 +166,7 @@ const packs = await listPackNames(); // e.g. 25 packs
 
 const yoruba = await loadPack('yoruba');
 const keywords = flattenKeywords(yoruba);
-// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps 112 logical tokens
+// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps 113 logical tokens
 ```
 
 ## Example: English keywords vs localized phrases (illustrative)
@@ -173,7 +185,9 @@ PRINT → "show for screen"
 If you prefer to consume JSON directly (Rust/Go/Python/CLI tools), start here:
 
 - [`packs/index.json`](./packs/index.json): pack manifest (locale, region, countries, status)
-- [`packs/logical-tokens.json`](./packs/logical-tokens.json): the 112-token registry (the thing packs must fully map)
+- [`packs/language-registry.json`](./packs/language-registry.json): taken and planned `name` / `locale` / `languageCode` (check before adding a pack)
+- [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md): how to name packs and write locales
+- [`packs/logical-tokens.json`](./packs/logical-tokens.json): the 113-token registry (the thing packs must fully map)
 - [`packs/by-country.json`](./packs/by-country.json): `NG` → `["yoruba", "igbo", ...]`
 - [`packs/by-region.json`](./packs/by-region.json): region → pack names
 - [`packs/coverage-summary.json`](./packs/coverage-summary.json): auto-generated coverage report
@@ -236,11 +250,11 @@ If you care about linguistic accuracy or preferred terminology for a specific co
 We track roadmaps in [`packs/languages-roadmap.json`](./packs/languages-roadmap.json):
 
 - **Planned African languages** (by region + priority) — 40 more packs on the list
-- **Planned programming targets** — C, C++, Java, C#, Kotlin, Swift, Dart, Ruby, PHP (one target per release; sample keywords + checklist in the JSON)
+- **Planned programming targets** — C, C++, Java, C#, Kotlin, Swift, Dart, Ruby, PHP (`v0.3.0+`–`v0.4.0+`); R, Clojure (`v0.5.0+`) — one target per release; sample keywords + checklist in the JSON
 - **Planned logical tokens** — `GEN` (Rust 2024), `LAZY` (Python 3.15 / PEP 810) → target **v0.2.0**
 - **Planned token tier** — stdlib / builtins (`len`, `map`, `Array`, `fmt`, …) → target **v2.0.0** (design-first; not required for beginner keyword transpilation)
 
-Suggested release sequence (also in the JSON): **v0.1.x** (current) → **v0.2.0** (GEN/LAZY) → **v0.3.0+** (new targets, one at a time) → **v2.0.0** (stdlib tier).
+Suggested release sequence (also in the JSON): **v0.1.x** (current) → **v0.2.0** (GEN/LAZY) → **v0.3.0+** (new targets, one at a time) → **v0.4.0+** / **v0.5.0+** (more targets) → **v2.0.0** (stdlib tier).
 
 Regional focus (how we’re sequencing the work):
 
@@ -257,41 +271,73 @@ High-priority upcoming packs currently include:
 
 Contributions are welcome—especially from native speakers and educators.
 
-- **Improve an existing pack**: add better phrasing, aliases for dialects, or clearer scope notes
-- **Add a new pack**: follow the template, map all 112 tokens, and run validation
+**Start here:** [`CONTRIBUTING.md`](./CONTRIBUTING.md) — step-by-step guide (what to edit, what not to touch, checklist before you open a PR).
 
-Before contributing, please read [`packs/PACK_SCOPE.md`](./packs/PACK_SCOPE.md). It explains:
+**New language?** [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md) · [`packs/language-registry.json`](./packs/language-registry.json) · [`packs/DIALECTS.md`](./packs/DIALECTS.md) (dialects)
 
-- language codes vs country codes (e.g. `pcm` vs `NG`)
-- how we handle cross-border languages
-- when a dialect needs a new pack vs an alias in the same pack
+**Also read:** [`packs/PACK_SCOPE.md`](./packs/PACK_SCOPE.md) · [`packs/GLOSSARY.md`](./packs/GLOSSARY.md) (what ISO / BCP-47 mean)
 
-Quick start:
+### What you edit (and what you don’t)
 
-```bash
-git clone https://github.com/kolanutTechnologies/kola-language-packs.git
+| File | Your role |
+|------|-----------|
+| `packs/<language>/pack.json` | **Edit** — metadata (`locale`, `countries`, `regions`, `scopeNote`) + keyword mappings |
+| `packs/<language>/keywords.json` | **Edit** — same keyword mappings (must match `pack.json`) |
+| `packs/logical-tokens.json` | **Read only** — checklist of all 113 concepts; do not edit for translations |
+| `packs/index.json` | **Edit only when adding a new pack** |
+| [`packs/language-registry.json`](./packs/language-registry.json) | **Check before naming** — shipped + planned identifiers |
+| [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md) | **Read for new packs** — full field list, locale format, template |
+
+A valid contribution is a **complete pack** (correct scope metadata + all 113 tokens translated), not a few word changes in isolation.
+
+### Two ways to contribute
+
+1. **Improve an existing pack** — e.g. `packs/zulu/` — fix phrasing, add dialect aliases, clarify `scopeNote`
+2. **Add a new pack** — copy an existing pack, set all metadata (`name`, `languageCode`, `locale`, `displayName`, `description`, …), translate all 113 tokens, add to `packs/index.json`, run `npm run registry`
+
+One language pack per PR. Run `npm test` from the **repo root** before opening the PR.
+
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/KolanutTechnologies/kola-language-packs.git
 cd kola-language-packs
 npm install
-npm test       # validate + keyword coverage
-npm run build
+npm test
 ```
 
-Full guide: [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+**Mac / Linux:**
+```bash
+git clone https://github.com/KolanutTechnologies/kola-language-packs.git
+cd kola-language-packs
+npm install
+npm test
+```
+
+**Do not run** `npm run bootstrap` — it overwrites all packs ([`scripts/README.md`](./scripts/README.md)).
+
+Docs: [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`packs/REPO_MAP.md`](./packs/REPO_MAP.md) (what each file does) · [`VERSIONING.md`](./VERSIONING.md) · [`CHANGELOG.md`](./CHANGELOG.md)
 
 ### Contribution flow (quick)
 
-1. Choose a pack scope (or create a new variant)
-2. Translate tokens (use aliases for dialect differences)
-3. Run `npm test` (validate + coverage)
-4. Open a PR for native-speaker review
+1. Pick the right pack (or create a new variant) — see `packs/index.json` and `PACK_SCOPE.md`
+2. Edit `pack.json` metadata and translations; keep `keywords.json` in sync
+3. Map every token listed in `packs/logical-tokens.json` (113 total)
+4. Run `npm test`
+5. Open a PR for native-speaker review
 
 ## Contributors
 
 This project only works if real people show up with real language knowledge. Thank you to everyone who’s contributed time, expertise, and care.
 
-[![Contributors](https://contrib.rocks/image?repo=kolanutTechnologies/kola-language-packs)](https://github.com/kolanutTechnologies/kola-language-packs/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=KolanutTechnologies/kola-language-packs)](https://github.com/KolanutTechnologies/kola-language-packs/graphs/contributors)
 
 ## FAQ
+
+Answers to recurring questions. This section lives in **README.md** only — it is **not** a folder or auto-generated file.
+
+**Who adds FAQ entries?** Maintainers, when the same question appears in GitHub issues, PRs, or discussions. **Suggest one:** open an issue with tag `question`.
+
+**Where do answers come from?** Project scope decisions already documented in `packs/` (logical tokens, pack schema, validation rules) — summarized here in plain language.
 
 ### Is `packs/logical-tokens.json` exhaustive?
 
@@ -304,7 +350,39 @@ It is **not** a full programming-language grammar. It intentionally does **not**
 - comment syntax (`//`, `#`, `/* */`)
 - every syntax feature that isn’t keyword-driven
 
-If we expand into full syntax coverage later, that would likely be a separate registry (or multiple registries) rather than inflating “logical tokens” beyond readability.
+If we expand into full syntax coverage later, that would likely be a separate registry rather than inflating “logical tokens” beyond readability.
+
+### How do I contribute a dialect?
+
+Usually **edit the existing pack** and add aliases — not a new folder.
+
+Example (Swahili, East Africa): `"IF": ["kama", "ikiwa", "if"]` in `packs/swahili/`.
+
+Full decision tree: [`packs/DIALECTS.md`](./packs/DIALECTS.md).
+
+### What are ISO 639, ISO 3166-1, and BCP-47? Are we “compliant”?
+
+International standards for **language codes**, **country codes**, and **locale tags**. We follow them so npm, editors, and locale APIs understand our packs — same codes used across the African language ecosystem and global tech.
+
+Plain English: [`packs/GLOSSARY.md`](./packs/GLOSSARY.md). There is no formal certification body for language packs; we are **standards-aligned**.
+
+### Which npm commands do I run?
+
+From the **repo root** only:
+
+- **`npm test`** — every PR (checks your files; does not delete anything)
+- **`npm run registry`** — only when adding a new pack
+- **Never `npm run bootstrap`** as a contributor — overwrites all packs
+
+Details: [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`scripts/README.md`](./scripts/README.md)
+
+### Can one pack be version 0.1.2 while another stays 0.1.1?
+
+**Not today** — all packs share the npm package version on each release. See [`VERSIONING.md`](./VERSIONING.md).
+
+### What is `pack.schema.json`? What do all these files do?
+
+[`packs/REPO_MAP.md`](./packs/REPO_MAP.md) — plain map of every folder and file.
 
 ## Maintainers (optional)
 
@@ -313,7 +391,8 @@ This section is only relevant if you’re maintaining the package or editing gen
 <details>
 <summary>Maintainer notes (publishing + regeneration)</summary>
 
-- Publishing: `npm publish --access public` (package is `@kolanut/language-packs`)
+- Publishing: `npm publish --access public` (package is `@kolanut/language-packs`) — automated via release-please on merge of the Release PR; requires `NPM_TOKEN` in GitHub secrets
+- Sync pack versions after a manual version bump: `npm run sync-versions`
 - Regenerate derived pack files after changing the source definitions:
 
 ```bash

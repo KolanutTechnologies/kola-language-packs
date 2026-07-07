@@ -1,30 +1,236 @@
 # Contributing to Kola Language Packs
 
-Thank you for helping make programming accessible to African developers in their native languages! Your contribution, whether it's a new language pack, an improvement to an existing one, or feedback, is valuable to our community.
+Thank you for helping make programming accessible to African developers in their native languages!
+
+## Start here (read this first)
+
+Every contribution is a **language pack** under `packs/<name>/`. You translate programming concepts into native phrases and declare **where that variant applies** (`locale`, `countries`, `regions`).
+
+**Do not edit `packs/logical-tokens.json` to add translations.** That file is the shared checklist of 112 concepts (IF, FOR, FUNCTION, …). Your job is to map those keys in your language pack — not change the registry itself.
+
+| File | What to do |
+|------|------------|
+| `packs/<name>/pack.json` | Edit metadata + `keywords` |
+| `packs/<name>/keywords.json` | Edit the same `keywords` (must match `pack.json` exactly) |
+| `packs/logical-tokens.json` | Read only — your translation checklist |
+| `packs/index.json` | Add an entry only when creating a **new** pack |
+
+Also read [`packs/PACK_SCOPE.md`](./packs/PACK_SCOPE.md) before you start — especially language codes vs country codes (e.g. `pcm` is Nigerian Pidgin, `NG` is Nigeria).
+
+**New language pack?** Read [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md) and check [`packs/language-registry.json`](./packs/language-registry.json) so your `name`, `locale`, and `languageCode` do not overlap existing or planned packs.
+
+**Dialect (e.g. your Igbo region)?** Read [`packs/DIALECTS.md`](./packs/DIALECTS.md) — usually you add aliases to the existing pack, not a new folder.
+
+**Codes confusing (ISO 639, BCP-47, …)?** Plain English: [`packs/GLOSSARY.md`](./packs/GLOSSARY.md)
+
+---
+
+## Commands — what to run (and what never to run)
+
+### Step 0: open the repo root
+
+All commands run here — the folder that contains `package.json` and `packs/`.
+
+**Windows (PowerShell):**
+```powershell
+cd C:\Users\YOU\OneDrive\Documents\kola-language-packs
+```
+
+**Mac / Linux:**
+```bash
+cd ~/path/to/kola-language-packs
+```
+
+Do **not** `cd` into `packs/hausa/` or `scripts/` to run npm. You edit files in your editor; commands run from the root.
+
+---
+
+### DO run these
+
+| Command | What it does in plain English | When |
+|---------|------------------------------|------|
+| `npm install` | Downloads project tools (once per machine) | First time only |
+| `npm test` | **Checks your pack files are valid** — no files deleted | **Every PR** |
+
+**Success looks like:**
+```text
+Validated 25 language pack(s) against 112 logical token(s).
+Coverage OK: ...
+```
+If you see that, you are done. Open your PR.
+
+| Command | What it does | When |
+|---------|--------------|------|
+| `npm run registry` | Updates the "taken names" list (`language-registry.json`) | **Only when adding a new pack** |
+
+---
+
+### DO NOT run these (contributors)
+
+| Command | What it actually does | Why not |
+|---------|----------------------|---------|
+| `npm run bootstrap` | **Overwrites every pack folder** from a maintainer script | Your translations (and others’) can be **wiped** |
+| `npm run build` | Compiles TypeScript for npm | Not needed for translation PRs |
+| `cd` into a `pack.json` file | `pack.json` is a file, not a folder | Use your editor to open it |
+
+If a PR runs bootstrap and replaces all packs, maintainers will **reject** it unless it was intentional maintainer work.
+
+Details: [`scripts/README.md`](./scripts/README.md) · file map: [`packs/REPO_MAP.md`](./packs/REPO_MAP.md)
+
+---
+
+## Path A: Improve an existing pack
+
+Example: better isiZulu phrasing in `packs/zulu/`.
+
+### Steps
+
+1. **Find your pack** in [`packs/index.json`](./packs/index.json) and open its folder (e.g. `packs/zulu/`).
+2. **Read `scopeNote`** in `pack.json` — confirm this pack matches your dialect/region. If not, see Path B (new variant).
+3. **Open `packs/logical-tokens.json`** — use it as a checklist. Every `"logical"` key (112 total) must have a translation in your pack.
+4. **Edit translations** in `keywords.json` (easiest) and copy the same changes into `pack.json` → `keywords`.
+5. **Update metadata if needed** — e.g. clearer `scopeNote`, corrected `countries`, or added dialect aliases. Do not change `languageCode`/`locale` unless you are fixing a mistake or scoping a variant.
+6. **Run validation:**
+
+   ```bash
+   npm install
+   npm test
+   ```
+
+7. **Open a PR** — one language pack per PR. Say which country/dialect you speak and what you changed.
+
+### Translation format
+
+Single phrase:
+
+```json
+"IF": "uma"
+```
+
+Multiple aliases (recommended — include English fallback last):
+
+```json
+"IF": ["uma", "kepha uma", "if"]
+```
+
+---
+
+## Path B: Add a new language pack
+
+Use this when the language or **country-specific variant** does not exist yet (e.g. Cameroon Pidgin, not Nigerian Pidgin).
+
+**Before naming anything:** [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md) · [`packs/language-registry.json`](./packs/language-registry.json) (taken names, locales, and codes)
+
+### Steps
+
+1. **Check the registry** — confirm your proposed `name` and `locale` are not in `language-registry.json` → `taken`.
+2. **Copy a similar pack** (from repo root):
+
+   **Windows (PowerShell):**
+   ```powershell
+   cd C:\path\to\kola-language-packs
+   Copy-Item -Recurse packs\hausa packs\your-pack-name
+   ```
+
+   **Mac / Linux:**
+   ```bash
+   cd kola-language-packs
+   cp -r packs/hausa packs/your-pack-name
+   ```
+
+3. **Fill in all metadata in `pack.json`** — use the full template in [`NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md):
+
+   | Field | Example | Notes |
+   |-------|---------|-------|
+   | `name` | `cameroon-pidgin` | Folder slug; unique; lowercase hyphenated |
+   | `languageCode` | `wes` | ISO 639 — **not** a country code |
+   | `locale` | `wes-CM` | BCP-47: `{lang}-{CC}` — must be unique |
+   | `countries` | `["CM"]` | ISO 3166-1 where this variant applies |
+   | `regions` | `["Central Africa"]` | Browse grouping |
+   | `version` | `0.1.1` | Match root `package.json` version |
+   | `displayName` | `"Cameroon Pidgin"` | Human-readable label |
+   | `description` | `"Cameroon Pidgin (Kamtok) keyword map — starter pack"` | One-line summary |
+   | `scopeNote` | `"Cameroon Pidgin (Kamtok) only."` | Dialect / country boundaries |
+   | `reviewStatus` | `"starter"` | Always `starter` for new PRs |
+   | `contributors` | `["your-github-username"]` | Your GitHub handle |
+   | `targets` | `["javascript","python","typescript","go","rust"]` | All five required |
+   | `keywords` | `{ "IF": [...], ... }` | All **112** tokens from `logical-tokens.json` |
+
+4. **Edit `keywords.json`** — must be **identical** to the `keywords` object in `pack.json`.
+
+5. **Add an entry** to [`packs/index.json`](./packs/index.json) (same fields as above; must match `pack.json`).
+
+6. **Regenerate the registry** (from repo root):
+
+   ```powershell
+   cd C:\path\to\kola-language-packs
+   npm run registry
+   ```
+
+7. **Run validation** (from repo root):
+
+   ```powershell
+   npm test
+   ```
+
+8. **Open a PR** — one new pack per PR.
+
+---
+
+## Checklist before you open a PR
+
+Use this list — incomplete PRs will fail CI or be sent back for revision.
+
+- [ ] If this is a **dialect**, I read [`packs/DIALECTS.md`](./packs/DIALECTS.md) and used aliases (not a duplicate pack folder)
+- [ ] I edited `packs/<name>/` — **not** `logical-tokens.json` (unless proposing a new concept in a separate maintainer PR)
+- [ ] `displayName`, `description`, and `reviewStatus: "starter"` are set (new packs)
+- [ ] `version` matches root `package.json`
+- [ ] `languageCode`, `locale`, `countries`, and `regions` correctly describe **my** variant
+- [ ] `scopeNote` explains what is in scope and what belongs in a different pack
+- [ ] All **112** logical tokens from `logical-tokens.json` have translations in `keywords`
+- [ ] `keywords.json` and `pack.json` → `keywords` are **identical**
+- [ ] `targets` lists all five: `javascript`, `python`, `typescript`, `go`, `rust`
+- [ ] `npm test` passes locally
+- [ ] One language pack per PR
+- [ ] PR description mentions my country/dialect and any sources I used
+
+---
+
+## What counts as a valid contribution
+
+**Good:**
+
+- Replacing starter translations with natural phrasing a teacher would use
+- Adding alias arrays for regional variants within the same pack scope
+- Fixing wrong `locale` / `countries` / `scopeNote` metadata
+- A complete new pack with correct scope and all 112 tokens
+
+**Not enough on its own:**
+
+- Changing one or two words without checking the full token list
+- Mixing phrases from different countries in one pack (e.g. Nigerian + Ghanaian pidgin)
+- Editing `logical-tokens.json` instead of the language pack
+- Updating only `keywords.json` but forgetting `pack.json` (or vice versa)
+
+---
 
 ## Who can contribute?
 
-We welcome contributions from:
+- **Native speakers** — essential for accuracy
+- **Linguists and educators** — culturally appropriate, teachable phrasing
+- **Developers** — tooling integration and validation fixes
 
-- **Native speakers** — Essential for new language packs and accuracy improvements
-- **Linguists and educators** — Help us ensure translations are culturally appropriate and pedagogically sound
-- **Developers** — Integrate these packs into other tools and platforms
+---
 
 ## Language pack structure
 
-Each language pack lives in its own folder under `packs/<name>/` and contains two key files:
-
 ```
 packs/yoruba/
-├── pack.json       ← Main file with all metadata and keyword mappings
-└── keywords.json   ← Keyword mappings only (for easier tooling integration)
+├── pack.json       ← metadata + keyword mappings
+└── keywords.json   ← same keyword mappings (for tooling)
 ```
 
-**Before you start:** Please read [packs/PACK_SCOPE.md](./packs/PACK_SCOPE.md) first. It explains the difference between language codes and country codes, and helps you choose the right scope when a country has multiple languages.
-
-### Required metadata: Geographic scope
-
-Every language pack must clearly declare which language variant it represents and where it's used. This helps contributors know exactly what belongs in each pack:
+### Required metadata example
 
 ```json
 {
@@ -39,81 +245,66 @@ Every language pack must clearly declare which language variant it represents an
 
 | Field | Example | What it means |
 |-------|---------|---------------|
-| `languageCode` | `pcm` | ISO 639 language code (e.g., Nigerian Pidgin). **Important:** This is the language (`pcm`), not the country (`ng`). |
-| `locale` | `pcm-NG` | BCP-47 locale tag combining language and primary country |
-| `countries` | `["NG"]` | ISO 3166-1 country codes where this language variant is spoken |
-| `regions` | `["West Africa"]` | Geographic grouping for browsing and organization |
-| `scopeNote` | (free text) | Explains what's included in this pack and what belongs in future packs. Example: "Nigerian Pidgin only, not Cameroonian or Ghanaian creoles." |
+| `languageCode` | `pcm` | ISO 639 language code — **not** the country (`ng`) |
+| `locale` | `pcm-NG` | BCP-47 tag: language + primary country |
+| `countries` | `["NG"]` | ISO country codes where this variant applies |
+| `regions` | `["West Africa"]` | Geographic grouping for browsing |
+| `scopeNote` | (free text) | What's in this pack vs future packs |
 
-You can browse packs in `packs/index.json`, filter by country in `packs/by-country.json`, or by region in `packs/by-region.json`.
+Browse packs: [`packs/index.json`](./packs/index.json) · by country: [`packs/by-country.json`](./packs/by-country.json) · by region: [`packs/by-region.json`](./packs/by-region.json)
 
-**Translation quality:** Prefer phrasing you would actually use when teaching code. If you borrowed terms from another project or glossary, say so in the PR. Leave `reviewStatus` as `starter` — maintainers update it after review.
+**Translation quality:** Prefer phrasing you would use when teaching code. Cite borrowed glossaries in the PR. Leave `reviewStatus` as `starter` — maintainers update it after review.
 
-### The token registry: What you need to translate
+### The token registry
 
-**Every pack must translate all logical tokens in `packs/logical-tokens.json`** (currently **112 tokens** across core, standard, advanced, and typescript-types tiers).
+Every pack must translate all logical tokens in [`packs/logical-tokens.json`](./packs/logical-tokens.json) (**112 tokens**).
 
-**Important rules:**
-- Don't create custom token keys — propose new tokens in a separate PR
-- Minimum enforced: `IF`, `FOR`, `FUNCTION`, `RETURN`, `PRINT`
-- New tokens may ship with English placeholders until a native speaker PR replaces them
+**Rules:**
 
-See `packs/target-coverage.json` for how each token maps to JavaScript, Python, TypeScript, Go, and Rust.
+- Do not invent custom token keys — propose new tokens in a separate PR
+- Minimum enforced by validation: `IF`, `FOR`, `FUNCTION`, `RETURN`, `PRINT`
+- English placeholders are OK as a starting point; native-speaker PRs should replace them
 
-### How to provide translations
+See [`packs/target-coverage.json`](./packs/target-coverage.json) for how each token maps to JavaScript, Python, TypeScript, Go, and Rust.
 
-You can provide either a single translation or multiple aliases (for regional variants or different phrasings):
-
-**Single translation:**
-```json
-{
-  "LET": "make we say"
-}
-```
-
-**Multiple aliases (recommended):**
-```json
-{
-  "LET": ["make we say", "make", "let"]
-}
-```
-
-**Best practice:** When providing multiple aliases, include the English fallback as the last option. This helps learners transition between languages.
-
-### Transpilation targets
-
-Every pack must declare all five transpile backends (the transpiler picks the subset it needs per target language):
-
-```json
-"targets": ["javascript", "python", "typescript", "go", "rust"]
-```
+---
 
 ## Review process
 
-Here's what happens after you submit your contribution:
+1. **Submit your PR** — one language pack per PR
+2. **Native speaker review** — accuracy and naturalness
+3. **Automated checks** — CI runs `npm test` (validation + coverage)
+4. **Merge and release** — release-please batches releasable PRs into a Release PR; maintainer merges when ready to publish
 
-1. **Submit your PR** — Please include only one language pack per pull request to make reviews easier
-2. **Native speaker review** — We'll find a native speaker to review your translations for accuracy and naturalness
-3. **Automated validation + coverage** — Our CI runs `npm test` (validation + official keyword coverage) to check technical correctness
-4. **Merge and release** — Once approved, we'll merge your PR and publish a patch release to npm
+Most PRs are reviewed within 1–2 weeks.
 
-**Estimated review time:** Most PRs are reviewed within 1-2 weeks, though this can vary depending on reviewer availability for less common languages.
+### PR titles (for automated changelog)
+
+Use [Conventional Commits](https://www.conventionalcommits.org/) in your **squash merge title** so release-please can write the changelog:
+
+| Prefix | When to use | Example title |
+|--------|-------------|---------------|
+| `fix:` | Translation or metadata fix | `fix(yoruba): add IF dialect alias` |
+| `feat:` | New language pack | `feat: add akan language pack` |
+| `docs:` | Docs only (no npm release) | `docs: clarify locale format in NAMING_GUIDE` |
+| `chore:` | Tooling / CI (no npm release) | `chore: update validation script` |
+
+Details: [`VERSIONING.md`](./VERSIONING.md)
+
+---
 
 ## Code of conduct
 
-We celebrate linguistic diversity and regional variations. Many African languages have multiple dialects and regional variants — and that's a strength, not a problem!
+We celebrate linguistic diversity and regional variation.
 
-**Our approach:**
-- **Embrace multiple variants** — Use alias arrays to include different regional expressions rather than choosing one "correct" form
-- **Be inclusive** — Nigerian Pidgin in Lagos sounds different from Port Harcourt; Yoruba in Nigeria differs from Benin. Include variations when appropriate
-- **Respect all contributors** — Be kind and constructive in reviews. Remember that language is personal and cultural
+- **Use alias arrays** for regional expressions instead of forcing one "correct" form
+- **Be inclusive** — Lagos Pidgin ≠ Port Harcourt Pidgin; include variations when appropriate
+- **Be kind in review** — language is personal and cultural
+
+---
 
 ## Need help?
 
-If you have questions, encounter issues, or need clarification:
-
-- **Open a GitHub issue** in the `kolanutTechnologies/kola-language-packs` repository
-- **Tag your issue** appropriately (`question`, `new-language`, `bug`, etc.)
-- **Be specific** — Include details about which language you're working on and what you need help with
-
-We're here to support you throughout the contribution process!
+- Open a GitHub issue in [`KolanutTechnologies/kola-language-packs`](https://github.com/KolanutTechnologies/kola-language-packs)
+- Tag it: `question`, `new-language`, or `bug`
+- Say which language, country, and dialect you are working on

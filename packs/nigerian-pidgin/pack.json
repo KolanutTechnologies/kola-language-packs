@@ -13,7 +13,7 @@
   "description": "Nigerian Pidgin keyword map — bridge language for Nigerian developers",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -391,6 +391,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "Nigerian Pidgin (Naija) only. Not Cameroon Pidgin, Ghanaian Pidgin, or other West African creoles — those need separate packs.",

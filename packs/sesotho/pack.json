@@ -14,7 +14,7 @@
   "description": "Sesotho keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -359,6 +359,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "Sesotho of Lesotho and South Africa.",

@@ -23,7 +23,7 @@
   "description": "Arabic keyword map for North and East Africa — starter pack",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -398,6 +398,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "Modern Standard Arabic baseline for African contexts. Regional dialects differ — note your country in PRs.",

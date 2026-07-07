@@ -35,7 +35,7 @@
   "description": "French keyword map for Francophone Africa — starter pack",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -410,6 +410,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "International French baseline for Francophone Africa. Vocabulary varies by country — prefer aliases over one national form.",

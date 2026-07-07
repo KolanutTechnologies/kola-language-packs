@@ -13,7 +13,7 @@
   "description": "Zulu keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -388,6 +388,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "isiZulu of South Africa.",

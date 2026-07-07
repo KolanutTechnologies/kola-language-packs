@@ -76,6 +76,14 @@ async function validatePack(name, { allTokens, requiredTokens, supportedTargets 
     if (!(field in pack)) errors.push(`${name}: missing ${field}`);
   }
 
+  for (const field of ['displayName', 'description', 'reviewStatus']) {
+    if (!(field in pack)) errors.push(`${name}: missing ${field} (required for all packs — see packs/NAMING_GUIDE.md)`);
+  }
+
+  if (pack.reviewStatus && !['starter', 'community-reviewed', 'partner-verified'].includes(pack.reviewStatus)) {
+    errors.push(`${name}: reviewStatus must be starter, community-reviewed, or partner-verified`);
+  }
+
   validateLocale(pack.locale, name, errors);
   validateCountries(pack.countries, name, errors);
   validateStringArray(pack.regions, 'regions', errors, name);
@@ -164,6 +172,22 @@ async function main() {
 
   for (const entry of index.packs) {
     validateIndexEntry(entry, loadedPacks.get(entry.name), errors);
+  }
+
+  const names = new Map();
+  const locales = new Map();
+  for (const entry of index.packs) {
+    if (names.has(entry.name)) {
+      errors.push(`duplicate pack name in index.json: ${entry.name}`);
+    }
+    names.set(entry.name, true);
+
+    if (locales.has(entry.locale)) {
+      errors.push(
+        `duplicate locale "${entry.locale}" in index.json: ${locales.get(entry.locale)} and ${entry.name} — each pack needs a unique locale (see packs/language-registry.json)`,
+      );
+    }
+    locales.set(entry.locale, entry.name);
   }
 
   for (const name of dirs) {

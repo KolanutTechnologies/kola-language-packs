@@ -1,7 +1,13 @@
 node_modules/
 dist/
 research/
+review-harness/
 *.tsbuildinfo
 .DS_Store
 .env
 .env.*
+
+# Cursor IDE local state (project skills under .cursor/skills/ are tracked)
+.cursor/*
+!.cursor/skills/
+!.cursor/skills/**

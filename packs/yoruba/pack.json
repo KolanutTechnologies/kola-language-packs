@@ -15,7 +15,7 @@
   "description": "Yoruba keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -390,6 +390,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "Nigeria-focused Yorùbá. Benin and Togo variants welcome as aliases, not separate national forms in one PR.",

@@ -18,7 +18,7 @@
   "description": "Portuguese keyword map for Lusophone Africa — starter pack",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -363,6 +363,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "European Portuguese baseline for Lusophone Africa (Angola, Mozambique, Cape Verde, Guinea-Bissau, São Tomé).",

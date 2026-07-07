@@ -20,7 +20,7 @@
   "description": "Fulfulde keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -365,6 +365,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "Fulfulde / Pulaar / Fulani across West Africa — note regional dialect in PRs.",

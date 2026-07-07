@@ -5,47 +5,174 @@
   "plannedCount": 40,
   "shipped": "See packs/index.json and packs/coverage-summary.json",
   "planned": [
-    { "name": "akan", "languageCode": "ak", "locale": "ak-GH", "regions": ["West Africa"], "priority": "high" },
-    { "name": "efik", "languageCode": "efi", "locale": "efi-NG", "regions": ["West Africa"], "priority": "medium" },
-    { "name": "hausa-niger", "languageCode": "ha", "locale": "ha-NE", "regions": ["West Africa"], "priority": "medium", "note": "Separate pack if Niger Hausa diverges from ha-NG" },
-    { "name": "chichewa", "languageCode": "ny", "locale": "ny-MW", "regions": ["East Africa"], "priority": "medium" },
-    { "name": "malagasy", "languageCode": "mg", "locale": "mg-MG", "regions": ["Indian Ocean"], "priority": "medium" },
-    { "name": "tamazight", "languageCode": "ber", "locale": "ber-MA", "regions": ["North Africa"], "priority": "medium" },
-    { "name": "kirundi", "languageCode": "rn", "locale": "rn-BI", "regions": ["East Africa"], "priority": "low" },
-    { "name": "kikongo", "languageCode": "kg", "locale": "kg-CD", "regions": ["Central Africa"], "priority": "low" },
-    { "name": "umbundu", "languageCode": "umb", "locale": "umb-AO", "regions": ["Southern Africa"], "priority": "low" },
-    { "name": "cameroon-pidgin", "languageCode": "wes", "locale": "wes-CM", "regions": ["Central Africa"], "priority": "high", "note": "Kamtok — not nigerian-pidgin" },
-    { "name": "berber-tifinagh", "languageCode": "tzm", "locale": "tzm-MA", "regions": ["North Africa"], "priority": "low" },
-    { "name": "ndebele", "languageCode": "nr", "locale": "nr-ZA", "regions": ["Southern Africa"], "priority": "low" },
-    { "name": "tsonga", "languageCode": "ts", "locale": "ts-ZA", "regions": ["Southern Africa"], "priority": "low" },
-    { "name": "venda", "languageCode": "ve", "locale": "ve-ZA", "regions": ["Southern Africa"], "priority": "low" },
-    { "name": "sotho-northern", "languageCode": "nso", "locale": "nso-ZA", "regions": ["Southern Africa"], "priority": "low" }
+    {
+      "name": "akan",
+      "languageCode": "ak",
+      "locale": "ak-GH",
+      "regions": [
+        "West Africa"
+      ],
+      "priority": "high"
+    },
+    {
+      "name": "efik",
+      "languageCode": "efi",
+      "locale": "efi-NG",
+      "regions": [
+        "West Africa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "name": "hausa-niger",
+      "languageCode": "ha",
+      "locale": "ha-NE",
+      "regions": [
+        "West Africa"
+      ],
+      "priority": "medium",
+      "note": "Separate pack if Niger Hausa diverges from ha-NG"
+    },
+    {
+      "name": "chichewa",
+      "languageCode": "ny",
+      "locale": "ny-MW",
+      "regions": [
+        "East Africa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "name": "malagasy",
+      "languageCode": "mg",
+      "locale": "mg-MG",
+      "regions": [
+        "Indian Ocean"
+      ],
+      "priority": "medium"
+    },
+    {
+      "name": "tamazight",
+      "languageCode": "ber",
+      "locale": "ber-MA",
+      "regions": [
+        "North Africa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "name": "kirundi",
+      "languageCode": "rn",
+      "locale": "rn-BI",
+      "regions": [
+        "East Africa"
+      ],
+      "priority": "low"
+    },
+    {
+      "name": "kikongo",
+      "languageCode": "kg",
+      "locale": "kg-CD",
+      "regions": [
+        "Central Africa"
+      ],
+      "priority": "low"
+    },
+    {
+      "name": "umbundu",
+      "languageCode": "umb",
+      "locale": "umb-AO",
+      "regions": [
+        "Southern Africa"
+      ],
+      "priority": "low"
+    },
+    {
+      "name": "cameroon-pidgin",
+      "languageCode": "wes",
+      "locale": "wes-CM",
+      "regions": [
+        "Central Africa"
+      ],
+      "priority": "high",
+      "note": "Kamtok — not nigerian-pidgin"
+    },
+    {
+      "name": "berber-tifinagh",
+      "languageCode": "tzm",
+      "locale": "tzm-MA",
+      "regions": [
+        "North Africa"
+      ],
+      "priority": "low"
+    },
+    {
+      "name": "ndebele",
+      "languageCode": "nr",
+      "locale": "nr-ZA",
+      "regions": [
+        "Southern Africa"
+      ],
+      "priority": "low"
+    },
+    {
+      "name": "tsonga",
+      "languageCode": "ts",
+      "locale": "ts-ZA",
+      "regions": [
+        "Southern Africa"
+      ],
+      "priority": "low"
+    },
+    {
+      "name": "venda",
+      "languageCode": "ve",
+      "locale": "ve-ZA",
+      "regions": [
+        "Southern Africa"
+      ],
+      "priority": "low"
+    },
+    {
+      "name": "sotho-northern",
+      "languageCode": "nso",
+      "locale": "nso-ZA",
+      "regions": [
+        "Southern Africa"
+      ],
+      "priority": "low"
+    }
   ],
   "logicalTokenRoadmap": {
-    "shippedVersion": "4.0.0",
-    "shippedCount": 112,
-    "shippedTargets": ["javascript", "python", "typescript", "go", "rust"],
+    "shippedVersion": "4.1.0",
+    "shippedCount": 113,
+    "shippedTargets": [
+      "javascript",
+      "python",
+      "typescript",
+      "go",
+      "rust"
+    ],
     "plannedTokens": [
       {
         "logical": "GEN",
         "tier": "advanced",
         "group": "generics",
-        "targets": { "rust": "gen" },
+        "targets": {
+          "rust": "gen"
+        },
         "release": "v0.2.0",
         "trigger": "Rust 2024 edition reserved keyword",
         "priority": "high",
-        "status": "planned",
-        "workItems": [
-          "Add GEN to logical-tokens.json with rust emit gen",
-          "Add gen to official-target-keywords.json rust list + keywordToLogical",
-          "npm run bootstrap && npm test"
-        ]
+        "status": "shipped"
       },
       {
         "logical": "LAZY",
         "tier": "advanced",
         "group": "evaluation",
-        "targets": { "python": "lazy" },
+        "targets": {
+          "python": "lazy"
+        },
         "release": "v0.2.0",
         "trigger": "Python 3.15+ soft keyword (PEP 810, in progress)",
         "priority": "medium",
@@ -73,17 +200,55 @@
           "Resolve naming collisions (e.g. Go MAP keyword vs map builtin)"
         ],
         "examples": [
-          { "concept": "length", "python": "len", "javascript": "length / Array", "go": "len", "rust": "len" },
-          { "concept": "map/transform", "python": "map", "javascript": "map", "note": "Do not collide with Go MAP logical token" },
-          { "concept": "format I/O", "go": "fmt", "note": "PRINT already covers primary print paths" },
-          { "concept": "array type", "typescript": "Array", "javascript": "Array", "note": "TypeScript blur; optional future tier" }
+          {
+            "concept": "length",
+            "python": "len",
+            "javascript": "length / Array",
+            "go": "len",
+            "rust": "len"
+          },
+          {
+            "concept": "map/transform",
+            "python": "map",
+            "javascript": "map",
+            "note": "Do not collide with Go MAP logical token"
+          },
+          {
+            "concept": "format I/O",
+            "go": "fmt",
+            "note": "PRINT already covers primary print paths"
+          },
+          {
+            "concept": "array type",
+            "typescript": "Array",
+            "javascript": "Array",
+            "note": "TypeScript blur; optional future tier"
+          }
         ]
       }
     ]
   },
   "programmingTargets": {
-    "shipped": ["javascript", "python", "typescript", "go", "rust"],
-    "planned": ["c", "cpp", "kotlin", "swift", "dart", "ruby", "php", "csharp", "java"],
+    "shipped": [
+      "javascript",
+      "python",
+      "typescript",
+      "go",
+      "rust"
+    ],
+    "planned": [
+      "c",
+      "cpp",
+      "kotlin",
+      "swift",
+      "dart",
+      "ruby",
+      "php",
+      "csharp",
+      "java",
+      "r",
+      "clojure"
+    ],
     "plannedDetails": [
       {
         "id": "java",
@@ -97,65 +262,277 @@
           "Extend bootstrap-packs.mjs, validate.mjs, generate-coverage.mjs",
           "Update README coverage table; npm run bootstrap && npm test"
         ],
-        "sampleKeywords": ["abstract", "class", "interface", "extends", "implements", "package", "import", "public", "protected", "private", "static", "final", "void", "int", "boolean", "new", "this", "super", "return", "if", "else", "for", "while", "switch", "case", "try", "catch", "throw", "enum"]
+        "sampleKeywords": [
+          "abstract",
+          "class",
+          "interface",
+          "extends",
+          "implements",
+          "package",
+          "import",
+          "public",
+          "protected",
+          "private",
+          "static",
+          "final",
+          "void",
+          "int",
+          "boolean",
+          "new",
+          "this",
+          "super",
+          "return",
+          "if",
+          "else",
+          "for",
+          "while",
+          "switch",
+          "case",
+          "try",
+          "catch",
+          "throw",
+          "enum"
+        ]
       },
       {
         "id": "c",
         "release": "v0.3.0+",
         "priority": "medium",
         "status": "planned",
-        "workItems": ["Same target-add pipeline as java", "Map C89/C11 reserved words + common extensions"],
-        "sampleKeywords": ["auto", "break", "case", "char", "const", "continue", "default", "do", "double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register", "return", "short", "signed", "sizeof", "static", "struct", "switch", "typedef", "union", "unsigned", "void", "volatile", "while"]
+        "workItems": [
+          "Same target-add pipeline as java",
+          "Map C89/C11 reserved words + common extensions"
+        ],
+        "sampleKeywords": [
+          "auto",
+          "break",
+          "case",
+          "char",
+          "const",
+          "continue",
+          "default",
+          "do",
+          "double",
+          "else",
+          "enum",
+          "extern",
+          "float",
+          "for",
+          "goto",
+          "if",
+          "int",
+          "long",
+          "register",
+          "return",
+          "short",
+          "signed",
+          "sizeof",
+          "static",
+          "struct",
+          "switch",
+          "typedef",
+          "union",
+          "unsigned",
+          "void",
+          "volatile",
+          "while"
+        ]
       },
       {
         "id": "cpp",
         "release": "v0.3.0+",
         "priority": "medium",
         "status": "planned",
-        "workItems": ["Same target-add pipeline as java", "C superset + C++ keywords"],
-        "sampleKeywords": ["class", "namespace", "template", "virtual", "public", "protected", "private", "typename", "constexpr", "noexcept", "concept", "requires"]
+        "workItems": [
+          "Same target-add pipeline as java",
+          "C superset + C++ keywords"
+        ],
+        "sampleKeywords": [
+          "class",
+          "namespace",
+          "template",
+          "virtual",
+          "public",
+          "protected",
+          "private",
+          "typename",
+          "constexpr",
+          "noexcept",
+          "concept",
+          "requires"
+        ]
       },
       {
         "id": "csharp",
         "release": "v0.4.0+",
         "priority": "medium",
         "status": "planned",
-        "sampleKeywords": ["namespace", "class", "struct", "interface", "using", "async", "await", "var", "void", "int", "string", "bool"]
+        "sampleKeywords": [
+          "namespace",
+          "class",
+          "struct",
+          "interface",
+          "using",
+          "async",
+          "await",
+          "var",
+          "void",
+          "int",
+          "string",
+          "bool"
+        ]
       },
       {
         "id": "kotlin",
         "release": "v0.4.0+",
         "priority": "medium",
         "status": "planned",
-        "sampleKeywords": ["fun", "val", "var", "class", "object", "interface", "when", "suspend", "package", "import"]
+        "sampleKeywords": [
+          "fun",
+          "val",
+          "var",
+          "class",
+          "object",
+          "interface",
+          "when",
+          "suspend",
+          "package",
+          "import"
+        ]
       },
       {
         "id": "swift",
         "release": "v0.4.0+",
         "priority": "low",
         "status": "planned",
-        "sampleKeywords": ["func", "var", "let", "class", "struct", "enum", "protocol", "extension", "import", "guard", "defer"]
+        "sampleKeywords": [
+          "func",
+          "var",
+          "let",
+          "class",
+          "struct",
+          "enum",
+          "protocol",
+          "extension",
+          "import",
+          "guard",
+          "defer"
+        ]
       },
       {
         "id": "dart",
         "release": "v0.4.0+",
         "priority": "low",
         "status": "planned",
-        "sampleKeywords": ["class", "extends", "implements", "import", "library", "part", "async", "await", "yield"]
+        "sampleKeywords": [
+          "class",
+          "extends",
+          "implements",
+          "import",
+          "library",
+          "part",
+          "async",
+          "await",
+          "yield"
+        ]
       },
       {
         "id": "ruby",
         "release": "v0.4.0+",
         "priority": "low",
         "status": "planned",
-        "sampleKeywords": ["def", "class", "module", "end", "if", "unless", "while", "until", "for", "do", "yield", "require"]
+        "sampleKeywords": [
+          "def",
+          "class",
+          "module",
+          "end",
+          "if",
+          "unless",
+          "while",
+          "until",
+          "for",
+          "do",
+          "yield",
+          "require"
+        ]
       },
       {
         "id": "php",
         "release": "v0.4.0+",
         "priority": "low",
         "status": "planned",
-        "sampleKeywords": ["function", "class", "interface", "trait", "namespace", "use", "public", "protected", "private", "static", "echo"]
+        "sampleKeywords": [
+          "function",
+          "class",
+          "interface",
+          "trait",
+          "namespace",
+          "use",
+          "public",
+          "protected",
+          "private",
+          "static",
+          "echo"
+        ]
+      },
+      {
+        "id": "r",
+        "release": "v0.5.0+",
+        "priority": "low",
+        "status": "planned",
+        "specSource": "https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Reserved-words",
+        "workItems": [
+          "Same target-add pipeline as java",
+          "Map R reserved words (if, else, function, for, while, repeat, break, next, in, …)"
+        ],
+        "sampleKeywords": [
+          "if",
+          "else",
+          "repeat",
+          "while",
+          "function",
+          "for",
+          "in",
+          "next",
+          "break",
+          "TRUE",
+          "FALSE",
+          "NULL",
+          "Inf",
+          "NaN",
+          "NA"
+        ]
+      },
+      {
+        "id": "clojure",
+        "release": "v0.5.0+",
+        "priority": "low",
+        "status": "planned",
+        "specSource": "https://clojure.org/reference/special_forms",
+        "workItems": [
+          "Same target-add pipeline as java",
+          "Map Clojure special forms and reserved symbols (def, defn, let, if, do, fn, loop, quote, …)"
+        ],
+        "sampleKeywords": [
+          "def",
+          "defn",
+          "let",
+          "if",
+          "do",
+          "fn",
+          "loop",
+          "recur",
+          "quote",
+          "var",
+          "try",
+          "catch",
+          "finally",
+          "throw",
+          "new",
+          "set!",
+          ".",
+          ".."
+        ]
       }
     ],
     "addTargetChecklist": [
@@ -167,9 +544,35 @@
     ]
   },
   "releaseSequence": [
-    { "release": "v0.1.x", "focus": "Ship 112 logical tokens, 5 targets, 25 African packs; npm publish", "status": "current" },
-    { "release": "v0.2.0", "focus": "GEN (Rust 2024), LAZY (Python 3.15 when ready)", "status": "planned" },
-    { "release": "v0.3.0+", "focus": "First new programming target (Java or C — one per release)", "status": "planned" },
-    { "release": "v2.0.0", "focus": "Optional stdlib/builtins tier (design-first)", "status": "planned" }
+    {
+      "release": "v0.1.x",
+      "focus": "Ship 112 logical tokens, 5 targets, 25 African packs; npm publish",
+      "status": "current"
+    },
+    {
+      "release": "v0.2.0",
+      "focus": "GEN (Rust 2024), LAZY (Python 3.15 when ready)",
+      "status": "planned"
+    },
+    {
+      "release": "v0.3.0+",
+      "focus": "First new programming target (Java or C — one per release)",
+      "status": "planned"
+    },
+    {
+      "release": "v0.4.0+",
+      "focus": "C#, Kotlin, Swift, Dart, Ruby, PHP (one per release)",
+      "status": "planned"
+    },
+    {
+      "release": "v0.5.0+",
+      "focus": "R, Clojure (one per release; lower priority)",
+      "status": "planned"
+    },
+    {
+      "release": "v2.0.0",
+      "focus": "Optional stdlib/builtins tier (design-first)",
+      "status": "planned"
+    }
   ]
 }

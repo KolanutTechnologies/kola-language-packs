@@ -1003,7 +1003,7 @@ async function writePack(name, registry) {
     displayName: meta.displayName,
     description: meta.description,
     reviewStatus: 'starter',
-    contributors: ['kolanutTechnologies'],
+    contributors: ['KolanutTechnologies'],
     targets,
     keywords,
   };

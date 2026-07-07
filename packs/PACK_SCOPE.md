@@ -1,28 +1,66 @@
-# Pack scope: language, country, and region
+# Pack scope: language, country, region, and dialect
 
 Each pack is **one language variant for a defined geographic scope** — not “everything spoken in a country.”
 
-Nigeria alone has hundreds of languages. This repo uses **separate packs per language** (Yoruba, Igbo, Hausa, Nigerian Pidgin, …), each with metadata so contributors know exactly what to edit.
+Nigeria alone has hundreds of languages and many dialects per language. This repo uses:
 
-## Three different codes (do not mix them up)
+- **Separate packs per language** (Yoruba, Igbo, Hausa, Nigerian Pidgin, …)
+- **Aliases inside a pack** for dialect differences (Owerri Igbo vs Onitsha Igbo)
+- **Separate packs** only when the variant is a different creole, country standard, or locale (see [`DIALECTS.md`](./DIALECTS.md))
+
+---
+
+## Codes explained (plain English)
+
+Full glossary: [`GLOSSARY.md`](./GLOSSARY.md)
+
+| Term | Field | Example | Plain meaning |
+|------|-------|---------|---------------|
+| **ISO 639** | `languageCode` | `ig` | The language (Igbo) |
+| **ISO 3166-1** | `countries` | `["NG"]` | Countries where this pack applies (Nigeria) |
+| **BCP-47** | `locale` | `ig-NG` | Language + primary country together |
+
+`NG` is **Nigeria the country**, not a language. Never use `ng` as `languageCode`.
+
+---
+
+## Three fields — do not mix them up
 
 | Field | Example | What it means |
 |-------|---------|---------------|
 | `languageCode` | `pcm` | **Language** (ISO 639). Nigerian Pidgin = `pcm`, not `ng`. |
-| `locale` | `pcm-NG` | **Language + primary country** (BCP-47). Use when a creole or dialect is country-specific. |
-| `countries` | `["NG"]` | **Where this pack applies** (ISO 3166-1). Can list multiple countries for cross-border languages. |
-
-`ng` is **Nigeria the country**, not a language code. Putting `ng` in `languageCode` would be invalid for tooling and npm consumers.
+| `locale` | `pcm-NG` | **Language + primary country** (BCP-47). |
+| `countries` | `["NG"]` | **Where this pack applies** (ISO 3166-1). Can list multiple countries. |
 
 ### Nigerian Pidgin vs other pidgins
 
-| Pack | `languageCode` | `locale` | Notes |
-|------|----------------|----------|-------|
-| `nigerian-pidgin` | `pcm` | `pcm-NG` | Naija / Nigerian Pidgin only |
-| *(future)* `cameroon-pidgin` | `wes` | `wes-CM` | Kamtok — separate pack when added |
-| *(future)* Ghanaian Pidgin | TBD | TBD | Separate pack when added |
+| Pack folder `name` | `languageCode` | `locale` | Notes |
+|--------------------|----------------|----------|-------|
+| `nigerian-pidgin` | `pcm` | `pcm-NG` | Naija only |
+| `cameroon-pidgin` *(planned)* | `wes` | `wes-CM` | Kamtok — separate pack |
 
-Do **not** edit `nigerian-pidgin` with Cameroon or Ghana phrases — open a new pack instead.
+- Folder **`name`** = readable slug (`cameroon-pidgin`)
+- **`languageCode`** = ISO code (`wes`) — correct in that field, not as folder name
+
+Do **not** add Cameroon phrases to `nigerian-pidgin`.
+
+---
+
+## Dialects (Igbo, Hausa, Pidgin, …)
+
+**Most dialect contributions → edit the existing pack, add aliases.**
+
+Example for Igbo (`packs/igbo/`):
+
+```json
+"IF": ["ọ bụrụ na", "ọ bụ na", "if"]
+```
+
+**New pack only when** the variant is a different creole, country standard, or locale — not for every Nigerian state.
+
+Full decision tree: [`DIALECTS.md`](./DIALECTS.md)
+
+---
 
 ## Fields on every pack
 
@@ -33,36 +71,48 @@ Do **not** edit `nigerian-pidgin` with Cameroon or Ghana phrases — open a new 
 | `locale` | yes | BCP-47 tag, usually `{lang}-{CC}` |
 | `countries` | yes | ISO country codes where this variant is intended |
 | `regions` | yes | Browse group, e.g. `West Africa` |
-| `scopeNote` | no | Extra guidance for contributors and reviewers |
-| `displayName` | no | Human label in UI and docs |
+| `scopeNote` | strongly recommended | Dialect / country boundaries |
+| `displayName` | yes | Human label in UI and docs |
+| `description` | yes | One-line summary |
+| `reviewStatus` | yes | Use `starter` for new contributions |
 
-See `packs/index.json` for a quick directory of all packs with country and region columns.
+Directory: [`index.json`](./index.json)
 
-## Choosing the right pack to contribute to
+**New pack?** [`NAMING_GUIDE.md`](./NAMING_GUIDE.md) · check [`language-registry.json`](./language-registry.json) → `taken` first.
 
-1. **Find your language** in `packs/index.json` (sort by `countries` or `regions`).
-2. **Read `scopeNote`** in that pack’s `pack.json` — especially for languages spoken in many countries (Swahili, Arabic, French, Hausa).
-3. **One language variant per PR** — do not mix Nigerian and Ghanaian Twi in the same pack.
-4. **New country-specific variant?** Copy an existing pack, set a new `name` and `locale`, and add it to `index.json`.
+---
+
+## Choosing the right pack
+
+1. **Find your language** in [`index.json`](./index.json).
+2. **Read `scopeNote`** in that pack’s `pack.json`.
+3. **Dialect only?** → [`DIALECTS.md`](./DIALECTS.md) — add aliases, same pack.
+4. **Different creole / country variant?** → new pack with new `name` + `locale`.
+5. **One language per PR.**
+
+---
 
 ## Languages spoken in many countries
 
-Some packs intentionally list **multiple** `countries`:
+Some packs list **multiple** `countries` — dialect aliases welcome:
 
-- **Swahili** — `KE`, `TZ`, `UG`, … — Kenya/Tanzania baseline; note dialect differences in PRs.
-- **Hausa** — `NG`, `NE`, `GH`, … — prefer aliases over forcing one national form.
-- **Arabic / French** — lingua franca packs; `scopeNote` explains MSA / international French baseline.
+- **Swahili** — `KE`, `TZ`, `UG`, …
+- **Hausa** — `NG`, `NE`, `GH`, …
+- **Arabic / French** — lingua franca baselines; see `scopeNote`
 
-When in doubt, mention your country and dialect in the PR so a native reviewer from that region can approve.
+When in doubt, mention your country and dialect in the PR.
+
+---
 
 ## Adding a new pack
 
-```bash
-cp -r packs/hausa packs/your-pack-name
-# Edit pack.json: name, languageCode, locale, countries, regions, scopeNote, keywords
-# Edit keywords.json to match
-# Add entry to packs/index.json
-npm run validate
-```
+Step-by-step (Windows + Mac commands, field list, validation): [`NAMING_GUIDE.md`](./NAMING_GUIDE.md)
 
-Or extend `scripts/bootstrap-packs.mjs` and run `npm run bootstrap`.
+Quick summary:
+
+1. Check `language-registry.json` → `taken`
+2. Copy `packs/hausa` → `packs/your-pack-name`
+3. Edit `pack.json`, `keywords.json`, `index.json`
+4. From repo root: `npm test` then `npm run registry`
+
+Do **not** run `npm run bootstrap` unless you are a maintainer.

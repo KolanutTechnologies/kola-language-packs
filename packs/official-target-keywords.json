@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Official reserved keywords per transpile target (from language specs). Each keyword maps to exactly one logical token in logical-tokens.json.",
   "sources": {
     "javascript": {
@@ -37,7 +37,7 @@
       "break", "case", "chan", "const", "continue", "default", "defer", "else", "fallthrough", "for", "func", "go", "goto", "if", "import", "interface", "map", "package", "range", "return", "select", "struct", "switch", "type", "var"
     ],
     "rust": [
-      "_", "as", "async", "await", "break", "const", "continue", "crate", "dyn", "else", "enum", "extern", "false", "fn", "for", "if", "impl", "in", "let", "loop", "match", "mod", "move", "mut", "pub", "ref", "return", "self", "Self", "static", "struct", "super", "trait", "true", "type", "unsafe", "use", "where", "while"
+      "_", "as", "async", "await", "break", "const", "continue", "crate", "dyn", "else", "enum", "extern", "false", "fn", "for", "gen", "if", "impl", "in", "let", "loop", "match", "mod", "move", "mut", "pub", "ref", "return", "self", "Self", "static", "struct", "super", "trait", "true", "type", "unsafe", "use", "where", "while"
     ]
   },
   "keywordToLogical": {
@@ -156,6 +156,7 @@
     "move": "MOVE",
     "ref": "REF",
     "where": "WHERE",
+    "gen": "GEN",
     "true": "TRUE",
     "True": "TRUE",
     "false": "FALSE",
@@ -171,7 +172,7 @@
     "python": "Python 3.12: 35 hard keywords (keyword.kwlist) + 4 soft keywords (keyword.softkwlist: _, case, match, type) = 39 total.",
     "typescript": "The TypeScript Handbook does not publish a single official keyword count. This list tracks 79 reserved/type-modifier/contextual tokens for transpilation coverage (JS superset + TS-only modifiers + type keywords tier).",
     "go": "Go spec §Keywords: exactly 25 keywords.",
-    "rust": "Rust Reference strict keywords: 39 tokens (includes _).",
+    "rust": "Rust Reference strict keywords: 40 tokens (includes _ and gen, Rust 2024 edition).",
     "print": "print is a Python builtin, not a keyword — mapped via PRINT logical token for transpilation.",
     "console.log": "console.log is not a keyword — PRINT logical token emits console.log for JS/TS.",
     "macros": "Rust panic! and assert! are macros — THROW/ASSERT logical tokens emit macro forms."

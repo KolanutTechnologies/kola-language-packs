@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/kolanutTechnologies/kola-language-packs/pack.schema.json",
+  "$id": "https://github.com/KolanutTechnologies/kola-language-packs/pack.schema.json",
   "title": "Kola Language Pack",
   "type": "object",
   "required": ["name", "languageCode", "locale", "countries", "regions", "version", "targets", "keywords"],

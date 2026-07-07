@@ -17,7 +17,7 @@
   "description": "Swahili keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
-    "kolanutTechnologies"
+    "KolanutTechnologies"
   ],
   "targets": [
     "javascript",
@@ -392,6 +392,9 @@
     ],
     "WHERE": [
       "where"
+    ],
+    "GEN": [
+      "gen"
     ]
   },
   "scopeNote": "KiSwahili with Kenya/Tanzania baseline. Note your country or dialect in PRs when proposing changes.",
