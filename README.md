@@ -8,12 +8,11 @@
 [![African language packs](https://img.shields.io/badge/African%20language%20packs-25-gold)](./packs/coverage-summary.json)
 [![Programming targets](https://img.shields.io/badge/Programming%20targets-5-blue)](./packs/coverage-summary.json)
 [![Logical tokens](https://img.shields.io/badge/Logical%20tokens-114-lightgrey)](./packs/logical-tokens.json)
-[![Coverage gaps](https://img.shields.io/badge/Coverage%20gaps-0-brightgreen)](./packs/coverage-summary.json)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <!-- badges:end -->
 
-Language packs for African-language programming: a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **JavaScript, Python, TypeScript, Go, and Rust**. a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **JavaScript, Python, TypeScript, Go, and Rust**.
+Language packs for African-language programming: a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **JavaScript, Python, TypeScript, Go, and Rust**.
 
 If you’re building an editor, a transpiler, a linter, or a learning tool, this repo is the shared “source of truth”.
 

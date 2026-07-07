@@ -21,8 +21,7 @@ function mustNumber(value, name) {
   return value;
 }
 
-function buildBadgesBlock({ shippedPacks, shippedTargets, tokenCount, gapCount }) {
-  const gapColor = gapCount === 0 ? 'brightgreen' : 'red';
+function buildBadgesBlock({ shippedPacks, shippedTargets, tokenCount }) {
   return [
     BADGES_START,
     '',
@@ -30,7 +29,6 @@ function buildBadgesBlock({ shippedPacks, shippedTargets, tokenCount, gapCount }
     `[![African language packs](https://img.shields.io/badge/African%20language%20packs-${shippedPacks}-gold)](./packs/coverage-summary.json)`,
     `[![Programming targets](https://img.shields.io/badge/Programming%20targets-${shippedTargets}-blue)](./packs/coverage-summary.json)`,
     `[![Logical tokens](https://img.shields.io/badge/Logical%20tokens-${tokenCount}-lightgrey)](./packs/logical-tokens.json)`,
-    `[![Coverage gaps](https://img.shields.io/badge/Coverage%20gaps-${gapCount}-${gapColor})](./packs/coverage-summary.json)`,
     '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
     '',
     BADGES_END,
@@ -96,7 +94,6 @@ async function main() {
     shippedPacks,
     shippedTargets,
     tokenCount,
-    gapCount,
   });
 
   let updated = readme;
