@@ -106,9 +106,43 @@ npm publish --access public
 
 ## Release notes (GitHub)
 
-- **File:** [`CHANGELOG.md`](./CHANGELOG.md) — updated automatically by release-please
-- **GitHub:** Releases tab — created on Release PR merge
-- **Contributors:** describe changes in PR body; release-please summarizes from commit titles
+release-please creates a GitHub Release from CHANGELOG on Release PR merge. For the **published format** (stats line + Install), paste this template — or run:
+
+```bash
+node scripts/release-notes-snippet.mjs 0.3.0
+```
+
+### Format (match v0.2.0)
+
+```markdown
+## @kolanut/language-packs v0.3.0
+
+149 logical tokens · 25 African language packs · 7 programming targets · 0 keyword gaps
+
+### Added
+- …
+
+### Changed
+- …
+
+### Fixed
+- …
+
+**Install:** `npm install @kolanut/language-packs@0.3.0`
+```
+
+- **File:** [`CHANGELOG.md`](./CHANGELOG.md) — `[Unreleased]` on feature PRs; release-please dates it on Release PR
+- **Contributors:** conventional commit squash titles; release-please summarizes into CHANGELOG
+
+### release-please must stay aligned
+
+| File | Must match |
+|------|------------|
+| `.release-please-manifest.json` | Last **git tag** (e.g. `v0.2.0` → `"0.2.0"`) |
+| `package.json` `version` | Same as manifest until Release PR merges |
+| `CHANGELOG.md` | `[Unreleased]` only — do not pre-date future versions on `main` |
+
+Manual `bump-version.mjs` ahead of tags causes **Release workflow failures**.
 
 ---
 
