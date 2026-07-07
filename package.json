@@ -5,7 +5,8 @@
   "license": "Apache-2.0",
   "author": "Kolanut Technologies Ltd (https://kolacode.africa)",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "type": "module",
   "main": "./dist/index.js",

@@ -2,35 +2,39 @@
 
 Release notes for `@kolanut/language-packs`. Format based on [Keep a Changelog](https://keepachangelog.com/).
 
-Automated releases via [release-please](https://github.com/googleapis/release-please) on merge of the Release PR.
+Automated releases on push to `main` via [`scripts/direct-release.mjs`](./scripts/direct-release.mjs).
 
 ## [Unreleased]
+
+### Changed
+
+- CI npm publish: Trusted Publisher (OIDC) via `release.yml`; no `NPM_TOKEN` secret required
 
 ## [0.3.0] - 2026-07-07
 
 ### Added
 
-- **Java** programming target — JLS §3.9 keywords (51 reserved words, 0 coverage gaps)
-- 14 Java-only logical tokens (`BYTE`, `CHAR`, `SHORT`, `INT`, `LONG`, `FLOAT`, `DOUBLE`, `FINAL`, `NATIVE`, `STRICTFP`, `SYNCHRONIZED`, `THROWS`, `TRANSIENT`, `VOLATILE`) — **129 tokens** after Java
-- `scripts/add-java-target.mjs` — maintainer script for the Java target migration
-- **C** programming target — C11 §6.4.1 keywords (45 reserved words, 0 coverage gaps)
-- 20 C-only logical tokens (`AUTO`, `REGISTER`, `SIGNED`, `UNSIGNED`, `SIZEOF`, `TYPEDEF`, `UNION`, `INLINE`, `RESTRICT`, `C_BOOL`, `C_COMPLEX`, `C_IMAGINARY`, `C_ALIGNAS`, `C_ALIGNOF`, `C_ATOMIC`, `C_GENERIC`, `C_NORETURN`, `C_STATIC_ASSERT`, `C_THREAD_LOCAL`, `ASM`) — **149 tokens** total
-- `scripts/add-c-target.mjs` — maintainer script for the C target migration
-- `scripts/release-notes-snippet.mjs` — GitHub release notes copy-paste helper
+- **Java** programming target (JLS §3.9 keywords, 51 reserved words, 0 coverage gaps)
+- 14 Java-only logical tokens (`BYTE`, `CHAR`, `SHORT`, `INT`, `LONG`, `FLOAT`, `DOUBLE`, `FINAL`, `NATIVE`, `STRICTFP`, `SYNCHRONIZED`, `THROWS`, `TRANSIENT`, `VOLATILE`). **129 tokens** after Java.
+- `scripts/add-java-target.mjs` maintainer script for the Java target migration
+- **C** programming target (C11 §6.4.1 keywords, 45 reserved words, 0 coverage gaps)
+- 20 C-only logical tokens (`AUTO`, `REGISTER`, …, `ASM`). **149 tokens** total.
+- `scripts/add-c-target.mjs` maintainer script for the C target migration
+- `scripts/release-notes-snippet.mjs` GitHub release notes helper
+- `scripts/direct-release.mjs` direct release on push (no Release PR)
 
 ### Changed
 
 - README: shields.io badges for African language packs, programming targets, logical tokens, and license
-- `VERSIONING.md`: separate npm semver from internal JSON registry versions; release-please alignment; GitHub release notes format
-- Clarified `official-target-keywords.json` spec notes for JavaScript, Python, TypeScript, Go, and Rust (keyword tiers; no list changes, 0 coverage gaps)
+- `VERSIONING.md`: npm semver vs internal JSON versions; direct-release workflow; end-of-build version rule
+- Clarified `official-target-keywords.json` spec notes for JavaScript, Python, TypeScript, Go, and Rust
 - All 25 packs include `java` and `c` in `targets`; new token slots use English fallback until community translation
 
 ### Fixed
 
-- Java: missing reserved keyword `_` — **51** JLS §3.9 reserved keywords (not 50); added `UNDERSCORE` logical token
-- release-please: reset manifest/package to last tag (`v0.2.0`); add `bootstrap-sha`; do not manual-bump ahead of tags
-- release-please: direct release on push (`skip-github-pull-request`); auto `vX.Y.Z` tags; formatted release body; Node 24 in CI
-- CI release: replace release-please with `direct-release.mjs` (no Release PR — fixes GITHUB_TOKEN PR block)
+- Java: missing reserved keyword `_`; added `UNDERSCORE` logical token (**51** JLS keywords)
+- CI release: replace release-please with `direct-release.mjs` (fixes GITHUB_TOKEN PR permission errors)
+
 
 
 ## [0.2.0] - 2026-07-07
@@ -61,7 +65,8 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
-[0.3.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.0
+
 [Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.0
 [0.2.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.2.0
 [0.1.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.1.1

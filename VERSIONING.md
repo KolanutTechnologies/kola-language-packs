@@ -2,7 +2,7 @@
 
 How version numbers work in `@kolanut/language-packs`.
 
-**Before citing any version:** read `package.json` on disk. Do not guess. Internal JSON files have their own `version` fields — see below.
+**Before citing any version:** read `package.json` on disk. Do not guess. Internal JSON files have their own `version` fields. See below.
 
 ---
 
@@ -12,12 +12,32 @@ How version numbers work in `@kolanut/language-packs`.
 |-------|-----------------|---------|
 | `package.json` → `version` | **Read this file** | **npm package** `@kolanut/language-packs` |
 | Each `packs/*/pack.json` → `version` | Synced via `npm run sync-versions` | Same as npm at last sync |
-| `CHANGELOG.md` latest `## [x.y.z]` | Dated section | Last **published** release on npm |
-| `[Unreleased]` in CHANGELOG | Working tree | Not on npm until Release PR merges |
+| `CHANGELOG.md` latest `## [x.y.z]` | Dated section | Last prepared or published release |
+| `[Unreleased]` in CHANGELOG | Empty after direct-release | Fill during work; cleared when version is dated |
 
-**Current npm version:** check `package.json` — do not hard-code in docs.
+**Current npm version:** check `package.json`. Do not hard-code in docs.
 
 When we publish to npm, **all packs get the same `version`** as `package.json`.
+
+---
+
+## End of every releasable build (required)
+
+After `npm test` passes and the build is ready to ship:
+
+```bash
+node scripts/direct-release.mjs
+```
+
+This command:
+
+1. Computes the next semver from commits since the last git tag
+2. Moves `[Unreleased]` into `## [x.y.z] - date`
+3. Updates `package.json`, `.release-please-manifest.json`, and all pack versions
+
+**Do not finish a releasable build with `package.json` still at the last npm release** (e.g. `0.2.0` on npm but Java/C work landed). That causes `npm publish` to fail with "cannot publish over previously published versions".
+
+Preview without writing files: `node scripts/direct-release.mjs --dry-run`
 
 ---
 
@@ -30,97 +50,50 @@ These track registry document generations. They **do not** match npm semver.
 | `packs/logical-tokens.json` | `version` | Logical token registry schema generation |
 | `packs/official-target-keywords.json` | `version` | Official keyword list document generation |
 
-Example: npm `0.3.0` can coexist with `logical-tokens.json` `4.4.0` and `official-target-keywords.json` `1.6.0`. Say which file you mean.
+Example: npm `0.3.0` can coexist with `logical-tokens.json` `4.5.0`. Say which file you mean.
 
 ---
 
-## Two version numbers (packs follow npm)
-
-| Where | Example | What it means |
-|-------|---------|---------------|
-| `package.json` → `version` | *(read file)* | **npm package release** — the whole repo publish |
-| Each `pack.json` → `version` | *(same as package.json after sync)* | Copy of the package version at last release |
-
----
-
-## Can one pack be `0.1.2` while another is `0.1.1`?
-
-**Not today.** Nothing in the tooling tracks per-pack semver separately. A future web app might — for now, one release bumps everything together.
-
-If you improve only Swahili in a PR, the **npm package** still patches (`0.1.1` → `0.1.2`) and all pack `version` fields update to match on release.
-
----
-
-## Semver — what the digits mean (`0.1.1`)
+## Semver
 
 Format: **MAJOR.MINOR.PATCH**
 
-| Part | Value | Meaning here |
-|------|-------|--------------|
-| MAJOR | `0` | Pre-1.0 — API and pack format may still evolve |
-| MINOR | `1` | Feature set generation (e.g. 25 packs, 112 tokens shipped) |
-| PATCH | `1` | Bug fixes, translation improvements, doc fixes — no breaking schema change |
+| Part | Meaning here |
+|------|--------------|
+| MAJOR | Breaking pack schema (future `1.0.0`) |
+| MINOR | New pack, logical token, or programming target |
+| PATCH | Translation fix, validation fix, doc fix |
 
-Examples:
-
-- Translation fixes only → **patch** (`0.1.1` → `0.1.2`)
-- New logical tokens or new programming target → **minor** (`0.1.x` → `0.2.0`)
-- Breaking pack schema change → **major** (`0.x` → `1.0.0`) — future
+Commit prefixes: `feat:` → minor, `fix:` → patch, `feat!:` → major. `docs:` / `chore:` alone do not release.
 
 ---
 
-## Automated releases (direct — no Release PR)
+## Automated releases (CI)
 
-Releases run on **push to `main`** via [`scripts/direct-release.mjs`](./scripts/direct-release.mjs).  
-We do **not** use release-please Release PRs (org policy blocks GITHUB_TOKEN from opening PRs).
+On **push to `main`**, [`.github/workflows/release.yml`](./.github/workflows/release.yml):
 
-### What happens on push
+1. Runs `direct-release.mjs` (or tags an already-prepared version)
+2. Creates **`vX.Y.Z` git tag** + GitHub Release
+3. Runs **npm publish** via **Trusted Publisher (OIDC)** from workflow `release.yml`
 
-1. Script checks conventional commits since the last tag (`v0.2.0`, `v0.3.0`, …)
-2. If `feat:` / `fix:` found: bumps version, dates `CHANGELOG.md`, syncs pack versions
-3. CI commits `chore(release): publish vX.Y.Z`, creates **`vX.Y.Z` git tag** + GitHub Release (v0.2.0 notes format)
-4. **npm publish** runs from the tagged commit
-
-**You never create tags manually.** If a tag is missing, check Actions → **Release**.
-
-### One-time repo setup
+One-time setup:
 
 | Setting | Where | Value |
 |---------|-------|-------|
-| Workflow permissions | Settings → Actions → General | **Read and write permissions** |
-| `NPM_TOKEN` | Settings → Secrets | npm automation token with publish access |
+| **Trusted Publisher** | npm package → Settings → Trusted Publisher | GitHub: `KolanutTechnologies/kola-language-packs`, workflow **`release.yml`**, permission `npm publish` |
+| **Workflow permissions** | GitHub repo → Settings → Actions | **Read and write permissions** |
 
-Preview next release locally: `node scripts/direct-release.mjs --dry-run`  
-Preview release notes: `node scripts/release-notes-snippet.mjs 0.3.0`
+**No `NPM_TOKEN` secret required** when Trusted Publisher is configured. CI uses short-lived OIDC credentials from GitHub Actions.
 
-### Commit / PR title prefixes
+Manual local publish still uses `npm login` / your npm account.
 
-| Prefix | Release bump | Example |
-|--------|--------------|---------|
-| `fix:` | patch | `fix(swahili): correct IF alias` |
-| `feat:` | minor | `feat: add akan language pack` |
-| `feat!:` or `BREAKING CHANGE:` | major | `feat!: rename pack schema field` |
-| `docs:`, `chore:`, `ci:` | no release | `docs: update NAMING_GUIDE` |
-
-### Maintainer setup (one-time)
-
-Add **`NPM_TOKEN`** in GitHub repo secrets (npm automation token with publish access to `@kolanut/language-packs`).
-
-Enable **Read and write permissions** for GitHub Actions (Settings → Actions → General → Workflow permissions).
-
-### Manual fallback
-
-```bash
-npm run sync-versions   # align all pack versions to package.json
-npm test
-npm publish --access public
-```
+You do not create tags manually. If a tag is missing, check Actions → **Release**.
 
 ---
 
 ## Release notes (GitHub)
 
-release-please creates a GitHub Release from CHANGELOG on Release PR merge. For the **published format** (stats line + Install), paste this template — or run:
+CI formats the release body (stats line + Install). Preview locally:
 
 ```bash
 node scripts/release-notes-snippet.mjs 0.3.0
@@ -136,30 +109,23 @@ node scripts/release-notes-snippet.mjs 0.3.0
 ### Added
 - …
 
-### Changed
-- …
-
-### Fixed
-- …
-
 **Install:** `npm install @kolanut/language-packs@0.3.0`
 ```
 
-- **File:** [`CHANGELOG.md`](./CHANGELOG.md) — `[Unreleased]` on feature PRs; release-please dates it on tag
-- **Contributors:** conventional commit squash titles; release-please summarizes into CHANGELOG
+---
 
-### release-please must stay aligned
+## Manual npm publish (fallback)
 
-| File | Must match |
-|------|------------|
-| `.release-please-manifest.json` | Last **git tag** (e.g. `v0.2.0` → `"0.2.0"`) |
-| `package.json` `version` | Same as manifest until Release PR merges |
-| `CHANGELOG.md` | `[Unreleased]` only — do not pre-date future versions on `main` |
+Only if CI failed. **`package.json` must be higher than npm** (e.g. `0.3.0`, not `0.2.0`).
 
-Manual `bump-version.mjs`, manual `git tag`, or release-please Release PRs cause drift. Tags are CI-owned via **direct-release**.
+```bash
+npm test
+npm run build
+npm publish --access public
+```
 
 ---
 
 ## Contributors
 
-You **do not** bump npm version. Set `version` in a **new pack** to match current `package.json`. CI checks pack versions stay in sync (`npm run sync-versions -- --check`).
+In translation PRs, do **not** bump `package.json`. Match `version` in new packs to current `package.json`. Maintainers run `direct-release.mjs` when batching a release.

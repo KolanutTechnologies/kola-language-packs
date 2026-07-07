@@ -402,7 +402,7 @@ This section is only relevant if you’re maintaining the package or editing gen
 <details>
 <summary>Maintainer notes (publishing + regeneration)</summary>
 
-- Publishing: `npm publish --access public` (package is `@kolanut/language-packs`) — Automated releases on push to `main` via `scripts/direct-release.mjs` (creates `vX.Y.Z` tag + GitHub Release + npm publish); requires `NPM_TOKEN` in GitHub secrets
+- Publishing: push to `main` runs [`.github/workflows/release.yml`](./.github/workflows/release.yml) (tag + GitHub Release + npm via **Trusted Publisher OIDC**). Configure on npm: `KolanutTechnologies/kola-language-packs` / `release.yml`. Local fallback: `npm login` then `npm publish --access public`.
 - Sync pack versions after a manual version bump: `npm run sync-versions`
 - Regenerate derived pack files after changing the source definitions:
 

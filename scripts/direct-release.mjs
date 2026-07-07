@@ -1,8 +1,9 @@
 /**
- * Direct release on push to main — no Release PR (works when GITHUB_TOKEN cannot open PRs).
+ * Direct release on push to main (no Release PR).
  *
  * CI: node scripts/direct-release.mjs
  * Local preview: node scripts/direct-release.mjs --dry-run
+ * End of every releasable build: node scripts/direct-release.mjs (updates package.json)
  */
 import { appendFile, readFile, writeFile } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
@@ -71,6 +72,38 @@ function hasReleaseNotes(unreleasedBody) {
   return /### (Added|Changed|Fixed|Removed|Deprecated|Security)\s*\n(?:- |\n)/.test(unreleasedBody);
 }
 
+function compareSemver(a, b) {
+  const pa = a.split('.').map(Number);
+  const pb = b.split('.').map(Number);
+  for (let i = 0; i < 3; i += 1) {
+    if (pa[i] > pb[i]) return 1;
+    if (pa[i] < pb[i]) return -1;
+  }
+  return 0;
+}
+
+function hasChangelogSection(changelog, version) {
+  return new RegExp(`## \\[${version.replace(/\./g, '\\.')}\\]`).test(changelog);
+}
+
+function tagExists(version) {
+  try {
+    runGit(['rev-parse', `v${version}`]);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function writeReleaseBody(version) {
+  const notes = spawnSync(process.execPath, ['scripts/release-notes-snippet.mjs', version], {
+    cwd: root,
+    encoding: 'utf8',
+  });
+  if (notes.status !== 0) process.exit(notes.status ?? 1);
+  await writeFile(join(root, 'release-body.md'), notes.stdout, 'utf8');
+}
+
 function applyChangelogRelease(changelog, version, unreleasedBody, date) {
   const footerMatch = changelog.match(/(\n\[(?:Unreleased|\d+\.\d+\.\d+)\]:[^\n]*\n?[\s\S]*)$/);
   const footer = footerMatch ? footerMatch[1] : '';
@@ -122,6 +155,34 @@ async function main() {
     return;
   }
 
+  const lastTagVersion = lastTag.replace(/^v/, '');
+  const changelogPath = join(root, 'CHANGELOG.md');
+  const changelog = await readFile(changelogPath, 'utf8');
+  const manifestPath = join(root, '.release-please-manifest.json');
+  const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+  const pkgPath = join(root, 'package.json');
+  const pkg = JSON.parse(await readFile(pkgPath, 'utf8'));
+  const pkgVersion = pkg.version;
+
+  // Local build already prepared this version; CI only tags and publishes.
+  if (
+    compareSemver(pkgVersion, lastTagVersion) > 0 &&
+    hasChangelogSection(changelog, pkgVersion) &&
+    !tagExists(pkgVersion)
+  ) {
+    console.log(`Prepared release v${pkgVersion} (package.json ahead of ${lastTag}); ready to tag.`);
+    if (!dryRun) await writeReleaseBody(pkgVersion);
+    await setOutput('released', 'true');
+    await setOutput('version', pkgVersion);
+    return;
+  }
+
+  if (tagExists(pkgVersion) && compareSemver(pkgVersion, lastTagVersion) > 0) {
+    console.log(`Skip: v${pkgVersion} tag already exists.`);
+    await setOutput('released', 'false');
+    return;
+  }
+
   const bump = classifyCommitsSince(lastTag);
   if (!bump) {
     console.log(`Skip: no feat/fix commits since ${lastTag}.`);
@@ -129,12 +190,7 @@ async function main() {
     return;
   }
 
-  const manifest = JSON.parse(await readFile(join(root, '.release-please-manifest.json'), 'utf8'));
-  const current = manifest['.'] ?? JSON.parse(await readFile(join(root, 'package.json'), 'utf8')).version;
-  const next = nextVersion(current, bump);
-
-  const changelogPath = join(root, 'CHANGELOG.md');
-  const changelog = await readFile(changelogPath, 'utf8');
+  const next = nextVersion(lastTagVersion, bump);
   const unreleasedBody = extractUnreleased(changelog);
   if (!hasReleaseNotes(unreleasedBody)) {
     console.log('Skip: [Unreleased] has no changelog bullets.');
@@ -145,21 +201,19 @@ async function main() {
   const date = new Date().toISOString().slice(0, 10);
   const newChangelog = applyChangelogRelease(changelog, next, unreleasedBody, date);
 
-  console.log(`Release ${current} → ${next} (${bump}) since ${lastTag}`);
+  console.log(`Release ${lastTagVersion} → ${next} (${bump}) since ${lastTag}`);
 
   if (dryRun) {
-    console.log('Dry run — no files written.');
+    console.log('Dry run: no files written.');
     await setOutput('released', 'true');
     await setOutput('version', next);
     return;
   }
 
-  const pkgPath = join(root, 'package.json');
-  const pkg = JSON.parse(await readFile(pkgPath, 'utf8'));
   pkg.version = next;
   await writeJson(pkgPath, pkg);
   manifest['.'] = next;
-  await writeJson(join(root, '.release-please-manifest.json'), manifest);
+  await writeJson(manifestPath, manifest);
   await writeFile(changelogPath, newChangelog, 'utf8');
 
   const sync = spawnSync(process.execPath, ['scripts/sync-pack-versions.mjs'], {
@@ -168,16 +222,11 @@ async function main() {
   });
   if (sync.status !== 0) process.exit(sync.status ?? 1);
 
-  const notes = spawnSync(process.execPath, ['scripts/release-notes-snippet.mjs', next], {
-    cwd: root,
-    encoding: 'utf8',
-  });
-  if (notes.status !== 0) process.exit(notes.status ?? 1);
-  await writeFile(join(root, 'release-body.md'), notes.stdout, 'utf8');
+  await writeReleaseBody(next);
 
   await setOutput('released', 'true');
   await setOutput('version', next);
-  console.log(`Prepared v${next} — release-body.md written.`);
+  console.log(`Prepared v${next}; release-body.md written.`);
 }
 
 main().catch((err) => {
