@@ -11,12 +11,30 @@ const TOKENS_PATH = join(root, 'packs', 'logical-tokens.json');
 
 const START = '<!-- metrics:start -->';
 const END = '<!-- metrics:end -->';
+const BADGES_START = '<!-- badges:start -->';
+const BADGES_END = '<!-- badges:end -->';
 
 function mustNumber(value, name) {
   if (typeof value !== 'number' || Number.isNaN(value)) {
     throw new Error(`Expected number for ${name}`);
   }
   return value;
+}
+
+function buildBadgesBlock({ shippedPacks, shippedTargets, tokenCount, gapCount }) {
+  const gapColor = gapCount === 0 ? 'brightgreen' : 'red';
+  return [
+    BADGES_START,
+    '',
+    '[![npm](https://img.shields.io/npm/v/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)',
+    `[![African language packs](https://img.shields.io/badge/African%20language%20packs-${shippedPacks}-gold)](./packs/coverage-summary.json)`,
+    `[![Programming targets](https://img.shields.io/badge/Programming%20targets-${shippedTargets}-blue)](./packs/coverage-summary.json)`,
+    `[![Logical tokens](https://img.shields.io/badge/Logical%20tokens-${tokenCount}-lightgrey)](./packs/logical-tokens.json)`,
+    `[![Coverage gaps](https://img.shields.io/badge/Coverage%20gaps-${gapCount}-${gapColor})](./packs/coverage-summary.json)`,
+    '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+    '',
+    BADGES_END,
+  ].join('\n');
 }
 
 function buildMetricsBlock({ shippedPacks, plannedPacks, shippedTargets, plannedTargets, tokenCount, gapCount }) {
@@ -65,7 +83,7 @@ async function main() {
     0,
   );
 
-  const block = buildMetricsBlock({
+  const metricsBlock = buildMetricsBlock({
     shippedPacks,
     plannedPacks,
     shippedTargets,
@@ -74,20 +92,42 @@ async function main() {
     gapCount,
   });
 
-  const hasMarkers = readme.includes(START) && readme.includes(END);
-  let updated;
+  const badgesBlock = buildBadgesBlock({
+    shippedPacks,
+    shippedTargets,
+    tokenCount,
+    gapCount,
+  });
+
+  let updated = readme;
+
+  if (updated.includes(BADGES_START) && updated.includes(BADGES_END)) {
+    const startIdx = updated.indexOf(BADGES_START);
+    const endIdx = updated.indexOf(BADGES_END);
+    if (startIdx > endIdx) throw new Error('badge markers out of order');
+    updated =
+      updated.slice(0, startIdx).trimEnd() +
+      '\n\n' +
+      badgesBlock +
+      '\n\n' +
+      updated.slice(endIdx + BADGES_END.length).trimStart();
+  } else {
+    throw new Error('Could not find badge markers in README');
+  }
+
+  const hasMarkers = updated.includes(START) && updated.includes(END);
   if (hasMarkers) {
-    const startIdx = readme.indexOf(START);
-    const endIdx = readme.indexOf(END);
+    const startIdx = updated.indexOf(START);
+    const endIdx = updated.indexOf(END);
     if (startIdx > endIdx) throw new Error('metrics markers out of order');
-    updated = readme.slice(0, startIdx).trimEnd() + '\n\n' + block + '\n' + readme.slice(endIdx + END.length).trimStart();
+    updated = updated.slice(0, startIdx).trimEnd() + '\n\n' + metricsBlock + '\n' + updated.slice(endIdx + END.length).trimStart();
   } else {
     // First-time install: insert right after “What’s in this repo” section header block.
     const anchor = 'The data lives under [`packs/`](./packs/). The package published to npm is `@kolanut/language-packs`.';
     const i = readme.indexOf(anchor);
     if (i === -1) throw new Error('Could not find insertion anchor in README');
     const insertAt = i + anchor.length;
-    updated = readme.slice(0, insertAt) + '\n\n' + block + '\n' + readme.slice(insertAt);
+    updated = updated.slice(0, insertAt) + '\n\n' + metricsBlock + '\n' + updated.slice(insertAt);
   }
 
   await writeFile(README_PATH, updated, 'utf8');

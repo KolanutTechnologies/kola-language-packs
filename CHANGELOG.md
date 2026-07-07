@@ -6,6 +6,10 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 
 ## [Unreleased]
 
+### Changed
+
+- README: shields.io badges for African language packs, programming targets, logical tokens, coverage gaps, and license
+
 ## [0.2.0] - 2026-07-07
 
 ### Added

@@ -56,7 +56,7 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 ### `update-readme-metrics.mjs` — via `npm run readme:metrics`
 
-**What it does:** Updates pack count badges in `README.md`.
+**What it does:** Updates the shields.io badge row and “At a glance” metrics table in `README.md`.
 
 **When:** After shipping new packs or changing roadmap counts.
 
