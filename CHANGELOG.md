@@ -6,6 +6,8 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-07-07
+
 ### Added
 
 - **Java** programming target — JLS §3.9 keywords (51 reserved words, 0 coverage gaps)
@@ -29,6 +31,7 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 - release-please: reset manifest/package to last tag (`v0.2.0`); add `bootstrap-sha`; do not manual-bump ahead of tags
 - release-please: direct release on push (`skip-github-pull-request`); auto `vX.Y.Z` tags; formatted release body; Node 24 in CI
 - CI release: replace release-please with `direct-release.mjs` (no Release PR — fixes GITHUB_TOKEN PR block)
+
 
 ## [0.2.0] - 2026-07-07
 
@@ -58,7 +61,7 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
-
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.2.0...HEAD
+[0.3.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.0
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.3.0...HEAD
 [0.2.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.2.0
 [0.1.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.1.1
