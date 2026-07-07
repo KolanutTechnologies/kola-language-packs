@@ -4,6 +4,19 @@ Release notes for `@kolanut/language-packs`. Format based on [Keep a Changelog](
 
 Automated releases via [release-please](https://github.com/googleapis/release-please) on merge of the Release PR.
 
+## [0.2.1](https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.2.0...v0.2.1) (2026-07-07)
+
+
+### Features
+
+* **targets:** add C programming target (v0.4.0) ([da6ad85](https://github.com/KolanutTechnologies/kola-language-packs/commit/da6ad8515882ebbc89980ee71e6646de75d46565))
+
+
+### Bug Fixes
+
+* **ci:** align release-please manifest with v0.2.0 tag ([d86a6ea](https://github.com/KolanutTechnologies/kola-language-packs/commit/d86a6ea56fed1f430f30bb132b0661d08d65689a))
+* **ci:** release on push with auto vX.Y.Z tags ([c09bd97](https://github.com/KolanutTechnologies/kola-language-packs/commit/c09bd977c6c0658f745c8328c873dac30061042a))
+
 ## [Unreleased]
 
 ### Added
