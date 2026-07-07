@@ -38,6 +38,7 @@ const FALLBACK_LABEL = {
   UNIQUE: 'unique',
   SATISFIES: 'satisfies',
   GEN: 'gen',
+  LAZY: 'lazy',
 };
 
 function englishFallback(entry) {

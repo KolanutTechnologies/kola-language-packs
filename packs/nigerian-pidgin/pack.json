@@ -394,6 +394,9 @@
     ],
     "GEN": [
       "gen"
+    ],
+    "LAZY": [
+      "lazy"
     ]
   },
   "scopeNote": "Nigerian Pidgin (Naija) only. Not Cameroon Pidgin, Ghanaian Pidgin, or other West African creoles — those need separate packs.",

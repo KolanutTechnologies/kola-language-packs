@@ -12,7 +12,7 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 - Validation for `displayName`, `description`, `reviewStatus`, duplicate locales
 - Automated releases: GitHub Actions CI, release-please, npm publish workflow
 - `scripts/sync-pack-versions.mjs`, `scripts/bump-version.mjs`, and `scripts/ensure-pack-tokens.mjs`
-- Logical token **GEN** (Rust 2024 `gen` keyword) — 113 tokens total
+- Logical token **GEN** (Rust 2024 `gen` keyword) — 114 tokens total with **LAZY** (Python 3.15 `lazy` soft keyword, PEP 810)
 - Roadmap entries for **R** and **Clojure** programming targets (`v0.5.0+`)
 
 ### Changed

@@ -96,7 +96,7 @@ We use the same code systems as major platforms and localization projects — **
 ## What’s in this repo
 
 - **25 shipped African language packs** (and a roadmap for more)
-- **113 logical tokens** that every pack maps (shared across all programming targets)
+- **114 logical tokens** that every pack maps (shared across all programming targets)
 - **Schemas + validation** to keep packs consistent
 - **Coverage checks** against official keyword lists for each target language
 
@@ -119,7 +119,7 @@ In short:
 |---|---:|---:|---|
 | **African language packs** | 25 | +40 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
 | **Programming targets** | 5 | +11 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
-| **Logical tokens** | 113 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
+| **Logical tokens** | 114 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
 | **Keyword coverage gaps** | 0 | — | [`packs/coverage-summary.json`](./packs/coverage-summary.json) |
 
 <!-- metrics:end -->
@@ -166,7 +166,7 @@ const packs = await listPackNames(); // e.g. 25 packs
 
 const yoruba = await loadPack('yoruba');
 const keywords = flattenKeywords(yoruba);
-// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps 113 logical tokens
+// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps 114 logical tokens
 ```
 
 ## Example: English keywords vs localized phrases (illustrative)
@@ -187,7 +187,7 @@ If you prefer to consume JSON directly (Rust/Go/Python/CLI tools), start here:
 - [`packs/index.json`](./packs/index.json): pack manifest (locale, region, countries, status)
 - [`packs/language-registry.json`](./packs/language-registry.json): taken and planned `name` / `locale` / `languageCode` (check before adding a pack)
 - [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md): how to name packs and write locales
-- [`packs/logical-tokens.json`](./packs/logical-tokens.json): the 113-token registry (the thing packs must fully map)
+- [`packs/logical-tokens.json`](./packs/logical-tokens.json): the 114-token registry (the thing packs must fully map)
 - [`packs/by-country.json`](./packs/by-country.json): `NG` → `["yoruba", "igbo", ...]`
 - [`packs/by-region.json`](./packs/by-region.json): region → pack names
 - [`packs/coverage-summary.json`](./packs/coverage-summary.json): auto-generated coverage report
@@ -251,10 +251,10 @@ We track roadmaps in [`packs/languages-roadmap.json`](./packs/languages-roadmap.
 
 - **Planned African languages** (by region + priority) — 40 more packs on the list
 - **Planned programming targets** — C, C++, Java, C#, Kotlin, Swift, Dart, Ruby, PHP (`v0.3.0+`–`v0.4.0+`); R, Clojure (`v0.5.0+`) — one target per release; sample keywords + checklist in the JSON
-- **Planned logical tokens** — `GEN` (Rust 2024), `LAZY` (Python 3.15 / PEP 810) → target **v0.2.0**
+- **Logical tokens** — **114 shipped** (`GEN`, `LAZY` added in v0.2.0); stdlib tier → **v2.0.0**
 - **Planned token tier** — stdlib / builtins (`len`, `map`, `Array`, `fmt`, …) → target **v2.0.0** (design-first; not required for beginner keyword transpilation)
 
-Suggested release sequence (also in the JSON): **v0.1.x** (current) → **v0.2.0** (GEN/LAZY) → **v0.3.0+** (new targets, one at a time) → **v0.4.0+** / **v0.5.0+** (more targets) → **v2.0.0** (stdlib tier).
+Suggested release sequence (also in the JSON): **v0.1.x** → **v0.2.0** (shipped) → **v0.3.0+** (current — new programming targets, one at a time) → **v0.4.0+** / **v0.5.0+** → **v2.0.0** (stdlib tier).
 
 Regional focus (how we’re sequencing the work):
 
@@ -283,17 +283,17 @@ Contributions are welcome—especially from native speakers and educators.
 |------|-----------|
 | `packs/<language>/pack.json` | **Edit** — metadata (`locale`, `countries`, `regions`, `scopeNote`) + keyword mappings |
 | `packs/<language>/keywords.json` | **Edit** — same keyword mappings (must match `pack.json`) |
-| `packs/logical-tokens.json` | **Read only** — checklist of all 113 concepts; do not edit for translations |
+| `packs/logical-tokens.json` | **Read only** — checklist of all 114 concepts; do not edit for translations |
 | `packs/index.json` | **Edit only when adding a new pack** |
 | [`packs/language-registry.json`](./packs/language-registry.json) | **Check before naming** — shipped + planned identifiers |
 | [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md) | **Read for new packs** — full field list, locale format, template |
 
-A valid contribution is a **complete pack** (correct scope metadata + all 113 tokens translated), not a few word changes in isolation.
+A valid contribution is a **complete pack** (correct scope metadata + all 114 tokens translated), not a few word changes in isolation.
 
 ### Two ways to contribute
 
 1. **Improve an existing pack** — e.g. `packs/zulu/` — fix phrasing, add dialect aliases, clarify `scopeNote`
-2. **Add a new pack** — copy an existing pack, set all metadata (`name`, `languageCode`, `locale`, `displayName`, `description`, …), translate all 113 tokens, add to `packs/index.json`, run `npm run registry`
+2. **Add a new pack** — copy an existing pack, set all metadata (`name`, `languageCode`, `locale`, `displayName`, `description`, …), translate all 114 tokens, add to `packs/index.json`, run `npm run registry`
 
 One language pack per PR. Run `npm test` from the **repo root** before opening the PR.
 
@@ -321,7 +321,7 @@ Docs: [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`packs/REPO_MAP.md`](./packs/RE
 
 1. Pick the right pack (or create a new variant) — see `packs/index.json` and `PACK_SCOPE.md`
 2. Edit `pack.json` metadata and translations; keep `keywords.json` in sync
-3. Map every token listed in `packs/logical-tokens.json` (113 total)
+3. Map every token listed in `packs/logical-tokens.json` (114 total)
 4. Run `npm test`
 5. Open a PR for native-speaker review
 

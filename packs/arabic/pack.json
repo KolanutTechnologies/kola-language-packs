@@ -401,6 +401,9 @@
     ],
     "GEN": [
       "gen"
+    ],
+    "LAZY": [
+      "lazy"
     ]
   },
   "scopeNote": "Modern Standard Arabic baseline for African contexts. Regional dialects differ — note your country in PRs.",

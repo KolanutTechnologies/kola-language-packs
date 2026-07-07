@@ -413,6 +413,9 @@
     ],
     "GEN": [
       "gen"
+    ],
+    "LAZY": [
+      "lazy"
     ]
   },
   "scopeNote": "International French baseline for Francophone Africa. Vocabulary varies by country — prefer aliases over one national form.",

@@ -395,6 +395,9 @@
     ],
     "GEN": [
       "gen"
+    ],
+    "LAZY": [
+      "lazy"
     ]
   },
   "scopeNote": "KiSwahili with Kenya/Tanzania baseline. Note your country or dialect in PRs when proposing changes.",

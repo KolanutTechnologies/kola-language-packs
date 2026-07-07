@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Official reserved keywords per transpile target (from language specs). Each keyword maps to exactly one logical token in logical-tokens.json.",
   "sources": {
     "javascript": {
@@ -28,7 +28,7 @@
       "await", "break", "case", "catch", "class", "const", "continue", "debugger", "default", "delete", "do", "else", "enum", "export", "extends", "false", "finally", "for", "function", "if", "import", "in", "instanceof", "new", "null", "return", "super", "switch", "this", "throw", "true", "try", "typeof", "var", "void", "while", "with", "yield"
     ],
     "python": [
-      "False", "None", "True", "and", "as", "assert", "async", "await", "break", "class", "continue", "def", "del", "elif", "else", "except", "finally", "for", "from", "global", "if", "import", "in", "is", "lambda", "nonlocal", "not", "or", "pass", "raise", "return", "try", "while", "with", "yield", "_", "case", "match", "type"
+      "False", "None", "True", "and", "as", "assert", "async", "await", "break", "class", "continue", "def", "del", "elif", "else", "except", "finally", "for", "from", "global", "if", "import", "in", "is", "lambda", "lazy", "nonlocal", "not", "or", "pass", "raise", "return", "try", "while", "with", "yield", "_", "case", "match", "type"
     ],
     "typescript": [
       "abstract", "any", "as", "asserts", "async", "await", "bigint", "boolean", "break", "case", "catch", "class", "const", "constructor", "continue", "debugger", "declare", "default", "defer", "delete", "do", "else", "enum", "export", "extends", "false", "finally", "for", "from", "function", "get", "global", "if", "implements", "import", "in", "infer", "instanceof", "interface", "is", "keyof", "let", "module", "namespace", "never", "new", "null", "number", "object", "of", "package", "private", "protected", "public", "readonly", "require", "return", "set", "static", "string", "super", "switch", "symbol", "this", "throw", "true", "try", "type", "typeof", "undefined", "unique", "unknown", "using", "var", "void", "while", "with", "yield", "satisfies"
@@ -67,6 +67,7 @@
     "await": "AWAIT",
     "yield": "YIELD",
     "lambda": "LAMBDA",
+    "lazy": "LAZY",
     "defer": "DEFER",
     "go": "GO",
     "try": "TRY",
@@ -169,7 +170,7 @@
   },
   "notes": {
     "javascript": "ECMA-262 §12.7.2 ReservedWord: 38 tokens (includes null, true, false). Excludes strict-mode future reserved words (let, implements, interface, package, private, protected, public, static) and contextual keywords such as async.",
-    "python": "Python 3.12: 35 hard keywords (keyword.kwlist) + 4 soft keywords (keyword.softkwlist: _, case, match, type) = 39 total.",
+    "python": "Python 3.12+: 35 hard keywords + 5 soft keywords (_, case, match, type, lazy). lazy is a soft keyword from Python 3.15 (PEP 810). Total tracked: 40.",
     "typescript": "The TypeScript Handbook does not publish a single official keyword count. This list tracks 79 reserved/type-modifier/contextual tokens for transpilation coverage (JS superset + TS-only modifiers + type keywords tier).",
     "go": "Go spec §Keywords: exactly 25 keywords.",
     "rust": "Rust Reference strict keywords: 40 tokens (includes _ and gen, Rust 2024 edition).",

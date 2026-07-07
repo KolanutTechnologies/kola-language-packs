@@ -1,5 +1,5 @@
 {
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "Canonical logical tokens every language pack must map. targets.* values are emitted keywords; empty string means no direct keyword (transpiler uses another construct). Includes a typescript-types tier for TS-only type keywords.",
   "targets": ["javascript", "python", "typescript", "go", "rust"],
   "required": ["IF", "FOR", "FUNCTION", "RETURN", "PRINT"],
@@ -130,6 +130,7 @@
     { "logical": "MOVE", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "move" } },
     { "logical": "REF", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "ref" } },
     { "logical": "WHERE", "tier": "advanced", "group": "systems", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "where" } },
-    { "logical": "GEN", "tier": "advanced", "group": "generics", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "gen" } }
+    { "logical": "GEN", "tier": "advanced", "group": "generics", "targets": { "javascript": "", "python": "", "typescript": "", "go": "", "rust": "gen" } },
+    { "logical": "LAZY", "tier": "advanced", "group": "evaluation", "targets": { "javascript": "", "python": "lazy", "typescript": "", "go": "", "rust": "" } }
   ]
 }

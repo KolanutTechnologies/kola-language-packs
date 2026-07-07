@@ -144,8 +144,8 @@
     }
   ],
   "logicalTokenRoadmap": {
-    "shippedVersion": "4.1.0",
-    "shippedCount": 113,
+    "shippedVersion": "4.2.0",
+    "shippedCount": 114,
     "shippedTargets": [
       "javascript",
       "python",
@@ -176,13 +176,7 @@
         "release": "v0.2.0",
         "trigger": "Python 3.15+ soft keyword (PEP 810, in progress)",
         "priority": "medium",
-        "status": "planned",
-        "workItems": [
-          "Add LAZY to logical-tokens.json with python emit lazy",
-          "Add lazy to official-target-keywords.json python soft keywords + keywordToLogical",
-          "Only require emit when Kola min Python is 3.15+",
-          "npm run bootstrap && npm test"
-        ]
+        "status": "shipped"
       }
     ],
     "plannedTiers": [
@@ -547,17 +541,17 @@
     {
       "release": "v0.1.x",
       "focus": "Ship 112 logical tokens, 5 targets, 25 African packs; npm publish",
-      "status": "current"
+      "status": "shipped"
     },
     {
       "release": "v0.2.0",
-      "focus": "GEN (Rust 2024), LAZY (Python 3.15 when ready)",
-      "status": "planned"
+      "focus": "GEN (Rust 2024), LAZY (Python 3.15 PEP 810)",
+      "status": "shipped"
     },
     {
       "release": "v0.3.0+",
       "focus": "First new programming target (Java or C — one per release)",
-      "status": "planned"
+      "status": "current"
     },
     {
       "release": "v0.4.0+",

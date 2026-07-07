@@ -394,6 +394,9 @@
     ],
     "GEN": [
       "gen"
+    ],
+    "LAZY": [
+      "lazy"
     ]
   },
   "scopeNote": "Hausa across West and Central Africa. Prefer inclusive alias arrays for Nigeria vs Niger spelling differences.",

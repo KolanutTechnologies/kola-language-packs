@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-07T05:31:05.944Z",
-  "logicalTokenCount": 113,
+  "generatedAt": "2026-07-07T15:00:47.705Z",
+  "logicalTokenCount": 114,
   "africanLanguagePackCount": 25,
   "transpileTargets": [
     "javascript",
@@ -18,8 +18,8 @@
       "gaps": []
     },
     "python": {
-      "officialKeywordCount": 39,
-      "mappedCount": 39,
+      "officialKeywordCount": 40,
+      "mappedCount": 40,
       "structuralCount": 0,
       "gapCount": 0,
       "gaps": []
@@ -419,6 +419,6 @@
   "tierCounts": {
     "core": 30,
     "standard": 33,
-    "advanced": 50
+    "advanced": 51
   }
 }

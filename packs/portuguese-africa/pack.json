@@ -366,6 +366,9 @@
     ],
     "GEN": [
       "gen"
+    ],
+    "LAZY": [
+      "lazy"
     ]
   },
   "scopeNote": "European Portuguese baseline for Lusophone Africa (Angola, Mozambique, Cape Verde, Guinea-Bissau, São Tomé).",
