@@ -17,8 +17,8 @@ Automated releases via [release-please](https://github.com/googleapis/release-pl
 - `scripts/ensure-pack-tokens.mjs` — add new tokens to packs without full bootstrap
 - Roadmap entries for **R** and **Clojure** programming targets (`v0.5.0+`)
 
-### Changed
-- Documentation: Africa-first examples, clearer command guide, standards explanation
+### Fixed
+- Stop tracking `.cursor/` in git — IDE-local only (removed erroneous `!.cursor/skills/` gitignore exceptions)
 - `VERSIONING.md`, `CONTRIBUTING.md`, and `scripts/README.md` updated for automated release flow
 - `languages-roadmap.json` release sequence now includes `v0.4.0+` and `v0.5.0+` target phases
 

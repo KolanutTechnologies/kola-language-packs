@@ -7,7 +7,5 @@ review-harness/
 .env
 .env.*
 
-# Cursor IDE local state (project skills under .cursor/skills/ are tracked)
-.cursor/*
-!.cursor/skills/
-!.cursor/skills/**
+# Cursor IDE — local only (skills, settings, cache)
+.cursor/
