@@ -9,10 +9,8 @@
       "include-component-in-tag": false,
       "extra-files": [
         "packs/languages-roadmap.json",
-        "packs/language-registry.json",
         "packs/by-country.json",
-        "packs/by-region.json",
-        "packs/index.json"
+        "packs/by-region.json"
       ]
     }
   },
