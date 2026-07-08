@@ -6,6 +6,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-07-08
+
 ### Added
 
 - **Product roadmap:** [`packs/ROADMAP.md`](./packs/ROADMAP.md) (version plan 0.12 → 1.0 → 2.0), [`packs/TIERS.md`](./packs/TIERS.md) (scope ceilings), and refreshed [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) (`releaseSequence` with patch/minor/major bumps)
@@ -13,6 +15,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 ### Changed
 
 - Roadmap JSON: removed shipped packs from `planned`, fixed stale token counts, added African expansion waves and Tier-A programming targets
+
 
 ## [0.11.1] - 2026-07-08
 
@@ -161,8 +164,9 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.11.1...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.12.0...HEAD
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1

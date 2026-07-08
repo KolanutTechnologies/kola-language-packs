@@ -1,5 +1,5 @@
 {
-  "version": "0.11.1",
+  "version": "0.12.0",
   "npmVersionBaseline": "0.11.1",
   "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, and IDE gloss tiers. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "howToUse": [
@@ -34,9 +34,21 @@
       "v1Target": 68
     },
     "ideGlossKeysPerPack": {
-      "glossary": { "now": 30, "v1Target": 50, "practicalMax": 100 },
-      "placeholders": { "now": 12, "v1Target": 25, "practicalMax": 50 },
-      "commonLiterals": { "now": 15, "v1Target": 50, "practicalMax": 150 }
+      "glossary": {
+        "now": 30,
+        "v1Target": 50,
+        "practicalMax": 100
+      },
+      "placeholders": {
+        "now": 12,
+        "v1Target": 25,
+        "practicalMax": 50
+      },
+      "commonLiterals": {
+        "now": 15,
+        "v1Target": 50,
+        "practicalMax": 150
+      }
     },
     "stdlibBuiltinsConcepts": {
       "now": 0,
@@ -59,7 +71,9 @@
       "name": "hausa-niger",
       "languageCode": "ha",
       "locale": "ha-NE",
-      "regions": ["West Africa"],
+      "regions": [
+        "West Africa"
+      ],
       "priority": "medium",
       "targetRelease": "0.18.0",
       "note": "Separate pack if Niger Hausa diverges from ha-NG"
@@ -68,7 +82,9 @@
       "name": "chichewa",
       "languageCode": "ny",
       "locale": "ny-MW",
-      "regions": ["East Africa"],
+      "regions": [
+        "East Africa"
+      ],
       "priority": "medium",
       "targetRelease": "0.17.0"
     },
@@ -76,7 +92,9 @@
       "name": "malagasy",
       "languageCode": "mg",
       "locale": "mg-MG",
-      "regions": ["Indian Ocean"],
+      "regions": [
+        "Indian Ocean"
+      ],
       "priority": "medium",
       "targetRelease": "0.17.0"
     },
@@ -84,7 +102,9 @@
       "name": "tamazight",
       "languageCode": "ber",
       "locale": "ber-MA",
-      "regions": ["North Africa"],
+      "regions": [
+        "North Africa"
+      ],
       "priority": "medium",
       "targetRelease": "0.18.0"
     },
@@ -92,7 +112,9 @@
       "name": "kirundi",
       "languageCode": "rn",
       "locale": "rn-BI",
-      "regions": ["East Africa"],
+      "regions": [
+        "East Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.19.0"
     },
@@ -100,7 +122,9 @@
       "name": "kikongo",
       "languageCode": "kg",
       "locale": "kg-CD",
-      "regions": ["Central Africa"],
+      "regions": [
+        "Central Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.19.0"
     },
@@ -108,7 +132,9 @@
       "name": "umbundu",
       "languageCode": "umb",
       "locale": "umb-AO",
-      "regions": ["Southern Africa"],
+      "regions": [
+        "Southern Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.21.0"
     },
@@ -116,7 +142,9 @@
       "name": "berber-tifinagh",
       "languageCode": "tzm",
       "locale": "tzm-MA",
-      "regions": ["North Africa"],
+      "regions": [
+        "North Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.21.0"
     },
@@ -124,7 +152,9 @@
       "name": "ndebele",
       "languageCode": "nr",
       "locale": "nr-ZA",
-      "regions": ["Southern Africa"],
+      "regions": [
+        "Southern Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.20.0"
     },
@@ -132,7 +162,9 @@
       "name": "tsonga",
       "languageCode": "ts",
       "locale": "ts-ZA",
-      "regions": ["Southern Africa"],
+      "regions": [
+        "Southern Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.20.0"
     },
@@ -140,7 +172,9 @@
       "name": "venda",
       "languageCode": "ve",
       "locale": "ve-ZA",
-      "regions": ["Southern Africa"],
+      "regions": [
+        "Southern Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.20.0"
     },
@@ -148,7 +182,9 @@
       "name": "sotho-northern",
       "languageCode": "nso",
       "locale": "nso-ZA",
-      "regions": ["Southern Africa"],
+      "regions": [
+        "Southern Africa"
+      ],
       "priority": "low",
       "targetRelease": "0.20.0"
     }
@@ -161,65 +197,133 @@
         "targetRelease": "0.22.0",
         "region": "West Africa",
         "packsPlanned": 4,
-        "candidates": ["krio", "tiv", "edo", "ijaw"]
+        "candidates": [
+          "krio",
+          "tiv",
+          "edo",
+          "ijaw"
+        ]
       },
       {
         "targetRelease": "0.23.0",
         "region": "West Africa",
         "packsPlanned": 4,
-        "candidates": ["mossi", "dagaare", "soninke", "serer"]
+        "candidates": [
+          "mossi",
+          "dagaare",
+          "soninke",
+          "serer"
+        ]
       },
       {
         "targetRelease": "0.24.0",
         "region": "East Africa",
         "packsPlanned": 4,
-        "candidates": ["sidaama", "gikuyu", "luo", "masai"]
+        "candidates": [
+          "sidaama",
+          "gikuyu",
+          "luo",
+          "masai"
+        ]
       },
       {
         "targetRelease": "0.25.0",
         "region": "Central Africa",
         "packsPlanned": 4,
-        "candidates": ["tshiluba", "luba", "sango", "sara"]
+        "candidates": [
+          "tshiluba",
+          "luba",
+          "sango",
+          "sara"
+        ]
       },
       {
         "targetRelease": "0.26.0",
         "region": "Southern Africa",
         "packsPlanned": 4,
-        "candidates": ["chitonga", "chewa-zambia", "herero", "ovambo"]
+        "candidates": [
+          "chitonga",
+          "chewa-zambia",
+          "herero",
+          "ovambo"
+        ]
       },
       {
         "targetRelease": "0.27.0",
         "region": "North Africa and Horn",
         "packsPlanned": 4,
-        "candidates": ["tigre", "afar", "nubian", "kanuri"]
+        "candidates": [
+          "tigre",
+          "afar",
+          "nubian",
+          "kanuri"
+        ]
       },
       {
         "targetRelease": "0.28.0",
         "region": "Indian Ocean and fill",
         "packsPlanned": 4,
-        "candidates": ["mauritian-creole", "seychelles-creole", "comorian", "tetum"]
+        "candidates": [
+          "mauritian-creole",
+          "seychelles-creole",
+          "comorian",
+          "tetum"
+        ]
       }
     ]
   },
   "ideTierRoadmap": {
     "description": "Optional glossary, placeholders, commonLiterals for Kola Code. Seed keys in ide-tier-seeds.json.",
-    "ideReadyNow": ["yoruba", "hausa", "nigerian-pidgin", "igbo", "swahili", "zulu", "twi", "luganda"],
+    "ideReadyNow": [
+      "yoruba",
+      "hausa",
+      "nigerian-pidgin",
+      "igbo",
+      "swahili",
+      "zulu",
+      "twi",
+      "luganda"
+    ],
     "batches": [
       {
         "targetRelease": "0.13.0",
-        "packs": ["akan", "bambara", "wolof", "fulfulde", "arabic"]
+        "packs": [
+          "akan",
+          "bambara",
+          "wolof",
+          "fulfulde",
+          "arabic"
+        ]
       },
       {
         "targetRelease": "0.14.0",
-        "packs": ["amharic", "oromo", "tigrinya", "kinyarwanda", "somali"]
+        "packs": [
+          "amharic",
+          "oromo",
+          "tigrinya",
+          "kinyarwanda",
+          "somali"
+        ]
       },
       {
         "targetRelease": "0.15.0",
-        "packs": ["afrikaans", "sesotho", "setswana", "shona", "xhosa"]
+        "packs": [
+          "afrikaans",
+          "sesotho",
+          "setswana",
+          "shona",
+          "xhosa"
+        ]
       },
       {
         "targetRelease": "0.16.0",
-        "packs": ["efik", "cameroon-pidgin", "lingala", "french", "portuguese-africa"]
+        "packs": [
+          "efik",
+          "cameroon-pidgin",
+          "lingala",
+          "french",
+          "portuguese-africa"
+        ]
       }
     ],
     "seedKeyCounts": {
@@ -304,7 +408,13 @@
       "php",
       "r"
     ],
-    "planned": ["clojure", "lua", "sql", "scala", "elixir"],
+    "planned": [
+      "clojure",
+      "lua",
+      "sql",
+      "scala",
+      "elixir"
+    ],
     "plannedDetails": [
       {
         "id": "clojure",
@@ -351,7 +461,13 @@
         "estimatedNewTokens": 12
       }
     ],
-    "tierBOptional": ["haskell", "erlang", "julia", "matlab", "fsharp"],
+    "tierBOptional": [
+      "haskell",
+      "erlang",
+      "julia",
+      "matlab",
+      "fsharp"
+    ],
     "addTargetChecklist": [
       "Pick one target from plannedDetails — do not batch multiple targets in one PR",
       "Add spec URL to official-target-keywords.json sources",
@@ -413,21 +529,29 @@
       "release": "0.9.0",
       "bump": "minor",
       "focus": "Swift, Dart, Ruby, PHP, R targets; Akan pack",
-      "metrics": { "targets": 15, "tokens": 370, "packs": 26 },
+      "metrics": {
+        "targets": 15,
+        "tokens": 370,
+        "packs": 26
+      },
       "status": "shipped"
     },
     {
       "release": "0.10.0",
       "bump": "minor",
       "focus": "Cameroon Pidgin, Efik language packs",
-      "metrics": { "packs": 28 },
+      "metrics": {
+        "packs": 28
+      },
       "status": "shipped"
     },
     {
       "release": "0.11.0",
       "bump": "minor",
       "focus": "Zulu, Twi, Luganda IDE gloss tiers",
-      "metrics": { "ideReady": 8 },
+      "metrics": {
+        "ideReady": 8
+      },
       "status": "shipped"
     },
     {
@@ -440,147 +564,191 @@
       "release": "0.12.0",
       "bump": "minor",
       "focus": "Clojure target; ROADMAP.md and TIERS.md scope docs",
-      "metrics": { "targets": 16, "tokens": "~385-400" },
+      "metrics": {
+        "targets": 16,
+        "tokens": "~385-400"
+      },
       "status": "next"
     },
     {
       "release": "0.13.0",
       "bump": "minor",
       "focus": "IDE gloss batch 1 (Akan, Bambara, Wolof, Fulfulde, Arabic)",
-      "metrics": { "ideReady": 13 },
+      "metrics": {
+        "ideReady": 13
+      },
       "status": "planned"
     },
     {
       "release": "0.14.0",
       "bump": "minor",
       "focus": "IDE gloss batch 2 (Amharic, Oromo, Tigrinya, Kinyarwanda, Somali)",
-      "metrics": { "ideReady": 18 },
+      "metrics": {
+        "ideReady": 18
+      },
       "status": "planned"
     },
     {
       "release": "0.15.0",
       "bump": "minor",
       "focus": "IDE gloss batch 3 (Afrikaans, Sesotho, Setswana, Shona, isiXhosa)",
-      "metrics": { "ideReady": 23 },
+      "metrics": {
+        "ideReady": 23
+      },
       "status": "planned"
     },
     {
       "release": "0.16.0",
       "bump": "minor",
       "focus": "IDE gloss batch 4 (Efik, Cameroon Pidgin, Lingala, French, Portuguese-Africa)",
-      "metrics": { "ideReady": 28 },
+      "metrics": {
+        "ideReady": 28
+      },
       "status": "planned"
     },
     {
       "release": "0.17.0",
       "bump": "minor",
       "focus": "Chichewa, Malagasy language packs",
-      "metrics": { "packs": 30 },
+      "metrics": {
+        "packs": 30
+      },
       "status": "planned"
     },
     {
       "release": "0.18.0",
       "bump": "minor",
       "focus": "Tamazight, Hausa Niger variant packs",
-      "metrics": { "packs": 32 },
+      "metrics": {
+        "packs": 32
+      },
       "status": "planned"
     },
     {
       "release": "0.19.0",
       "bump": "minor",
       "focus": "Kirundi, Kikongo language packs",
-      "metrics": { "packs": 34 },
+      "metrics": {
+        "packs": 34
+      },
       "status": "planned"
     },
     {
       "release": "0.20.0",
       "bump": "minor",
       "focus": "Ndebele, Tsonga, Venda, Northern Sotho language packs",
-      "metrics": { "packs": 38 },
+      "metrics": {
+        "packs": 38
+      },
       "status": "planned"
     },
     {
       "release": "0.21.0",
       "bump": "minor",
       "focus": "Umbundu, Berber Tifinagh — named African packs complete",
-      "metrics": { "packs": 40 },
+      "metrics": {
+        "packs": 40
+      },
       "status": "planned"
     },
     {
       "release": "0.22.0",
       "bump": "minor",
       "focus": "African expansion wave 1 — West Africa (4 packs)",
-      "metrics": { "packs": 44 },
+      "metrics": {
+        "packs": 44
+      },
       "status": "planned"
     },
     {
       "release": "0.23.0",
       "bump": "minor",
       "focus": "African expansion wave 2 — West Africa (4 packs)",
-      "metrics": { "packs": 48 },
+      "metrics": {
+        "packs": 48
+      },
       "status": "planned"
     },
     {
       "release": "0.24.0",
       "bump": "minor",
       "focus": "African expansion wave 3 — East Africa (4 packs)",
-      "metrics": { "packs": 52 },
+      "metrics": {
+        "packs": 52
+      },
       "status": "planned"
     },
     {
       "release": "0.25.0",
       "bump": "minor",
       "focus": "African expansion wave 4 — Central Africa (4 packs)",
-      "metrics": { "packs": 56 },
+      "metrics": {
+        "packs": 56
+      },
       "status": "planned"
     },
     {
       "release": "0.26.0",
       "bump": "minor",
       "focus": "African expansion wave 5 — Southern Africa (4 packs)",
-      "metrics": { "packs": 60 },
+      "metrics": {
+        "packs": 60
+      },
       "status": "planned"
     },
     {
       "release": "0.27.0",
       "bump": "minor",
       "focus": "African expansion wave 6 — North Africa and Horn (4 packs)",
-      "metrics": { "packs": 64 },
+      "metrics": {
+        "packs": 64
+      },
       "status": "planned"
     },
     {
       "release": "0.28.0",
       "bump": "minor",
       "focus": "African expansion wave 7 — Indian Ocean and gaps (4 packs)",
-      "metrics": { "packs": 68 },
+      "metrics": {
+        "packs": 68
+      },
       "status": "planned"
     },
     {
       "release": "0.30.0",
       "bump": "minor",
       "focus": "Lua programming target",
-      "metrics": { "targets": 17 },
+      "metrics": {
+        "targets": 17
+      },
       "status": "planned"
     },
     {
       "release": "0.31.0",
       "bump": "minor",
       "focus": "SQL reserved-words programming target",
-      "metrics": { "targets": 18 },
+      "metrics": {
+        "targets": 18
+      },
       "status": "planned"
     },
     {
       "release": "0.32.0",
       "bump": "minor",
       "focus": "Scala programming target",
-      "metrics": { "targets": 19 },
+      "metrics": {
+        "targets": 19
+      },
       "status": "planned"
     },
     {
       "release": "0.33.0",
       "bump": "minor",
       "focus": "Elixir programming target",
-      "metrics": { "targets": 20, "tokens": "~450" },
+      "metrics": {
+        "targets": 20,
+        "tokens": "~450"
+      },
       "status": "planned"
     },
     {
@@ -605,7 +773,11 @@
       "release": "1.0.0",
       "bump": "major",
       "focus": "Stable pack.schema.json and npm API; 68 packs, 20 targets, ~450 tokens, IDE gloss on all packs",
-      "metrics": { "packs": 68, "targets": 20, "tokens": "~450" },
+      "metrics": {
+        "packs": 68,
+        "targets": 20,
+        "tokens": "~450"
+      },
       "status": "planned"
     },
     {
