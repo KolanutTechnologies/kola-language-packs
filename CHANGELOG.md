@@ -6,11 +6,14 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.11.1] - 2026-07-08
+
 ## [0.11.0] - 2026-07-08
 
 ### Added
 
 - **Zulu**, **Twi**, and **Luganda** IDE gloss tiers — **8 IDE-ready** packs (keywords + glossary + placeholders + commonLiterals)
+
 
 ## [0.10.0] - 2026-07-08
 
@@ -146,8 +149,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
-
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.5.0...HEAD
+[0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.11.1...HEAD
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1
