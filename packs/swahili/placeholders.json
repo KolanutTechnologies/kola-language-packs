@@ -1,50 +1,50 @@
 {
   "condition": [
-    "if condition",
+    "hali",
     "condition"
   ],
   "name": [
-    "nem",
+    "jina",
     "name"
   ],
-  "data_value": [
-    "wetin e worth",
-    "data_value"
+  "value": [
+    "thamani",
+    "value"
   ],
   "message": [
-    "write-up",
+    "ujumbe",
     "message"
   ],
   "index": [
-    "position",
+    "faharasa",
     "index"
   ],
   "item": [
-    "thing",
+    "kipengele",
     "item"
   ],
   "body": [
-    "main part",
+    "mwili",
     "body"
   ],
   "expression": [
-    "how you talk am",
+    "usemi",
     "expression"
   ],
   "variable": [
-    "wetin dey change",
+    "kigezo",
     "variable"
   ],
   "array": [
-    "list",
+    "orodha",
     "array"
   ],
   "function": [
-    "work wey e dey do",
+    "kazi",
     "function"
   ],
   "class": [
-    "group type",
+    "darasa",
     "class"
   ]
 }

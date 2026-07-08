@@ -1,0 +1,122 @@
+{
+  "name": [
+    "jina",
+    "name"
+  ],
+  "count": [
+    "hesabu",
+    "count"
+  ],
+  "price": [
+    "bei",
+    "price"
+  ],
+  "user": [
+    "mtumiaji",
+    "user"
+  ],
+  "total": [
+    "jumla",
+    "total"
+  ],
+  "message": [
+    "ujumbe",
+    "message"
+  ],
+  "error": [
+    "kosa",
+    "error"
+  ],
+  "data": [
+    "data",
+    "data"
+  ],
+  "list": [
+    "orodha",
+    "list"
+  ],
+  "index": [
+    "faharasa",
+    "index"
+  ],
+  "data_value": [
+    "thamani",
+    "data_value"
+  ],
+  "item": [
+    "kipengele",
+    "item"
+  ],
+  "num": [
+    "nambari",
+    "num"
+  ],
+  "text": [
+    "maandishi",
+    "text"
+  ],
+  "result": [
+    "matokeo",
+    "result"
+  ],
+  "input": [
+    "pembejeo",
+    "input"
+  ],
+  "output": [
+    "pato",
+    "output"
+  ],
+  "file": [
+    "faili",
+    "file"
+  ],
+  "path": [
+    "njia",
+    "path"
+  ],
+  "length": [
+    "urefu",
+    "length"
+  ],
+  "size": [
+    "ukubwa",
+    "size"
+  ],
+  "key": [
+    "ufunguo",
+    "key"
+  ],
+  "kind": [
+    "aina",
+    "kind"
+  ],
+  "status": [
+    "hali",
+    "status"
+  ],
+  "flag": [
+    "bendera",
+    "flag"
+  ],
+  "id": [
+    "kitambulisho",
+    "id"
+  ],
+  "age": [
+    "umri",
+    "age"
+  ],
+  "score": [
+    "alama",
+    "score"
+  ],
+  "amount": [
+    "kiasi",
+    "amount"
+  ],
+  "password": [
+    "nenosiri",
+    "password"
+  ]
+}

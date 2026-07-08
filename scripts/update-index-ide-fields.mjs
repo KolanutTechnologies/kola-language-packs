@@ -9,7 +9,7 @@ const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const packsRoot = join(root, 'packs');
 const indexPath = join(packsRoot, 'index.json');
 
-const IDE_READY_PACKS = new Set(['yoruba', 'hausa', 'nigerian-pidgin', 'igbo']);
+const IDE_READY_PACKS = new Set(['yoruba', 'hausa', 'nigerian-pidgin', 'igbo', 'swahili']);
 
 async function fileExists(path) {
   try {

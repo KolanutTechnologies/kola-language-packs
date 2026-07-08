@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "Habari",
+    "Hello"
+  ],
+  "Error": [
+    "Kosa",
+    "Error"
+  ],
+  "Success": [
+    "Imefanikiwa",
+    "Success"
+  ],
+  "Welcome": [
+    "Karibu",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "Kwaheri",
+    "Goodbye"
+  ],
+  "Yes": [
+    "Ndiyo",
+    "Yes"
+  ],
+  "No": [
+    "Hapana",
+    "No"
+  ],
+  "Done": [
+    "Imekamilika",
+    "Done"
+  ],
+  "Loading": [
+    "Inapakia",
+    "Loading"
+  ],
+  "Failed": [
+    "Imeshindwa",
+    "Failed"
+  ],
+  "Cancel": [
+    "Ghairi",
+    "Cancel"
+  ],
+  "Submit": [
+    "Wasilisha",
+    "Submit"
+  ],
+  "Search": [
+    "Tafuta",
+    "Search"
+  ],
+  "Warning": [
+    "Onyo",
+    "Warning"
+  ],
+  "Please wait": [
+    "Tafadhali subiri",
+    "Please wait"
+  ]
+}

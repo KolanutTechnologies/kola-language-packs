@@ -6,6 +6,12 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-07-08
+
+### Added
+
+- **Swahili** IDE gloss tiers (glossary, placeholders, commonLiterals) — **5 IDE-ready** packs
+
 ## [0.6.0] - 2026-07-08
 
 ### Added
