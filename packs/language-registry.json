@@ -138,15 +138,6 @@
         "status": "shipped"
       },
       {
-        "locale": "ak-GH",
-        "pack": "akan",
-        "displayName": "Akan",
-        "languageCode": "ak",
-        "countryCode": "GH",
-        "countryName": "Ghana",
-        "status": "planned"
-      },
-      {
         "locale": "am-ET",
         "pack": "amharic",
         "displayName": "Amharic",
@@ -190,15 +181,6 @@
         "countryCode": "NG",
         "countryName": "Nigeria",
         "status": "shipped"
-      },
-      {
-        "locale": "efi-NG",
-        "pack": "efik",
-        "displayName": "Efik",
-        "languageCode": "efi",
-        "countryCode": "NG",
-        "countryName": "Nigeria",
-        "status": "planned"
       },
       {
         "locale": "ff-NG",
@@ -460,15 +442,6 @@
         "countryCode": "CM",
         "countryName": "Cameroon",
         "status": "shipped"
-      },
-      {
-        "locale": "wes-CM",
-        "pack": "cameroon-pidgin",
-        "displayName": "Cameroon Pidgin",
-        "languageCode": "wes",
-        "countryCode": "CM",
-        "countryName": "Cameroon",
-        "status": "planned"
       },
       {
         "locale": "wo-SN",
@@ -1016,30 +989,6 @@
   ],
   "planned": [
     {
-      "name": "akan",
-      "languageCode": "ak",
-      "locale": "ak-GH",
-      "displayName": "Akan",
-      "regions": [
-        "West Africa"
-      ],
-      "priority": "high",
-      "note": null,
-      "status": "planned"
-    },
-    {
-      "name": "efik",
-      "languageCode": "efi",
-      "locale": "efi-NG",
-      "displayName": "Efik",
-      "regions": [
-        "West Africa"
-      ],
-      "priority": "medium",
-      "note": null,
-      "status": "planned"
-    },
-    {
       "name": "hausa-niger",
       "languageCode": "ha",
       "locale": "ha-NE",
@@ -1121,18 +1070,6 @@
       ],
       "priority": "low",
       "note": null,
-      "status": "planned"
-    },
-    {
-      "name": "cameroon-pidgin",
-      "languageCode": "wes",
-      "locale": "wes-CM",
-      "displayName": "Cameroon Pidgin",
-      "regions": [
-        "Central Africa"
-      ],
-      "priority": "high",
-      "note": "Kamtok — not nigerian-pidgin",
       "status": "planned"
     },
     {

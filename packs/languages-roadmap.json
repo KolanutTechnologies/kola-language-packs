@@ -1,151 +1,241 @@
 {
   "version": "0.11.1",
-  "description": "Roadmap for African human-language packs and programming-target / logical-token registry growth. Shipped state: see packs/index.json, logical-tokens.json, official-target-keywords.json.",
+  "npmVersionBaseline": "0.11.1",
+  "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, and IDE gloss tiers. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
+  "howToUse": [
+    "1. Read releaseSequence — find status next for the current sprint.",
+    "2. Match bump field to VERSIONING.md: patch | minor | major.",
+    "3. Shipped counts: packs/coverage-summary.json and packs/index.json.",
+    "4. After adding a planned pack name, run npm run registry from repo root."
+  ],
+  "semverGuide": {
+    "patch": "Translation fix, validation fix, doc-only, roadmap text",
+    "minor": "New African pack, programming target, logical token(s), IDE gloss batch",
+    "major": "1.0.0 stable schema/API; 2.0.0 stdlib/builtins tier"
+  },
+  "scopeCeilings": {
+    "logicalTokensKeywordLayer": {
+      "now": 370,
+      "v1Target": 450,
+      "practicalMax": 650
+    },
+    "programmingTargets": {
+      "now": 15,
+      "v1Target": 20,
+      "practicalMax": 30
+    },
+    "africanLanguagePacks": {
+      "now": 28,
+      "v1Target": 68,
+      "qualityMaxWithoutPartners": 100
+    },
+    "ideReadyPacks": {
+      "now": 8,
+      "v1Target": 68
+    },
+    "ideGlossKeysPerPack": {
+      "glossary": { "now": 30, "v1Target": 50, "practicalMax": 100 },
+      "placeholders": { "now": 12, "v1Target": 25, "practicalMax": 50 },
+      "commonLiterals": { "now": 15, "v1Target": 50, "practicalMax": 150 }
+    },
+    "stdlibBuiltinsConcepts": {
+      "now": 0,
+      "v2StarterTarget": 150,
+      "note": "Not full API surfaces per language"
+    }
+  },
   "shippedCount": 28,
   "plannedCount": 40,
+  "shippedSummary": {
+    "africanPacks": 28,
+    "programmingTargets": 15,
+    "logicalTokens": 370,
+    "ideReadyPacks": 8,
+    "keywordGaps": 0
+  },
   "shipped": "See packs/index.json and packs/coverage-summary.json",
   "planned": [
-    {
-      "name": "akan",
-      "languageCode": "ak",
-      "locale": "ak-GH",
-      "regions": [
-        "West Africa"
-      ],
-      "priority": "high"
-    },
-    {
-      "name": "efik",
-      "languageCode": "efi",
-      "locale": "efi-NG",
-      "regions": [
-        "West Africa"
-      ],
-      "priority": "medium"
-    },
     {
       "name": "hausa-niger",
       "languageCode": "ha",
       "locale": "ha-NE",
-      "regions": [
-        "West Africa"
-      ],
+      "regions": ["West Africa"],
       "priority": "medium",
+      "targetRelease": "0.18.0",
       "note": "Separate pack if Niger Hausa diverges from ha-NG"
     },
     {
       "name": "chichewa",
       "languageCode": "ny",
       "locale": "ny-MW",
-      "regions": [
-        "East Africa"
-      ],
-      "priority": "medium"
+      "regions": ["East Africa"],
+      "priority": "medium",
+      "targetRelease": "0.17.0"
     },
     {
       "name": "malagasy",
       "languageCode": "mg",
       "locale": "mg-MG",
-      "regions": [
-        "Indian Ocean"
-      ],
-      "priority": "medium"
+      "regions": ["Indian Ocean"],
+      "priority": "medium",
+      "targetRelease": "0.17.0"
     },
     {
       "name": "tamazight",
       "languageCode": "ber",
       "locale": "ber-MA",
-      "regions": [
-        "North Africa"
-      ],
-      "priority": "medium"
+      "regions": ["North Africa"],
+      "priority": "medium",
+      "targetRelease": "0.18.0"
     },
     {
       "name": "kirundi",
       "languageCode": "rn",
       "locale": "rn-BI",
-      "regions": [
-        "East Africa"
-      ],
-      "priority": "low"
+      "regions": ["East Africa"],
+      "priority": "low",
+      "targetRelease": "0.19.0"
     },
     {
       "name": "kikongo",
       "languageCode": "kg",
       "locale": "kg-CD",
-      "regions": [
-        "Central Africa"
-      ],
-      "priority": "low"
+      "regions": ["Central Africa"],
+      "priority": "low",
+      "targetRelease": "0.19.0"
     },
     {
       "name": "umbundu",
       "languageCode": "umb",
       "locale": "umb-AO",
-      "regions": [
-        "Southern Africa"
-      ],
-      "priority": "low"
-    },
-    {
-      "name": "cameroon-pidgin",
-      "languageCode": "wes",
-      "locale": "wes-CM",
-      "regions": [
-        "Central Africa"
-      ],
-      "priority": "high",
-      "note": "Kamtok — not nigerian-pidgin"
+      "regions": ["Southern Africa"],
+      "priority": "low",
+      "targetRelease": "0.21.0"
     },
     {
       "name": "berber-tifinagh",
       "languageCode": "tzm",
       "locale": "tzm-MA",
-      "regions": [
-        "North Africa"
-      ],
-      "priority": "low"
+      "regions": ["North Africa"],
+      "priority": "low",
+      "targetRelease": "0.21.0"
     },
     {
       "name": "ndebele",
       "languageCode": "nr",
       "locale": "nr-ZA",
-      "regions": [
-        "Southern Africa"
-      ],
-      "priority": "low"
+      "regions": ["Southern Africa"],
+      "priority": "low",
+      "targetRelease": "0.20.0"
     },
     {
       "name": "tsonga",
       "languageCode": "ts",
       "locale": "ts-ZA",
-      "regions": [
-        "Southern Africa"
-      ],
-      "priority": "low"
+      "regions": ["Southern Africa"],
+      "priority": "low",
+      "targetRelease": "0.20.0"
     },
     {
       "name": "venda",
       "languageCode": "ve",
       "locale": "ve-ZA",
-      "regions": [
-        "Southern Africa"
-      ],
-      "priority": "low"
+      "regions": ["Southern Africa"],
+      "priority": "low",
+      "targetRelease": "0.20.0"
     },
     {
       "name": "sotho-northern",
       "languageCode": "nso",
       "locale": "nso-ZA",
-      "regions": [
-        "Southern Africa"
-      ],
-      "priority": "low"
+      "regions": ["Southern Africa"],
+      "priority": "low",
+      "targetRelease": "0.20.0"
     }
   ],
+  "plannedBacklog": {
+    "description": "28 additional packs (68 total minus 28 shipped minus 12 named above). Four packs per minor release 0.22.0–0.28.0. Names assigned when contributors commit.",
+    "slotsRemaining": 28,
+    "waves": [
+      {
+        "targetRelease": "0.22.0",
+        "region": "West Africa",
+        "packsPlanned": 4,
+        "candidates": ["krio", "tiv", "edo", "ijaw"]
+      },
+      {
+        "targetRelease": "0.23.0",
+        "region": "West Africa",
+        "packsPlanned": 4,
+        "candidates": ["mossi", "dagaare", "soninke", "serer"]
+      },
+      {
+        "targetRelease": "0.24.0",
+        "region": "East Africa",
+        "packsPlanned": 4,
+        "candidates": ["sidaama", "gikuyu", "luo", "masai"]
+      },
+      {
+        "targetRelease": "0.25.0",
+        "region": "Central Africa",
+        "packsPlanned": 4,
+        "candidates": ["tshiluba", "luba", "sango", "sara"]
+      },
+      {
+        "targetRelease": "0.26.0",
+        "region": "Southern Africa",
+        "packsPlanned": 4,
+        "candidates": ["chitonga", "chewa-zambia", "herero", "ovambo"]
+      },
+      {
+        "targetRelease": "0.27.0",
+        "region": "North Africa and Horn",
+        "packsPlanned": 4,
+        "candidates": ["tigre", "afar", "nubian", "kanuri"]
+      },
+      {
+        "targetRelease": "0.28.0",
+        "region": "Indian Ocean and fill",
+        "packsPlanned": 4,
+        "candidates": ["mauritian-creole", "seychelles-creole", "comorian", "tetum"]
+      }
+    ]
+  },
+  "ideTierRoadmap": {
+    "description": "Optional glossary, placeholders, commonLiterals for Kola Code. Seed keys in ide-tier-seeds.json.",
+    "ideReadyNow": ["yoruba", "hausa", "nigerian-pidgin", "igbo", "swahili", "zulu", "twi", "luganda"],
+    "batches": [
+      {
+        "targetRelease": "0.13.0",
+        "packs": ["akan", "bambara", "wolof", "fulfulde", "arabic"]
+      },
+      {
+        "targetRelease": "0.14.0",
+        "packs": ["amharic", "oromo", "tigrinya", "kinyarwanda", "somali"]
+      },
+      {
+        "targetRelease": "0.15.0",
+        "packs": ["afrikaans", "sesotho", "setswana", "shona", "xhosa"]
+      },
+      {
+        "targetRelease": "0.16.0",
+        "packs": ["efik", "cameroon-pidgin", "lingala", "french", "portuguese-africa"]
+      }
+    ],
+    "seedKeyCounts": {
+      "glossary": 30,
+      "placeholders": 12,
+      "commonLiterals": 15
+    },
+    "v1ExpandedKeyCounts": {
+      "glossary": 50,
+      "placeholders": 25,
+      "commonLiterals": 50,
+      "targetRelease": "0.34.0"
+    }
+  },
   "logicalTokenRoadmap": {
-    "shippedVersion": "4.5.0",
-    "shippedCount": 149,
+    "shippedCount": 370,
     "shippedTargets": [
       "javascript",
       "python",
@@ -153,31 +243,27 @@
       "go",
       "rust",
       "java",
-      "c"
+      "c",
+      "cpp",
+      "csharp",
+      "kotlin",
+      "swift",
+      "dart",
+      "ruby",
+      "php",
+      "r"
     ],
     "plannedTokens": [
       {
         "logical": "GEN",
         "tier": "advanced",
-        "group": "generics",
-        "targets": {
-          "rust": "gen"
-        },
-        "release": "v0.2.0",
-        "trigger": "Rust 2024 edition reserved keyword",
-        "priority": "high",
+        "release": "0.2.0",
         "status": "shipped"
       },
       {
         "logical": "LAZY",
         "tier": "advanced",
-        "group": "evaluation",
-        "targets": {
-          "python": "lazy"
-        },
-        "release": "v0.2.0",
-        "trigger": "Python 3.15+ soft keyword (PEP 810, in progress)",
-        "priority": "medium",
+        "release": "0.2.0",
         "status": "shipped"
       }
     ],
@@ -185,41 +271,17 @@
       {
         "id": "stdlib-builtins",
         "name": "Stdlib / builtins",
-        "release": "v2.0.0",
+        "release": "2.0.0",
+        "bump": "major",
         "priority": "low",
         "status": "planned",
-        "rationale": "Not reserved words; huge surface. Beginner African packs should not need to translate type names or stdlib for control-flow-only transpilation.",
-        "scopeNote": "Add only when Kola transpiles translated API calls at scale. PRINT (print / console.log / fmt.Println) is the existing pattern.",
+        "starterConceptCount": 150,
+        "rationale": "Not reserved words. Beginner African packs should not need stdlib for control-flow-only transpilation.",
+        "scopeNote": "Add only when Kola transpiles translated API calls at scale. PRINT is the existing pattern.",
         "designFirst": [
           "New tier or group in logical-tokens.json (e.g. stdlib, not core)",
           "Separate coverage rules — not part of official keyword gap checks",
           "Resolve naming collisions (e.g. Go MAP keyword vs map builtin)"
-        ],
-        "examples": [
-          {
-            "concept": "length",
-            "python": "len",
-            "javascript": "length / Array",
-            "go": "len",
-            "rust": "len"
-          },
-          {
-            "concept": "map/transform",
-            "python": "map",
-            "javascript": "map",
-            "note": "Do not collide with Go MAP logical token"
-          },
-          {
-            "concept": "format I/O",
-            "go": "fmt",
-            "note": "PRINT already covers primary print paths"
-          },
-          {
-            "concept": "array type",
-            "typescript": "Array",
-            "javascript": "Array",
-            "note": "TypeScript blur; optional future tier"
-          }
         ]
       }
     ]
@@ -242,346 +304,314 @@
       "php",
       "r"
     ],
-    "planned": [
-      "clojure"
-    ],
+    "planned": ["clojure", "lua", "sql", "scala", "elixir"],
     "plannedDetails": [
       {
-        "id": "java",
-        "release": "v0.3.0",
-        "priority": "high",
-        "status": "shipped",
-        "specSource": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html#jls-3.9",
-        "workItems": [
-          "Add targets.java column to logical-tokens.json + pack schema",
-          "Add official-target-keywords.json java section from JLS §3.9",
-          "Extend bootstrap-packs.mjs, validate.mjs, generate-coverage.mjs",
-          "Update README coverage table; npm run bootstrap && npm test"
-        ],
-        "sampleKeywords": [
-          "abstract",
-          "class",
-          "interface",
-          "extends",
-          "implements",
-          "package",
-          "import",
-          "public",
-          "protected",
-          "private",
-          "static",
-          "final",
-          "void",
-          "int",
-          "boolean",
-          "new",
-          "this",
-          "super",
-          "return",
-          "if",
-          "else",
-          "for",
-          "while",
-          "switch",
-          "case",
-          "try",
-          "catch",
-          "throw",
-          "enum"
-        ]
-      },
-      {
-        "id": "c",
-        "release": "v0.4.0",
-        "priority": "medium",
-        "status": "shipped",
-        "specSource": "https://en.cppreference.com/w/c/keyword",
-        "workItems": [
-          "Same target-add pipeline as java",
-          "Map C89/C11 reserved words + common extensions"
-        ],
-        "sampleKeywords": [
-          "auto",
-          "break",
-          "case",
-          "char",
-          "const",
-          "continue",
-          "default",
-          "do",
-          "double",
-          "else",
-          "enum",
-          "extern",
-          "float",
-          "for",
-          "goto",
-          "if",
-          "int",
-          "long",
-          "register",
-          "return",
-          "short",
-          "signed",
-          "sizeof",
-          "static",
-          "struct",
-          "switch",
-          "typedef",
-          "union",
-          "unsigned",
-          "void",
-          "volatile",
-          "while"
-        ]
-      },
-      {
-        "id": "cpp",
-        "release": "v0.5.0",
-        "priority": "medium",
-        "status": "shipped",
-        "specSource": "https://en.cppreference.com/w/cpp/keyword",
-        "workItems": [
-          "Same target-add pipeline as java",
-          "C superset + C++ keywords"
-        ],
-        "sampleKeywords": [
-          "class",
-          "namespace",
-          "template",
-          "virtual",
-          "public",
-          "protected",
-          "private",
-          "typename",
-          "constexpr",
-          "noexcept",
-          "concept",
-          "requires"
-        ]
-      },
-      {
-        "id": "csharp",
-        "release": "v0.6.0",
-        "priority": "medium",
-        "status": "shipped",
-        "specSource": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/",
-        "sampleKeywords": [
-          "namespace",
-          "class",
-          "struct",
-          "interface",
-          "using",
-          "async",
-          "await",
-          "var",
-          "void",
-          "int",
-          "string",
-          "bool"
-        ]
-      },
-      {
-        "id": "kotlin",
-        "release": "v0.8.0",
-        "priority": "medium",
-        "status": "shipped",
-        "specSource": "https://kotlinlang.org/docs/keyword-reference.html",
-        "sampleKeywords": [
-          "fun",
-          "val",
-          "var",
-          "class",
-          "object",
-          "interface",
-          "when",
-          "suspend",
-          "package",
-          "import"
-        ]
-      },
-      {
-        "id": "swift",
-        "release": "v0.4.0+",
-        "priority": "low",
-        "status": "planned",
-        "sampleKeywords": [
-          "func",
-          "var",
-          "let",
-          "class",
-          "struct",
-          "enum",
-          "protocol",
-          "extension",
-          "import",
-          "guard",
-          "defer"
-        ]
-      },
-      {
-        "id": "dart",
-        "release": "v0.4.0+",
-        "priority": "low",
-        "status": "planned",
-        "sampleKeywords": [
-          "class",
-          "extends",
-          "implements",
-          "import",
-          "library",
-          "part",
-          "async",
-          "await",
-          "yield"
-        ]
-      },
-      {
-        "id": "ruby",
-        "release": "v0.4.0+",
-        "priority": "low",
-        "status": "planned",
-        "sampleKeywords": [
-          "def",
-          "class",
-          "module",
-          "end",
-          "if",
-          "unless",
-          "while",
-          "until",
-          "for",
-          "do",
-          "yield",
-          "require"
-        ]
-      },
-      {
-        "id": "php",
-        "release": "v0.4.0+",
-        "priority": "low",
-        "status": "planned",
-        "sampleKeywords": [
-          "function",
-          "class",
-          "interface",
-          "trait",
-          "namespace",
-          "use",
-          "public",
-          "protected",
-          "private",
-          "static",
-          "echo"
-        ]
-      },
-      {
-        "id": "r",
-        "release": "v0.5.0+",
-        "priority": "low",
-        "status": "planned",
-        "specSource": "https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Reserved-words",
-        "workItems": [
-          "Same target-add pipeline as java",
-          "Map R reserved words (if, else, function, for, while, repeat, break, next, in, …)"
-        ],
-        "sampleKeywords": [
-          "if",
-          "else",
-          "repeat",
-          "while",
-          "function",
-          "for",
-          "in",
-          "next",
-          "break",
-          "TRUE",
-          "FALSE",
-          "NULL",
-          "Inf",
-          "NaN",
-          "NA"
-        ]
-      },
-      {
         "id": "clojure",
-        "release": "v0.5.0+",
-        "priority": "low",
-        "status": "planned",
+        "release": "0.12.0",
+        "bump": "minor",
+        "priority": "high",
+        "status": "next",
         "specSource": "https://clojure.org/reference/special_forms",
-        "workItems": [
-          "Same target-add pipeline as java",
-          "Map Clojure special forms and reserved symbols (def, defn, let, if, do, fn, loop, quote, …)"
-        ],
-        "sampleKeywords": [
-          "def",
-          "defn",
-          "let",
-          "if",
-          "do",
-          "fn",
-          "loop",
-          "recur",
-          "quote",
-          "var",
-          "try",
-          "catch",
-          "finally",
-          "throw",
-          "new",
-          "set!",
-          ".",
-          ".."
-        ]
+        "estimatedNewTokens": 15
+      },
+      {
+        "id": "lua",
+        "release": "0.30.0",
+        "bump": "minor",
+        "priority": "medium",
+        "status": "planned",
+        "specSource": "https://www.lua.org/manual/5.4/manual.html#3.1",
+        "estimatedNewTokens": 10
+      },
+      {
+        "id": "sql",
+        "release": "0.31.0",
+        "bump": "minor",
+        "priority": "medium",
+        "status": "planned",
+        "note": "Reserved words subset for teaching SQL, not full grammar",
+        "estimatedNewTokens": 35
+      },
+      {
+        "id": "scala",
+        "release": "0.32.0",
+        "bump": "minor",
+        "priority": "medium",
+        "status": "planned",
+        "specSource": "https://scala-lang.org/api/3.x/docs/reference/syntax.html",
+        "estimatedNewTokens": 15
+      },
+      {
+        "id": "elixir",
+        "release": "0.33.0",
+        "bump": "minor",
+        "priority": "medium",
+        "status": "planned",
+        "estimatedNewTokens": 12
       }
     ],
+    "tierBOptional": ["haskell", "erlang", "julia", "matlab", "fsharp"],
     "addTargetChecklist": [
       "Pick one target from plannedDetails — do not batch multiple targets in one PR",
       "Add spec URL to official-target-keywords.json sources",
       "Add targets.{id} emits to every logical token (empty string where no keyword)",
-      "Run npm run bootstrap to refresh all 25+ packs",
-      "Run npm test and npm run readme:metrics"
+      "Run npm run bootstrap to refresh all packs",
+      "Run npm test and npm run readme:sync"
     ]
   },
   "releaseSequence": [
     {
-      "release": "v0.1.x",
-      "focus": "Ship 112 logical tokens, 5 targets, 25 African packs; npm publish",
+      "release": "0.1.x",
+      "bump": "minor",
+      "focus": "25 African packs, 5 targets, contributor infra",
       "status": "shipped"
     },
     {
-      "release": "v0.2.0",
-      "focus": "GEN (Rust 2024), LAZY (Python 3.15 PEP 810)",
+      "release": "0.2.0",
+      "bump": "minor",
+      "focus": "GEN, LAZY logical tokens",
       "status": "shipped"
     },
     {
-      "release": "v0.3.0",
-      "focus": "Java programming target (JLS §3.9 keywords)",
+      "release": "0.3.0",
+      "bump": "minor",
+      "focus": "Java programming target",
       "status": "shipped"
     },
     {
-      "release": "v0.4.0",
-      "focus": "IDE gloss tiers (glossary, placeholders, commonLiterals) for Kola Code",
+      "release": "0.4.0",
+      "bump": "minor",
+      "focus": "IDE gloss tiers for Yoruba, Hausa, Nigerian Pidgin",
       "status": "shipped"
     },
     {
-      "release": "v0.5.0",
-      "focus": "C++ programming target + Igbo IDE-ready tiers",
-      "status": "current"
+      "release": "0.5.0",
+      "bump": "minor",
+      "focus": "C++ target, Igbo IDE-ready",
+      "status": "shipped"
     },
     {
-      "release": "v0.5.0+",
-      "focus": "C#, Kotlin, Swift, Dart, Ruby, PHP (one per release)",
+      "release": "0.6.0",
+      "bump": "minor",
+      "focus": "C# programming target",
+      "status": "shipped"
+    },
+    {
+      "release": "0.7.0",
+      "bump": "minor",
+      "focus": "Swahili IDE gloss tiers",
+      "status": "shipped"
+    },
+    {
+      "release": "0.8.0",
+      "bump": "minor",
+      "focus": "Kotlin programming target",
+      "status": "shipped"
+    },
+    {
+      "release": "0.9.0",
+      "bump": "minor",
+      "focus": "Swift, Dart, Ruby, PHP, R targets; Akan pack",
+      "metrics": { "targets": 15, "tokens": 370, "packs": 26 },
+      "status": "shipped"
+    },
+    {
+      "release": "0.10.0",
+      "bump": "minor",
+      "focus": "Cameroon Pidgin, Efik language packs",
+      "metrics": { "packs": 28 },
+      "status": "shipped"
+    },
+    {
+      "release": "0.11.0",
+      "bump": "minor",
+      "focus": "Zulu, Twi, Luganda IDE gloss tiers",
+      "metrics": { "ideReady": 8 },
+      "status": "shipped"
+    },
+    {
+      "release": "0.11.1",
+      "bump": "patch",
+      "focus": "README metrics generator sync, contributor docs",
+      "status": "shipped"
+    },
+    {
+      "release": "0.12.0",
+      "bump": "minor",
+      "focus": "Clojure target; ROADMAP.md and TIERS.md scope docs",
+      "metrics": { "targets": 16, "tokens": "~385-400" },
+      "status": "next"
+    },
+    {
+      "release": "0.13.0",
+      "bump": "minor",
+      "focus": "IDE gloss batch 1 (Akan, Bambara, Wolof, Fulfulde, Arabic)",
+      "metrics": { "ideReady": 13 },
       "status": "planned"
     },
     {
-      "release": "v0.5.0+",
-      "focus": "R, Clojure (one per release; lower priority)",
+      "release": "0.14.0",
+      "bump": "minor",
+      "focus": "IDE gloss batch 2 (Amharic, Oromo, Tigrinya, Kinyarwanda, Somali)",
+      "metrics": { "ideReady": 18 },
       "status": "planned"
     },
     {
-      "release": "v2.0.0",
-      "focus": "Optional stdlib/builtins tier (design-first)",
+      "release": "0.15.0",
+      "bump": "minor",
+      "focus": "IDE gloss batch 3 (Afrikaans, Sesotho, Setswana, Shona, isiXhosa)",
+      "metrics": { "ideReady": 23 },
+      "status": "planned"
+    },
+    {
+      "release": "0.16.0",
+      "bump": "minor",
+      "focus": "IDE gloss batch 4 (Efik, Cameroon Pidgin, Lingala, French, Portuguese-Africa)",
+      "metrics": { "ideReady": 28 },
+      "status": "planned"
+    },
+    {
+      "release": "0.17.0",
+      "bump": "minor",
+      "focus": "Chichewa, Malagasy language packs",
+      "metrics": { "packs": 30 },
+      "status": "planned"
+    },
+    {
+      "release": "0.18.0",
+      "bump": "minor",
+      "focus": "Tamazight, Hausa Niger variant packs",
+      "metrics": { "packs": 32 },
+      "status": "planned"
+    },
+    {
+      "release": "0.19.0",
+      "bump": "minor",
+      "focus": "Kirundi, Kikongo language packs",
+      "metrics": { "packs": 34 },
+      "status": "planned"
+    },
+    {
+      "release": "0.20.0",
+      "bump": "minor",
+      "focus": "Ndebele, Tsonga, Venda, Northern Sotho language packs",
+      "metrics": { "packs": 38 },
+      "status": "planned"
+    },
+    {
+      "release": "0.21.0",
+      "bump": "minor",
+      "focus": "Umbundu, Berber Tifinagh — named African packs complete",
+      "metrics": { "packs": 40 },
+      "status": "planned"
+    },
+    {
+      "release": "0.22.0",
+      "bump": "minor",
+      "focus": "African expansion wave 1 — West Africa (4 packs)",
+      "metrics": { "packs": 44 },
+      "status": "planned"
+    },
+    {
+      "release": "0.23.0",
+      "bump": "minor",
+      "focus": "African expansion wave 2 — West Africa (4 packs)",
+      "metrics": { "packs": 48 },
+      "status": "planned"
+    },
+    {
+      "release": "0.24.0",
+      "bump": "minor",
+      "focus": "African expansion wave 3 — East Africa (4 packs)",
+      "metrics": { "packs": 52 },
+      "status": "planned"
+    },
+    {
+      "release": "0.25.0",
+      "bump": "minor",
+      "focus": "African expansion wave 4 — Central Africa (4 packs)",
+      "metrics": { "packs": 56 },
+      "status": "planned"
+    },
+    {
+      "release": "0.26.0",
+      "bump": "minor",
+      "focus": "African expansion wave 5 — Southern Africa (4 packs)",
+      "metrics": { "packs": 60 },
+      "status": "planned"
+    },
+    {
+      "release": "0.27.0",
+      "bump": "minor",
+      "focus": "African expansion wave 6 — North Africa and Horn (4 packs)",
+      "metrics": { "packs": 64 },
+      "status": "planned"
+    },
+    {
+      "release": "0.28.0",
+      "bump": "minor",
+      "focus": "African expansion wave 7 — Indian Ocean and gaps (4 packs)",
+      "metrics": { "packs": 68 },
+      "status": "planned"
+    },
+    {
+      "release": "0.30.0",
+      "bump": "minor",
+      "focus": "Lua programming target",
+      "metrics": { "targets": 17 },
+      "status": "planned"
+    },
+    {
+      "release": "0.31.0",
+      "bump": "minor",
+      "focus": "SQL reserved-words programming target",
+      "metrics": { "targets": 18 },
+      "status": "planned"
+    },
+    {
+      "release": "0.32.0",
+      "bump": "minor",
+      "focus": "Scala programming target",
+      "metrics": { "targets": 19 },
+      "status": "planned"
+    },
+    {
+      "release": "0.33.0",
+      "bump": "minor",
+      "focus": "Elixir programming target",
+      "metrics": { "targets": 20, "tokens": "~450" },
+      "status": "planned"
+    },
+    {
+      "release": "0.34.0",
+      "bump": "minor",
+      "focus": "Expand IDE seed key lists (glossary 50, placeholders 25, commonLiterals 50)",
+      "status": "planned"
+    },
+    {
+      "release": "0.35.0",
+      "bump": "minor",
+      "focus": "Community-reviewed quality push on top packs",
+      "status": "planned"
+    },
+    {
+      "release": "0.36.0-0.39.x",
+      "bump": "patch",
+      "focus": "Hardening, partner-verified packs, API polish",
+      "status": "planned"
+    },
+    {
+      "release": "1.0.0",
+      "bump": "major",
+      "focus": "Stable pack.schema.json and npm API; 68 packs, 20 targets, ~450 tokens, IDE gloss on all packs",
+      "metrics": { "packs": 68, "targets": 20, "tokens": "~450" },
+      "status": "planned"
+    },
+    {
+      "release": "2.0.0",
+      "bump": "major",
+      "focus": "Stdlib/builtins tier (~150 starter concepts); separate coverage rules",
       "status": "planned"
     }
   ]

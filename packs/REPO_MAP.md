@@ -16,7 +16,9 @@ Quick map of this repository. **Contributors** mostly touch `packs/<language>/` 
 
 | Path | Purpose |
 |------|---------|
-| `packs/logical-tokens.json` | Checklist of 112 concepts every pack must translate |
+| `packs/logical-tokens.json` | Checklist of **370** concepts every pack must translate |
+| `packs/ROADMAP.md` | Version plan (patch / minor / major releases) |
+| `packs/TIERS.md` | Pack layers (keywords, glossary, placeholders, stdlib) |
 | `packs/language-registry.json` | Taken / planned pack names and locales |
 | `CONTRIBUTING.md` | Step-by-step how to contribute |
 | `packs/NAMING_GUIDE.md` | Naming, locale format, new pack steps |

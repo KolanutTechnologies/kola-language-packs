@@ -6,7 +6,19 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+### Added
+
+- **Product roadmap:** [`packs/ROADMAP.md`](./packs/ROADMAP.md) (version plan 0.12 → 1.0 → 2.0), [`packs/TIERS.md`](./packs/TIERS.md) (scope ceilings), and refreshed [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) (`releaseSequence` with patch/minor/major bumps)
+
+### Changed
+
+- Roadmap JSON: removed shipped packs from `planned`, fixed stale token counts, added African expansion waves and Tier-A programming targets
+
 ## [0.11.1] - 2026-07-08
+
+### Fixed
+
+- README metrics generator sync for all 15 targets, coverage tables, and regional pack lists
 
 ## [0.11.0] - 2026-07-08
 

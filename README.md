@@ -131,7 +131,7 @@ In short:
 | What we cover | Shipped | Planned | Source of truth |
 |---|---:|---:|---|
 | **African language packs** | 28 | +40 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
-| **Programming targets** | 15 | +1 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
+| **Programming targets** | 15 | +5 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
 | **Logical tokens** | 370 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
 | **Keyword coverage gaps** | 0 | — | [`packs/coverage-summary.json`](./packs/coverage-summary.json) |
 
@@ -233,7 +233,9 @@ If you prefer to consume JSON directly (Rust/Go/Python/CLI tools), start here:
 - [`packs/by-country.json`](./packs/by-country.json): `NG` → `["yoruba", "igbo", ...]`
 - [`packs/by-region.json`](./packs/by-region.json): region → pack names
 - [`packs/coverage-summary.json`](./packs/coverage-summary.json): auto-generated coverage report
-- [`packs/languages-roadmap.json`](./packs/languages-roadmap.json): shipped vs planned packs
+- [`packs/ROADMAP.md`](./packs/ROADMAP.md): version plan (0.12 → 1.0 → 2.0)
+- [`packs/TIERS.md`](./packs/TIERS.md): pack layers and scope ceilings
+- [`packs/languages-roadmap.json`](./packs/languages-roadmap.json): shipped vs planned packs (machine-readable)
 
 <!-- shipped-languages-heading:start -->
 ## Languages shipped (28)
@@ -296,12 +298,12 @@ If you care about linguistic accuracy or preferred terminology for a specific co
 
 ## Roadmap (what’s next)
 
-We track roadmaps in [`packs/languages-roadmap.json`](./packs/languages-roadmap.json):
+We track roadmaps in [`packs/ROADMAP.md`](./packs/ROADMAP.md) (version plan: patch / minor / major) and [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) (machine-readable). Layer ceilings: [`packs/TIERS.md`](./packs/TIERS.md).
 
 <!-- roadmap-bullets:start -->
 - **Planned African languages** (by region + priority) — 40 more packs on the list
-- **Planned programming targets** — Clojure (see `programmingTargets.planned` in the JSON)
-- **Logical tokens** — **370 shipped**; stdlib / builtins tier → **v2.0.0** (design-first; not required for beginner keyword transpilation)
+- **Planned programming targets** — Clojure, Lua, SQL, Scala, Elixir (see [`packs/ROADMAP.md`](./packs/ROADMAP.md))
+- **Logical tokens** — **370 shipped**; stdlib / builtins tier → **2.0.0** (design-first; not required for beginner keyword transpilation)
 - **Programming targets** — **15 shipped** with 0 keyword coverage gaps (see table above)
 <!-- roadmap-bullets:end -->
 

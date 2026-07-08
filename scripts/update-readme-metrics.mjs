@@ -43,6 +43,10 @@ const TARGET_LABELS = {
   php: 'PHP',
   r: 'R',
   clojure: 'Clojure',
+  lua: 'Lua',
+  sql: 'SQL',
+  scala: 'Scala',
+  elixir: 'Elixir',
 };
 
 const REGION_SECTION_ORDER = [
@@ -263,8 +267,8 @@ function buildRoadmapBullets({ plannedPacks, plannedTargets, tokenCount, shipped
       : 'none listed';
   return [
     `- **Planned African languages** (by region + priority) — ${plannedPacks} more packs on the list`,
-    `- **Planned programming targets** — ${plannedTargetsText} (see \`programmingTargets.planned\` in the JSON)`,
-    `- **Logical tokens** — **${tokenCount} shipped**; stdlib / builtins tier → **v2.0.0** (design-first; not required for beginner keyword transpilation)`,
+    `- **Planned programming targets** — ${plannedTargetsText} (see [\`packs/ROADMAP.md\`](./packs/ROADMAP.md))`,
+    `- **Logical tokens** — **${tokenCount} shipped**; stdlib / builtins tier → **2.0.0** (design-first; not required for beginner keyword transpilation)`,
     `- **Programming targets** — **${shippedTargets} shipped** with 0 keyword coverage gaps (see table above)`,
   ].join('\n');
 }
