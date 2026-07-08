@@ -8,17 +8,62 @@ const README_PATH = join(root, 'README.md');
 const COVERAGE_PATH = join(root, 'packs', 'coverage-summary.json');
 const ROADMAP_PATH = join(root, 'packs', 'languages-roadmap.json');
 const TOKENS_PATH = join(root, 'packs', 'logical-tokens.json');
+const OFFICIAL_PATH = join(root, 'packs', 'official-target-keywords.json');
 
-const START = '<!-- metrics:start -->';
-const END = '<!-- metrics:end -->';
-const BADGES_START = '<!-- badges:start -->';
-const BADGES_END = '<!-- badges:end -->';
-const WHATS_IN_REPO_START = '<!-- whats-in-repo:start -->';
-const WHATS_IN_REPO_END = '<!-- whats-in-repo:end -->';
-const SHIPPED_HEADING_START = '<!-- shipped-languages-heading:start -->';
-const SHIPPED_HEADING_END = '<!-- shipped-languages-heading:end -->';
-const CODE_EXAMPLE_START = '<!-- code-example-stats:start -->';
-const CODE_EXAMPLE_END = '<!-- code-example-stats:end -->';
+const MARKERS = {
+  badges: ['<!-- badges:start -->', '<!-- badges:end -->'],
+  metrics: ['<!-- metrics:start -->', '<!-- metrics:end -->'],
+  whatsInRepo: ['<!-- whats-in-repo:start -->', '<!-- whats-in-repo:end -->'],
+  introTargets: ['<!-- intro-targets:start -->', '<!-- intro-targets:end -->'],
+  coverageTable: ['<!-- coverage-table:start -->', '<!-- coverage-table:end -->'],
+  coverageFootnote: ['<!-- coverage-footnote:start -->', '<!-- coverage-footnote:end -->'],
+  specSourcesTable: ['<!-- spec-sources-table:start -->', '<!-- spec-sources-table:end -->'],
+  shippedHeading: ['<!-- shipped-languages-heading:start -->', '<!-- shipped-languages-heading:end -->'],
+  shippedList: ['<!-- shipped-languages-list:start -->', '<!-- shipped-languages-list:end -->'],
+  codeExample: ['<!-- code-example-stats:start -->', '<!-- code-example-stats:end -->'],
+  roadmapBullets: ['<!-- roadmap-bullets:start -->', '<!-- roadmap-bullets:end -->'],
+  upcomingPacks: ['<!-- upcoming-packs:start -->', '<!-- upcoming-packs:end -->'],
+  faqTargetCount: ['<!-- faq-target-count:start -->', '<!-- faq-target-count:end -->'],
+};
+
+const TARGET_LABELS = {
+  javascript: 'JavaScript',
+  python: 'Python',
+  typescript: 'TypeScript',
+  go: 'Go',
+  rust: 'Rust',
+  java: 'Java',
+  c: 'C',
+  cpp: 'C++',
+  csharp: 'C#',
+  kotlin: 'Kotlin',
+  swift: 'Swift',
+  dart: 'Dart',
+  ruby: 'Ruby',
+  php: 'PHP',
+  r: 'R',
+  clojure: 'Clojure',
+};
+
+const REGION_SECTION_ORDER = [
+  'West Africa',
+  'East Africa',
+  'Central Africa',
+  'Horn of Africa',
+  'North / East Africa',
+  'Southern Africa',
+  'Indian Ocean',
+];
+
+const REGION_TO_SECTION = {
+  'West Africa': 'West Africa',
+  'East Africa': 'East Africa',
+  'Central Africa': 'Central Africa',
+  'Horn of Africa': 'Horn of Africa',
+  'North Africa': 'North / East Africa',
+  'Southern Africa': 'Southern Africa',
+  'Indian Ocean': 'Indian Ocean',
+};
 
 const checkOnly = process.argv.includes('--check');
 
@@ -49,9 +94,32 @@ function replaceMarkedInner(text, startMarker, endMarker, innerBody) {
   return replaceMarkedSection(text, startMarker, endMarker, [startMarker, innerBody, endMarker].join('\n'));
 }
 
+function formatOxfordList(items) {
+  if (items.length === 0) return '';
+  if (items.length === 1) return items[0];
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(', ')}, and ${items.at(-1)}`;
+}
+
+function primaryCountryFromLocale(locale) {
+  const part = locale.split('-')[1];
+  return part ? part.toUpperCase() : 'UN';
+}
+
+function countryToTwemojiSvg(country) {
+  const upper = country.toUpperCase();
+  if (upper.length !== 2) {
+    return 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f310.svg';
+  }
+  const cp1 = 0x1f1e6 + upper.charCodeAt(0) - 65;
+  const cp2 = 0x1f1e6 + upper.charCodeAt(1) - 65;
+  return `https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/${cp1.toString(16)}-${cp2.toString(16)}.svg`;
+}
+
 function buildBadgesBlock({ shippedPacks, shippedTargets, tokenCount }) {
+  const [start, end] = MARKERS.badges;
   return [
-    BADGES_START,
+    start,
     '',
     '[![npm](https://img.shields.io/npm/v/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)',
     `[![African language packs](https://img.shields.io/badge/African%20language%20packs-${shippedPacks}-gold)](./packs/coverage-summary.json)`,
@@ -59,13 +127,14 @@ function buildBadgesBlock({ shippedPacks, shippedTargets, tokenCount }) {
     `[![Logical tokens](https://img.shields.io/badge/Logical%20tokens-${tokenCount}-lightgrey)](./packs/logical-tokens.json)`,
     '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
     '',
-    BADGES_END,
+    end,
   ].join('\n');
 }
 
 function buildMetricsBlock({ shippedPacks, plannedPacks, shippedTargets, plannedTargets, tokenCount, gapCount }) {
+  const [start, end] = MARKERS.metrics;
   return [
-    START,
+    start,
     '',
     '## At a glance',
     '',
@@ -76,7 +145,7 @@ function buildMetricsBlock({ shippedPacks, plannedPacks, shippedTargets, planned
     `| **Logical tokens** | ${tokenCount} | — | [\`packs/logical-tokens.json\`](./packs/logical-tokens.json) |`,
     `| **Keyword coverage gaps** | ${gapCount} | — | [\`packs/coverage-summary.json\`](./packs/coverage-summary.json) |`,
     '',
-    END,
+    end,
   ].join('\n');
 }
 
@@ -87,8 +156,90 @@ function buildWhatsInRepoBlock({ shippedPacks, tokenCount }) {
   ].join('\n');
 }
 
+function buildIntroTargetsBlock({ targetIds }) {
+  const labels = targetIds.map((id) => TARGET_LABELS[id] ?? id);
+  return `Language packs for African-language programming: a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **${formatOxfordList(labels)}**.`;
+}
+
+function buildCoverageTable({ targetIds, perTarget }) {
+  const lines = [
+    '| Target | Spec keywords | Mapped | Gaps | Score |',
+    '|--------|-------------:|-------:|-----:|------:|',
+  ];
+
+  for (const id of targetIds) {
+    const row = perTarget[id];
+    if (!row) throw new Error(`Missing coverage row for target: ${id}`);
+    const label = TARGET_LABELS[id] ?? id;
+    const specCol =
+      id === 'typescript' ? `${row.officialKeywordCount} tracked†` : String(row.officialKeywordCount);
+    const mapped = row.mappedCount + row.structuralCount;
+    const score = row.gapCount === 0 ? '100%' : '—';
+    lines.push(`| ${label} | ${specCol} | ${mapped} | ${row.gapCount} | ${score} |`);
+  }
+
+  return lines.join('\n');
+}
+
+function buildCoverageFootnote({ hasTypeScript }) {
+  if (!hasTypeScript) return '';
+  return '†TypeScript has no single official keyword count in the Handbook; the tracked count is our reserved/modifier + type-keyword set for coverage (see notes in `official-target-keywords.json`).';
+}
+
+function buildSpecSourcesTable({ targetIds, perTarget, sources }) {
+  const lines = [
+    '| Target | Spec keywords | Spec source |',
+    '|--------|-------------:|------------|',
+  ];
+
+  for (const id of targetIds) {
+    const row = perTarget[id];
+    const source = sources[id];
+    if (!row || !source) throw new Error(`Missing spec source for target: ${id}`);
+    const label = TARGET_LABELS[id] ?? id;
+    const specCol =
+      id === 'typescript' ? `${row.officialKeywordCount} tracked†` : String(row.officialKeywordCount);
+    lines.push(`| ${label} | ${specCol} | [${source.name}](${source.url}) |`);
+  }
+
+  return lines.join('\n');
+}
+
 function buildShippedLanguagesHeading({ shippedPacks }) {
   return `## Languages shipped (${shippedPacks})`;
+}
+
+function buildShippedLanguagesList({ africanLanguages }) {
+  const bySection = new Map();
+  for (const section of REGION_SECTION_ORDER) {
+    bySection.set(section, []);
+  }
+
+  for (const pack of africanLanguages) {
+    const region = pack.regions?.[0] ?? 'West Africa';
+    const section = REGION_TO_SECTION[region] ?? region;
+    if (!bySection.has(section)) bySection.set(section, []);
+    bySection.get(section).push(pack);
+  }
+
+  const lines = [];
+  for (const section of REGION_SECTION_ORDER) {
+    const packs = bySection.get(section) ?? [];
+    if (packs.length === 0) continue;
+    packs.sort((a, b) => (a.displayName ?? a.name).localeCompare(b.displayName ?? b.name));
+    lines.push(`**${section}**`);
+    for (const pack of packs) {
+      const country = primaryCountryFromLocale(pack.locale);
+      const flagUrl = countryToTwemojiSvg(country);
+      const title = pack.displayName ?? pack.name;
+      lines.push(
+        `- <img alt="${country}" src="${flagUrl}" width="16" height="16" /> ${title} (\`${pack.locale}\`)`,
+      );
+    }
+    lines.push('');
+  }
+
+  return lines.join('\n').trimEnd();
 }
 
 function buildCodeExampleBlock({ shippedPacks, tokenCount }) {
@@ -105,7 +256,45 @@ function buildCodeExampleBlock({ shippedPacks, tokenCount }) {
   ].join('\n');
 }
 
-function applyInlineTokenCounts(text, { shippedPacks, shippedTargets, tokenCount }) {
+function buildRoadmapBullets({ plannedPacks, plannedTargets, tokenCount, shippedTargets, plannedTargetNames }) {
+  const plannedTargetsText =
+    plannedTargetNames.length > 0
+      ? plannedTargetNames.map((t) => TARGET_LABELS[t] ?? t).join(', ')
+      : 'none listed';
+  return [
+    `- **Planned African languages** (by region + priority) — ${plannedPacks} more packs on the list`,
+    `- **Planned programming targets** — ${plannedTargetsText} (see \`programmingTargets.planned\` in the JSON)`,
+    `- **Logical tokens** — **${tokenCount} shipped**; stdlib / builtins tier → **v2.0.0** (design-first; not required for beginner keyword transpilation)`,
+    `- **Programming targets** — **${shippedTargets} shipped** with 0 keyword coverage gaps (see table above)`,
+  ].join('\n');
+}
+
+function buildUpcomingPacks({ roadmapPlanned, shippedNames }) {
+  const shipped = new Set(shippedNames);
+  const upcoming = roadmapPlanned.filter((entry) => !shipped.has(entry.name));
+  if (upcoming.length === 0) {
+    return '_No high-priority upcoming packs listed — see the full roadmap JSON._';
+  }
+
+  const high = upcoming.filter((entry) => entry.priority === 'high').slice(0, 6);
+  const lines = high.map((entry) => {
+    const region = entry.regions?.[0] ?? 'Africa';
+    const title = entry.name.replace(/-/g, ' ');
+    return `- ${region}: ${title} (\`${entry.locale}\`)`;
+  });
+
+  if (lines.length === 0) {
+    return '_See [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) for the full planned list._';
+  }
+
+  return lines.join('\n');
+}
+
+function buildFaqTargetCount({ shippedTargets }) {
+  return `It's exhaustive for **this project's current scope**: a shared registry of **logical concepts** needed to map official reserved keywords across **${shippedTargets} programming targets** (plus a small set of "structural" concepts).`;
+}
+
+function applyInlineTokenCounts(text, { shippedPacks, tokenCount }) {
   let updated = text;
   updated = updated.replace(
     /- \[`packs\/logical-tokens\.json`\]\(\.\/packs\/logical-tokens\.json\): the \d+-token registry \(the thing packs must fully map\)/,
@@ -128,37 +317,35 @@ function applyInlineTokenCounts(text, { shippedPacks, shippedTargets, tokenCount
     `3. Map every token listed in \`packs/logical-tokens.json\` (${tokenCount} total)`,
   );
   updated = updated.replace(
-    /- \*\*Logical tokens\*\* — \*\*\d+ shipped\*\* \(20 C-only \+ 14 Java-only \+ `UNDERSCORE`; `GEN`, `LAZY` in v0\.2\.0\); stdlib tier → \*\*v2\.0\.0\*\*/,
-    `- **Logical tokens** — **${tokenCount} shipped** (20 C-only + 14 Java-only + \`UNDERSCORE\`; \`GEN\`, \`LAZY\` in v0.2.0); stdlib tier → **v2.0.0**`,
-  );
-  updated = updated.replace(
-    /- \*\*Programming targets\*\* — \*\*\d+ shipped\*\* \(C added in v0\.4\.0, Java in v0\.3\.0\); C\+\+ next → \*\*v0\.4\.0\+\*\*/,
-    `- **Programming targets** — **${shippedTargets} shipped** (C added in v0.4.0, Java in v0.3.0); C++ next → **v0.4.0+**`,
-  );
-  updated = updated.replace(
-    /These are the packs currently shipped in v0\.1\./,
+    /These are the \d+ packs currently shipped\./,
     `These are the ${shippedPacks} packs currently shipped.`,
   );
   return updated;
 }
 
 export async function loadReadmeStats() {
-  const [coverageRaw, roadmapRaw, tokensRaw] = await Promise.all([
+  const [coverageRaw, roadmapRaw, tokensRaw, officialRaw] = await Promise.all([
     readFile(COVERAGE_PATH, 'utf8'),
     readFile(ROADMAP_PATH, 'utf8'),
     readFile(TOKENS_PATH, 'utf8'),
+    readFile(OFFICIAL_PATH, 'utf8'),
   ]);
 
   const coverage = JSON.parse(coverageRaw);
   const roadmap = JSON.parse(roadmapRaw);
   const tokens = JSON.parse(tokensRaw);
+  const official = JSON.parse(officialRaw);
 
   const shippedPacks = mustNumber(coverage.africanLanguagePackCount, 'coverage.africanLanguagePackCount');
-  const shippedTargets = Array.isArray(coverage.transpileTargets) ? coverage.transpileTargets.length : 0;
+  const targetIds = Array.isArray(coverage.transpileTargets) ? coverage.transpileTargets : [];
+  const shippedTargets = targetIds.length;
   const tokenCount = mustNumber(coverage.logicalTokenCount, 'coverage.logicalTokenCount');
 
   const plannedPacks = mustNumber(roadmap.plannedCount, 'roadmap.plannedCount');
-  const plannedTargets = Array.isArray(roadmap.programmingTargets?.planned) ? roadmap.programmingTargets.planned.length : 0;
+  const plannedTargets = Array.isArray(roadmap.programmingTargets?.planned)
+    ? roadmap.programmingTargets.planned.length
+    : 0;
+  const plannedTargetNames = roadmap.programmingTargets?.planned ?? [];
 
   const tokenCountFromRegistry = Array.isArray(tokens.tokens) ? tokens.tokens.length : tokenCount;
   if (tokenCountFromRegistry !== tokenCount) {
@@ -170,32 +357,94 @@ export async function loadReadmeStats() {
     0,
   );
 
+  const shippedNames = (coverage.africanLanguages ?? []).map((p) => p.name);
+
   return {
     shippedPacks,
     plannedPacks,
     shippedTargets,
     plannedTargets,
+    plannedTargetNames,
     tokenCount,
     gapCount,
+    targetIds,
+    perTarget: coverage.perTarget ?? {},
+    sources: official.sources ?? {},
+    africanLanguages: coverage.africanLanguages ?? [],
+    roadmapPlanned: roadmap.planned ?? [],
+    shippedNames,
   };
 }
 
 export function updateReadmeContent(readme, stats) {
-  const badgesBlock = buildBadgesBlock(stats);
-  const metricsBlock = buildMetricsBlock(stats);
-
   let updated = readme;
 
-  updated = replaceMarkedSection(updated, BADGES_START, BADGES_END, badgesBlock);
-  updated = replaceMarkedSection(updated, START, END, metricsBlock);
-  updated = replaceMarkedInner(updated, WHATS_IN_REPO_START, WHATS_IN_REPO_END, buildWhatsInRepoBlock(stats));
+  updated = replaceMarkedSection(
+    updated,
+    ...MARKERS.badges,
+    buildBadgesBlock(stats),
+  );
+  updated = replaceMarkedSection(
+    updated,
+    ...MARKERS.metrics,
+    buildMetricsBlock(stats),
+  );
   updated = replaceMarkedInner(
     updated,
-    SHIPPED_HEADING_START,
-    SHIPPED_HEADING_END,
+    ...MARKERS.whatsInRepo,
+    buildWhatsInRepoBlock(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.introTargets,
+    buildIntroTargetsBlock(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.coverageTable,
+    buildCoverageTable(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.coverageFootnote,
+    buildCoverageFootnote({ hasTypeScript: stats.targetIds.includes('typescript') }),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.specSourcesTable,
+    buildSpecSourcesTable(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.shippedHeading,
     buildShippedLanguagesHeading(stats),
   );
-  updated = replaceMarkedInner(updated, CODE_EXAMPLE_START, CODE_EXAMPLE_END, buildCodeExampleBlock(stats));
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.shippedList,
+    buildShippedLanguagesList(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.codeExample,
+    buildCodeExampleBlock(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.roadmapBullets,
+    buildRoadmapBullets(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.upcomingPacks,
+    buildUpcomingPacks(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.faqTargetCount,
+    buildFaqTargetCount(stats),
+  );
+
   updated = applyInlineTokenCounts(updated, stats);
 
   return updated;

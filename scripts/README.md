@@ -1,4 +1,4 @@
-# Scripts — what they do
+﻿# Scripts — what they do
 
 All commands run from the **repo root** (`kola-language-packs/`).
 
@@ -10,7 +10,7 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 **What it does:** Reads every pack and checks:
 
-- Required fields exist (`displayName`, `locale`, `keywords`, …)
+- Required fields exist (`displayName`, `locale`, `keywords`, â€¦)
 - All logical tokens are translated (see `packs/logical-tokens.json`)
 - `keywords.json` matches `pack.json`
 - Optional IDE tiers (`glossary.json`, `placeholders.json`, `common-literals.json`): English fallback, keyword collision, duplicate gloss phrases
@@ -65,9 +65,19 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 ### `update-readme-metrics.mjs` — via `npm run readme:sync` (alias: `readme:metrics`)
 
-**What it does:** Updates the shields.io badge row and “At a glance” metrics table in `README.md`.
+**What it does:** Syncs all **marked** README sections from generated JSON:
 
-**When:** After shipping new packs or changing roadmap counts.
+- Badges, intro target list, at-a-glance metrics, whats-in-repo bullets
+- **Keyword coverage table** (all 15 targets) and **spec sources table**
+- **Languages shipped** heading + regional pack list (from `coverage-summary.json`)
+- Roadmap summary bullets, upcoming high-priority packs (excludes already-shipped)
+- Code example stats, FAQ target count, inline token/pack count references
+
+**Flags:** `--check` — fail if README is stale without writing.
+
+**When:** End of `npm test` and `direct-release.mjs`. Commit updated `README.md` before push (CI runs `git diff --exit-code README.md`).
+
+**Do not** hand-edit content inside `<!-- …:start -->` / `<!-- …:end -->` markers — extend the script instead.
 
 ---
 

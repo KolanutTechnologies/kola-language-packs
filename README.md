@@ -12,7 +12,9 @@
 
 <!-- badges:end -->
 
-Language packs for African-language programming: a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **JavaScript, Python, TypeScript, Go, Rust, Java, and C**.
+<!-- intro-targets:start -->
+Language packs for African-language programming: a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **JavaScript, Python, TypeScript, Go, Rust, Java, C, C++, C#, Kotlin, Swift, Dart, Ruby, PHP, and R**.
+<!-- intro-targets:end -->
 
 If you’re building an editor, a transpiler, a linter, or a learning tool, this repo is the shared “source of truth”.
 
@@ -141,29 +143,53 @@ We track coverage against official reserved keywords for each transpile target. 
 
 Source of truth: [`packs/coverage-summary.json`](./packs/coverage-summary.json)
 
+<!-- coverage-table:start -->
 | Target | Spec keywords | Mapped | Gaps | Score |
 |--------|-------------:|-------:|-----:|------:|
 | JavaScript | 38 | 38 | 0 | 100% |
-| Python | 39 | 39 | 0 | 100% |
+| Python | 40 | 40 | 0 | 100% |
 | TypeScript | 79 tracked† | 79 | 0 | 100% |
 | Go | 25 | 25 | 0 | 100% |
-| Rust | 39 | 39 | 0 | 100% |
+| Rust | 40 | 40 | 0 | 100% |
 | Java | 51 | 51 | 0 | 100% |
+| C | 45 | 45 | 0 | 100% |
+| C++ | 92 | 92 | 0 | 100% |
+| C# | 104 | 104 | 0 | 100% |
+| Kotlin | 80 | 80 | 0 | 100% |
+| Swift | 90 | 90 | 0 | 100% |
+| Dart | 68 | 68 | 0 | 100% |
+| Ruby | 41 | 41 | 0 | 100% |
+| PHP | 81 | 81 | 0 | 100% |
+| R | 29 | 29 | 0 | 100% |
+<!-- coverage-table:end -->
 
-†TypeScript has no single official keyword count in the Handbook; 79 is our tracked reserved/modifier + type-keyword set for coverage (see notes in `official-target-keywords.json`).
+<!-- coverage-footnote:start -->
+†TypeScript has no single official keyword count in the Handbook; the tracked count is our reserved/modifier + type-keyword set for coverage (see notes in `official-target-keywords.json`).
+<!-- coverage-footnote:end -->
 
 ## Spec sources (traceable and linkable)
 
 Source of truth: [`packs/official-target-keywords.json`](./packs/official-target-keywords.json)
 
+<!-- spec-sources-table:start -->
 | Target | Spec keywords | Spec source |
 |--------|-------------:|------------|
-| JavaScript | 38 | [ECMA-262 §12.7.2 ReservedWord](https://tc39.es/ecma262/#sec-keywords-and-reserved-words) |
-| Python | 39 | [Python 3.12 — keywords](https://docs.python.org/3/reference/lexical_analysis.html#keywords) (35 hard + 4 soft) |
-| TypeScript | 79 tracked† | [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) (no official count) |
-| Go | 25 | [Go spec — Keywords](https://go.dev/ref/spec#Keywords) |
-| Rust | 39 | [Rust Reference — strict keywords](https://doc.rust-lang.org/reference/keywords.html) |
-| Java | 51 | [JLS §3.9 Keywords](https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html#jls-3.9) (Java SE 21) |
+| JavaScript | 38 | [ECMA-262 Edition 15](https://tc39.es/ecma262/#sec-keywords-and-reserved-words) |
+| Python | 40 | [Python 3.12 Language Reference](https://docs.python.org/3/reference/lexical_analysis.html#keywords) |
+| TypeScript | 79 tracked† | [TypeScript — tracked reserved tokens (practical set)](https://www.typescriptlang.org/docs/handbook/intro.html) |
+| Go | 25 | [The Go Programming Language Specification](https://go.dev/ref/spec#Keywords) |
+| Rust | 40 | [The Rust Reference — Keywords](https://doc.rust-lang.org/reference/keywords.html) |
+| Java | 51 | [Java Language Specification (Java SE 21)](https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html#jls-3.9) |
+| C | 45 | [ISO/IEC 9899:2011 (C11) — Keywords](https://en.cppreference.com/w/c/keyword) |
+| C++ | 92 | [ISO C++20 — Keywords (cppreference)](https://en.cppreference.com/w/cpp/keyword) |
+| C# | 104 | [C# 12 — Keywords (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/) |
+| Kotlin | 80 | [Kotlin — Keywords and operators](https://kotlinlang.org/docs/keywords.html) |
+| Swift | 90 | [The Swift Programming Language — Lexical Structure](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/lexicalstructure/) |
+| Dart | 68 | [Dart 3.12 — Language keywords](https://dart.dev/language/keywords) |
+| Ruby | 41 | [Ruby 3.2 — Keywords](https://docs.ruby-lang.org/en/3.2/keywords_rdoc.html) |
+| PHP | 81 | [PHP 8.3 — Reserved keywords](https://www.php.net/manual/en/reserved.keywords.php) |
+| R | 29 | [R Language Definition — Reserved words](https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Reserved-words) |
+<!-- spec-sources-table:end -->
 
 ## Install
 
@@ -218,42 +244,47 @@ These are the 28 packs currently shipped.
 - Flags are shown for the **primary locale** (quick scanning). Many packs apply to multiple countries—see [`packs/index.json`](./packs/index.json) for the full list.
 - We use **Twemoji flag images** (not emoji characters) so the flags render reliably on both GitHub and npm.
 
+<!-- shipped-languages-list:start -->
 **West Africa**
-- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Yorùbá (`yo-NG`)
-- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Nigerian Pidgin (`pcm-NG`)
+- <img alt="GH" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1ed.svg" width="16" height="16" /> Akan (`ak-GH`)
+- <img alt="ML" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1f1.svg" width="16" height="16" /> Bambara (`bm-ML`)
+- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Efik (`efi-NG`)
+- <img alt="SN" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1f3.svg" width="16" height="16" /> French (`fr-SN`)
+- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Fulfulde (`ff-NG`)
 - <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Hausa (`ha-NG`)
 - <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Igbo (`ig-NG`)
-- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Fulfulde (`ff-NG`)
-- <img alt="ML" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1f1.svg" width="16" height="16" /> Bambara (`bm-ML`)
+- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Nigerian Pidgin (`pcm-NG`)
 - <img alt="GH" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1ed.svg" width="16" height="16" /> Twi (`tw-GH`)
 - <img alt="SN" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1f3.svg" width="16" height="16" /> Wolof (`wo-SN`)
-- <img alt="SN" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1f3.svg" width="16" height="16" /> French (Africa) (`fr-SN`)
+- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Yorùbá (`yo-NG`)
 
 **East Africa**
-- <img alt="KE" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ea.svg" width="16" height="16" /> Swahili (`sw-KE`)
 - <img alt="ET" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f9.svg" width="16" height="16" /> Amharic (`am-ET`)
-- <img alt="ET" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f9.svg" width="16" height="16" /> Oromo (`om-ET`)
-- <img alt="ER" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f7.svg" width="16" height="16" /> Tigrinya (`ti-ER`)
 - <img alt="RW" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f7-1f1fc.svg" width="16" height="16" /> Kinyarwanda (`rw-RW`)
 - <img alt="UG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fa-1f1ec.svg" width="16" height="16" /> Luganda (`lg-UG`)
+- <img alt="ET" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f9.svg" width="16" height="16" /> Oromo (`om-ET`)
+- <img alt="KE" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f0-1f1ea.svg" width="16" height="16" /> Swahili (`sw-KE`)
+- <img alt="ER" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f7.svg" width="16" height="16" /> Tigrinya (`ti-ER`)
 
 **Central Africa**
+- <img alt="CM" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e8-1f1f2.svg" width="16" height="16" /> Cameroon Pidgin (`wes-CM`)
 - <img alt="CD" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e8-1f1e9.svg" width="16" height="16" /> Lingala (`ln-CD`)
 
 **Horn of Africa**
 - <img alt="SO" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1f4.svg" width="16" height="16" /> Somali (`so-SO`)
 
 **North / East Africa**
-- <img alt="EG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1ec.svg" width="16" height="16" /> Arabic (Africa) (`ar-EG`)
+- <img alt="EG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1ec.svg" width="16" height="16" /> Arabic (`ar-EG`)
 
 **Southern Africa**
-- <img alt="ZA" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ff-1f1e6.svg" width="16" height="16" /> isiZulu (`zu-ZA`)
-- <img alt="ZA" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ff-1f1e6.svg" width="16" height="16" /> isiXhosa (`xh-ZA`)
 - <img alt="ZA" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ff-1f1e6.svg" width="16" height="16" /> Afrikaans (`af-ZA`)
+- <img alt="ZA" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ff-1f1e6.svg" width="16" height="16" /> isiXhosa (`xh-ZA`)
+- <img alt="ZA" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ff-1f1e6.svg" width="16" height="16" /> isiZulu (`zu-ZA`)
+- <img alt="AO" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e6-1f1f4.svg" width="16" height="16" /> Portuguese (Africa) (`pt-AO`)
 - <img alt="LS" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f1-1f1f8.svg" width="16" height="16" /> Sesotho (`st-LS`)
 - <img alt="BW" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e7-1f1fc.svg" width="16" height="16" /> Setswana (`tn-BW`)
 - <img alt="ZW" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ff-1f1fc.svg" width="16" height="16" /> Shona (`sn-ZW`)
-- <img alt="AO" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e6-1f1f4.svg" width="16" height="16" /> Portuguese (Africa) (`pt-AO`)
+<!-- shipped-languages-list:end -->
 
 Full metadata (including all countries per pack): [`packs/index.json`](./packs/index.json).
 
@@ -267,13 +298,12 @@ If you care about linguistic accuracy or preferred terminology for a specific co
 
 We track roadmaps in [`packs/languages-roadmap.json`](./packs/languages-roadmap.json):
 
+<!-- roadmap-bullets:start -->
 - **Planned African languages** (by region + priority) — 40 more packs on the list
-- **Planned programming targets** — C++, Kotlin, Swift, Dart, Ruby, PHP, C# (`v0.4.0+`–`v0.5.0+`); R, Clojure (`v0.5.0+` / `v0.6.0+`) — one target per release; sample keywords + checklist in the JSON
-- **Logical tokens** — **370 shipped** (20 C-only + 14 Java-only + `UNDERSCORE`; `GEN`, `LAZY` in v0.2.0); stdlib tier → **v2.0.0**
-- **Programming targets** — **15 shipped** (C added in v0.4.0, Java in v0.3.0); C++ next → **v0.4.0+**
-- **Planned token tier** — stdlib / builtins (`len`, `map`, `Array`, `fmt`, …) → target **v2.0.0** (design-first; not required for beginner keyword transpilation)
-
-Suggested release sequence (also in the JSON): **v0.1.x** → **v0.2.0** (shipped) → **v0.3.0** / **v0.4.0** (shipped) → **v0.4.0+** (current — C++ next) → **v0.5.0+** → **v2.0.0** (stdlib tier).
+- **Planned programming targets** — Clojure (see `programmingTargets.planned` in the JSON)
+- **Logical tokens** — **370 shipped**; stdlib / builtins tier → **v2.0.0** (design-first; not required for beginner keyword transpilation)
+- **Programming targets** — **15 shipped** with 0 keyword coverage gaps (see table above)
+<!-- roadmap-bullets:end -->
 
 Regional focus (how we’re sequencing the work):
 
@@ -283,8 +313,9 @@ Regional focus (how we’re sequencing the work):
 
 High-priority upcoming packs currently include:
 
-- West Africa: Akan (`ak-GH`)
-- Central Africa: Cameroon Pidgin / Kamtok (`wes-CM`)
+<!-- upcoming-packs:start -->
+_See [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) for the full planned list._
+<!-- upcoming-packs:end -->
 
 ## Contributing
 
@@ -360,7 +391,9 @@ Answers to recurring questions. This section lives in **README.md** only — it 
 
 ### Is `packs/logical-tokens.json` exhaustive?
 
-It’s exhaustive for **this project’s current scope**: a shared registry of **logical concepts** needed to map official reserved keywords across five target languages (plus a small set of “structural” concepts).
+<!-- faq-target-count:start -->
+It's exhaustive for **this project's current scope**: a shared registry of **logical concepts** needed to map official reserved keywords across **15 programming targets** (plus a small set of "structural" concepts).
+<!-- faq-target-count:end -->
 
 It is **not** a full programming-language grammar. It intentionally does **not** try to model:
 
@@ -411,6 +444,7 @@ This section is only relevant if you’re maintaining the package or editing gen
 <summary>Maintainer notes (publishing + regeneration)</summary>
 
 - Publishing: push to `main` runs [`.github/workflows/release.yml`](./.github/workflows/release.yml) (tag + GitHub Release + npm via **Trusted Publisher OIDC**). Configure on npm: `KolanutTechnologies/kola-language-packs` / `release.yml`. Local fallback: `npm login` then `npm publish --access public`.
+- **README metrics:** counts, coverage tables, spec-source tables, and the regional pack list are **generated** — do not hand-edit inside `<!-- …:start -->` / `<!-- …:end -->` markers. Run `npm run readme:sync` (or `npm test`) and commit `README.md`. CI fails if README is stale after test.
 - Sync pack versions after a manual version bump: `npm run sync-versions`
 - Regenerate derived pack files after changing the source definitions:
 

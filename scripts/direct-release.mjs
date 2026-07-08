@@ -223,6 +223,12 @@ async function main() {
   });
   if (sync.status !== 0) process.exit(sync.status ?? 1);
 
+  const readme = spawnSync(process.execPath, ['scripts/update-readme-metrics.mjs'], {
+    cwd: root,
+    stdio: 'inherit',
+  });
+  if (readme.status !== 0) process.exit(readme.status ?? 1);
+
   await writeReleaseBody(next);
 
   await setOutput('released', 'true');

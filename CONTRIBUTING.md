@@ -77,6 +77,8 @@ If a PR runs bootstrap and replaces all packs, maintainers will **reject** it un
 
 Details: [`scripts/README.md`](./scripts/README.md) · file map: [`packs/REPO_MAP.md`](./packs/REPO_MAP.md)
 
+**Maintainers:** after adding packs, targets, or logical tokens, `npm test` regenerates `README.md` metrics (badges, coverage tables, pack lists). Commit the updated README — CI checks `git diff README.md`. Do not hand-edit content inside HTML comment markers; extend `scripts/update-readme-metrics.mjs` instead.
+
 ---
 
 ## Path A: Improve an existing pack
