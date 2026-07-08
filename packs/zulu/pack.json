@@ -8,7 +8,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.8.0",
+  "version": "0.9.0",
   "displayName": "isiZulu",
   "description": "Zulu keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -25,7 +25,12 @@
     "c",
     "cpp",
     "csharp",
-    "kotlin"
+    "kotlin",
+    "swift",
+    "dart",
+    "ruby",
+    "php",
+    "r"
   ],
   "keywords": {
     "IF": [
@@ -804,6 +809,357 @@
     ],
     "IT": [
       "it"
+    ],
+    "GUARD": [
+      "guard"
+    ],
+    "REPEAT": [
+      "repeat"
+    ],
+    "RETHROWS": [
+      "rethrows"
+    ],
+    "DEINIT": [
+      "deinit"
+    ],
+    "SUBSCRIPT": [
+      "subscript"
+    ],
+    "INOUT": [
+      "inout"
+    ],
+    "FILEPRIVATE": [
+      "fileprivate"
+    ],
+    "ASSOCIATEDTYPE": [
+      "associatedtype"
+    ],
+    "PRECEDENCEGROUP": [
+      "precedencegroup"
+    ],
+    "EXTENSION": [
+      "extension"
+    ],
+    "ACTOR": [
+      "actor"
+    ],
+    "SOME": [
+      "some"
+    ],
+    "SWIFT_ANY": [
+      "swift_any"
+    ],
+    "SELF_TYPE": [
+      "self_type"
+    ],
+    "OPTIONAL": [
+      "optional"
+    ],
+    "MUTATING": [
+      "mutating"
+    ],
+    "NONMUTATING": [
+      "nonmutating"
+    ],
+    "WEAK": [
+      "weak"
+    ],
+    "UNOWNED": [
+      "unowned"
+    ],
+    "DIDSET": [
+      "didset"
+    ],
+    "WILLSET": [
+      "willset"
+    ],
+    "CONVENIENCE": [
+      "convenience"
+    ],
+    "REQUIRED": [
+      "required"
+    ],
+    "INDIRECT": [
+      "indirect"
+    ],
+    "PREFIX": [
+      "prefix"
+    ],
+    "POSTFIX": [
+      "postfix"
+    ],
+    "PRECEDENCE": [
+      "precedence"
+    ],
+    "ASSOCIATIVITY": [
+      "associativity"
+    ],
+    "LEFT": [
+      "left"
+    ],
+    "RIGHT": [
+      "right"
+    ],
+    "NONE": [
+      "none"
+    ],
+    "DISTRIBUTED": [
+      "distributed"
+    ],
+    "NONISOLATED": [
+      "nonisolated"
+    ],
+    "ISOLATED": [
+      "isolated"
+    ],
+    "BORROWING": [
+      "borrowing"
+    ],
+    "CONSUMING": [
+      "consuming"
+    ],
+    "MACRO": [
+      "macro"
+    ],
+    "SWIFT_PACKAGE": [
+      "swift_package"
+    ],
+    "MIXIN": [
+      "mixin"
+    ],
+    "DEFERRED": [
+      "deferred"
+    ],
+    "COVARIANT": [
+      "covariant"
+    ],
+    "FACTORY": [
+      "factory"
+    ],
+    "LATE": [
+      "late"
+    ],
+    "LIBRARY": [
+      "library"
+    ],
+    "PART": [
+      "part"
+    ],
+    "RETHROW": [
+      "rethrow"
+    ],
+    "SHOW": [
+      "show"
+    ],
+    "HIDE": [
+      "hide"
+    ],
+    "SYNC": [
+      "sync"
+    ],
+    "BASE": [
+      "base"
+    ],
+    "FUNCTION_TYPE": [
+      "function_type"
+    ],
+    "RUBY_ENCODING": [
+      "ruby_encoding"
+    ],
+    "RUBY_LINE": [
+      "ruby_line"
+    ],
+    "RUBY_FILE": [
+      "ruby_file"
+    ],
+    "RUBY_BEGIN": [
+      "ruby_begin"
+    ],
+    "RUBY_END": [
+      "ruby_end"
+    ],
+    "END": [
+      "end"
+    ],
+    "RESCUE": [
+      "rescue"
+    ],
+    "ENSURE": [
+      "ensure"
+    ],
+    "UNTIL": [
+      "until"
+    ],
+    "UNLESS": [
+      "unless"
+    ],
+    "UNDEF": [
+      "undef"
+    ],
+    "NEXT": [
+      "next"
+    ],
+    "REDO": [
+      "redo"
+    ],
+    "RETRY": [
+      "retry"
+    ],
+    "THEN": [
+      "then"
+    ],
+    "DEFINED": [
+      "defined"
+    ],
+    "PHP_HALT_COMPILER": [
+      "php_halt_compiler"
+    ],
+    "PHP_ARRAY": [
+      "php_array"
+    ],
+    "PHP_CALLABLE": [
+      "php_callable"
+    ],
+    "PHP_CLONE": [
+      "php_clone"
+    ],
+    "PHP_DIE": [
+      "php_die"
+    ],
+    "PHP_ECHO": [
+      "php_echo"
+    ],
+    "PHP_EMPTY": [
+      "php_empty"
+    ],
+    "PHP_ENDDECLARE": [
+      "php_enddeclare"
+    ],
+    "PHP_ENDFOR": [
+      "php_endfor"
+    ],
+    "PHP_ENDFOREACH": [
+      "php_endforeach"
+    ],
+    "PHP_ENDIF": [
+      "php_endif"
+    ],
+    "PHP_ENDSWITCH": [
+      "php_endswitch"
+    ],
+    "PHP_ENDWHILE": [
+      "php_endwhile"
+    ],
+    "PHP_EVAL": [
+      "php_eval"
+    ],
+    "PHP_EXIT": [
+      "php_exit"
+    ],
+    "PHP_FN": [
+      "php_fn"
+    ],
+    "PHP_INCLUDE": [
+      "php_include"
+    ],
+    "PHP_INCLUDE_ONCE": [
+      "php_include_once"
+    ],
+    "PHP_INSTEADOF": [
+      "php_insteadof"
+    ],
+    "PHP_ISSET": [
+      "php_isset"
+    ],
+    "PHP_LIST": [
+      "php_list"
+    ],
+    "PHP_REQUIRE_ONCE": [
+      "php_require_once"
+    ],
+    "PHP_UNSET": [
+      "php_unset"
+    ],
+    "PHP_YIELD_FROM": [
+      "php_yield_from"
+    ],
+    "PHP_CLASS_MAGIC": [
+      "php_class_magic"
+    ],
+    "PHP_DIR_MAGIC": [
+      "php_dir_magic"
+    ],
+    "PHP_FILE_MAGIC": [
+      "php_file_magic"
+    ],
+    "PHP_FUNCTION_MAGIC": [
+      "php_function_magic"
+    ],
+    "PHP_LINE_MAGIC": [
+      "php_line_magic"
+    ],
+    "PHP_METHOD_MAGIC": [
+      "php_method_magic"
+    ],
+    "PHP_NAMESPACE_MAGIC": [
+      "php_namespace_magic"
+    ],
+    "PHP_TRAIT_MAGIC": [
+      "php_trait_magic"
+    ],
+    "PHP_PROPERTY_MAGIC": [
+      "php_property_magic"
+    ],
+    "R_INF": [
+      "r_inf"
+    ],
+    "R_NAN": [
+      "r_nan"
+    ],
+    "R_NA": [
+      "r_na"
+    ],
+    "R_NA_INTEGER": [
+      "r_na_integer"
+    ],
+    "R_NA_REAL": [
+      "r_na_real"
+    ],
+    "R_NA_COMPLEX": [
+      "r_na_complex"
+    ],
+    "R_NA_CHARACTER": [
+      "r_na_character"
+    ],
+    "R_DOTS": [
+      "r_dots"
+    ],
+    "R_DOT1": [
+      "r_dot1"
+    ],
+    "R_DOT2": [
+      "r_dot2"
+    ],
+    "R_DOT3": [
+      "r_dot3"
+    ],
+    "R_DOT4": [
+      "r_dot4"
+    ],
+    "R_DOT5": [
+      "r_dot5"
+    ],
+    "R_DOT6": [
+      "r_dot6"
+    ],
+    "R_DOT7": [
+      "r_dot7"
+    ],
+    "R_DOT8": [
+      "r_dot8"
+    ],
+    "R_DOT9": [
+      "r_dot9"
     ]
   },
   "scopeNote": "isiZulu of South Africa.",

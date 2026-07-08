@@ -97,7 +97,12 @@
           "c",
           "cpp",
           "csharp",
-          "kotlin"
+          "kotlin",
+          "swift",
+          "dart",
+          "ruby",
+          "php",
+          "r"
         ]
       },
       "minItems": 1

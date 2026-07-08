@@ -6,6 +6,17 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-07-08
+
+### Added
+
+- **Swift**, **Dart**, **Ruby**, **PHP**, and **R** programming targets — **15 targets** total, **370 logical tokens**, 0 coverage gaps
+- Maintainer scripts: `add-swift-target.mjs`, `add-dart-target.mjs`, `add-ruby-target.mjs`, `add-php-target.mjs`, `add-r-target.mjs`
+
+### Changed
+
+- IDE glossary key `list` → `item_list` (PHP keyword collision)
+
 ## [0.8.0] - 2026-07-08
 
 ### Added

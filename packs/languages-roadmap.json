@@ -1,5 +1,5 @@
 {
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Roadmap for African human-language packs and programming-target / logical-token registry growth. Shipped state: see packs/index.json, logical-tokens.json, official-target-keywords.json.",
   "shippedCount": 25,
   "plannedCount": 40,
@@ -235,14 +235,14 @@
       "c",
       "cpp",
       "csharp",
-      "kotlin"
-    ],
-    "planned": [
+      "kotlin",
       "swift",
       "dart",
       "ruby",
       "php",
-      "r",
+      "r"
+    ],
+    "planned": [
       "clojure"
     ],
     "plannedDetails": [

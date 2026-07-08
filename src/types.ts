@@ -11,7 +11,12 @@ export type TargetLanguage =
   | 'c'
   | 'cpp'
   | 'csharp'
-  | 'kotlin';
+  | 'kotlin'
+  | 'swift'
+  | 'dart'
+  | 'ruby'
+  | 'php'
+  | 'r';
 
 export type GlossTierMap = Record<string, GlossTierValue>;
 

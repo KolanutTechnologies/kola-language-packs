@@ -31,9 +31,9 @@
     "information",
     "payload"
   ],
-  "list": [
+  "item_list": [
     "group list",
-    "list"
+    "item_list"
   ],
   "index": [
     "position",

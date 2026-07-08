@@ -1,19 +1,49 @@
 {
   "packs": [
     {
-      "name": "yoruba",
-      "languageCode": "yo",
-      "locale": "yo-NG",
-      "displayName": "Yorùbá",
+      "name": "afrikaans",
+      "languageCode": "af",
+      "locale": "af-ZA",
+      "displayName": "Afrikaans",
       "countries": [
-        "NG",
-        "BJ",
-        "TG"
+        "ZA",
+        "NA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "akan",
+      "languageCode": "ak",
+      "locale": "ak-GH",
+      "displayName": "Akan",
+      "countries": [
+        "GH"
       ],
       "regions": [
         "West Africa"
       ],
-      "version": "0.8.0",
+      "version": "0.9.0",
       "targets": [
         "javascript",
         "python",
@@ -24,120 +54,13 @@
         "c",
         "cpp",
         "csharp",
-        "kotlin"
-      ],
-      "ideReady": true
-    },
-    {
-      "name": "nigerian-pidgin",
-      "languageCode": "pcm",
-      "locale": "pcm-NG",
-      "displayName": "Nigerian Pidgin",
-      "countries": [
-        "NG"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": true
-    },
-    {
-      "name": "hausa",
-      "languageCode": "ha",
-      "locale": "ha-NG",
-      "displayName": "Hausa",
-      "countries": [
-        "NG",
-        "NE",
-        "GH",
-        "SD"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": true
-    },
-    {
-      "name": "igbo",
-      "languageCode": "ig",
-      "locale": "ig-NG",
-      "displayName": "Igbo",
-      "countries": [
-        "NG"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": true
-    },
-    {
-      "name": "swahili",
-      "languageCode": "sw",
-      "locale": "sw-KE",
-      "displayName": "Swahili",
-      "countries": [
-        "KE",
-        "TZ",
-        "UG",
-        "CD",
-        "RW"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": true
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ]
     },
     {
       "name": "amharic",
@@ -150,7 +73,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.8.0",
+      "version": "0.9.0",
       "targets": [
         "javascript",
         "python",
@@ -161,328 +84,12 @@
         "c",
         "cpp",
         "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "zulu",
-      "languageCode": "zu",
-      "locale": "zu-ZA",
-      "displayName": "isiZulu",
-      "countries": [
-        "ZA"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "xhosa",
-      "languageCode": "xh",
-      "locale": "xh-ZA",
-      "displayName": "isiXhosa",
-      "countries": [
-        "ZA"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "twi",
-      "languageCode": "tw",
-      "locale": "tw-GH",
-      "displayName": "Twi",
-      "countries": [
-        "GH"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "somali",
-      "languageCode": "so",
-      "locale": "so-SO",
-      "displayName": "Somali",
-      "countries": [
-        "SO",
-        "ET",
-        "KE",
-        "DJ"
-      ],
-      "regions": [
-        "Horn of Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "wolof",
-      "languageCode": "wo",
-      "locale": "wo-SN",
-      "displayName": "Wolof",
-      "countries": [
-        "SN",
-        "GM",
-        "MR"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "lingala",
-      "languageCode": "ln",
-      "locale": "ln-CD",
-      "displayName": "Lingala",
-      "countries": [
-        "CD",
-        "CG"
-      ],
-      "regions": [
-        "Central Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "kinyarwanda",
-      "languageCode": "rw",
-      "locale": "rw-RW",
-      "displayName": "Kinyarwanda",
-      "countries": [
-        "RW"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "luganda",
-      "languageCode": "lg",
-      "locale": "lg-UG",
-      "displayName": "Luganda",
-      "countries": [
-        "UG"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "shona",
-      "languageCode": "sn",
-      "locale": "sn-ZW",
-      "displayName": "Shona",
-      "countries": [
-        "ZW"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "oromo",
-      "languageCode": "om",
-      "locale": "om-ET",
-      "displayName": "Oromo",
-      "countries": [
-        "ET",
-        "KE"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "tigrinya",
-      "languageCode": "ti",
-      "locale": "ti-ER",
-      "displayName": "Tigrinya",
-      "countries": [
-        "ER",
-        "ET"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "afrikaans",
-      "languageCode": "af",
-      "locale": "af-ZA",
-      "displayName": "Afrikaans",
-      "countries": [
-        "ZA",
-        "NA"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
       ],
       "ideReady": false
     },
@@ -507,7 +114,7 @@
         "North Africa",
         "East Africa"
       ],
-      "version": "0.8.0",
+      "version": "0.9.0",
       "targets": [
         "javascript",
         "python",
@@ -518,7 +125,46 @@
         "c",
         "cpp",
         "csharp",
-        "kotlin"
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "bambara",
+      "languageCode": "bm",
+      "locale": "bm-ML",
+      "displayName": "Bambara",
+      "countries": [
+        "ML",
+        "SN",
+        "CI",
+        "BF"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
       ],
       "ideReady": false
     },
@@ -555,7 +201,7 @@
         "East Africa",
         "Indian Ocean"
       ],
-      "version": "0.8.0",
+      "version": "0.9.0",
       "targets": [
         "javascript",
         "python",
@@ -566,7 +212,12 @@
         "c",
         "cpp",
         "csharp",
-        "kotlin"
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
       ],
       "ideReady": false
     },
@@ -588,7 +239,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.8.0",
+      "version": "0.9.0",
       "targets": [
         "javascript",
         "python",
@@ -599,80 +250,30 @@
         "c",
         "cpp",
         "csharp",
-        "kotlin"
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
       ],
       "ideReady": false
     },
     {
-      "name": "sesotho",
-      "languageCode": "st",
-      "locale": "st-LS",
-      "displayName": "Sesotho",
+      "name": "hausa",
+      "languageCode": "ha",
+      "locale": "ha-NG",
+      "displayName": "Hausa",
       "countries": [
-        "LS",
-        "ZA"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "setswana",
-      "languageCode": "tn",
-      "locale": "tn-BW",
-      "displayName": "Setswana",
-      "countries": [
-        "BW",
-        "ZA",
-        "NA"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "version": "0.8.0",
-      "targets": [
-        "javascript",
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "java",
-        "c",
-        "cpp",
-        "csharp",
-        "kotlin"
-      ],
-      "ideReady": false
-    },
-    {
-      "name": "bambara",
-      "languageCode": "bm",
-      "locale": "bm-ML",
-      "displayName": "Bambara",
-      "countries": [
-        "ML",
-        "SN",
-        "CI",
-        "BF"
+        "NG",
+        "NE",
+        "GH",
+        "SD"
       ],
       "regions": [
         "West Africa"
       ],
-      "version": "0.8.0",
+      "version": "0.9.0",
       "targets": [
         "javascript",
         "python",
@@ -683,7 +284,200 @@
         "c",
         "cpp",
         "csharp",
-        "kotlin"
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": true
+    },
+    {
+      "name": "igbo",
+      "languageCode": "ig",
+      "locale": "ig-NG",
+      "displayName": "Igbo",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": true
+    },
+    {
+      "name": "kinyarwanda",
+      "languageCode": "rw",
+      "locale": "rw-RW",
+      "displayName": "Kinyarwanda",
+      "countries": [
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "lingala",
+      "languageCode": "ln",
+      "locale": "ln-CD",
+      "displayName": "Lingala",
+      "countries": [
+        "CD",
+        "CG"
+      ],
+      "regions": [
+        "Central Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "luganda",
+      "languageCode": "lg",
+      "locale": "lg-UG",
+      "displayName": "Luganda",
+      "countries": [
+        "UG"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "nigerian-pidgin",
+      "languageCode": "pcm",
+      "locale": "pcm-NG",
+      "displayName": "Nigerian Pidgin",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": true
+    },
+    {
+      "name": "oromo",
+      "languageCode": "om",
+      "locale": "om-ET",
+      "displayName": "Oromo",
+      "countries": [
+        "ET",
+        "KE"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
       ],
       "ideReady": false
     },
@@ -703,7 +497,7 @@
         "Southern Africa",
         "West Africa"
       ],
-      "version": "0.8.0",
+      "version": "0.9.0",
       "targets": [
         "javascript",
         "python",
@@ -714,7 +508,368 @@
         "c",
         "cpp",
         "csharp",
-        "kotlin"
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "sesotho",
+      "languageCode": "st",
+      "locale": "st-LS",
+      "displayName": "Sesotho",
+      "countries": [
+        "LS",
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "setswana",
+      "languageCode": "tn",
+      "locale": "tn-BW",
+      "displayName": "Setswana",
+      "countries": [
+        "BW",
+        "ZA",
+        "NA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "shona",
+      "languageCode": "sn",
+      "locale": "sn-ZW",
+      "displayName": "Shona",
+      "countries": [
+        "ZW"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "somali",
+      "languageCode": "so",
+      "locale": "so-SO",
+      "displayName": "Somali",
+      "countries": [
+        "SO",
+        "ET",
+        "KE",
+        "DJ"
+      ],
+      "regions": [
+        "Horn of Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "swahili",
+      "languageCode": "sw",
+      "locale": "sw-KE",
+      "displayName": "Swahili",
+      "countries": [
+        "KE",
+        "TZ",
+        "UG",
+        "CD",
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": true
+    },
+    {
+      "name": "tigrinya",
+      "languageCode": "ti",
+      "locale": "ti-ER",
+      "displayName": "Tigrinya",
+      "countries": [
+        "ER",
+        "ET"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "twi",
+      "languageCode": "tw",
+      "locale": "tw-GH",
+      "displayName": "Twi",
+      "countries": [
+        "GH"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "wolof",
+      "languageCode": "wo",
+      "locale": "wo-SN",
+      "displayName": "Wolof",
+      "countries": [
+        "SN",
+        "GM",
+        "MR"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "xhosa",
+      "languageCode": "xh",
+      "locale": "xh-ZA",
+      "displayName": "isiXhosa",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": false
+    },
+    {
+      "name": "yoruba",
+      "languageCode": "yo",
+      "locale": "yo-NG",
+      "displayName": "Yorùbá",
+      "countries": [
+        "NG",
+        "BJ",
+        "TG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ],
+      "ideReady": true
+    },
+    {
+      "name": "zulu",
+      "languageCode": "zu",
+      "locale": "zu-ZA",
+      "displayName": "isiZulu",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "version": "0.9.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
       ],
       "ideReady": false
     }

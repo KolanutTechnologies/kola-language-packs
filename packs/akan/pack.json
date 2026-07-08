@@ -1,18 +1,16 @@
 {
-  "name": "setswana",
-  "languageCode": "tn",
-  "locale": "tn-BW",
+  "name": "akan",
+  "languageCode": "ak",
+  "locale": "ak-GH",
   "countries": [
-    "BW",
-    "ZA",
-    "NA"
+    "GH"
   ],
   "regions": [
-    "Southern Africa"
+    "West Africa"
   ],
   "version": "0.9.0",
-  "displayName": "Setswana",
-  "description": "Setswana keyword map — starter pack (community contributions welcome)",
+  "displayName": "Akan",
+  "description": "Akan keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
     "KolanutTechnologies"
@@ -36,40 +34,135 @@
   ],
   "keywords": {
     "IF": [
+      "sɛ",
       "if"
     ],
     "ELSE": [
+      "sɛ ɛnyɛ saa a",
       "else"
+    ],
+    "FOR": [
+      "ma",
+      "for"
+    ],
+    "WHILE": [
+      "bere a",
+      "while"
+    ],
+    "BREAK": [
+      "bua",
+      "break"
+    ],
+    "CONTINUE": [
+      "toa so",
+      "continue"
+    ],
+    "SWITCH": [
+      "paw",
+      "switch"
+    ],
+    "CASE": [
+      "sɛbea",
+      "case"
+    ],
+    "DEFAULT": [
+      "deɛ ɛwɔ hɔ",
+      "default"
+    ],
+    "FUNCTION": [
+      "adwuma",
+      "dwuma",
+      "function"
+    ],
+    "RETURN": [
+      "san kɔ",
+      "return"
+    ],
+    "ASYNC": [
+      "async",
+      "async"
+    ],
+    "AWAIT": [
+      "twɛn",
+      "await"
+    ],
+    "TRY": [
+      "bɔ mmɔden",
+      "try"
+    ],
+    "CATCH": [
+      "kyere",
+      "catch"
+    ],
+    "FINALLY": [
+      "ewie",
+      "finally"
+    ],
+    "THROW": [
+      "to gu",
+      "throw"
+    ],
+    "LET": [
+      "ma",
+      "let"
+    ],
+    "CONST": [
+      "gyina pintinn",
+      "const"
+    ],
+    "CLASS": [
+      "kuw",
+      "ekuri",
+      "class"
+    ],
+    "EXTENDS": [
+      "toa so",
+      "extends"
+    ],
+    "NEW": [
+      "foforo",
+      "new"
+    ],
+    "THIS": [
+      "wei",
+      "this"
+    ],
+    "IMPORT": [
+      "fa ba",
+      "import"
+    ],
+    "EXPORT": [
+      "ma kɔ",
+      "export"
+    ],
+    "PRINT": [
+      "kyerɛ",
+      "print"
+    ],
+    "TRUE": [
+      "nokware",
+      "true"
+    ],
+    "FALSE": [
+      "atoro",
+      "false"
+    ],
+    "NULL": [
+      "hwee",
+      "null"
+    ],
+    "UNDEFINED": [
+      "nnyɛ nkyerɛase",
+      "undefined"
     ],
     "ELIF": [
       "else"
     ],
-    "FOR": [
-      "for"
-    ],
-    "WHILE": [
-      "while"
-    ],
     "LOOP": [
       "loop"
     ],
-    "BREAK": [
-      "break"
-    ],
-    "CONTINUE": [
-      "continue"
-    ],
-    "SWITCH": [
-      "switch"
-    ],
     "MATCH": [
       "match"
-    ],
-    "CASE": [
-      "case"
-    ],
-    "DEFAULT": [
-      "default"
     ],
     "GOTO": [
       "goto"
@@ -83,18 +176,6 @@
     "RANGE": [
       "range"
     ],
-    "FUNCTION": [
-      "function"
-    ],
-    "RETURN": [
-      "return"
-    ],
-    "ASYNC": [
-      "async"
-    ],
-    "AWAIT": [
-      "await"
-    ],
     "YIELD": [
       "yield"
     ],
@@ -107,24 +188,6 @@
     "GO": [
       "go"
     ],
-    "TRY": [
-      "try"
-    ],
-    "CATCH": [
-      "catch"
-    ],
-    "FINALLY": [
-      "finally"
-    ],
-    "THROW": [
-      "throw"
-    ],
-    "LET": [
-      "let"
-    ],
-    "CONST": [
-      "const"
-    ],
     "VAR": [
       "var"
     ],
@@ -136,9 +199,6 @@
     ],
     "NONLOCAL": [
       "nonlocal"
-    ],
-    "CLASS": [
-      "class"
     ],
     "STRUCT": [
       "struct"
@@ -158,17 +218,8 @@
     "TYPE": [
       "type"
     ],
-    "EXTENDS": [
-      "extends"
-    ],
     "IMPLEMENTS": [
       "implements"
-    ],
-    "NEW": [
-      "new"
-    ],
-    "THIS": [
-      "this"
     ],
     "SELF": [
       "self"
@@ -178,12 +229,6 @@
     ],
     "STATIC": [
       "static"
-    ],
-    "IMPORT": [
-      "import"
-    ],
-    "EXPORT": [
-      "export"
     ],
     "FROM": [
       "from"
@@ -221,23 +266,8 @@
     "ASSERTS": [
       "asserts"
     ],
-    "PRINT": [
-      "print"
-    ],
-    "TRUE": [
-      "true"
-    ],
-    "FALSE": [
-      "false"
-    ],
-    "NULL": [
-      "null"
-    ],
     "NIL": [
       "null"
-    ],
-    "UNDEFINED": [
-      "undefined"
     ],
     "UNSAFE": [
       "unsafe"
@@ -1134,9 +1164,10 @@
       "r_dot9"
     ]
   },
-  "scopeNote": "Setswana / Tswana of Botswana and South Africa.",
+  "scopeNote": "Akan of Ghana (Twi, Fante, and related dialects). Prefer inclusive alias arrays; separate dialect PRs as aliases, not new packs unless locale differs.",
   "recommendedPartners": [
-    "PanSALB",
-    "Translate.org.za"
+    "ACALAN",
+    "University of Ghana (Linguistics)",
+    "CASAS"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "version": "4.8.0",
+  "version": "5.3.0",
   "description": "Canonical logical tokens every language pack must map. targets.* values are emitted keywords; empty string means no direct keyword (transpiler uses another construct). Includes a typescript-types tier for TS-only type keywords.",
   "targets": [
     "javascript",
@@ -11,7 +11,12 @@
     "c",
     "cpp",
     "csharp",
-    "kotlin"
+    "kotlin",
+    "swift",
+    "dart",
+    "ruby",
+    "php",
+    "r"
   ],
   "required": [
     "IF",
@@ -35,7 +40,12 @@
         "c": "if",
         "cpp": "if",
         "csharp": "if",
-        "kotlin": "if"
+        "kotlin": "if",
+        "swift": "if",
+        "dart": "if",
+        "ruby": "if",
+        "php": "if",
+        "r": "if"
       }
     },
     {
@@ -52,7 +62,12 @@
         "c": "else",
         "cpp": "else",
         "csharp": "else",
-        "kotlin": "else"
+        "kotlin": "else",
+        "swift": "else",
+        "dart": "else",
+        "ruby": "else",
+        "php": "else",
+        "r": "else"
       }
     },
     {
@@ -69,7 +84,12 @@
         "c": "else if",
         "cpp": "else if",
         "csharp": "else if",
-        "kotlin": "else if"
+        "kotlin": "else if",
+        "swift": "else if",
+        "dart": "else if",
+        "ruby": "elsif",
+        "php": "elseif",
+        "r": ""
       }
     },
     {
@@ -86,7 +106,12 @@
         "c": "for",
         "cpp": "for",
         "csharp": "for",
-        "kotlin": "for"
+        "kotlin": "for",
+        "swift": "for",
+        "dart": "for",
+        "ruby": "for",
+        "php": "for",
+        "r": "for"
       }
     },
     {
@@ -103,7 +128,12 @@
         "c": "while",
         "cpp": "while",
         "csharp": "while",
-        "kotlin": "while"
+        "kotlin": "while",
+        "swift": "while",
+        "dart": "while",
+        "ruby": "while",
+        "php": "while",
+        "r": "while"
       }
     },
     {
@@ -120,7 +150,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -137,7 +172,12 @@
         "c": "break",
         "cpp": "break",
         "csharp": "break",
-        "kotlin": "break"
+        "kotlin": "break",
+        "swift": "break",
+        "dart": "break",
+        "ruby": "break",
+        "php": "break",
+        "r": "break"
       }
     },
     {
@@ -154,7 +194,12 @@
         "c": "continue",
         "cpp": "continue",
         "csharp": "continue",
-        "kotlin": "continue"
+        "kotlin": "continue",
+        "swift": "continue",
+        "dart": "continue",
+        "ruby": "",
+        "php": "continue",
+        "r": ""
       }
     },
     {
@@ -171,7 +216,12 @@
         "c": "switch",
         "cpp": "switch",
         "csharp": "switch",
-        "kotlin": "when"
+        "kotlin": "when",
+        "swift": "switch",
+        "dart": "switch",
+        "ruby": "case",
+        "php": "switch",
+        "r": ""
       }
     },
     {
@@ -188,7 +238,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "when"
+        "kotlin": "when",
+        "swift": "switch",
+        "dart": "",
+        "ruby": "case",
+        "php": "match",
+        "r": ""
       }
     },
     {
@@ -205,7 +260,12 @@
         "c": "case",
         "cpp": "case",
         "csharp": "case",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "case",
+        "dart": "case",
+        "ruby": "case",
+        "php": "case",
+        "r": ""
       }
     },
     {
@@ -222,7 +282,12 @@
         "c": "default",
         "cpp": "default",
         "csharp": "default",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "default",
+        "dart": "default",
+        "ruby": "",
+        "php": "default",
+        "r": ""
       }
     },
     {
@@ -239,7 +304,12 @@
         "c": "goto",
         "cpp": "goto",
         "csharp": "goto",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "goto",
+        "r": ""
       }
     },
     {
@@ -256,7 +326,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "fallthrough",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -273,7 +348,12 @@
         "c": "",
         "cpp": "",
         "csharp": "select",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -290,7 +370,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -307,7 +392,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "fun"
+        "kotlin": "fun",
+        "swift": "func",
+        "dart": "",
+        "ruby": "def",
+        "php": "function",
+        "r": "function"
       }
     },
     {
@@ -324,7 +414,12 @@
         "c": "return",
         "cpp": "return",
         "csharp": "return",
-        "kotlin": "return"
+        "kotlin": "return",
+        "swift": "return",
+        "dart": "return",
+        "ruby": "return",
+        "php": "return",
+        "r": ""
       }
     },
     {
@@ -341,7 +436,12 @@
         "c": "",
         "cpp": "",
         "csharp": "async",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "async",
+        "dart": "async",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -358,7 +458,12 @@
         "c": "",
         "cpp": "",
         "csharp": "await",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "await",
+        "dart": "await",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -375,7 +480,12 @@
         "c": "",
         "cpp": "",
         "csharp": "yield",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "yield",
+        "ruby": "yield",
+        "php": "yield",
+        "r": ""
       }
     },
     {
@@ -392,7 +502,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -409,7 +524,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "defer",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -426,7 +546,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -443,7 +568,12 @@
         "c": "",
         "cpp": "try",
         "csharp": "try",
-        "kotlin": "try"
+        "kotlin": "try",
+        "swift": "try",
+        "dart": "try",
+        "ruby": "begin",
+        "php": "try",
+        "r": ""
       }
     },
     {
@@ -460,7 +590,12 @@
         "c": "",
         "cpp": "catch",
         "csharp": "catch",
-        "kotlin": "catch"
+        "kotlin": "catch",
+        "swift": "catch",
+        "dart": "catch",
+        "ruby": "rescue",
+        "php": "catch",
+        "r": ""
       }
     },
     {
@@ -477,7 +612,12 @@
         "c": "",
         "cpp": "",
         "csharp": "finally",
-        "kotlin": "finally"
+        "kotlin": "finally",
+        "swift": "",
+        "dart": "finally",
+        "ruby": "ensure",
+        "php": "finally",
+        "r": ""
       }
     },
     {
@@ -494,7 +634,12 @@
         "c": "",
         "cpp": "throw",
         "csharp": "throw",
-        "kotlin": "throw"
+        "kotlin": "throw",
+        "swift": "throw",
+        "dart": "throw",
+        "ruby": "",
+        "php": "throw",
+        "r": ""
       }
     },
     {
@@ -511,7 +656,12 @@
         "c": "",
         "cpp": "",
         "csharp": "let",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "let",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -528,7 +678,12 @@
         "c": "const",
         "cpp": "const",
         "csharp": "const",
-        "kotlin": "const"
+        "kotlin": "const",
+        "swift": "",
+        "dart": "const",
+        "ruby": "",
+        "php": "const",
+        "r": ""
       }
     },
     {
@@ -545,7 +700,12 @@
         "c": "",
         "cpp": "",
         "csharp": "var",
-        "kotlin": "var"
+        "kotlin": "var",
+        "swift": "var",
+        "dart": "var",
+        "ruby": "",
+        "php": "var",
+        "r": ""
       }
     },
     {
@@ -562,7 +722,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -579,7 +744,12 @@
         "c": "",
         "cpp": "",
         "csharp": "global",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "global",
+        "r": ""
       }
     },
     {
@@ -596,7 +766,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -613,7 +788,12 @@
         "c": "",
         "cpp": "class",
         "csharp": "class",
-        "kotlin": "class"
+        "kotlin": "class",
+        "swift": "class",
+        "dart": "class",
+        "ruby": "class",
+        "php": "class",
+        "r": ""
       }
     },
     {
@@ -630,7 +810,12 @@
         "c": "struct",
         "cpp": "struct",
         "csharp": "struct",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "struct",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -647,7 +832,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "trait",
+        "r": ""
       }
     },
     {
@@ -664,7 +854,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -681,7 +876,12 @@
         "c": "",
         "cpp": "",
         "csharp": "interface",
-        "kotlin": "interface"
+        "kotlin": "interface",
+        "swift": "protocol",
+        "dart": "interface",
+        "ruby": "",
+        "php": "interface",
+        "r": ""
       }
     },
     {
@@ -698,7 +898,12 @@
         "c": "enum",
         "cpp": "enum",
         "csharp": "enum",
-        "kotlin": "enum"
+        "kotlin": "enum",
+        "swift": "enum",
+        "dart": "enum",
+        "ruby": "",
+        "php": "enum",
+        "r": ""
       }
     },
     {
@@ -715,7 +920,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "type",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -732,7 +942,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "extends",
+        "ruby": "",
+        "php": "extends",
+        "r": ""
       }
     },
     {
@@ -749,7 +964,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "implements",
+        "ruby": "",
+        "php": "implements",
+        "r": ""
       }
     },
     {
@@ -766,7 +986,12 @@
         "c": "",
         "cpp": "new",
         "csharp": "new",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "new",
+        "ruby": "",
+        "php": "new",
+        "r": ""
       }
     },
     {
@@ -783,7 +1008,12 @@
         "c": "",
         "cpp": "this",
         "csharp": "this",
-        "kotlin": "this"
+        "kotlin": "this",
+        "swift": "self",
+        "dart": "this",
+        "ruby": "self",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -800,7 +1030,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "this"
+        "kotlin": "this",
+        "swift": "self",
+        "dart": "",
+        "ruby": "self",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -817,7 +1052,12 @@
         "c": "",
         "cpp": "",
         "csharp": "base",
-        "kotlin": "super"
+        "kotlin": "super",
+        "swift": "super",
+        "dart": "super",
+        "ruby": "super",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -834,7 +1074,12 @@
         "c": "static",
         "cpp": "static",
         "csharp": "static",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "static",
+        "dart": "static",
+        "ruby": "",
+        "php": "static",
+        "r": ""
       }
     },
     {
@@ -851,7 +1096,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "import"
+        "kotlin": "import",
+        "swift": "import",
+        "dart": "import",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -868,7 +1118,12 @@
         "c": "",
         "cpp": "export",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "export",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -885,7 +1140,12 @@
         "c": "",
         "cpp": "",
         "csharp": "from",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -902,7 +1162,12 @@
         "c": "",
         "cpp": "",
         "csharp": "as",
-        "kotlin": "as"
+        "kotlin": "as",
+        "swift": "as",
+        "dart": "as",
+        "ruby": "",
+        "php": "as",
+        "r": ""
       }
     },
     {
@@ -919,7 +1184,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -936,7 +1206,12 @@
         "c": "",
         "cpp": "namespace",
         "csharp": "namespace",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "namespace",
+        "r": ""
       }
     },
     {
@@ -953,7 +1228,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "package"
+        "kotlin": "package",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -970,7 +1250,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "use",
+        "r": ""
       }
     },
     {
@@ -987,7 +1272,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1004,7 +1294,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1021,7 +1316,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "with",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1038,7 +1338,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1055,7 +1360,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "assert",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1072,7 +1382,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1089,7 +1404,12 @@
         "c": "printf",
         "cpp": "",
         "csharp": "Console.WriteLine",
-        "kotlin": "println"
+        "kotlin": "println",
+        "swift": "print",
+        "dart": "print",
+        "ruby": "puts",
+        "php": "print",
+        "r": "print"
       }
     },
     {
@@ -1106,7 +1426,12 @@
         "c": "",
         "cpp": "true",
         "csharp": "true",
-        "kotlin": "true"
+        "kotlin": "true",
+        "swift": "true",
+        "dart": "true",
+        "ruby": "true",
+        "php": "",
+        "r": "TRUE"
       }
     },
     {
@@ -1123,7 +1448,12 @@
         "c": "",
         "cpp": "false",
         "csharp": "false",
-        "kotlin": "false"
+        "kotlin": "false",
+        "swift": "false",
+        "dart": "false",
+        "ruby": "false",
+        "php": "",
+        "r": "FALSE"
       }
     },
     {
@@ -1140,7 +1470,12 @@
         "c": "",
         "cpp": "",
         "csharp": "null",
-        "kotlin": "null"
+        "kotlin": "null",
+        "swift": "nil",
+        "dart": "null",
+        "ruby": "nil",
+        "php": "",
+        "r": "NULL"
       }
     },
     {
@@ -1157,7 +1492,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1174,7 +1514,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1191,7 +1536,12 @@
         "c": "",
         "cpp": "",
         "csharp": "unsafe",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1208,7 +1558,12 @@
         "c": "extern",
         "cpp": "extern",
         "csharp": "extern",
-        "kotlin": "external"
+        "kotlin": "external",
+        "swift": "",
+        "dart": "external",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1225,7 +1580,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1242,7 +1602,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1259,7 +1624,12 @@
         "c": "",
         "cpp": "and",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "and",
+        "php": "and",
+        "r": ""
       }
     },
     {
@@ -1276,7 +1646,12 @@
         "c": "",
         "cpp": "or",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "or",
+        "php": "or",
+        "r": ""
       }
     },
     {
@@ -1293,7 +1668,12 @@
         "c": "",
         "cpp": "not",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "not",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1310,7 +1690,12 @@
         "c": "",
         "cpp": "",
         "csharp": "in",
-        "kotlin": "in"
+        "kotlin": "in",
+        "swift": "in",
+        "dart": "in",
+        "ruby": "in",
+        "php": "",
+        "r": "in"
       }
     },
     {
@@ -1327,7 +1712,12 @@
         "c": "",
         "cpp": "",
         "csharp": "is",
-        "kotlin": "is"
+        "kotlin": "is",
+        "swift": "is",
+        "dart": "is",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1344,7 +1734,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1361,7 +1756,12 @@
         "c": "do",
         "cpp": "do",
         "csharp": "do",
-        "kotlin": "do"
+        "kotlin": "do",
+        "swift": "do",
+        "dart": "do",
+        "ruby": "do",
+        "php": "do",
+        "r": ""
       }
     },
     {
@@ -1378,7 +1778,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1395,7 +1800,12 @@
         "c": "",
         "cpp": "",
         "csharp": "typeof",
-        "kotlin": "typeof"
+        "kotlin": "typeof",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1412,7 +1822,12 @@
         "c": "void",
         "cpp": "void",
         "csharp": "void",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "void",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1429,7 +1844,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "instanceof",
+        "r": ""
       }
     },
     {
@@ -1446,7 +1866,12 @@
         "c": "",
         "cpp": "private",
         "csharp": "private",
-        "kotlin": "private"
+        "kotlin": "private",
+        "swift": "private",
+        "dart": "",
+        "ruby": "",
+        "php": "private",
+        "r": ""
       }
     },
     {
@@ -1463,7 +1888,12 @@
         "c": "",
         "cpp": "protected",
         "csharp": "protected",
-        "kotlin": "protected"
+        "kotlin": "protected",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "protected",
+        "r": ""
       }
     },
     {
@@ -1480,7 +1910,12 @@
         "c": "",
         "cpp": "public",
         "csharp": "public",
-        "kotlin": "public"
+        "kotlin": "public",
+        "swift": "public",
+        "dart": "",
+        "ruby": "",
+        "php": "public",
+        "r": ""
       }
     },
     {
@@ -1497,7 +1932,12 @@
         "c": "",
         "cpp": "",
         "csharp": "readonly",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "readonly",
+        "r": ""
       }
     },
     {
@@ -1514,7 +1954,12 @@
         "c": "",
         "cpp": "",
         "csharp": "abstract",
-        "kotlin": "abstract"
+        "kotlin": "abstract",
+        "swift": "",
+        "dart": "abstract",
+        "ruby": "",
+        "php": "abstract",
+        "r": ""
       }
     },
     {
@@ -1531,7 +1976,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "declare",
+        "r": ""
       }
     },
     {
@@ -1548,7 +1998,12 @@
         "c": "",
         "cpp": "",
         "csharp": "get",
-        "kotlin": "get"
+        "kotlin": "get",
+        "swift": "get",
+        "dart": "get",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1565,7 +2020,12 @@
         "c": "",
         "cpp": "",
         "csharp": "set",
-        "kotlin": "set"
+        "kotlin": "set",
+        "swift": "set",
+        "dart": "set",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1582,7 +2042,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1599,7 +2064,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1616,7 +2086,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1633,7 +2108,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1650,7 +2130,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1667,7 +2152,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1684,7 +2174,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1701,7 +2196,12 @@
         "c": "",
         "cpp": "",
         "csharp": "string",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1718,7 +2218,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1735,7 +2240,12 @@
         "c": "",
         "cpp": "",
         "csharp": "object",
-        "kotlin": "object"
+        "kotlin": "object",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1752,7 +2262,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1769,7 +2284,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1786,7 +2306,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1803,7 +2328,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "constructor"
+        "kotlin": "constructor",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1820,7 +2350,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "require",
+        "r": ""
       }
     },
     {
@@ -1837,7 +2372,12 @@
         "c": "",
         "cpp": "using",
         "csharp": "using",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1854,7 +2394,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "of",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1871,7 +2416,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1888,7 +2438,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1905,7 +2460,12 @@
         "c": "",
         "cpp": "",
         "csharp": "ref",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1922,7 +2482,12 @@
         "c": "",
         "cpp": "",
         "csharp": "where",
-        "kotlin": "where"
+        "kotlin": "where",
+        "swift": "where",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1939,7 +2504,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1956,7 +2526,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "lazy",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1973,7 +2548,12 @@
         "c": "",
         "cpp": "",
         "csharp": "byte",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -1990,7 +2570,12 @@
         "c": "char",
         "cpp": "char",
         "csharp": "char",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2007,7 +2592,12 @@
         "c": "short",
         "cpp": "short",
         "csharp": "short",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2024,7 +2614,12 @@
         "c": "int",
         "cpp": "int",
         "csharp": "int",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2041,7 +2636,12 @@
         "c": "long",
         "cpp": "long",
         "csharp": "long",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2058,7 +2658,12 @@
         "c": "float",
         "cpp": "float",
         "csharp": "float",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2075,7 +2680,12 @@
         "c": "double",
         "cpp": "double",
         "csharp": "double",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2092,7 +2702,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "final"
+        "kotlin": "final",
+        "swift": "final",
+        "dart": "final",
+        "ruby": "",
+        "php": "final",
+        "r": ""
       }
     },
     {
@@ -2109,7 +2724,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2126,7 +2746,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2143,7 +2768,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2160,7 +2790,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2177,7 +2812,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2194,7 +2834,12 @@
         "c": "volatile",
         "cpp": "volatile",
         "csharp": "volatile",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2211,7 +2856,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "_"
+        "kotlin": "_",
+        "swift": "_",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2228,7 +2878,12 @@
         "c": "auto",
         "cpp": "auto",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2245,7 +2900,12 @@
         "c": "register",
         "cpp": "register",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2262,7 +2922,12 @@
         "c": "signed",
         "cpp": "signed",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2279,7 +2944,12 @@
         "c": "unsigned",
         "cpp": "unsigned",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2296,7 +2966,12 @@
         "c": "sizeof",
         "cpp": "sizeof",
         "csharp": "sizeof",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2313,7 +2988,12 @@
         "c": "typedef",
         "cpp": "typedef",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2330,7 +3010,12 @@
         "c": "union",
         "cpp": "union",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2347,7 +3032,12 @@
         "c": "inline",
         "cpp": "inline",
         "csharp": "",
-        "kotlin": "inline"
+        "kotlin": "inline",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2364,7 +3054,12 @@
         "c": "restrict",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2381,7 +3076,12 @@
         "c": "_Bool",
         "cpp": "bool",
         "csharp": "bool",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2398,7 +3098,12 @@
         "c": "_Complex",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2415,7 +3120,12 @@
         "c": "_Imaginary",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2432,7 +3142,12 @@
         "c": "_Alignas",
         "cpp": "alignas",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2449,7 +3164,12 @@
         "c": "_Alignof",
         "cpp": "alignof",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2466,7 +3186,12 @@
         "c": "_Atomic",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2483,7 +3208,12 @@
         "c": "_Generic",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2500,7 +3230,12 @@
         "c": "_Noreturn",
         "cpp": "",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2517,7 +3252,12 @@
         "c": "_Static_assert",
         "cpp": "static_assert",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2534,7 +3274,12 @@
         "c": "_Thread_local",
         "cpp": "thread_local",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2551,7 +3296,12 @@
         "c": "asm",
         "cpp": "asm",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2568,7 +3318,12 @@
         "c": "",
         "cpp": "template",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2585,7 +3340,12 @@
         "c": "",
         "cpp": "virtual",
         "csharp": "virtual",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2602,7 +3362,12 @@
         "c": "",
         "cpp": "typename",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2619,7 +3384,12 @@
         "c": "",
         "cpp": "constexpr",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2636,7 +3406,12 @@
         "c": "",
         "cpp": "consteval",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2653,7 +3428,12 @@
         "c": "",
         "cpp": "constinit",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2670,7 +3450,12 @@
         "c": "",
         "cpp": "noexcept",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2687,7 +3472,12 @@
         "c": "",
         "cpp": "decltype",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2704,7 +3494,12 @@
         "c": "",
         "cpp": "nullptr",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2721,7 +3516,12 @@
         "c": "",
         "cpp": "operator",
         "csharp": "operator",
-        "kotlin": "operator"
+        "kotlin": "operator",
+        "swift": "operator",
+        "dart": "operator",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2738,7 +3538,12 @@
         "c": "",
         "cpp": "friend",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2755,7 +3560,12 @@
         "c": "",
         "cpp": "explicit",
         "csharp": "explicit",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2772,7 +3582,12 @@
         "c": "",
         "cpp": "mutable",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2789,7 +3604,12 @@
         "c": "",
         "cpp": "concept",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2806,7 +3626,12 @@
         "c": "",
         "cpp": "requires",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2823,7 +3648,12 @@
         "c": "",
         "cpp": "co_await",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2840,7 +3670,12 @@
         "c": "",
         "cpp": "co_return",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2857,7 +3692,12 @@
         "c": "",
         "cpp": "co_yield",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2874,7 +3714,12 @@
         "c": "",
         "cpp": "char8_t",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2891,7 +3736,12 @@
         "c": "",
         "cpp": "char16_t",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2908,7 +3758,12 @@
         "c": "",
         "cpp": "char32_t",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2925,7 +3780,12 @@
         "c": "",
         "cpp": "wchar_t",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2942,7 +3802,12 @@
         "c": "",
         "cpp": "typeid",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2959,7 +3824,12 @@
         "c": "",
         "cpp": "static_cast",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2976,7 +3846,12 @@
         "c": "",
         "cpp": "dynamic_cast",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -2993,7 +3868,12 @@
         "c": "",
         "cpp": "reinterpret_cast",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3010,7 +3890,12 @@
         "c": "",
         "cpp": "const_cast",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3027,7 +3912,12 @@
         "c": "",
         "cpp": "delete",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3044,7 +3934,12 @@
         "c": "",
         "cpp": "bitand",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3061,7 +3956,12 @@
         "c": "",
         "cpp": "bitor",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3078,7 +3978,12 @@
         "c": "",
         "cpp": "compl",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3095,7 +4000,12 @@
         "c": "",
         "cpp": "xor",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "xor",
+        "r": ""
       }
     },
     {
@@ -3112,7 +4022,12 @@
         "c": "",
         "cpp": "xor_eq",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3129,7 +4044,12 @@
         "c": "",
         "cpp": "and_eq",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3146,7 +4066,12 @@
         "c": "",
         "cpp": "or_eq",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3163,7 +4088,12 @@
         "c": "",
         "cpp": "not_eq",
         "csharp": "",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3180,7 +4110,12 @@
         "c": "",
         "cpp": "",
         "csharp": "delegate",
-        "kotlin": "delegate"
+        "kotlin": "delegate",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3197,7 +4132,12 @@
         "c": "",
         "cpp": "",
         "csharp": "event",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3214,7 +4154,12 @@
         "c": "",
         "cpp": "",
         "csharp": "lock",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3231,7 +4176,12 @@
         "c": "",
         "cpp": "",
         "csharp": "sealed",
-        "kotlin": "sealed"
+        "kotlin": "sealed",
+        "swift": "",
+        "dart": "sealed",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3248,7 +4198,12 @@
         "c": "",
         "cpp": "",
         "csharp": "override",
-        "kotlin": "override"
+        "kotlin": "override",
+        "swift": "override",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3265,7 +4220,12 @@
         "c": "",
         "cpp": "",
         "csharp": "foreach",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "foreach",
+        "r": ""
       }
     },
     {
@@ -3282,7 +4242,12 @@
         "c": "",
         "cpp": "",
         "csharp": "partial",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3299,7 +4264,12 @@
         "c": "",
         "cpp": "",
         "csharp": "params",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3316,7 +4286,12 @@
         "c": "",
         "cpp": "",
         "csharp": "internal",
-        "kotlin": "internal"
+        "kotlin": "internal",
+        "swift": "internal",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3333,7 +4308,12 @@
         "c": "",
         "cpp": "",
         "csharp": "checked",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3350,7 +4330,12 @@
         "c": "",
         "cpp": "",
         "csharp": "unchecked",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3367,7 +4352,12 @@
         "c": "",
         "cpp": "",
         "csharp": "fixed",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3384,7 +4374,12 @@
         "c": "",
         "cpp": "",
         "csharp": "stackalloc",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3401,7 +4396,12 @@
         "c": "",
         "cpp": "",
         "csharp": "sbyte",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3418,7 +4418,12 @@
         "c": "",
         "cpp": "",
         "csharp": "uint",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3435,7 +4440,12 @@
         "c": "",
         "cpp": "",
         "csharp": "ulong",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3452,7 +4462,12 @@
         "c": "",
         "cpp": "",
         "csharp": "ushort",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3469,7 +4484,12 @@
         "c": "",
         "cpp": "",
         "csharp": "implicit",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3486,7 +4506,12 @@
         "c": "",
         "cpp": "",
         "csharp": "out",
-        "kotlin": "out"
+        "kotlin": "out",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3503,7 +4528,12 @@
         "c": "",
         "cpp": "",
         "csharp": "add",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3520,7 +4550,12 @@
         "c": "",
         "cpp": "",
         "csharp": "remove",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3537,7 +4572,12 @@
         "c": "",
         "cpp": "",
         "csharp": "dynamic",
-        "kotlin": "dynamic"
+        "kotlin": "dynamic",
+        "swift": "dynamic",
+        "dart": "dynamic",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3554,7 +4594,12 @@
         "c": "",
         "cpp": "",
         "csharp": "equals",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3571,7 +4616,12 @@
         "c": "",
         "cpp": "",
         "csharp": "alias",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3588,7 +4638,12 @@
         "c": "",
         "cpp": "",
         "csharp": "nameof",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3605,7 +4660,12 @@
         "c": "",
         "cpp": "",
         "csharp": "when",
-        "kotlin": "when"
+        "kotlin": "when",
+        "swift": "",
+        "dart": "when",
+        "ruby": "when",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3622,7 +4682,12 @@
         "c": "",
         "cpp": "",
         "csharp": "by",
-        "kotlin": "by"
+        "kotlin": "by",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3639,7 +4704,12 @@
         "c": "",
         "cpp": "",
         "csharp": "ascending",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3656,7 +4726,12 @@
         "c": "",
         "cpp": "",
         "csharp": "descending",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3673,7 +4748,12 @@
         "c": "",
         "cpp": "",
         "csharp": "group",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3690,7 +4770,12 @@
         "c": "",
         "cpp": "",
         "csharp": "into",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3707,7 +4792,12 @@
         "c": "",
         "cpp": "",
         "csharp": "join",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3724,7 +4814,12 @@
         "c": "",
         "cpp": "",
         "csharp": "on",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "on",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3741,7 +4836,12 @@
         "c": "",
         "cpp": "",
         "csharp": "orderby",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3758,7 +4858,12 @@
         "c": "",
         "cpp": "",
         "csharp": "value",
-        "kotlin": "value"
+        "kotlin": "value",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3775,7 +4880,12 @@
         "c": "",
         "cpp": "",
         "csharp": "decimal",
-        "kotlin": ""
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3792,7 +4902,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "val"
+        "kotlin": "val",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3809,7 +4924,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "suspend"
+        "kotlin": "suspend",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3826,7 +4946,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "typealias"
+        "kotlin": "typealias",
+        "swift": "typealias",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3843,7 +4968,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "companion"
+        "kotlin": "companion",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3860,7 +4990,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "data"
+        "kotlin": "data",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3877,7 +5012,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "lateinit"
+        "kotlin": "lateinit",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3894,7 +5034,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "reified"
+        "kotlin": "reified",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3911,7 +5056,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "tailrec"
+        "kotlin": "tailrec",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3928,7 +5078,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "infix"
+        "kotlin": "infix",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3945,7 +5100,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "crossinline"
+        "kotlin": "crossinline",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3962,7 +5122,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "noinline"
+        "kotlin": "noinline",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3979,7 +5144,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "actual"
+        "kotlin": "actual",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -3996,7 +5166,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "expect"
+        "kotlin": "expect",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4013,7 +5188,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "annotation"
+        "kotlin": "annotation",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4030,7 +5210,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "vararg"
+        "kotlin": "vararg",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4047,7 +5232,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "init"
+        "kotlin": "init",
+        "swift": "init",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4064,7 +5254,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "open"
+        "kotlin": "open",
+        "swift": "open",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4081,7 +5276,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "inner"
+        "kotlin": "inner",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4098,7 +5298,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "field"
+        "kotlin": "field",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4115,7 +5320,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "receiver"
+        "kotlin": "receiver",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4132,7 +5342,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "setparam"
+        "kotlin": "setparam",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4149,7 +5364,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "param"
+        "kotlin": "param",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4166,7 +5386,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "file"
+        "kotlin": "file",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4183,7 +5408,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "as?"
+        "kotlin": "as?",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4200,7 +5430,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "!in"
+        "kotlin": "!in",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4217,7 +5452,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "!is"
+        "kotlin": "!is",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4234,7 +5474,12 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "property"
+        "kotlin": "property",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
       }
     },
     {
@@ -4251,7 +5496,2674 @@
         "c": "",
         "cpp": "",
         "csharp": "",
-        "kotlin": "it"
+        "kotlin": "it",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "GUARD",
+      "tier": "standard",
+      "group": "swift-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "guard",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "REPEAT",
+      "tier": "standard",
+      "group": "swift-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "repeat",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "repeat"
+      }
+    },
+    {
+      "logical": "THROWS",
+      "tier": "standard",
+      "group": "swift-errors",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "throws",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RETHROWS",
+      "tier": "advanced",
+      "group": "swift-errors",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "rethrows",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "DEINIT",
+      "tier": "standard",
+      "group": "swift-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "deinit",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "SUBSCRIPT",
+      "tier": "standard",
+      "group": "swift-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "subscript",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "INOUT",
+      "tier": "standard",
+      "group": "swift-parameters",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "inout",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "FILEPRIVATE",
+      "tier": "standard",
+      "group": "swift-visibility",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "fileprivate",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "ASSOCIATEDTYPE",
+      "tier": "standard",
+      "group": "swift-generics",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "associatedtype",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PRECEDENCEGROUP",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "precedencegroup",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "EXTENSION",
+      "tier": "standard",
+      "group": "swift-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "extension",
+        "dart": "extension",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "ACTOR",
+      "tier": "standard",
+      "group": "swift-concurrency",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "actor",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "SOME",
+      "tier": "standard",
+      "group": "swift-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "some",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "SWIFT_ANY",
+      "tier": "standard",
+      "group": "swift-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "Any",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "SELF_TYPE",
+      "tier": "standard",
+      "group": "swift-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "Self",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "OPTIONAL",
+      "tier": "advanced",
+      "group": "swift-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "optional",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "MUTATING",
+      "tier": "advanced",
+      "group": "swift-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "mutating",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "NONMUTATING",
+      "tier": "advanced",
+      "group": "swift-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "nonmutating",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "WEAK",
+      "tier": "advanced",
+      "group": "swift-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "weak",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "UNOWNED",
+      "tier": "advanced",
+      "group": "swift-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "unowned",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "DIDSET",
+      "tier": "advanced",
+      "group": "swift-properties",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "didSet",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "WILLSET",
+      "tier": "advanced",
+      "group": "swift-properties",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "willSet",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "CONVENIENCE",
+      "tier": "advanced",
+      "group": "swift-initialization",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "convenience",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "REQUIRED",
+      "tier": "advanced",
+      "group": "swift-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "required",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "INDIRECT",
+      "tier": "advanced",
+      "group": "swift-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "indirect",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "INFIX",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "infix",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PREFIX",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "prefix",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "POSTFIX",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "postfix",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PRECEDENCE",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "precedence",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "ASSOCIATIVITY",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "associativity",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "LEFT",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "left",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RIGHT",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "right",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "NONE",
+      "tier": "advanced",
+      "group": "swift-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "none",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "DISTRIBUTED",
+      "tier": "advanced",
+      "group": "swift-concurrency",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "distributed",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "NONISOLATED",
+      "tier": "advanced",
+      "group": "swift-concurrency",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "nonisolated",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "ISOLATED",
+      "tier": "advanced",
+      "group": "swift-concurrency",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "isolated",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "BORROWING",
+      "tier": "advanced",
+      "group": "swift-ownership",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "borrowing",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "CONSUMING",
+      "tier": "advanced",
+      "group": "swift-ownership",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "consuming",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "MACRO",
+      "tier": "advanced",
+      "group": "swift-macros",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "macro",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "SWIFT_PACKAGE",
+      "tier": "advanced",
+      "group": "swift-modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "package",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "MIXIN",
+      "tier": "standard",
+      "group": "dart-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "mixin",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "DEFERRED",
+      "tier": "advanced",
+      "group": "dart-libraries",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "deferred",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "COVARIANT",
+      "tier": "advanced",
+      "group": "dart-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "covariant",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "FACTORY",
+      "tier": "standard",
+      "group": "dart-constructors",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "factory",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "LATE",
+      "tier": "standard",
+      "group": "dart-variables",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "late",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "LIBRARY",
+      "tier": "standard",
+      "group": "dart-libraries",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "library",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PART",
+      "tier": "standard",
+      "group": "dart-libraries",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "part",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RETHROW",
+      "tier": "standard",
+      "group": "dart-errors",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "rethrow",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "SHOW",
+      "tier": "standard",
+      "group": "dart-libraries",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "show",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "HIDE",
+      "tier": "standard",
+      "group": "dart-libraries",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "hide",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "SYNC",
+      "tier": "standard",
+      "group": "dart-async",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "sync",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "BASE",
+      "tier": "standard",
+      "group": "dart-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "base",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "FUNCTION_TYPE",
+      "tier": "standard",
+      "group": "dart-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "Function",
+        "ruby": "",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RUBY_ENCODING",
+      "tier": "advanced",
+      "group": "ruby-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "__ENCODING__",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RUBY_LINE",
+      "tier": "advanced",
+      "group": "ruby-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "__LINE__",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RUBY_FILE",
+      "tier": "advanced",
+      "group": "ruby-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "__FILE__",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RUBY_BEGIN",
+      "tier": "advanced",
+      "group": "ruby-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "BEGIN",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RUBY_END",
+      "tier": "advanced",
+      "group": "ruby-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "END",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "MODULE",
+      "tier": "standard",
+      "group": "ruby-modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "module",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "END",
+      "tier": "core",
+      "group": "ruby-blocks",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "end",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RESCUE",
+      "tier": "core",
+      "group": "ruby-errors",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "rescue",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "ENSURE",
+      "tier": "core",
+      "group": "ruby-errors",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "ensure",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "UNTIL",
+      "tier": "standard",
+      "group": "ruby-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "until",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "UNLESS",
+      "tier": "standard",
+      "group": "ruby-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "unless",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "ALIAS",
+      "tier": "advanced",
+      "group": "ruby-declarations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "alias",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "UNDEF",
+      "tier": "advanced",
+      "group": "ruby-declarations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "undef",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "NEXT",
+      "tier": "standard",
+      "group": "ruby-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "next",
+        "php": "",
+        "r": "next"
+      }
+    },
+    {
+      "logical": "REDO",
+      "tier": "advanced",
+      "group": "ruby-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "redo",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "RETRY",
+      "tier": "advanced",
+      "group": "ruby-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "retry",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "THEN",
+      "tier": "standard",
+      "group": "ruby-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "then",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "DEFINED",
+      "tier": "advanced",
+      "group": "ruby-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "defined?",
+        "php": "",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_HALT_COMPILER",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__halt_compiler",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ARRAY",
+      "tier": "standard",
+      "group": "php-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "array",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_CALLABLE",
+      "tier": "standard",
+      "group": "php-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "callable",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_CLONE",
+      "tier": "standard",
+      "group": "php-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "clone",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_DIE",
+      "tier": "standard",
+      "group": "php-output",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "die",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ECHO",
+      "tier": "core",
+      "group": "php-output",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "echo",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_EMPTY",
+      "tier": "standard",
+      "group": "php-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "empty",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ENDDECLARE",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "enddeclare",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ENDFOR",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "endfor",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ENDFOREACH",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "endforeach",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ENDIF",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "endif",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ENDSWITCH",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "endswitch",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ENDWHILE",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "endwhile",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_EVAL",
+      "tier": "advanced",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "eval",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_EXIT",
+      "tier": "standard",
+      "group": "php-control",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "exit",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_FN",
+      "tier": "standard",
+      "group": "php-functions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "fn",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_INCLUDE",
+      "tier": "standard",
+      "group": "php-modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "include",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_INCLUDE_ONCE",
+      "tier": "standard",
+      "group": "php-modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "include_once",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_INSTEADOF",
+      "tier": "advanced",
+      "group": "php-traits",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "insteadof",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_ISSET",
+      "tier": "standard",
+      "group": "php-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "isset",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_LIST",
+      "tier": "standard",
+      "group": "php-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "list",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_REQUIRE_ONCE",
+      "tier": "standard",
+      "group": "php-modules",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "require_once",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_UNSET",
+      "tier": "standard",
+      "group": "php-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "unset",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_YIELD_FROM",
+      "tier": "standard",
+      "group": "php-generators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "yield from",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_CLASS_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__CLASS__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_DIR_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__DIR__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_FILE_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__FILE__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_FUNCTION_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__FUNCTION__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_LINE_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__LINE__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_METHOD_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__METHOD__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_NAMESPACE_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__NAMESPACE__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_TRAIT_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__TRAIT__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "PHP_PROPERTY_MAGIC",
+      "tier": "advanced",
+      "group": "php-magic",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "__PROPERTY__",
+        "r": ""
+      }
+    },
+    {
+      "logical": "R_INF",
+      "tier": "standard",
+      "group": "r-constants",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "Inf"
+      }
+    },
+    {
+      "logical": "R_NAN",
+      "tier": "standard",
+      "group": "r-constants",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "NaN"
+      }
+    },
+    {
+      "logical": "R_NA",
+      "tier": "standard",
+      "group": "r-constants",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "NA"
+      }
+    },
+    {
+      "logical": "R_NA_INTEGER",
+      "tier": "advanced",
+      "group": "r-constants",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "NA_integer_"
+      }
+    },
+    {
+      "logical": "R_NA_REAL",
+      "tier": "advanced",
+      "group": "r-constants",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "NA_real_"
+      }
+    },
+    {
+      "logical": "R_NA_COMPLEX",
+      "tier": "advanced",
+      "group": "r-constants",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "NA_complex_"
+      }
+    },
+    {
+      "logical": "R_NA_CHARACTER",
+      "tier": "advanced",
+      "group": "r-constants",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "NA_character_"
+      }
+    },
+    {
+      "logical": "R_DOTS",
+      "tier": "standard",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..."
+      }
+    },
+    {
+      "logical": "R_DOT1",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..1"
+      }
+    },
+    {
+      "logical": "R_DOT2",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..2"
+      }
+    },
+    {
+      "logical": "R_DOT3",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..3"
+      }
+    },
+    {
+      "logical": "R_DOT4",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..4"
+      }
+    },
+    {
+      "logical": "R_DOT5",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..5"
+      }
+    },
+    {
+      "logical": "R_DOT6",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..6"
+      }
+    },
+    {
+      "logical": "R_DOT7",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..7"
+      }
+    },
+    {
+      "logical": "R_DOT8",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..8"
+      }
+    },
+    {
+      "logical": "R_DOT9",
+      "tier": "advanced",
+      "group": "r-special",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "",
+        "swift": "",
+        "dart": "",
+        "ruby": "",
+        "php": "",
+        "r": "..9"
       }
     }
   ]
