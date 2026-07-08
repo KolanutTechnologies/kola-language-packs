@@ -1,5 +1,5 @@
 {
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Reserved pack names and locales for contributors. Read the sections below BEFORE searching taken.*. Auto-generated — run npm run registry from repo root after adding a pack.",
   "howToUse": [
     "1. Read namingRules — how to pick name, languageCode, and locale.",
@@ -135,6 +135,15 @@
         "languageCode": "ak",
         "countryCode": "GH",
         "countryName": "Ghana",
+        "status": "shipped"
+      },
+      {
+        "locale": "ak-GH",
+        "pack": "akan",
+        "displayName": "Akan",
+        "languageCode": "ak",
+        "countryCode": "GH",
+        "countryName": "Ghana",
         "status": "planned"
       },
       {
@@ -171,6 +180,15 @@
         "languageCode": "bm",
         "countryCode": "ML",
         "countryName": "Mali",
+        "status": "shipped"
+      },
+      {
+        "locale": "efi-NG",
+        "pack": "efik",
+        "displayName": "Efik",
+        "languageCode": "efi",
+        "countryCode": "NG",
+        "countryName": "Nigeria",
         "status": "shipped"
       },
       {
@@ -441,6 +459,15 @@
         "languageCode": "wes",
         "countryCode": "CM",
         "countryName": "Cameroon",
+        "status": "shipped"
+      },
+      {
+        "locale": "wes-CM",
+        "pack": "cameroon-pidgin",
+        "displayName": "Cameroon Pidgin",
+        "languageCode": "wes",
+        "countryCode": "CM",
+        "countryName": "Cameroon",
         "status": "planned"
       },
       {
@@ -524,9 +551,11 @@
     ],
     "languageCodesInUse": [
       "af",
+      "ak",
       "am",
       "ar",
       "bm",
+      "efi",
       "ff",
       "fr",
       "ha",
@@ -544,6 +573,7 @@
       "ti",
       "tn",
       "tw",
+      "wes",
       "wo",
       "xh",
       "yo",
@@ -552,76 +582,29 @@
   },
   "shipped": [
     {
-      "name": "yoruba",
-      "languageCode": "yo",
-      "locale": "yo-NG",
-      "displayName": "Yorùbá",
+      "name": "afrikaans",
+      "languageCode": "af",
+      "locale": "af-ZA",
+      "displayName": "Afrikaans",
       "countries": [
-        "NG",
-        "BJ",
-        "TG"
+        "ZA",
+        "NA"
       ],
       "regions": [
-        "West Africa"
+        "Southern Africa"
       ],
       "status": "shipped"
     },
     {
-      "name": "nigerian-pidgin",
-      "languageCode": "pcm",
-      "locale": "pcm-NG",
-      "displayName": "Nigerian Pidgin",
+      "name": "akan",
+      "languageCode": "ak",
+      "locale": "ak-GH",
+      "displayName": "Akan",
       "countries": [
-        "NG"
+        "GH"
       ],
       "regions": [
         "West Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "hausa",
-      "languageCode": "ha",
-      "locale": "ha-NG",
-      "displayName": "Hausa",
-      "countries": [
-        "NG",
-        "NE",
-        "GH",
-        "SD"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "igbo",
-      "languageCode": "ig",
-      "locale": "ig-NG",
-      "displayName": "Igbo",
-      "countries": [
-        "NG"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "swahili",
-      "languageCode": "sw",
-      "locale": "sw-KE",
-      "displayName": "Swahili",
-      "countries": [
-        "KE",
-        "TZ",
-        "UG",
-        "CD",
-        "RW"
-      ],
-      "regions": [
-        "East Africa"
       ],
       "status": "shipped"
     },
@@ -635,171 +618,6 @@
       ],
       "regions": [
         "East Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "zulu",
-      "languageCode": "zu",
-      "locale": "zu-ZA",
-      "displayName": "isiZulu",
-      "countries": [
-        "ZA"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "xhosa",
-      "languageCode": "xh",
-      "locale": "xh-ZA",
-      "displayName": "isiXhosa",
-      "countries": [
-        "ZA"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "twi",
-      "languageCode": "tw",
-      "locale": "tw-GH",
-      "displayName": "Twi",
-      "countries": [
-        "GH"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "somali",
-      "languageCode": "so",
-      "locale": "so-SO",
-      "displayName": "Somali",
-      "countries": [
-        "SO",
-        "ET",
-        "KE",
-        "DJ"
-      ],
-      "regions": [
-        "Horn of Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "wolof",
-      "languageCode": "wo",
-      "locale": "wo-SN",
-      "displayName": "Wolof",
-      "countries": [
-        "SN",
-        "GM",
-        "MR"
-      ],
-      "regions": [
-        "West Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "lingala",
-      "languageCode": "ln",
-      "locale": "ln-CD",
-      "displayName": "Lingala",
-      "countries": [
-        "CD",
-        "CG"
-      ],
-      "regions": [
-        "Central Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "kinyarwanda",
-      "languageCode": "rw",
-      "locale": "rw-RW",
-      "displayName": "Kinyarwanda",
-      "countries": [
-        "RW"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "luganda",
-      "languageCode": "lg",
-      "locale": "lg-UG",
-      "displayName": "Luganda",
-      "countries": [
-        "UG"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "shona",
-      "languageCode": "sn",
-      "locale": "sn-ZW",
-      "displayName": "Shona",
-      "countries": [
-        "ZW"
-      ],
-      "regions": [
-        "Southern Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "oromo",
-      "languageCode": "om",
-      "locale": "om-ET",
-      "displayName": "Oromo",
-      "countries": [
-        "ET",
-        "KE"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "tigrinya",
-      "languageCode": "ti",
-      "locale": "ti-ER",
-      "displayName": "Tigrinya",
-      "countries": [
-        "ER",
-        "ET"
-      ],
-      "regions": [
-        "East Africa"
-      ],
-      "status": "shipped"
-    },
-    {
-      "name": "afrikaans",
-      "languageCode": "af",
-      "locale": "af-ZA",
-      "displayName": "Afrikaans",
-      "countries": [
-        "ZA",
-        "NA"
-      ],
-      "regions": [
-        "Southern Africa"
       ],
       "status": "shipped"
     },
@@ -823,6 +641,48 @@
       "regions": [
         "North Africa",
         "East Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "bambara",
+      "languageCode": "bm",
+      "locale": "bm-ML",
+      "displayName": "Bambara",
+      "countries": [
+        "ML",
+        "SN",
+        "CI",
+        "BF"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "cameroon-pidgin",
+      "languageCode": "wes",
+      "locale": "wes-CM",
+      "displayName": "Cameroon Pidgin",
+      "countries": [
+        "CM"
+      ],
+      "regions": [
+        "Central Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "efik",
+      "languageCode": "efi",
+      "locale": "efi-NG",
+      "displayName": "Efik",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
       ],
       "status": "shipped"
     },
@@ -882,6 +742,120 @@
       "status": "shipped"
     },
     {
+      "name": "hausa",
+      "languageCode": "ha",
+      "locale": "ha-NG",
+      "displayName": "Hausa",
+      "countries": [
+        "NG",
+        "NE",
+        "GH",
+        "SD"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "igbo",
+      "languageCode": "ig",
+      "locale": "ig-NG",
+      "displayName": "Igbo",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "kinyarwanda",
+      "languageCode": "rw",
+      "locale": "rw-RW",
+      "displayName": "Kinyarwanda",
+      "countries": [
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "lingala",
+      "languageCode": "ln",
+      "locale": "ln-CD",
+      "displayName": "Lingala",
+      "countries": [
+        "CD",
+        "CG"
+      ],
+      "regions": [
+        "Central Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "luganda",
+      "languageCode": "lg",
+      "locale": "lg-UG",
+      "displayName": "Luganda",
+      "countries": [
+        "UG"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "nigerian-pidgin",
+      "languageCode": "pcm",
+      "locale": "pcm-NG",
+      "displayName": "Nigerian Pidgin",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "oromo",
+      "languageCode": "om",
+      "locale": "om-ET",
+      "displayName": "Oromo",
+      "countries": [
+        "ET",
+        "KE"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "portuguese-africa",
+      "languageCode": "pt",
+      "locale": "pt-AO",
+      "displayName": "Portuguese (Africa)",
+      "countries": [
+        "AO",
+        "MZ",
+        "CV",
+        "GW",
+        "ST"
+      ],
+      "regions": [
+        "Southern Africa",
+        "West Africa"
+      ],
+      "status": "shipped"
+    },
+    {
       "name": "sesotho",
       "languageCode": "st",
       "locale": "st-LS",
@@ -911,15 +885,72 @@
       "status": "shipped"
     },
     {
-      "name": "bambara",
-      "languageCode": "bm",
-      "locale": "bm-ML",
-      "displayName": "Bambara",
+      "name": "shona",
+      "languageCode": "sn",
+      "locale": "sn-ZW",
+      "displayName": "Shona",
       "countries": [
-        "ML",
-        "SN",
-        "CI",
-        "BF"
+        "ZW"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "somali",
+      "languageCode": "so",
+      "locale": "so-SO",
+      "displayName": "Somali",
+      "countries": [
+        "SO",
+        "ET",
+        "KE",
+        "DJ"
+      ],
+      "regions": [
+        "Horn of Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "swahili",
+      "languageCode": "sw",
+      "locale": "sw-KE",
+      "displayName": "Swahili",
+      "countries": [
+        "KE",
+        "TZ",
+        "UG",
+        "CD",
+        "RW"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "tigrinya",
+      "languageCode": "ti",
+      "locale": "ti-ER",
+      "displayName": "Tigrinya",
+      "countries": [
+        "ER",
+        "ET"
+      ],
+      "regions": [
+        "East Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "twi",
+      "languageCode": "tw",
+      "locale": "tw-GH",
+      "displayName": "Twi",
+      "countries": [
+        "GH"
       ],
       "regions": [
         "West Africa"
@@ -927,20 +958,58 @@
       "status": "shipped"
     },
     {
-      "name": "portuguese-africa",
-      "languageCode": "pt",
-      "locale": "pt-AO",
-      "displayName": "Portuguese (Africa)",
+      "name": "wolof",
+      "languageCode": "wo",
+      "locale": "wo-SN",
+      "displayName": "Wolof",
       "countries": [
-        "AO",
-        "MZ",
-        "CV",
-        "GW",
-        "ST"
+        "SN",
+        "GM",
+        "MR"
       ],
       "regions": [
-        "Southern Africa",
         "West Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "xhosa",
+      "languageCode": "xh",
+      "locale": "xh-ZA",
+      "displayName": "isiXhosa",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "yoruba",
+      "languageCode": "yo",
+      "locale": "yo-NG",
+      "displayName": "Yorùbá",
+      "countries": [
+        "NG",
+        "BJ",
+        "TG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "zulu",
+      "languageCode": "zu",
+      "locale": "zu-ZA",
+      "displayName": "isiZulu",
+      "countries": [
+        "ZA"
+      ],
+      "regions": [
+        "Southern Africa"
       ],
       "status": "shipped"
     }

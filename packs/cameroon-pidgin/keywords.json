@@ -1,0 +1,1130 @@
+{
+  "IF": [
+    "if",
+    "if"
+  ],
+  "ELSE": [
+    "if no be so",
+    "else"
+  ],
+  "FOR": [
+    "for",
+    "for"
+  ],
+  "WHILE": [
+    "while e dey",
+    "while"
+  ],
+  "BREAK": [
+    "stop",
+    "break"
+  ],
+  "CONTINUE": [
+    "continue",
+    "continue"
+  ],
+  "SWITCH": [
+    "check which one",
+    "switch"
+  ],
+  "CASE": [
+    "if na",
+    "case"
+  ],
+  "DEFAULT": [
+    "if nothing match",
+    "default"
+  ],
+  "FUNCTION": [
+    "make function",
+    "function"
+  ],
+  "RETURN": [
+    "bring back",
+    "return"
+  ],
+  "ASYNC": [
+    "async",
+    "async"
+  ],
+  "AWAIT": [
+    "wait for",
+    "await"
+  ],
+  "TRY": [
+    "try am",
+    "try"
+  ],
+  "CATCH": [
+    "catch am",
+    "catch"
+  ],
+  "FINALLY": [
+    "for last",
+    "finally"
+  ],
+  "THROW": [
+    "throw am",
+    "throw"
+  ],
+  "LET": [
+    "make we talk say",
+    "let"
+  ],
+  "CONST": [
+    "e no go change",
+    "const"
+  ],
+  "CLASS": [
+    "kind of thing",
+    "class"
+  ],
+  "EXTENDS": [
+    "e come from",
+    "extends"
+  ],
+  "NEW": [
+    "new one",
+    "new"
+  ],
+  "THIS": [
+    "this one",
+    "this"
+  ],
+  "IMPORT": [
+    "bring come",
+    "import"
+  ],
+  "EXPORT": [
+    "send go",
+    "export"
+  ],
+  "PRINT": [
+    "show",
+    "print"
+  ],
+  "TRUE": [
+    "e correct",
+    "true"
+  ],
+  "FALSE": [
+    "e no correct",
+    "false"
+  ],
+  "NULL": [
+    "nothing",
+    "null"
+  ],
+  "UNDEFINED": [
+    "e no define",
+    "undefined"
+  ],
+  "ELIF": [
+    "else"
+  ],
+  "LOOP": [
+    "loop"
+  ],
+  "MATCH": [
+    "match"
+  ],
+  "GOTO": [
+    "goto"
+  ],
+  "FALLTHROUGH": [
+    "fallthrough"
+  ],
+  "SELECT": [
+    "select"
+  ],
+  "RANGE": [
+    "range"
+  ],
+  "YIELD": [
+    "yield"
+  ],
+  "LAMBDA": [
+    "lambda"
+  ],
+  "DEFER": [
+    "defer"
+  ],
+  "GO": [
+    "go"
+  ],
+  "VAR": [
+    "var"
+  ],
+  "MUT": [
+    "mut"
+  ],
+  "GLOBAL": [
+    "global"
+  ],
+  "NONLOCAL": [
+    "nonlocal"
+  ],
+  "STRUCT": [
+    "struct"
+  ],
+  "TRAIT": [
+    "trait"
+  ],
+  "IMPL": [
+    "impl"
+  ],
+  "INTERFACE": [
+    "interface"
+  ],
+  "ENUM": [
+    "enum"
+  ],
+  "TYPE": [
+    "type"
+  ],
+  "IMPLEMENTS": [
+    "implements"
+  ],
+  "SELF": [
+    "self"
+  ],
+  "SUPER": [
+    "super"
+  ],
+  "STATIC": [
+    "static"
+  ],
+  "FROM": [
+    "from"
+  ],
+  "AS": [
+    "as"
+  ],
+  "MODULE": [
+    "module"
+  ],
+  "NAMESPACE": [
+    "namespace"
+  ],
+  "PACKAGE": [
+    "package"
+  ],
+  "USE": [
+    "use"
+  ],
+  "PUB": [
+    "public"
+  ],
+  "CRATE": [
+    "crate"
+  ],
+  "WITH": [
+    "with"
+  ],
+  "PASS": [
+    "pass"
+  ],
+  "ASSERT": [
+    "assert"
+  ],
+  "ASSERTS": [
+    "asserts"
+  ],
+  "NIL": [
+    "null"
+  ],
+  "UNSAFE": [
+    "unsafe"
+  ],
+  "EXTERN": [
+    "declare"
+  ],
+  "CHAN": [
+    "chan"
+  ],
+  "MAP": [
+    "map"
+  ],
+  "AND": [
+    "and"
+  ],
+  "OR": [
+    "or"
+  ],
+  "NOT": [
+    "not"
+  ],
+  "IN": [
+    "in"
+  ],
+  "IS": [
+    "is"
+  ],
+  "DEL": [
+    "del"
+  ],
+  "DO": [
+    "do"
+  ],
+  "DEBUGGER": [
+    "debugger"
+  ],
+  "TYPEOF": [
+    "typeof"
+  ],
+  "VOID": [
+    "void"
+  ],
+  "INSTANCEOF": [
+    "instanceof"
+  ],
+  "PRIVATE": [
+    "private"
+  ],
+  "PROTECTED": [
+    "protected"
+  ],
+  "PUBLIC": [
+    "public"
+  ],
+  "READONLY": [
+    "readonly"
+  ],
+  "ABSTRACT": [
+    "abstract"
+  ],
+  "DECLARE": [
+    "declare"
+  ],
+  "GET": [
+    "get"
+  ],
+  "SET": [
+    "set"
+  ],
+  "INFER": [
+    "infer"
+  ],
+  "KEYOF": [
+    "keyof"
+  ],
+  "UNIQUE": [
+    "unique"
+  ],
+  "SATISFIES": [
+    "satisfies"
+  ],
+  "ANY": [
+    "any"
+  ],
+  "BOOLEAN": [
+    "boolean"
+  ],
+  "NUMBER": [
+    "number"
+  ],
+  "STRING": [
+    "string"
+  ],
+  "SYMBOL": [
+    "symbol"
+  ],
+  "OBJECT": [
+    "object"
+  ],
+  "NEVER": [
+    "never"
+  ],
+  "UNKNOWN": [
+    "unknown"
+  ],
+  "BIGINT": [
+    "bigint"
+  ],
+  "CONSTRUCTOR": [
+    "constructor"
+  ],
+  "REQUIRE": [
+    "require"
+  ],
+  "USING": [
+    "using"
+  ],
+  "OF": [
+    "of"
+  ],
+  "DYN": [
+    "dyn"
+  ],
+  "MOVE": [
+    "move"
+  ],
+  "REF": [
+    "ref"
+  ],
+  "WHERE": [
+    "where"
+  ],
+  "GEN": [
+    "gen"
+  ],
+  "LAZY": [
+    "lazy"
+  ],
+  "BYTE": [
+    "byte"
+  ],
+  "CHAR": [
+    "char"
+  ],
+  "SHORT": [
+    "short"
+  ],
+  "INT": [
+    "int"
+  ],
+  "LONG": [
+    "long"
+  ],
+  "FLOAT": [
+    "float"
+  ],
+  "DOUBLE": [
+    "double"
+  ],
+  "FINAL": [
+    "final"
+  ],
+  "NATIVE": [
+    "native"
+  ],
+  "STRICTFP": [
+    "strictfp"
+  ],
+  "SYNCHRONIZED": [
+    "synchronized"
+  ],
+  "THROWS": [
+    "throws"
+  ],
+  "TRANSIENT": [
+    "transient"
+  ],
+  "VOLATILE": [
+    "volatile"
+  ],
+  "UNDERSCORE": [
+    "_"
+  ],
+  "AUTO": [
+    "auto"
+  ],
+  "REGISTER": [
+    "register"
+  ],
+  "SIGNED": [
+    "signed"
+  ],
+  "UNSIGNED": [
+    "unsigned"
+  ],
+  "SIZEOF": [
+    "sizeof"
+  ],
+  "TYPEDEF": [
+    "typedef"
+  ],
+  "UNION": [
+    "union"
+  ],
+  "INLINE": [
+    "inline"
+  ],
+  "RESTRICT": [
+    "restrict"
+  ],
+  "C_BOOL": [
+    "c_bool"
+  ],
+  "C_COMPLEX": [
+    "c_complex"
+  ],
+  "C_IMAGINARY": [
+    "c_imaginary"
+  ],
+  "C_ALIGNAS": [
+    "c_alignas"
+  ],
+  "C_ALIGNOF": [
+    "c_alignof"
+  ],
+  "C_ATOMIC": [
+    "c_atomic"
+  ],
+  "C_GENERIC": [
+    "c_generic"
+  ],
+  "C_NORETURN": [
+    "c_noreturn"
+  ],
+  "C_STATIC_ASSERT": [
+    "c_static_assert"
+  ],
+  "C_THREAD_LOCAL": [
+    "c_thread_local"
+  ],
+  "ASM": [
+    "asm"
+  ],
+  "TEMPLATE": [
+    "template"
+  ],
+  "VIRTUAL": [
+    "virtual"
+  ],
+  "TYPENAME": [
+    "typename"
+  ],
+  "CONSTEXPR": [
+    "constexpr"
+  ],
+  "CONSTEVAL": [
+    "consteval"
+  ],
+  "CONSTINIT": [
+    "constinit"
+  ],
+  "NOEXCEPT": [
+    "noexcept"
+  ],
+  "DECLTYPE": [
+    "decltype"
+  ],
+  "NULLPTR": [
+    "nullptr"
+  ],
+  "OPERATOR": [
+    "operator"
+  ],
+  "FRIEND": [
+    "friend"
+  ],
+  "EXPLICIT": [
+    "explicit"
+  ],
+  "MUTABLE": [
+    "mutable"
+  ],
+  "CONCEPT": [
+    "concept"
+  ],
+  "REQUIRES": [
+    "requires"
+  ],
+  "CO_AWAIT": [
+    "co_await"
+  ],
+  "CO_RETURN": [
+    "co_return"
+  ],
+  "CO_YIELD": [
+    "co_yield"
+  ],
+  "CHAR8_T": [
+    "char8_t"
+  ],
+  "CHAR16_T": [
+    "char16_t"
+  ],
+  "CHAR32_T": [
+    "char32_t"
+  ],
+  "WCHAR_T": [
+    "wchar_t"
+  ],
+  "TYPEID": [
+    "typeid"
+  ],
+  "STATIC_CAST": [
+    "static_cast"
+  ],
+  "DYNAMIC_CAST": [
+    "dynamic_cast"
+  ],
+  "REINTERPRET_CAST": [
+    "reinterpret_cast"
+  ],
+  "CONST_CAST": [
+    "const_cast"
+  ],
+  "DELETE": [
+    "delete"
+  ],
+  "BITAND": [
+    "bitand"
+  ],
+  "BITOR": [
+    "bitor"
+  ],
+  "COMPL": [
+    "compl"
+  ],
+  "XOR": [
+    "xor"
+  ],
+  "XOR_EQ": [
+    "xor_eq"
+  ],
+  "AND_EQ": [
+    "and_eq"
+  ],
+  "OR_EQ": [
+    "or_eq"
+  ],
+  "NOT_EQ": [
+    "not_eq"
+  ],
+  "DELEGATE": [
+    "delegate"
+  ],
+  "EVENT": [
+    "event"
+  ],
+  "LOCK": [
+    "lock"
+  ],
+  "SEALED": [
+    "sealed"
+  ],
+  "OVERRIDE": [
+    "override"
+  ],
+  "FOREACH": [
+    "foreach"
+  ],
+  "PARTIAL": [
+    "partial"
+  ],
+  "PARAMS": [
+    "params"
+  ],
+  "INTERNAL": [
+    "internal"
+  ],
+  "CHECKED": [
+    "checked"
+  ],
+  "UNCHECKED": [
+    "unchecked"
+  ],
+  "FIXED": [
+    "fixed"
+  ],
+  "STACKALLOC": [
+    "stackalloc"
+  ],
+  "SBYTE": [
+    "sbyte"
+  ],
+  "UINT": [
+    "uint"
+  ],
+  "ULONG": [
+    "ulong"
+  ],
+  "USHORT": [
+    "ushort"
+  ],
+  "IMPLICIT": [
+    "implicit"
+  ],
+  "OUT": [
+    "out"
+  ],
+  "ADD": [
+    "add"
+  ],
+  "REMOVE": [
+    "remove"
+  ],
+  "DYNAMIC": [
+    "dynamic"
+  ],
+  "EQUALS": [
+    "equals"
+  ],
+  "ALIAS": [
+    "alias"
+  ],
+  "NAMEOF": [
+    "nameof"
+  ],
+  "WHEN": [
+    "when"
+  ],
+  "BY": [
+    "by"
+  ],
+  "ASCENDING": [
+    "ascending"
+  ],
+  "DESCENDING": [
+    "descending"
+  ],
+  "GROUP": [
+    "group"
+  ],
+  "INTO": [
+    "into"
+  ],
+  "JOIN": [
+    "join"
+  ],
+  "ON": [
+    "on"
+  ],
+  "ORDERBY": [
+    "orderby"
+  ],
+  "VALUE": [
+    "value"
+  ],
+  "DECIMAL": [
+    "decimal"
+  ],
+  "VAL": [
+    "val"
+  ],
+  "SUSPEND": [
+    "suspend"
+  ],
+  "TYPEALIAS": [
+    "typealias"
+  ],
+  "COMPANION": [
+    "companion"
+  ],
+  "DATA": [
+    "data"
+  ],
+  "LATEINIT": [
+    "lateinit"
+  ],
+  "REIFIED": [
+    "reified"
+  ],
+  "TAILREC": [
+    "tailrec"
+  ],
+  "INFIX": [
+    "infix"
+  ],
+  "CROSSINLINE": [
+    "crossinline"
+  ],
+  "NOINLINE": [
+    "noinline"
+  ],
+  "ACTUAL": [
+    "actual"
+  ],
+  "EXPECT": [
+    "expect"
+  ],
+  "ANNOTATION": [
+    "annotation"
+  ],
+  "VARARG": [
+    "vararg"
+  ],
+  "INIT": [
+    "init"
+  ],
+  "OPEN": [
+    "open"
+  ],
+  "INNER": [
+    "inner"
+  ],
+  "FIELD": [
+    "field"
+  ],
+  "RECEIVER": [
+    "receiver"
+  ],
+  "SETPARAM": [
+    "setparam"
+  ],
+  "PARAM": [
+    "param"
+  ],
+  "FILE": [
+    "file"
+  ],
+  "AS_SAFE": [
+    "as_safe"
+  ],
+  "NOT_IN": [
+    "not_in"
+  ],
+  "NOT_IS": [
+    "not_is"
+  ],
+  "PROPERTY": [
+    "property"
+  ],
+  "IT": [
+    "it"
+  ],
+  "GUARD": [
+    "guard"
+  ],
+  "REPEAT": [
+    "repeat"
+  ],
+  "RETHROWS": [
+    "rethrows"
+  ],
+  "DEINIT": [
+    "deinit"
+  ],
+  "SUBSCRIPT": [
+    "subscript"
+  ],
+  "INOUT": [
+    "inout"
+  ],
+  "FILEPRIVATE": [
+    "fileprivate"
+  ],
+  "ASSOCIATEDTYPE": [
+    "associatedtype"
+  ],
+  "PRECEDENCEGROUP": [
+    "precedencegroup"
+  ],
+  "EXTENSION": [
+    "extension"
+  ],
+  "ACTOR": [
+    "actor"
+  ],
+  "SOME": [
+    "some"
+  ],
+  "SWIFT_ANY": [
+    "swift_any"
+  ],
+  "SELF_TYPE": [
+    "self_type"
+  ],
+  "OPTIONAL": [
+    "optional"
+  ],
+  "MUTATING": [
+    "mutating"
+  ],
+  "NONMUTATING": [
+    "nonmutating"
+  ],
+  "WEAK": [
+    "weak"
+  ],
+  "UNOWNED": [
+    "unowned"
+  ],
+  "DIDSET": [
+    "didset"
+  ],
+  "WILLSET": [
+    "willset"
+  ],
+  "CONVENIENCE": [
+    "convenience"
+  ],
+  "REQUIRED": [
+    "required"
+  ],
+  "INDIRECT": [
+    "indirect"
+  ],
+  "PREFIX": [
+    "prefix"
+  ],
+  "POSTFIX": [
+    "postfix"
+  ],
+  "PRECEDENCE": [
+    "precedence"
+  ],
+  "ASSOCIATIVITY": [
+    "associativity"
+  ],
+  "LEFT": [
+    "left"
+  ],
+  "RIGHT": [
+    "right"
+  ],
+  "NONE": [
+    "none"
+  ],
+  "DISTRIBUTED": [
+    "distributed"
+  ],
+  "NONISOLATED": [
+    "nonisolated"
+  ],
+  "ISOLATED": [
+    "isolated"
+  ],
+  "BORROWING": [
+    "borrowing"
+  ],
+  "CONSUMING": [
+    "consuming"
+  ],
+  "MACRO": [
+    "macro"
+  ],
+  "SWIFT_PACKAGE": [
+    "swift_package"
+  ],
+  "MIXIN": [
+    "mixin"
+  ],
+  "DEFERRED": [
+    "deferred"
+  ],
+  "COVARIANT": [
+    "covariant"
+  ],
+  "FACTORY": [
+    "factory"
+  ],
+  "LATE": [
+    "late"
+  ],
+  "LIBRARY": [
+    "library"
+  ],
+  "PART": [
+    "part"
+  ],
+  "RETHROW": [
+    "rethrow"
+  ],
+  "SHOW": [
+    "show"
+  ],
+  "HIDE": [
+    "hide"
+  ],
+  "SYNC": [
+    "sync"
+  ],
+  "BASE": [
+    "base"
+  ],
+  "FUNCTION_TYPE": [
+    "function_type"
+  ],
+  "RUBY_ENCODING": [
+    "ruby_encoding"
+  ],
+  "RUBY_LINE": [
+    "ruby_line"
+  ],
+  "RUBY_FILE": [
+    "ruby_file"
+  ],
+  "RUBY_BEGIN": [
+    "ruby_begin"
+  ],
+  "RUBY_END": [
+    "ruby_end"
+  ],
+  "END": [
+    "end"
+  ],
+  "RESCUE": [
+    "rescue"
+  ],
+  "ENSURE": [
+    "ensure"
+  ],
+  "UNTIL": [
+    "until"
+  ],
+  "UNLESS": [
+    "unless"
+  ],
+  "UNDEF": [
+    "undef"
+  ],
+  "NEXT": [
+    "next"
+  ],
+  "REDO": [
+    "redo"
+  ],
+  "RETRY": [
+    "retry"
+  ],
+  "THEN": [
+    "then"
+  ],
+  "DEFINED": [
+    "defined"
+  ],
+  "PHP_HALT_COMPILER": [
+    "php_halt_compiler"
+  ],
+  "PHP_ARRAY": [
+    "php_array"
+  ],
+  "PHP_CALLABLE": [
+    "php_callable"
+  ],
+  "PHP_CLONE": [
+    "php_clone"
+  ],
+  "PHP_DIE": [
+    "php_die"
+  ],
+  "PHP_ECHO": [
+    "php_echo"
+  ],
+  "PHP_EMPTY": [
+    "php_empty"
+  ],
+  "PHP_ENDDECLARE": [
+    "php_enddeclare"
+  ],
+  "PHP_ENDFOR": [
+    "php_endfor"
+  ],
+  "PHP_ENDFOREACH": [
+    "php_endforeach"
+  ],
+  "PHP_ENDIF": [
+    "php_endif"
+  ],
+  "PHP_ENDSWITCH": [
+    "php_endswitch"
+  ],
+  "PHP_ENDWHILE": [
+    "php_endwhile"
+  ],
+  "PHP_EVAL": [
+    "php_eval"
+  ],
+  "PHP_EXIT": [
+    "php_exit"
+  ],
+  "PHP_FN": [
+    "php_fn"
+  ],
+  "PHP_INCLUDE": [
+    "php_include"
+  ],
+  "PHP_INCLUDE_ONCE": [
+    "php_include_once"
+  ],
+  "PHP_INSTEADOF": [
+    "php_insteadof"
+  ],
+  "PHP_ISSET": [
+    "php_isset"
+  ],
+  "PHP_LIST": [
+    "php_list"
+  ],
+  "PHP_REQUIRE_ONCE": [
+    "php_require_once"
+  ],
+  "PHP_UNSET": [
+    "php_unset"
+  ],
+  "PHP_YIELD_FROM": [
+    "php_yield_from"
+  ],
+  "PHP_CLASS_MAGIC": [
+    "php_class_magic"
+  ],
+  "PHP_DIR_MAGIC": [
+    "php_dir_magic"
+  ],
+  "PHP_FILE_MAGIC": [
+    "php_file_magic"
+  ],
+  "PHP_FUNCTION_MAGIC": [
+    "php_function_magic"
+  ],
+  "PHP_LINE_MAGIC": [
+    "php_line_magic"
+  ],
+  "PHP_METHOD_MAGIC": [
+    "php_method_magic"
+  ],
+  "PHP_NAMESPACE_MAGIC": [
+    "php_namespace_magic"
+  ],
+  "PHP_TRAIT_MAGIC": [
+    "php_trait_magic"
+  ],
+  "PHP_PROPERTY_MAGIC": [
+    "php_property_magic"
+  ],
+  "R_INF": [
+    "r_inf"
+  ],
+  "R_NAN": [
+    "r_nan"
+  ],
+  "R_NA": [
+    "r_na"
+  ],
+  "R_NA_INTEGER": [
+    "r_na_integer"
+  ],
+  "R_NA_REAL": [
+    "r_na_real"
+  ],
+  "R_NA_COMPLEX": [
+    "r_na_complex"
+  ],
+  "R_NA_CHARACTER": [
+    "r_na_character"
+  ],
+  "R_DOTS": [
+    "r_dots"
+  ],
+  "R_DOT1": [
+    "r_dot1"
+  ],
+  "R_DOT2": [
+    "r_dot2"
+  ],
+  "R_DOT3": [
+    "r_dot3"
+  ],
+  "R_DOT4": [
+    "r_dot4"
+  ],
+  "R_DOT5": [
+    "r_dot5"
+  ],
+  "R_DOT6": [
+    "r_dot6"
+  ],
+  "R_DOT7": [
+    "r_dot7"
+  ],
+  "R_DOT8": [
+    "r_dot8"
+  ],
+  "R_DOT9": [
+    "r_dot9"
+  ]
+}

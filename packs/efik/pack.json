@@ -1,38 +1,16 @@
 {
-  "name": "french",
-  "languageCode": "fr",
-  "locale": "fr-SN",
+  "name": "efik",
+  "languageCode": "efi",
+  "locale": "efi-NG",
   "countries": [
-    "SN",
-    "CI",
-    "ML",
-    "BF",
-    "NE",
-    "TG",
-    "BJ",
-    "CM",
-    "GA",
-    "CG",
-    "CD",
-    "MG",
-    "RW",
-    "BI",
-    "TD",
-    "CF",
-    "GN",
-    "MR",
-    "DJ",
-    "KM"
+    "NG"
   ],
   "regions": [
-    "West Africa",
-    "Central Africa",
-    "East Africa",
-    "Indian Ocean"
+    "West Africa"
   ],
   "version": "0.10.0",
-  "displayName": "French",
-  "description": "French keyword map for Francophone Africa — starter pack",
+  "displayName": "Efik",
+  "description": "Efik keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
     "KolanutTechnologies"
@@ -56,123 +34,124 @@
   ],
   "keywords": {
     "IF": [
-      "si",
+      "ke",
+      "sok",
       "if"
     ],
     "ELSE": [
-      "sinon",
+      "keed",
       "else"
     ],
     "FOR": [
-      "pour",
+      "na",
       "for"
     ],
     "WHILE": [
-      "tant que",
+      "ke ini",
       "while"
     ],
     "BREAK": [
-      "casser",
+      "tre",
       "break"
     ],
     "CONTINUE": [
-      "continuer",
+      "ka iso",
       "continue"
     ],
     "SWITCH": [
-      "choisir",
+      "sat",
       "switch"
     ],
     "CASE": [
-      "cas",
+      "ini",
       "case"
     ],
     "DEFAULT": [
-      "par défaut",
+      "nditoi",
       "default"
     ],
     "FUNCTION": [
-      "fonction",
+      "ufok",
       "function"
     ],
     "RETURN": [
-      "retourner",
+      "fiak",
       "return"
     ],
     "ASYNC": [
-      "asynchrone",
+      "async",
       "async"
     ],
     "AWAIT": [
-      "attendre",
+      "bet",
       "await"
     ],
     "TRY": [
-      "essayer",
+      "nam",
       "try"
     ],
     "CATCH": [
-      "attraper",
+      "nyim",
       "catch"
     ],
     "FINALLY": [
-      "enfin",
+      "ke mme",
       "finally"
     ],
     "THROW": [
-      "lancer",
+      "nuk",
       "throw"
     ],
     "LET": [
-      "soit",
+      "yak",
       "let"
     ],
     "CONST": [
-      "constante",
+      "nkanna",
       "const"
     ],
     "CLASS": [
-      "classe",
+      "otúk",
       "class"
     ],
     "EXTENDS": [
-      "étend",
+      "toho",
       "extends"
     ],
     "NEW": [
-      "nouveau",
+      "ufok fo",
       "new"
     ],
     "THIS": [
-      "ceci",
+      "idem",
       "this"
     ],
     "IMPORT": [
-      "importer",
+      "bo",
       "import"
     ],
     "EXPORT": [
-      "exporter",
+      "nó",
       "export"
     ],
     "PRINT": [
-      "afficher",
+      "wut",
       "print"
     ],
     "TRUE": [
-      "vrai",
+      "eti",
       "true"
     ],
     "FALSE": [
-      "faux",
+      "inyene",
       "false"
     ],
     "NULL": [
-      "nul",
+      "nkpo",
       "null"
     ],
     "UNDEFINED": [
-      "indéfini",
+      "nde",
       "undefined"
     ],
     "ELIF": [
@@ -1184,9 +1163,10 @@
       "r_dot9"
     ]
   },
-  "scopeNote": "International French baseline for Francophone Africa. Vocabulary varies by country — prefer aliases over one national form.",
+  "scopeNote": "Efik of southeastern Nigeria (Cross River region).",
   "recommendedPartners": [
-    "OIF",
-    "ACALAN"
+    "ALT-I",
+    "ACALAN",
+    "University of Calabar (Linguistics)"
   ]
 }

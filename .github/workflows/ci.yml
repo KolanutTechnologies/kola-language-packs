@@ -22,4 +22,5 @@ jobs:
 
       - run: npm ci
       - run: npm test
+      - run: git diff --exit-code README.md
       - run: node scripts/sync-pack-versions.mjs --check

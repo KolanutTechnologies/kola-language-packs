@@ -6,12 +6,19 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-07-08
+
+### Added
+
+- **Cameroon Pidgin** (`wes-CM`) and **Efik** (`efi-NG`) language packs — **28 African language packs**
+
 ## [0.9.0] - 2026-07-08
 
 ### Added
 
 - **Swift**, **Dart**, **Ruby**, **PHP**, and **R** programming targets — **15 targets** total, **370 logical tokens**, 0 coverage gaps
 - Maintainer scripts: `add-swift-target.mjs`, `add-dart-target.mjs`, `add-ruby-target.mjs`, `add-php-target.mjs`, `add-r-target.mjs`
+- **Akan** language pack (`ak-GH`) — **26 African language packs**
 
 ### Changed
 

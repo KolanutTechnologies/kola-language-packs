@@ -5,7 +5,7 @@
 <!-- badges:start -->
 
 [![npm](https://img.shields.io/npm/v/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)
-[![African language packs](https://img.shields.io/badge/African%20language%20packs-25-gold)](./packs/coverage-summary.json)
+[![African language packs](https://img.shields.io/badge/African%20language%20packs-28-gold)](./packs/coverage-summary.json)
 [![Programming targets](https://img.shields.io/badge/Programming%20targets-15-blue)](./packs/coverage-summary.json)
 [![Logical tokens](https://img.shields.io/badge/Logical%20tokens-370-lightgrey)](./packs/logical-tokens.json)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -103,8 +103,11 @@ We use the same code systems as major platforms and localization projects — **
 
 ## What’s in this repo
 
-- **25 shipped African language packs** (and a roadmap for more)
-- **149 logical tokens** that every pack maps (shared across all programming targets)
+<!-- whats-in-repo:start -->
+- **28 shipped African language packs** (and a roadmap for more)
+- **370 logical tokens** that every pack maps (shared across all programming targets)
+<!-- whats-in-repo:end -->
+
 - **Schemas + validation** to keep packs consistent
 - **Coverage checks** against official keyword lists for each target language
 
@@ -125,12 +128,13 @@ In short:
 
 | What we cover | Shipped | Planned | Source of truth |
 |---|---:|---:|---|
-| **African language packs** | 25 | +40 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
+| **African language packs** | 28 | +40 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
 | **Programming targets** | 15 | +1 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
 | **Logical tokens** | 370 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
 | **Keyword coverage gaps** | 0 | — | [`packs/coverage-summary.json`](./packs/coverage-summary.json) |
 
 <!-- metrics:end -->
+
 ## Keyword coverage (0 gaps)
 
 We track coverage against official reserved keywords for each transpile target. Some concepts are “structural” (they don’t have a 1:1 keyword in a given language, but still need a consistent logical token).
@@ -169,15 +173,17 @@ npm install @kolanut/language-packs
 
 ## Use it in code
 
+<!-- code-example-stats:start -->
 ```typescript
 import { listPackNames, loadPack, flattenKeywords } from '@kolanut/language-packs';
 
-const packs = await listPackNames(); // e.g. 25 packs
+const packs = await listPackNames(); // e.g. 28 packs
 
 const yoruba = await loadPack('yoruba');
 const keywords = flattenKeywords(yoruba);
-// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps 129 logical tokens
+// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps 370 logical tokens
 ```
+<!-- code-example-stats:end -->
 
 ## Example: English keywords vs localized phrases (illustrative)
 
@@ -197,15 +203,17 @@ If you prefer to consume JSON directly (Rust/Go/Python/CLI tools), start here:
 - [`packs/index.json`](./packs/index.json): pack manifest (locale, region, countries, status)
 - [`packs/language-registry.json`](./packs/language-registry.json): taken and planned `name` / `locale` / `languageCode` (check before adding a pack)
 - [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md): how to name packs and write locales
-- [`packs/logical-tokens.json`](./packs/logical-tokens.json): the 129-token registry (the thing packs must fully map)
+- [`packs/logical-tokens.json`](./packs/logical-tokens.json): the 370-token registry (the thing packs must fully map)
 - [`packs/by-country.json`](./packs/by-country.json): `NG` → `["yoruba", "igbo", ...]`
 - [`packs/by-region.json`](./packs/by-region.json): region → pack names
 - [`packs/coverage-summary.json`](./packs/coverage-summary.json): auto-generated coverage report
 - [`packs/languages-roadmap.json`](./packs/languages-roadmap.json): shipped vs planned packs
 
-## Languages shipped (25)
+<!-- shipped-languages-heading:start -->
+## Languages shipped (28)
+<!-- shipped-languages-heading:end -->
 
-These are the packs currently shipped in v0.1.
+These are the 28 packs currently shipped.
 
 - Flags are shown for the **primary locale** (quick scanning). Many packs apply to multiple countries—see [`packs/index.json`](./packs/index.json) for the full list.
 - We use **Twemoji flag images** (not emoji characters) so the flags render reliably on both GitHub and npm.
@@ -261,8 +269,8 @@ We track roadmaps in [`packs/languages-roadmap.json`](./packs/languages-roadmap.
 
 - **Planned African languages** (by region + priority) — 40 more packs on the list
 - **Planned programming targets** — C++, Kotlin, Swift, Dart, Ruby, PHP, C# (`v0.4.0+`–`v0.5.0+`); R, Clojure (`v0.5.0+` / `v0.6.0+`) — one target per release; sample keywords + checklist in the JSON
-- **Logical tokens** — **149 shipped** (20 C-only + 14 Java-only + `UNDERSCORE`; `GEN`, `LAZY` in v0.2.0); stdlib tier → **v2.0.0**
-- **Programming targets** — **7 shipped** (C added in v0.4.0, Java in v0.3.0); C++ next → **v0.4.0+**
+- **Logical tokens** — **370 shipped** (20 C-only + 14 Java-only + `UNDERSCORE`; `GEN`, `LAZY` in v0.2.0); stdlib tier → **v2.0.0**
+- **Programming targets** — **15 shipped** (C added in v0.4.0, Java in v0.3.0); C++ next → **v0.4.0+**
 - **Planned token tier** — stdlib / builtins (`len`, `map`, `Array`, `fmt`, …) → target **v2.0.0** (design-first; not required for beginner keyword transpilation)
 
 Suggested release sequence (also in the JSON): **v0.1.x** → **v0.2.0** (shipped) → **v0.3.0** / **v0.4.0** (shipped) → **v0.4.0+** (current — C++ next) → **v0.5.0+** → **v2.0.0** (stdlib tier).
@@ -294,17 +302,17 @@ Contributions are welcome—especially from native speakers and educators.
 |------|-----------|
 | `packs/<language>/pack.json` | **Edit** — metadata (`locale`, `countries`, `regions`, `scopeNote`) + keyword mappings |
 | `packs/<language>/keywords.json` | **Edit** — same keyword mappings (must match `pack.json`) |
-| `packs/logical-tokens.json` | **Read only** — checklist of all 129 concepts; do not edit for translations |
+| `packs/logical-tokens.json` | **Read only** — checklist of all 370 concepts; do not edit for translations |
 | `packs/index.json` | **Edit only when adding a new pack** |
 | [`packs/language-registry.json`](./packs/language-registry.json) | **Check before naming** — shipped + planned identifiers |
 | [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md) | **Read for new packs** — full field list, locale format, template |
 
-A valid contribution is a **complete pack** (correct scope metadata + all 129 tokens translated), not a few word changes in isolation.
+A valid contribution is a **complete pack** (correct scope metadata + all 370 tokens translated), not a few word changes in isolation.
 
 ### Two ways to contribute
 
 1. **Improve an existing pack** — e.g. `packs/zulu/` — fix phrasing, add dialect aliases, clarify `scopeNote`
-2. **Add a new pack** — copy an existing pack, set all metadata (`name`, `languageCode`, `locale`, `displayName`, `description`, …), translate all 129 tokens, add to `packs/index.json`, run `npm run registry`
+2. **Add a new pack** — copy an existing pack, set all metadata (`name`, `languageCode`, `locale`, `displayName`, `description`, …), translate all 370 tokens, add to `packs/index.json`, run `npm run registry`
 
 One language pack per PR. Run `npm test` from the **repo root** before opening the PR.
 
@@ -332,7 +340,7 @@ Docs: [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`packs/REPO_MAP.md`](./packs/RE
 
 1. Pick the right pack (or create a new variant) — see `packs/index.json` and `PACK_SCOPE.md`
 2. Edit `pack.json` metadata and translations; keep `keywords.json` in sync
-3. Map every token listed in `packs/logical-tokens.json` (129 total)
+3. Map every token listed in `packs/logical-tokens.json` (370 total)
 4. Run `npm test`
 5. Open a PR for native-speaker review
 

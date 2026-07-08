@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-08T13:03:06.359Z",
+  "generatedAt": "2026-07-08T13:05:33.760Z",
   "logicalTokenCount": 370,
-  "africanLanguagePackCount": 26,
+  "africanLanguagePackCount": 28,
   "transpileTargets": [
     "javascript",
     "python",
@@ -196,6 +196,30 @@
         "SN",
         "CI",
         "BF"
+      ],
+      "regions": [
+        "West Africa"
+      ]
+    },
+    {
+      "name": "cameroon-pidgin",
+      "displayName": "Cameroon Pidgin",
+      "languageCode": "wes",
+      "locale": "wes-CM",
+      "countries": [
+        "CM"
+      ],
+      "regions": [
+        "Central Africa"
+      ]
+    },
+    {
+      "name": "efik",
+      "displayName": "Efik",
+      "languageCode": "efi",
+      "locale": "efi-NG",
+      "countries": [
+        "NG"
       ],
       "regions": [
         "West Africa"

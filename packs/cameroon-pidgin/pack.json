@@ -1,38 +1,16 @@
 {
-  "name": "french",
-  "languageCode": "fr",
-  "locale": "fr-SN",
+  "name": "cameroon-pidgin",
+  "languageCode": "wes",
+  "locale": "wes-CM",
   "countries": [
-    "SN",
-    "CI",
-    "ML",
-    "BF",
-    "NE",
-    "TG",
-    "BJ",
-    "CM",
-    "GA",
-    "CG",
-    "CD",
-    "MG",
-    "RW",
-    "BI",
-    "TD",
-    "CF",
-    "GN",
-    "MR",
-    "DJ",
-    "KM"
+    "CM"
   ],
   "regions": [
-    "West Africa",
-    "Central Africa",
-    "East Africa",
-    "Indian Ocean"
+    "Central Africa"
   ],
   "version": "0.10.0",
-  "displayName": "French",
-  "description": "French keyword map for Francophone Africa — starter pack",
+  "displayName": "Cameroon Pidgin",
+  "description": "Cameroon Pidgin keyword map — bridge language for Cameroonian developers",
   "reviewStatus": "starter",
   "contributors": [
     "KolanutTechnologies"
@@ -56,123 +34,123 @@
   ],
   "keywords": {
     "IF": [
-      "si",
+      "if",
       "if"
     ],
     "ELSE": [
-      "sinon",
+      "if no be so",
       "else"
     ],
     "FOR": [
-      "pour",
+      "for",
       "for"
     ],
     "WHILE": [
-      "tant que",
+      "while e dey",
       "while"
     ],
     "BREAK": [
-      "casser",
+      "stop",
       "break"
     ],
     "CONTINUE": [
-      "continuer",
+      "continue",
       "continue"
     ],
     "SWITCH": [
-      "choisir",
+      "check which one",
       "switch"
     ],
     "CASE": [
-      "cas",
+      "if na",
       "case"
     ],
     "DEFAULT": [
-      "par défaut",
+      "if nothing match",
       "default"
     ],
     "FUNCTION": [
-      "fonction",
+      "make function",
       "function"
     ],
     "RETURN": [
-      "retourner",
+      "bring back",
       "return"
     ],
     "ASYNC": [
-      "asynchrone",
+      "async",
       "async"
     ],
     "AWAIT": [
-      "attendre",
+      "wait for",
       "await"
     ],
     "TRY": [
-      "essayer",
+      "try am",
       "try"
     ],
     "CATCH": [
-      "attraper",
+      "catch am",
       "catch"
     ],
     "FINALLY": [
-      "enfin",
+      "for last",
       "finally"
     ],
     "THROW": [
-      "lancer",
+      "throw am",
       "throw"
     ],
     "LET": [
-      "soit",
+      "make we talk say",
       "let"
     ],
     "CONST": [
-      "constante",
+      "e no go change",
       "const"
     ],
     "CLASS": [
-      "classe",
+      "kind of thing",
       "class"
     ],
     "EXTENDS": [
-      "étend",
+      "e come from",
       "extends"
     ],
     "NEW": [
-      "nouveau",
+      "new one",
       "new"
     ],
     "THIS": [
-      "ceci",
+      "this one",
       "this"
     ],
     "IMPORT": [
-      "importer",
+      "bring come",
       "import"
     ],
     "EXPORT": [
-      "exporter",
+      "send go",
       "export"
     ],
     "PRINT": [
-      "afficher",
+      "show",
       "print"
     ],
     "TRUE": [
-      "vrai",
+      "e correct",
       "true"
     ],
     "FALSE": [
-      "faux",
+      "e no correct",
       "false"
     ],
     "NULL": [
-      "nul",
+      "nothing",
       "null"
     ],
     "UNDEFINED": [
-      "indéfini",
+      "e no define",
       "undefined"
     ],
     "ELIF": [
@@ -1184,9 +1162,10 @@
       "r_dot9"
     ]
   },
-  "scopeNote": "International French baseline for Francophone Africa. Vocabulary varies by country — prefer aliases over one national form.",
+  "scopeNote": "Cameroon Pidgin (Kamtok) only. Not Nigerian Pidgin or other West African creoles — those have separate packs.",
   "recommendedPartners": [
-    "OIF",
-    "ACALAN"
+    "ACALAN",
+    "Masakhane",
+    "University of Buea"
   ]
 }

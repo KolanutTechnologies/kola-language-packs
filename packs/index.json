@@ -12,7 +12,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -43,7 +43,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -73,7 +73,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -114,7 +114,7 @@
         "North Africa",
         "East Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -148,7 +148,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -167,6 +167,66 @@
         "r"
       ],
       "ideReady": false
+    },
+    {
+      "name": "cameroon-pidgin",
+      "languageCode": "wes",
+      "locale": "wes-CM",
+      "displayName": "Cameroon Pidgin",
+      "countries": [
+        "CM"
+      ],
+      "regions": [
+        "Central Africa"
+      ],
+      "version": "0.10.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ]
+    },
+    {
+      "name": "efik",
+      "languageCode": "efi",
+      "locale": "efi-NG",
+      "displayName": "Efik",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
+      ],
+      "version": "0.10.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c",
+        "cpp",
+        "csharp",
+        "kotlin",
+        "swift",
+        "dart",
+        "ruby",
+        "php",
+        "r"
+      ]
     },
     {
       "name": "french",
@@ -201,7 +261,7 @@
         "East Africa",
         "Indian Ocean"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -239,7 +299,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -273,7 +333,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -304,7 +364,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -335,7 +395,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -367,7 +427,7 @@
       "regions": [
         "Central Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -398,7 +458,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -429,7 +489,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -461,7 +521,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -497,7 +557,7 @@
         "Southern Africa",
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -529,7 +589,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -562,7 +622,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -593,7 +653,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -627,7 +687,7 @@
       "regions": [
         "Horn of Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -662,7 +722,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -694,7 +754,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -725,7 +785,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -758,7 +818,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -789,7 +849,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -822,7 +882,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
@@ -853,7 +913,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "targets": [
         "javascript",
         "python",
