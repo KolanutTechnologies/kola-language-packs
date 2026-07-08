@@ -27,9 +27,9 @@
     "kosa",
     "error"
   ],
-  "data": [
+  "payload": [
     "data",
-    "data"
+    "payload"
   ],
   "list": [
     "orodha",
@@ -67,9 +67,9 @@
     "pato",
     "output"
   ],
-  "file": [
+  "file_ref": [
     "faili",
-    "file"
+    "file_ref"
   ],
   "path": [
     "njia",

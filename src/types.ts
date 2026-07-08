@@ -10,7 +10,8 @@ export type TargetLanguage =
   | 'java'
   | 'c'
   | 'cpp'
-  | 'csharp';
+  | 'csharp'
+  | 'kotlin';
 
 export type GlossTierMap = Record<string, GlossTierValue>;
 

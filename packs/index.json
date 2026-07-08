@@ -13,7 +13,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -23,7 +23,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": true
     },
@@ -38,7 +39,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -48,7 +49,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": true
     },
@@ -66,7 +68,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -76,7 +78,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": true
     },
@@ -91,7 +94,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -101,7 +104,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": true
     },
@@ -120,7 +124,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -130,7 +134,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": true
     },
@@ -145,7 +150,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -155,7 +160,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -170,7 +176,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -180,7 +186,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -195,7 +202,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -205,7 +212,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -220,7 +228,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -230,7 +238,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -248,7 +257,7 @@
       "regions": [
         "Horn of Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -258,7 +267,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -275,7 +285,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -285,7 +295,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -301,7 +312,7 @@
       "regions": [
         "Central Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -311,7 +322,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -326,7 +338,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -336,7 +348,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -351,7 +364,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -361,7 +374,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -376,7 +390,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -386,7 +400,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -402,7 +417,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -412,7 +427,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -428,7 +444,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -438,7 +454,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -454,7 +471,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -464,7 +481,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -489,7 +507,7 @@
         "North Africa",
         "East Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -499,7 +517,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -536,7 +555,7 @@
         "East Africa",
         "Indian Ocean"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -546,7 +565,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -568,7 +588,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -578,7 +598,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -594,7 +615,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -604,7 +625,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -621,7 +643,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -631,7 +653,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -649,7 +672,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -659,7 +682,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     },
@@ -679,7 +703,7 @@
         "Southern Africa",
         "West Africa"
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "targets": [
         "javascript",
         "python",
@@ -689,7 +713,8 @@
         "java",
         "c",
         "cpp",
-        "csharp"
+        "csharp",
+        "kotlin"
       ],
       "ideReady": false
     }

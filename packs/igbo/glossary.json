@@ -27,9 +27,9 @@
     "njehie",
     "error"
   ],
-  "data": [
+  "payload": [
     "ụdịdị",
-    "data"
+    "payload"
   ],
   "list": [
     "ndepụta",
@@ -67,9 +67,9 @@
     "mpụta",
     "output"
   ],
-  "file": [
+  "file_ref": [
     "faịlụ",
-    "file"
+    "file_ref"
   ],
   "path": [
     "ụzọ",

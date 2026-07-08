@@ -96,7 +96,8 @@
           "java",
           "c",
           "cpp",
-          "csharp"
+          "csharp",
+          "kotlin"
         ]
       },
       "minItems": 1

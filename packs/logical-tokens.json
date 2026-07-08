@@ -1,5 +1,5 @@
 {
-  "version": "4.7.0",
+  "version": "4.8.0",
   "description": "Canonical logical tokens every language pack must map. targets.* values are emitted keywords; empty string means no direct keyword (transpiler uses another construct). Includes a typescript-types tier for TS-only type keywords.",
   "targets": [
     "javascript",
@@ -10,7 +10,8 @@
     "java",
     "c",
     "cpp",
-    "csharp"
+    "csharp",
+    "kotlin"
   ],
   "required": [
     "IF",
@@ -33,7 +34,8 @@
         "java": "if",
         "c": "if",
         "cpp": "if",
-        "csharp": "if"
+        "csharp": "if",
+        "kotlin": "if"
       }
     },
     {
@@ -49,7 +51,8 @@
         "java": "else",
         "c": "else",
         "cpp": "else",
-        "csharp": "else"
+        "csharp": "else",
+        "kotlin": "else"
       }
     },
     {
@@ -65,7 +68,8 @@
         "java": "else if",
         "c": "else if",
         "cpp": "else if",
-        "csharp": "else if"
+        "csharp": "else if",
+        "kotlin": "else if"
       }
     },
     {
@@ -81,7 +85,8 @@
         "java": "for",
         "c": "for",
         "cpp": "for",
-        "csharp": "for"
+        "csharp": "for",
+        "kotlin": "for"
       }
     },
     {
@@ -97,7 +102,8 @@
         "java": "while",
         "c": "while",
         "cpp": "while",
-        "csharp": "while"
+        "csharp": "while",
+        "kotlin": "while"
       }
     },
     {
@@ -113,7 +119,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -129,7 +136,8 @@
         "java": "break",
         "c": "break",
         "cpp": "break",
-        "csharp": "break"
+        "csharp": "break",
+        "kotlin": "break"
       }
     },
     {
@@ -145,7 +153,8 @@
         "java": "continue",
         "c": "continue",
         "cpp": "continue",
-        "csharp": "continue"
+        "csharp": "continue",
+        "kotlin": "continue"
       }
     },
     {
@@ -161,7 +170,8 @@
         "java": "switch",
         "c": "switch",
         "cpp": "switch",
-        "csharp": "switch"
+        "csharp": "switch",
+        "kotlin": "when"
       }
     },
     {
@@ -177,7 +187,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "when"
       }
     },
     {
@@ -193,7 +204,8 @@
         "java": "case",
         "c": "case",
         "cpp": "case",
-        "csharp": "case"
+        "csharp": "case",
+        "kotlin": ""
       }
     },
     {
@@ -209,7 +221,8 @@
         "java": "default",
         "c": "default",
         "cpp": "default",
-        "csharp": "default"
+        "csharp": "default",
+        "kotlin": ""
       }
     },
     {
@@ -225,7 +238,8 @@
         "java": "goto",
         "c": "goto",
         "cpp": "goto",
-        "csharp": "goto"
+        "csharp": "goto",
+        "kotlin": ""
       }
     },
     {
@@ -241,7 +255,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -257,7 +272,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "select"
+        "csharp": "select",
+        "kotlin": ""
       }
     },
     {
@@ -273,7 +289,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -289,7 +306,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "fun"
       }
     },
     {
@@ -305,7 +323,8 @@
         "java": "return",
         "c": "return",
         "cpp": "return",
-        "csharp": "return"
+        "csharp": "return",
+        "kotlin": "return"
       }
     },
     {
@@ -321,7 +340,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "async"
+        "csharp": "async",
+        "kotlin": ""
       }
     },
     {
@@ -337,7 +357,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "await"
+        "csharp": "await",
+        "kotlin": ""
       }
     },
     {
@@ -353,7 +374,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "yield"
+        "csharp": "yield",
+        "kotlin": ""
       }
     },
     {
@@ -369,7 +391,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -385,7 +408,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -401,7 +425,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -417,7 +442,8 @@
         "java": "try",
         "c": "",
         "cpp": "try",
-        "csharp": "try"
+        "csharp": "try",
+        "kotlin": "try"
       }
     },
     {
@@ -433,7 +459,8 @@
         "java": "catch",
         "c": "",
         "cpp": "catch",
-        "csharp": "catch"
+        "csharp": "catch",
+        "kotlin": "catch"
       }
     },
     {
@@ -449,7 +476,8 @@
         "java": "finally",
         "c": "",
         "cpp": "",
-        "csharp": "finally"
+        "csharp": "finally",
+        "kotlin": "finally"
       }
     },
     {
@@ -465,7 +493,8 @@
         "java": "throw",
         "c": "",
         "cpp": "throw",
-        "csharp": "throw"
+        "csharp": "throw",
+        "kotlin": "throw"
       }
     },
     {
@@ -481,7 +510,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "let"
+        "csharp": "let",
+        "kotlin": ""
       }
     },
     {
@@ -497,7 +527,8 @@
         "java": "const",
         "c": "const",
         "cpp": "const",
-        "csharp": "const"
+        "csharp": "const",
+        "kotlin": "const"
       }
     },
     {
@@ -513,7 +544,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "var"
+        "csharp": "var",
+        "kotlin": "var"
       }
     },
     {
@@ -529,7 +561,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -545,7 +578,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "global"
+        "csharp": "global",
+        "kotlin": ""
       }
     },
     {
@@ -561,7 +595,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -577,7 +612,8 @@
         "java": "class",
         "c": "",
         "cpp": "class",
-        "csharp": "class"
+        "csharp": "class",
+        "kotlin": "class"
       }
     },
     {
@@ -593,7 +629,8 @@
         "java": "",
         "c": "struct",
         "cpp": "struct",
-        "csharp": "struct"
+        "csharp": "struct",
+        "kotlin": ""
       }
     },
     {
@@ -609,7 +646,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -625,7 +663,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -641,7 +680,8 @@
         "java": "interface",
         "c": "",
         "cpp": "",
-        "csharp": "interface"
+        "csharp": "interface",
+        "kotlin": "interface"
       }
     },
     {
@@ -657,7 +697,8 @@
         "java": "enum",
         "c": "enum",
         "cpp": "enum",
-        "csharp": "enum"
+        "csharp": "enum",
+        "kotlin": "enum"
       }
     },
     {
@@ -673,7 +714,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -689,7 +731,8 @@
         "java": "extends",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -705,7 +748,8 @@
         "java": "implements",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -721,7 +765,8 @@
         "java": "new",
         "c": "",
         "cpp": "new",
-        "csharp": "new"
+        "csharp": "new",
+        "kotlin": ""
       }
     },
     {
@@ -737,7 +782,8 @@
         "java": "this",
         "c": "",
         "cpp": "this",
-        "csharp": "this"
+        "csharp": "this",
+        "kotlin": "this"
       }
     },
     {
@@ -753,7 +799,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "this"
       }
     },
     {
@@ -769,7 +816,8 @@
         "java": "super",
         "c": "",
         "cpp": "",
-        "csharp": "base"
+        "csharp": "base",
+        "kotlin": "super"
       }
     },
     {
@@ -785,7 +833,8 @@
         "java": "static",
         "c": "static",
         "cpp": "static",
-        "csharp": "static"
+        "csharp": "static",
+        "kotlin": ""
       }
     },
     {
@@ -801,7 +850,8 @@
         "java": "import",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "import"
       }
     },
     {
@@ -817,7 +867,8 @@
         "java": "",
         "c": "",
         "cpp": "export",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -833,7 +884,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "from"
+        "csharp": "from",
+        "kotlin": ""
       }
     },
     {
@@ -849,7 +901,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "as"
+        "csharp": "as",
+        "kotlin": "as"
       }
     },
     {
@@ -865,7 +918,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -881,7 +935,8 @@
         "java": "",
         "c": "",
         "cpp": "namespace",
-        "csharp": "namespace"
+        "csharp": "namespace",
+        "kotlin": ""
       }
     },
     {
@@ -897,7 +952,8 @@
         "java": "package",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "package"
       }
     },
     {
@@ -913,7 +969,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -929,7 +986,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -945,7 +1003,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -961,7 +1020,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -977,7 +1037,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -993,7 +1054,8 @@
         "java": "assert",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1009,7 +1071,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1025,7 +1088,8 @@
         "java": "System.out.println",
         "c": "printf",
         "cpp": "",
-        "csharp": "Console.WriteLine"
+        "csharp": "Console.WriteLine",
+        "kotlin": "println"
       }
     },
     {
@@ -1041,7 +1105,8 @@
         "java": "",
         "c": "",
         "cpp": "true",
-        "csharp": "true"
+        "csharp": "true",
+        "kotlin": "true"
       }
     },
     {
@@ -1057,7 +1122,8 @@
         "java": "",
         "c": "",
         "cpp": "false",
-        "csharp": "false"
+        "csharp": "false",
+        "kotlin": "false"
       }
     },
     {
@@ -1073,7 +1139,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "null"
+        "csharp": "null",
+        "kotlin": "null"
       }
     },
     {
@@ -1089,7 +1156,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1105,7 +1173,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1121,7 +1190,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "unsafe"
+        "csharp": "unsafe",
+        "kotlin": ""
       }
     },
     {
@@ -1137,7 +1207,8 @@
         "java": "",
         "c": "extern",
         "cpp": "extern",
-        "csharp": "extern"
+        "csharp": "extern",
+        "kotlin": "external"
       }
     },
     {
@@ -1153,7 +1224,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1169,7 +1241,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1185,7 +1258,8 @@
         "java": "",
         "c": "",
         "cpp": "and",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1201,7 +1275,8 @@
         "java": "",
         "c": "",
         "cpp": "or",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1217,7 +1292,8 @@
         "java": "",
         "c": "",
         "cpp": "not",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1233,7 +1309,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "in"
+        "csharp": "in",
+        "kotlin": "in"
       }
     },
     {
@@ -1249,7 +1326,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "is"
+        "csharp": "is",
+        "kotlin": "is"
       }
     },
     {
@@ -1265,7 +1343,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1281,7 +1360,8 @@
         "java": "do",
         "c": "do",
         "cpp": "do",
-        "csharp": "do"
+        "csharp": "do",
+        "kotlin": "do"
       }
     },
     {
@@ -1297,7 +1377,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1313,7 +1394,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "typeof"
+        "csharp": "typeof",
+        "kotlin": "typeof"
       }
     },
     {
@@ -1329,7 +1411,8 @@
         "java": "void",
         "c": "void",
         "cpp": "void",
-        "csharp": "void"
+        "csharp": "void",
+        "kotlin": ""
       }
     },
     {
@@ -1345,7 +1428,8 @@
         "java": "instanceof",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1361,7 +1445,8 @@
         "java": "private",
         "c": "",
         "cpp": "private",
-        "csharp": "private"
+        "csharp": "private",
+        "kotlin": "private"
       }
     },
     {
@@ -1377,7 +1462,8 @@
         "java": "protected",
         "c": "",
         "cpp": "protected",
-        "csharp": "protected"
+        "csharp": "protected",
+        "kotlin": "protected"
       }
     },
     {
@@ -1393,7 +1479,8 @@
         "java": "public",
         "c": "",
         "cpp": "public",
-        "csharp": "public"
+        "csharp": "public",
+        "kotlin": "public"
       }
     },
     {
@@ -1409,7 +1496,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "readonly"
+        "csharp": "readonly",
+        "kotlin": ""
       }
     },
     {
@@ -1425,7 +1513,8 @@
         "java": "abstract",
         "c": "",
         "cpp": "",
-        "csharp": "abstract"
+        "csharp": "abstract",
+        "kotlin": "abstract"
       }
     },
     {
@@ -1441,7 +1530,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1457,7 +1547,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "get"
+        "csharp": "get",
+        "kotlin": "get"
       }
     },
     {
@@ -1473,7 +1564,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "set"
+        "csharp": "set",
+        "kotlin": "set"
       }
     },
     {
@@ -1489,7 +1581,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1505,7 +1598,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1521,7 +1615,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1537,7 +1632,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1553,7 +1649,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1569,7 +1666,8 @@
         "java": "boolean",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1585,7 +1683,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1601,7 +1700,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "string"
+        "csharp": "string",
+        "kotlin": ""
       }
     },
     {
@@ -1617,7 +1717,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1633,7 +1734,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "object"
+        "csharp": "object",
+        "kotlin": "object"
       }
     },
     {
@@ -1649,7 +1751,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1665,7 +1768,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1681,7 +1785,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1697,7 +1802,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "constructor"
       }
     },
     {
@@ -1713,7 +1819,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1729,7 +1836,8 @@
         "java": "",
         "c": "",
         "cpp": "using",
-        "csharp": "using"
+        "csharp": "using",
+        "kotlin": ""
       }
     },
     {
@@ -1745,7 +1853,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1761,7 +1870,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1777,7 +1887,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1793,7 +1904,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "ref"
+        "csharp": "ref",
+        "kotlin": ""
       }
     },
     {
@@ -1809,7 +1921,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "where"
+        "csharp": "where",
+        "kotlin": "where"
       }
     },
     {
@@ -1825,7 +1938,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1841,7 +1955,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -1857,7 +1972,8 @@
         "java": "byte",
         "c": "",
         "cpp": "",
-        "csharp": "byte"
+        "csharp": "byte",
+        "kotlin": ""
       }
     },
     {
@@ -1873,7 +1989,8 @@
         "java": "char",
         "c": "char",
         "cpp": "char",
-        "csharp": "char"
+        "csharp": "char",
+        "kotlin": ""
       }
     },
     {
@@ -1889,7 +2006,8 @@
         "java": "short",
         "c": "short",
         "cpp": "short",
-        "csharp": "short"
+        "csharp": "short",
+        "kotlin": ""
       }
     },
     {
@@ -1905,7 +2023,8 @@
         "java": "int",
         "c": "int",
         "cpp": "int",
-        "csharp": "int"
+        "csharp": "int",
+        "kotlin": ""
       }
     },
     {
@@ -1921,7 +2040,8 @@
         "java": "long",
         "c": "long",
         "cpp": "long",
-        "csharp": "long"
+        "csharp": "long",
+        "kotlin": ""
       }
     },
     {
@@ -1937,7 +2057,8 @@
         "java": "float",
         "c": "float",
         "cpp": "float",
-        "csharp": "float"
+        "csharp": "float",
+        "kotlin": ""
       }
     },
     {
@@ -1953,7 +2074,8 @@
         "java": "double",
         "c": "double",
         "cpp": "double",
-        "csharp": "double"
+        "csharp": "double",
+        "kotlin": ""
       }
     },
     {
@@ -1969,7 +2091,8 @@
         "java": "final",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "final"
       }
     },
     {
@@ -1985,7 +2108,8 @@
         "java": "native",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2001,7 +2125,8 @@
         "java": "strictfp",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2017,7 +2142,8 @@
         "java": "synchronized",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2033,7 +2159,8 @@
         "java": "throws",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2049,7 +2176,8 @@
         "java": "transient",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2065,7 +2193,8 @@
         "java": "volatile",
         "c": "volatile",
         "cpp": "volatile",
-        "csharp": "volatile"
+        "csharp": "volatile",
+        "kotlin": ""
       }
     },
     {
@@ -2081,7 +2210,8 @@
         "java": "_",
         "c": "",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "_"
       }
     },
     {
@@ -2097,7 +2227,8 @@
         "java": "",
         "c": "auto",
         "cpp": "auto",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2113,7 +2244,8 @@
         "java": "",
         "c": "register",
         "cpp": "register",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2129,7 +2261,8 @@
         "java": "",
         "c": "signed",
         "cpp": "signed",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2145,7 +2278,8 @@
         "java": "",
         "c": "unsigned",
         "cpp": "unsigned",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2161,7 +2295,8 @@
         "java": "",
         "c": "sizeof",
         "cpp": "sizeof",
-        "csharp": "sizeof"
+        "csharp": "sizeof",
+        "kotlin": ""
       }
     },
     {
@@ -2177,7 +2312,8 @@
         "java": "",
         "c": "typedef",
         "cpp": "typedef",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2193,7 +2329,8 @@
         "java": "",
         "c": "union",
         "cpp": "union",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2209,7 +2346,8 @@
         "java": "",
         "c": "inline",
         "cpp": "inline",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": "inline"
       }
     },
     {
@@ -2225,7 +2363,8 @@
         "java": "",
         "c": "restrict",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2241,7 +2380,8 @@
         "java": "",
         "c": "_Bool",
         "cpp": "bool",
-        "csharp": "bool"
+        "csharp": "bool",
+        "kotlin": ""
       }
     },
     {
@@ -2257,7 +2397,8 @@
         "java": "",
         "c": "_Complex",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2273,7 +2414,8 @@
         "java": "",
         "c": "_Imaginary",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2289,7 +2431,8 @@
         "java": "",
         "c": "_Alignas",
         "cpp": "alignas",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2305,7 +2448,8 @@
         "java": "",
         "c": "_Alignof",
         "cpp": "alignof",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2321,7 +2465,8 @@
         "java": "",
         "c": "_Atomic",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2337,7 +2482,8 @@
         "java": "",
         "c": "_Generic",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2353,7 +2499,8 @@
         "java": "",
         "c": "_Noreturn",
         "cpp": "",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2369,7 +2516,8 @@
         "java": "",
         "c": "_Static_assert",
         "cpp": "static_assert",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2385,7 +2533,8 @@
         "java": "",
         "c": "_Thread_local",
         "cpp": "thread_local",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2401,7 +2550,8 @@
         "java": "",
         "c": "asm",
         "cpp": "asm",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2417,7 +2567,8 @@
         "java": "",
         "c": "",
         "cpp": "template",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2433,7 +2584,8 @@
         "java": "",
         "c": "",
         "cpp": "virtual",
-        "csharp": "virtual"
+        "csharp": "virtual",
+        "kotlin": ""
       }
     },
     {
@@ -2449,7 +2601,8 @@
         "java": "",
         "c": "",
         "cpp": "typename",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2465,7 +2618,8 @@
         "java": "",
         "c": "",
         "cpp": "constexpr",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2481,7 +2635,8 @@
         "java": "",
         "c": "",
         "cpp": "consteval",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2497,7 +2652,8 @@
         "java": "",
         "c": "",
         "cpp": "constinit",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2513,7 +2669,8 @@
         "java": "",
         "c": "",
         "cpp": "noexcept",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2529,7 +2686,8 @@
         "java": "",
         "c": "",
         "cpp": "decltype",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2545,7 +2703,8 @@
         "java": "",
         "c": "",
         "cpp": "nullptr",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2561,7 +2720,8 @@
         "java": "",
         "c": "",
         "cpp": "operator",
-        "csharp": "operator"
+        "csharp": "operator",
+        "kotlin": "operator"
       }
     },
     {
@@ -2577,7 +2737,8 @@
         "java": "",
         "c": "",
         "cpp": "friend",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2593,7 +2754,8 @@
         "java": "",
         "c": "",
         "cpp": "explicit",
-        "csharp": "explicit"
+        "csharp": "explicit",
+        "kotlin": ""
       }
     },
     {
@@ -2609,7 +2771,8 @@
         "java": "",
         "c": "",
         "cpp": "mutable",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2625,7 +2788,8 @@
         "java": "",
         "c": "",
         "cpp": "concept",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2641,7 +2805,8 @@
         "java": "",
         "c": "",
         "cpp": "requires",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2657,7 +2822,8 @@
         "java": "",
         "c": "",
         "cpp": "co_await",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2673,7 +2839,8 @@
         "java": "",
         "c": "",
         "cpp": "co_return",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2689,7 +2856,8 @@
         "java": "",
         "c": "",
         "cpp": "co_yield",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2705,7 +2873,8 @@
         "java": "",
         "c": "",
         "cpp": "char8_t",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2721,7 +2890,8 @@
         "java": "",
         "c": "",
         "cpp": "char16_t",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2737,7 +2907,8 @@
         "java": "",
         "c": "",
         "cpp": "char32_t",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2753,7 +2924,8 @@
         "java": "",
         "c": "",
         "cpp": "wchar_t",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2769,7 +2941,8 @@
         "java": "",
         "c": "",
         "cpp": "typeid",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2785,7 +2958,8 @@
         "java": "",
         "c": "",
         "cpp": "static_cast",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2801,7 +2975,8 @@
         "java": "",
         "c": "",
         "cpp": "dynamic_cast",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2817,7 +2992,8 @@
         "java": "",
         "c": "",
         "cpp": "reinterpret_cast",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2833,7 +3009,8 @@
         "java": "",
         "c": "",
         "cpp": "const_cast",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2849,7 +3026,8 @@
         "java": "",
         "c": "",
         "cpp": "delete",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2865,7 +3043,8 @@
         "java": "",
         "c": "",
         "cpp": "bitand",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2881,7 +3060,8 @@
         "java": "",
         "c": "",
         "cpp": "bitor",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2897,7 +3077,8 @@
         "java": "",
         "c": "",
         "cpp": "compl",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2913,7 +3094,8 @@
         "java": "",
         "c": "",
         "cpp": "xor",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2929,7 +3111,8 @@
         "java": "",
         "c": "",
         "cpp": "xor_eq",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2945,7 +3128,8 @@
         "java": "",
         "c": "",
         "cpp": "and_eq",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2961,7 +3145,8 @@
         "java": "",
         "c": "",
         "cpp": "or_eq",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2977,7 +3162,8 @@
         "java": "",
         "c": "",
         "cpp": "not_eq",
-        "csharp": ""
+        "csharp": "",
+        "kotlin": ""
       }
     },
     {
@@ -2993,7 +3179,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "delegate"
+        "csharp": "delegate",
+        "kotlin": "delegate"
       }
     },
     {
@@ -3009,7 +3196,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "event"
+        "csharp": "event",
+        "kotlin": ""
       }
     },
     {
@@ -3025,7 +3213,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "lock"
+        "csharp": "lock",
+        "kotlin": ""
       }
     },
     {
@@ -3041,7 +3230,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "sealed"
+        "csharp": "sealed",
+        "kotlin": "sealed"
       }
     },
     {
@@ -3057,7 +3247,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "override"
+        "csharp": "override",
+        "kotlin": "override"
       }
     },
     {
@@ -3073,7 +3264,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "foreach"
+        "csharp": "foreach",
+        "kotlin": ""
       }
     },
     {
@@ -3089,7 +3281,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "partial"
+        "csharp": "partial",
+        "kotlin": ""
       }
     },
     {
@@ -3105,7 +3298,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "params"
+        "csharp": "params",
+        "kotlin": ""
       }
     },
     {
@@ -3121,7 +3315,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "internal"
+        "csharp": "internal",
+        "kotlin": "internal"
       }
     },
     {
@@ -3137,7 +3332,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "checked"
+        "csharp": "checked",
+        "kotlin": ""
       }
     },
     {
@@ -3153,7 +3349,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "unchecked"
+        "csharp": "unchecked",
+        "kotlin": ""
       }
     },
     {
@@ -3169,7 +3366,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "fixed"
+        "csharp": "fixed",
+        "kotlin": ""
       }
     },
     {
@@ -3185,7 +3383,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "stackalloc"
+        "csharp": "stackalloc",
+        "kotlin": ""
       }
     },
     {
@@ -3201,7 +3400,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "sbyte"
+        "csharp": "sbyte",
+        "kotlin": ""
       }
     },
     {
@@ -3217,7 +3417,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "uint"
+        "csharp": "uint",
+        "kotlin": ""
       }
     },
     {
@@ -3233,7 +3434,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "ulong"
+        "csharp": "ulong",
+        "kotlin": ""
       }
     },
     {
@@ -3249,7 +3451,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "ushort"
+        "csharp": "ushort",
+        "kotlin": ""
       }
     },
     {
@@ -3265,7 +3468,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "implicit"
+        "csharp": "implicit",
+        "kotlin": ""
       }
     },
     {
@@ -3281,7 +3485,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "out"
+        "csharp": "out",
+        "kotlin": "out"
       }
     },
     {
@@ -3297,7 +3502,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "add"
+        "csharp": "add",
+        "kotlin": ""
       }
     },
     {
@@ -3313,7 +3519,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "remove"
+        "csharp": "remove",
+        "kotlin": ""
       }
     },
     {
@@ -3329,7 +3536,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "dynamic"
+        "csharp": "dynamic",
+        "kotlin": "dynamic"
       }
     },
     {
@@ -3345,7 +3553,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "equals"
+        "csharp": "equals",
+        "kotlin": ""
       }
     },
     {
@@ -3361,7 +3570,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "alias"
+        "csharp": "alias",
+        "kotlin": ""
       }
     },
     {
@@ -3377,7 +3587,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "nameof"
+        "csharp": "nameof",
+        "kotlin": ""
       }
     },
     {
@@ -3393,7 +3604,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "when"
+        "csharp": "when",
+        "kotlin": "when"
       }
     },
     {
@@ -3409,7 +3621,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "by"
+        "csharp": "by",
+        "kotlin": "by"
       }
     },
     {
@@ -3425,7 +3638,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "ascending"
+        "csharp": "ascending",
+        "kotlin": ""
       }
     },
     {
@@ -3441,7 +3655,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "descending"
+        "csharp": "descending",
+        "kotlin": ""
       }
     },
     {
@@ -3457,7 +3672,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "group"
+        "csharp": "group",
+        "kotlin": ""
       }
     },
     {
@@ -3473,7 +3689,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "into"
+        "csharp": "into",
+        "kotlin": ""
       }
     },
     {
@@ -3489,7 +3706,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "join"
+        "csharp": "join",
+        "kotlin": ""
       }
     },
     {
@@ -3505,7 +3723,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "on"
+        "csharp": "on",
+        "kotlin": ""
       }
     },
     {
@@ -3521,7 +3740,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "orderby"
+        "csharp": "orderby",
+        "kotlin": ""
       }
     },
     {
@@ -3537,7 +3757,8 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "value"
+        "csharp": "value",
+        "kotlin": "value"
       }
     },
     {
@@ -3553,7 +3774,484 @@
         "java": "",
         "c": "",
         "cpp": "",
-        "csharp": "decimal"
+        "csharp": "decimal",
+        "kotlin": ""
+      }
+    },
+    {
+      "logical": "VAL",
+      "tier": "core",
+      "group": "kotlin-bindings",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "val"
+      }
+    },
+    {
+      "logical": "SUSPEND",
+      "tier": "standard",
+      "group": "kotlin-coroutines",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "suspend"
+      }
+    },
+    {
+      "logical": "TYPEALIAS",
+      "tier": "standard",
+      "group": "kotlin-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "typealias"
+      }
+    },
+    {
+      "logical": "COMPANION",
+      "tier": "standard",
+      "group": "kotlin-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "companion"
+      }
+    },
+    {
+      "logical": "DATA",
+      "tier": "standard",
+      "group": "kotlin-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "data"
+      }
+    },
+    {
+      "logical": "LATEINIT",
+      "tier": "advanced",
+      "group": "kotlin-properties",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "lateinit"
+      }
+    },
+    {
+      "logical": "REIFIED",
+      "tier": "advanced",
+      "group": "kotlin-generics",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "reified"
+      }
+    },
+    {
+      "logical": "TAILREC",
+      "tier": "advanced",
+      "group": "kotlin-functions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "tailrec"
+      }
+    },
+    {
+      "logical": "INFIX",
+      "tier": "advanced",
+      "group": "kotlin-functions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "infix"
+      }
+    },
+    {
+      "logical": "CROSSINLINE",
+      "tier": "advanced",
+      "group": "kotlin-functions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "crossinline"
+      }
+    },
+    {
+      "logical": "NOINLINE",
+      "tier": "advanced",
+      "group": "kotlin-functions",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "noinline"
+      }
+    },
+    {
+      "logical": "ACTUAL",
+      "tier": "advanced",
+      "group": "kotlin-multiplatform",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "actual"
+      }
+    },
+    {
+      "logical": "EXPECT",
+      "tier": "advanced",
+      "group": "kotlin-multiplatform",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "expect"
+      }
+    },
+    {
+      "logical": "ANNOTATION",
+      "tier": "standard",
+      "group": "kotlin-declarations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "annotation"
+      }
+    },
+    {
+      "logical": "VARARG",
+      "tier": "standard",
+      "group": "kotlin-parameters",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "vararg"
+      }
+    },
+    {
+      "logical": "INIT",
+      "tier": "standard",
+      "group": "kotlin-initialization",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "init"
+      }
+    },
+    {
+      "logical": "OPEN",
+      "tier": "standard",
+      "group": "kotlin-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "open"
+      }
+    },
+    {
+      "logical": "INNER",
+      "tier": "standard",
+      "group": "kotlin-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "inner"
+      }
+    },
+    {
+      "logical": "FIELD",
+      "tier": "advanced",
+      "group": "kotlin-properties",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "field"
+      }
+    },
+    {
+      "logical": "RECEIVER",
+      "tier": "advanced",
+      "group": "kotlin-annotations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "receiver"
+      }
+    },
+    {
+      "logical": "SETPARAM",
+      "tier": "advanced",
+      "group": "kotlin-annotations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "setparam"
+      }
+    },
+    {
+      "logical": "PARAM",
+      "tier": "advanced",
+      "group": "kotlin-annotations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "param"
+      }
+    },
+    {
+      "logical": "FILE",
+      "tier": "advanced",
+      "group": "kotlin-annotations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "file"
+      }
+    },
+    {
+      "logical": "AS_SAFE",
+      "tier": "standard",
+      "group": "kotlin-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "as?"
+      }
+    },
+    {
+      "logical": "NOT_IN",
+      "tier": "standard",
+      "group": "kotlin-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "!in"
+      }
+    },
+    {
+      "logical": "NOT_IS",
+      "tier": "standard",
+      "group": "kotlin-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "!is"
+      }
+    },
+    {
+      "logical": "PROPERTY",
+      "tier": "advanced",
+      "group": "kotlin-annotations",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "property"
+      }
+    },
+    {
+      "logical": "IT",
+      "tier": "standard",
+      "group": "kotlin-lambdas",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "",
+        "csharp": "",
+        "kotlin": "it"
       }
     }
   ]

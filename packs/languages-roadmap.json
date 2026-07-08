@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Roadmap for African human-language packs and programming-target / logical-token registry growth. Shipped state: see packs/index.json, logical-tokens.json, official-target-keywords.json.",
   "shippedCount": 25,
   "plannedCount": 40,
@@ -234,10 +234,10 @@
       "java",
       "c",
       "cpp",
-      "csharp"
+      "csharp",
+      "kotlin"
     ],
     "planned": [
-      "kotlin",
       "swift",
       "dart",
       "ruby",
@@ -383,9 +383,10 @@
       },
       {
         "id": "kotlin",
-        "release": "v0.4.0+",
+        "release": "v0.8.0",
         "priority": "medium",
-        "status": "planned",
+        "status": "shipped",
+        "specSource": "https://kotlinlang.org/docs/keyword-reference.html",
         "sampleKeywords": [
           "fun",
           "val",

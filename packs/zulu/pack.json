@@ -8,7 +8,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.7.0",
+  "version": "0.8.0",
   "displayName": "isiZulu",
   "description": "Zulu keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -24,7 +24,8 @@
     "java",
     "c",
     "cpp",
-    "csharp"
+    "csharp",
+    "kotlin"
   ],
   "keywords": {
     "IF": [
@@ -719,6 +720,90 @@
     ],
     "DECIMAL": [
       "decimal"
+    ],
+    "VAL": [
+      "val"
+    ],
+    "SUSPEND": [
+      "suspend"
+    ],
+    "TYPEALIAS": [
+      "typealias"
+    ],
+    "COMPANION": [
+      "companion"
+    ],
+    "DATA": [
+      "data"
+    ],
+    "LATEINIT": [
+      "lateinit"
+    ],
+    "REIFIED": [
+      "reified"
+    ],
+    "TAILREC": [
+      "tailrec"
+    ],
+    "INFIX": [
+      "infix"
+    ],
+    "CROSSINLINE": [
+      "crossinline"
+    ],
+    "NOINLINE": [
+      "noinline"
+    ],
+    "ACTUAL": [
+      "actual"
+    ],
+    "EXPECT": [
+      "expect"
+    ],
+    "ANNOTATION": [
+      "annotation"
+    ],
+    "VARARG": [
+      "vararg"
+    ],
+    "INIT": [
+      "init"
+    ],
+    "OPEN": [
+      "open"
+    ],
+    "INNER": [
+      "inner"
+    ],
+    "FIELD": [
+      "field"
+    ],
+    "RECEIVER": [
+      "receiver"
+    ],
+    "SETPARAM": [
+      "setparam"
+    ],
+    "PARAM": [
+      "param"
+    ],
+    "FILE": [
+      "file"
+    ],
+    "AS_SAFE": [
+      "as_safe"
+    ],
+    "NOT_IN": [
+      "not_in"
+    ],
+    "NOT_IS": [
+      "not_is"
+    ],
+    "PROPERTY": [
+      "property"
+    ],
+    "IT": [
+      "it"
     ]
   },
   "scopeNote": "isiZulu of South Africa.",

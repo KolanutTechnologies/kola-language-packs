@@ -27,9 +27,9 @@
     "kuskure",
     "error"
   ],
-  "data": [
+  "payload": [
     "bayanai",
-    "data"
+    "payload"
   ],
   "list": [
     "jerin",
@@ -67,9 +67,9 @@
     "fitarwa",
     "output"
   ],
-  "file": [
+  "file_ref": [
     "fayil",
-    "file"
+    "file_ref"
   ],
   "path": [
     "hanya",

@@ -6,6 +6,19 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-07-08
+
+### Added
+
+- **Kotlin** programming target (80 keywords, 0 coverage gaps)
+- 28 Kotlin-only logical tokens (`VAL`, `SUSPEND`, `TYPEALIAS`, `COMPANION`, `DATA`, …). **249 tokens** total, **10 targets**.
+- `scripts/add-kotlin-target.mjs` maintainer script
+- `scripts/add-language-pack.mjs` for adding African packs without full bootstrap
+
+### Changed
+
+- IDE glossary keys `data` → `payload`, `file` → `file_ref` (Kotlin keyword collision)
+
 ## [0.7.0] - 2026-07-08
 
 ### Added

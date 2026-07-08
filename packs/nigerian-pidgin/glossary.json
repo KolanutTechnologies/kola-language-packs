@@ -27,9 +27,9 @@
     "mistake",
     "error"
   ],
-  "data": [
+  "payload": [
     "information",
-    "data"
+    "payload"
   ],
   "list": [
     "group list",
@@ -67,9 +67,9 @@
     "wetin e give",
     "output"
   ],
-  "file": [
+  "file_ref": [
     "file dem",
-    "file"
+    "file_ref"
   ],
   "path": [
     "road",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-08T04:30:23.070Z",
-  "logicalTokenCount": 221,
+  "generatedAt": "2026-07-08T12:55:42.365Z",
+  "logicalTokenCount": 249,
   "africanLanguagePackCount": 25,
   "transpileTargets": [
     "javascript",
@@ -11,13 +11,14 @@
     "java",
     "c",
     "cpp",
-    "csharp"
+    "csharp",
+    "kotlin"
   ],
   "perTarget": {
     "javascript": {
       "officialKeywordCount": 38,
-      "mappedCount": 37,
-      "structuralCount": 1,
+      "mappedCount": 36,
+      "structuralCount": 2,
       "gapCount": 0,
       "gaps": []
     },
@@ -30,8 +31,8 @@
     },
     "typescript": {
       "officialKeywordCount": 79,
-      "mappedCount": 78,
-      "structuralCount": 1,
+      "mappedCount": 77,
+      "structuralCount": 2,
       "gapCount": 0,
       "gaps": []
     },
@@ -51,8 +52,8 @@
     },
     "java": {
       "officialKeywordCount": 51,
-      "mappedCount": 51,
-      "structuralCount": 0,
+      "mappedCount": 50,
+      "structuralCount": 1,
       "gapCount": 0,
       "gaps": []
     },
@@ -65,14 +66,21 @@
     },
     "cpp": {
       "officialKeywordCount": 92,
-      "mappedCount": 92,
-      "structuralCount": 0,
+      "mappedCount": 91,
+      "structuralCount": 1,
       "gapCount": 0,
       "gaps": []
     },
     "csharp": {
       "officialKeywordCount": 104,
-      "mappedCount": 104,
+      "mappedCount": 103,
+      "structuralCount": 1,
+      "gapCount": 0,
+      "gaps": []
+    },
+    "kotlin": {
+      "officialKeywordCount": 80,
+      "mappedCount": 80,
       "structuralCount": 0,
       "gapCount": 0,
       "gaps": []
@@ -449,8 +457,8 @@
     }
   ],
   "tierCounts": {
-    "core": 30,
-    "standard": 46,
-    "advanced": 145
+    "core": 31,
+    "standard": 59,
+    "advanced": 159
   }
 }
