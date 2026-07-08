@@ -14,7 +14,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ### Added
 
-- IDE gloss tiers for Kola Code integration: `glossary`, `placeholders`, and `commonLiterals` (optional in `pack.json` or separate JSON files per pack)
+- IDE gloss tiers integration: `glossary`, `placeholders`, and `commonLiterals` (optional in `pack.json` or separate JSON files per pack)
 - Starter tier content (30 glossary + 12 placeholders + 15 common literals) for **Yorùbá**, **Hausa**, and **Nigerian Pidgin**
 - `packs/ide-tier-seeds.json`, `scripts/bootstrap-ide-tiers.mjs`, and `scripts/update-index-ide-fields.mjs`
 - `packs/index.json`: `targets` and `ideReady` on every entry (3 packs IDE-ready)
