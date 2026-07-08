@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "Sannu",
+    "Hello"
+  ],
+  "Error": [
+    "Kuskure",
+    "Error"
+  ],
+  "Success": [
+    "Nasara",
+    "Success"
+  ],
+  "Welcome": [
+    "Barka da zuwa",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "Sai an jima",
+    "Goodbye"
+  ],
+  "Yes": [
+    "Ee",
+    "Yes"
+  ],
+  "No": [
+    "A'a",
+    "No"
+  ],
+  "Done": [
+    "An gama",
+    "Done"
+  ],
+  "Loading": [
+    "Ana lodawa",
+    "Loading"
+  ],
+  "Failed": [
+    "Ya gaza",
+    "Failed"
+  ],
+  "Cancel": [
+    "Soke",
+    "Cancel"
+  ],
+  "Submit": [
+    "Aika",
+    "Submit"
+  ],
+  "Search": [
+    "Nemo",
+    "Search"
+  ],
+  "Warning": [
+    "Gargadi",
+    "Warning"
+  ],
+  "Please wait": [
+    "Don jira",
+    "Please wait"
+  ]
+}

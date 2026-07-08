@@ -1,0 +1,50 @@
+{
+  "condition": [
+    "if condition",
+    "condition"
+  ],
+  "name": [
+    "nem",
+    "name"
+  ],
+  "value": [
+    "wetin e worth",
+    "value"
+  ],
+  "message": [
+    "write-up",
+    "message"
+  ],
+  "index": [
+    "position",
+    "index"
+  ],
+  "item": [
+    "thing",
+    "item"
+  ],
+  "body": [
+    "main part",
+    "body"
+  ],
+  "expression": [
+    "how you talk am",
+    "expression"
+  ],
+  "variable": [
+    "wetin dey change",
+    "variable"
+  ],
+  "array": [
+    "list",
+    "array"
+  ],
+  "function": [
+    "work wey e dey do",
+    "function"
+  ],
+  "class": [
+    "group type",
+    "class"
+  ]
+}

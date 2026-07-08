@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "Ẹ n lẹ",
+    "Hello"
+  ],
+  "Error": [
+    "Aṣiṣe",
+    "Error"
+  ],
+  "Success": [
+    "Aṣeyọri",
+    "Success"
+  ],
+  "Welcome": [
+    "Kaabo",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "O dàbọ",
+    "Goodbye"
+  ],
+  "Yes": [
+    "Bẹẹni",
+    "Yes"
+  ],
+  "No": [
+    "Rara",
+    "No"
+  ],
+  "Done": [
+    "Parí",
+    "Done"
+  ],
+  "Loading": [
+    "N gbà wọlé",
+    "Loading"
+  ],
+  "Failed": [
+    "Kùnà",
+    "Failed"
+  ],
+  "Cancel": [
+    "Fagilé",
+    "Cancel"
+  ],
+  "Submit": [
+    "Fi ránṣẹ",
+    "Submit"
+  ],
+  "Search": [
+    "Wá",
+    "Search"
+  ],
+  "Warning": [
+    "Ìkìlọ",
+    "Warning"
+  ],
+  "Please wait": [
+    "Jọ̀wọ́ dúró",
+    "Please wait"
+  ]
+}

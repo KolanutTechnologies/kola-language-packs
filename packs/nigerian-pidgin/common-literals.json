@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "How far",
+    "Hello"
+  ],
+  "Error": [
+    "Wahala",
+    "Error"
+  ],
+  "Success": [
+    "E work",
+    "Success"
+  ],
+  "Welcome": [
+    "You welcome",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "Bye bye",
+    "Goodbye"
+  ],
+  "Yes": [
+    "Ehen",
+    "Yes"
+  ],
+  "No": [
+    "Nah",
+    "No"
+  ],
+  "Done": [
+    "Don finish",
+    "Done"
+  ],
+  "Loading": [
+    "E dey load",
+    "Loading"
+  ],
+  "Failed": [
+    "E fail",
+    "Failed"
+  ],
+  "Cancel": [
+    "Cancel am",
+    "Cancel"
+  ],
+  "Submit": [
+    "Send am",
+    "Submit"
+  ],
+  "Search": [
+    "Find am",
+    "Search"
+  ],
+  "Warning": [
+    "Take note",
+    "Warning"
+  ],
+  "Please wait": [
+    "Abeg wait",
+    "Please wait"
+  ]
+}

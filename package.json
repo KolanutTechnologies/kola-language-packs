@@ -1,6 +1,6 @@
 {
   "name": "@kolanut/language-packs",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Community-governed keyword maps for native African language programming — by Kolanut Technologies",
   "license": "Apache-2.0",
   "author": "Kolanut Technologies Ltd (https://kolacode.africa)",
@@ -13,6 +13,7 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
+    "./packs/index.json": "./packs/index.json",
     "./packs/*": "./packs/*",
     "./schema": "./pack.schema.json"
   },

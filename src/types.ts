@@ -1,4 +1,16 @@
 export type KeywordValue = string | string[];
+export type GlossTierValue = string | string[];
+
+export type TargetLanguage =
+  | 'javascript'
+  | 'python'
+  | 'typescript'
+  | 'go'
+  | 'rust'
+  | 'java'
+  | 'c';
+
+export type GlossTierMap = Record<string, GlossTierValue>;
 
 export interface LanguagePack {
   name: string;
@@ -13,8 +25,11 @@ export interface LanguagePack {
   displayName?: string;
   description?: string;
   contributors?: string[];
-  targets: Array<'javascript' | 'python' | 'typescript' | 'go' | 'rust'>;
+  targets: TargetLanguage[];
   keywords: Record<string, KeywordValue>;
+  glossary?: GlossTierMap;
+  placeholders?: GlossTierMap;
+  commonLiterals?: GlossTierMap;
 }
 
 export interface PackIndexEntry {
@@ -25,6 +40,8 @@ export interface PackIndexEntry {
   countries: string[];
   regions: string[];
   version: string;
+  targets?: TargetLanguage[];
+  ideReady?: boolean;
 }
 
 export interface PackIndex {
@@ -33,5 +50,10 @@ export interface PackIndex {
 
 export interface ResolvedKeyword {
   logical: string;
+  phrases: string[];
+}
+
+export interface ResolvedGlossTier {
+  key: string;
   phrases: string[];
 }

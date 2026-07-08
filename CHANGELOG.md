@@ -6,13 +6,24 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-07-08
+
+### Added
+
+- IDE gloss tiers for Kola Code integration: `glossary`, `placeholders`, and `commonLiterals` (optional in `pack.json` or separate JSON files per pack)
+- Starter tier content (30 glossary + 12 placeholders + 15 common literals) for **Yorùbá**, **Hausa**, and **Nigerian Pidgin**
+- `packs/ide-tier-seeds.json`, `scripts/bootstrap-ide-tiers.mjs`, and `scripts/update-index-ide-fields.mjs`
+- `packs/index.json`: `targets` and `ideReady` on every entry (3 packs IDE-ready)
+- TypeScript: `GlossTierMap`, `TargetLanguage`, loaders for glossary / placeholders / common literals
+- npm export: `./packs/index.json`
+- Validation: English fallback, glossary vs keyword collision, duplicate gloss phrases, IDE-ready tier minimums
+
 ## [0.3.1] - 2026-07-07
 
 ### Changed
 
 - CI npm publish: Trusted Publisher (OIDC) via `release.yml`; no `NPM_TOKEN` secret required
 - CI npm publish: catch-up job when git tag exists but npm is behind; manual republish via workflow dispatch
-
 
 ## [0.3.0] - 2026-07-07
 
@@ -38,8 +49,6 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 - Java: missing reserved keyword `_`; added `UNDERSCORE` logical token (**51** JLS keywords)
 - CI release: replace release-please with `direct-release.mjs` (fixes GITHUB_TOKEN PR permission errors)
-
-
 
 ## [0.2.0] - 2026-07-07
 
@@ -69,8 +78,10 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.3.1...HEAD
 [0.3.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.0
 [0.2.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.2.0
 [0.1.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.1.1

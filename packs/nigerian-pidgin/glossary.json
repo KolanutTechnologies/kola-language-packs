@@ -1,0 +1,122 @@
+{
+  "name": [
+    "nem",
+    "name"
+  ],
+  "count": [
+    "numba",
+    "count"
+  ],
+  "price": [
+    "money price",
+    "price"
+  ],
+  "user": [
+    "person wey dey use am",
+    "user"
+  ],
+  "total": [
+    "everything together",
+    "total"
+  ],
+  "message": [
+    "write-up",
+    "message"
+  ],
+  "error": [
+    "mistake",
+    "error"
+  ],
+  "data": [
+    "information",
+    "data"
+  ],
+  "list": [
+    "group list",
+    "list"
+  ],
+  "index": [
+    "position",
+    "index"
+  ],
+  "value": [
+    "wetin e worth",
+    "value"
+  ],
+  "item": [
+    "thing",
+    "item"
+  ],
+  "num": [
+    "digit",
+    "num"
+  ],
+  "text": [
+    "written word",
+    "text"
+  ],
+  "result": [
+    "wetin comot",
+    "result"
+  ],
+  "input": [
+    "wetin you type",
+    "input"
+  ],
+  "output": [
+    "wetin e give",
+    "output"
+  ],
+  "file": [
+    "file dem",
+    "file"
+  ],
+  "path": [
+    "road",
+    "path"
+  ],
+  "length": [
+    "how long",
+    "length"
+  ],
+  "size": [
+    "how big",
+    "size"
+  ],
+  "key": [
+    "lock key",
+    "key"
+  ],
+  "kind": [
+    "sort",
+    "kind"
+  ],
+  "status": [
+    "where e dey",
+    "status"
+  ],
+  "flag": [
+    "marker",
+    "flag"
+  ],
+  "id": [
+    "mark id",
+    "id"
+  ],
+  "age": [
+    "how old",
+    "age"
+  ],
+  "score": [
+    "point",
+    "score"
+  ],
+  "amount": [
+    "how much",
+    "amount"
+  ],
+  "password": [
+    "secret word",
+    "password"
+  ]
+}

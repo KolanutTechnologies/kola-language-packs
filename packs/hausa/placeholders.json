@@ -1,0 +1,50 @@
+{
+  "condition": [
+    "yanayi",
+    "condition"
+  ],
+  "name": [
+    "suna",
+    "name"
+  ],
+  "value": [
+    "daraja",
+    "value"
+  ],
+  "message": [
+    "sako",
+    "message"
+  ],
+  "index": [
+    "lamba",
+    "index"
+  ],
+  "item": [
+    "abu",
+    "item"
+  ],
+  "body": [
+    "jiki",
+    "body"
+  ],
+  "expression": [
+    "magana",
+    "expression"
+  ],
+  "variable": [
+    "sauyi",
+    "variable"
+  ],
+  "array": [
+    "jerin",
+    "array"
+  ],
+  "function": [
+    "aiki",
+    "function"
+  ],
+  "class": [
+    "darasi",
+    "class"
+  ]
+}

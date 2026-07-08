@@ -13,7 +13,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": true
     },
     {
       "name": "nigerian-pidgin",
@@ -26,7 +36,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": true
     },
     {
       "name": "hausa",
@@ -42,7 +62,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": true
     },
     {
       "name": "igbo",
@@ -55,7 +85,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "swahili",
@@ -72,7 +112,17 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "amharic",
@@ -85,7 +135,17 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "zulu",
@@ -98,7 +158,17 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "xhosa",
@@ -111,7 +181,17 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "twi",
@@ -124,7 +204,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "somali",
@@ -140,7 +230,17 @@
       "regions": [
         "Horn of Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "wolof",
@@ -155,7 +255,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "lingala",
@@ -169,7 +279,17 @@
       "regions": [
         "Central Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "kinyarwanda",
@@ -182,7 +302,17 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "luganda",
@@ -195,7 +325,17 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "shona",
@@ -208,7 +348,17 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "oromo",
@@ -222,7 +372,17 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "tigrinya",
@@ -236,7 +396,17 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "afrikaans",
@@ -250,7 +420,17 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "arabic",
@@ -273,7 +453,17 @@
         "North Africa",
         "East Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "french",
@@ -308,7 +498,17 @@
         "East Africa",
         "Indian Ocean"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "fulfulde",
@@ -328,7 +528,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "sesotho",
@@ -342,7 +552,17 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "setswana",
@@ -357,7 +577,17 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "bambara",
@@ -373,7 +603,17 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     },
     {
       "name": "portuguese-africa",
@@ -391,7 +631,17 @@
         "Southern Africa",
         "West Africa"
       ],
-      "version": "0.3.1"
+      "version": "0.4.0",
+      "targets": [
+        "javascript",
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "java",
+        "c"
+      ],
+      "ideReady": false
     }
   ]
 }
