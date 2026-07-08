@@ -6,6 +6,10 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+### Fixed
+
+- CI release: tag-only path when maintainer already committed version bump (no empty `git commit`)
+
 ## [0.4.0] - 2026-07-08
 
 ### Added

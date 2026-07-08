@@ -42,9 +42,18 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "chore(release): publish v${VERSION}"
-          git tag "v${VERSION}"
-          git push origin main --follow-tags
+          if git diff --staged --quiet; then
+            echo "Release v${VERSION} already committed on main; tagging HEAD only."
+          else
+            git commit -m "chore(release): publish v${VERSION}"
+            git push origin main
+          fi
+          if git rev-parse "v${VERSION}" >/dev/null 2>&1; then
+            echo "Tag v${VERSION} already exists locally."
+          else
+            git tag "v${VERSION}"
+          fi
+          git push origin "refs/tags/v${VERSION}" || git push origin "v${VERSION}"
 
       - name: Create GitHub Release
         if: steps.direct.outputs.released == 'true'

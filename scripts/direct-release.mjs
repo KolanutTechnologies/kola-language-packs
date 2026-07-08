@@ -174,6 +174,7 @@ async function main() {
     if (!dryRun) await writeReleaseBody(pkgVersion);
     await setOutput('released', 'true');
     await setOutput('version', pkgVersion);
+    await setOutput('tag_only', 'true');
     return;
   }
 
