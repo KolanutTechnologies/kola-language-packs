@@ -8,7 +8,8 @@ export type TargetLanguage =
   | 'go'
   | 'rust'
   | 'java'
-  | 'c';
+  | 'c'
+  | 'cpp';
 
 export type GlossTierMap = Record<string, GlossTierValue>;
 

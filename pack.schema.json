@@ -94,7 +94,8 @@
           "go",
           "rust",
           "java",
-          "c"
+          "c",
+          "cpp"
         ]
       },
       "minItems": 1

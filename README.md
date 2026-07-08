@@ -6,8 +6,8 @@
 
 [![npm](https://img.shields.io/npm/v/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)
 [![African language packs](https://img.shields.io/badge/African%20language%20packs-25-gold)](./packs/coverage-summary.json)
-[![Programming targets](https://img.shields.io/badge/Programming%20targets-7-blue)](./packs/coverage-summary.json)
-[![Logical tokens](https://img.shields.io/badge/Logical%20tokens-149-lightgrey)](./packs/logical-tokens.json)
+[![Programming targets](https://img.shields.io/badge/Programming%20targets-8-blue)](./packs/coverage-summary.json)
+[![Logical tokens](https://img.shields.io/badge/Logical%20tokens-185-lightgrey)](./packs/logical-tokens.json)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <!-- badges:end -->
@@ -126,8 +126,8 @@ In short:
 | What we cover | Shipped | Planned | Source of truth |
 |---|---:|---:|---|
 | **African language packs** | 25 | +40 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
-| **Programming targets** | 7 | +9 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
-| **Logical tokens** | 149 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
+| **Programming targets** | 8 | +9 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
+| **Logical tokens** | 185 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
 | **Keyword coverage gaps** | 0 | — | [`packs/coverage-summary.json`](./packs/coverage-summary.json) |
 
 <!-- metrics:end -->

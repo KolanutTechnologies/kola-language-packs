@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Roadmap for African human-language packs and programming-target / logical-token registry growth. Shipped state: see packs/index.json, logical-tokens.json, official-target-keywords.json.",
   "shippedCount": 25,
   "plannedCount": 40,
@@ -337,9 +337,10 @@
       },
       {
         "id": "cpp",
-        "release": "v0.3.0+",
+        "release": "v0.5.0",
         "priority": "medium",
-        "status": "planned",
+        "status": "shipped",
+        "specSource": "https://en.cppreference.com/w/cpp/keyword",
         "workItems": [
           "Same target-add pipeline as java",
           "C superset + C++ keywords"
@@ -558,12 +559,12 @@
     },
     {
       "release": "v0.4.0",
-      "focus": "C programming target (C11 §6.4.1 keywords)",
+      "focus": "IDE gloss tiers (glossary, placeholders, commonLiterals) for Kola Code",
       "status": "shipped"
     },
     {
-      "release": "v0.4.0+",
-      "focus": "Next programming target (C++ — one per release)",
+      "release": "v0.5.0",
+      "focus": "C++ programming target + Igbo IDE-ready tiers",
       "status": "current"
     },
     {

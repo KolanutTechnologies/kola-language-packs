@@ -89,6 +89,28 @@ Manual local publish still uses `npm login` / your npm account.
 
 You do not create tags manually. If a tag is missing, check Actions → **Release**.
 
+### Two release flows (pick one)
+
+| Flow | Local before push | CI on push |
+|------|-------------------|------------|
+| **Prepared (maintainer/agent default)** | Run `direct-release.mjs`; commit **feat/fix** with bumped `package.json` + dated CHANGELOG | Tag **HEAD only** (no second commit), GitHub Release, npm |
+| **CI bump** | Keep `[Unreleased]` only; `package.json` at last tag | CI commits `chore(release):`, tag, npm |
+
+Do **not** commit `chore(release): publish vX` locally. That message is for CI (CI-bump flow) only.
+
+Before push to `main`: `git fetch origin` and `git pull --rebase origin main` if behind.
+
+---
+
+## Common release failures
+
+| What you see | Why | What to do |
+|--------------|-----|------------|
+| Push rejected, `fetch first` | CI released while you were working | Rebase onto `origin/main`; merge CHANGELOG sections |
+| CI: `nothing to commit, working tree clean` | Version already committed (prepared flow); old workflow tried to commit again | Tag-only step in `release.yml`; re-run Release |
+| GitHub tag exists, npm still old | `publish-npm` failed (auth, etc.) | Catch-up job or workflow_dispatch **republish_version** |
+| Rebase conflicts on every `pack.json` | You and CI both bumped patch | Keep intended semver (e.g. 0.4.0) |
+
 ---
 
 ## Release notes (GitHub)

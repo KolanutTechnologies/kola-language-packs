@@ -258,6 +258,71 @@
         "Warning": ["Take note", "Warning"],
         "Please wait": ["Abeg wait", "Please wait"]
       }
+    },
+    "igbo": {
+      "glossary": {
+        "name": ["aha", "name"],
+        "count": ["ọgụgụ", "count"],
+        "price": ["ọnụ ahịa", "price"],
+        "user": ["onye ọrụ", "user"],
+        "total": ["ngụkọta", "total"],
+        "message": ["ozi", "message"],
+        "error": ["njehie", "error"],
+        "data": ["ụdịdị", "data"],
+        "list": ["ndepụta", "list"],
+        "index": ["ọnụọgụ", "index"],
+        "value": ["uru", "value"],
+        "item": ["ihe", "item"],
+        "num": ["nọmba", "num"],
+        "text": ["ederede", "text"],
+        "result": ["nsonaazụ", "result"],
+        "input": ["ntinye", "input"],
+        "output": ["mpụta", "output"],
+        "file": ["faịlụ", "file"],
+        "path": ["ụzọ", "path"],
+        "length": ["ogologo", "length"],
+        "size": ["nha", "size"],
+        "key": ["igodo", "key"],
+        "kind": ["ụdị", "kind"],
+        "status": ["ọnọdụ", "status"],
+        "flag": ["akara", "flag"],
+        "id": ["njirimara", "id"],
+        "age": ["afọ", "age"],
+        "score": ["oke akara", "score"],
+        "amount": ["ego", "amount"],
+        "password": ["okwuntughe", "password"]
+      },
+      "placeholders": {
+        "condition": ["ọnọdụ", "condition"],
+        "name": ["aha", "name"],
+        "value": ["uru", "value"],
+        "message": ["ozi", "message"],
+        "index": ["ọnụọgụ", "index"],
+        "item": ["ihe", "item"],
+        "body": ["ime", "body"],
+        "expression": ["okwu", "expression"],
+        "variable": ["gbanwere", "variable"],
+        "array": ["ndepụta", "array"],
+        "function": ["ọrụ", "function"],
+        "class": ["klasi", "class"]
+      },
+      "commonLiterals": {
+        "Hello": ["Ndewo", "Hello"],
+        "Error": ["Njehie", "Error"],
+        "Success": ["I ruola", "Success"],
+        "Welcome": ["Nnọọ", "Welcome"],
+        "Goodbye": ["Ka ọ dị", "Goodbye"],
+        "Yes": ["Ee", "Yes"],
+        "No": ["Mba", "No"],
+        "Done": ["Emechaala", "Done"],
+        "Loading": ["Na-ebubata", "Loading"],
+        "Failed": ["Dara", "Failed"],
+        "Cancel": ["Kagbuo", "Cancel"],
+        "Submit": ["Zipu", "Submit"],
+        "Search": ["Chọọ", "Search"],
+        "Warning": ["Ịdọ aka na ntị", "Warning"],
+        "Please wait": ["Biko chere", "Please wait"]
+      }
     }
   }
 }

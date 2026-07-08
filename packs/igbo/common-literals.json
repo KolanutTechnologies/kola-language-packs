@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "Ndewo",
+    "Hello"
+  ],
+  "Error": [
+    "Njehie",
+    "Error"
+  ],
+  "Success": [
+    "I ruola",
+    "Success"
+  ],
+  "Welcome": [
+    "Nnọọ",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "Ka ọ dị",
+    "Goodbye"
+  ],
+  "Yes": [
+    "Ee",
+    "Yes"
+  ],
+  "No": [
+    "Mba",
+    "No"
+  ],
+  "Done": [
+    "Emechaala",
+    "Done"
+  ],
+  "Loading": [
+    "Na-ebubata",
+    "Loading"
+  ],
+  "Failed": [
+    "Dara",
+    "Failed"
+  ],
+  "Cancel": [
+    "Kagbuo",
+    "Cancel"
+  ],
+  "Submit": [
+    "Zipu",
+    "Submit"
+  ],
+  "Search": [
+    "Chọọ",
+    "Search"
+  ],
+  "Warning": [
+    "Ịdọ aka na ntị",
+    "Warning"
+  ],
+  "Please wait": [
+    "Biko chere",
+    "Please wait"
+  ]
+}

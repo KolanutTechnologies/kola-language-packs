@@ -6,6 +6,15 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-08
+
+### Added
+
+- **C++** programming target (C++20 keywords, 92 reserved words, 0 coverage gaps)
+- 36 C++-only logical tokens (`TEMPLATE`, `VIRTUAL`, `CONCEPT`, `CO_AWAIT`, cast operators, …). **185 tokens** total.
+- `scripts/add-cpp-target.mjs` maintainer script for the C++ target migration
+- **Igbo** IDE gloss tiers (glossary, placeholders, commonLiterals) — **4 IDE-ready** packs
+
 ### Fixed
 
 - CI release: tag-only path when maintainer already committed version bump (no empty `git commit`)
@@ -83,7 +92,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
 
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1
 [0.3.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.0

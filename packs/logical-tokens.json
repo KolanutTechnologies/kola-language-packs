@@ -1,5 +1,5 @@
 {
-  "version": "4.5.0",
+  "version": "4.6.0",
   "description": "Canonical logical tokens every language pack must map. targets.* values are emitted keywords; empty string means no direct keyword (transpiler uses another construct). Includes a typescript-types tier for TS-only type keywords.",
   "targets": [
     "javascript",
@@ -8,7 +8,8 @@
     "go",
     "rust",
     "java",
-    "c"
+    "c",
+    "cpp"
   ],
   "required": [
     "IF",
@@ -29,7 +30,8 @@
         "go": "if",
         "rust": "if",
         "java": "if",
-        "c": "if"
+        "c": "if",
+        "cpp": "if"
       }
     },
     {
@@ -43,7 +45,8 @@
         "go": "else",
         "rust": "else",
         "java": "else",
-        "c": "else"
+        "c": "else",
+        "cpp": "else"
       }
     },
     {
@@ -57,7 +60,8 @@
         "go": "else if",
         "rust": "else if",
         "java": "else if",
-        "c": "else if"
+        "c": "else if",
+        "cpp": "else if"
       }
     },
     {
@@ -71,7 +75,8 @@
         "go": "for",
         "rust": "for",
         "java": "for",
-        "c": "for"
+        "c": "for",
+        "cpp": "for"
       }
     },
     {
@@ -85,7 +90,8 @@
         "go": "while",
         "rust": "while",
         "java": "while",
-        "c": "while"
+        "c": "while",
+        "cpp": "while"
       }
     },
     {
@@ -99,7 +105,8 @@
         "go": "",
         "rust": "loop",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -113,7 +120,8 @@
         "go": "break",
         "rust": "break",
         "java": "break",
-        "c": "break"
+        "c": "break",
+        "cpp": "break"
       }
     },
     {
@@ -127,7 +135,8 @@
         "go": "continue",
         "rust": "continue",
         "java": "continue",
-        "c": "continue"
+        "c": "continue",
+        "cpp": "continue"
       }
     },
     {
@@ -141,7 +150,8 @@
         "go": "switch",
         "rust": "match",
         "java": "switch",
-        "c": "switch"
+        "c": "switch",
+        "cpp": "switch"
       }
     },
     {
@@ -155,7 +165,8 @@
         "go": "",
         "rust": "match",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -169,7 +180,8 @@
         "go": "case",
         "rust": "=>",
         "java": "case",
-        "c": "case"
+        "c": "case",
+        "cpp": "case"
       }
     },
     {
@@ -183,7 +195,8 @@
         "go": "default",
         "rust": "_",
         "java": "default",
-        "c": "default"
+        "c": "default",
+        "cpp": "default"
       }
     },
     {
@@ -197,7 +210,8 @@
         "go": "goto",
         "rust": "",
         "java": "goto",
-        "c": "goto"
+        "c": "goto",
+        "cpp": "goto"
       }
     },
     {
@@ -211,7 +225,8 @@
         "go": "fallthrough",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -225,7 +240,8 @@
         "go": "select",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -239,7 +255,8 @@
         "go": "range",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -253,7 +270,8 @@
         "go": "func",
         "rust": "fn",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -267,7 +285,8 @@
         "go": "return",
         "rust": "return",
         "java": "return",
-        "c": "return"
+        "c": "return",
+        "cpp": "return"
       }
     },
     {
@@ -281,7 +300,8 @@
         "go": "",
         "rust": "async",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -295,7 +315,8 @@
         "go": "",
         "rust": "await",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -309,7 +330,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -323,7 +345,8 @@
         "go": "",
         "rust": "|",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -337,7 +360,8 @@
         "go": "defer",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -351,7 +375,8 @@
         "go": "go",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -365,7 +390,8 @@
         "go": "",
         "rust": "",
         "java": "try",
-        "c": ""
+        "c": "",
+        "cpp": "try"
       }
     },
     {
@@ -379,7 +405,8 @@
         "go": "",
         "rust": "",
         "java": "catch",
-        "c": ""
+        "c": "",
+        "cpp": "catch"
       }
     },
     {
@@ -393,7 +420,8 @@
         "go": "",
         "rust": "",
         "java": "finally",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -407,7 +435,8 @@
         "go": "",
         "rust": "panic!",
         "java": "throw",
-        "c": ""
+        "c": "",
+        "cpp": "throw"
       }
     },
     {
@@ -421,7 +450,8 @@
         "go": "",
         "rust": "let",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -435,7 +465,8 @@
         "go": "const",
         "rust": "const",
         "java": "const",
-        "c": "const"
+        "c": "const",
+        "cpp": "const"
       }
     },
     {
@@ -449,7 +480,8 @@
         "go": "var",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -463,7 +495,8 @@
         "go": "",
         "rust": "mut",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -477,7 +510,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -491,7 +525,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -505,7 +540,8 @@
         "go": "",
         "rust": "",
         "java": "class",
-        "c": ""
+        "c": "",
+        "cpp": "class"
       }
     },
     {
@@ -519,7 +555,8 @@
         "go": "struct",
         "rust": "struct",
         "java": "",
-        "c": "struct"
+        "c": "struct",
+        "cpp": "struct"
       }
     },
     {
@@ -533,7 +570,8 @@
         "go": "",
         "rust": "trait",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -547,7 +585,8 @@
         "go": "",
         "rust": "impl",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -561,7 +600,8 @@
         "go": "interface",
         "rust": "",
         "java": "interface",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -575,7 +615,8 @@
         "go": "",
         "rust": "enum",
         "java": "enum",
-        "c": "enum"
+        "c": "enum",
+        "cpp": "enum"
       }
     },
     {
@@ -589,7 +630,8 @@
         "go": "type",
         "rust": "type",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -603,7 +645,8 @@
         "go": "",
         "rust": "",
         "java": "extends",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -617,7 +660,8 @@
         "go": "",
         "rust": "",
         "java": "implements",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -631,7 +675,8 @@
         "go": "",
         "rust": "",
         "java": "new",
-        "c": ""
+        "c": "",
+        "cpp": "new"
       }
     },
     {
@@ -645,7 +690,8 @@
         "go": "",
         "rust": "",
         "java": "this",
-        "c": ""
+        "c": "",
+        "cpp": "this"
       }
     },
     {
@@ -659,7 +705,8 @@
         "go": "",
         "rust": "self",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -673,7 +720,8 @@
         "go": "",
         "rust": "super",
         "java": "super",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -687,7 +735,8 @@
         "go": "",
         "rust": "static",
         "java": "static",
-        "c": "static"
+        "c": "static",
+        "cpp": "static"
       }
     },
     {
@@ -701,7 +750,8 @@
         "go": "import",
         "rust": "use",
         "java": "import",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -715,7 +765,8 @@
         "go": "",
         "rust": "pub",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "export"
       }
     },
     {
@@ -729,7 +780,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -743,7 +795,8 @@
         "go": "",
         "rust": "as",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -757,7 +810,8 @@
         "go": "",
         "rust": "mod",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -771,7 +825,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "namespace"
       }
     },
     {
@@ -785,7 +840,8 @@
         "go": "package",
         "rust": "",
         "java": "package",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -799,7 +855,8 @@
         "go": "",
         "rust": "use",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -813,7 +870,8 @@
         "go": "",
         "rust": "pub",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -827,7 +885,8 @@
         "go": "",
         "rust": "crate",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -841,7 +900,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -855,7 +915,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -869,7 +930,8 @@
         "go": "",
         "rust": "assert!",
         "java": "assert",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -883,7 +945,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -897,7 +960,8 @@
         "go": "fmt.Println",
         "rust": "println!",
         "java": "System.out.println",
-        "c": "printf"
+        "c": "printf",
+        "cpp": ""
       }
     },
     {
@@ -911,7 +975,8 @@
         "go": "true",
         "rust": "true",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "true"
       }
     },
     {
@@ -925,7 +990,8 @@
         "go": "false",
         "rust": "false",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "false"
       }
     },
     {
@@ -939,7 +1005,8 @@
         "go": "nil",
         "rust": "None",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -953,7 +1020,8 @@
         "go": "nil",
         "rust": "None",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -967,7 +1035,8 @@
         "go": "nil",
         "rust": "None",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -981,7 +1050,8 @@
         "go": "",
         "rust": "unsafe",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -995,7 +1065,8 @@
         "go": "",
         "rust": "extern",
         "java": "",
-        "c": "extern"
+        "c": "extern",
+        "cpp": "extern"
       }
     },
     {
@@ -1009,7 +1080,8 @@
         "go": "chan",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1023,7 +1095,8 @@
         "go": "map",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1037,7 +1110,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "and"
       }
     },
     {
@@ -1051,7 +1125,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "or"
       }
     },
     {
@@ -1065,7 +1140,8 @@
         "go": "!",
         "rust": "!",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "not"
       }
     },
     {
@@ -1079,7 +1155,8 @@
         "go": "",
         "rust": "in",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1093,7 +1170,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1107,7 +1185,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1121,7 +1200,8 @@
         "go": "",
         "rust": "",
         "java": "do",
-        "c": "do"
+        "c": "do",
+        "cpp": "do"
       }
     },
     {
@@ -1135,7 +1215,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1149,7 +1230,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1163,7 +1245,8 @@
         "go": "",
         "rust": "",
         "java": "void",
-        "c": "void"
+        "c": "void",
+        "cpp": "void"
       }
     },
     {
@@ -1177,7 +1260,8 @@
         "go": "",
         "rust": "",
         "java": "instanceof",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1191,7 +1275,8 @@
         "go": "",
         "rust": "",
         "java": "private",
-        "c": ""
+        "c": "",
+        "cpp": "private"
       }
     },
     {
@@ -1205,7 +1290,8 @@
         "go": "",
         "rust": "",
         "java": "protected",
-        "c": ""
+        "c": "",
+        "cpp": "protected"
       }
     },
     {
@@ -1219,7 +1305,8 @@
         "go": "",
         "rust": "pub",
         "java": "public",
-        "c": ""
+        "c": "",
+        "cpp": "public"
       }
     },
     {
@@ -1233,7 +1320,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1247,7 +1335,8 @@
         "go": "",
         "rust": "",
         "java": "abstract",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1261,7 +1350,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1275,7 +1365,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1289,7 +1380,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1303,7 +1395,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1317,7 +1410,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1331,7 +1425,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1345,7 +1440,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1359,7 +1455,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1373,7 +1470,8 @@
         "go": "",
         "rust": "",
         "java": "boolean",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1387,7 +1485,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1401,7 +1500,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1415,7 +1515,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1429,7 +1530,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1443,7 +1545,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1457,7 +1560,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1471,7 +1575,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1485,7 +1590,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1499,7 +1605,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1513,7 +1620,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": "using"
       }
     },
     {
@@ -1527,7 +1635,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1541,7 +1650,8 @@
         "go": "",
         "rust": "dyn",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1555,7 +1665,8 @@
         "go": "",
         "rust": "move",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1569,7 +1680,8 @@
         "go": "",
         "rust": "ref",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1583,7 +1695,8 @@
         "go": "",
         "rust": "where",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1597,7 +1710,8 @@
         "go": "",
         "rust": "gen",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1611,7 +1725,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1625,7 +1740,8 @@
         "go": "",
         "rust": "",
         "java": "byte",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1639,7 +1755,8 @@
         "go": "",
         "rust": "",
         "java": "char",
-        "c": "char"
+        "c": "char",
+        "cpp": "char"
       }
     },
     {
@@ -1653,7 +1770,8 @@
         "go": "",
         "rust": "",
         "java": "short",
-        "c": "short"
+        "c": "short",
+        "cpp": "short"
       }
     },
     {
@@ -1667,7 +1785,8 @@
         "go": "",
         "rust": "",
         "java": "int",
-        "c": "int"
+        "c": "int",
+        "cpp": "int"
       }
     },
     {
@@ -1681,7 +1800,8 @@
         "go": "",
         "rust": "",
         "java": "long",
-        "c": "long"
+        "c": "long",
+        "cpp": "long"
       }
     },
     {
@@ -1695,7 +1815,8 @@
         "go": "",
         "rust": "",
         "java": "float",
-        "c": "float"
+        "c": "float",
+        "cpp": "float"
       }
     },
     {
@@ -1709,7 +1830,8 @@
         "go": "",
         "rust": "",
         "java": "double",
-        "c": "double"
+        "c": "double",
+        "cpp": "double"
       }
     },
     {
@@ -1723,7 +1845,8 @@
         "go": "",
         "rust": "",
         "java": "final",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1737,7 +1860,8 @@
         "go": "",
         "rust": "",
         "java": "native",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1751,7 +1875,8 @@
         "go": "",
         "rust": "",
         "java": "strictfp",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1765,7 +1890,8 @@
         "go": "",
         "rust": "",
         "java": "synchronized",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1779,7 +1905,8 @@
         "go": "",
         "rust": "",
         "java": "throws",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1793,7 +1920,8 @@
         "go": "",
         "rust": "",
         "java": "transient",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1807,7 +1935,8 @@
         "go": "",
         "rust": "",
         "java": "volatile",
-        "c": "volatile"
+        "c": "volatile",
+        "cpp": "volatile"
       }
     },
     {
@@ -1821,7 +1950,8 @@
         "go": "",
         "rust": "_",
         "java": "_",
-        "c": ""
+        "c": "",
+        "cpp": ""
       }
     },
     {
@@ -1835,7 +1965,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "auto"
+        "c": "auto",
+        "cpp": "auto"
       }
     },
     {
@@ -1849,7 +1980,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "register"
+        "c": "register",
+        "cpp": "register"
       }
     },
     {
@@ -1863,7 +1995,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "signed"
+        "c": "signed",
+        "cpp": "signed"
       }
     },
     {
@@ -1877,7 +2010,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "unsigned"
+        "c": "unsigned",
+        "cpp": "unsigned"
       }
     },
     {
@@ -1891,7 +2025,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "sizeof"
+        "c": "sizeof",
+        "cpp": "sizeof"
       }
     },
     {
@@ -1905,7 +2040,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "typedef"
+        "c": "typedef",
+        "cpp": "typedef"
       }
     },
     {
@@ -1919,7 +2055,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "union"
+        "c": "union",
+        "cpp": "union"
       }
     },
     {
@@ -1933,7 +2070,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "inline"
+        "c": "inline",
+        "cpp": "inline"
       }
     },
     {
@@ -1947,7 +2085,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "restrict"
+        "c": "restrict",
+        "cpp": ""
       }
     },
     {
@@ -1961,7 +2100,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Bool"
+        "c": "_Bool",
+        "cpp": "bool"
       }
     },
     {
@@ -1975,7 +2115,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Complex"
+        "c": "_Complex",
+        "cpp": ""
       }
     },
     {
@@ -1989,7 +2130,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Imaginary"
+        "c": "_Imaginary",
+        "cpp": ""
       }
     },
     {
@@ -2003,7 +2145,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Alignas"
+        "c": "_Alignas",
+        "cpp": "alignas"
       }
     },
     {
@@ -2017,7 +2160,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Alignof"
+        "c": "_Alignof",
+        "cpp": "alignof"
       }
     },
     {
@@ -2031,7 +2175,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Atomic"
+        "c": "_Atomic",
+        "cpp": ""
       }
     },
     {
@@ -2045,7 +2190,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Generic"
+        "c": "_Generic",
+        "cpp": ""
       }
     },
     {
@@ -2059,7 +2205,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Noreturn"
+        "c": "_Noreturn",
+        "cpp": ""
       }
     },
     {
@@ -2073,7 +2220,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Static_assert"
+        "c": "_Static_assert",
+        "cpp": "static_assert"
       }
     },
     {
@@ -2087,7 +2235,8 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "_Thread_local"
+        "c": "_Thread_local",
+        "cpp": "thread_local"
       }
     },
     {
@@ -2101,7 +2250,548 @@
         "go": "",
         "rust": "",
         "java": "",
-        "c": "asm"
+        "c": "asm",
+        "cpp": "asm"
+      }
+    },
+    {
+      "logical": "TEMPLATE",
+      "tier": "standard",
+      "group": "cpp-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "template"
+      }
+    },
+    {
+      "logical": "VIRTUAL",
+      "tier": "standard",
+      "group": "cpp-oop",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "virtual"
+      }
+    },
+    {
+      "logical": "TYPENAME",
+      "tier": "standard",
+      "group": "cpp-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "typename"
+      }
+    },
+    {
+      "logical": "CONSTEXPR",
+      "tier": "advanced",
+      "group": "cpp-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "constexpr"
+      }
+    },
+    {
+      "logical": "CONSTEVAL",
+      "tier": "advanced",
+      "group": "cpp-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "consteval"
+      }
+    },
+    {
+      "logical": "CONSTINIT",
+      "tier": "advanced",
+      "group": "cpp-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "constinit"
+      }
+    },
+    {
+      "logical": "NOEXCEPT",
+      "tier": "advanced",
+      "group": "cpp-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "noexcept"
+      }
+    },
+    {
+      "logical": "DECLTYPE",
+      "tier": "advanced",
+      "group": "cpp-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "decltype"
+      }
+    },
+    {
+      "logical": "NULLPTR",
+      "tier": "standard",
+      "group": "cpp-literals",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "nullptr"
+      }
+    },
+    {
+      "logical": "OPERATOR",
+      "tier": "advanced",
+      "group": "cpp-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "operator"
+      }
+    },
+    {
+      "logical": "FRIEND",
+      "tier": "advanced",
+      "group": "cpp-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "friend"
+      }
+    },
+    {
+      "logical": "EXPLICIT",
+      "tier": "advanced",
+      "group": "cpp-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "explicit"
+      }
+    },
+    {
+      "logical": "MUTABLE",
+      "tier": "advanced",
+      "group": "cpp-modifiers",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "mutable"
+      }
+    },
+    {
+      "logical": "CONCEPT",
+      "tier": "advanced",
+      "group": "cpp-concepts",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "concept"
+      }
+    },
+    {
+      "logical": "REQUIRES",
+      "tier": "advanced",
+      "group": "cpp-concepts",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "requires"
+      }
+    },
+    {
+      "logical": "CO_AWAIT",
+      "tier": "advanced",
+      "group": "cpp-coroutines",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "co_await"
+      }
+    },
+    {
+      "logical": "CO_RETURN",
+      "tier": "advanced",
+      "group": "cpp-coroutines",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "co_return"
+      }
+    },
+    {
+      "logical": "CO_YIELD",
+      "tier": "advanced",
+      "group": "cpp-coroutines",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "co_yield"
+      }
+    },
+    {
+      "logical": "CHAR8_T",
+      "tier": "advanced",
+      "group": "cpp-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "char8_t"
+      }
+    },
+    {
+      "logical": "CHAR16_T",
+      "tier": "advanced",
+      "group": "cpp-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "char16_t"
+      }
+    },
+    {
+      "logical": "CHAR32_T",
+      "tier": "advanced",
+      "group": "cpp-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "char32_t"
+      }
+    },
+    {
+      "logical": "WCHAR_T",
+      "tier": "advanced",
+      "group": "cpp-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "wchar_t"
+      }
+    },
+    {
+      "logical": "TYPEID",
+      "tier": "advanced",
+      "group": "cpp-types",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "typeid"
+      }
+    },
+    {
+      "logical": "STATIC_CAST",
+      "tier": "advanced",
+      "group": "cpp-casts",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "static_cast"
+      }
+    },
+    {
+      "logical": "DYNAMIC_CAST",
+      "tier": "advanced",
+      "group": "cpp-casts",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "dynamic_cast"
+      }
+    },
+    {
+      "logical": "REINTERPRET_CAST",
+      "tier": "advanced",
+      "group": "cpp-casts",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "reinterpret_cast"
+      }
+    },
+    {
+      "logical": "CONST_CAST",
+      "tier": "advanced",
+      "group": "cpp-casts",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "const_cast"
+      }
+    },
+    {
+      "logical": "DELETE",
+      "tier": "standard",
+      "group": "cpp-memory",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "delete"
+      }
+    },
+    {
+      "logical": "BITAND",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "bitand"
+      }
+    },
+    {
+      "logical": "BITOR",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "bitor"
+      }
+    },
+    {
+      "logical": "COMPL",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "compl"
+      }
+    },
+    {
+      "logical": "XOR",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "xor"
+      }
+    },
+    {
+      "logical": "XOR_EQ",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "xor_eq"
+      }
+    },
+    {
+      "logical": "AND_EQ",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "and_eq"
+      }
+    },
+    {
+      "logical": "OR_EQ",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "or_eq"
+      }
+    },
+    {
+      "logical": "NOT_EQ",
+      "tier": "advanced",
+      "group": "cpp-alt-operators",
+      "targets": {
+        "javascript": "",
+        "python": "",
+        "typescript": "",
+        "go": "",
+        "rust": "",
+        "java": "",
+        "c": "",
+        "cpp": "not_eq"
       }
     }
   ]

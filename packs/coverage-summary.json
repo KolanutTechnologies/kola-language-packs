@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-08T03:38:19.409Z",
-  "logicalTokenCount": 149,
+  "generatedAt": "2026-07-08T04:16:09.500Z",
+  "logicalTokenCount": 185,
   "africanLanguagePackCount": 25,
   "transpileTargets": [
     "javascript",
@@ -9,13 +9,14 @@
     "go",
     "rust",
     "java",
-    "c"
+    "c",
+    "cpp"
   ],
   "perTarget": {
     "javascript": {
       "officialKeywordCount": 38,
-      "mappedCount": 38,
-      "structuralCount": 0,
+      "mappedCount": 37,
+      "structuralCount": 1,
       "gapCount": 0,
       "gaps": []
     },
@@ -28,8 +29,8 @@
     },
     "typescript": {
       "officialKeywordCount": 79,
-      "mappedCount": 79,
-      "structuralCount": 0,
+      "mappedCount": 78,
+      "structuralCount": 1,
       "gapCount": 0,
       "gaps": []
     },
@@ -57,6 +58,13 @@
     "c": {
       "officialKeywordCount": 45,
       "mappedCount": 45,
+      "structuralCount": 0,
+      "gapCount": 0,
+      "gaps": []
+    },
+    "cpp": {
+      "officialKeywordCount": 92,
+      "mappedCount": 92,
       "structuralCount": 0,
       "gapCount": 0,
       "gaps": []
@@ -434,7 +442,7 @@
   ],
   "tierCounts": {
     "core": 30,
-    "standard": 33,
-    "advanced": 86
+    "standard": 38,
+    "advanced": 117
   }
 }

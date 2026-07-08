@@ -1,0 +1,50 @@
+{
+  "condition": [
+    "ọnọdụ",
+    "condition"
+  ],
+  "name": [
+    "aha",
+    "name"
+  ],
+  "value": [
+    "uru",
+    "value"
+  ],
+  "message": [
+    "ozi",
+    "message"
+  ],
+  "index": [
+    "ọnụọgụ",
+    "index"
+  ],
+  "item": [
+    "ihe",
+    "item"
+  ],
+  "body": [
+    "ime",
+    "body"
+  ],
+  "expression": [
+    "okwu",
+    "expression"
+  ],
+  "variable": [
+    "gbanwere",
+    "variable"
+  ],
+  "array": [
+    "ndepụta",
+    "array"
+  ],
+  "function": [
+    "ọrụ",
+    "function"
+  ],
+  "class": [
+    "klasi",
+    "class"
+  ]
+}
