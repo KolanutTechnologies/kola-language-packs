@@ -8,7 +8,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.5.0",
+  "version": "0.6.0",
   "displayName": "Shona",
   "description": "Shona keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -23,7 +23,8 @@
     "rust",
     "java",
     "c",
-    "cpp"
+    "cpp",
+    "csharp"
   ],
   "keywords": {
     "IF": [
@@ -610,6 +611,114 @@
     ],
     "NOT_EQ": [
       "not_eq"
+    ],
+    "DELEGATE": [
+      "delegate"
+    ],
+    "EVENT": [
+      "event"
+    ],
+    "LOCK": [
+      "lock"
+    ],
+    "SEALED": [
+      "sealed"
+    ],
+    "OVERRIDE": [
+      "override"
+    ],
+    "FOREACH": [
+      "foreach"
+    ],
+    "PARTIAL": [
+      "partial"
+    ],
+    "PARAMS": [
+      "params"
+    ],
+    "INTERNAL": [
+      "internal"
+    ],
+    "CHECKED": [
+      "checked"
+    ],
+    "UNCHECKED": [
+      "unchecked"
+    ],
+    "FIXED": [
+      "fixed"
+    ],
+    "STACKALLOC": [
+      "stackalloc"
+    ],
+    "SBYTE": [
+      "sbyte"
+    ],
+    "UINT": [
+      "uint"
+    ],
+    "ULONG": [
+      "ulong"
+    ],
+    "USHORT": [
+      "ushort"
+    ],
+    "IMPLICIT": [
+      "implicit"
+    ],
+    "OUT": [
+      "out"
+    ],
+    "ADD": [
+      "add"
+    ],
+    "REMOVE": [
+      "remove"
+    ],
+    "DYNAMIC": [
+      "dynamic"
+    ],
+    "EQUALS": [
+      "equals"
+    ],
+    "ALIAS": [
+      "alias"
+    ],
+    "NAMEOF": [
+      "nameof"
+    ],
+    "WHEN": [
+      "when"
+    ],
+    "BY": [
+      "by"
+    ],
+    "ASCENDING": [
+      "ascending"
+    ],
+    "DESCENDING": [
+      "descending"
+    ],
+    "GROUP": [
+      "group"
+    ],
+    "INTO": [
+      "into"
+    ],
+    "JOIN": [
+      "join"
+    ],
+    "ON": [
+      "on"
+    ],
+    "ORDERBY": [
+      "orderby"
+    ],
+    "VALUE": [
+      "value"
+    ],
+    "DECIMAL": [
+      "decimal"
     ]
   },
   "scopeNote": "Shona of Zimbabwe.",

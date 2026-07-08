@@ -95,7 +95,8 @@
           "rust",
           "java",
           "c",
-          "cpp"
+          "cpp",
+          "csharp"
         ]
       },
       "minItems": 1

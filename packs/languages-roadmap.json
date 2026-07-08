@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Roadmap for African human-language packs and programming-target / logical-token registry growth. Shipped state: see packs/index.json, logical-tokens.json, official-target-keywords.json.",
   "shippedCount": 25,
   "plannedCount": 40,
@@ -232,16 +232,16 @@
       "go",
       "rust",
       "java",
-      "c"
+      "c",
+      "cpp",
+      "csharp"
     ],
     "planned": [
-      "cpp",
       "kotlin",
       "swift",
       "dart",
       "ruby",
       "php",
-      "csharp",
       "r",
       "clojure"
     ],
@@ -362,9 +362,10 @@
       },
       {
         "id": "csharp",
-        "release": "v0.4.0+",
+        "release": "v0.6.0",
         "priority": "medium",
-        "status": "planned",
+        "status": "shipped",
+        "specSource": "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/",
         "sampleKeywords": [
           "namespace",
           "class",

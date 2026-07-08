@@ -9,7 +9,8 @@ export type TargetLanguage =
   | 'rust'
   | 'java'
   | 'c'
-  | 'cpp';
+  | 'cpp'
+  | 'csharp';
 
 export type GlossTierMap = Record<string, GlossTierValue>;
 

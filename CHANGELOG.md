@@ -6,6 +6,18 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-07-08
+
+### Added
+
+- **C#** programming target (C# 12 keywords, 104 reserved/contextual words, 0 coverage gaps)
+- 36 C#-only logical tokens (`DELEGATE`, `FOREACH`, `LOCK`, LINQ keywords, …). **221 tokens** total, **9 targets**.
+- `scripts/add-csharp-target.mjs` maintainer script for the C# target migration
+
+### Changed
+
+- IDE glossary key `value` → `data_value` in four IDE-ready packs (avoids collision with C# keyword `value`)
+
 ## [0.5.0] - 2026-07-08
 
 ### Added

@@ -553,5 +553,113 @@
   ],
   "NOT_EQ": [
     "not_eq"
+  ],
+  "DELEGATE": [
+    "delegate"
+  ],
+  "EVENT": [
+    "event"
+  ],
+  "LOCK": [
+    "lock"
+  ],
+  "SEALED": [
+    "sealed"
+  ],
+  "OVERRIDE": [
+    "override"
+  ],
+  "FOREACH": [
+    "foreach"
+  ],
+  "PARTIAL": [
+    "partial"
+  ],
+  "PARAMS": [
+    "params"
+  ],
+  "INTERNAL": [
+    "internal"
+  ],
+  "CHECKED": [
+    "checked"
+  ],
+  "UNCHECKED": [
+    "unchecked"
+  ],
+  "FIXED": [
+    "fixed"
+  ],
+  "STACKALLOC": [
+    "stackalloc"
+  ],
+  "SBYTE": [
+    "sbyte"
+  ],
+  "UINT": [
+    "uint"
+  ],
+  "ULONG": [
+    "ulong"
+  ],
+  "USHORT": [
+    "ushort"
+  ],
+  "IMPLICIT": [
+    "implicit"
+  ],
+  "OUT": [
+    "out"
+  ],
+  "ADD": [
+    "add"
+  ],
+  "REMOVE": [
+    "remove"
+  ],
+  "DYNAMIC": [
+    "dynamic"
+  ],
+  "EQUALS": [
+    "equals"
+  ],
+  "ALIAS": [
+    "alias"
+  ],
+  "NAMEOF": [
+    "nameof"
+  ],
+  "WHEN": [
+    "when"
+  ],
+  "BY": [
+    "by"
+  ],
+  "ASCENDING": [
+    "ascending"
+  ],
+  "DESCENDING": [
+    "descending"
+  ],
+  "GROUP": [
+    "group"
+  ],
+  "INTO": [
+    "into"
+  ],
+  "JOIN": [
+    "join"
+  ],
+  "ON": [
+    "on"
+  ],
+  "ORDERBY": [
+    "orderby"
+  ],
+  "VALUE": [
+    "value"
+  ],
+  "DECIMAL": [
+    "decimal"
   ]
 }

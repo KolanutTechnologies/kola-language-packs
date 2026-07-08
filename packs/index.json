@@ -13,7 +13,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -22,7 +22,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": true
     },
@@ -37,7 +38,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -46,7 +47,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": true
     },
@@ -64,7 +66,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -73,7 +75,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": true
     },
@@ -88,7 +91,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -97,7 +100,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": true
     },
@@ -116,7 +120,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -125,7 +129,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -140,7 +145,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -149,7 +154,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -164,7 +170,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -173,7 +179,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -188,7 +195,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -197,7 +204,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -212,7 +220,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -221,7 +229,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -239,7 +248,7 @@
       "regions": [
         "Horn of Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -248,7 +257,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -265,7 +275,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -274,7 +284,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -290,7 +301,7 @@
       "regions": [
         "Central Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -299,7 +310,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -314,7 +326,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -323,7 +335,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -338,7 +351,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -347,7 +360,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -362,7 +376,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -371,7 +385,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -387,7 +402,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -396,7 +411,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -412,7 +428,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -421,7 +437,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -437,7 +454,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -446,7 +463,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -471,7 +489,7 @@
         "North Africa",
         "East Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -480,7 +498,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -517,7 +536,7 @@
         "East Africa",
         "Indian Ocean"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -526,7 +545,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -548,7 +568,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -557,7 +577,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -573,7 +594,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -582,7 +603,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -599,7 +621,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -608,7 +630,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -626,7 +649,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -635,7 +658,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     },
@@ -655,7 +679,7 @@
         "Southern Africa",
         "West Africa"
       ],
-      "version": "0.5.0",
+      "version": "0.6.0",
       "targets": [
         "javascript",
         "python",
@@ -664,7 +688,8 @@
         "rust",
         "java",
         "c",
-        "cpp"
+        "cpp",
+        "csharp"
       ],
       "ideReady": false
     }
