@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "Agoo",
+    "Hello"
+  ],
+  "Error": [
+    "Mfomso",
+    "Error"
+  ],
+  "Success": [
+    "Ɛyɛ yie",
+    "Success"
+  ],
+  "Welcome": [
+    "Akwaaba",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "Nante yie",
+    "Goodbye"
+  ],
+  "Yes": [
+    "Aane",
+    "Yes"
+  ],
+  "No": [
+    "Daabi",
+    "No"
+  ],
+  "Done": [
+    "Awie",
+    "Done"
+  ],
+  "Loading": [
+    "Ɛre load",
+    "Loading"
+  ],
+  "Failed": [
+    "Antumi",
+    "Failed"
+  ],
+  "Cancel": [
+    "Twa mu",
+    "Cancel"
+  ],
+  "Submit": [
+    "Fa kɔ",
+    "Submit"
+  ],
+  "Search": [
+    "Hwehwɛ",
+    "Search"
+  ],
+  "Warning": [
+    "Kɔkɔbɔ",
+    "Warning"
+  ],
+  "Please wait": [
+    "Yɛsrɛ twɛn",
+    "Please wait"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "Nkulamusizza",
+    "Hello"
+  ],
+  "Error": [
+    "Ensobi",
+    "Error"
+  ],
+  "Success": [
+    "Kituuse",
+    "Success"
+  ],
+  "Welcome": [
+    "Tukusanyukidde",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "Weeraba",
+    "Goodbye"
+  ],
+  "Yes": [
+    "Yee",
+    "Yes"
+  ],
+  "No": [
+    "Nedda",
+    "No"
+  ],
+  "Done": [
+    "Kimaze",
+    "Done"
+  ],
+  "Loading": [
+    "Kiteekateeka",
+    "Loading"
+  ],
+  "Failed": [
+    "Kigaanye",
+    "Failed"
+  ],
+  "Cancel": [
+    "Sazaamu",
+    "Cancel"
+  ],
+  "Submit": [
+    "Waayo",
+    "Submit"
+  ],
+  "Search": [
+    "Noonya",
+    "Search"
+  ],
+  "Warning": [
+    "Okulabula",
+    "Warning"
+  ],
+  "Please wait": [
+    "Linda",
+    "Please wait"
+  ]
+}

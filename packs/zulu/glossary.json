@@ -1,0 +1,122 @@
+{
+  "name": [
+    "igama",
+    "name"
+  ],
+  "count": [
+    "ibalo",
+    "count"
+  ],
+  "price": [
+    "intengo",
+    "price"
+  ],
+  "user": [
+    "umsebenzisi",
+    "user"
+  ],
+  "total": [
+    "isamba",
+    "total"
+  ],
+  "message": [
+    "umlayezo",
+    "message"
+  ],
+  "error": [
+    "iphutha",
+    "error"
+  ],
+  "payload": [
+    "idatha",
+    "payload"
+  ],
+  "item_list": [
+    "uhlu",
+    "item_list"
+  ],
+  "index": [
+    "incomba",
+    "index"
+  ],
+  "data_value": [
+    "inani",
+    "data_value"
+  ],
+  "item": [
+    "into",
+    "item"
+  ],
+  "num": [
+    "inombolo",
+    "num"
+  ],
+  "text": [
+    "umbhalo",
+    "text"
+  ],
+  "result": [
+    "umphumela",
+    "result"
+  ],
+  "input": [
+    "okokufaka",
+    "input"
+  ],
+  "output": [
+    "okokukhipha",
+    "output"
+  ],
+  "file_ref": [
+    "ifayela",
+    "file_ref"
+  ],
+  "path": [
+    "indlela",
+    "path"
+  ],
+  "length": [
+    "ubude",
+    "length"
+  ],
+  "size": [
+    "usayizi",
+    "size"
+  ],
+  "key": [
+    "ukhiye",
+    "key"
+  ],
+  "kind": [
+    "uhlobo",
+    "kind"
+  ],
+  "status": [
+    "isimo",
+    "status"
+  ],
+  "flag": [
+    "ifulegi",
+    "flag"
+  ],
+  "id": [
+    "isazisi",
+    "id"
+  ],
+  "age": [
+    "iminyaka",
+    "age"
+  ],
+  "score": [
+    "amaphuzu",
+    "score"
+  ],
+  "amount": [
+    "imali",
+    "amount"
+  ],
+  "password": [
+    "iphasiwedi",
+    "password"
+  ]
+}

@@ -63,7 +63,7 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 ---
 
-### `update-readme-metrics.mjs` — via `npm run readme:metrics`
+### `update-readme-metrics.mjs` — via `npm run readme:sync` (alias: `readme:metrics`)
 
 **What it does:** Updates the shields.io badge row and “At a glance” metrics table in `README.md`.
 
@@ -105,7 +105,8 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 | npm command | Script | Changes files? | Contributor? |
 |-------------|--------|----------------|--------------|
-| `npm test` | validate + coverage | coverage-summary only | **Yes — always** |
+| `npm test` | validate + coverage + README sync | coverage-summary + README.md | **Yes — always** |
+| `npm run readme:sync` | update-readme-metrics | README.md | After pack/target/token changes |
 | `npm run registry` | generate-language-registry | language-registry.json | New pack only |
 | `npm run ensure-tokens` | ensure-pack-tokens | missing keywords in packs | Maintainers (new tokens) |
 | `npm run sync-versions` | sync-pack-versions | pack + index versions | Maintainers / CI |

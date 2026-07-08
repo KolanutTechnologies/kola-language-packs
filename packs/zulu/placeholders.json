@@ -1,0 +1,50 @@
+{
+  "condition": [
+    "isimo",
+    "condition"
+  ],
+  "name": [
+    "igama",
+    "name"
+  ],
+  "value": [
+    "inani lemigqa",
+    "value"
+  ],
+  "message": [
+    "umlayezo",
+    "message"
+  ],
+  "index": [
+    "incomba",
+    "index"
+  ],
+  "item": [
+    "into",
+    "item"
+  ],
+  "body": [
+    "umzimba",
+    "body"
+  ],
+  "expression": [
+    "isibonakaliso",
+    "expression"
+  ],
+  "variable": [
+    "okuguquguqukayo",
+    "variable"
+  ],
+  "array": [
+    "uhlu",
+    "array"
+  ],
+  "function": [
+    "umsebenzi",
+    "function"
+  ],
+  "class": [
+    "ikilasi",
+    "class"
+  ]
+}

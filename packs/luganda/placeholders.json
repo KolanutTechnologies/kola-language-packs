@@ -1,0 +1,50 @@
+{
+  "condition": [
+    "embeera",
+    "condition"
+  ],
+  "name": [
+    "erinnya",
+    "name"
+  ],
+  "value": [
+    "omuwendo gw'amawulire",
+    "value"
+  ],
+  "message": [
+    "obubaka",
+    "message"
+  ],
+  "index": [
+    "omuwendo gw'ekifo",
+    "index"
+  ],
+  "item": [
+    "ekintu",
+    "item"
+  ],
+  "body": [
+    "omubiri",
+    "body"
+  ],
+  "expression": [
+    "enjogera",
+    "expression"
+  ],
+  "variable": [
+    "ekyukakyuka",
+    "variable"
+  ],
+  "array": [
+    "olukalala",
+    "array"
+  ],
+  "function": [
+    "omulimu",
+    "function"
+  ],
+  "class": [
+    "ekibiina",
+    "class"
+  ]
+}

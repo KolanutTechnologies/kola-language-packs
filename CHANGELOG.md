@@ -6,6 +6,12 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-07-08
+
+### Added
+
+- **Zulu**, **Twi**, and **Luganda** IDE gloss tiers — **8 IDE-ready** packs (keywords + glossary + placeholders + commonLiterals)
+
 ## [0.10.0] - 2026-07-08
 
 ### Added
