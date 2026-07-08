@@ -1,5 +1,5 @@
 {
-  "description": "Starter IDE gloss tiers for Kola Code integration (v0.4.0). Maintainer seed — community PRs refine phrasing.",
+  "description": "Starter glossary, placeholder, and commonLiteral keys for IDE and editor tooling (v0.4.0). Maintainer seed — community PRs refine phrasing.",
   "glossaryKeys": [
     "name",
     "count",

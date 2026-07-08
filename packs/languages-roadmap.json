@@ -1,5 +1,5 @@
 {
-  "version": "0.12.0",
+  "version": "0.12.1",
   "npmVersionBaseline": "0.11.1",
   "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, and IDE gloss tiers. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "howToUse": [
@@ -273,7 +273,7 @@
     ]
   },
   "ideTierRoadmap": {
-    "description": "Optional glossary, placeholders, commonLiterals for Kola Code. Seed keys in ide-tier-seeds.json.",
+    "description": "Optional glossary, placeholders, and commonLiterals for IDE-ready packs. Seed keys in ide-tier-seeds.json.",
     "ideReadyNow": [
       "yoruba",
       "hausa",
