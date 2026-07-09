@@ -1,0 +1,50 @@
+{
+  "condition": [
+    "شرط",
+    "condition"
+  ],
+  "name": [
+    "اسم",
+    "name"
+  ],
+  "value": [
+    "قيمة",
+    "value"
+  ],
+  "message": [
+    "رسالة",
+    "message"
+  ],
+  "index": [
+    "فهرس",
+    "index"
+  ],
+  "item": [
+    "عنصر",
+    "item"
+  ],
+  "body": [
+    "جسم",
+    "body"
+  ],
+  "expression": [
+    "تعبير",
+    "expression"
+  ],
+  "variable": [
+    "متغير",
+    "variable"
+  ],
+  "array": [
+    "مصفوفة",
+    "array"
+  ],
+  "function": [
+    "دالة",
+    "function"
+  ],
+  "class": [
+    "فئة",
+    "class"
+  ]
+}

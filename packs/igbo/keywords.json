@@ -1,10 +1,14 @@
 {
   "IF": [
     "ọ bụrụ na",
+    "oburu",
+    "oBuru",
     "if"
   ],
   "ELSE": [
     "ọ bụghị ma ọ bụ",
+    "ozo",
+    "oBughi",
     "else"
   ],
   "FOR": [
@@ -17,14 +21,19 @@
   ],
   "BREAK": [
     "kwụsị",
+    "nkwụsị",
+    "ikwusi",
     "break"
   ],
   "CONTINUE": [
     "ga n'ihu",
+    "gaaba",
+    "gaa",
     "continue"
   ],
   "SWITCH": [
     "họrọ",
+    "dịka",
     "switch"
   ],
   "CASE": [
@@ -37,10 +46,13 @@
   ],
   "FUNCTION": [
     "ọrụ",
+    "kowa",
     "function"
   ],
   "RETURN": [
     "lọghachi",
+    "laghachi",
+    "ibia",
     "return"
   ],
   "ASYNC": [
@@ -53,22 +65,29 @@
   ],
   "TRY": [
     "nwaa",
+    "trai",
+    "nwapụ",
     "try"
   ],
   "CATCH": [
     "jide",
+    "ewezuga",
     "catch"
   ],
   "FINALLY": [
     "ikpeazụ",
+    "nikpaazu",
     "finally"
   ],
   "THROW": [
     "tụba",
+    "bulie",
+    "tufuo",
     "throw"
   ],
   "LET": [
     "ka",
+    "nye",
     "let"
   ],
   "CONST": [
@@ -77,6 +96,7 @@
   ],
   "CLASS": [
     "klasi",
+    "klas",
     "class"
   ],
   "EXTENDS": [
@@ -89,10 +109,13 @@
   ],
   "THIS": [
     "nke a",
+    "nkea",
     "this"
   ],
   "IMPORT": [
     "bubata",
+    "ibubata",
+    "nwetakwa",
     "import"
   ],
   "EXPORT": [
@@ -101,18 +124,25 @@
   ],
   "PRINT": [
     "gosipụta",
+    "pụta",
+    "deputa",
     "print"
   ],
   "TRUE": [
     "eziokwu",
+    "ezi",
+    "naEzi",
     "true"
   ],
   "FALSE": [
     "ụgha",
+    "asi",
+    "naỤgha",
     "false"
   ],
   "NULL": [
     "efu",
+    "odighi",
     "null"
   ],
   "UNDEFINED": [
@@ -120,6 +150,8 @@
     "undefined"
   ],
   "ELIF": [
+    "ozobu",
+    "maOBuru",
     "else"
   ],
   "LOOP": [
@@ -144,6 +176,7 @@
     "yield"
   ],
   "LAMBDA": [
+    "lamuda",
     "lambda"
   ],
   "DEFER": [
@@ -246,12 +279,16 @@
     "map"
   ],
   "AND": [
+    "ma",
     "and"
   ],
   "OR": [
+    "obu",
+    "maọbụ",
     "or"
   ],
   "NOT": [
+    "obughi",
     "not"
   ],
   "IN": [

@@ -1,10 +1,12 @@
 {
   "IF": [
     "ikiwa",
+    "kama",
     "if"
   ],
   "ELSE": [
     "vinginevyo",
+    "sivyo",
     "else"
   ],
   "FOR": [
@@ -25,18 +27,22 @@
   ],
   "SWITCH": [
     "chagua",
+    "badili",
     "switch"
   ],
   "CASE": [
     "kesi",
+    "ikiwa",
     "case"
   ],
   "DEFAULT": [
     "chaguo msingi",
+    "kawaida",
     "default"
   ],
   "FUNCTION": [
     "kazi",
+    "unda",
     "function"
   ],
   "RETURN": [
@@ -69,6 +75,7 @@
   ],
   "LET": [
     "acha",
+    "fanya",
     "let"
   ],
   "CONST": [
@@ -93,6 +100,7 @@
   ],
   "IMPORT": [
     "agiza",
+    "tumia",
     "import"
   ],
   "EXPORT": [
@@ -101,6 +109,7 @@
   ],
   "PRINT": [
     "chapisha",
+    "andika",
     "print"
   ],
   "TRUE": [
@@ -109,6 +118,7 @@
   ],
   "FALSE": [
     "uongo",
+    "sikweli",
     "false"
   ],
   "NULL": [
@@ -120,6 +130,7 @@
     "undefined"
   ],
   "ELIF": [
+    "au kama",
     "else"
   ],
   "LOOP": [

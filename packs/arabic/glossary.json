@@ -1,124 +1,122 @@
 {
   "name": [
-    "jina",
+    "اسم",
     "name"
   ],
   "count": [
-    "hesabu",
+    "عدد",
     "count"
   ],
   "price": [
-    "bei",
+    "سعر",
     "price"
   ],
   "user": [
-    "mtumiaji",
+    "مستخدم",
     "user"
   ],
   "total": [
-    "jumla",
+    "المجموع",
     "total"
   ],
   "message": [
-    "ujumbe",
+    "رسالة",
     "message"
   ],
   "error": [
-    "kosa",
+    "خطأ",
     "error"
   ],
   "payload": [
-    "data",
+    "حمولة",
     "payload"
   ],
   "item_list": [
-    "orodha",
+    "قائمة",
     "item_list"
   ],
   "index": [
-    "faharasa",
+    "فهرس",
     "index"
   ],
   "data_value": [
-    "thamani",
+    "قيمة",
     "data_value"
   ],
   "item": [
-    "kipengele",
+    "عنصر",
     "item"
   ],
   "num": [
-    "nambari",
+    "رقم",
     "num"
   ],
   "text": [
-    "maandishi",
+    "نص",
     "text"
   ],
   "result": [
-    "matokeo",
+    "نتيجة",
     "result"
   ],
   "input": [
-    "jaza",
-    "pembejeo",
+    "إدخال",
     "input"
   ],
   "output": [
-    "andika",
-    "pato",
+    "قول",
     "output"
   ],
   "file_ref": [
-    "faili",
+    "ملف",
     "file_ref"
   ],
   "path": [
-    "njia",
+    "مسار",
     "path"
   ],
   "length": [
-    "urefu",
+    "طول",
     "length"
   ],
   "size": [
-    "ukubwa",
+    "حجم",
     "size"
   ],
   "key": [
-    "ufunguo",
+    "مفتاح",
     "key"
   ],
   "kind": [
-    "aina",
+    "نوع",
     "kind"
   ],
   "status": [
-    "hali",
+    "حالة",
     "status"
   ],
   "flag": [
-    "bendera",
+    "علامة",
     "flag"
   ],
   "id": [
-    "kitambulisho",
+    "معرف",
     "id"
   ],
   "age": [
-    "umri",
+    "عمر",
     "age"
   ],
   "score": [
-    "alama",
+    "درجة",
     "score"
   ],
   "amount": [
-    "kiasi",
+    "مبلغ",
     "amount"
   ],
   "password": [
-    "nenosiri",
+    "كلمة مرور",
     "password"
   ]
 }

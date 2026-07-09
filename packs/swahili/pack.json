@@ -12,7 +12,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.12.1",
+  "version": "0.13.0",
   "displayName": "Swahili",
   "description": "Swahili keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -39,10 +39,12 @@
   "keywords": {
     "IF": [
       "ikiwa",
+      "kama",
       "if"
     ],
     "ELSE": [
       "vinginevyo",
+      "sivyo",
       "else"
     ],
     "FOR": [
@@ -63,18 +65,22 @@
     ],
     "SWITCH": [
       "chagua",
+      "badili",
       "switch"
     ],
     "CASE": [
       "kesi",
+      "ikiwa",
       "case"
     ],
     "DEFAULT": [
       "chaguo msingi",
+      "kawaida",
       "default"
     ],
     "FUNCTION": [
       "kazi",
+      "unda",
       "function"
     ],
     "RETURN": [
@@ -107,6 +113,7 @@
     ],
     "LET": [
       "acha",
+      "fanya",
       "let"
     ],
     "CONST": [
@@ -131,6 +138,7 @@
     ],
     "IMPORT": [
       "agiza",
+      "tumia",
       "import"
     ],
     "EXPORT": [
@@ -139,6 +147,7 @@
     ],
     "PRINT": [
       "chapisha",
+      "andika",
       "print"
     ],
     "TRUE": [
@@ -147,6 +156,7 @@
     ],
     "FALSE": [
       "uongo",
+      "sikweli",
       "false"
     ],
     "NULL": [
@@ -158,6 +168,7 @@
       "undefined"
     ],
     "ELIF": [
+      "au kama",
       "else"
     ],
     "LOOP": [
@@ -1166,7 +1177,7 @@
       "r_dot9"
     ]
   },
-  "scopeNote": "KiSwahili with Kenya/Tanzania baseline. Note your country or dialect in PRs when proposing changes.",
+  "scopeNote": "KiSwahili with Kenya/Tanzania baseline. Includes Nuru prior-art aliases where they align with teaching usage. Note your country or dialect in PRs when proposing changes.",
   "recommendedPartners": [
     "BAKITA",
     "CHAKITA",

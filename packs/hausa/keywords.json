@@ -5,14 +5,20 @@
   ],
   "ELSE": [
     "in ba haka ba",
+    "sai",
+    "imbahakaba",
     "else"
   ],
   "FOR": [
     "domi",
+    "ga",
+    "ma",
     "for"
   ],
   "WHILE": [
     "yayin da",
+    "yayinda",
+    "indai",
     "while"
   ],
   "BREAK": [
@@ -21,14 +27,17 @@
   ],
   "CONTINUE": [
     "ci gaba",
+    "ci_gaba",
     "continue"
   ],
   "SWITCH": [
     "zaɓi",
+    "duba",
     "switch"
   ],
   "CASE": [
     "lokaci",
+    "hali",
     "case"
   ],
   "DEFAULT": [
@@ -45,10 +54,12 @@
   ],
   "ASYNC": [
     "jira",
+    "ba_jira",
     "async"
   ],
   "AWAIT": [
     "jira don",
+    "jira",
     "await"
   ],
   "TRY": [
@@ -61,6 +72,7 @@
   ],
   "FINALLY": [
     "a ƙarshe",
+    "karshe",
     "finally"
   ],
   "THROW": [
@@ -77,6 +89,8 @@
   ],
   "CLASS": [
     "rukuni",
+    "aji",
+    "tsarin",
     "class"
   ],
   "EXTENDS": [
@@ -93,6 +107,8 @@
   ],
   "IMPORT": [
     "shigo da",
+    "shigo",
+    "karo",
     "import"
   ],
   "EXPORT": [
@@ -101,6 +117,8 @@
   ],
   "PRINT": [
     "nuna",
+    "buga",
+    "rubuta",
     "print"
   ],
   "TRUE": [
@@ -113,6 +131,7 @@
   ],
   "NULL": [
     "babu komai",
+    "babu",
     "null"
   ],
   "UNDEFINED": [
@@ -120,12 +139,15 @@
     "undefined"
   ],
   "ELIF": [
+    "koidan",
+    "kokuma",
     "else"
   ],
   "LOOP": [
     "loop"
   ],
   "MATCH": [
+    "duba",
     "match"
   ],
   "GOTO": [
@@ -246,12 +268,15 @@
     "map"
   ],
   "AND": [
+    "da",
     "and"
   ],
   "OR": [
+    "ko",
     "or"
   ],
   "NOT": [
+    "ba",
     "not"
   ],
   "IN": [

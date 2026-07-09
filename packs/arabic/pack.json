@@ -18,7 +18,7 @@
     "North Africa",
     "East Africa"
   ],
-  "version": "0.12.1",
+  "version": "0.13.0",
   "displayName": "Arabic",
   "description": "Arabic keyword map for North and East Africa — starter pack",
   "reviewStatus": "starter",
@@ -113,6 +113,7 @@
     ],
     "LET": [
       "دع",
+      "حدد",
       "let"
     ],
     "CONST": [
@@ -137,6 +138,7 @@
     ],
     "IMPORT": [
       "استورد",
+      "ضمن",
       "import"
     ],
     "EXPORT": [
@@ -145,6 +147,7 @@
     ],
     "PRINT": [
       "اطبع",
+      "قول",
       "print"
     ],
     "TRUE": [
@@ -188,6 +191,7 @@
       "yield"
     ],
     "LAMBDA": [
+      "لامدا",
       "lambda"
     ],
     "DEFER": [
@@ -290,9 +294,11 @@
       "map"
     ],
     "AND": [
+      "و",
       "and"
     ],
     "OR": [
+      "أو",
       "or"
     ],
     "NOT": [
@@ -308,6 +314,7 @@
       "del"
     ],
     "DO": [
+      "إفعل",
       "do"
     ],
     "DEBUGGER": [
@@ -1172,7 +1179,7 @@
       "r_dot9"
     ]
   },
-  "scopeNote": "Modern Standard Arabic baseline for African contexts. Regional dialects differ — note your country in PRs.",
+  "scopeNote": "Modern Standard Arabic baseline for African contexts. Includes Qalb (قلب) prior-art aliases where they align with MSA teaching. Regional dialects differ — note your country in PRs.",
   "recommendedPartners": [
     "ACALAN",
     "AALCO Arabic language academies"

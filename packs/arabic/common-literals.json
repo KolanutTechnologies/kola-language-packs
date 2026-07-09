@@ -1,0 +1,62 @@
+{
+  "Hello": [
+    "مرحبا",
+    "Hello"
+  ],
+  "Error": [
+    "خطأ",
+    "Error"
+  ],
+  "Success": [
+    "نجاح",
+    "Success"
+  ],
+  "Welcome": [
+    "أهلا",
+    "Welcome"
+  ],
+  "Goodbye": [
+    "وداعا",
+    "Goodbye"
+  ],
+  "Yes": [
+    "نعم",
+    "Yes"
+  ],
+  "No": [
+    "لا",
+    "No"
+  ],
+  "Done": [
+    "تم",
+    "Done"
+  ],
+  "Loading": [
+    "جاري التحميل",
+    "Loading"
+  ],
+  "Failed": [
+    "فشل",
+    "Failed"
+  ],
+  "Cancel": [
+    "إلغاء",
+    "Cancel"
+  ],
+  "Submit": [
+    "إرسال",
+    "Submit"
+  ],
+  "Search": [
+    "بحث",
+    "Search"
+  ],
+  "Warning": [
+    "تحذير",
+    "Warning"
+  ],
+  "Please wait": [
+    "يرجى الانتظار",
+    "Please wait"
+  ]
+}

@@ -1,16 +1,23 @@
 # @kolanut/language-packs
 
-**Public open-source package** · Apache 2.0 · [Kolanut Technologies Ltd](https://kolacode.africa)
+**Language pack registry for African programming tools** · Apache 2.0 · [Kolanut Technologies Ltd](https://kolacode.africa)
+
+Not a standalone programming language (unlike Nuru, Yorlang, or similar runtimes). This repo ships **keyword maps and IDE gloss data** for editors, transpilers, and learning tools.
 
 <!-- badges:start -->
 
 [![npm](https://img.shields.io/npm/v/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)
+[![npm downloads](https://img.shields.io/npm/dw/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)
+[![Language pack registry](https://img.shields.io/badge/Language%20pack%20registry-for%20programming%20tools-2ea44f)](./packs/PACK_SCOPE.md)
+[![GitHub](https://img.shields.io/badge/GitHub-View%20%26%20star-181717?logo=github)](https://github.com/KolanutTechnologies/kola-language-packs)
 [![African language packs](https://img.shields.io/badge/African%20language%20packs-28-gold)](./packs/coverage-summary.json)
 [![Programming targets](https://img.shields.io/badge/Programming%20targets-15-blue)](./packs/coverage-summary.json)
 [![Logical tokens](https://img.shields.io/badge/Logical%20tokens-370-lightgrey)](./packs/logical-tokens.json)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <!-- badges:end -->
+
+Building with these packs? [Star the repo on GitHub](https://github.com/KolanutTechnologies/kola-language-packs) to follow releases and support African-language programming.
 
 <!-- intro-targets:start -->
 Language packs for African-language programming: a consistent set of **logical programming concepts**, mapped to **native-language phrases**, with enough structure for tools to transpile to **JavaScript, Python, TypeScript, Go, Rust, Java, C, C++, C#, Kotlin, Swift, Dart, Ruby, PHP, and R**.

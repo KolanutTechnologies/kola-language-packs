@@ -1,10 +1,13 @@
 {
   "IF": [
     "ṣé",
+    "ti",
     "if"
   ],
   "ELSE": [
     "bẹ́ẹ̀kọ́",
+    "tàbí",
+    "bibeeko",
     "else"
   ],
   "FOR": [
@@ -13,10 +16,14 @@
   ],
   "WHILE": [
     "nígbà tí",
+    "nígbàtí",
+    "nigbati",
+    "nigba",
     "while"
   ],
   "BREAK": [
     "dá",
+    "kúrò",
     "break"
   ],
   "CONTINUE": [
@@ -25,22 +32,28 @@
   ],
   "SWITCH": [
     "yàn",
+    "yí",
     "switch"
   ],
   "CASE": [
     "ìpò",
+    "ìru",
     "case"
   ],
   "DEFAULT": [
     "àìyípadà",
+    "padasi",
     "default"
   ],
   "FUNCTION": [
     "iṣẹ",
+    "iṣẹ́",
+    "ise",
     "function"
   ],
   "RETURN": [
     "padà",
+    "pada",
     "return"
   ],
   "ASYNC": [
@@ -69,6 +82,7 @@
   ],
   "LET": [
     "jẹ́ kí",
+    "jẹ́kí",
     "let"
   ],
   "CONST": [
@@ -93,6 +107,7 @@
   ],
   "IMPORT": [
     "gba",
+    "gbewọlé",
     "import"
   ],
   "EXPORT": [
@@ -101,18 +116,26 @@
   ],
   "PRINT": [
     "ìfìdísílẹ̀",
+    "sope",
+    "tejade",
+    "tẹ",
     "print"
   ],
   "TRUE": [
     "ìtọ́",
+    "òótọ́",
+    "sotito",
     "true"
   ],
   "FALSE": [
     "ìtàn",
+    "irọ́",
+    "seke",
     "false"
   ],
   "NULL": [
     "ohun kan",
+    "ofo",
     "null"
   ],
   "UNDEFINED": [
@@ -120,6 +143,9 @@
     "undefined"
   ],
   "ELIF": [
+    "tàbí ṣé",
+    "si_ti",
+    "tabi",
     "else"
   ],
   "LOOP": [
@@ -246,9 +272,11 @@
     "map"
   ],
   "AND": [
+    "ati",
     "and"
   ],
   "OR": [
+    "tabi",
     "or"
   ],
   "NOT": [

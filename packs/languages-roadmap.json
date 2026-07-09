@@ -1,5 +1,5 @@
 {
-  "version": "0.12.1",
+  "version": "0.13.0",
   "npmVersionBaseline": "0.11.1",
   "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, and IDE gloss tiers. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "howToUse": [
@@ -274,6 +274,42 @@
   },
   "ideTierRoadmap": {
     "description": "Optional glossary, placeholders, and commonLiterals for IDE-ready packs. Seed keys in ide-tier-seeds.json.",
+    "priorArtBoost": {
+      "description": "Packs with staged keywords or IDE seeds from native-syntax programming languages (see priorArtSources).",
+      "arabic": {
+        "source": "qalb",
+        "targetRelease": "0.13.0",
+        "status": "keywords-and-seeds-staged"
+      },
+      "yoruba": {
+        "sources": [
+          "yorlang",
+          "oduduwalang",
+          "orunmilang"
+        ],
+        "status": "enriched"
+      },
+      "swahili": {
+        "source": "nuru",
+        "status": "enriched"
+      },
+      "hausa": {
+        "sources": [
+          "tauraro",
+          "hapy",
+          "hausalang",
+          "dabara"
+        ],
+        "status": "enriched"
+      },
+      "igbo": {
+        "sources": [
+          "igboscript",
+          "ibolang"
+        ],
+        "status": "enriched"
+      }
+    },
     "ideReadyNow": [
       "yoruba",
       "hausa",
@@ -337,6 +373,272 @@
       "commonLiterals": 50,
       "targetRelease": "0.34.0"
     }
+  },
+  "priorArtSources": {
+    "description": "Native-syntax programming languages mined for pack aliases, glossary, and IDE seeds. Not transpile targets.",
+    "sources": [
+      {
+        "id": "qalb",
+        "name": "Qalb (قلب)",
+        "languageCode": "ar",
+        "pack": "arabic",
+        "repo": "https://github.com/nasser/---",
+        "year": 2012,
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "PRINT",
+          "LET",
+          "LAMBDA",
+          "AND",
+          "OR",
+          "IMPORT",
+          "DO"
+        ],
+        "notes": "Scheme-like Lebanese Arabic. إذا already matched pack IF; قول, حدد, لامدا, و, أو, ضمن, إفعل added as aliases."
+      },
+      {
+        "id": "yorlang",
+        "name": "Yorlang",
+        "languageCode": "yo",
+        "pack": "yoruba",
+        "repo": "https://github.com/anoniscoding/yorlang",
+        "year": 2018,
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "ELSE",
+          "ELIF",
+          "LET",
+          "FOR",
+          "WHILE",
+          "BREAK",
+          "SWITCH",
+          "CASE",
+          "DEFAULT",
+          "FUNCTION",
+          "RETURN",
+          "IMPORT",
+          "PRINT",
+          "TRUE",
+          "FALSE"
+        ],
+        "notes": "JS-like Yoruba esolang; jẹ́kí, tàbí, sope, gbewọlé, òótọ́, irọ́, kúrò, yí, ìru aliases added."
+      },
+      {
+        "id": "oduduwalang",
+        "name": "OduduwaLang",
+        "languageCode": "yo",
+        "pack": "yoruba",
+        "repo": "https://github.com/goodyness/OduduwaLang",
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "ELSE",
+          "ELIF",
+          "WHILE",
+          "PRINT",
+          "TRUE",
+          "FALSE",
+          "NULL",
+          "FUNCTION",
+          "RETURN"
+        ],
+        "notes": "Python transpiler; ti, bibeeko, tejade, nigbati, sotito, seke, ofo aliases added."
+      },
+      {
+        "id": "orunmilang",
+        "name": "Orunmilang",
+        "languageCode": "yo",
+        "pack": "yoruba",
+        "repo": "https://github.com/Lanlokun/orunmilang",
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "WHILE",
+          "FUNCTION",
+          "PRINT",
+          "AND",
+          "OR"
+        ],
+        "notes": "Langium educational DSL; ti, nigba, tẹ, ati, tabi aliases added."
+      },
+      {
+        "id": "nuru",
+        "name": "Nuru",
+        "languageCode": "sw",
+        "pack": "swahili",
+        "repo": "https://github.com/NuruProgramming/Nuru",
+        "year": 2022,
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "ELSE",
+          "ELIF",
+          "LET",
+          "FUNCTION",
+          "IMPORT",
+          "SWITCH",
+          "CASE",
+          "DEFAULT",
+          "PRINT",
+          "FALSE"
+        ],
+        "notes": "Swahili runtime with LSP; kama, sivyo, au kama, fanya, unda, tumia, badili, kawaida, sikweli, andika, jaza aliases added."
+      },
+      {
+        "id": "tauraro",
+        "name": "Tauraro",
+        "languageCode": "ha",
+        "pack": "hausa",
+        "repo": "https://github.com/tauraro/tauraro",
+        "year": 2026,
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "ELSE",
+          "ELIF",
+          "FOR",
+          "WHILE",
+          "FUNCTION",
+          "RETURN",
+          "BREAK",
+          "CONTINUE",
+          "MATCH",
+          "CASE",
+          "TRY",
+          "CATCH",
+          "FINALLY",
+          "THROW",
+          "CLASS",
+          "IMPORT",
+          "PRINT",
+          "TRUE",
+          "FALSE",
+          "NULL",
+          "AND",
+          "OR",
+          "NOT",
+          "ASYNC",
+          "AWAIT"
+        ],
+        "notes": "Bilingual Hausa/English compiled language; koidan, sai, ga, yayinda, buga, shigo, duba, hali, da, ko, ba, ba_jira aliases added."
+      },
+      {
+        "id": "hapy",
+        "name": "Hapy",
+        "languageCode": "ha",
+        "pack": "hausa",
+        "repo": "https://github.com/hapy-lang/hapy",
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "ELSE",
+          "ELIF",
+          "FOR",
+          "WHILE",
+          "FUNCTION",
+          "RETURN",
+          "IMPORT",
+          "CLASS",
+          "PRINT",
+          "TRUE",
+          "FALSE",
+          "NULL",
+          "AND",
+          "OR",
+          "NOT"
+        ],
+        "notes": "Hausa to Python transpiler; kokuma, imbahakaba, ma, indai, karo, tsarin, nuna aliases added."
+      },
+      {
+        "id": "hausalang",
+        "name": "Hausalang",
+        "languageCode": "ha",
+        "pack": "hausa",
+        "repo": "https://github.com/mnura361234-ship-it/hausalang",
+        "status": "enriched",
+        "notes": "Educational interpreter; idan, aiki, rubuta overlap with pack primary forms."
+      },
+      {
+        "id": "dabara",
+        "name": "Dabara",
+        "languageCode": "ha",
+        "pack": "hausa",
+        "repo": "https://github.com/feyroozecode/dabara_lang_project",
+        "status": "enriched",
+        "notes": "Hausa keyword language with Unicode support; rubuta, gaskiya, karya overlap."
+      },
+      {
+        "id": "igboscript",
+        "name": "Igboscript",
+        "languageCode": "ig",
+        "pack": "igbo",
+        "repo": "https://github.com/boi-network12/igboscript",
+        "year": 2025,
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "ELSE",
+          "ELIF",
+          "FOR",
+          "WHILE",
+          "FUNCTION",
+          "RETURN",
+          "BREAK",
+          "CONTINUE",
+          "SWITCH",
+          "TRY",
+          "CATCH",
+          "THROW",
+          "LET",
+          "CLASS",
+          "IMPORT",
+          "PRINT",
+          "TRUE",
+          "FALSE",
+          "NULL",
+          "AND",
+          "OR",
+          "THIS"
+        ],
+        "notes": "JavaScript superset with Igbo keywords; oBuru, pụta, ma, obu, laghachi, dịka aliases added."
+      },
+      {
+        "id": "ibolang",
+        "name": "Ibolang",
+        "languageCode": "ig",
+        "pack": "igbo",
+        "repo": "https://github.com/ORC-1/ibolang",
+        "status": "enriched",
+        "keywordOverlap": [
+          "IF",
+          "ELSE",
+          "ELIF",
+          "FOR",
+          "WHILE",
+          "FUNCTION",
+          "RETURN",
+          "BREAK",
+          "CONTINUE",
+          "TRY",
+          "CATCH",
+          "FINALLY",
+          "THROW",
+          "CLASS",
+          "IMPORT",
+          "PRINT",
+          "TRUE",
+          "FALSE",
+          "NULL",
+          "AND",
+          "OR",
+          "NOT",
+          "LAMBDA"
+        ],
+        "notes": "Python wrapper with Igbo keywords; oburu, ozobu, kowa, ibubata, deputa, ezi, asi, lamuda aliases added."
+      }
+    ]
   },
   "logicalTokenRoadmap": {
     "shippedCount": 370,

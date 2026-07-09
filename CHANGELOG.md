@@ -6,6 +6,23 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-07-09
+
+### Added
+
+- **Arabic** Qalb (قلب) prior-art keyword aliases (`قول`, `حدد`, `لامدا`, `و`, `أو`, `ضمن`, `إفعل`) and IDE gloss seeds (glossary, placeholders, commonLiterals)
+- **Yorùbá** prior-art aliases from Yorlang, OduduwaLang, and Orunmilang (`jẹ́kí`, `tàbí`, `sope`, `gbewọlé`, `òótọ́`, `irọ́`, `ati`, and related forms)
+- **Swahili** prior-art aliases from Nuru (`kama`, `sivyo`, `au kama`, `fanya`, `unda`, `tumia`, `andika`, `jaza`, and related forms)
+- **Hausa** prior-art aliases from Tauraro, Hapy, Hausalang, and Dabara (`koidan`, `sai`, `buga`, `da`, `ko`, `ba`, and related forms)
+- **Igbo** prior-art aliases from Igboscript and Ibolang (`oburu`, `pụta`, `deputa`, `kowa`, `ma`, `obu`, `lamuda`, and related forms)
+- Roadmap **`priorArtSources`** registry (nine native languages enriched across seven packs)
+
+### Changed
+
+- README: **Language pack registry** identity badge; subtitle clarifies this is tool vocabulary data, not a runtime language
+- README: npm weekly downloads badge, GitHub star CTA badge, and one-line star prompt; `package.json` `homepage` and `bugs` for npm sidebar links
+
+
 ## [0.12.1] - 2026-07-08
 
 ### Changed
@@ -171,10 +188,11 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.13.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.0
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.12.1...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.13.0...HEAD
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1

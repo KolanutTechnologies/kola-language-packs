@@ -85,7 +85,7 @@ Status: **shipped** · **next** · **planned**
 | Version | Bump | Focus | End state |
 |---------|------|-------|-----------|
 | **0.12.0** | minor | **Clojure** programming target; scope docs (`ROADMAP.md`, `TIERS.md`) | 16 targets · ~385–400 tokens |
-| **0.13.0** | minor | IDE gloss batch 1: Akan, Bambara, Wolof, Fulfulde, Arabic | 13 IDE-ready |
+| **0.13.0** | minor | IDE gloss batch 1: Akan, Bambara, Wolof, Fulfulde, Arabic (Qalb prior-art aliases staged) | 13 IDE-ready |
 | **0.14.0** | minor | IDE batch 2: Amharic, Oromo, Tigrinya, Kinyarwanda, Somali | 18 IDE-ready |
 | **0.15.0** | minor | IDE batch 3: Afrikaans, Sesotho, Setswana, Shona, isiXhosa | 23 IDE-ready |
 | **0.16.0** | minor | IDE batch 4: Efik, Cameroon Pidgin, Lingala, French, Portuguese-Africa | **28 IDE-ready** |
@@ -176,6 +176,7 @@ These can land as **patch** or ride along with related **minor** releases:
 | Track | Owner | Notes |
 |-------|-------|-------|
 | Translation quality | Community PRs | `starter` → `community-reviewed` |
+| Native prior art | Maintainers | Qalb → Arabic; Yorlang/OduduwaLang/Orunmilang → Yoruba; Nuru → Swahili; Tauraro/Hapy → Hausa; Igboscript/Ibolang → Igbo (see `priorArtSources`) |
 | README / docs | Maintainers | `npm run readme:sync` after metric changes |
 | Validation / CI | Maintainers | Usually no npm bump alone |
 | Logical token additions | Maintainers | Only when a shipped target gains new reserved words |
