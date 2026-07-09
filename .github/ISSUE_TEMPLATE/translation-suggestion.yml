@@ -1,0 +1,155 @@
+name: Suggest a translation
+description: Propose a better word or add a dialect alias. No coding or PR required.
+title: "[Translation] "
+labels:
+  - translation-suggestion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve African-language programming vocabulary.
+
+        **You do not need to edit files or run any commands.** Maintainers will review your suggestion and apply it to the pack. We credit contributors in the pack metadata when possible.
+
+        Read the [simple guide](https://github.com/KolanutTechnologies/kola-language-packs/blob/main/CONTRIBUTING-SIMPLE.md) for examples.
+
+        **Concept names** use English programming keywords as labels (for example `IF`, `FOR`, `FUNCTION`). See [`packs/logical-tokens.json`](https://github.com/KolanutTechnologies/kola-language-packs/blob/main/packs/logical-tokens.json) for the full list of 370 concepts.
+
+  - type: dropdown
+    id: pack
+    attributes:
+      label: Language pack
+      description: Which pack does this suggestion apply to?
+      options:
+        - Afrikaans (afrikaans)
+        - Akan (akan)
+        - Amharic (amharic)
+        - Arabic (arabic)
+        - Bambara (bambara)
+        - Cameroon Pidgin (cameroon-pidgin)
+        - Efik (efik)
+        - French (french)
+        - Fulfulde (fulfulde)
+        - Hausa (hausa)
+        - Igbo (igbo)
+        - Kinyarwanda (kinyarwanda)
+        - Lingala (lingala)
+        - Luganda (luganda)
+        - Nigerian Pidgin (nigerian-pidgin)
+        - Oromo (oromo)
+        - Portuguese - Africa (portuguese-africa)
+        - Sesotho (sesotho)
+        - Setswana (setswana)
+        - Shona (shona)
+        - Somali (somali)
+        - Swahili (swahili)
+        - Tigrinya (tigrinya)
+        - Twi (twi)
+        - Wolof (wolof)
+        - isiXhosa (xhosa)
+        - Yorùbá (yoruba)
+        - isiZulu (zulu)
+        - Other / language not listed yet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: concept
+    attributes:
+      label: Programming concept
+      description: Pick the idea you are translating. Plain English hints are in the label.
+      options:
+        - IF — if / conditional
+        - ELSE — otherwise
+        - FOR — for loop
+        - WHILE — while loop
+        - FUNCTION — define a function
+        - RETURN — return a value
+        - PRINT — print / show output
+        - LET — variable (let)
+        - CONST — constant
+        - VAR — variable (var)
+        - TRUE — true
+        - FALSE — false
+        - NULL — null / empty
+        - BREAK — exit a loop
+        - CONTINUE — skip to next loop step
+        - SWITCH — switch / choose case
+        - CASE — case branch
+        - DEFAULT — default branch
+        - TRY — try (handle errors)
+        - CATCH — catch errors
+        - CLASS — class (objects)
+        - NEW — create new instance
+        - THIS — this / current object
+        - IMPORT — import code
+        - EXPORT — export code
+        - AND — logical and
+        - OR — logical or
+        - NOT — logical not
+        - ASYNC — async
+        - AWAIT — await
+        - Other (type the concept name below)
+    validations:
+      required: true
+
+  - type: input
+    id: concept_other
+    attributes:
+      label: Other concept name (only if you chose Other above)
+      description: Token name from the checklist, for example SWITCH, FINALLY, EXTENDS. See logical-tokens.json on GitHub.
+      placeholder: FINALLY
+
+  - type: input
+    id: english_hint
+    attributes:
+      label: English keyword (optional)
+      description: The usual English word for this concept, if you know it. For example "if" for IF.
+      placeholder: if
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current translation (optional)
+      description: What the pack shows today, if you know it. Copy from the pack or skip if unsure.
+      placeholder: ṣé, ti, if
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Your suggestion
+      description: The word or phrase you recommend. You can list several alternatives separated by commas.
+      placeholder: fún, fun, for
+    validations:
+      required: true
+
+  - type: input
+    id: dialect
+    attributes:
+      label: Your region or dialect
+      description: Country, city, or dialect variant (for example "Lagos Yoruba", "Kano Hausa", "Dar es Salaam Swahili").
+      placeholder: Lagos, Nigeria
+    validations:
+      required: true
+
+  - type: input
+    id: credit
+    attributes:
+      label: How should we credit you?
+      description: GitHub username, full name, or "anonymous".
+      placeholder: your-github-username
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: Why this phrasing is better, source, or teaching context.
+      placeholder: We use this word when teaching loops in school.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirm
+      options:
+        - label: I am a speaker or educator of this language variant, or I am citing a reliable source.
+          required: true

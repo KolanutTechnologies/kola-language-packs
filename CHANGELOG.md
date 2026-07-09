@@ -6,6 +6,17 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-07-09
+
+### Added
+
+- **Non-developer contributions:** GitHub issue forms with **language** and **concept dropdowns** (`translation-suggestion`, `unnatural-phrasing`) and [`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md) (suggest translations without git, JSON, or npm)
+
+### Changed
+
+- `CONTRIBUTING.md`: correct logical token count (370, not 112); maintainer triage notes for issue suggestions
+
+
 ## [0.13.2] - 2026-07-09
 
 ### Changed
@@ -202,13 +213,14 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.14.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.14.0
 [0.13.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.2
 [0.13.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.1
 [0.13.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.0
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.13.2...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.14.0...HEAD
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1

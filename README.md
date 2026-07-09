@@ -330,6 +330,17 @@ _See [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) for the fu
 
 Contributions are welcome—especially from native speakers and educators.
 
+### No coding required
+
+**Start here if you do not use git or JSON:** [`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md)
+
+- [Suggest a translation](https://github.com/KolanutTechnologies/kola-language-packs/issues/new?template=translation-suggestion.yml) (add or improve a word)
+- [Report unnatural phrasing](https://github.com/KolanutTechnologies/kola-language-packs/issues/new?template=unnatural-phrasing.yml)
+
+Maintainers apply your suggestion and credit you in the pack.
+
+### Open a pull request (developers)
+
 **Start here:** [`CONTRIBUTING.md`](./CONTRIBUTING.md) — step-by-step guide (what to edit, what not to touch, checklist before you open a PR).
 
 **New language?** [`packs/NAMING_GUIDE.md`](./packs/NAMING_GUIDE.md) · [`packs/language-registry.json`](./packs/language-registry.json) · [`packs/DIALECTS.md`](./packs/DIALECTS.md) (dialects)
@@ -349,10 +360,10 @@ Contributions are welcome—especially from native speakers and educators.
 
 A valid contribution is a **complete pack** (correct scope metadata + all 370 tokens translated), not a few word changes in isolation.
 
-### Two ways to contribute
+### Contribute with a pull request
 
 1. **Improve an existing pack** — e.g. `packs/zulu/` — fix phrasing, add dialect aliases, clarify `scopeNote`
-2. **Add a new pack** — copy an existing pack, set all metadata (`name`, `languageCode`, `locale`, `displayName`, `description`, …), translate all 370 tokens, add to `packs/index.json`, run `npm run registry`
+2. **Add a new pack** — copy an existing pack, set all metadata, translate all 370 tokens, add to `packs/index.json`, run `npm run registry`
 
 One language pack per PR. Run `npm test` from the **repo root** before opening the PR.
 
@@ -374,7 +385,7 @@ npm test
 
 **Do not run** `npm run bootstrap` — it overwrites all packs ([`scripts/README.md`](./scripts/README.md)).
 
-Docs: [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`packs/REPO_MAP.md`](./packs/REPO_MAP.md) (what each file does) · [`VERSIONING.md`](./VERSIONING.md) · [`CHANGELOG.md`](./CHANGELOG.md)
+Docs: [`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md) (no coding) · [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`packs/REPO_MAP.md`](./packs/REPO_MAP.md) (what each file does) · [`VERSIONING.md`](./VERSIONING.md) · [`CHANGELOG.md`](./CHANGELOG.md)
 
 ### Contribution flow (quick)
 

@@ -20,7 +20,9 @@ Quick map of this repository. **Contributors** mostly touch `packs/<language>/` 
 | `packs/ROADMAP.md` | Version plan (patch / minor / major releases) |
 | `packs/TIERS.md` | Pack layers (keywords, glossary, placeholders, stdlib) |
 | `packs/language-registry.json` | Taken / planned pack names and locales |
-| `CONTRIBUTING.md` | Step-by-step how to contribute |
+| `CONTRIBUTING.md` | Step-by-step how to contribute (PRs, npm test) |
+| `CONTRIBUTING-SIMPLE.md` | Suggest translations via GitHub Issues (no coding) |
+| `.github/ISSUE_TEMPLATE/` | Issue forms for translation suggestions and review |
 | `packs/NAMING_GUIDE.md` | Naming, locale format, new pack steps |
 | `packs/DIALECTS.md` | Dialect → aliases vs new pack |
 | `packs/GLOSSARY.md` | ISO 639, ISO 3166-1, BCP-47 explained |

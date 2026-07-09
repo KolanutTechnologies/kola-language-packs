@@ -1,0 +1,133 @@
+name: Report unnatural phrasing
+description: Flag wording that sounds wrong, awkward, or out of dialect. No coding required.
+title: "[Review] "
+labels:
+  - translation-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us fix translations that do not sound natural in your dialect or region.
+
+        **You do not need to open a PR.** Describe the problem and, if you can, suggest a better phrase. Maintainers will update the pack after review.
+
+        See the [simple guide](https://github.com/KolanutTechnologies/kola-language-packs/blob/main/CONTRIBUTING-SIMPLE.md).
+
+  - type: dropdown
+    id: pack
+    attributes:
+      label: Language pack
+      options:
+        - Afrikaans (afrikaans)
+        - Akan (akan)
+        - Amharic (amharic)
+        - Arabic (arabic)
+        - Bambara (bambara)
+        - Cameroon Pidgin (cameroon-pidgin)
+        - Efik (efik)
+        - French (french)
+        - Fulfulde (fulfulde)
+        - Hausa (hausa)
+        - Igbo (igbo)
+        - Kinyarwanda (kinyarwanda)
+        - Lingala (lingala)
+        - Luganda (luganda)
+        - Nigerian Pidgin (nigerian-pidgin)
+        - Oromo (oromo)
+        - Portuguese - Africa (portuguese-africa)
+        - Sesotho (sesotho)
+        - Setswana (setswana)
+        - Shona (shona)
+        - Somali (somali)
+        - Swahili (swahili)
+        - Tigrinya (tigrinya)
+        - Twi (twi)
+        - Wolof (wolof)
+        - isiXhosa (xhosa)
+        - Yorùbá (yoruba)
+        - isiZulu (zulu)
+        - Other / language not listed yet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: concept
+    attributes:
+      label: Programming concept
+      description: Pick the idea that sounds wrong. Plain English hints are in the label.
+      options:
+        - IF — if / conditional
+        - ELSE — otherwise
+        - FOR — for loop
+        - WHILE — while loop
+        - FUNCTION — define a function
+        - RETURN — return a value
+        - PRINT — print / show output
+        - LET — variable (let)
+        - CONST — constant
+        - VAR — variable (var)
+        - TRUE — true
+        - FALSE — false
+        - NULL — null / empty
+        - BREAK — exit a loop
+        - CONTINUE — skip to next loop step
+        - SWITCH — switch / choose case
+        - CASE — case branch
+        - DEFAULT — default branch
+        - TRY — try (handle errors)
+        - CATCH — catch errors
+        - CLASS — class (objects)
+        - NEW — create new instance
+        - THIS — this / current object
+        - IMPORT — import code
+        - EXPORT — export code
+        - AND — logical and
+        - OR — logical or
+        - NOT — logical not
+        - ASYNC — async
+        - AWAIT — await
+        - Other (type the concept name below)
+    validations:
+      required: true
+
+  - type: input
+    id: concept_other
+    attributes:
+      label: Other concept name (only if you chose Other above)
+      placeholder: FINALLY
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current wording in the pack
+      description: Copy the phrase(s) that sound wrong, if you can.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What feels wrong?
+      description: Unnatural, wrong dialect, too literal, offensive, confusing for learners, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Better alternative (optional)
+      description: What would you say instead when teaching programming?
+
+  - type: input
+    id: dialect
+    attributes:
+      label: Your region or dialect
+      placeholder: Kumasi, Ghana
+    validations:
+      required: true
+
+  - type: input
+    id: credit
+    attributes:
+      label: How should we credit you?
+      placeholder: your-github-username

@@ -2,11 +2,13 @@
 
 Thank you for helping make programming accessible to African developers in their native languages!
 
+**Not a developer?** You can suggest translations without editing files: [`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md) (GitHub issue forms, no install required).
+
 ## Start here (read this first)
 
 Every contribution is a **language pack** under `packs/<name>/`. You translate programming concepts into native phrases and declare **where that variant applies** (`locale`, `countries`, `regions`).
 
-**Do not edit `packs/logical-tokens.json` to add translations.** That file is the shared checklist of 112 concepts (IF, FOR, FUNCTION, …). Your job is to map those keys in your language pack — not change the registry itself.
+**Do not edit `packs/logical-tokens.json` to add translations.** That file is the shared checklist of **370** concepts (IF, FOR, FUNCTION, …). Your job is to map those keys in your language pack — not change the registry itself.
 
 | File | What to do |
 |------|------------|
@@ -54,7 +56,7 @@ Do **not** `cd` into `packs/hausa/` or `scripts/` to run npm. You edit files in 
 
 **Success looks like:**
 ```text
-Validated 25 language pack(s) against 112 logical token(s).
+Validated 28 language pack(s) against 370 logical token(s).
 Coverage OK: ...
 ```
 If you see that, you are done. Open your PR.
@@ -89,7 +91,7 @@ Example: better isiZulu phrasing in `packs/zulu/`.
 
 1. **Find your pack** in [`packs/index.json`](./packs/index.json) and open its folder (e.g. `packs/zulu/`).
 2. **Read `scopeNote`** in `pack.json` — confirm this pack matches your dialect/region. If not, see Path B (new variant).
-3. **Open `packs/logical-tokens.json`** — use it as a checklist. Every `"logical"` key (112 total) must have a translation in your pack.
+3. **Open `packs/logical-tokens.json`** — use it as a checklist. Every `"logical"` key (**370** total) must have a translation in your pack.
 4. **Edit translations** in `keywords.json` (easiest) and copy the same changes into `pack.json` → `keywords`.
 5. **Update metadata if needed** — e.g. clearer `scopeNote`, corrected `countries`, or added dialect aliases. Do not change `languageCode`/`locale` unless you are fixing a mistake or scoping a variant.
 6. **Run validation:**
@@ -156,7 +158,7 @@ Use this when the language or **country-specific variant** does not exist yet (e
    | `reviewStatus` | `"starter"` | Always `starter` for new PRs |
    | `contributors` | `["your-github-username"]` | Your GitHub handle |
    | `targets` | `["javascript","python","typescript","go","rust"]` | All five required |
-   | `keywords` | `{ "IF": [...], ... }` | All **112** tokens from `logical-tokens.json` |
+   | `keywords` | `{ "IF": [...], ... }` | All **370** tokens from `logical-tokens.json` |
 
 4. **Edit `keywords.json`** — must be **identical** to the `keywords` object in `pack.json`.
 
@@ -189,7 +191,7 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 - [ ] `version` matches root `package.json`
 - [ ] `languageCode`, `locale`, `countries`, and `regions` correctly describe **my** variant
 - [ ] `scopeNote` explains what is in scope and what belongs in a different pack
-- [ ] All **112** logical tokens from `logical-tokens.json` have translations in `keywords`
+- [ ] All **370** logical tokens from `logical-tokens.json` have translations in `keywords`
 - [ ] `keywords.json` and `pack.json` → `keywords` are **identical**
 - [ ] `targets` lists all five: `javascript`, `python`, `typescript`, `go`, `rust`
 - [ ] `npm test` passes locally
@@ -205,7 +207,7 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 - Replacing starter translations with natural phrasing a teacher would use
 - Adding alias arrays for regional variants within the same pack scope
 - Fixing wrong `locale` / `countries` / `scopeNote` metadata
-- A complete new pack with correct scope and all 112 tokens
+- A complete new pack with correct scope and all 370 tokens
 
 **Not enough on its own:**
 
@@ -259,7 +261,7 @@ Browse packs: [`packs/index.json`](./packs/index.json) · by country: [`packs/by
 
 ### The token registry
 
-Every pack must translate all logical tokens in [`packs/logical-tokens.json`](./packs/logical-tokens.json) (**112 tokens**).
+Every pack must translate all logical tokens in [`packs/logical-tokens.json`](./packs/logical-tokens.json) (**370 tokens**).
 
 **Rules:**
 
@@ -279,6 +281,28 @@ See [`packs/target-coverage.json`](./packs/target-coverage.json) for how each to
 4. **Merge and release** — release-please batches releasable PRs into a Release PR; maintainer merges when ready to publish
 
 Most PRs are reviewed within 1–2 weeks.
+
+---
+
+## Maintainer: applying issue suggestions
+
+Contributors can also use GitHub issue forms ([`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md)) without opening PRs.
+
+| Label | Form | Your job |
+|-------|------|----------|
+| `translation-suggestion` | Suggest a translation | Add alias or replace phrasing in `packs/<name>/keywords.json` and `pack.json` → `keywords`; credit submitter in `contributors` when appropriate |
+| `translation-review` | Report unnatural phrasing | Same as above; close with link to merged PR or commit |
+
+**Triage checklist:**
+
+1. Confirm pack scope ([`PACK_SCOPE.md`](./packs/PACK_SCOPE.md), [`DIALECTS.md`](./packs/DIALECTS.md)).
+2. Keep English fallback as last alias when adding arrays.
+3. Sync `keywords.json` and `pack.json` → `keywords` identically.
+4. Run `npm test` from repo root.
+5. Open a PR (or batch several issues). Reference the issue number.
+6. Comment on the issue when shipped; thank the contributor.
+
+When adding a new pack, update the dropdown lists in `.github/ISSUE_TEMPLATE/translation-suggestion.yml` and `unnatural-phrasing.yml`.
 
 ### PR titles (for automated changelog)
 

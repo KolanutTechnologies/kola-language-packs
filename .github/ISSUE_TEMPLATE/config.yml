@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contribute without coding (simple guide)
+    url: https://github.com/KolanutTechnologies/kola-language-packs/blob/main/CONTRIBUTING-SIMPLE.md
+    about: Suggest translations via GitHub Issues. No install, no JSON, no PR required.
+  - name: Full contributor guide (open a PR)
+    url: https://github.com/KolanutTechnologies/kola-language-packs/blob/main/CONTRIBUTING.md
+    about: Step-by-step guide for developers editing pack files directly.
+  - name: Questions and discussion
+    url: https://github.com/KolanutTechnologies/kola-language-packs/discussions
+    about: Ask about scope, dialects, or which pack to use.
