@@ -6,6 +6,10 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+### Fixed
+
+- CI npm publish: drop global `npm@latest` upgrade that broke `--provenance` (`Cannot find module 'sigstore'`); use bundled npm with `registry-url` for OIDC
+
 ## [0.13.0] - 2026-07-09
 
 ### Added

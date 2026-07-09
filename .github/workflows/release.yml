@@ -109,14 +109,12 @@ jobs:
         with:
           ref: v${{ needs.resolve-publish.outputs.version }}
 
+      # Trusted Publisher (OIDC): workflow filename must match npm settings: release.yml
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: npm
-
-      # Trusted Publisher (OIDC): workflow filename must match npm settings: release.yml
-      - name: Ensure npm supports OIDC trusted publishing
-        run: npm install -g npm@latest
+          registry-url: 'https://registry.npmjs.org'
 
       - run: npm ci
       - run: npm run sync-versions
