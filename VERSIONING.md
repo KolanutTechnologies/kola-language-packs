@@ -109,6 +109,7 @@ Before push to `main`: `git fetch origin` and `git pull --rebase origin main` if
 | Push rejected, `fetch first` | CI released while you were working | Rebase onto `origin/main`; merge CHANGELOG sections |
 | CI: `nothing to commit, working tree clean` | Version already committed (prepared flow); old workflow tried to commit again | Tag-only step in `release.yml`; re-run Release |
 | GitHub tag exists, npm still old | `publish-npm` failed (auth, etc.) | Catch-up job or workflow_dispatch **republish_version** |
+| `Cannot find module 'sigstore'` on publish | Workflow ran `npm install -g npm@latest` before `--provenance` | Remove global npm upgrade; use bundled npm + `registry-url` on `setup-node` (see `.cursor/rules/npm-provenance-publish.mdc`) |
 | Rebase conflicts on every `pack.json` | You and CI both bumped patch | Keep intended semver (e.g. 0.4.0) |
 
 ---

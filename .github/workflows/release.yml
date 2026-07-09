@@ -110,6 +110,7 @@ jobs:
           ref: v${{ needs.resolve-publish.outputs.version }}
 
       # Trusted Publisher (OIDC): workflow filename must match npm settings: release.yml
+      # Do not npm install -g npm@latest here — breaks sigstore for --provenance (npm/cli#8018).
       - uses: actions/setup-node@v4
         with:
           node-version: '24'

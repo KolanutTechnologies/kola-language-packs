@@ -6,6 +6,13 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.13.2] - 2026-07-09
+
+### Changed
+
+- Release docs: npm provenance publish guardrails in `VERSIONING.md` and inline comment in `release.yml` (do not global-upgrade npm before `--provenance`)
+
+
 ## [0.13.1] - 2026-07-09
 
 ### Fixed
@@ -195,12 +202,13 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.13.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.2
 [0.13.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.1
 [0.13.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.0
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.13.1...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.13.2...HEAD
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1
