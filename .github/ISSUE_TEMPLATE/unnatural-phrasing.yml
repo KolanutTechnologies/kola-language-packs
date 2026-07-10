@@ -18,6 +18,7 @@ body:
     attributes:
       label: Language pack
       options:
+        # sync:pack-options:start
         - Afrikaans (afrikaans)
         - Akan (akan)
         - Amharic (amharic)
@@ -29,12 +30,14 @@ body:
         - Fulfulde (fulfulde)
         - Hausa (hausa)
         - Igbo (igbo)
+        - isiXhosa (xhosa)
+        - isiZulu (zulu)
         - Kinyarwanda (kinyarwanda)
         - Lingala (lingala)
         - Luganda (luganda)
         - Nigerian Pidgin (nigerian-pidgin)
         - Oromo (oromo)
-        - Portuguese - Africa (portuguese-africa)
+        - Portuguese (Africa) (portuguese-africa)
         - Sesotho (sesotho)
         - Setswana (setswana)
         - Shona (shona)
@@ -43,10 +46,9 @@ body:
         - Tigrinya (tigrinya)
         - Twi (twi)
         - Wolof (wolof)
-        - isiXhosa (xhosa)
         - Yorùbá (yoruba)
-        - isiZulu (zulu)
         - Other / language not listed yet
+        # sync:pack-options:end
     validations:
       required: true
 
@@ -56,6 +58,7 @@ body:
       label: Programming concept
       description: Pick the idea that sounds wrong. Plain English hints are in the label.
       options:
+        # sync:concept-options:start
         - IF — if / conditional
         - ELSE — otherwise
         - FOR — for loop
@@ -86,7 +89,17 @@ body:
         - NOT — logical not
         - ASYNC — async
         - AWAIT — await
+        - END — end block
+        - ENSURE — ensure
+        - EXTENDS — extends / inherits
+        - FINALLY — finally (errors)
+        - PHP_ECHO — echo
+        - RESCUE — rescue
+        - THROW — throw error
+        - UNDEFINED — undefined
+        - VAL — val
         - Other (type the concept name below)
+        # sync:concept-options:end
     validations:
       required: true
 

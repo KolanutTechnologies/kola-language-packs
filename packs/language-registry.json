@@ -1,5 +1,5 @@
 {
-  "version": "0.14.1",
+  "version": "0.15.0",
   "description": "Reserved pack names and locales for contributors. Read the sections below BEFORE searching taken.*. Auto-generated — run npm run registry from repo root after adding a pack.",
   "howToUse": [
     "1. Read namingRules — how to pick name, languageCode, and locale.",

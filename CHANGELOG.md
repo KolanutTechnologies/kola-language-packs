@@ -6,6 +6,13 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-07-10
+
+### Added
+
+- `scripts/sync-issue-templates.mjs` and `npm run issue-templates:sync`: auto-update GitHub issue form pack/concept dropdowns from `packs/index.json` and `logical-tokens.json`; CI check on `.github/ISSUE_TEMPLATE/`
+
+
 ## [0.14.1] - 2026-07-10
 
 ### Changed
@@ -220,6 +227,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.15.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.0
 [0.14.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.14.1
 [0.14.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.14.0
 [0.13.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.13.2
@@ -228,7 +236,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.14.1...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.0...HEAD
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1

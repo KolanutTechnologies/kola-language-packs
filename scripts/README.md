@@ -81,6 +81,18 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 ---
 
+### `sync-issue-templates.mjs` — via `npm run issue-templates:sync`
+
+**What it does:** Syncs **language pack** and **programming concept** dropdowns in `.github/ISSUE_TEMPLATE/*.yml` from `packs/index.json` and `packs/logical-tokens.json` (core tier + hints).
+
+**Flags:** `--check` — fail if issue templates are stale without writing.
+
+**When:** End of `npm test`. Required after adding a pack or new `tier: core` logical token. CI runs `git diff --exit-code .github/ISSUE_TEMPLATE/`.
+
+**Do not** hand-edit lines between `# sync:pack-options` / `# sync:concept-options` markers — extend `CONCEPT_HINTS` in the script instead.
+
+---
+
 ### `sync-pack-versions.mjs` — via `npm run sync-versions`
 
 **What it does:** Sets every pack `version` field (and related index/roadmap JSON) to match `package.json`.
@@ -115,8 +127,9 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 | npm command | Script | Changes files? | Contributor? |
 |-------------|--------|----------------|--------------|
-| `npm test` | validate + coverage + README sync | coverage-summary + README.md | **Yes — always** |
+| `npm test` | validate + coverage + README sync + issue templates | coverage-summary + README.md + ISSUE_TEMPLATE | **Yes — always** |
 | `npm run readme:sync` | update-readme-metrics | README.md | After pack/target/token changes |
+| `npm run issue-templates:sync` | sync-issue-templates | `.github/ISSUE_TEMPLATE/*.yml` | After new pack or core logical token |
 | `npm run registry` | generate-language-registry | language-registry.json | New pack only |
 | `npm run ensure-tokens` | ensure-pack-tokens | missing keywords in packs | Maintainers (new tokens) |
 | `npm run sync-versions` | sync-pack-versions | pack + index versions | Maintainers / CI |

@@ -340,7 +340,7 @@ Contributors can also use GitHub issue forms ([`CONTRIBUTING-SIMPLE.md`](./CONTR
 5. Open a PR (or batch several issues). Reference the issue number.
 6. Comment on the issue when shipped; thank the contributor.
 
-When adding a new pack, update the dropdown lists in `.github/ISSUE_TEMPLATE/translation-suggestion.yml` and `unnatural-phrasing.yml`.
+When adding a new pack, run `npm run issue-templates:sync` (or `npm test`) so GitHub issue form dropdowns stay current. Do not hand-edit lines between `# sync:pack-options` / `# sync:concept-options` markers. See [issue-template-sync](../../rules/issue-template-sync.mdc).
 
 ### PR titles (for automated changelog)
 

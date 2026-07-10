@@ -1,6 +1,6 @@
 {
   "name": "@kolanut/language-packs",
-  "version": "0.14.1",
+  "version": "0.15.0",
   "description": "Community-governed keyword maps for native African language programming — by Kolanut Technologies",
   "license": "Apache-2.0",
   "author": "Kolanut Technologies Ltd (https://kolacode.africa)",
@@ -34,10 +34,11 @@
     "bootstrap": "node scripts/bootstrap-packs.mjs",
     "readme:metrics": "node scripts/update-readme-metrics.mjs",
     "readme:sync": "node scripts/update-readme-metrics.mjs",
+    "issue-templates:sync": "node scripts/sync-issue-templates.mjs",
     "sync-versions": "node scripts/sync-pack-versions.mjs",
     "bump-version": "node scripts/bump-version.mjs",
     "ensure-tokens": "node scripts/ensure-pack-tokens.mjs",
-    "test": "npm run validate && npm run coverage && node scripts/update-readme-metrics.mjs",
+    "test": "npm run validate && npm run coverage && node scripts/update-readme-metrics.mjs && node scripts/sync-issue-templates.mjs",
     "prepublishOnly": "npm run sync-versions && npm run build && npm run validate"
   },
   "repository": {
