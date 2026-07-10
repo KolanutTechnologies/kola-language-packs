@@ -2,9 +2,47 @@
 
 Thank you for helping make programming accessible to African developers in their native languages!
 
-**Not a developer?** You can suggest translations without editing files: [`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md) (GitHub issue forms, no install required).
+This repo ships **keyword maps for programming tools** (editors, transpilers, learning apps). It is not a standalone programming language like Nuru or Yorlang.
 
-## Start here (read this first)
+---
+
+## Choose how to contribute
+
+| You are… | Best path | You need |
+|----------|-----------|----------|
+| **Native speaker or educator** — suggest a word or flag awkward phrasing | **Simple path** (below) | A GitHub account only. No install, no JSON, no pull request. |
+| **Developer** — edit pack files directly | **[Pull request path](#pull-request-path)** | git, Node.js, `npm test` |
+
+Most people who are not developers should use the **simple path**.
+
+---
+
+## Simple path (no coding)
+
+Use GitHub **issue forms**. Pick your language and concept from **dropdowns**, type your suggestion, submit. Maintainers apply the change and credit you when we merge.
+
+| Form | Use when |
+|------|----------|
+| **[Suggest a translation →](https://github.com/KolanutTechnologies/kola-language-packs/issues/new?template=translation-suggestion.yml)** | Add or improve a word (for example a better **FOR** in Swahili) |
+| **[Report unnatural phrasing →](https://github.com/KolanutTechnologies/kola-language-packs/issues/new?template=unnatural-phrasing.yml)** | Something sounds wrong in your dialect but you want to explain why |
+
+**Step by step:**
+
+1. Open one of the links above (or go to **Issues → New issue** and pick a template).
+2. Choose **language pack** from the dropdown (Swahili, Hausa, Yorùbá, …).
+3. Choose **programming concept** from the dropdown (`IF — if / conditional`, `FOR — for loop`, …). Pick **Other** and type the name for less common concepts.
+4. Fill in your suggestion, region/dialect, and how we should credit you.
+5. Submit. We review within about 1–2 weeks, update the pack, and reply on the issue.
+
+Full guide with examples: **[`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md)**
+
+Questions without a specific word fix? [GitHub Discussions](https://github.com/KolanutTechnologies/kola-language-packs/discussions) or open an issue tagged `question`.
+
+---
+
+## Pull request path
+
+Use this if you are comfortable editing JSON and opening a pull request on GitHub.
 
 Every contribution is a **language pack** under `packs/<name>/`. You translate programming concepts into native phrases and declare **where that variant applies** (`locale`, `countries`, `regions`).
 
@@ -331,6 +369,10 @@ We celebrate linguistic diversity and regional variation.
 
 ## Need help?
 
-- Open a GitHub issue in [`KolanutTechnologies/kola-language-packs`](https://github.com/KolanutTechnologies/kola-language-packs)
-- Tag it: `question`, `new-language`, or `bug`
+**Suggesting a translation (no coding):** use the [issue forms](#simple-path-no-coding) or [`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md).
+
+**Editing files / PRs:** see [Pull request path](#pull-request-path) above.
+
+- [GitHub Discussions](https://github.com/KolanutTechnologies/kola-language-packs/discussions)
+- Open an issue: tag `question`, `new-language`, or `bug`
 - Say which language, country, and dialect you are working on
