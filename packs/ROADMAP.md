@@ -95,7 +95,20 @@ Status: **shipped** · **next** · **planned**
 | **0.20.0** | minor | **Ndebele**, **Tsonga**, **Venda**, **Northern Sotho** | 38 packs |
 | **0.21.0** | minor | **Umbundu**, **Berber Tifinagh** | **40 named packs complete** |
 
-**Patch lanes (any 0.x.y):** native-speaker review of starter packs; translation fixes; collision fixes in glossary keys.
+**Patch lanes (any 0.x.y):** native-speaker review of starter packs; translation fixes; collision fixes in glossary keys; fill English-only keyword stubs (e.g. `IN`) when wording is ready.
+
+### Learn-mode gloss schedule (keywords vs identifiers vs builtins)
+
+IDE Learn Level 1 swaps **keywords** only. Identifiers and string literals stay English until later pack layers (or IDE project symbols). Do not treat “still English in FizzBuzz” as one bug class.
+
+| What the learner sees | Pack layer | When we fill it |
+|-----------------------|------------|-----------------|
+| Keywords with only English stubs (e.g. `IN: ["in"]`, many packs today) | **Keywords** | **Any patch**, when native wording is reviewed. Not blocked on a minor release. |
+| Variable / parameter names (`out`, `i`, `str`, …) | **Glossary** (identifier hints) | Add keys anytime as a patch on IDE-ready packs; **seed list expansion** (30 → 50) planned at **0.34.0**. Project-specific names stay in the IDE symbols map, not this repo. |
+| String / UI literals (`"FizzBuzz"`, `"Hello"`, …) | **CommonLiterals** | Same IDE-tier path; seed expansion at **0.34.0**. |
+| Call names that are not reserved keywords (Python `range()`, `len()`, …) | **Stdlib / builtins** | **2.0.0**. Note: logical token `RANGE` is mainly Go’s `range` keyword; Python’s `range` is closer to builtins. |
+
+**Examples:** Luganda leaving `out` English at L1 is by design. Leaving `in` English is an incomplete keyword entry. See [`TIERS.md`](./TIERS.md).
 
 ### Phase B — African expansion to 68 packs (0.22 – 0.29)
 

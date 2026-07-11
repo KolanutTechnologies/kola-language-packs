@@ -6,6 +6,10 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+### Changed
+
+- Roadmap / tiers: document Learn-mode gloss schedule (keyword stubs like `IN` = any patch; identifiers like `out` = glossary / 0.34.0; builtins = 2.0.0)
+
 ## [0.15.1] - 2026-07-11
 
 ### Fixed

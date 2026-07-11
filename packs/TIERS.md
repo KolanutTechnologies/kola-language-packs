@@ -20,6 +20,19 @@ What each **layer** in a language pack is, how many entries it has, and where gr
 
 ---
 
+## Learn mode: what stays English (and when we change that)
+
+| Learner token | Layer | Schedule |
+|---------------|-------|----------|
+| Reserved keywords (`if`, `for`, `in`, `elif`, …) | Keywords | Native phrase when reviewed; English-only stubs (e.g. `IN: ["in"]`) are **patch lane**, any `0.x.y` |
+| Identifiers (`out`, `i`, `count`, …) | Glossary | Not Level 1. Fill glossary keys as patches; expand seed lists at **0.34.0** |
+| UI / example strings | CommonLiterals | IDE-tier; seed expansion at **0.34.0** |
+| Stdlib / builtin calls (`len`, Python `range()`, …) | Stdlib (v2) | **2.0.0** |
+
+Do not confuse an English **identifier** at Learn L1 with a missing **keyword** gloss. Full release plan: [`ROADMAP.md`](./ROADMAP.md) → Learn-mode gloss schedule.
+
+---
+
 ## Logical tokens (central registry)
 
 File: [`logical-tokens.json`](./logical-tokens.json)

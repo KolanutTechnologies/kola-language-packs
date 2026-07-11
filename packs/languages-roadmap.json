@@ -274,6 +274,33 @@
   },
   "ideTierRoadmap": {
     "description": "Optional glossary, placeholders, and commonLiterals for IDE-ready packs. Seed keys in ide-tier-seeds.json.",
+    "learnModeGlossSchedule": {
+      "description": "When English left in Learn mode is by design vs a pack gap. Human guide: ROADMAP.md Learn-mode gloss schedule; TIERS.md Learn mode section.",
+      "level1KeywordsOnly": "Learn L1 swaps reserved keywords. Identifiers and string literals stay English until glossary / commonLiterals / IDE symbols.",
+      "englishOnlyKeywordStubs": {
+        "layer": "keywords",
+        "examples": ["IN", "RANGE"],
+        "when": "any-patch",
+        "note": "Fill when native wording is reviewed. Not blocked on a minor IDE batch. Many packs still ship IN as [\"in\"]."
+      },
+      "identifiers": {
+        "layer": "glossary",
+        "examples": ["out", "i", "str"],
+        "when": "patch-anytime-or-0.34.0-seed-expansion",
+        "note": "L1 leaving out English is by design. Add glossary keys as patches; expand seed lists at 0.34.0. Project-specific names are IDE symbols, not this package."
+      },
+      "exampleStrings": {
+        "layer": "commonLiterals",
+        "examples": ["FizzBuzz", "Hello"],
+        "when": "0.34.0-seed-expansion"
+      },
+      "stdlibBuiltinCalls": {
+        "layer": "stdlib-builtins",
+        "examples": ["len", "python range()"],
+        "when": "2.0.0",
+        "note": "Logical RANGE is mainly Go range keyword; Python range() is closer to builtins."
+      }
+    },
     "priorArtBoost": {
       "description": "Packs with staged keywords or IDE seeds from native-syntax programming languages (see priorArtSources).",
       "arabic": {
