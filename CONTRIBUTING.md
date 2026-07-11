@@ -200,6 +200,8 @@ Use this when the language or **country-specific variant** does not exist yet (e
 
 4. **Edit `keywords.json`** — must be **identical** to the `keywords` object in `pack.json`.
 
+   **Keyword mapping rule:** never use another concept's English word as a stand-in. Example: `ELIF` must not be `["else"]` (that word belongs to `ELSE`). Use a native phrase, or this concept's own English (`elif`, `else if`, `elsif`, `elseif`). Two concepts in the same pack must not share the same form (unless documented in [`packs/keyword-form-allowlist.json`](./packs/keyword-form-allowlist.json)).
+
 5. **Add an entry** to [`packs/index.json`](./packs/index.json) (same fields as above; must match `pack.json`).
 
 6. **Regenerate the registry** (from repo root):
@@ -230,6 +232,7 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 - [ ] `languageCode`, `locale`, `countries`, and `regions` correctly describe **my** variant
 - [ ] `scopeNote` explains what is in scope and what belongs in a different pack
 - [ ] All **370** logical tokens from `logical-tokens.json` have translations in `keywords`
+- [ ] No keyword form steals another concept's English (e.g. not `ELIF: ["else"]`)
 - [ ] `keywords.json` and `pack.json` → `keywords` are **identical**
 - [ ] `targets` lists all five: `javascript`, `python`, `typescript`, `go`, `rust`
 - [ ] `npm test` passes locally
@@ -253,6 +256,7 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 - Mixing phrases from different countries in one pack (e.g. Nigerian + Ghanaian pidgin)
 - Editing `logical-tokens.json` instead of the language pack
 - Updating only `keywords.json` but forgetting `pack.json` (or vice versa)
+- Stubbing a concept with a different concept's English word (e.g. `ELIF: ["else"]`)
 
 ---
 

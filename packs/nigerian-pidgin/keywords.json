@@ -103,7 +103,6 @@
   ],
   "PRINT": [
     "show for screen",
-    "show",
     "print"
   ],
   "TRUE": [
@@ -123,7 +122,7 @@
     "undefined"
   ],
   "ELIF": [
-    "else"
+    "elif"
   ],
   "LOOP": [
     "loop"

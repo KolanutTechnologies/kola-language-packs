@@ -11,7 +11,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.15.0",
+  "version": "0.15.1",
   "displayName": "Hausa",
   "description": "Hausa keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -178,7 +178,7 @@
     "ELIF": [
       "koidan",
       "kokuma",
-      "else"
+      "elif"
     ],
     "LOOP": [
       "loop"

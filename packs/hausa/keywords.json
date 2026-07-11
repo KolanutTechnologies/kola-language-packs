@@ -141,7 +141,7 @@
   "ELIF": [
     "koidan",
     "kokuma",
-    "else"
+    "elif"
   ],
   "LOOP": [
     "loop"

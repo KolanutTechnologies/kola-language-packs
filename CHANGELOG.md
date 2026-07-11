@@ -6,6 +6,18 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.15.1] - 2026-07-11
+
+### Fixed
+
+- **ELIF** no longer stubs with English `else` in any pack (was poisoning reverse gloss / Learn round-trips). Safe stub is `elif`; Luganda/Zulu keep native phrases; Yoruba/Hausa/Igbo/Swahili keep native + `elif`
+- Pidgin **PRINT** no longer shares bare `show` with Dart **SHOW** (Nigerian Pidgin, Cameroon Pidgin)
+
+### Added
+
+- Validation rejects same-pack keyword form collisions and exclusive cross-token English stubs (`scripts/lib/keyword-form-collision.mjs`); rare linguistic homographs go in `packs/keyword-form-allowlist.json`
+- Shared safe English fallback helper (`scripts/lib/english-fallback.mjs`) so `else if` never becomes stub `else`
+
 ## [0.15.0] - 2026-07-10
 
 ### Added
@@ -227,6 +239,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.15.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.1
 [0.15.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.0
 [0.14.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.14.1
 [0.14.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.14.0
@@ -236,7 +249,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.0...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.1...HEAD
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1

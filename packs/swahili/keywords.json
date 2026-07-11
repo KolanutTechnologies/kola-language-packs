@@ -131,7 +131,7 @@
   ],
   "ELIF": [
     "au kama",
-    "else"
+    "elif"
   ],
   "LOOP": [
     "loop"

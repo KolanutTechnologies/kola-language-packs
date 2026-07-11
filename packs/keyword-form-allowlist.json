@@ -1,0 +1,30 @@
+{
+  "description": "Intentional same-form / cross-English homographs. Most collisions are bugs (e.g. ELIF: [\"else\"]). Only list genuine native words that match another logical's English emit, after native-speaker review.",
+  "howToUse": "Each entry: pack slug, form (lowercase), logicals allowed to use it, note. Validation in scripts/validate.mjs reads this file. Prefer distinct phrases when possible; allowlist is the exception path.",
+  "entries": [
+    {
+      "pack": "afrikaans",
+      "form": "as",
+      "logicals": ["IF", "AS"],
+      "note": "Afrikaans 'as' means if; TypeScript/JS 'as' cast stays AS until a distinct Afrikaans cast gloss exists"
+    },
+    {
+      "pack": "xhosa",
+      "form": "into",
+      "logicals": ["NULL", "INTO"],
+      "note": "isiXhosa 'into' means thing (nullish placeholder); SQL INTO remains English until a distinct gloss exists"
+    },
+    {
+      "pack": "yoruba",
+      "form": "fun",
+      "logicals": ["FOR"],
+      "note": "Yorùbá 'fun' means for/to; coincides with Kotlin 'fun' (FUNCTION) but is the FOR gloss"
+    },
+    {
+      "pack": "efik",
+      "form": "na",
+      "logicals": ["FOR"],
+      "note": "Efik 'na' used for FOR; casefolds against R 'NA' (R_NA) but is not that token's pack form"
+    }
+  ]
+}

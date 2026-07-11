@@ -6,6 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { englishFallback } from './lib/english-fallback.mjs';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const packsRoot = join(root, 'packs');
@@ -45,50 +46,10 @@ const RECOMMENDED_PARTNERS = {
   efik: ['ALT-I', 'ACALAN', 'University of Calabar (Linguistics)'],
 };
 
-const FALLBACK_LABEL = {
-  LAMBDA: 'lambda',
-  MATCH: 'match',
-  CASE: 'case',
-  DEFAULT: 'default',
-  THROW: 'throw',
-  PRINT: 'print',
-  IMPORT: 'import',
-  EXPORT: 'export',
-  AND: 'and',
-  OR: 'or',
-  NOT: 'not',
-  DEL: 'del',
-  TYPEOF: 'typeof',
-  VOID: 'void',
-  INSTANCEOF: 'instanceof',
-  DEBUGGER: 'debugger',
-  ASSERTS: 'asserts',
-  NAMESPACE: 'namespace',
-  INFER: 'infer',
-  KEYOF: 'keyof',
-  UNIQUE: 'unique',
-  SATISFIES: 'satisfies',
-};
-
 async function loadTokenRegistry() {
   const registry = JSON.parse(await readFile(join(packsRoot, 'logical-tokens.json'), 'utf8'));
   return registry;
 }
-
-function englishFallback(entry) {
-  if (FALLBACK_LABEL[entry.logical]) {
-    return FALLBACK_LABEL[entry.logical];
-  }
-  for (const target of registryTargets) {
-    const value = entry.targets[target];
-    if (typeof value === 'string' && value.trim()) {
-      return value.split(/[.!()\s]/)[0].toLowerCase();
-    }
-  }
-  return entry.logical.toLowerCase();
-}
-
-let registryTargets = ['javascript', 'python', 'typescript', 'go', 'rust', 'java'];
 
 function completeKeywords(keywords, registry) {
   const completed = { ...keywords };

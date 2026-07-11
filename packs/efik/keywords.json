@@ -121,7 +121,7 @@
     "undefined"
   ],
   "ELIF": [
-    "else"
+    "elif"
   ],
   "LOOP": [
     "loop"

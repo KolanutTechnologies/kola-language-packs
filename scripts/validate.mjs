@@ -9,11 +9,13 @@ import {
   isValidGlossValue,
   phrasesOf,
 } from './lib/gloss-value.mjs';
+import { findKeywordFormCollisions } from './lib/keyword-form-collision.mjs';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const schemaPath = join(root, 'pack.schema.json');
 const packsRoot = join(root, 'packs');
 const logicalTokensPath = join(packsRoot, 'logical-tokens.json');
+const keywordFormAllowlistPath = join(packsRoot, 'keyword-form-allowlist.json');
 
 const COUNTRY_CODE = /^[A-Z]{2}$/;
 const LOCALE_CODE = /^[a-z]{2,3}(-[A-Z]{2})?$/;
@@ -93,6 +95,15 @@ async function loadLogicalTokens() {
   const supportedTargets = registry.targets ?? [];
   const keywordCanonicals = collectKeywordCanonicals(registry);
   return { allTokens, requiredTokens, supportedTargets, registry, keywordCanonicals };
+}
+
+async function loadKeywordFormAllowlist() {
+  try {
+    const data = JSON.parse(await readFile(keywordFormAllowlistPath, 'utf8'));
+    return Array.isArray(data.entries) ? data.entries : [];
+  } catch {
+    return [];
+  }
 }
 
 function validateGlossTierObject(tier, spec, packName, keywordCanonicals, errors) {
@@ -229,6 +240,15 @@ async function validatePack(name, logicalTokens, errors) {
     validateKeywordValue(value, `${name}.keywords.${logical}`, errors);
   }
 
+  for (const collision of findKeywordFormCollisions(
+    name,
+    keywords,
+    logicalTokens.registry,
+    logicalTokens.homographAllowlist ?? [],
+  )) {
+    errors.push(collision);
+  }
+
   try {
     const keywordsOnly = JSON.parse(await readFile(keywordsPath, 'utf8'));
     if (JSON.stringify(keywordsOnly) !== JSON.stringify(keywords)) {
@@ -288,6 +308,7 @@ async function main() {
   JSON.parse(await readFile(schemaPath, 'utf8'));
 
   const logicalTokens = await loadLogicalTokens();
+  logicalTokens.homographAllowlist = await loadKeywordFormAllowlist();
   const index = JSON.parse(await readFile(join(packsRoot, 'index.json'), 'utf8'));
   const listed = index.packs.map((pack) => pack.name);
   const dirs = (await readdir(packsRoot, { withFileTypes: true }))

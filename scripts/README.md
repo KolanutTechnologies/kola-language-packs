@@ -10,9 +10,10 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 **What it does:** Reads every pack and checks:
 
-- Required fields exist (`displayName`, `locale`, `keywords`, â€¦)
+- Required fields exist (`displayName`, `locale`, `keywords`, …)
 - All logical tokens are translated (see `packs/logical-tokens.json`)
 - `keywords.json` matches `pack.json`
+- Keyword forms are unique within a pack and do not steal another token's English (see `keyword-form-allowlist.json` for rare homographs)
 - Optional IDE tiers (`glossary.json`, `placeholders.json`, `common-literals.json`): English fallback, keyword collision, duplicate gloss phrases
 - `index.json` includes `targets`, `ideReady`, and matches each pack
 - No duplicate locales

@@ -10,3 +10,5 @@ review-harness/
 research/
 .cursor/
 release-body.md
+
+.env
