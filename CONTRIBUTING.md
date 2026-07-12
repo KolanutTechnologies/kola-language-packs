@@ -200,7 +200,7 @@ Use this when the language or **country-specific variant** does not exist yet (e
 
 4. **Edit `keywords.json`** — must be **identical** to the `keywords` object in `pack.json`.
 
-   **Keyword mapping rule:** never use another concept's English word as a stand-in. Example: `ELIF` must not be `["else"]` (that word belongs to `ELSE`). Use a native phrase, or this concept's own English (`elif`, `else if`, `elsif`, `elseif`). Two concepts in the same pack must not share the same form (unless documented in [`packs/keyword-form-allowlist.json`](./packs/keyword-form-allowlist.json)).
+   **Keyword mapping rule:** never use another concept's English word as a stand-in. Example: `ELIF` must not be `["else"]` (that word belongs to `ELSE`). Use a native phrase, or this concept's own English (`elif`, `else if`, `elsif`, `elseif`). Two concepts in the same pack must not share the same form (unless documented in [`packs/keyword-form-allowlist.json`](./packs/keyword-form-allowlist.json)). Never put another concept's primary gloss on a second concept as an alias (that breaks Learn undo reverse maps).
 
 5. **Add an entry** to [`packs/index.json`](./packs/index.json) (same fields as above; must match `pack.json`).
 
@@ -232,7 +232,7 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 - [ ] `languageCode`, `locale`, `countries`, and `regions` correctly describe **my** variant
 - [ ] `scopeNote` explains what is in scope and what belongs in a different pack
 - [ ] All **370** logical tokens from `logical-tokens.json` have translations in `keywords`
-- [ ] No keyword form steals another concept's English (e.g. not `ELIF: ["else"]`)
+- [ ] No keyword form steals another concept's English (e.g. not `ELIF: ["else"]`) or another concept's primary gloss as an alias
 - [ ] `keywords.json` and `pack.json` → `keywords` are **identical**
 - [ ] `targets` lists all five: `javascript`, `python`, `typescript`, `go`, `rust`
 - [ ] `npm test` passes locally

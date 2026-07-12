@@ -11,7 +11,7 @@
   "regions": [
     "Horn of Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Somali",
   "description": "Somali keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -81,7 +81,6 @@
       "return"
     ],
     "ASYNC": [
-      "async",
       "async"
     ],
     "AWAIT": [

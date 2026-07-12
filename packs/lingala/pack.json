@@ -9,7 +9,7 @@
   "regions": [
     "Central Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Lingala",
   "description": "Lingala keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -79,7 +79,6 @@
       "return"
     ],
     "ASYNC": [
-      "async",
       "async"
     ],
     "AWAIT": [

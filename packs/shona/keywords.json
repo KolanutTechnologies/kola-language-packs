@@ -44,7 +44,6 @@
     "return"
   ],
   "ASYNC": [
-    "async",
     "async"
   ],
   "AWAIT": [
@@ -76,7 +75,6 @@
     "const"
   ],
   "CLASS": [
-    "chikamu",
     "class"
   ],
   "EXTENDS": [

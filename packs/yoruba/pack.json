@@ -10,7 +10,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Yorùbá",
   "description": "Yoruba keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -122,7 +122,6 @@
       "let"
     ],
     "CONST": [
-      "àìyípadà",
       "const"
     ],
     "CLASS": [
@@ -181,7 +180,6 @@
     "ELIF": [
       "tàbí ṣé",
       "si_ti",
-      "tabi",
       "elif"
     ],
     "LOOP": [

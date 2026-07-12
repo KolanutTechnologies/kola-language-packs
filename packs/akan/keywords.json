@@ -45,7 +45,6 @@
     "return"
   ],
   "ASYNC": [
-    "async",
     "async"
   ],
   "AWAIT": [
@@ -69,7 +68,6 @@
     "throw"
   ],
   "LET": [
-    "ma",
     "let"
   ],
   "CONST": [
@@ -82,7 +80,6 @@
     "class"
   ],
   "EXTENDS": [
-    "toa so",
     "extends"
   ],
   "NEW": [

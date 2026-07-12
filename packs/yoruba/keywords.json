@@ -86,7 +86,6 @@
     "let"
   ],
   "CONST": [
-    "àìyípadà",
     "const"
   ],
   "CLASS": [
@@ -145,7 +144,6 @@
   "ELIF": [
     "tàbí ṣé",
     "si_ti",
-    "tabi",
     "elif"
   ],
   "LOOP": [

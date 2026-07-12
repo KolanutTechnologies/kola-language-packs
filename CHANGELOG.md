@@ -6,6 +6,19 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.15.3] - 2026-07-12
+
+### Fixed
+
+- **Swahili** CASE no longer lists `ikiwa` (IF primary). Reverse gloss was flipping if↔case on undo
+- Drop shared primary/alias collisions in Akan, Twi, Hausa, Igbo, Shona, Wolof, Yoruba (same reverse-map class)
+- Remove duplicate forms inside keyword arrays (e.g. `ASYNC: ["async","async"]`) across 14 packs
+
+### Added
+
+- Validation: **any** same-pack shared keyword form fails unless shared English or allowlisted; duplicate forms inside one logical fail
+- `scripts/audit-keyword-forms.mjs` (`npm run audit:keyword-forms`) for maintainer reverse-gloss sweeps
+
 ## [0.15.2] - 2026-07-12
 
 ### Changed
@@ -262,7 +275,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.2...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.3...HEAD
+[0.15.3]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.3
 [0.15.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.2
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0

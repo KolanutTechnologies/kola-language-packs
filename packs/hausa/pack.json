@@ -11,7 +11,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Hausa",
   "description": "Hausa keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -69,7 +69,6 @@
     ],
     "SWITCH": [
       "zaɓi",
-      "duba",
       "switch"
     ],
     "CASE": [
@@ -96,7 +95,6 @@
     ],
     "AWAIT": [
       "jira don",
-      "jira",
       "await"
     ],
     "TRY": [

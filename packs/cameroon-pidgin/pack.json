@@ -8,7 +8,7 @@
   "regions": [
     "Central Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Cameroon Pidgin",
   "description": "Cameroon Pidgin keyword map — bridge language for Cameroonian developers",
   "reviewStatus": "starter",
@@ -34,7 +34,6 @@
   ],
   "keywords": {
     "IF": [
-      "if",
       "if"
     ],
     "ELSE": [
@@ -42,7 +41,6 @@
       "else"
     ],
     "FOR": [
-      "for",
       "for"
     ],
     "WHILE": [
@@ -54,7 +52,6 @@
       "break"
     ],
     "CONTINUE": [
-      "continue",
       "continue"
     ],
     "SWITCH": [
@@ -78,7 +75,6 @@
       "return"
     ],
     "ASYNC": [
-      "async",
       "async"
     ],
     "AWAIT": [

@@ -9,7 +9,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Afrikaans",
   "description": "Afrikaans keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -79,7 +79,6 @@
       "return"
     ],
     "ASYNC": [
-      "async",
       "async"
     ],
     "AWAIT": [

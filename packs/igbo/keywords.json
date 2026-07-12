@@ -2,13 +2,11 @@
   "IF": [
     "ọ bụrụ na",
     "oburu",
-    "oBuru",
     "if"
   ],
   "ELSE": [
     "ọ bụghị ma ọ bụ",
     "ozo",
-    "oBughi",
     "else"
   ],
   "FOR": [
@@ -124,7 +122,6 @@
   ],
   "PRINT": [
     "gosipụta",
-    "pụta",
     "deputa",
     "print"
   ],

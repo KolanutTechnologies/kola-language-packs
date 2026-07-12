@@ -1,5 +1,5 @@
 {
-  "version": "0.15.2",
+  "version": "0.15.3",
   "npmVersionBaseline": "0.11.1",
   "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, UI/Design catalog phases, and Phase F future mapping candidates. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "productJob": {
@@ -67,10 +67,22 @@
       "note": "Phased catalog U1–U6. Stem families + compose scales. Goal: everything learners encounter in Design and common hand edits. Not raw CSS property language."
     },
     "phaseFConcepts": {
-      "eventsA11y": { "now": 0, "target": 80 },
-      "testDsl": { "now": 0, "target": 40 },
-      "operatorWordLabels": { "now": 0, "target": 30 },
-      "docCommentMarkers": { "now": 0, "target": 20 },
+      "eventsA11y": {
+        "now": 0,
+        "target": 80
+      },
+      "testDsl": {
+        "now": 0,
+        "target": 40
+      },
+      "operatorWordLabels": {
+        "now": 0,
+        "target": 30
+      },
+      "docCommentMarkers": {
+        "now": 0,
+        "target": 20
+      },
       "note": "See futureMappingCandidates. Do not start until U1 and builtins foundations exist."
     }
   },
@@ -297,36 +309,62 @@
       "level1KeywordsOnly": "Learn L1 swaps reserved keywords. Identifiers and string literals stay English until glossary / commonLiterals / IDE symbols.",
       "englishOnlyKeywordStubs": {
         "layer": "keywords",
-        "examples": ["IN", "RANGE"],
+        "examples": [
+          "IN",
+          "RANGE"
+        ],
         "when": "any-patch",
         "note": "Fill when native wording is reviewed. Not blocked on a minor IDE batch. Many packs still ship IN as [\"in\"]."
       },
       "identifiers": {
         "layer": "glossary",
-        "examples": ["out", "i", "str"],
+        "examples": [
+          "out",
+          "i",
+          "str"
+        ],
         "when": "patch-anytime-or-0.34.0-seed-expansion",
         "note": "L1 leaving out English is by design. Add glossary keys as patches; expand seed lists at 0.34.0. Project-specific names are IDE symbols, not this package."
       },
       "exampleStrings": {
         "layer": "commonLiterals",
-        "examples": ["FizzBuzz", "Hello"],
+        "examples": [
+          "FizzBuzz",
+          "Hello"
+        ],
         "when": "0.34.0-seed-expansion"
       },
       "designTabComponents": {
         "layer": "uiDesign",
-        "examples": ["Button", "div", "className", "flex", "flex-col", "p-4", "Alert"],
+        "examples": [
+          "Button",
+          "div",
+          "className",
+          "flex",
+          "flex-col",
+          "p-4",
+          "Alert"
+        ],
         "when": "U1-at-0.37.0-then-U2-U6",
         "note": "Phased full encounter catalog. People read native; IDE emits English/host. Stem families + compose scales."
       },
       "eventsA11yAndTestDsl": {
         "layer": "phase-f",
-        "examples": ["onClick", "aria-label", "describe", "expect"],
+        "examples": [
+          "onClick",
+          "aria-label",
+          "describe",
+          "expect"
+        ],
         "when": "2.1.0-phase-f",
         "note": "See futureMappingCandidates. After UI/Design U1 and builtins foundations."
       },
       "stdlibBuiltinCalls": {
         "layer": "stdlib-builtins",
-        "examples": ["len", "python range()"],
+        "examples": [
+          "len",
+          "python range()"
+        ],
         "when": "2.0.0",
         "note": "Logical RANGE is mainly Go range keyword; Python range() is closer to builtins."
       }
@@ -474,7 +512,12 @@
         "bump": "minor",
         "status": "planned",
         "estimatedStemCount": "+80-150",
-        "tailwindCategories": ["layout", "flexbox", "grid", "spacing"],
+        "tailwindCategories": [
+          "layout",
+          "flexbox",
+          "grid",
+          "spacing"
+        ],
         "includes": [
           "display (block, inline, hidden, …)",
           "flex direction/wrap/grow/shrink/justify/items/content",
@@ -489,7 +532,11 @@
         "bump": "minor",
         "status": "planned",
         "estimatedStemCount": "+80-150",
-        "tailwindCategories": ["sizing", "typography", "borders"],
+        "tailwindCategories": [
+          "sizing",
+          "typography",
+          "borders"
+        ],
         "includes": [
           "width/height/min/max/size",
           "font size/weight/family, leading, tracking, text align/color stems",
@@ -503,7 +550,11 @@
         "bump": "minor",
         "status": "planned",
         "estimatedStemCount": "+100-200",
-        "tailwindCategories": ["backgrounds", "colors", "effects"],
+        "tailwindCategories": [
+          "backgrounds",
+          "colors",
+          "effects"
+        ],
         "includes": [
           "bg stems, gradients, background size/position",
           "text/border/bg color family stems + palette compose rules",
@@ -517,7 +568,12 @@
         "bump": "minor",
         "status": "planned",
         "estimatedStemCount": "+60-120",
-        "tailwindCategories": ["transitions", "transforms", "interactivity", "filters"],
+        "tailwindCategories": [
+          "transitions",
+          "transforms",
+          "interactivity",
+          "filters"
+        ],
         "includes": [
           "transition/duration/ease/animate",
           "scale/rotate/translate/skew",
@@ -540,7 +596,13 @@
       }
     ],
     "u1SeedGroups": {
-      "htmlJsxTags": ["DIV", "SPAN", "NAV", "HR", "IMG"],
+      "htmlJsxTags": [
+        "DIV",
+        "SPAN",
+        "NAV",
+        "HR",
+        "IMG"
+      ],
       "commonProps": [
         "CLASS_NAME",
         "SRC",
@@ -606,13 +668,23 @@
     "description": "Phase F: surfaces still English after keywords, IDE gloss, UI/Design U1–U6, and builtins. Human guide: ROADMAP.md Phase F; TIERS.md Phase F. Do not start until foundations exist.",
     "status": "planned",
     "phase": "F",
-    "dependsOn": ["ui-design-U1", "stdlib-builtins-2.0"],
+    "dependsOn": [
+      "ui-design-U1",
+      "stdlib-builtins-2.0"
+    ],
     "candidates": [
       {
         "id": "events-a11y",
         "name": "React / DOM events and accessibility props",
         "priority": "high",
-        "examples": ["onClick", "onChange", "onSubmit", "aria-label", "aria-hidden", "role"],
+        "examples": [
+          "onClick",
+          "onChange",
+          "onSubmit",
+          "aria-label",
+          "aria-hidden",
+          "role"
+        ],
         "home": "ui-design-companion-or-pack-field",
         "earliestRelease": "2.1.0",
         "bump": "minor",
@@ -623,7 +695,14 @@
         "id": "test-dsl",
         "name": "Test framework DSL",
         "priority": "high",
-        "examples": ["describe", "it", "test", "expect", "beforeEach", "afterEach"],
+        "examples": [
+          "describe",
+          "it",
+          "test",
+          "expect",
+          "beforeEach",
+          "afterEach"
+        ],
         "home": "builtins-adjacent-thin-tier",
         "earliestRelease": "2.1.0",
         "alternateRelease": "2.0.0-if-ready",
@@ -635,7 +714,14 @@
         "id": "doc-comment-markers",
         "name": "Doc and comment markers",
         "priority": "medium",
-        "examples": ["TODO", "FIXME", "NOTE", "@param", "@returns", "@throws"],
+        "examples": [
+          "TODO",
+          "FIXME",
+          "NOTE",
+          "@param",
+          "@returns",
+          "@throws"
+        ],
         "home": "small-seed-list-ide-gloss-like",
         "earliestRelease": "2.1.0",
         "bump": "patch-or-minor",
@@ -646,7 +732,11 @@
         "id": "diagnostics",
         "name": "Compiler and IDE diagnostic messages",
         "priority": "medium",
-        "examples": ["Unexpected token", "Cannot find name", "Type is not assignable"],
+        "examples": [
+          "Unexpected token",
+          "Cannot find name",
+          "Type is not assignable"
+        ],
         "home": "ide-message-catalogs-first",
         "earliestRelease": "product-led",
         "packHooksRelease": "2.2.0-optional",
@@ -656,7 +746,11 @@
         "id": "operator-word-labels",
         "name": "Operator word labels (not punctuation)",
         "priority": "low",
-        "examples": ["teaching labels for ===", "=>", "..."],
+        "examples": [
+          "teaching labels for ===",
+          "=>",
+          "..."
+        ],
         "home": "separate-registry-not-logical-tokens",
         "earliestRelease": "2.2.0",
         "bump": "minor",
@@ -668,7 +762,14 @@
         "id": "html-tags-expand",
         "name": "Additional HTML tags as Design grows",
         "priority": "low",
-        "examples": ["section", "main", "form", "label", "input", "button"],
+        "examples": [
+          "section",
+          "main",
+          "form",
+          "label",
+          "input",
+          "button"
+        ],
         "home": "ui-design-U6-or-U1-expand",
         "earliestRelease": "with-design-growth",
         "rationale": "Expand from Design emits and telemetry, not invent-unused."
@@ -677,7 +778,12 @@
         "id": "regex-flags",
         "name": "Regex flags and named-group labels",
         "priority": "low",
-        "examples": ["g", "i", "m", "named groups"],
+        "examples": [
+          "g",
+          "i",
+          "m",
+          "named groups"
+        ],
         "home": "tiny-catalog",
         "earliestRelease": "if-learn-teaches-regex",
         "rationale": "Only if Learn mode teaches regex heavily."
@@ -1010,7 +1116,14 @@
         "bump": "minor",
         "priority": "high",
         "status": "planned",
-        "phases": ["U1", "U2", "U3", "U4", "U5", "U6"],
+        "phases": [
+          "U1",
+          "U2",
+          "U3",
+          "U4",
+          "U5",
+          "U6"
+        ],
         "starterConceptCount": 80,
         "fullEncounterTarget": 1200,
         "rationale": "Design-tab markup is for people. Phased catalog toward everything learners encounter (tags, props, Tailwind families).",
@@ -1045,7 +1158,9 @@
         "bump": "minor",
         "priority": "high",
         "status": "planned",
-        "dependsOn": ["ui-design-U1"],
+        "dependsOn": [
+          "ui-design-U1"
+        ],
         "rationale": "People-facing gloss for onClick, aria-label, role. Companion to UI/Design."
       },
       {
@@ -1055,7 +1170,9 @@
         "bump": "minor",
         "priority": "high",
         "status": "planned",
-        "dependsOn": ["stdlib-builtins"],
+        "dependsOn": [
+          "stdlib-builtins"
+        ],
         "rationale": "describe/it/expect are not host reserved words; learners hit them early."
       },
       {
@@ -1526,7 +1643,10 @@
       "bump": "minor",
       "focus": "Phase F: events/a11y seeds + test DSL starter; optional doc/comment markers",
       "metrics": {
-        "phaseF": ["events-a11y", "test-dsl"]
+        "phaseF": [
+          "events-a11y",
+          "test-dsl"
+        ]
       },
       "status": "planned"
     },
@@ -1535,7 +1655,10 @@
       "bump": "minor",
       "focus": "Phase F: optional operator word-labels; diagnostics pack hooks if IDE catalogs ready",
       "metrics": {
-        "phaseF": ["operator-word-labels", "diagnostics-hooks"]
+        "phaseF": [
+          "operator-word-labels",
+          "diagnostics-hooks"
+        ]
       },
       "status": "planned"
     }

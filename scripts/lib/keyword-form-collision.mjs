@@ -4,12 +4,11 @@
  * Failure modes enforced in CI:
  * 1. Cross-token English stub: a form is an English emit of another logical
  *    only (not of the current one). Example: ELIF: ["else"].
- * 2. Same-pack English borrow: two logicals share a form that is English for
- *    only some of them (ELSE and ELIF both listing "else").
- *
- * Not enforced (yet): two native phrases that collide without either being
- * English for those tokens. Prefer unique natives; document exceptions in
- * packs/keyword-form-allowlist.json when needed.
+ * 2. Same-pack shared form: two logicals list the same phrase (case-insensitive),
+ *    unless every sharer emits that phrase in English (NULL+NIL "null") or the
+ *    pair is allowlisted. Covers primary steals (Swahili IF "ikiwa" on CASE)
+ *    and alias↔alias collisions.
+ * 3. Duplicate forms inside one logical (noise / ambiguous lists).
  */
 
 import { buildEnglishEmitToLogicals } from './english-fallback.mjs';
@@ -38,6 +37,22 @@ function isAllowlistedPair(form, logicalA, logicalB, allowlist, packName) {
 
 /**
  * @param {string} form
+ * @param {string[]} logicals
+ * @param {HomographAllow[]} allowlist
+ * @param {string} packName
+ */
+function isAllowlistedGroup(form, logicals, allowlist, packName) {
+  const norm = form.toLowerCase();
+  for (const entry of allowlist) {
+    if (entry.pack !== packName) continue;
+    if (entry.form.toLowerCase() !== norm) continue;
+    if (logicals.every((l) => entry.logicals.includes(l))) return true;
+  }
+  return false;
+}
+
+/**
+ * @param {string} form
  * @param {string} logical
  * @param {HomographAllow[]} allowlist
  * @param {string} packName
@@ -50,6 +65,16 @@ function isAllowlistedLogical(form, logical, allowlist, packName) {
     if (entry.logicals.includes(logical)) return true;
   }
   return false;
+}
+
+/**
+ * @param {string | string[]} value
+ * @returns {string[]}
+ */
+function formsOf(value) {
+  if (Array.isArray(value)) return value.map(String);
+  if (typeof value === 'string') return [value];
+  return [];
 }
 
 /**
@@ -67,44 +92,63 @@ export function findKeywordFormCollisions(packName, keywords, registry, allowlis
   const formToLogicals = new Map();
 
   for (const [logical, value] of Object.entries(keywords)) {
-    const forms = Array.isArray(value) ? value : typeof value === 'string' ? [value] : [];
+    const forms = formsOf(value);
+    const seenInLogical = new Set();
     for (const form of forms) {
       if (typeof form !== 'string' || !form.trim()) continue;
       const norm = form.trim().toLowerCase();
+      if (seenInLogical.has(norm)) {
+        errors.push(
+          `${packName}: ${logical} lists duplicate form "${form}" (case-insensitive). Remove the duplicate.`,
+        );
+        continue;
+      }
+      seenInLogical.add(norm);
       if (!formToLogicals.has(norm)) formToLogicals.set(norm, []);
       const owners = formToLogicals.get(norm);
       if (!owners.includes(logical)) owners.push(logical);
     }
   }
 
-  // Same-pack: shared form that is English for only some of the sharers
+  // Same-pack: any shared form that is not shared English for all owners
   for (const [form, logicals] of formToLogicals) {
     if (logicals.length < 2) continue;
     const engOwners = engToLogicals.get(form) ?? new Set();
-    const ownEnglish = logicals.filter((l) => engOwners.has(l));
-    const borrowed = logicals.filter((l) => !engOwners.has(l));
-    if (ownEnglish.length === 0 || borrowed.length === 0) continue;
+    const allShareEnglish = logicals.every((l) => engOwners.has(l));
+    if (allShareEnglish) continue;
+    if (isAllowlistedGroup(form, logicals, allowlist, packName)) continue;
 
-    const blocked = [];
-    for (const a of ownEnglish) {
-      for (const b of borrowed) {
-        if (!isAllowlistedPair(form, a, b, allowlist, packName)) {
-          blocked.push(`${b} borrows English of ${a}`);
+    // Also accept pairwise allowlist covering every pair
+    let allPairsOk = true;
+    for (let i = 0; i < logicals.length && allPairsOk; i++) {
+      for (let j = i + 1; j < logicals.length; j++) {
+        if (!isAllowlistedPair(form, logicals[i], logicals[j], allowlist, packName)) {
+          allPairsOk = false;
+          break;
         }
       }
     }
-    if (blocked.length > 0) {
-      errors.push(
-        `${packName}: keyword form "${form}" is shared by ${logicals.join(', ')} ` +
-          `(${blocked.join('; ')}). Do not stub one logical with another's English ` +
-          `(classic: ELIF: ["else"]). Use a native phrase or this token's own English.`,
-      );
-    }
+    if (allPairsOk) continue;
+
+    const primaryOwners = logicals.filter((l) => {
+      const forms = formsOf(keywords[l]);
+      return forms[0] && String(forms[0]).trim().toLowerCase() === form;
+    });
+    const hint =
+      primaryOwners.length > 0
+        ? ` Primary owner(s): ${primaryOwners.join(', ')}.`
+        : '';
+
+    errors.push(
+      `${packName}: keyword form "${form}" is shared by ${logicals.join(', ')}. ` +
+        `Reverse gloss maps cannot uniquely resolve this phrase (classic: Swahili IF "ikiwa" also on CASE → if↔case).` +
+        `${hint} Keep the form on one logical only, or document a linguistic homograph in packs/keyword-form-allowlist.json.`,
+    );
   }
 
   // Exclusive cross-token English (even if the owning token is not listing the form)
   for (const [logical, value] of Object.entries(keywords)) {
-    const forms = Array.isArray(value) ? value : typeof value === 'string' ? [value] : [];
+    const forms = formsOf(value);
     for (const form of forms) {
       if (typeof form !== 'string' || !form.trim()) continue;
       const norm = form.trim().toLowerCase();

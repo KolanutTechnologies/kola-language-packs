@@ -10,7 +10,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Wolof",
   "description": "Wolof keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -80,7 +80,6 @@
       "return"
     ],
     "ASYNC": [
-      "async",
       "async"
     ],
     "AWAIT": [
@@ -112,7 +111,6 @@
       "const"
     ],
     "CLASS": [
-      "class",
       "class"
     ],
     "EXTENDS": [
@@ -128,7 +126,6 @@
       "this"
     ],
     "IMPORT": [
-      "jël",
       "import"
     ],
     "EXPORT": [
@@ -140,7 +137,6 @@
       "print"
     ],
     "TRUE": [
-      "dëgg",
       "true"
     ],
     "FALSE": [

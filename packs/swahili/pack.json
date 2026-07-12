@@ -12,7 +12,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Swahili",
   "description": "Swahili keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -70,7 +70,6 @@
     ],
     "CASE": [
       "kesi",
-      "ikiwa",
       "case"
     ],
     "DEFAULT": [

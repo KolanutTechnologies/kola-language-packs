@@ -13,7 +13,7 @@ All commands run from the **repo root** (`kola-language-packs/`).
 - Required fields exist (`displayName`, `locale`, `keywords`, …)
 - All logical tokens are translated (see `packs/logical-tokens.json`)
 - `keywords.json` matches `pack.json`
-- Keyword forms are unique within a pack and do not steal another token's English (see `keyword-form-allowlist.json` for rare homographs)
+- Keyword forms are unique within a pack and do not steal another token's English (see `keyword-form-allowlist.json` for rare homographs); no duplicate forms inside one logical
 - Optional IDE tiers (`glossary.json`, `placeholders.json`, `common-literals.json`): English fallback, keyword collision, duplicate gloss phrases
 - `index.json` includes `targets`, `ideReady`, and matches each pack
 - No duplicate locales
@@ -21,6 +21,16 @@ All commands run from the **repo root** (`kola-language-packs/`).
 **Does it change files?** No — read-only check.
 
 **When:** Every PR. Run `npm test`.
+
+---
+
+### `audit-keyword-forms.mjs` — via `npm run audit:keyword-forms`
+
+**What it does:** Same hard reverse-gloss rules as validate, plus a soft list of core control tokens still using English as primary (`IN`, `IF`, …).
+
+**Does it change files?** No.
+
+**When:** After bulk keyword edits or when hunting Learn undo/round-trip flips.
 
 ---
 

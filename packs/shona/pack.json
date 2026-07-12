@@ -8,7 +8,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Shona",
   "description": "Shona keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -78,7 +78,6 @@
       "return"
     ],
     "ASYNC": [
-      "async",
       "async"
     ],
     "AWAIT": [
@@ -110,7 +109,6 @@
       "const"
     ],
     "CLASS": [
-      "chikamu",
       "class"
     ],
     "EXTENDS": [

@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.15.2",
+  "version": "0.15.3",
   "displayName": "Twi",
   "description": "Twi keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -78,7 +78,6 @@
       "return"
     ],
     "ASYNC": [
-      "async",
       "async"
     ],
     "AWAIT": [
@@ -102,7 +101,6 @@
       "throw"
     ],
     "LET": [
-      "ma",
       "let"
     ],
     "CONST": [
@@ -114,7 +112,6 @@
       "class"
     ],
     "EXTENDS": [
-      "toa so",
       "extends"
     ],
     "NEW": [
