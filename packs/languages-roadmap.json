@@ -1,7 +1,11 @@
 {
   "version": "0.15.2",
   "npmVersionBaseline": "0.11.1",
-  "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, and planned UI/Design layer. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
+  "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, UI/Design catalog phases, and Phase F future mapping candidates. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
+  "productJob": {
+    "pain": "Learning and writing code in a second language costs attention. Part of the mind translates surface words instead of solving the problem.",
+    "job": "Help people learn and write code in languages they actually think in, via shared versioned maps that tools can transpile and reverse-map."
+  },
   "howToUse": [
     "1. Read releaseSequence — find status next for the current sprint.",
     "2. Match bump field to VERSIONING.md: patch | minor | major.",
@@ -57,10 +61,17 @@
     },
     "uiDesignConcepts": {
       "now": 0,
-      "pilotTarget": 40,
-      "practicalMax": 80,
-      "targetRelease": "0.37.0",
-      "note": "IDE Design-tab components and layout labels. Not logical tokens. Not required for IDE-ready bar until catalog ships."
+      "v1Target": 400,
+      "fullEncounterTarget": 1200,
+      "practicalMax": 1500,
+      "note": "Phased catalog U1–U6. Stem families + compose scales. Goal: everything learners encounter in Design and common hand edits. Not raw CSS property language."
+    },
+    "phaseFConcepts": {
+      "eventsA11y": { "now": 0, "target": 80 },
+      "testDsl": { "now": 0, "target": 40 },
+      "operatorWordLabels": { "now": 0, "target": 30 },
+      "docCommentMarkers": { "now": 0, "target": 20 },
+      "note": "See futureMappingCandidates. Do not start until U1 and builtins foundations exist."
     }
   },
   "shippedCount": 28,
@@ -303,9 +314,15 @@
       },
       "designTabComponents": {
         "layer": "uiDesign",
-        "examples": ["Button", "CardFooter", "Avatar", "Flex direction/gap", "Alert"],
-        "when": "0.37.0",
-        "note": "Design-tab JSX staying English today is expected. Not a keyword gap. Prefer English prop keys for host JSX unless Design defines a display map."
+        "examples": ["Button", "div", "className", "flex", "flex-col", "p-4", "Alert"],
+        "when": "U1-at-0.37.0-then-U2-U6",
+        "note": "Phased full encounter catalog. People read native; IDE emits English/host. Stem families + compose scales."
+      },
+      "eventsA11yAndTestDsl": {
+        "layer": "phase-f",
+        "examples": ["onClick", "aria-label", "describe", "expect"],
+        "when": "2.1.0-phase-f",
+        "note": "See futureMappingCandidates. After UI/Design U1 and builtins foundations."
       },
       "stdlibBuiltinCalls": {
         "layer": "stdlib-builtins",
@@ -415,58 +432,275 @@
     }
   },
   "uiDesignRoadmap": {
-    "description": "Optional pack layer for IDE Design-tab components and layout concepts. Separate from keywords, glossary, commonLiterals, and stdlib. Human guide: ROADMAP.md UI/Design section; TIERS.md UI/Design.",
+    "description": "Optional pack layer for Design-tab markup people read and edit. Phased catalog U1–U6 toward full encounter coverage (tags, props, components, Tailwind utility families). Human guide: ROADMAP.md UI/Design; TIERS.md UI/Design.",
     "status": "planned",
-    "targetRelease": "0.37.0",
-    "bump": "minor",
-    "priority": "medium",
-    "rationale": "Design tab emits English UI-kit JSX (Button, Flex/Grid props, Avatar, Alert). Packs currently only map programming keywords and IDE gloss seeds, so Design output stays English by design until this layer exists.",
-    "notInScope": [
+    "priority": "high",
+    "productRule": "People-facing native gloss; reverse map / emit to English host. Learners will adjust class strings and tags by hand.",
+    "catalogGoal": "Everything someone will encounter in Design mode and common manual edits, expanded over phases. Prefer stem families + composing scales over one pack row per p-0…p-96.",
+    "notInScopeUntilLater": [
+      "Raw CSS property authoring (margin-top: 1rem as source language)",
+      "Open-ended arbitrary values as a free grammar ([17px])",
+      "Every third-party Tailwind plugin",
       "logical-tokens.json keyword coverage",
-      "Tailwind / CSS utility class strings",
-      "Full component-library or DOM API surfaces",
-      "Required for IDE-ready validation until seed catalog ships"
+      "Required for IDE-ready validation until U1 ships"
     ],
-    "starterConceptGroups": {
-      "layout": [
+    "compositionModel": {
+      "description": "How full catalog coverage stays maintainable",
+      "stemPlusScale": "Gloss stem (P, FLEX_COL, SPACE_Y); keep numeric scale or palette token as host/shared (p-4, bg-red-500)",
+      "prefixes": "State and responsive prefixes are separate keys from U5 (hover, md, dark)",
+      "openQuestion": "Per-family: translate full token vs stem-only (decide in U1 design notes)"
+    },
+    "catalogPhases": [
+      {
+        "id": "U1",
+        "name": "Schema + Design-tab encounter set",
+        "release": "0.37.0",
+        "bump": "minor",
+        "status": "planned",
+        "estimatedStemCount": "60-100",
+        "includes": [
+          "pack schema / ui-design-seeds.json",
+          "HTML/JSX tags Design emits (div, span, nav, hr, img, …)",
+          "common props (className, src, title, value, variant, …)",
+          "Design components (Button, Badge, Avatar, Alert, Nav, CardFooter, Progress, …)",
+          "utilities actually present in Design codegen today (flex, flex-col, space-y-*, p-*, gap-*, …)",
+          "pilot glosses on IDE-ready packs"
+        ]
+      },
+      {
+        "id": "U2",
+        "name": "Layout + Flexbox + Grid + Spacing families",
+        "release": "0.38.0",
+        "bump": "minor",
+        "status": "planned",
+        "estimatedStemCount": "+80-150",
+        "tailwindCategories": ["layout", "flexbox", "grid", "spacing"],
+        "includes": [
+          "display (block, inline, hidden, …)",
+          "flex direction/wrap/grow/shrink/justify/items/content",
+          "grid template/cols/rows/span/place",
+          "padding/margin/space/gap stems (all sides and axes)"
+        ]
+      },
+      {
+        "id": "U3",
+        "name": "Sizing + Typography + Borders",
+        "release": "0.39.0",
+        "bump": "minor",
+        "status": "planned",
+        "estimatedStemCount": "+80-150",
+        "tailwindCategories": ["sizing", "typography", "borders"],
+        "includes": [
+          "width/height/min/max/size",
+          "font size/weight/family, leading, tracking, text align/color stems",
+          "border width/radius/style, divide, outline"
+        ]
+      },
+      {
+        "id": "U4",
+        "name": "Backgrounds + Colors + Effects",
+        "release": "1.1.0",
+        "bump": "minor",
+        "status": "planned",
+        "estimatedStemCount": "+100-200",
+        "tailwindCategories": ["backgrounds", "colors", "effects"],
+        "includes": [
+          "bg stems, gradients, background size/position",
+          "text/border/bg color family stems + palette compose rules",
+          "shadow, opacity, mix-blend, blur"
+        ]
+      },
+      {
+        "id": "U5",
+        "name": "Motion + interactivity + prefixes",
+        "release": "1.2.0",
+        "bump": "minor",
+        "status": "planned",
+        "estimatedStemCount": "+60-120",
+        "tailwindCategories": ["transitions", "transforms", "interactivity", "filters"],
+        "includes": [
+          "transition/duration/ease/animate",
+          "scale/rotate/translate/skew",
+          "cursor, pointer-events, select, scroll",
+          "common prefixes: hover, focus, active, disabled, md, lg, dark, …"
+        ]
+      },
+      {
+        "id": "U6",
+        "name": "Encounter telemetry fill",
+        "release": "1.3.0",
+        "bump": "minor",
+        "status": "planned",
+        "estimatedStemCount": "variable",
+        "includes": [
+          "Add stems observed in real Design + learner edits that U1–U5 missed",
+          "Prune keys never encountered",
+          "Document remaining gaps (plugins, arbitrary values) as optional later phases"
+        ]
+      }
+    ],
+    "u1SeedGroups": {
+      "htmlJsxTags": ["DIV", "SPAN", "NAV", "HR", "IMG"],
+      "commonProps": [
+        "CLASS_NAME",
+        "SRC",
+        "TITLE",
+        "VALUE",
+        "VARIANT",
+        "SIZE",
+        "DIRECTION",
+        "GAP",
+        "JUSTIFY",
+        "ALIGN",
+        "COLUMNS",
+        "HEIGHT",
+        "ORIENTATION"
+      ],
+      "layoutUtilitiesFromDesignTab": [
         "FLEX",
-        "STACK",
+        "FLEX_COL",
+        "FLEX_ROW",
+        "SPACE_Y",
+        "SPACE_X",
+        "GAP",
+        "P",
+        "PX",
+        "PY",
+        "M",
+        "W",
+        "H",
+        "ITEMS_CENTER",
+        "JUSTIFY_START",
         "GRID",
-        "SPACER",
-        "SEPARATOR"
+        "GRID_COLS"
       ],
       "components": [
         "BUTTON",
         "BADGE",
         "AVATAR",
         "ALERT",
-        "NAV",
+        "NAV_BAR",
         "CARD_FOOTER",
         "PROGRESS",
-        "LIST_ITEMS"
+        "LIST_ITEMS",
+        "STACK",
+        "SPACER",
+        "SEPARATOR"
       ],
-      "layoutPropsDisplayLabels": [
-        "direction",
-        "gap",
-        "justify",
-        "align",
-        "columns",
-        "height",
-        "orientation"
-      ],
-      "note": "Prop keys in host JSX should stay English for interop unless Design mode uses a separate display map. Default copy (Click me, Alert message) prefers commonLiterals."
+      "note": "U1 seeds from real Design emits first. Later phases expand by Tailwind category, not invent-unused."
     },
     "designFirst": [
-      "Add packs/ui-design-seeds.json (or equivalent) mirroring ide-tier-seeds.json shape",
-      "Optional pack files (e.g. ui-design.json) or pack.json field; do not overload keywords.json",
-      "Decide: concept labels only vs localized JSX tags with reverse map",
-      "Pilot on existing IDE-ready packs (yoruba, hausa, nigerian-pidgin, igbo, swahili, zulu, twi, luganda)",
-      "Wire IDE Design codegen to consume the new layer when present"
+      "Add packs/ui-design-seeds.json with phase tags (u1, u2, …)",
+      "Optional pack files (ui-design.json); do not overload keywords.json",
+      "Native ↔ English host emit; manual round-trip edits",
+      "Pilot IDE-ready packs at U1; deepen families in U2+",
+      "Wire Design codegen + Learn display to the layer"
     ],
     "openQuestions": [
-      "Keep React/HTML prop and tag identifiers English for valid host output?",
-      "Should CardFooter stay a PascalCase host symbol with a native displayName only?",
-      "How much overlap with commonLiterals for button/alert default strings?"
+      "Stem+scale vs whole-token gloss for spaced utilities (p-4, space-y-4)?",
+      "Color palette: translate color names (red) or keep English palette tokens?",
+      "Shared forms between HTML DIV and utility concepts?"
+    ]
+  },
+  "futureMappingCandidates": {
+    "description": "Phase F: surfaces still English after keywords, IDE gloss, UI/Design U1–U6, and builtins. Human guide: ROADMAP.md Phase F; TIERS.md Phase F. Do not start until foundations exist.",
+    "status": "planned",
+    "phase": "F",
+    "dependsOn": ["ui-design-U1", "stdlib-builtins-2.0"],
+    "candidates": [
+      {
+        "id": "events-a11y",
+        "name": "React / DOM events and accessibility props",
+        "priority": "high",
+        "examples": ["onClick", "onChange", "onSubmit", "aria-label", "aria-hidden", "role"],
+        "home": "ui-design-companion-or-pack-field",
+        "earliestRelease": "2.1.0",
+        "bump": "minor",
+        "estimatedCount": "40-80",
+        "rationale": "Same people-read rule as className. Learners edit handlers and a11y by hand."
+      },
+      {
+        "id": "test-dsl",
+        "name": "Test framework DSL",
+        "priority": "high",
+        "examples": ["describe", "it", "test", "expect", "beforeEach", "afterEach"],
+        "home": "builtins-adjacent-thin-tier",
+        "earliestRelease": "2.1.0",
+        "alternateRelease": "2.0.0-if-ready",
+        "bump": "minor",
+        "estimatedCount": "20-40",
+        "rationale": "Learners hit tests early. Not reserved keywords of host languages."
+      },
+      {
+        "id": "doc-comment-markers",
+        "name": "Doc and comment markers",
+        "priority": "medium",
+        "examples": ["TODO", "FIXME", "NOTE", "@param", "@returns", "@throws"],
+        "home": "small-seed-list-ide-gloss-like",
+        "earliestRelease": "2.1.0",
+        "bump": "patch-or-minor",
+        "estimatedCount": "10-20",
+        "rationale": "Short catalog; high value when reading foreign codebases."
+      },
+      {
+        "id": "diagnostics",
+        "name": "Compiler and IDE diagnostic messages",
+        "priority": "medium",
+        "examples": ["Unexpected token", "Cannot find name", "Type is not assignable"],
+        "home": "ide-message-catalogs-first",
+        "earliestRelease": "product-led",
+        "packHooksRelease": "2.2.0-optional",
+        "rationale": "Huge for learning. Prefer IDE i18n; optional shared keys in packs later."
+      },
+      {
+        "id": "operator-word-labels",
+        "name": "Operator word labels (not punctuation)",
+        "priority": "low",
+        "examples": ["teaching labels for ===", "=>", "..."],
+        "home": "separate-registry-not-logical-tokens",
+        "earliestRelease": "2.2.0",
+        "bump": "minor",
+        "estimatedCount": "15-30",
+        "rationale": "Only if Learn shows operator words. Do not map { ; ( . as vocabulary.",
+        "status": "optional"
+      },
+      {
+        "id": "html-tags-expand",
+        "name": "Additional HTML tags as Design grows",
+        "priority": "low",
+        "examples": ["section", "main", "form", "label", "input", "button"],
+        "home": "ui-design-U6-or-U1-expand",
+        "earliestRelease": "with-design-growth",
+        "rationale": "Expand from Design emits and telemetry, not invent-unused."
+      },
+      {
+        "id": "regex-flags",
+        "name": "Regex flags and named-group labels",
+        "priority": "low",
+        "examples": ["g", "i", "m", "named groups"],
+        "home": "tiny-catalog",
+        "earliestRelease": "if-learn-teaches-regex",
+        "rationale": "Only if Learn mode teaches regex heavily."
+      }
+    ],
+    "doNotMap": [
+      "Punctuation as words ({, ;, (, .) unless a special pedagogy mode exists",
+      "npm package names (react, lodash)",
+      "File extensions, URLs, git and CLI commands",
+      "Raw CSS property language and open-ended arbitrary values (deferred past U6)",
+      "Learn/IDE chrome (Run, Debug, Problems) — product UI i18n, not this package alone"
+    ],
+    "releaseHints": [
+      {
+        "release": "2.1.0",
+        "bump": "minor",
+        "focus": "Events/a11y seeds + test DSL starter (or fold test DSL into 2.0 if ready); doc markers optional"
+      },
+      {
+        "release": "2.2.0",
+        "bump": "minor",
+        "focus": "Optional operators word-label registry; diagnostics key hooks if IDE catalogs exist"
+      }
     ]
   },
   "priorArtSources": {
@@ -774,14 +1008,17 @@
         "name": "UI / Design",
         "release": "0.37.0",
         "bump": "minor",
-        "priority": "medium",
+        "priority": "high",
         "status": "planned",
-        "starterConceptCount": 40,
-        "rationale": "IDE Design-tab components and layout labels are not reserved words and are not glossary identifiers.",
-        "scopeNote": "Optional pack layer. Seed catalog first; pilot IDE-ready packs. Not part of keyword gap checks.",
+        "phases": ["U1", "U2", "U3", "U4", "U5", "U6"],
+        "starterConceptCount": 80,
+        "fullEncounterTarget": 1200,
+        "rationale": "Design-tab markup is for people. Phased catalog toward everything learners encounter (tags, props, Tailwind families).",
+        "scopeNote": "U1 schema+encounter set at 0.37; U2–U6 expand categories through 1.3. Stem compose model. Not keyword gap checks.",
         "designFirst": [
-          "Separate seed file from logical-tokens.json and ide-tier-seeds.json",
-          "Prefer English JSX prop keys; gloss concept labels / display names",
+          "Separate seed file with phase tags",
+          "U1 from real Design emits; later phases by Tailwind category",
+          "Native ↔ English host emit; manual round-trips",
           "Route default UI copy through commonLiterals when possible"
         ]
       },
@@ -800,6 +1037,35 @@
           "Separate coverage rules — not part of official keyword gap checks",
           "Resolve naming collisions (e.g. Go MAP keyword vs map builtin)"
         ]
+      },
+      {
+        "id": "phase-f-events-a11y",
+        "name": "Events / a11y",
+        "release": "2.1.0",
+        "bump": "minor",
+        "priority": "high",
+        "status": "planned",
+        "dependsOn": ["ui-design-U1"],
+        "rationale": "People-facing gloss for onClick, aria-label, role. Companion to UI/Design."
+      },
+      {
+        "id": "phase-f-test-dsl",
+        "name": "Test DSL",
+        "release": "2.1.0",
+        "bump": "minor",
+        "priority": "high",
+        "status": "planned",
+        "dependsOn": ["stdlib-builtins"],
+        "rationale": "describe/it/expect are not host reserved words; learners hit them early."
+      },
+      {
+        "id": "phase-f-operators-optional",
+        "name": "Operator word labels",
+        "release": "2.2.0",
+        "bump": "minor",
+        "priority": "low",
+        "status": "planned-optional",
+        "rationale": "Only if Learn displays operator words. Separate registry from logical-tokens."
       }
     ]
   },
@@ -1185,16 +1451,29 @@
     {
       "release": "0.37.0",
       "bump": "minor",
-      "focus": "UI/Design pack layer: Design-tab component seed catalog + schema; pilot glosses on IDE-ready packs",
+      "focus": "UI/Design U1: schema + Design-tab encounter set (tags, props, components, utilities Design emits); pilot IDE-ready packs",
       "metrics": {
-        "uiDesignConcepts": "~40"
+        "uiDesignPhase": "U1",
+        "uiDesignConcepts": "~60-100"
       },
       "status": "planned"
     },
     {
-      "release": "0.38.0-0.39.x",
-      "bump": "patch",
-      "focus": "Widen UI/Design pilots; remaining hardening and partner review",
+      "release": "0.38.0",
+      "bump": "minor",
+      "focus": "UI/Design U2: Layout + Flexbox + Grid + Spacing utility families",
+      "metrics": {
+        "uiDesignPhase": "U2"
+      },
+      "status": "planned"
+    },
+    {
+      "release": "0.39.0",
+      "bump": "minor",
+      "focus": "UI/Design U3: Sizing + Typography + Borders families; widen pack pilots",
+      "metrics": {
+        "uiDesignPhase": "U3"
+      },
       "status": "planned"
     },
     {
@@ -1209,9 +1488,55 @@
       "status": "planned"
     },
     {
+      "release": "1.1.0",
+      "bump": "minor",
+      "focus": "UI/Design U4: Backgrounds + Colors + Effects families",
+      "metrics": {
+        "uiDesignPhase": "U4"
+      },
+      "status": "planned"
+    },
+    {
+      "release": "1.2.0",
+      "bump": "minor",
+      "focus": "UI/Design U5: Transitions + Transforms + Interactivity + state/responsive prefixes",
+      "metrics": {
+        "uiDesignPhase": "U5"
+      },
+      "status": "planned"
+    },
+    {
+      "release": "1.3.0",
+      "bump": "minor",
+      "focus": "UI/Design U6: encounter telemetry fill + prune unused keys",
+      "metrics": {
+        "uiDesignPhase": "U6",
+        "uiDesignConcepts": "~1200 stems target"
+      },
+      "status": "planned"
+    },
+    {
       "release": "2.0.0",
       "bump": "major",
       "focus": "Stdlib/builtins tier (~150 starter concepts); separate coverage rules",
+      "status": "planned"
+    },
+    {
+      "release": "2.1.0",
+      "bump": "minor",
+      "focus": "Phase F: events/a11y seeds + test DSL starter; optional doc/comment markers",
+      "metrics": {
+        "phaseF": ["events-a11y", "test-dsl"]
+      },
+      "status": "planned"
+    },
+    {
+      "release": "2.2.0",
+      "bump": "minor",
+      "focus": "Phase F: optional operator word-labels; diagnostics pack hooks if IDE catalogs ready",
+      "metrics": {
+        "phaseF": ["operator-word-labels", "diagnostics-hooks"]
+      },
       "status": "planned"
     }
   ]

@@ -11,7 +11,9 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 ### Changed
 
 - Roadmap / tiers: document Learn-mode gloss schedule (keyword stubs like `IN` = any patch; identifiers like `out` = glossary / 0.34.0; builtins = 2.0.0)
-- Roadmap / tiers: plan **UI / Design** pack layer for IDE Design-tab components (Button, Flex/Grid, Alert, …) at **0.37.0**; not keywords, not required for 1.0
+- Roadmap / tiers: plan **UI / Design** pack layer with phased **full encounter catalog** (U1–U6): Design-tab set, Tailwind families, telemetry fill; stem+scale compose; people-facing gloss with English host emit
+- Roadmap / tiers: **Phase F** future mapping candidates (events/a11y, test DSL, doc markers, diagnostics, optional operator words) with do-not-map list (`futureMappingCandidates`)
+- Docs: product **pain/job** (second-language translate-tax; learn and write code in languages people think in) in README, ROADMAP, TIERS, and `productJob`
 
 ### Fixed
 

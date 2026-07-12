@@ -2,6 +2,12 @@
 
 Human-readable release plan for `@kolanut/language-packs`. **Source of truth for machines:** [`languages-roadmap.json`](./languages-roadmap.json) → `releaseSequence`.
 
+## Why this registry exists
+
+**Pain:** coding and learning in a second language adds a constant translate-tax. Attention that should go to the problem goes to English (or French, …) surface words instead.
+
+**Job:** give tools a shared, versioned map so people can learn and write code in languages they actually think in. Keywords, IDE gloss, UI/Design, builtins, and Phase F are layers that serve that job.
+
 **Baseline (shipped):** npm **0.11.0** · **28** African packs · **15** programming targets · **370** logical tokens · **8** IDE-ready packs · **0** keyword gaps.
 
 Read [`VERSIONING.md`](../VERSIONING.md) for semver rules. Read [`TIERS.md`](./TIERS.md) for what each pack layer means.
@@ -33,8 +39,11 @@ These are **product limits**, not hard code limits.
 | Glossary keys / pack | 30 | 50 | ~100 starter |
 | Placeholders / pack | 12 | 25 | ~50 |
 | CommonLiterals / pack | 15 | 50 | ~150 |
-| UI / Design concepts | 0 | 0 (pilot at 0.37) | ~40–80 starter |
+| UI / Design concepts | 0 | ~200–400 (U1–U3) | ~800–1500 stems (full encounter catalog via U4–U6; scale numbers compose) |
 | Stdlib/builtins concepts | 0 | 0 (until v2) | ~150 starter in v2.0 |
+| Events / a11y props | 0 | 0 | ~40–80 (Phase F) |
+| Test DSL concepts | 0 | 0 | ~20–40 (Phase F / with builtins) |
+| Operator word-labels | 0 | 0 | ~15–30 (Phase F, optional) |
 
 Africa has **1,500–3,000** living languages (UNESCO). This roadmap targets **~68** intentional packs, not full continental coverage.
 
@@ -51,11 +60,15 @@ Africa has **1,500–3,000** living languages (UNESCO). This roadmap targets **~
    │
 0.30–0.33  Phase C — Tier-A programming targets (Lua, SQL, Scala, Elixir)
    │
-0.34–0.39  Phase D — Quality, glossary expansion, UI/Design pilot, partner review
+0.34–0.39  Phase D — Quality, UI/Design catalog phases U1–U3, partner review
    │
 1.0.0      Stable schema + full v1 scope
    │
+1.1–1.3    Phase E — UI/Design catalog phases U4–U6 (colors, effects, states, telemetry fill)
+   │
 2.0.0      Stdlib/builtins tier (~150 starter concepts)
+   │
+2.1–2.x    Phase F — Future mapping candidates (events/a11y, test DSL, operators, diagnostics)
 ```
 
 ---
@@ -107,8 +120,12 @@ IDE Learn Level 1 swaps **keywords** only. Identifiers and string literals stay 
 | Keywords with only English stubs (e.g. `IN: ["in"]`, many packs today) | **Keywords** | **Any patch**, when native wording is reviewed. Not blocked on a minor release. |
 | Variable / parameter names (`out`, `i`, `str`, …) | **Glossary** (identifier hints) | Add keys anytime as a patch on IDE-ready packs; **seed list expansion** (30 → 50) planned at **0.34.0**. Project-specific names stay in the IDE symbols map, not this repo. |
 | String / UI literals (`"FizzBuzz"`, `"Hello"`, …) | **CommonLiterals** | Same IDE-tier path; seed expansion at **0.34.0**. |
-| Design-tab JSX (`Button`, `CardFooter`, Flex/Grid props, Avatar, …) | **UI / Design** | **0.37.0** schema + starter seed catalog; pilot on IDE-ready packs. **Not** logical tokens. Prop keys stay English unless Design mode defines a separate display map. |
+| Design-tab JSX (`Button`, `div`, `className`, `flex`, …) | **UI / Design** | **Phased catalog** (U1 at **0.37.0**, then U2–U6). Goal: everything a learner will encounter in Design + common hand edits. People read native; IDE emits English/host. |
 | Call names that are not reserved keywords (Python `range()`, `len()`, …) | **Stdlib / builtins** | **2.0.0**. Note: logical token `RANGE` is mainly Go’s `range` keyword; Python’s `range` is closer to builtins. |
+| React events / a11y (`onClick`, `aria-label`, …) | **Events / a11y** (Phase F) | After UI/Design U1+; fold into UI layer or thin companion seeds |
+| Test helpers (`describe`, `it`, `expect`, …) | **Test DSL** (Phase F) | With or just after builtins **2.0** / **2.1** |
+| Operator *word* labels (not `{` `;`) | **Operators** (Phase F, optional) | Only if Learn shows words for `===`, `=>`, … |
+| Compiler / IDE error text | **Diagnostics** | Prefer **IDE message catalogs**; optional shared keys in packs later |
 
 **Examples:** Luganda leaving `out` English at L1 is by design. Leaving `in` English is an incomplete keyword entry. Design tab staying English today is expected until **0.37.0**. See [`TIERS.md`](./TIERS.md).
 
@@ -150,29 +167,60 @@ One target per minor release (same pipeline as Java/Clojure):
 | 0.34.0 | minor | Expand IDE seed lists: glossary → 50, placeholders → 25, commonLiterals → 50 |
 | 0.35.0 | minor | `reviewStatus: community-reviewed` push on top 10 packs by usage |
 | 0.36.0 | minor | Partner-verified packs, validation tightening, TypeScript API polish |
-| **0.37.0** | minor | **UI / Design layer:** seed catalog + schema for Design-tab components (Button, layout Flex/Grid, Alert, …); pilot glosses on IDE-ready packs |
-| 0.38.0 – 0.39.x | patch/minor | Widen UI/Design pilots; partner review; remaining polish |
+| **0.37.0** | minor | **UI/Design U1:** schema + seed file; Design-tab encounter set (tags, props, components, utilities Design emits today); pilot IDE-ready packs |
+| **0.38.0** | minor | **UI/Design U2:** full Layout + Flexbox + Grid + Spacing utility *families* (stems; scales compose) |
+| **0.39.0** | minor | **UI/Design U3:** Sizing + Typography + Borders families; widen pack pilots |
+
+### Phase E — Complete the encounter catalog (1.1 – 1.3)
+
+After **1.0.0** schema lock. UI/Design stays optional for pack IDE-ready status until U1 ships; later phases deepen coverage.
+
+| Version | Bump | Focus |
+|---------|------|-------|
+| **1.1.0** | minor | **UI/Design U4:** Backgrounds + Colors + Effects families |
+| **1.2.0** | minor | **UI/Design U5:** Transitions + Transforms + Interactivity + common state/responsive *prefixes* (`hover:`, `md:`, …) |
+| **1.3.0** | minor | **UI/Design U6:** Telemetry fill. Add stems learners actually type that earlier phases missed; prune unused invent-keys |
 
 ### UI / Design layer (how it fits)
 
-Design-tab output is **component and layout English**, not reserved-word English. It belongs in a **new optional pack layer**, beside glossary / commonLiterals, not inside `logical-tokens.json`.
+Design-tab output is **markup people read**, not only reserved-word English. It belongs in a **new optional pack layer**, beside glossary / commonLiterals, not inside `logical-tokens.json`.
+
+**Why map `div` / `className` / `flex`:** packs exist so humans can read and **manually edit** code in their language. The IDE maps native → English host forms, same as keywords (`tí` → `if`).
 
 | Keep separate | Why |
 |---------------|-----|
 | Keywords (370) | Host language reserved words for transpile |
 | Glossary | Learner variable *names* |
 | CommonLiterals | Short teaching/UI strings |
-| **UI / Design** | Design-tab kit: components + layout concepts the IDE emits |
+| **UI / Design** | Design-tab + hand-edit catalog: tags, props, components, Tailwind utility families |
 | Stdlib (2.0) | Runtime API calls (`len`, `map`, …) |
 
-**Open design choices (decide before 0.37.0 ships):**
+**Catalog goal:** everything someone will **encounter** in Design mode and common manual tweaks, expanded in **phases U1–U6**. Not inventing unused class names up front.
 
-1. Translate **component concept labels** only, keep JSX tag/prop identifiers English for React interop.
-2. Or emit fully localized tags in a Learn/Design display mode, with a reverse map back to host components.
-3. Route default button/alert copy through **commonLiterals**, not duplicate UI keys.
-4. Out of scope: Tailwind utility strings, full shadcn/DOM API surfaces.
+**How “all” works without 10,000 pack rows:**
 
-Machine source: `languages-roadmap.json` → `uiDesignRoadmap`.
+| Approach | Example |
+|----------|---------|
+| Gloss the **stem / family** | `p` / `padding`, `flex`, `text` (size), `bg` |
+| Keep **scale / color token** as host or shared digits | `4` in `p-4`, `red-500` in `bg-red-500` (decide per family in U1 design notes) |
+| Prefixes as their own keys | `hover`, `md`, `dark` (U5) |
+
+So packs cover the **vocabulary people read**, while numbers and some palette tokens can compose.
+
+**Phase summary**
+
+| Phase | Release | What lands |
+|-------|---------|------------|
+| **U1** | 0.37.0 | Schema, seeds, Design-tab emit set, pilot packs |
+| **U2** | 0.38.0 | Layout, Flexbox, Grid, Spacing (full families) |
+| **U3** | 0.39.0 | Sizing, Typography, Borders |
+| **U4** | 1.1.0 | Backgrounds, Colors, Effects |
+| **U5** | 1.2.0 | Transitions, Transforms, Interactivity, state/responsive prefixes |
+| **U6** | 1.3.0 | Encounter telemetry fill + prune |
+
+**Still out of scope even after U6:** raw CSS property language (`margin-top: 1rem` as authoring), arbitrary values as an open-ended English grammar (`[17px]`), every third-party plugin. Those can become later phases if Design starts emitting them.
+
+Machine source: `languages-roadmap.json` → `uiDesignRoadmap` → `catalogPhases`.
 
 ---
 
@@ -190,7 +238,7 @@ Machine source: `languages-roadmap.json` → `uiDesignRoadmap`.
 - [ ] `pack.schema.json` unchanged for one release cycle OR breaking changes documented with migration
 - [ ] Regional maintainer model documented in CONTRIBUTING
 
-**Not in 1.0:** stdlib/builtins tier (that is 2.0). UI/Design may ship as an **optional** layer before 1.0 (0.37+) but is not required for the 1.0 checklist.
+**Not in 1.0:** stdlib/builtins tier (that is 2.0). UI/Design **U1–U3** should land before or with late 0.x; **U4–U6** complete the encounter catalog after 1.0 (Phase E). U1 is enough for optional Design gloss; full catalog is the phased goal, not a 1.0 blocker.
 
 ### 2.0.0 — Stdlib / builtins tier (MAJOR)
 
@@ -205,6 +253,34 @@ Machine source: `languages-roadmap.json` → `uiDesignRoadmap`.
 
 **Not in 2.0:** full JDK/DOM/Python-stdlib parity (10,000+ APIs).
 
+### Phase F — Future mapping candidates (after builtins)
+
+Tracked so we do not forget surfaces learners still read in English after keywords, IDE gloss, UI/Design, and builtins. Machine source: `languages-roadmap.json` → `futureMappingCandidates`.
+
+| Priority | Candidate | Examples | Home | Earliest |
+|----------|-----------|----------|------|----------|
+| High | **Events + a11y** | `onClick`, `onChange`, `aria-label`, `role` | UI/Design companion or pack field | **2.1.0** (needs U1 schema first) |
+| High | **Test DSL** | `describe`, `it`, `expect`, `test` | Builtins adjacent / thin tier | **2.1.0** or ride **2.0** |
+| Medium | **Doc / comment markers** | `TODO`, `FIXME`, `@param`, `@returns` | Small seed list (IDE gloss-like) | **2.1.x** patch/minor |
+| Medium | **Diagnostics** | “Unexpected token”, “Cannot find name” | **IDE i18n** first; optional pack hooks | Product + later pack keys |
+| Lower | **Operators (word labels)** | Teaching labels for `===`, `=>`, `...` | Separate registry (not logical-tokens) | **2.2.0** only if Learn shows words |
+| Lower | **More HTML tags** | `section`, `main`, `form`, `label` | UI/Design U6 telemetry / U1 expand | With Design growth |
+| Lower | **Regex flags** | `g`, `i`, `m`, named groups | Tiny catalog | If Learn teaches regex heavily |
+
+**Keep English / symbols (do not map as pack vocabulary):**
+
+- Punctuation as words (`{`, `;`, `(`, `.`) unless a special pedagogy mode exists
+- npm package names (`react`, `lodash`)
+- File extensions, URLs, git / CLI commands
+- Raw CSS property language and open-ended arbitrary values (already deferred past U6)
+
+**IDE product (not this npm package alone):** Learn chrome (Run, Debug, Problems). Translate in the IDE; packs stay code-facing.
+
+| Version | Bump | Focus |
+|---------|------|-------|
+| **2.1.0** | minor | Events/a11y seeds + test DSL starter (or fold test DSL into 2.0 if ready) |
+| **2.2.0** | minor | Optional operators word-label registry; doc/comment markers; diagnostics key hooks if IDE is ready |
+
 ---
 
 ## Parallel tracks (any version)
@@ -218,7 +294,8 @@ These can land as **patch** or ride along with related **minor** releases:
 | README / docs | Maintainers | `npm run readme:sync` after metric changes |
 | Validation / CI | Maintainers | Usually no npm bump alone |
 | Logical token additions | Maintainers | Only when a shipped target gains new reserved words |
-| UI / Design seeds | Maintainers + IDE | Catalog Design-tab concepts before 0.37.0; do not invent keys without a real Design emit |
+| UI / Design seeds | Maintainers + IDE | Phases U1–U6 in `uiDesignRoadmap.catalogPhases`; seed from Design emits + encounter telemetry, not invented unused keys |
+| Future mapping (Phase F) | Maintainers + IDE | `futureMappingCandidates` in roadmap JSON; do not start until U1 / 2.0 foundations exist |
 
 ---
 

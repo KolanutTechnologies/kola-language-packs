@@ -86,7 +86,11 @@ Africa-first:
 
 ## Why this exists (the gap we’re filling)
 
-Most tools that try “programming in African languages” run into the same wall:
+**The pain:** learning and writing code in a second language costs attention. Part of your mind is translating words (`if`, `className`, error text) instead of solving the problem. Put the surface language in the language people already think in, and more of that attention goes to the *programming*.
+
+**The job of this registry:** shared, versioned maps so editors, transpilers, and learning tools can help people learn and write code in languages they actually think in.
+
+Most tools that try “programming in African languages” also hit a packaging wall:
 
 - **There’s no single public, spec-backed registry** that says *“these are the official reserved words for each target language”* and *“these are the logical concepts they map to”*.
 - Even when translation resources exist, they’re often **not packaged, not versioned, and not reusable** across tools.
@@ -97,6 +101,8 @@ This project is our attempt to fix that properly:
 - A canonical **official keyword list per programming target** (the specs)
 - A growing set of **African language packs** (the human-language layer)
 - Validation so everyone can build on top of the same foundation with confidence
+
+See [`packs/ROADMAP.md`](./packs/ROADMAP.md) for scope layers (keywords, IDE gloss, UI/Design, builtins, Phase F).
 
 ## Standards-aligned metadata
 
