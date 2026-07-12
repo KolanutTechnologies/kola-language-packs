@@ -1,7 +1,7 @@
 {
-  "version": "0.15.1",
+  "version": "0.15.2",
   "npmVersionBaseline": "0.11.1",
-  "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, and IDE gloss tiers. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
+  "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, and planned UI/Design layer. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "howToUse": [
     "1. Read releaseSequence — find status next for the current sprint.",
     "2. Match bump field to VERSIONING.md: patch | minor | major.",
@@ -54,6 +54,13 @@
       "now": 0,
       "v2StarterTarget": 150,
       "note": "Not full API surfaces per language"
+    },
+    "uiDesignConcepts": {
+      "now": 0,
+      "pilotTarget": 40,
+      "practicalMax": 80,
+      "targetRelease": "0.37.0",
+      "note": "IDE Design-tab components and layout labels. Not logical tokens. Not required for IDE-ready bar until catalog ships."
     }
   },
   "shippedCount": 28,
@@ -294,6 +301,12 @@
         "examples": ["FizzBuzz", "Hello"],
         "when": "0.34.0-seed-expansion"
       },
+      "designTabComponents": {
+        "layer": "uiDesign",
+        "examples": ["Button", "CardFooter", "Avatar", "Flex direction/gap", "Alert"],
+        "when": "0.37.0",
+        "note": "Design-tab JSX staying English today is expected. Not a keyword gap. Prefer English prop keys for host JSX unless Design defines a display map."
+      },
       "stdlibBuiltinCalls": {
         "layer": "stdlib-builtins",
         "examples": ["len", "python range()"],
@@ -400,6 +413,61 @@
       "commonLiterals": 50,
       "targetRelease": "0.34.0"
     }
+  },
+  "uiDesignRoadmap": {
+    "description": "Optional pack layer for IDE Design-tab components and layout concepts. Separate from keywords, glossary, commonLiterals, and stdlib. Human guide: ROADMAP.md UI/Design section; TIERS.md UI/Design.",
+    "status": "planned",
+    "targetRelease": "0.37.0",
+    "bump": "minor",
+    "priority": "medium",
+    "rationale": "Design tab emits English UI-kit JSX (Button, Flex/Grid props, Avatar, Alert). Packs currently only map programming keywords and IDE gloss seeds, so Design output stays English by design until this layer exists.",
+    "notInScope": [
+      "logical-tokens.json keyword coverage",
+      "Tailwind / CSS utility class strings",
+      "Full component-library or DOM API surfaces",
+      "Required for IDE-ready validation until seed catalog ships"
+    ],
+    "starterConceptGroups": {
+      "layout": [
+        "FLEX",
+        "STACK",
+        "GRID",
+        "SPACER",
+        "SEPARATOR"
+      ],
+      "components": [
+        "BUTTON",
+        "BADGE",
+        "AVATAR",
+        "ALERT",
+        "NAV",
+        "CARD_FOOTER",
+        "PROGRESS",
+        "LIST_ITEMS"
+      ],
+      "layoutPropsDisplayLabels": [
+        "direction",
+        "gap",
+        "justify",
+        "align",
+        "columns",
+        "height",
+        "orientation"
+      ],
+      "note": "Prop keys in host JSX should stay English for interop unless Design mode uses a separate display map. Default copy (Click me, Alert message) prefers commonLiterals."
+    },
+    "designFirst": [
+      "Add packs/ui-design-seeds.json (or equivalent) mirroring ide-tier-seeds.json shape",
+      "Optional pack files (e.g. ui-design.json) or pack.json field; do not overload keywords.json",
+      "Decide: concept labels only vs localized JSX tags with reverse map",
+      "Pilot on existing IDE-ready packs (yoruba, hausa, nigerian-pidgin, igbo, swahili, zulu, twi, luganda)",
+      "Wire IDE Design codegen to consume the new layer when present"
+    ],
+    "openQuestions": [
+      "Keep React/HTML prop and tag identifiers English for valid host output?",
+      "Should CardFooter stay a PascalCase host symbol with a native displayName only?",
+      "How much overlap with commonLiterals for button/alert default strings?"
+    ]
   },
   "priorArtSources": {
     "description": "Native-syntax programming languages mined for pack aliases, glossary, and IDE seeds. Not transpile targets.",
@@ -701,6 +769,22 @@
       }
     ],
     "plannedTiers": [
+      {
+        "id": "ui-design",
+        "name": "UI / Design",
+        "release": "0.37.0",
+        "bump": "minor",
+        "priority": "medium",
+        "status": "planned",
+        "starterConceptCount": 40,
+        "rationale": "IDE Design-tab components and layout labels are not reserved words and are not glossary identifiers.",
+        "scopeNote": "Optional pack layer. Seed catalog first; pilot IDE-ready packs. Not part of keyword gap checks.",
+        "designFirst": [
+          "Separate seed file from logical-tokens.json and ide-tier-seeds.json",
+          "Prefer English JSX prop keys; gloss concept labels / display names",
+          "Route default UI copy through commonLiterals when possible"
+        ]
+      },
       {
         "id": "stdlib-builtins",
         "name": "Stdlib / builtins",
@@ -1093,9 +1177,24 @@
       "status": "planned"
     },
     {
-      "release": "0.36.0-0.39.x",
+      "release": "0.36.0",
+      "bump": "minor",
+      "focus": "Partner-verified packs, validation tightening, TypeScript API polish",
+      "status": "planned"
+    },
+    {
+      "release": "0.37.0",
+      "bump": "minor",
+      "focus": "UI/Design pack layer: Design-tab component seed catalog + schema; pilot glosses on IDE-ready packs",
+      "metrics": {
+        "uiDesignConcepts": "~40"
+      },
+      "status": "planned"
+    },
+    {
+      "release": "0.38.0-0.39.x",
       "bump": "patch",
-      "focus": "Hardening, partner-verified packs, API polish",
+      "focus": "Widen UI/Design pilots; remaining hardening and partner review",
       "status": "planned"
     },
     {

@@ -33,6 +33,7 @@ These are **product limits**, not hard code limits.
 | Glossary keys / pack | 30 | 50 | ~100 starter |
 | Placeholders / pack | 12 | 25 | ~50 |
 | CommonLiterals / pack | 15 | 50 | ~150 |
+| UI / Design concepts | 0 | 0 (pilot at 0.37) | ~40–80 starter |
 | Stdlib/builtins concepts | 0 | 0 (until v2) | ~150 starter in v2.0 |
 
 Africa has **1,500–3,000** living languages (UNESCO). This roadmap targets **~68** intentional packs, not full continental coverage.
@@ -50,7 +51,7 @@ Africa has **1,500–3,000** living languages (UNESCO). This roadmap targets **~
    │
 0.30–0.33  Phase C — Tier-A programming targets (Lua, SQL, Scala, Elixir)
    │
-0.34–0.39  Phase D — Quality, glossary expansion, partner review
+0.34–0.39  Phase D — Quality, glossary expansion, UI/Design pilot, partner review
    │
 1.0.0      Stable schema + full v1 scope
    │
@@ -106,9 +107,10 @@ IDE Learn Level 1 swaps **keywords** only. Identifiers and string literals stay 
 | Keywords with only English stubs (e.g. `IN: ["in"]`, many packs today) | **Keywords** | **Any patch**, when native wording is reviewed. Not blocked on a minor release. |
 | Variable / parameter names (`out`, `i`, `str`, …) | **Glossary** (identifier hints) | Add keys anytime as a patch on IDE-ready packs; **seed list expansion** (30 → 50) planned at **0.34.0**. Project-specific names stay in the IDE symbols map, not this repo. |
 | String / UI literals (`"FizzBuzz"`, `"Hello"`, …) | **CommonLiterals** | Same IDE-tier path; seed expansion at **0.34.0**. |
+| Design-tab JSX (`Button`, `CardFooter`, Flex/Grid props, Avatar, …) | **UI / Design** | **0.37.0** schema + starter seed catalog; pilot on IDE-ready packs. **Not** logical tokens. Prop keys stay English unless Design mode defines a separate display map. |
 | Call names that are not reserved keywords (Python `range()`, `len()`, …) | **Stdlib / builtins** | **2.0.0**. Note: logical token `RANGE` is mainly Go’s `range` keyword; Python’s `range` is closer to builtins. |
 
-**Examples:** Luganda leaving `out` English at L1 is by design. Leaving `in` English is an incomplete keyword entry. See [`TIERS.md`](./TIERS.md).
+**Examples:** Luganda leaving `out` English at L1 is by design. Leaving `in` English is an incomplete keyword entry. Design tab staying English today is expected until **0.37.0**. See [`TIERS.md`](./TIERS.md).
 
 ### Phase B — African expansion to 68 packs (0.22 – 0.29)
 
@@ -147,7 +149,30 @@ One target per minor release (same pipeline as Java/Clojure):
 |---------|------|-------|
 | 0.34.0 | minor | Expand IDE seed lists: glossary → 50, placeholders → 25, commonLiterals → 50 |
 | 0.35.0 | minor | `reviewStatus: community-reviewed` push on top 10 packs by usage |
-| 0.36.0 – 0.39.x | patch/minor | Partner-verified packs, validation tightening, TypeScript API polish |
+| 0.36.0 | minor | Partner-verified packs, validation tightening, TypeScript API polish |
+| **0.37.0** | minor | **UI / Design layer:** seed catalog + schema for Design-tab components (Button, layout Flex/Grid, Alert, …); pilot glosses on IDE-ready packs |
+| 0.38.0 – 0.39.x | patch/minor | Widen UI/Design pilots; partner review; remaining polish |
+
+### UI / Design layer (how it fits)
+
+Design-tab output is **component and layout English**, not reserved-word English. It belongs in a **new optional pack layer**, beside glossary / commonLiterals, not inside `logical-tokens.json`.
+
+| Keep separate | Why |
+|---------------|-----|
+| Keywords (370) | Host language reserved words for transpile |
+| Glossary | Learner variable *names* |
+| CommonLiterals | Short teaching/UI strings |
+| **UI / Design** | Design-tab kit: components + layout concepts the IDE emits |
+| Stdlib (2.0) | Runtime API calls (`len`, `map`, …) |
+
+**Open design choices (decide before 0.37.0 ships):**
+
+1. Translate **component concept labels** only, keep JSX tag/prop identifiers English for React interop.
+2. Or emit fully localized tags in a Learn/Design display mode, with a reverse map back to host components.
+3. Route default button/alert copy through **commonLiterals**, not duplicate UI keys.
+4. Out of scope: Tailwind utility strings, full shadcn/DOM API surfaces.
+
+Machine source: `languages-roadmap.json` → `uiDesignRoadmap`.
 
 ---
 
@@ -165,7 +190,7 @@ One target per minor release (same pipeline as Java/Clojure):
 - [ ] `pack.schema.json` unchanged for one release cycle OR breaking changes documented with migration
 - [ ] Regional maintainer model documented in CONTRIBUTING
 
-**Not in 1.0:** stdlib/builtins tier (that is 2.0).
+**Not in 1.0:** stdlib/builtins tier (that is 2.0). UI/Design may ship as an **optional** layer before 1.0 (0.37+) but is not required for the 1.0 checklist.
 
 ### 2.0.0 — Stdlib / builtins tier (MAJOR)
 
@@ -193,6 +218,7 @@ These can land as **patch** or ride along with related **minor** releases:
 | README / docs | Maintainers | `npm run readme:sync` after metric changes |
 | Validation / CI | Maintainers | Usually no npm bump alone |
 | Logical token additions | Maintainers | Only when a shipped target gains new reserved words |
+| UI / Design seeds | Maintainers + IDE | Catalog Design-tab concepts before 0.37.0; do not invent keys without a real Design emit |
 
 ---
 

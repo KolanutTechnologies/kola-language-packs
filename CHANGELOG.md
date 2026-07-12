@@ -6,9 +6,16 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.15.2] - 2026-07-12
+
 ### Changed
 
 - Roadmap / tiers: document Learn-mode gloss schedule (keyword stubs like `IN` = any patch; identifiers like `out` = glossary / 0.34.0; builtins = 2.0.0)
+- Roadmap / tiers: plan **UI / Design** pack layer for IDE Design-tab components (Button, Flex/Grid, Alert, …) at **0.37.0**; not keywords, not required for 1.0
+
+### Fixed
+
+- Release notes snippet no longer pulls Added/Fixed bullets from older CHANGELOG sections when the target version omits those headings
 
 ## [0.15.1] - 2026-07-11
 
@@ -253,7 +260,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.1...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.2...HEAD
+[0.15.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.2
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0
 [0.4.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.4.0
 [0.3.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.3.1

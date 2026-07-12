@@ -310,7 +310,7 @@ We track roadmaps in [`packs/ROADMAP.md`](./packs/ROADMAP.md) (version plan: pat
 <!-- roadmap-bullets:start -->
 - **Planned African languages** (by region + priority) — 40 more packs on the list
 - **Planned programming targets** — Clojure, Lua, SQL, Scala, Elixir (see [`packs/ROADMAP.md`](./packs/ROADMAP.md))
-- **Logical tokens** — **370 shipped**; stdlib / builtins tier → **2.0.0** (design-first; not required for beginner keyword transpilation)
+- **Logical tokens** — **370 shipped**; UI/Design Design-tab layer → **0.37.0**; stdlib / builtins → **2.0.0** (neither is keyword coverage)
 - **Programming targets** — **15 shipped** with 0 keyword coverage gaps (see table above)
 <!-- roadmap-bullets:end -->
 

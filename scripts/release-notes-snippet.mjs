@@ -21,20 +21,24 @@ function gapCount(coverage) {
   );
 }
 
-function sectionBullets(changelog, version, heading) {
-  const escaped = version.replace(/\./g, '\\.');
-  let block = null;
-  const dated = new RegExp(`## \\[${escaped}\\][^#]*?(### ${heading}\\s*\\n)([\\s\\S]*?)(?=\\n### |\\n## |$)`);
-  const datedMatch = changelog.match(dated);
-  if (datedMatch) {
-    block = datedMatch[2];
-  } else {
-    const unreleased = new RegExp(`## \\[Unreleased\\][\\s\\S]*?(### ${heading}\\s*\\n)([\\s\\S]*?)(?=\\n### |\\n## |$)`);
-    const unreleasedMatch = changelog.match(unreleased);
-    if (unreleasedMatch) block = unreleasedMatch[2];
+function extractVersionBody(changelog, version) {
+  if (version === 'Unreleased') {
+    const match = changelog.match(/## \[Unreleased\]\s*\n([\s\S]*?)(?=\n## \[|$)/);
+    return match ? match[1] : '';
   }
-  if (!block) return [];
-  return block
+  const escaped = version.replace(/\./g, '\\.');
+  const match = changelog.match(new RegExp(`## \\[${escaped}\\][^\\n]*\\n([\\s\\S]*?)(?=\\n## \\[|$)`));
+  return match ? match[1] : '';
+}
+
+function sectionBullets(changelog, version, heading) {
+  let body = extractVersionBody(changelog, version);
+  if (!body.trim() && version !== 'Unreleased') {
+    body = extractVersionBody(changelog, 'Unreleased');
+  }
+  const headingMatch = body.match(new RegExp(`### ${heading}\\s*\\n([\\s\\S]*?)(?=\\n### |$)`));
+  if (!headingMatch) return [];
+  return headingMatch[1]
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line.startsWith('- '))

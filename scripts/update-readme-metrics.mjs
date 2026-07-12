@@ -271,7 +271,7 @@ function buildRoadmapBullets({ plannedPacks, plannedTargets, tokenCount, shipped
   return [
     `- **Planned African languages** (by region + priority) — ${plannedPacks} more packs on the list`,
     `- **Planned programming targets** — ${plannedTargetsText} (see [\`packs/ROADMAP.md\`](./packs/ROADMAP.md))`,
-    `- **Logical tokens** — **${tokenCount} shipped**; stdlib / builtins tier → **2.0.0** (design-first; not required for beginner keyword transpilation)`,
+    `- **Logical tokens** — **${tokenCount} shipped**; UI/Design Design-tab layer → **0.37.0**; stdlib / builtins → **2.0.0** (neither is keyword coverage)`,
     `- **Programming targets** — **${shippedTargets} shipped** with 0 keyword coverage gaps (see table above)`,
   ].join('\n');
 }
