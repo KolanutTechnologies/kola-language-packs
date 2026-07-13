@@ -6,6 +6,11 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+### Added
+
+- Maintainer reference for Khaya and Mansa translation API coverage (`packs/TRANSLATION_API_COVERAGE.md`)
+- Optional smoke-test scripts for those APIs (`scripts/test-translation-apis.mjs`, `scripts/try-mansa-once.mjs`); keys from `.env` only, not CI
+
 ## [0.15.3] - 2026-07-12
 
 ### Fixed
