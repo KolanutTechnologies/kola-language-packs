@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-18T13:41:51.707Z",
+  "generatedAt": "2026-07-18T17:46:43.391Z",
   "logicalTokenCount": 370,
-  "africanLanguagePackCount": 28,
+  "africanLanguagePackCount": 29,
   "transpileTargets": [
     "javascript",
     "python",
@@ -211,6 +211,18 @@
       ],
       "regions": [
         "Central Africa"
+      ]
+    },
+    {
+      "name": "edo",
+      "displayName": "Ẹdo",
+      "languageCode": "bin",
+      "locale": "bin-NG",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
       ]
     },
     {

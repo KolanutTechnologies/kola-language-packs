@@ -1,5 +1,5 @@
 {
-  "version": "0.15.4",
+  "version": "0.16.0",
   "description": "Reserved pack names and locales for contributors. Read the sections below BEFORE searching taken.*. Auto-generated — run npm run registry from repo root after adding a pack.",
   "howToUse": [
     "1. Read namingRules — how to pick name, languageCode, and locale.",
@@ -85,6 +85,7 @@
       "berber-tifinagh",
       "cameroon-pidgin",
       "chichewa",
+      "edo",
       "efik",
       "french",
       "fulfulde",
@@ -163,6 +164,15 @@
         "countryCode": "MA",
         "countryName": "Morocco",
         "status": "planned"
+      },
+      {
+        "locale": "bin-NG",
+        "pack": "edo",
+        "displayName": "Ẹdo",
+        "languageCode": "bin",
+        "countryCode": "NG",
+        "countryName": "Nigeria",
+        "status": "shipped"
       },
       {
         "locale": "bm-ML",
@@ -486,6 +496,7 @@
       "am-ET",
       "ar-EG",
       "ber-MA",
+      "bin-NG",
       "bm-ML",
       "efi-NG",
       "ff-NG",
@@ -527,6 +538,7 @@
       "ak",
       "am",
       "ar",
+      "bin",
       "bm",
       "efi",
       "ff",
@@ -643,6 +655,19 @@
       ],
       "regions": [
         "Central Africa"
+      ],
+      "status": "shipped"
+    },
+    {
+      "name": "edo",
+      "languageCode": "bin",
+      "locale": "bin-NG",
+      "displayName": "Ẹdo",
+      "countries": [
+        "NG"
+      ],
+      "regions": [
+        "West Africa"
       ],
       "status": "shipped"
     },

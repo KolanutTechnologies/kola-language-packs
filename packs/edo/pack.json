@@ -1,16 +1,16 @@
 {
-  "name": "shona",
-  "languageCode": "sn",
-  "locale": "sn-ZW",
+  "name": "edo",
+  "languageCode": "bin",
+  "locale": "bin-NG",
   "countries": [
-    "ZW"
+    "NG"
   ],
   "regions": [
-    "Southern Africa"
+    "West Africa"
   ],
   "version": "0.16.0",
-  "displayName": "Shona",
-  "description": "Shona keyword map — starter pack (community contributions welcome)",
+  "displayName": "Ẹdo",
+  "description": "Edo (Bini) keyword map - starter pack (community contributions welcome)",
   "reviewStatus": "starter",
   "contributors": [
     "KolanutTechnologies"
@@ -34,125 +34,218 @@
   ],
   "keywords": {
     "IF": [
-      "kana",
+      "deghẹ",
+      "deghe",
       "if"
     ],
     "ELSE": [
-      "kana zvisina kudaro",
+      "sokpan",
       "else"
     ],
+    "ELIF": [
+      "deghẹọvbehe",
+      "elif"
+    ],
     "FOR": [
-      "kuti",
+      "ne",
       "for"
     ],
     "WHILE": [
-      "panguva",
+      "ghi",
       "while"
     ],
     "BREAK": [
-      "pambura",
+      "baan",
       "break"
     ],
     "CONTINUE": [
-      "ramba",
+      "dọlọ",
       "continue"
     ],
     "SWITCH": [
-      "sarudza",
+      "zẹ",
       "switch"
     ],
     "CASE": [
-      "mamiriro",
+      "ẹzọ",
       "case"
     ],
     "DEFAULT": [
-      "chikamu",
+      "ẹkẹke",
       "default"
     ],
     "FUNCTION": [
-      "basa",
+      "iwinna",
       "function"
     ],
     "RETURN": [
-      "dzosa",
+      "werriegbe",
       "return"
     ],
     "ASYNC": [
+      "ẹghẹghẹ",
       "async"
     ],
     "AWAIT": [
-      "mirira",
+      "diakhẹẹ",
+      "khẹ",
       "await"
     ],
     "TRY": [
-      "edza",
+      "hia",
       "try"
     ],
     "CATCH": [
-      "bata",
+      "mu",
       "catch"
     ],
     "FINALLY": [
-      "pakupedzisira",
+      "he",
       "finally"
     ],
     "THROW": [
-      "tonga",
+      "rhiefua",
       "throw"
     ],
     "LET": [
-      "regai",
+      "ya",
       "let"
     ],
     "CONST": [
-      "chakavakwa",
+      "ẹighẹẹ",
       "const"
     ],
     "CLASS": [
+      "ẹgbẹ",
       "class"
     ],
     "EXTENDS": [
-      "wedzera",
+      "lele",
       "extends"
     ],
     "NEW": [
-      "itsva",
+      "ọgbọn",
       "new"
     ],
     "THIS": [
-      "ichi",
+      "ọna",
       "this"
     ],
     "IMPORT": [
-      "isa",
+      "rhielaoẹ",
       "import"
     ],
     "EXPORT": [
-      "buda",
+      "ladian",
       "export"
     ],
     "PRINT": [
-      "printa",
+      "gbẹn",
       "print"
     ],
     "TRUE": [
-      "chokwadi",
+      "ẹẹn",
       "true"
     ],
     "FALSE": [
-      "nhema",
+      "ẹo",
       "false"
     ],
     "NULL": [
-      "hapana",
+      "ihoi",
       "null"
     ],
     "UNDEFINED": [
-      "hazvisi",
+      "ẹirẹn",
       "undefined"
     ],
-    "ELIF": [
-      "elif"
+    "AND": [
+      "kevbe",
+      "and"
+    ],
+    "OR": [
+      "ra",
+      "or"
+    ],
+    "NOT": [
+      "ẹi",
+      "not"
+    ],
+    "IN": [
+      "vbe",
+      "in"
+    ],
+    "IS": [
+      "ọrẹ",
+      "is"
+    ],
+    "OF": [
+      "ọghe",
+      "of"
+    ],
+    "WITH": [
+      "debae",
+      "with"
+    ],
+    "FROM": [
+      "ke",
+      "from"
+    ],
+    "AS": [
+      "vbene",
+      "as"
+    ],
+    "DO": [
+      "ru",
+      "do"
+    ],
+    "PASS": [
+      "gberra",
+      "pass"
+    ],
+    "WHEN": [
+      "ẹghẹ",
+      "when"
+    ],
+    "WHERE": [
+      "ehe",
+      "where"
+    ],
+    "END": [
+      "fo",
+      "end"
+    ],
+    "FINAL": [
+      "fofo",
+      "final"
+    ],
+    "NIL": [
+      "ohogha",
+      "nil"
+    ],
+    "NONE": [
+      "rhokpa",
+      "none"
+    ],
+    "VAR": [
+      "emwin",
+      "var"
+    ],
+    "DELETE": [
+      "hin",
+      "delete"
+    ],
+    "SUPER": [
+      "ọdiọnmwan",
+      "super"
+    ],
+    "TYPE": [
+      "ughughan",
+      "type"
+    ],
+    "ENUM": [
+      "usun",
+      "enum"
     ],
     "LOOP": [
       "loop"
@@ -184,9 +277,6 @@
     "GO": [
       "go"
     ],
-    "VAR": [
-      "var"
-    ],
     "MUT": [
       "mut"
     ],
@@ -208,29 +298,14 @@
     "INTERFACE": [
       "interface"
     ],
-    "ENUM": [
-      "enum"
-    ],
-    "TYPE": [
-      "type"
-    ],
     "IMPLEMENTS": [
       "implements"
     ],
     "SELF": [
       "self"
     ],
-    "SUPER": [
-      "super"
-    ],
     "STATIC": [
       "static"
-    ],
-    "FROM": [
-      "from"
-    ],
-    "AS": [
-      "as"
     ],
     "MODULE": [
       "module"
@@ -250,20 +325,11 @@
     "CRATE": [
       "crate"
     ],
-    "WITH": [
-      "with"
-    ],
-    "PASS": [
-      "pass"
-    ],
     "ASSERT": [
       "assert"
     ],
     "ASSERTS": [
       "asserts"
-    ],
-    "NIL": [
-      "null"
     ],
     "UNSAFE": [
       "unsafe"
@@ -277,26 +343,8 @@
     "MAP": [
       "map"
     ],
-    "AND": [
-      "and"
-    ],
-    "OR": [
-      "or"
-    ],
-    "NOT": [
-      "not"
-    ],
-    "IN": [
-      "in"
-    ],
-    "IS": [
-      "is"
-    ],
     "DEL": [
       "del"
-    ],
-    "DO": [
-      "do"
     ],
     "DEBUGGER": [
       "debugger"
@@ -382,9 +430,6 @@
     "USING": [
       "using"
     ],
-    "OF": [
-      "of"
-    ],
     "DYN": [
       "dyn"
     ],
@@ -393,9 +438,6 @@
     ],
     "REF": [
       "ref"
-    ],
-    "WHERE": [
-      "where"
     ],
     "GEN": [
       "gen"
@@ -423,9 +465,6 @@
     ],
     "DOUBLE": [
       "double"
-    ],
-    "FINAL": [
-      "final"
     ],
     "NATIVE": [
       "native"
@@ -476,34 +515,34 @@
       "restrict"
     ],
     "C_BOOL": [
-      "c_bool"
+      "_bool"
     ],
     "C_COMPLEX": [
-      "c_complex"
+      "_complex"
     ],
     "C_IMAGINARY": [
-      "c_imaginary"
+      "_imaginary"
     ],
     "C_ALIGNAS": [
-      "c_alignas"
+      "_alignas"
     ],
     "C_ALIGNOF": [
-      "c_alignof"
+      "_alignof"
     ],
     "C_ATOMIC": [
-      "c_atomic"
+      "_atomic"
     ],
     "C_GENERIC": [
-      "c_generic"
+      "_generic"
     ],
     "C_NORETURN": [
-      "c_noreturn"
+      "_noreturn"
     ],
     "C_STATIC_ASSERT": [
-      "c_static_assert"
+      "_static_assert"
     ],
     "C_THREAD_LOCAL": [
-      "c_thread_local"
+      "_thread_local"
     ],
     "ASM": [
       "asm"
@@ -588,9 +627,6 @@
     ],
     "CONST_CAST": [
       "const_cast"
-    ],
-    "DELETE": [
-      "delete"
     ],
     "BITAND": [
       "bitand"
@@ -691,9 +727,6 @@
     "NAMEOF": [
       "nameof"
     ],
-    "WHEN": [
-      "when"
-    ],
     "BY": [
       "by"
     ],
@@ -770,6 +803,7 @@
       "vararg"
     ],
     "INIT": [
+      "suẹn",
       "init"
     ],
     "OPEN": [
@@ -794,13 +828,13 @@
       "file"
     ],
     "AS_SAFE": [
-      "as_safe"
+      "as?"
     ],
     "NOT_IN": [
-      "not_in"
+      "!in"
     ],
     "NOT_IS": [
-      "not_is"
+      "!is"
     ],
     "PROPERTY": [
       "property"
@@ -845,10 +879,10 @@
       "some"
     ],
     "SWIFT_ANY": [
-      "swift_any"
+      "any"
     ],
     "SELF_TYPE": [
-      "self_type"
+      "self"
     ],
     "OPTIONAL": [
       "optional"
@@ -898,9 +932,6 @@
     "RIGHT": [
       "right"
     ],
-    "NONE": [
-      "none"
-    ],
     "DISTRIBUTED": [
       "distributed"
     ],
@@ -920,7 +951,7 @@
       "macro"
     ],
     "SWIFT_PACKAGE": [
-      "swift_package"
+      "package"
     ],
     "MIXIN": [
       "mixin"
@@ -959,24 +990,21 @@
       "base"
     ],
     "FUNCTION_TYPE": [
-      "function_type"
+      "function"
     ],
     "RUBY_ENCODING": [
-      "ruby_encoding"
+      "__encoding__"
     ],
     "RUBY_LINE": [
-      "ruby_line"
+      "__line__"
     ],
     "RUBY_FILE": [
-      "ruby_file"
+      "__file__"
     ],
     "RUBY_BEGIN": [
-      "ruby_begin"
+      "begin"
     ],
     "RUBY_END": [
-      "ruby_end"
-    ],
-    "END": [
       "end"
     ],
     "RESCUE": [
@@ -1007,162 +1035,163 @@
       "then"
     ],
     "DEFINED": [
-      "defined"
+      "defined?"
     ],
     "PHP_HALT_COMPILER": [
-      "php_halt_compiler"
+      "__halt_compiler"
     ],
     "PHP_ARRAY": [
-      "php_array"
+      "array"
     ],
     "PHP_CALLABLE": [
-      "php_callable"
+      "callable"
     ],
     "PHP_CLONE": [
-      "php_clone"
+      "clone"
     ],
     "PHP_DIE": [
-      "php_die"
+      "die"
     ],
     "PHP_ECHO": [
-      "php_echo"
+      "echo"
     ],
     "PHP_EMPTY": [
-      "php_empty"
+      "empty"
     ],
     "PHP_ENDDECLARE": [
-      "php_enddeclare"
+      "enddeclare"
     ],
     "PHP_ENDFOR": [
-      "php_endfor"
+      "endfor"
     ],
     "PHP_ENDFOREACH": [
-      "php_endforeach"
+      "endforeach"
     ],
     "PHP_ENDIF": [
-      "php_endif"
+      "endif"
     ],
     "PHP_ENDSWITCH": [
-      "php_endswitch"
+      "endswitch"
     ],
     "PHP_ENDWHILE": [
-      "php_endwhile"
+      "endwhile"
     ],
     "PHP_EVAL": [
-      "php_eval"
+      "eval"
     ],
     "PHP_EXIT": [
-      "php_exit"
+      "exit"
     ],
     "PHP_FN": [
-      "php_fn"
+      "fn"
     ],
     "PHP_INCLUDE": [
-      "php_include"
+      "include"
     ],
     "PHP_INCLUDE_ONCE": [
-      "php_include_once"
+      "include_once"
     ],
     "PHP_INSTEADOF": [
-      "php_insteadof"
+      "insteadof"
     ],
     "PHP_ISSET": [
-      "php_isset"
+      "isset"
     ],
     "PHP_LIST": [
-      "php_list"
+      "list"
     ],
     "PHP_REQUIRE_ONCE": [
-      "php_require_once"
+      "require_once"
     ],
     "PHP_UNSET": [
-      "php_unset"
+      "unset"
     ],
     "PHP_YIELD_FROM": [
-      "php_yield_from"
+      "yield from"
     ],
     "PHP_CLASS_MAGIC": [
-      "php_class_magic"
+      "__class__"
     ],
     "PHP_DIR_MAGIC": [
-      "php_dir_magic"
+      "__dir__"
     ],
     "PHP_FILE_MAGIC": [
-      "php_file_magic"
+      "__file__"
     ],
     "PHP_FUNCTION_MAGIC": [
-      "php_function_magic"
+      "__function__"
     ],
     "PHP_LINE_MAGIC": [
-      "php_line_magic"
+      "__line__"
     ],
     "PHP_METHOD_MAGIC": [
-      "php_method_magic"
+      "__method__"
     ],
     "PHP_NAMESPACE_MAGIC": [
-      "php_namespace_magic"
+      "__namespace__"
     ],
     "PHP_TRAIT_MAGIC": [
-      "php_trait_magic"
+      "__trait__"
     ],
     "PHP_PROPERTY_MAGIC": [
-      "php_property_magic"
+      "__property__"
     ],
     "R_INF": [
-      "r_inf"
+      "inf"
     ],
     "R_NAN": [
-      "r_nan"
+      "nan"
     ],
     "R_NA": [
-      "r_na"
+      "na"
     ],
     "R_NA_INTEGER": [
-      "r_na_integer"
+      "na_integer_"
     ],
     "R_NA_REAL": [
-      "r_na_real"
+      "na_real_"
     ],
     "R_NA_COMPLEX": [
-      "r_na_complex"
+      "na_complex_"
     ],
     "R_NA_CHARACTER": [
-      "r_na_character"
+      "na_character_"
     ],
     "R_DOTS": [
-      "r_dots"
+      "..."
     ],
     "R_DOT1": [
-      "r_dot1"
+      "..1"
     ],
     "R_DOT2": [
-      "r_dot2"
+      "..2"
     ],
     "R_DOT3": [
-      "r_dot3"
+      "..3"
     ],
     "R_DOT4": [
-      "r_dot4"
+      "..4"
     ],
     "R_DOT5": [
-      "r_dot5"
+      "..5"
     ],
     "R_DOT6": [
-      "r_dot6"
+      "..6"
     ],
     "R_DOT7": [
-      "r_dot7"
+      "..7"
     ],
     "R_DOT8": [
-      "r_dot8"
+      "..8"
     ],
     "R_DOT9": [
-      "r_dot9"
+      "..9"
     ]
   },
-  "scopeNote": "Shona of Zimbabwe.",
+  "scopeNote": "Ẹdo (also Bini) of Edo State, Nigeria (Benin City and surrounding LGAs). Edoid family. Not Etsako/Yekhee (ISO ets); that needs a separate pack.",
   "recommendedPartners": [
+    "ALT-I",
     "ACALAN",
-    "University of Zimbabwe"
+    "University of Benin (Linguistics)"
   ]
 }

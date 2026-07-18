@@ -1,5 +1,5 @@
 {
-  "version": "0.15.4",
+  "version": "0.16.0",
   "npmVersionBaseline": "0.11.1",
   "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, UI/Design catalog phases, and Phase F future mapping candidates. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "productJob": {
@@ -29,7 +29,7 @@
       "practicalMax": 30
     },
     "africanLanguagePacks": {
-      "now": 28,
+      "now": 29,
       "v1Target": 68,
       "qualityMaxWithoutPartners": 100
     },
@@ -86,10 +86,10 @@
       "note": "See futureMappingCandidates. Do not start until U1 and builtins foundations exist."
     }
   },
-  "shippedCount": 28,
-  "plannedCount": 40,
+  "shippedCount": 29,
+  "plannedCount": 39,
   "shippedSummary": {
-    "africanPacks": 28,
+    "africanPacks": 29,
     "programmingTargets": 15,
     "logicalTokens": 370,
     "ideReadyPacks": 8,
@@ -220,8 +220,8 @@
     }
   ],
   "plannedBacklog": {
-    "description": "28 additional packs (68 total minus 28 shipped minus 12 named above). Four packs per minor release 0.22.0–0.28.0. Names assigned when contributors commit.",
-    "slotsRemaining": 28,
+    "description": "27 additional packs (68 total minus 29 shipped minus 12 named above). Four packs per minor release 0.22.0–0.28.0. Names assigned when contributors commit.",
+    "slotsRemaining": 27,
     "waves": [
       {
         "targetRelease": "0.22.0",
@@ -230,7 +230,7 @@
         "candidates": [
           "krio",
           "tiv",
-          "edo",
+          "etsako",
           "ijaw"
         ]
       },
@@ -1396,8 +1396,9 @@
     {
       "release": "0.16.0",
       "bump": "minor",
-      "focus": "IDE gloss batch 4 (Efik, Cameroon Pidgin, Lingala, French, Portuguese-Africa)",
+      "focus": "Ẹdo (Bini) pack; IDE gloss batch 4 (Efik, Cameroon Pidgin, Lingala, French, Portuguese-Africa)",
       "metrics": {
+        "packs": 29,
         "ideReady": 28
       },
       "status": "planned"
@@ -1407,7 +1408,7 @@
       "bump": "minor",
       "focus": "Chichewa, Malagasy language packs",
       "metrics": {
-        "packs": 30
+        "packs": 31
       },
       "status": "planned"
     },
@@ -1416,7 +1417,7 @@
       "bump": "minor",
       "focus": "Tamazight, Hausa Niger variant packs",
       "metrics": {
-        "packs": 32
+        "packs": 33
       },
       "status": "planned"
     },
@@ -1425,7 +1426,7 @@
       "bump": "minor",
       "focus": "Kirundi, Kikongo language packs",
       "metrics": {
-        "packs": 34
+        "packs": 35
       },
       "status": "planned"
     },
@@ -1434,16 +1435,16 @@
       "bump": "minor",
       "focus": "Ndebele, Tsonga, Venda, Northern Sotho language packs",
       "metrics": {
-        "packs": 38
+        "packs": 39
       },
       "status": "planned"
     },
     {
       "release": "0.21.0",
       "bump": "minor",
-      "focus": "Umbundu, Berber Tifinagh — named African packs complete",
+      "focus": "Umbundu, Berber Tifinagh — named African packs (41)",
       "metrics": {
-        "packs": 40
+        "packs": 41
       },
       "status": "planned"
     },
@@ -1452,7 +1453,7 @@
       "bump": "minor",
       "focus": "African expansion wave 1 — West Africa (4 packs)",
       "metrics": {
-        "packs": 44
+        "packs": 45
       },
       "status": "planned"
     },
@@ -1461,7 +1462,7 @@
       "bump": "minor",
       "focus": "African expansion wave 2 — West Africa (4 packs)",
       "metrics": {
-        "packs": 48
+        "packs": 49
       },
       "status": "planned"
     },
@@ -1470,7 +1471,7 @@
       "bump": "minor",
       "focus": "African expansion wave 3 — East Africa (4 packs)",
       "metrics": {
-        "packs": 52
+        "packs": 53
       },
       "status": "planned"
     },
@@ -1479,7 +1480,7 @@
       "bump": "minor",
       "focus": "African expansion wave 4 — Central Africa (4 packs)",
       "metrics": {
-        "packs": 56
+        "packs": 57
       },
       "status": "planned"
     },
@@ -1488,7 +1489,7 @@
       "bump": "minor",
       "focus": "African expansion wave 5 — Southern Africa (4 packs)",
       "metrics": {
-        "packs": 60
+        "packs": 61
       },
       "status": "planned"
     },
@@ -1497,7 +1498,7 @@
       "bump": "minor",
       "focus": "African expansion wave 6 — North Africa and Horn (4 packs)",
       "metrics": {
-        "packs": 64
+        "packs": 65
       },
       "status": "planned"
     },

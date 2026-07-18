@@ -54,7 +54,7 @@ Africa has **1,500–3,000** living languages (UNESCO). This roadmap targets **~
 ```text
 0.11.x  ── shipped sprint (15 targets, 28 packs, 8 IDE-ready)
    │
-0.12–0.21  Phase A — Clojure + complete IDE on 28 packs + 12 named African packs (→40 packs)
+0.12–0.21  Phase A — Clojure + complete IDE on shipped packs + named African packs (→41 packs)
    │
 0.22–0.29  Phase B — African expansion backlog (→68 packs)
    │
@@ -102,12 +102,12 @@ Status: **shipped** · **next** · **planned**
 | **0.13.0** | minor | IDE gloss batch 1: Akan, Bambara, Wolof, Fulfulde, Arabic (Qalb prior-art aliases staged) | 13 IDE-ready |
 | **0.14.0** | minor | IDE batch 2: Amharic, Oromo, Tigrinya, Kinyarwanda, Somali | 18 IDE-ready |
 | **0.15.0** | minor | IDE batch 3: Afrikaans, Sesotho, Setswana, Shona, isiXhosa | 23 IDE-ready |
-| **0.16.0** | minor | IDE batch 4: Efik, Cameroon Pidgin, Lingala, French, Portuguese-Africa | **28 IDE-ready** |
-| **0.17.0** | minor | African packs: **Chichewa**, **Malagasy** | 30 packs |
-| **0.18.0** | minor | **Tamazight**, **Hausa Niger** variant | 32 packs |
-| **0.19.0** | minor | **Kirundi**, **Kikongo** | 34 packs |
-| **0.20.0** | minor | **Ndebele**, **Tsonga**, **Venda**, **Northern Sotho** | 38 packs |
-| **0.21.0** | minor | **Umbundu**, **Berber Tifinagh** | **40 named packs complete** |
+| **0.16.0** | minor | **Ẹdo (Bini)** pack; IDE batch 4: Efik, Cameroon Pidgin, Lingala, French, Portuguese-Africa | 29 packs · **28 IDE-ready** |
+| **0.17.0** | minor | African packs: **Chichewa**, **Malagasy** | 31 packs |
+| **0.18.0** | minor | **Tamazight**, **Hausa Niger** variant | 33 packs |
+| **0.19.0** | minor | **Kirundi**, **Kikongo** | 35 packs |
+| **0.20.0** | minor | **Ndebele**, **Tsonga**, **Venda**, **Northern Sotho** | 39 packs |
+| **0.21.0** | minor | **Umbundu**, **Berber Tifinagh** | **41 named packs** |
 
 **Patch lanes (any 0.x.y):** native-speaker review of starter packs; translation fixes; collision fixes in glossary keys; fill English-only keyword stubs (e.g. `IN`) when wording is ready.
 

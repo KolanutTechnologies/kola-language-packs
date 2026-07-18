@@ -6,6 +6,12 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-07-18
+
+### Added
+
+- **Ẹdo (Bini)** language pack (`edo`, `bin-NG`): starter keyword map for Edo State, Nigeria. Core control/logic forms from Agheyisi, Melzian, JW.org Edo, and Edonaze. Etsako/Yekhee (`ets`) stays a separate future pack, not an Edo dialect alias
+
 ## [0.15.4] - 2026-07-18
 
 ### Fixed
@@ -286,7 +292,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.4...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.16.0...HEAD
+[0.16.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.16.0
 [0.15.4]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.4
 [0.15.3]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.3
 [0.15.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.2

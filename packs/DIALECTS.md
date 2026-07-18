@@ -95,6 +95,16 @@ Do **not** add Kamtok phrases to `packs/nigerian-pidgin/`.
 
 Same `languageCode`, different `locale` — that is how we split regional standards.
 
+**Example — Edoid languages in Edo State (different languages):**
+
+| Field | Ẹdo (Bini) | Etsako (Yekhee) |
+|-------|------------|-----------------|
+| `name` | `edo` | `etsako` (planned) |
+| `languageCode` | `bin` | `ets` |
+| `locale` | `bin-NG` | `ets-NG` |
+
+Same Nigerian state does **not** make them one pack. Etsako is a sibling Edoid language, not an Edo dialect. Do not add Etsako glosses under `packs/edo/`.
+
 ---
 
 ## What NOT to do
@@ -104,6 +114,7 @@ Same `languageCode`, different `locale` — that is how we split regional standa
 | Create `packs/zulu-durban/` for alias-level differences | Use aliases in `zulu` instead |
 | Mix Nigerian Pidgin and Cameroon Pidgin in one pack | Different countries / creoles → different packs |
 | Mix Wolof and Hausa in one pack | Different languages → different packs |
+| Mix Ẹdo (Bini) and Etsako (Yekhee) in one pack | Sibling Edoid languages → different packs (`bin` vs `ets`) |
 | Change `languageCode` to a country code (`NG`, `ZA`) | Country codes go in `countries`, not `languageCode` |
 | Start a new pack without checking `language-registry.json` | You may duplicate a planned pack |
 

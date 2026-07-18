@@ -10,7 +10,7 @@ Not a standalone programming language (unlike Nuru, Yorlang, or similar runtimes
 [![npm downloads](https://img.shields.io/npm/dw/%40kolanut%2Flanguage-packs)](https://www.npmjs.com/package/@kolanut/language-packs)
 [![Language pack registry](https://img.shields.io/badge/Language%20pack%20registry-for%20programming%20tools-2ea44f)](./packs/PACK_SCOPE.md)
 [![GitHub](https://img.shields.io/badge/GitHub-View%20%26%20star-181717?logo=github)](https://github.com/KolanutTechnologies/kola-language-packs)
-[![African language packs](https://img.shields.io/badge/African%20language%20packs-28-gold)](./packs/coverage-summary.json)
+[![African language packs](https://img.shields.io/badge/African%20language%20packs-29-gold)](./packs/coverage-summary.json)
 [![Programming targets](https://img.shields.io/badge/Programming%20targets-15-blue)](./packs/coverage-summary.json)
 [![Logical tokens](https://img.shields.io/badge/Logical%20tokens-370-lightgrey)](./packs/logical-tokens.json)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -119,7 +119,7 @@ We use the same code systems as major platforms and localization projects — **
 ## What’s in this repo
 
 <!-- whats-in-repo:start -->
-- **28 shipped African language packs** (and a roadmap for more)
+- **29 shipped African language packs** (and a roadmap for more)
 - **370 logical tokens** that every pack maps (shared across all programming targets)
 <!-- whats-in-repo:end -->
 
@@ -143,7 +143,7 @@ In short:
 
 | What we cover | Shipped | Planned | Source of truth |
 |---|---:|---:|---|
-| **African language packs** | 28 | +40 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
+| **African language packs** | 29 | +39 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
 | **Programming targets** | 15 | +5 | [`packs/coverage-summary.json`](./packs/coverage-summary.json) · [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) |
 | **Logical tokens** | 370 | — | [`packs/logical-tokens.json`](./packs/logical-tokens.json) |
 | **Keyword coverage gaps** | 0 | — | [`packs/coverage-summary.json`](./packs/coverage-summary.json) |
@@ -216,7 +216,7 @@ npm install @kolanut/language-packs
 ```typescript
 import { listPackNames, loadPack, flattenKeywords } from '@kolanut/language-packs';
 
-const packs = await listPackNames(); // e.g. 28 packs
+const packs = await listPackNames(); // e.g. 29 packs
 
 const yoruba = await loadPack('yoruba');
 const keywords = flattenKeywords(yoruba);
@@ -251,10 +251,10 @@ If you prefer to consume JSON directly (Rust/Go/Python/CLI tools), start here:
 - [`packs/languages-roadmap.json`](./packs/languages-roadmap.json): shipped vs planned packs (machine-readable)
 
 <!-- shipped-languages-heading:start -->
-## Languages shipped (28)
+## Languages shipped (29)
 <!-- shipped-languages-heading:end -->
 
-These are the 28 packs currently shipped.
+These are the 29 packs currently shipped.
 
 - Flags are shown for the **primary locale** (quick scanning). Many packs apply to multiple countries—see [`packs/index.json`](./packs/index.json) for the full list.
 - We use **Twemoji flag images** (not emoji characters) so the flags render reliably on both GitHub and npm.
@@ -263,6 +263,7 @@ These are the 28 packs currently shipped.
 **West Africa**
 - <img alt="GH" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1ed.svg" width="16" height="16" /> Akan (`ak-GH`)
 - <img alt="ML" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1f1.svg" width="16" height="16" /> Bambara (`bm-ML`)
+- <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Ẹdo (`bin-NG`)
 - <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Efik (`efi-NG`)
 - <img alt="SN" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1f3.svg" width="16" height="16" /> French (`fr-SN`)
 - <img alt="NG" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1ec.svg" width="16" height="16" /> Fulfulde (`ff-NG`)
@@ -314,7 +315,7 @@ If you care about linguistic accuracy or preferred terminology for a specific co
 We track roadmaps in [`packs/ROADMAP.md`](./packs/ROADMAP.md) (version plan: patch / minor / major) and [`packs/languages-roadmap.json`](./packs/languages-roadmap.json) (machine-readable). Layer ceilings: [`packs/TIERS.md`](./packs/TIERS.md).
 
 <!-- roadmap-bullets:start -->
-- **Planned African languages** (by region + priority) — 40 more packs on the list
+- **Planned African languages** (by region + priority) — 39 more packs on the list
 - **Planned programming targets** — Clojure, Lua, SQL, Scala, Elixir (see [`packs/ROADMAP.md`](./packs/ROADMAP.md))
 - **Logical tokens** — **370 shipped**; UI/Design Design-tab layer → **0.37.0**; stdlib / builtins → **2.0.0** (neither is keyword coverage)
 - **Programming targets** — **15 shipped** with 0 keyword coverage gaps (see table above)

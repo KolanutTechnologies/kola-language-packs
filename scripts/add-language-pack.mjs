@@ -4,7 +4,7 @@
  *
  * Usage: node scripts/add-language-pack.mjs <pack-name>
  *
- * Supported packs: akan, cameroon-pidgin, efik
+ * Supported packs: akan, cameroon-pidgin, efik, edo
  */
 import { spawnSync } from 'node:child_process';
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -19,6 +19,7 @@ const RECOMMENDED_PARTNERS = {
   akan: ['ACALAN', 'University of Ghana (Linguistics)', 'CASAS'],
   'cameroon-pidgin': ['ACALAN', 'Masakhane', 'University of Buea'],
   efik: ['ALT-I', 'ACALAN', 'University of Calabar (Linguistics)'],
+  edo: ['ALT-I', 'ACALAN', 'University of Benin (Linguistics)'],
 };
 
 /** @type {Record<string, Record<string, string[]>>} */
@@ -119,6 +120,64 @@ const PACKS = {
     NULL: ['nkpo', 'null'],
     UNDEFINED: ['nde', 'undefined'],
   },
+  // Edo/Bini (bin): Agheyisi 1986, Melzian 1937, JW.org/bin, Edonaze learner math.
+  // Collision hygiene: FOR≠LET, IN≠AS, WHILE≠WHEN, NULL≠NIL, FROM≠THEN, END≠FINAL≠FINALLY.
+  edo: {
+    IF: ['deghẹ', 'deghe', 'if'],
+    ELSE: ['sokpan', 'else'],
+    ELIF: ['deghẹọvbehe', 'elif'],
+    FOR: ['ne', 'for'],
+    WHILE: ['ghi', 'while'],
+    BREAK: ['baan', 'break'],
+    CONTINUE: ['dọlọ', 'continue'],
+    SWITCH: ['zẹ', 'switch'],
+    CASE: ['ẹzọ', 'case'],
+    DEFAULT: ['ẹkẹke', 'default'],
+    FUNCTION: ['iwinna', 'function'],
+    RETURN: ['werriegbe', 'return'],
+    ASYNC: ['ẹghẹghẹ', 'async'],
+    AWAIT: ['diakhẹẹ', 'khẹ', 'await'],
+    TRY: ['hia', 'try'],
+    CATCH: ['mu', 'catch'],
+    FINALLY: ['he', 'finally'],
+    THROW: ['rhiefua', 'throw'],
+    LET: ['ya', 'let'],
+    CONST: ['ẹighẹẹ', 'const'],
+    CLASS: ['ẹgbẹ', 'class'],
+    EXTENDS: ['lele', 'extends'],
+    NEW: ['ọgbọn', 'new'],
+    THIS: ['ọna', 'this'],
+    IMPORT: ['rhielaoẹ', 'import'],
+    EXPORT: ['ladian', 'export'],
+    PRINT: ['gbẹn', 'print'],
+    TRUE: ['ẹẹn', 'true'],
+    FALSE: ['ẹo', 'false'],
+    NULL: ['ihoi', 'null'],
+    UNDEFINED: ['ẹirẹn', 'undefined'],
+    AND: ['kevbe', 'and'],
+    OR: ['ra', 'or'],
+    NOT: ['ẹi', 'not'],
+    IN: ['vbe', 'in'],
+    IS: ['ọrẹ', 'is'],
+    OF: ['ọghe', 'of'],
+    WITH: ['debae', 'with'],
+    FROM: ['ke', 'from'],
+    AS: ['vbene', 'as'],
+    DO: ['ru', 'do'],
+    PASS: ['gberra', 'pass'],
+    WHEN: ['ẹghẹ', 'when'],
+    WHERE: ['ehe', 'where'],
+    END: ['fo', 'end'],
+    FINAL: ['fofo', 'final'],
+    NIL: ['ohogha', 'nil'],
+    NONE: ['rhokpa', 'none'],
+    VAR: ['emwin', 'var'],
+    DELETE: ['hin', 'delete'],
+    SUPER: ['ọdiọnmwan', 'super'],
+    TYPE: ['ughughan', 'type'],
+    ENUM: ['usun', 'enum'],
+    INIT: ['suẹn', 'init'],
+  },
 };
 
 /** @type {Record<string, {
@@ -159,6 +218,16 @@ const META = {
     regions: ['West Africa'],
     scopeNote: 'Efik of southeastern Nigeria (Cross River region).',
     description: 'Efik keyword map — starter pack (community contributions welcome)',
+  },
+  edo: {
+    displayName: 'Ẹdo',
+    languageCode: 'bin',
+    locale: 'bin-NG',
+    countries: ['NG'],
+    regions: ['West Africa'],
+    scopeNote:
+      'Ẹdo (also Bini) of Edo State, Nigeria (Benin City and surrounding LGAs). Edoid family. Not Etsako/Yekhee (ISO ets); that needs a separate pack.',
+    description: 'Edo (Bini) keyword map - starter pack (community contributions welcome)',
   },
 };
 
@@ -240,6 +309,7 @@ async function appendToIndex(name, version, registry) {
     regions: meta.regions,
     version,
     targets: registry.targets,
+    ideReady: false,
   });
 
   index.packs.sort((a, b) => a.name.localeCompare(b.name));
