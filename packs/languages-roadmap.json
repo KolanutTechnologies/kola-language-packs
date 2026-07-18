@@ -1,5 +1,5 @@
 {
-  "version": "0.15.3",
+  "version": "0.15.4",
   "npmVersionBaseline": "0.11.1",
   "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, UI/Design catalog phases, and Phase F future mapping candidates. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "productJob": {

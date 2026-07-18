@@ -1,5 +1,5 @@
 {
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Official reserved keywords per transpile target (from language specs). Each keyword maps to exactly one logical token in logical-tokens.json.",
   "sources": {
     "javascript": {
@@ -7,7 +7,7 @@
       "url": "https://tc39.es/ecma262/#sec-keywords-and-reserved-words"
     },
     "python": {
-      "name": "Python 3.12 Language Reference",
+      "name": "Python 3.12+ Language Reference (hard + soft; lazy via PEP 810)",
       "url": "https://docs.python.org/3/reference/lexical_analysis.html#keywords"
     },
     "typescript": {
@@ -27,7 +27,7 @@
       "url": "https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html#jls-3.9"
     },
     "c": {
-      "name": "ISO/IEC 9899:2011 (C11) — Keywords",
+      "name": "ISO/IEC 9899:2011 (C11) - Keywords",
       "url": "https://en.cppreference.com/w/c/keyword"
     },
     "cpp": {
@@ -47,7 +47,7 @@
       "url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/lexicalstructure/"
     },
     "dart": {
-      "name": "Dart 3.12 — Language keywords",
+      "name": "Dart 3.12.2 - Language keywords (dart.dev table)",
       "url": "https://dart.dev/language/keywords"
     },
     "ruby": {
@@ -393,8 +393,7 @@
       "_Imaginary",
       "_Noreturn",
       "_Static_assert",
-      "_Thread_local",
-      "asm"
+      "_Thread_local"
     ],
     "cpp": [
       "alignas",
@@ -1388,7 +1387,7 @@
   },
   "notes": {
     "javascript": "ECMA-262 §12.7.2 ReservedWord: 38 tokens (await through yield; null, true, false included). Excludes strict-mode-only words (let, implements, interface, package, private, protected, public, static) and async (not a ReservedWord — see TypeScript target).",
-    "python": "Python 3.12+: 35 hard keywords + 5 soft keywords (match, case, _, type, lazy). lazy is soft from Python 3.15+ (PEP 810). False/None/True appear in the keyword list per language reference. Total tracked: 40.",
+    "python": "Python 3.12 hard keywords (35, via keyword.kwlist) + soft keywords match/case/_/type (keyword.softkwlist). Also tracks lazy (PEP 810 soft keyword, Python 3.15+). Strict 3.12 unique count is 39; this registry tracks 40.",
     "typescript": "No single official keyword count in the Handbook. This list tracks 79 reserved/modifier/type/contextual tokens for transpilation coverage (JS superset + TS-only modifiers + typescript-types tier).",
     "go": "Go spec §Keywords: exactly 25 keywords (no separate contextual tier).",
     "rust": "Rust Reference: 39 strict keywords + gen (reserved, 2024 edition). Not tracked: 13 other reserved keywords, 5 weak/contextual keywords. Total tracked: 40.",
@@ -1396,12 +1395,12 @@
     "console.log": "console.log is not a keyword — PRINT logical token emits console.log for JS/TS.",
     "macros": "Rust panic! and assert! are macros — THROW/ASSERT logical tokens emit macro forms.",
     "java": "JLS §3.9 Keywords: 51 reserved keywords (includes unused const and goto, and _ underscore). Literal null, true, and false are §3.10 — not counted as keywords here.",
-    "c": "C11 §6.4.1: 32 C89 keywords + C99 (inline, restrict, _Bool, _Complex, _Imaginary) + C11 underscore keywords (_Alignas through _Thread_local). Includes conditionally-supported asm. C23 spellings (bool, static_assert, …) not tracked — use C++ target when needed.",
+    "c": "C11 §6.4.1: exactly 44 keywords (32 C89 + 5 C99 + 7 C11 underscore forms). Conditionally-supported asm is not in this official set; ASM still emits asm for C via logical-tokens (same spelling as C++). C23 spellings (bool, static_assert, …) not tracked - use C++ target when needed.",
     "cpp": "C++20 keyword set plus char8_t and coroutines (co_await, co_return, co_yield). Modern spellings (bool, alignas, static_assert, thread_local) map to shared C-family logical tokens. C-only underscore keywords (_Bool, _Alignas, …) are not tracked on this target.",
     "csharp": "C# 12 reserved and contextual keywords. `base` maps to logical SUPER; `bool` to C_BOOL. PRINT emits Console.WriteLine. FUNCTION has no keyword (method declarations).",
     "kotlin": "Kotlin hard, soft, and modifier keywords plus special identifiers it and _. FUNCTION emits fun; OBJECT is the singleton keyword. PRINT emits println (not a keyword). SWITCH and MATCH emit when. INSTANCEOF emits is. EXTERN emits external. DELEGATE and DYNAMIC reuse existing logical tokens.",
     "swift": "Swift reserved and contextual keywords from TSPL. ELSE emits else (not default). IS emits is for type checks; INSTANCEOF is empty. INTERFACE emits protocol. PRINT emits print. SWIFT_PACKAGE maps contextual package keyword.",
-    "dart": "Dart 3.12 reserved keywords. ELSE emits else (not default). IS emits is; INSTANCEOF is empty. FUNCTION has no keyword; Function type maps to FUNCTION_TYPE. PRINT emits print. EXTERN emits external.",
+    "dart": "Dart 3.12.2 dart.dev keywords table: 68 distinct spellings (built-in, type-restricted, and unrestricted contextual). ELSE emits else (not default). IS emits is; INSTANCEOF is empty. FUNCTION has no keyword; Function type maps to FUNCTION_TYPE. PRINT emits print. EXTERN emits external.",
     "ruby": "Ruby 3.2 reserved keywords including magic constants. ELSE emits else; elsif maps to ELIF. TRY/CATCH/FINALLY emit begin/rescue/ensure. FUNCTION emits def. PRINT emits puts (not a keyword). IS and INSTANCEOF are empty.",
     "php": "PHP 8.3 reserved keywords and compile-time magic constants. ELSE emits else (not default). IS is empty; INSTANCEOF emits instanceof. PRINT emits print. ECHO maps to PHP_ECHO.",
     "r": "R reserved words per Language Definition §10.3.3. ELSE emits else (not default). IS and INSTANCEOF are empty. PRINT emits print (builtin, not reserved)."

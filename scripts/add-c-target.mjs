@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const packsRoot = join(root, 'packs');
 
-/** ISO/IEC 9899:2011 §6.4.1 Keywords (C89 core + C99 + C11; asm extension) */
+/** ISO/IEC 9899:2011 §6.4.1 Keywords (C89 core + C99 + C11; 44 total). asm is extension emit only. */
 const C_KEYWORDS = [
   'auto', 'break', 'case', 'char', 'const', 'continue', 'default', 'do', 'double', 'else', 'enum',
   'extern', 'float', 'for', 'goto', 'if', 'inline', 'int', 'long', 'register', 'restrict', 'return',
@@ -21,7 +21,6 @@ const C_KEYWORDS = [
   'volatile', 'while',
   '_Alignas', '_Alignof', '_Atomic', '_Bool', '_Complex', '_Generic', '_Imaginary', '_Noreturn',
   '_Static_assert', '_Thread_local',
-  'asm',
 ];
 
 const C_EMITS = {
@@ -179,7 +178,7 @@ async function updateOfficialKeywords() {
 
   official.version = '1.7.0';
   official.sources.c = {
-    name: 'ISO/IEC 9899:2011 (C11) — Keywords',
+    name: 'ISO/IEC 9899:2011 (C11) - Keywords',
     url: 'https://en.cppreference.com/w/c/keyword',
   };
   official.targets.c = C_KEYWORDS;
@@ -189,7 +188,7 @@ async function updateOfficialKeywords() {
   }
 
   official.notes.c =
-    'C11 §6.4.1: 32 C89 keywords + C99 (inline, restrict, _Bool, _Complex, _Imaginary) + C11 underscore keywords (_Alignas through _Thread_local). Includes conditionally-supported asm. C23 spellings (bool, static_assert, …) not tracked — use C++ target when needed.';
+    'C11 §6.4.1: exactly 44 keywords (32 C89 + 5 C99 + 7 C11 underscore forms). Conditionally-supported asm is not in this official set; ASM still emits asm for C via logical-tokens (same spelling as C++). C23 spellings (bool, static_assert, …) not tracked - use C++ target when needed.';
 
   await writeJson(path, official);
   console.log('Updated official-target-keywords.json with C keywords.');

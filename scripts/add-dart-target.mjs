@@ -16,7 +16,7 @@ const REGISTRY_VERSION = '5.0.0';
 const OFFICIAL_VERSION = '2.2.0';
 
 /**
- * Dart reserved keywords (Dart 3.12 language keywords page)
+ * Dart reserved keywords (Dart 3.12.2 language keywords page)
  * https://dart.dev/language/keywords
  */
 const DART_KEYWORDS = [
@@ -190,7 +190,7 @@ async function updateOfficialKeywords() {
 
   official.version = OFFICIAL_VERSION;
   official.sources.dart = {
-    name: 'Dart 3.12 — Language keywords',
+    name: 'Dart 3.12.2 - Language keywords (dart.dev table)',
     url: 'https://dart.dev/language/keywords',
   };
   official.targets.dart = DART_KEYWORDS;
@@ -214,7 +214,7 @@ async function updateOfficialKeywords() {
   official.keywordToLogical.external = 'EXTERN';
 
   official.notes.dart =
-    'Dart 3.12 reserved keywords. ELSE emits else (not default). IS emits is; INSTANCEOF is empty. FUNCTION has no keyword; Function type maps to FUNCTION_TYPE. PRINT emits print. EXTERN emits external.';
+    'Dart 3.12.2 dart.dev keywords table: 68 distinct spellings (built-in, type-restricted, and unrestricted contextual). ELSE emits else (not default). IS emits is; INSTANCEOF is empty. FUNCTION has no keyword; Function type maps to FUNCTION_TYPE. PRINT emits print. EXTERN emits external.';
 
   await writeJson(path, official);
   console.log(`Updated official-target-keywords.json with ${DART_KEYWORDS.length} Dart keywords.`);

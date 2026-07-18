@@ -6,6 +6,12 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.15.4] - 2026-07-18
+
+### Fixed
+
+- Keyword registry accuracy: C official set is C11 **44** (drop conditionally-supported `asm` from the counted list; ASM still emits for C). Python source label clarifies **3.12+** with `lazy` via PEP 810 (tracked **40**, not pure 3.12 **39**). Dart source cites **3.12.2** dart.dev table (**68**)
+
 ### Added
 
 - Maintainer reference for Khaya and Mansa translation API coverage (`packs/TRANSLATION_API_COVERAGE.md`)
@@ -280,7 +286,8 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.3...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.15.4...HEAD
+[0.15.4]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.4
 [0.15.3]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.3
 [0.15.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.2
 [0.5.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.5.0

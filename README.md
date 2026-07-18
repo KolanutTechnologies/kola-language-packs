@@ -165,7 +165,7 @@ Source of truth: [`packs/coverage-summary.json`](./packs/coverage-summary.json)
 | Go | 25 | 25 | 0 | 100% |
 | Rust | 40 | 40 | 0 | 100% |
 | Java | 51 | 51 | 0 | 100% |
-| C | 45 | 45 | 0 | 100% |
+| C | 44 | 44 | 0 | 100% |
 | C++ | 92 | 92 | 0 | 100% |
 | C# | 104 | 104 | 0 | 100% |
 | Kotlin | 80 | 80 | 0 | 100% |
@@ -188,17 +188,17 @@ Source of truth: [`packs/official-target-keywords.json`](./packs/official-target
 | Target | Spec keywords | Spec source |
 |--------|-------------:|------------|
 | JavaScript | 38 | [ECMA-262 Edition 15](https://tc39.es/ecma262/#sec-keywords-and-reserved-words) |
-| Python | 40 | [Python 3.12 Language Reference](https://docs.python.org/3/reference/lexical_analysis.html#keywords) |
+| Python | 40 | [Python 3.12+ Language Reference (hard + soft; lazy via PEP 810)](https://docs.python.org/3/reference/lexical_analysis.html#keywords) |
 | TypeScript | 79 tracked† | [TypeScript — tracked reserved tokens (practical set)](https://www.typescriptlang.org/docs/handbook/intro.html) |
 | Go | 25 | [The Go Programming Language Specification](https://go.dev/ref/spec#Keywords) |
 | Rust | 40 | [The Rust Reference — Keywords](https://doc.rust-lang.org/reference/keywords.html) |
 | Java | 51 | [Java Language Specification (Java SE 21)](https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html#jls-3.9) |
-| C | 45 | [ISO/IEC 9899:2011 (C11) — Keywords](https://en.cppreference.com/w/c/keyword) |
+| C | 44 | [ISO/IEC 9899:2011 (C11) - Keywords](https://en.cppreference.com/w/c/keyword) |
 | C++ | 92 | [ISO C++20 — Keywords (cppreference)](https://en.cppreference.com/w/cpp/keyword) |
 | C# | 104 | [C# 12 — Keywords (Microsoft Learn)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/) |
 | Kotlin | 80 | [Kotlin — Keywords and operators](https://kotlinlang.org/docs/keywords.html) |
 | Swift | 90 | [The Swift Programming Language — Lexical Structure](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/lexicalstructure/) |
-| Dart | 68 | [Dart 3.12 — Language keywords](https://dart.dev/language/keywords) |
+| Dart | 68 | [Dart 3.12.2 - Language keywords (dart.dev table)](https://dart.dev/language/keywords) |
 | Ruby | 41 | [Ruby 3.2 — Keywords](https://docs.ruby-lang.org/en/3.2/keywords_rdoc.html) |
 | PHP | 81 | [PHP 8.3 — Reserved keywords](https://www.php.net/manual/en/reserved.keywords.php) |
 | R | 29 | [R Language Definition — Reserved words](https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Reserved-words) |

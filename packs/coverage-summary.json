@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T10:58:38.237Z",
+  "generatedAt": "2026-07-18T13:41:51.707Z",
   "logicalTokenCount": 370,
   "africanLanguagePackCount": 28,
   "transpileTargets": [
@@ -63,8 +63,8 @@
       "gaps": []
     },
     "c": {
-      "officialKeywordCount": 45,
-      "mappedCount": 45,
+      "officialKeywordCount": 44,
+      "mappedCount": 44,
       "structuralCount": 0,
       "gapCount": 0,
       "gaps": []
