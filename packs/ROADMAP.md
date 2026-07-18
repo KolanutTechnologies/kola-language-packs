@@ -143,7 +143,19 @@ Seven minor releases, **four packs each** (28 backlog slots). Exact names TBD fr
 | 0.27.0 | minor | North Africa + Horn wave | 64 |
 | 0.28.0 | minor | Indian Ocean + fill gaps | **68 packs** |
 
-Candidate backlog languages (not yet slotted): Sierra Leone Krio, Liberian English creole, Tshiluba, Luba, Sango, Kanuri, Songhai, Zarma, Tigré, Sidamo, Chewa variants, Seychelles Creole, Mauritian Creole, etc. See `plannedBacklog` in JSON.
+Candidate backlog (priority menus per wave; four ship when contributors commit). See `plannedBacklog` in JSON.
+
+| Wave | Region | Priority candidates (extras in JSON) |
+|------|--------|--------------------------------------|
+| 0.22 | West Africa | Krio, Tiv, **Kanuri**, **Ibibio**, Igala, Nupe (also Etsako, Ijaw) |
+| 0.23 | West Africa | **Fon**, **Ewe**, **Songhay**, **Zarma**, **Mandinka** (also Mossi, Dagaare, Soninke, Serer) |
+| 0.24 | East Africa | Sidaama, Gikuyu, Luo, Maasai |
+| 0.25 | Central Africa | Tshiluba, Luba, Sango, Sara |
+| 0.26 | Southern Africa | Chitonga, Chewa-Zambia, Herero, Ovambo, **Kimbundu** |
+| 0.27 | North Africa + Horn | Tigré, Afar, Nubian, **Kabyle** |
+| 0.28 | Indian Ocean + fill | Mauritian Creole, Seychelles Creole, Comorian, Tetum, Liberian English |
+
+Bold names were added or re-slotted from continental speaker/orthography research (Kanuri moved out of the Horn wave). Ibibio stays separate from shipped Efik.
 
 ### Phase C — Tier-A programming targets (0.30 – 0.33)
 

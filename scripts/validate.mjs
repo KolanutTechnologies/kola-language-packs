@@ -19,7 +19,17 @@ const keywordFormAllowlistPath = join(packsRoot, 'keyword-form-allowlist.json');
 
 const COUNTRY_CODE = /^[A-Z]{2}$/;
 const LOCALE_CODE = /^[a-z]{2,3}(-[A-Z]{2})?$/;
-const IDE_READY_PACKS = new Set(['yoruba', 'hausa', 'nigerian-pidgin', 'igbo', 'swahili', 'zulu', 'twi', 'luganda']);
+const IDE_READY_PACKS = new Set([
+  'yoruba',
+  'hausa',
+  'nigerian-pidgin',
+  'igbo',
+  'swahili',
+  'zulu',
+  'twi',
+  'luganda',
+  'edo',
+]);
 const MIN_GLOSSARY = 30;
 const MIN_PLACEHOLDERS = 10;
 const MIN_COMMON_LITERALS = 10;

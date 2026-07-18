@@ -648,6 +648,71 @@
         "Warning": ["تحذير", "Warning"],
         "Please wait": ["يرجى الانتظار", "Please wait"]
       }
+    },
+    "edo": {
+      "glossary": {
+        "name": ["eni", "name"],
+        "count": ["ka", "count"],
+        "price": ["igho", "price"],
+        "user": ["ọlọmwẹn", "user"],
+        "total": ["ehia", "total"],
+        "message": ["iyẹn", "message"],
+        "error": ["arawọ", "error"],
+        "payload": ["egbeemwin", "payload"],
+        "item_list": ["usun emwin", "item_list"],
+        "index": ["atan", "index"],
+        "data_value": ["ughughan", "data_value"],
+        "item": ["okhian", "item"],
+        "num": ["nọmba", "num"],
+        "text": ["ẹmwẹ", "text"],
+        "result": ["iyẹnmwin", "result"],
+        "input": ["mu rre", "input"],
+        "output": ["ladian", "output"],
+        "file_ref": ["ebe", "file_ref"],
+        "path": ["odẹ", "path"],
+        "length": ["uhunmwẹn", "length"],
+        "size": ["ẹse", "size"],
+        "key": ["ukoko", "key"],
+        "kind": ["ẹgbẹọkpa", "kind"],
+        "status": ["ẹghẹmwẹn", "status"],
+        "flag": ["amẹmwiẹ", "flag"],
+        "id": ["idẹn", "id"],
+        "age": ["ukpo", "age"],
+        "score": ["ọnrẹn", "score"],
+        "amount": ["ẹkhẹ", "amount"],
+        "password": ["unuẹkhokho", "password"]
+      },
+      "placeholders": {
+        "condition": ["deghẹ", "condition"],
+        "name": ["eni", "name"],
+        "value": ["ughughan", "value"],
+        "message": ["iyẹn", "message"],
+        "index": ["atan", "index"],
+        "item": ["okhian", "item"],
+        "body": ["egbe", "body"],
+        "expression": ["ẹmwẹ ruẹ", "expression"],
+        "variable": ["emwin ya", "variable"],
+        "array": ["usun", "array"],
+        "function": ["iwinna", "function"],
+        "class": ["ẹgbẹ", "class"]
+      },
+      "commonLiterals": {
+        "Hello": ["Koyo", "Hello"],
+        "Error": ["Arawọ", "Error"],
+        "Success": ["Ọse", "Success"],
+        "Welcome": ["Seẹ", "Welcome"],
+        "Goodbye": ["Ghi yo", "Goodbye"],
+        "Yes": ["Ẹẹn", "Yes"],
+        "No": ["Ẹo", "No"],
+        "Done": ["Fo", "Done"],
+        "Loading": ["Khẹ", "Loading"],
+        "Failed": ["Ma se", "Failed"],
+        "Cancel": ["Baanẹ", "Cancel"],
+        "Submit": ["Rhie", "Submit"],
+        "Search": ["Gualọ", "Search"],
+        "Warning": ["Yiẹnmwẹn", "Warning"],
+        "Please wait": ["Lagha khẹ", "Please wait"]
+      }
     }
   }
 }

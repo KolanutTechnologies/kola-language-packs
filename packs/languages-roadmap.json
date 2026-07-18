@@ -1,5 +1,5 @@
 {
-  "version": "0.16.0",
+  "version": "0.17.0",
   "npmVersionBaseline": "0.11.1",
   "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, UI/Design catalog phases, and Phase F future mapping candidates. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "productJob": {
@@ -220,7 +220,7 @@
     }
   ],
   "plannedBacklog": {
-    "description": "27 additional packs (68 total minus 29 shipped minus 12 named above). Four packs per minor release 0.22.0–0.28.0. Names assigned when contributors commit.",
+    "description": "27 additional packs (68 total minus 29 shipped minus 12 named above). Four packs per minor release 0.22.0–0.28.0. Candidate lists are priority menus (may exceed four); ship when contributors commit. Speaker-rank gaps from continental research (Ibibio, Fon, Ewe, Songhay/Zarma, Mandinka, Kanuri in West, Igala, Nupe, Kimbundu, Kabyle) added 2026-07.",
     "slotsRemaining": 27,
     "waves": [
       {
@@ -230,20 +230,31 @@
         "candidates": [
           "krio",
           "tiv",
+          "kanuri",
+          "ibibio",
+          "igala",
+          "nupe",
           "etsako",
           "ijaw"
-        ]
+        ],
+        "note": "Kanuri is NE Nigeria / Lake Chad (not Horn). Prefer over late North wave. Ibibio is distinct from shipped Efik."
       },
       {
         "targetRelease": "0.23.0",
         "region": "West Africa",
         "packsPlanned": 4,
         "candidates": [
+          "fon",
+          "ewe",
+          "songhay",
+          "zarma",
+          "mandinka",
           "mossi",
           "dagaare",
           "soninke",
           "serer"
-        ]
+        ],
+        "note": "Fon/Ewe (Gbe) and Songhay/Zarma are high-speaker West Africa gaps vs shipped Manding (Bambara) and Akan/Twi."
       },
       {
         "targetRelease": "0.24.0",
@@ -275,8 +286,10 @@
           "chitonga",
           "chewa-zambia",
           "herero",
-          "ovambo"
-        ]
+          "ovambo",
+          "kimbundu"
+        ],
+        "note": "Kimbundu complements named Umbundu (0.21) for Angola."
       },
       {
         "targetRelease": "0.27.0",
@@ -286,8 +299,9 @@
           "tigre",
           "afar",
           "nubian",
-          "kanuri"
-        ]
+          "kabyle"
+        ],
+        "note": "Kabyle (Amazigh, Algeria) beside named Tamazight / Berber-Tifinagh. Kanuri moved to 0.22 West Africa."
       },
       {
         "targetRelease": "0.28.0",
@@ -297,7 +311,8 @@
           "mauritian-creole",
           "seychelles-creole",
           "comorian",
-          "tetum"
+          "tetum",
+          "liberian-english"
         ]
       }
     ]
