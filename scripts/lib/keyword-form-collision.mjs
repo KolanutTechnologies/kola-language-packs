@@ -1,163 +1,154 @@
 /**
- * Detect keyword-form collisions that break reverse gloss / Learn round-trips.
+ * Keyword-form collision policy (plan item 1.4).
  *
- * Failure modes enforced in CI:
- * 1. Cross-token English stub: a form is an English emit of another logical
+ * Tiered rules — strict where uniqueness matters, free where language allows:
+ *
+ * HARD ERRORS (break reverse-gloss resolution or autocomplete):
+ * 1. Duplicate form inside one logical (noise).
+ * 2. Cross-token English stub: a form is an English emit of another logical
  *    only (not of the current one). Example: ELIF: ["else"].
- * 2. Same-pack shared form: two logicals list the same phrase (case-insensitive),
- *    unless every sharer emits that phrase in English (NULL+NIL "null") or the
- *    pair is allowlisted. Covers primary steals (Swahili IF "ikiwa" on CASE)
- *    and alias↔alias collisions.
- * 3. Duplicate forms inside one logical (noise / ambiguous lists).
+ * 3. Shared PRIMARY alias: the first phrase of two or more logicals is the
+ *    same word. Primaries drive autocomplete ranking and default reverse
+ *    lookup, so they must be unique per pack.
+ *
+ * ALLOWED (recorded as ambiguities, never fatal):
+ * 4. Secondary-alias sharing: a non-primary phrase of logical A also appears
+ *    on logical B (with at most one primary owner). Natural languages have
+ *    homographs; translation quality is never sacrificed to satisfy a linter.
+ *    Every occurrence is returned so consumers can publish `ambiguousTo` data
+ *    and maintainers can track an ambiguity-rate metric per pack.
+ *
+ * Exemptions from rule 3/4 detection:
+ * - Forms every sharer emits as its own English keyword (NULL+NIL "null").
+ * - Forms documented in packs/keyword-form-allowlist.json (genuine linguistic
+ *   homographs reviewed by native speakers).
  */
 
 import { buildEnglishEmitToLogicals } from './english-fallback.mjs';
+import { keywordRawPhrases } from './keywords-json.mjs';
 
 /**
  * @typedef {{ pack: string, form: string, logicals: string[], note?: string }} HomographAllow
+ * @typedef {{ form: string, logical: string, alsoOn: string[], primaryOwner?: string }} FormAmbiguity
  */
 
-/**
- * @param {string} form
- * @param {string} logicalA
- * @param {string} logicalB
- * @param {HomographAllow[]} allowlist
- * @param {string} packName
- */
-function isAllowlistedPair(form, logicalA, logicalB, allowlist, packName) {
-  const norm = form.toLowerCase();
-  for (const entry of allowlist) {
-    if (entry.pack !== packName) continue;
-    if (entry.form.toLowerCase() !== norm) continue;
-    const set = new Set(entry.logicals);
-    if (set.has(logicalA) && set.has(logicalB)) return true;
-  }
-  return false;
+function norm(s) {
+  return String(s).trim().toLowerCase();
 }
 
-/**
- * @param {string} form
- * @param {string[]} logicals
- * @param {HomographAllow[]} allowlist
- * @param {string} packName
- */
+/** @returns {string[]} */
+function formsOf(value) {
+  return keywordRawPhrases(value).map(String);
+}
+
 function isAllowlistedGroup(form, logicals, allowlist, packName) {
-  const norm = form.toLowerCase();
+  const n = norm(form);
   for (const entry of allowlist) {
     if (entry.pack !== packName) continue;
-    if (entry.form.toLowerCase() !== norm) continue;
+    if (norm(entry.form) !== n) continue;
     if (logicals.every((l) => entry.logicals.includes(l))) return true;
   }
   return false;
 }
 
-/**
- * @param {string} form
- * @param {string} logical
- * @param {HomographAllow[]} allowlist
- * @param {string} packName
- */
 function isAllowlistedLogical(form, logical, allowlist, packName) {
-  const norm = form.toLowerCase();
+  const n = norm(form);
   for (const entry of allowlist) {
     if (entry.pack !== packName) continue;
-    if (entry.form.toLowerCase() !== norm) continue;
+    if (norm(entry.form) !== n) continue;
     if (entry.logicals.includes(logical)) return true;
   }
   return false;
 }
 
 /**
- * @param {string | string[]} value
- * @returns {string[]}
- */
-function formsOf(value) {
-  if (Array.isArray(value)) return value.map(String);
-  if (typeof value === 'string') return [value];
-  return [];
-}
-
-/**
  * @param {string} packName
- * @param {Record<string, string | string[]>} keywords
+ * @param {Record<string, string | string[] | {phrases: string | string[]}>} keywords
  * @param {{ tokens: Array<{ logical: string, targets?: Record<string, string> }> }} registry
  * @param {HomographAllow[]} [allowlist]
- * @returns {string[]} error messages
+ * @returns {{ errors: string[], ambiguities: FormAmbiguity[] }}
  */
 export function findKeywordFormCollisions(packName, keywords, registry, allowlist = []) {
   const errors = [];
+  const ambiguities = [];
   const engToLogicals = buildEnglishEmitToLogicals(registry);
 
-  /** @type {Map<string, string[]>} */
+  /** form -> logicals listing it anywhere */
   const formToLogicals = new Map();
+  /** form -> logicals whose PRIMARY (first phrase) it is */
+  const formToPrimaries = new Map();
 
   for (const [logical, value] of Object.entries(keywords)) {
     const forms = formsOf(value);
     const seenInLogical = new Set();
-    for (const form of forms) {
-      if (typeof form !== 'string' || !form.trim()) continue;
-      const norm = form.trim().toLowerCase();
-      if (seenInLogical.has(norm)) {
+    forms.forEach((form, index) => {
+      if (typeof form !== 'string' || !form.trim()) return;
+      const n = norm(form);
+      if (seenInLogical.has(n)) {
         errors.push(
           `${packName}: ${logical} lists duplicate form "${form}" (case-insensitive). Remove the duplicate.`,
         );
-        continue;
+        return;
       }
-      seenInLogical.add(norm);
-      if (!formToLogicals.has(norm)) formToLogicals.set(norm, []);
-      const owners = formToLogicals.get(norm);
+      seenInLogical.add(n);
+      if (!formToLogicals.has(n)) formToLogicals.set(n, []);
+      const owners = formToLogicals.get(n);
       if (!owners.includes(logical)) owners.push(logical);
-    }
+      if (index === 0) {
+        if (!formToPrimaries.has(n)) formToPrimaries.set(n, []);
+        formToPrimaries.get(n).push(logical);
+      }
+    });
   }
 
-  // Same-pack: any shared form that is not shared English for all owners
+  // Rule 3 / rule 4: shared forms across logicals
   for (const [form, logicals] of formToLogicals) {
     if (logicals.length < 2) continue;
+
     const engOwners = engToLogicals.get(form) ?? new Set();
     const allShareEnglish = logicals.every((l) => engOwners.has(l));
     if (allShareEnglish) continue;
-    if (isAllowlistedGroup(form, logicals, allowlist, packName)) continue;
 
-    // Also accept pairwise allowlist covering every pair
-    let allPairsOk = true;
-    for (let i = 0; i < logicals.length && allPairsOk; i++) {
-      for (let j = i + 1; j < logicals.length; j++) {
-        if (!isAllowlistedPair(form, logicals[i], logicals[j], allowlist, packName)) {
-          allPairsOk = false;
-          break;
-        }
+    const primaries = (formToPrimaries.get(form) ?? []).filter((l) => logicals.includes(l));
+    const allowlisted = isAllowlistedGroup(form, logicals, allowlist, packName);
+
+    if (primaries.length >= 2 && !allowlisted) {
+      errors.push(
+        `${packName}: primary alias "${form}" is claimed by ${primaries.join(', ')}. ` +
+          `Primaries must be unique per pack — autocomplete and default reverse lookup cannot rank them. ` +
+          `Keep the word as primary on one logical (demote others to secondary), or document a genuine ` +
+          `linguistic homograph in packs/keyword-form-allowlist.json.`,
+      );
+      continue;
+    }
+
+    // Secondary sharing: record ambiguity for each non-primary claimant
+    if (!allowlisted) {
+      const primaryOwner = primaries.length === 1 ? primaries[0] : undefined;
+      for (const logical of logicals) {
+        if (primaryOwner && logical === primaryOwner) continue;
+        if (isAllowlistedLogical(form, logical, allowlist, packName)) continue;
+        const alsoOn = logicals.filter((l) => l !== logical);
+        ambiguities.push({
+          form,
+          logical,
+          alsoOn,
+          ...(primaryOwner ? { primaryOwner } : {}),
+        });
       }
     }
-    if (allPairsOk) continue;
-
-    const primaryOwners = logicals.filter((l) => {
-      const forms = formsOf(keywords[l]);
-      return forms[0] && String(forms[0]).trim().toLowerCase() === form;
-    });
-    const hint =
-      primaryOwners.length > 0
-        ? ` Primary owner(s): ${primaryOwners.join(', ')}.`
-        : '';
-
-    errors.push(
-      `${packName}: keyword form "${form}" is shared by ${logicals.join(', ')}. ` +
-        `Reverse gloss maps cannot uniquely resolve this phrase (classic: Swahili IF "ikiwa" also on CASE → if↔case).` +
-        `${hint} Keep the form on one logical only, or document a linguistic homograph in packs/keyword-form-allowlist.json.`,
-    );
   }
 
-  // Exclusive cross-token English (even if the owning token is not listing the form)
+  // Rule 2: exclusive cross-token English (even if the owning token is not listing the form)
   for (const [logical, value] of Object.entries(keywords)) {
-    const forms = formsOf(value);
-    for (const form of forms) {
+    for (const form of formsOf(value)) {
       if (typeof form !== 'string' || !form.trim()) continue;
-      const norm = form.trim().toLowerCase();
-      const owners = engToLogicals.get(norm);
+      const n = norm(form);
+      const owners = engToLogicals.get(n);
       if (!owners || owners.has(logical)) continue;
-      const others = [...owners];
-      if (isAllowlistedLogical(norm, logical, allowlist, packName)) continue;
+      if (isAllowlistedLogical(n, logical, allowlist, packName)) continue;
       errors.push(
-        `${packName}: ${logical} uses "${form}", which is English for ${others.join('|')} only ` +
+        `${packName}: ${logical} uses "${form}", which is English for ${[...owners].join('|')} only ` +
           `(not for ${logical}). Do not stub one logical token with another token's English keyword ` +
           `(classic bug: ELIF: ["else"]). Prefer a native phrase, or this token's own English ` +
           `(e.g. ELIF → "elif" / "else if" / "elsif" / "elseif").`,
@@ -165,5 +156,5 @@ export function findKeywordFormCollisions(packName, keywords, registry, allowlis
     }
   }
 
-  return errors;
+  return { errors, ambiguities };
 }

@@ -1,28 +1,17 @@
 /**
  * Cost-conscious smoke tests for Mansa + Khaya translation APIs.
- * Reads keys from .env. Writes report to research/translation-api-coverage.md
+ * Keys resolve via scripts/lib/secrets.mjs (env -> Credential Manager -> .env fallback).
+ * Writes report to research/translation-api-coverage.md
  *
  * Usage: node scripts/test-translation-apis.mjs
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { getSecret } from './lib/secrets.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const researchDir = resolve(root, 'research');
-
-function loadEnv() {
-  const text = readFileSync(resolve(root, '.env'), 'utf8');
-  /** @type {Record<string, string>} */
-  const env = {};
-  for (const line of text.split(/\r?\n/)) {
-    if (!line || line.startsWith('#')) continue;
-    const i = line.indexOf('=');
-    if (i === -1) continue;
-    env[line.slice(0, i).trim()] = line.slice(i + 1).trim();
-  }
-  return env;
-}
 
 const PROMPT = [
   'Programming keywords for teaching beginners to code.',

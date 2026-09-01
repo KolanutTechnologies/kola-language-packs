@@ -1,17 +1,14 @@
 /**
- * One-off Mansa API smoke test. Reads ALL_LAB_PORTAL_API_KEY from .env.
+ * One-off Mansa API smoke test. Key resolves via scripts/lib/secrets.mjs
+ * (ALL_LAB_PORTAL_API_KEY: env -> Windows Credential Manager -> .env fallback).
  * Usage: node scripts/try-mansa-once.mjs [target language name]
  * Default target: Hausa. Single request only (cost-conscious).
  */
-import { readFileSync } from 'node:fs';
-import { resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { getSecret } from './lib/secrets.mjs';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const envText = readFileSync(resolve(root, '.env'), 'utf8');
-const token = envText.match(/ALL_LAB_PORTAL_API_KEY=(.+)/)?.[1]?.trim();
+const token = getSecret('ALL_LAB_PORTAL_API_KEY');
 if (!token) {
-  console.error('Missing ALL_LAB_PORTAL_API_KEY in .env');
+  console.error('Missing ALL_LAB_PORTAL_API_KEY (env, Credential Manager, or .env)');
   process.exit(1);
 }
 

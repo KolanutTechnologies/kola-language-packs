@@ -44,9 +44,19 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 ---
 
+### `generate-derived.mjs` — via `npm run generate`
+
+**What it does:** Regenerates derived files from source: `keywords.json`, `index.json` fields, `by-country.json`, `by-region.json`.
+
+**Flags:** `--check` — fail if derived files are stale (runs inside `npm test`).
+
+**When:** After editing `pack.json` keywords or index metadata. Contributors: run `npm test` before PR.
+
+---
+
 ### `generate-coverage.mjs` — via `npm test` (second step)
 
-**What it does:** Checks official programming-language keywords are covered; writes `packs/coverage-summary.json`.
+**What it does:** Checks official programming-language keywords are covered; writes `packs/coverage-summary.json` (translation %, `ambiguousForms` per pack).
 
 **Does it change files?** Yes — updates `coverage-summary.json`.
 
@@ -55,16 +65,6 @@ All commands run from the **repo root** (`kola-language-packs/`).
 ---
 
 ## Maintainers only
-
-### `bootstrap-packs.mjs` — via `npm run bootstrap`
-
-**What it does:** **Overwrites** all `packs/*/pack.json` and `keywords.json` from definitions inside this script. Also regenerates `by-country.json`, `by-region.json`, etc.
-
-**Does it change files?** Yes — **many files at once**. Community hand-edits in pack folders can be **lost**.
-
-**When:** Only when intentionally regenerating from the bootstrap source. **Contributors must not run this.**
-
----
 
 ### `add-java-target.mjs` — maintainer (one-time / reference)
 
@@ -120,7 +120,7 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 **Does it change files?** Yes — only missing keyword slots in pack folders.
 
-**When:** After adding tokens to `logical-tokens.json`. Safer than `bootstrap` — does not overwrite existing translations.
+**When:** After adding tokens to `logical-tokens.json` — does not overwrite existing translations.
 
 ---
 
@@ -145,5 +145,4 @@ All commands run from the **repo root** (`kola-language-packs/`).
 | `npm run ensure-tokens` | ensure-pack-tokens | missing keywords in packs | Maintainers (new tokens) |
 | `npm run sync-versions` | sync-pack-versions | pack + index versions | Maintainers / CI |
 | `npm run bump-version` | bump-version | package + all pack versions | Maintainers only |
-| `npm run bootstrap` | bootstrap-packs | **All packs** | **No** |
 | `npm run build` | TypeScript compiler | `dist/` | No (unless TS work) |

@@ -12,21 +12,23 @@ on:
         type: string
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   release:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     outputs:
       released: ${{ steps.direct.outputs.released }}
       version: ${{ steps.direct.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
 
@@ -57,7 +59,7 @@ jobs:
 
       - name: Create GitHub Release
         if: steps.direct.outputs.released == 'true'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
         with:
           tag_name: v${{ steps.direct.outputs.version }}
           body_path: release-body.md
@@ -67,15 +69,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: release
     if: always() && (github.event_name == 'workflow_dispatch' || needs.release.result != 'skipped')
+    permissions:
+      contents: read
     outputs:
       publish: ${{ steps.pick.outputs.publish }}
       version: ${{ steps.pick.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
 
@@ -84,11 +88,16 @@ jobs:
         env:
           RELEASED: ${{ needs.release.outputs.released }}
           RELEASE_VERSION: ${{ needs.release.outputs.version }}
+          REPUBLISH_VERSION: ${{ github.event.inputs.republish_version }}
         run: |
-          if [ -n "${{ github.event.inputs.republish_version }}" ]; then
+          if [ -n "$REPUBLISH_VERSION" ]; then
+            if ! printf '%s' "$REPUBLISH_VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+              echo "::error::republish_version must be semver (e.g. 1.2.3), got: $REPUBLISH_VERSION"
+              exit 1
+            fi
             echo "publish=true" >> "$GITHUB_OUTPUT"
-            echo "version=${{ github.event.inputs.republish_version }}" >> "$GITHUB_OUTPUT"
-            echo "Manual republish: v${{ github.event.inputs.republish_version }}"
+            echo "version=$REPUBLISH_VERSION" >> "$GITHUB_OUTPUT"
+            echo "Manual republish: v$REPUBLISH_VERSION"
           elif [ "$RELEASED" = "true" ] && [ -n "$RELEASE_VERSION" ]; then
             echo "publish=true" >> "$GITHUB_OUTPUT"
             echo "version=$RELEASE_VERSION" >> "$GITHUB_OUTPUT"
@@ -105,13 +114,13 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           ref: v${{ needs.resolve-publish.outputs.version }}
 
       # Trusted Publisher (OIDC): workflow filename must match npm settings: release.yml
       # Do not npm install -g npm@latest here — breaks sigstore for --provenance (npm/cli#8018).
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '24'
           cache: npm

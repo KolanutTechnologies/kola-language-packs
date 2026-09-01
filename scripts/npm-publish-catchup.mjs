@@ -3,7 +3,7 @@
  * Used when a tag exists but npm publish failed or was skipped.
  */
 import { appendFile } from 'node:fs/promises';
-import { execSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 
 function compareSemver(a, b) {
   const pa = a.split('.').map(Number);
@@ -14,8 +14,13 @@ function compareSemver(a, b) {
   return 0;
 }
 
-function run(cmd) {
-  return execSync(cmd, { encoding: 'utf8' }).trim();
+function run(args) {
+  const result = spawnSync(args[0], args.slice(1), { encoding: 'utf8' });
+  if (result.status !== 0 || result.error) {
+    const detail = (result.stderr ?? result.error?.message ?? '').trim();
+    throw new Error(`${args[0]} failed: ${detail}`);
+  }
+  return result.stdout.trim();
 }
 
 async function setOutput(name, value) {
@@ -26,7 +31,7 @@ async function setOutput(name, value) {
 
 function latestTagVersion() {
   try {
-    return run('git describe --tags --abbrev=0 --match=v*').replace(/^v/, '');
+    return run(['git', 'describe', '--tags', '--abbrev=0', '--match=v*']).replace(/^v/, '');
   } catch {
     return null;
   }
@@ -34,7 +39,7 @@ function latestTagVersion() {
 
 function npmLatestVersion() {
   try {
-    return run('npm view @kolanut/language-packs version');
+    return run(['npm', 'view', '@kolanut/language-packs', 'version']);
   } catch {
     return null;
   }

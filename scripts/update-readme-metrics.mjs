@@ -17,6 +17,8 @@ const MARKERS = {
   introTargets: ['<!-- intro-targets:start -->', '<!-- intro-targets:end -->'],
   coverageTable: ['<!-- coverage-table:start -->', '<!-- coverage-table:end -->'],
   coverageFootnote: ['<!-- coverage-footnote:start -->', '<!-- coverage-footnote:end -->'],
+  packCoverage: ['<!-- pack-coverage:start -->', '<!-- pack-coverage:end -->'],
+  packCoverageFootnote: ['<!-- pack-coverage-footnote:start -->', '<!-- pack-coverage-footnote:end -->'],
   specSourcesTable: ['<!-- spec-sources-table:start -->', '<!-- spec-sources-table:end -->'],
   shippedHeading: ['<!-- shipped-languages-heading:start -->', '<!-- shipped-languages-heading:end -->'],
   shippedList: ['<!-- shipped-languages-list:start -->', '<!-- shipped-languages-list:end -->'],
@@ -193,6 +195,43 @@ function buildCoverageFootnote({ hasTypeScript }) {
   return '†TypeScript has no single official keyword count in the Handbook; the tracked count is our reserved/modifier + type-keyword set for coverage (see notes in `official-target-keywords.json`).';
 }
 
+function buildPackCoverageTable({ packCoverage, africanLanguages }) {
+  const displayNames = new Map((africanLanguages ?? []).map((p) => [p.name, p.displayName]));
+  const rows = Object.entries(packCoverage ?? {}).sort(
+    (a, b) => b[1].fullPct - a[1].fullPct || a[0].localeCompare(b[0]),
+  );
+  const lines = [
+    '| Pack | Core | Full | Translated | Shared forms |',
+    '|------|-----:|-----:|-----------:|-------------:|',
+  ];
+  for (const [name, s] of rows) {
+    const title = displayNames.get(name) ?? name;
+    lines.push(
+      `| ${title} (\`${name}\`) | ${s.corePct}% | ${s.fullPct}% | ${s.translatedFull}/${s.totalFull} | ${s.sharedAliasForms ?? 0} |`,
+    );
+  }
+  return lines.join('\n');
+}
+
+function buildPackCoverageFootnote({ packCoverage }) {
+  const totalForms = Object.values(packCoverage ?? {}).reduce(
+    (sum, row) => sum + (row.sharedAliasForms ?? 0),
+    0,
+  );
+  const totalLinks = Object.values(packCoverage ?? {}).reduce(
+    (sum, row) => sum + (row.secondaryAliasAmbiguities ?? 0),
+    0,
+  );
+  const countLine =
+    totalForms > 0
+      ? `Currently tracked: ${totalForms} shared form(s), ${totalLinks} secondary-alias link(s) across all packs.`
+      : 'Currently: 0 shared secondary-alias forms (each pack keeps unique primaries; homographs live in the allowlist until native review adds shared secondaries).';
+  return [
+    '**Shared forms:** a non-primary phrase that also appears on another logical token in the same pack. Allowed when primaries stay unique. Full policy: [`packs/KEYWORD_ALIASES.md`](./packs/KEYWORD_ALIASES.md). Machine export: `coverage-summary.json` → `packCoverage.<name>.ambiguousForms`.',
+    countLine,
+  ].join('\n');
+}
+
 function buildSpecSourcesTable({ targetIds, perTarget, sources }) {
   const lines = [
     '| Target | Spec keywords | Spec source |',
@@ -252,13 +291,13 @@ function buildShippedLanguagesList({ africanLanguages }) {
 function buildCodeExampleBlock({ shippedPacks, tokenCount }) {
   return [
     '```typescript',
-    "import { listPackNames, loadPack, flattenKeywords } from '@kolanut/language-packs';",
+    "import { listPackNames, loadPack, loadPublishedKeywords } from '@kolanut/language-packs';",
     '',
     `const packs = await listPackNames(); // e.g. ${shippedPacks} packs`,
     '',
-    "const yoruba = await loadPack('yoruba');",
-    'const keywords = flattenKeywords(yoruba);',
-    `// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps ${tokenCount} logical tokens`,
+    "const yoruba = await loadPack('yoruba'); // metadata + source keywords",
+    "const keywords = await loadPublishedKeywords('yoruba'); // runtime map",
+    `// keywords.IF → ['ṣé', 'ti', 'if'] (${tokenCount} logical tokens)`,
     '```',
   ].join('\n');
 }
@@ -376,6 +415,7 @@ export async function loadReadmeStats() {
     gapCount,
     targetIds,
     perTarget: coverage.perTarget ?? {},
+    packCoverage: coverage.packCoverage ?? {},
     sources: official.sources ?? {},
     africanLanguages: coverage.africanLanguages ?? [],
     roadmapPlanned: roadmap.planned ?? [],
@@ -415,6 +455,16 @@ export function updateReadmeContent(readme, stats) {
     updated,
     ...MARKERS.coverageFootnote,
     buildCoverageFootnote({ hasTypeScript: stats.targetIds.includes('typescript') }),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.packCoverage,
+    buildPackCoverageTable(stats),
+  );
+  updated = replaceMarkedInner(
+    updated,
+    ...MARKERS.packCoverageFootnote,
+    buildPackCoverageFootnote(stats),
   );
   updated = replaceMarkedInner(
     updated,

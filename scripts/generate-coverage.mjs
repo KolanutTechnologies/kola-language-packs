@@ -6,6 +6,8 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { exportPackKeywordAmbiguities } from './lib/pack-keyword-ambiguities.mjs';
+import { computePackCoverage } from './lib/pack-coverage.mjs';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const packsRoot = join(root, 'packs');
@@ -30,6 +32,8 @@ async function main() {
   const official = JSON.parse(await readFile(join(packsRoot, 'official-target-keywords.json'), 'utf8'));
   const logical = JSON.parse(await readFile(join(packsRoot, 'logical-tokens.json'), 'utf8'));
   const index = JSON.parse(await readFile(join(packsRoot, 'index.json'), 'utf8'));
+  const allowlistDoc = JSON.parse(await readFile(join(packsRoot, 'keyword-form-allowlist.json'), 'utf8'));
+  const keywordFormAllowlist = allowlistDoc.entries ?? [];
 
   const logicalByName = new Map(logical.tokens.map((t) => [t.logical, t]));
   const errors = [];
@@ -103,6 +107,25 @@ async function main() {
     acc[t.tier] = (acc[t.tier] ?? 0) + 1;
     return acc;
   }, {});
+
+  summary.draftTokens = logical.tokens
+    .filter((t) => t.tier === 'draft')
+    .map((t) => ({ logical: t.logical, introducedIn: t.introducedIn ?? null }));
+
+  // Per-pack translation coverage (deterministic; stubs are untranslated)
+  const packCoverage = {};
+  for (const p of index.packs) {
+    const pack = JSON.parse(await readFile(join(packsRoot, p.name, 'pack.json'), 'utf8'));
+    const coverage = computePackCoverage(pack.keywords, logical);
+    const ambiguity = exportPackKeywordAmbiguities(
+      p.name,
+      pack.keywords,
+      logical,
+      keywordFormAllowlist,
+    );
+    packCoverage[p.name] = { ...coverage, ...ambiguity };
+  }
+  summary.packCoverage = packCoverage;
 
   await writeFile(join(packsRoot, 'coverage-summary.json'), JSON.stringify(summary, null, 2) + '\n');
 

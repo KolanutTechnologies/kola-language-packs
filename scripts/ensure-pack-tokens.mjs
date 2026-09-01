@@ -34,6 +34,7 @@ async function main() {
 
     for (const token of registry.tokens) {
       if (token.logical in pack.keywords) continue;
+      if (token.tier === 'draft') continue; // drafts are staged — not required until promoted
       const label = englishFallback(token);
       pack.keywords[token.logical] = [label];
       packChanged = true;

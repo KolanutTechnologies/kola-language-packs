@@ -1,6 +1,5 @@
 /**
- * Adds ONE new African language pack without re-bootstrapping all packs
- * (bootstrap-packs.mjs resets every pack version).
+ * Adds ONE new African language pack without touching existing packs.
  *
  * Usage: node scripts/add-language-pack.mjs <pack-name>
  *
@@ -10,17 +9,15 @@ import { spawnSync } from 'node:child_process';
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildKeywordsJson } from './lib/keywords-json.mjs';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const packsRoot = join(root, 'packs');
 
 /** Maps packs to recommended partner orgs for terminology review */
-const RECOMMENDED_PARTNERS = {
-  akan: ['ACALAN', 'University of Ghana (Linguistics)', 'CASAS'],
-  'cameroon-pidgin': ['ACALAN', 'Masakhane', 'University of Buea'],
-  efik: ['ALT-I', 'ACALAN', 'University of Calabar (Linguistics)'],
-  edo: ['ALT-I', 'ACALAN', 'University of Benin (Linguistics)'],
-};
+const RECOMMENDED_PARTNERS = JSON.parse(
+  await readFile(new URL('./lib/recommended-partners.json', import.meta.url), 'utf8'),
+).partners;
 
 /** @type {Record<string, Record<string, string[]>>} */
 const PACKS = {
@@ -36,16 +33,16 @@ const PACKS = {
     DEFAULT: ['deɛ ɛwɔ hɔ', 'default'],
     FUNCTION: ['adwuma', 'dwuma', 'function'],
     RETURN: ['san kɔ', 'return'],
-    ASYNC: ['async', 'async'],
+    ASYNC: ['async'],
     AWAIT: ['twɛn', 'await'],
     TRY: ['bɔ mmɔden', 'try'],
     CATCH: ['kyere', 'catch'],
     FINALLY: ['ewie', 'finally'],
     THROW: ['to gu', 'throw'],
-    LET: ['ma', 'let'],
+    LET: ['let'],
     CONST: ['gyina pintinn', 'const'],
     CLASS: ['kuw', 'ekuri', 'class'],
-    EXTENDS: ['toa so', 'extends'],
+    EXTENDS: ['extends'],
     NEW: ['foforo', 'new'],
     THIS: ['wei', 'this'],
     IMPORT: ['fa ba', 'import'],
@@ -57,18 +54,18 @@ const PACKS = {
     UNDEFINED: ['nnyɛ nkyerɛase', 'undefined'],
   },
   'cameroon-pidgin': {
-    IF: ['if', 'if'],
+    IF: ['if'],
     ELSE: ['if no be so', 'else'],
-    FOR: ['for', 'for'],
+    FOR: ['for'],
     WHILE: ['while e dey', 'while'],
     BREAK: ['stop', 'break'],
-    CONTINUE: ['continue', 'continue'],
+    CONTINUE: ['continue'],
     SWITCH: ['check which one', 'switch'],
     CASE: ['if na', 'case'],
     DEFAULT: ['if nothing match', 'default'],
     FUNCTION: ['make function', 'function'],
     RETURN: ['bring back', 'return'],
-    ASYNC: ['async', 'async'],
+    ASYNC: ['async'],
     AWAIT: ['wait for', 'await'],
     TRY: ['try am', 'try'],
     CATCH: ['catch am', 'catch'],
@@ -82,7 +79,7 @@ const PACKS = {
     THIS: ['this one', 'this'],
     IMPORT: ['bring come', 'import'],
     EXPORT: ['send go', 'export'],
-    PRINT: ['show', 'print'],
+    PRINT: ['print'],
     TRUE: ['e correct', 'true'],
     FALSE: ['e no correct', 'false'],
     NULL: ['nothing', 'null'],
@@ -100,7 +97,7 @@ const PACKS = {
     DEFAULT: ['nditoi', 'default'],
     FUNCTION: ['ufok', 'function'],
     RETURN: ['fiak', 'return'],
-    ASYNC: ['async', 'async'],
+    ASYNC: ['async'],
     AWAIT: ['bet', 'await'],
     TRY: ['nam', 'try'],
     CATCH: ['nyim', 'catch'],
@@ -287,7 +284,8 @@ async function writePack(name, version, registry) {
   const dir = join(packsRoot, name);
   await mkdir(dir, { recursive: true });
   await writeJson(join(dir, 'pack.json'), pack);
-  await writeJson(join(dir, 'keywords.json'), keywords);
+  // keywords.json is the generated published shape (natives + English fallback)
+  await writeJson(join(dir, 'keywords.json'), buildKeywordsJson(pack.keywords, registry.tokens));
 }
 
 async function appendToIndex(name, version, registry) {

@@ -1,15 +1,18 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import Ajv2020 from 'ajv/dist/2020.js';
 import {
   GLOSSARY_KEY,
   PLACEHOLDER_KEY,
   collectKeywordCanonicals,
-  hasEnglishFallback,
   isValidGlossValue,
   phrasesOf,
 } from './lib/gloss-value.mjs';
 import { findKeywordFormCollisions } from './lib/keyword-form-collision.mjs';
+import { IDE_TIER_SPECS } from './lib/ide-ready.mjs';
+import { findStringPolicyViolations, keywordSurfaceStrings } from './lib/unicode-policy.mjs';
+import { buildKeywordsJson, nativePhrases, keywordRawPhrases } from './lib/keywords-json.mjs';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const schemaPath = join(root, 'pack.schema.json');
@@ -17,76 +20,17 @@ const packsRoot = join(root, 'packs');
 const logicalTokensPath = join(packsRoot, 'logical-tokens.json');
 const keywordFormAllowlistPath = join(packsRoot, 'keyword-form-allowlist.json');
 
-const COUNTRY_CODE = /^[A-Z]{2}$/;
-const LOCALE_CODE = /^[a-z]{2,3}(-[A-Z]{2})?$/;
-const IDE_READY_PACKS = new Set([
-  'yoruba',
-  'hausa',
-  'nigerian-pidgin',
-  'igbo',
-  'swahili',
-  'zulu',
-  'twi',
-  'luganda',
-  'edo',
-]);
-const MIN_GLOSSARY = 30;
-const MIN_PLACEHOLDERS = 10;
-const MIN_COMMON_LITERALS = 10;
+const TIER_SPECS = IDE_TIER_SPECS.map((spec) => ({
+  ...spec,
+  keyPattern:
+    spec.field === 'glossary' ? GLOSSARY_KEY : spec.field === 'placeholders' ? PLACEHOLDER_KEY : null,
+  keyLabel: { glossary: 'glossary', placeholders: 'placeholder', commonLiterals: 'common literal' }[spec.field],
+}));
 
-const TIER_SPECS = [
-  { field: 'glossary', file: 'glossary.json', minKeys: MIN_GLOSSARY, keyPattern: GLOSSARY_KEY, keyLabel: 'glossary' },
-  {
-    field: 'placeholders',
-    file: 'placeholders.json',
-    minKeys: MIN_PLACEHOLDERS,
-    keyPattern: PLACEHOLDER_KEY,
-    keyLabel: 'placeholder',
-  },
-  {
-    field: 'commonLiterals',
-    file: 'common-literals.json',
-    minKeys: MIN_COMMON_LITERALS,
-    keyPattern: null,
-    keyLabel: 'common literal',
-  },
-];
-
-function isNonEmptyString(value) {
-  return typeof value === 'string' && value.trim().length > 0;
-}
-
-function validateKeywordValue(value, path, errors) {
-  if (isNonEmptyString(value)) return;
-  if (Array.isArray(value) && value.every(isNonEmptyString)) return;
-  errors.push(`${path}: keyword must be a non-empty string or string[]`);
-}
-
-function validateStringArray(value, field, errors, prefix) {
-  if (!Array.isArray(value) || value.length === 0) {
-    errors.push(`${prefix}: ${field} must be a non-empty array`);
-    return;
-  }
-  for (const item of value) {
-    if (!isNonEmptyString(item)) {
-      errors.push(`${prefix}: ${field} entries must be non-empty strings`);
-    }
-  }
-}
-
-function validateCountries(value, prefix, errors) {
-  validateStringArray(value, 'countries', errors, prefix);
-  if (!Array.isArray(value)) return;
-  for (const code of value) {
-    if (!COUNTRY_CODE.test(code)) {
-      errors.push(`${prefix}: invalid country code "${code}" (use ISO 3166-1 alpha-2, e.g. NG)`);
-    }
-  }
-}
-
-function validateLocale(value, prefix, errors) {
-  if (!isNonEmptyString(value) || !LOCALE_CODE.test(value)) {
-    errors.push(`${prefix}: locale must be a BCP-47 tag like pcm-NG or yo-NG`);
+function checkStringPolicy(value, path, errors, options) {
+  if (typeof value !== 'string') return;
+  for (const issue of findStringPolicyViolations(value, options)) {
+    errors.push(`${path}: ${issue}`);
   }
 }
 
@@ -101,10 +45,13 @@ async function readOptionalJson(path) {
 async function loadLogicalTokens() {
   const registry = JSON.parse(await readFile(logicalTokensPath, 'utf8'));
   const allTokens = registry.tokens.map((entry) => entry.logical);
+  // Draft-tier tokens are staged: known everywhere, but not yet required in packs.
+  const draftTokens = registry.tokens.filter((entry) => entry.tier === 'draft');
+  const presenceTokens = allTokens.filter((logical) => !draftTokens.some((d) => d.logical === logical));
   const requiredTokens = registry.required ?? [];
   const supportedTargets = registry.targets ?? [];
   const keywordCanonicals = collectKeywordCanonicals(registry);
-  return { allTokens, requiredTokens, supportedTargets, registry, keywordCanonicals };
+  return { allTokens, presenceTokens, draftTokens, requiredTokens, supportedTargets, registry, keywordCanonicals };
 }
 
 async function loadKeywordFormAllowlist() {
@@ -120,14 +67,16 @@ function validateGlossTierObject(tier, spec, packName, keywordCanonicals, errors
   if (!tier || typeof tier !== 'object') return null;
 
   const keys = Object.keys(tier);
-  if (keys.length > 0 && keys.length < spec.minKeys && IDE_READY_PACKS.has(packName)) {
-    errors.push(`${packName}: ${spec.field} needs at least ${spec.minKeys} entries for IDE-ready packs`);
+  if (keys.length > 0 && keys.length < spec.minKeys) {
+    errors.push(`${packName}: ${spec.field} has ${keys.length} entries but at least ${spec.minKeys} are required (IDE tier minimum — add entries or remove the file)`);
   }
 
   const seenPhrases = new Map();
 
   for (const [key, value] of Object.entries(tier)) {
     const path = `${packName}.${spec.field}.${key}`;
+
+    checkStringPolicy(key, path, errors, { matchable: true });
 
     if (spec.keyPattern && !spec.keyPattern.test(key)) {
       errors.push(`${path}: ${spec.keyLabel} key must be lowercase (snake_case allowed)`);
@@ -142,11 +91,8 @@ function validateGlossTierObject(tier, spec, packName, keywordCanonicals, errors
       continue;
     }
 
-    if (!hasEnglishFallback(key, value)) {
-      errors.push(`${path}: must include English fallback "${key}"`);
-    }
-
     for (const phrase of phrasesOf(value)) {
+      checkStringPolicy(phrase, path, errors, { matchable: true });
       const norm = phrase.toLowerCase();
       if (norm === key.toLowerCase()) continue;
       if (seenPhrases.has(norm)) {
@@ -160,27 +106,18 @@ function validateGlossTierObject(tier, spec, packName, keywordCanonicals, errors
   return tier;
 }
 
-async function loadTier(name, spec, pack, errors) {
-  const filePath = join(packsRoot, name, spec.file);
-  const fromFile = await readOptionalJson(filePath);
-  const fromPack = pack?.[spec.field];
-
-  if (fromPack !== undefined && fromFile !== undefined && JSON.stringify(fromPack) !== JSON.stringify(fromFile)) {
-    errors.push(`${name}: pack.json ${spec.field} must match ${spec.file}`);
-  }
-
-  return fromPack ?? fromFile;
+async function loadTier(name, spec) {
+  return readOptionalJson(join(packsRoot, name, spec.file));
 }
 
-function computeIdeReady(name, tiersLoaded) {
-  if (!IDE_READY_PACKS.has(name)) return false;
+function computeIdeReady(tiersLoaded) {
   return TIER_SPECS.every((spec) => {
     const tier = tiersLoaded[spec.field];
     return tier && Object.keys(tier).length >= spec.minKeys;
   });
 }
 
-async function validatePack(name, logicalTokens, errors) {
+async function validatePack(name, logicalTokens, ajvValidate, errors, ambiguities) {
   const packPath = join(packsRoot, name, 'pack.json');
   const keywordsPath = join(packsRoot, name, 'keywords.json');
 
@@ -196,25 +133,17 @@ async function validatePack(name, logicalTokens, errors) {
     errors.push(`${name}: pack.name must match folder name`);
   }
 
-  for (const field of ['languageCode', 'locale', 'countries', 'regions', 'version', 'targets', 'keywords']) {
-    if (!(field in pack)) errors.push(`${name}: missing ${field}`);
+  if (!ajvValidate(pack)) {
+    for (const err of ajvValidate.errors) {
+      errors.push(`${name}: schema: ${err.instancePath || '/'} ${err.message}`);
+    }
   }
 
   for (const field of ['displayName', 'description', 'reviewStatus']) {
     if (!(field in pack)) errors.push(`${name}: missing ${field} (required for all packs — see packs/NAMING_GUIDE.md)`);
   }
 
-  if (pack.reviewStatus && !['starter', 'community-reviewed', 'partner-verified'].includes(pack.reviewStatus)) {
-    errors.push(`${name}: reviewStatus must be starter, community-reviewed, or partner-verified`);
-  }
-
-  validateLocale(pack.locale, name, errors);
-  validateCountries(pack.countries, name, errors);
-  validateStringArray(pack.regions, 'regions', errors, name);
-
-  if (!Array.isArray(pack.targets) || pack.targets.length === 0) {
-    errors.push(`${name}: targets must be a non-empty array`);
-  } else if (logicalTokens.supportedTargets.length > 0) {
+  if (Array.isArray(pack.targets) && logicalTokens.supportedTargets.length > 0) {
     const missingTargets = logicalTokens.supportedTargets.filter((target) => !pack.targets.includes(target));
     if (missingTargets.length > 0) {
       errors.push(`${name}: targets missing canonical transpile backends: ${missingTargets.join(', ')}`);
@@ -223,11 +152,27 @@ async function validatePack(name, logicalTokens, errors) {
 
   const keywords = pack.keywords;
   if (!keywords || typeof keywords !== 'object') {
-    errors.push(`${name}: keywords must be an object`);
     return { pack, tiersLoaded: {}, ideReady: false };
   }
 
-  const { allTokens, requiredTokens, keywordCanonicals } = logicalTokens;
+  const byLogical = new Map(logicalTokens.registry.tokens.map((t) => [t.logical, t]));
+  for (const [logical, value] of Object.entries(keywords)) {
+    const tokenEntry = byLogical.get(logical) ?? { logical };
+    const natives = nativePhrases(value, tokenEntry);
+    if (natives !== null && keywordRawPhrases(value).length !== natives.length) {
+      errors.push(
+        `${name}.keywords.${logical}: source must be pure translations — remove the English fallback phrase (it is generated into keywords.json)`,
+      );
+    }
+    for (const phrase of keywordSurfaceStrings(value)) {
+      checkStringPolicy(phrase, `${name}.keywords.${logical}`, errors, { matchable: true });
+    }
+  }
+  for (const field of ['displayName', 'description', 'scopeNote']) {
+    checkStringPolicy(pack[field], `${name}.${field}`, errors);
+  }
+
+  const { allTokens, presenceTokens, requiredTokens, keywordCanonicals } = logicalTokens;
 
   for (const token of requiredTokens) {
     if (!(token in keywords)) {
@@ -235,34 +180,33 @@ async function validatePack(name, logicalTokens, errors) {
     }
   }
 
-  for (const token of allTokens) {
+  for (const token of presenceTokens) {
     if (!(token in keywords)) {
       errors.push(`${name}: missing canonical logical token ${token}`);
     }
   }
+
+  const collisionResult = findKeywordFormCollisions(
+    name,
+    keywords,
+    logicalTokens.registry,
+    logicalTokens.homographAllowlist ?? [],
+  );
+  for (const collision of collisionResult.errors) {
+    errors.push(collision);
+  }
+  ambiguities.push(...collisionResult.ambiguities.map((a) => ({ pack: name, ...a })));
 
   const extraTokens = Object.keys(keywords).filter((token) => !allTokens.includes(token));
   if (extraTokens.length > 0) {
     errors.push(`${name}: unknown logical token(s): ${extraTokens.join(', ')}`);
   }
 
-  for (const [logical, value] of Object.entries(keywords)) {
-    validateKeywordValue(value, `${name}.keywords.${logical}`, errors);
-  }
-
-  for (const collision of findKeywordFormCollisions(
-    name,
-    keywords,
-    logicalTokens.registry,
-    logicalTokens.homographAllowlist ?? [],
-  )) {
-    errors.push(collision);
-  }
-
   try {
     const keywordsOnly = JSON.parse(await readFile(keywordsPath, 'utf8'));
-    if (JSON.stringify(keywordsOnly) !== JSON.stringify(keywords)) {
-      errors.push(`${name}: keywords.json must match pack.json keywords`);
+    const expected = buildKeywordsJson(keywords, logicalTokens.registry.tokens);
+    if (JSON.stringify(keywordsOnly) !== JSON.stringify(expected)) {
+      errors.push(`${name}: keywords.json must equal the generated shape (natives + English fallback) — run npm run generate`);
     }
   } catch {
     errors.push(`${name}: missing keywords.json`);
@@ -270,7 +214,7 @@ async function validatePack(name, logicalTokens, errors) {
 
   const tiersLoaded = {};
   for (const spec of TIER_SPECS) {
-    const tier = await loadTier(name, spec, pack, errors);
+    const tier = await loadTier(name, spec);
     if (tier) {
       tiersLoaded[spec.field] = validateGlossTierObject(
         tier,
@@ -279,12 +223,10 @@ async function validatePack(name, logicalTokens, errors) {
         keywordCanonicals,
         errors,
       );
-    } else if (IDE_READY_PACKS.has(name)) {
-      errors.push(`${name}: missing ${spec.file} (required for IDE-ready pack)`);
     }
   }
 
-  const ideReady = computeIdeReady(name, tiersLoaded);
+  const ideReady = computeIdeReady(tiersLoaded);
   return { pack, tiersLoaded, ideReady };
 }
 
@@ -315,7 +257,15 @@ function validateIndexEntry(entry, pack, ideReady, errors) {
 }
 
 async function main() {
-  JSON.parse(await readFile(schemaPath, 'utf8'));
+  const ajv = new Ajv2020({ allErrors: true });
+  let ajvValidate;
+  try {
+    const schema = JSON.parse(await readFile(schemaPath, 'utf8'));
+    ajvValidate = ajv.compile(schema);
+  } catch (error) {
+    console.error(`pack.schema.json failed to compile: ${error.message}`);
+    process.exit(1);
+  }
 
   const logicalTokens = await loadLogicalTokens();
   logicalTokens.homographAllowlist = await loadKeywordFormAllowlist();
@@ -326,11 +276,12 @@ async function main() {
     .map((entry) => entry.name);
 
   const errors = [];
+  const ambiguities = [];
   const loaded = new Map();
 
   for (const name of listed) {
     if (!dirs.includes(name)) errors.push(`index lists missing pack folder: ${name}`);
-    const result = await validatePack(name, logicalTokens, errors);
+    const result = await validatePack(name, logicalTokens, ajvValidate, errors, ambiguities);
     loaded.set(name, result);
   }
 
@@ -364,10 +315,58 @@ async function main() {
     process.exit(1);
   }
 
+  if (process.env.VALIDATE_SELFTEST === '1') {
+    const sample = [...loaded.values()].find((r) => r.pack)?.pack;
+    if (!sample) {
+      console.error('schema selftest: FAILED (no pack loaded)');
+      process.exit(1);
+    }
+    const badField = structuredClone(sample);
+    badField.badField = true;
+    const badLocale = structuredClone(sample);
+    badLocale.locale = 'nope';
+    const rejectsBadField = !ajvValidate(badField);
+    const rejectsBadLocale = !ajvValidate(badLocale);
+    if (!rejectsBadField || !rejectsBadLocale) {
+      console.error(
+        `schema selftest: FAILED (badField rejected: ${rejectsBadField}, badLocale rejected: ${rejectsBadLocale})`,
+      );
+      process.exit(1);
+    }
+    console.log('schema selftest: OK');
+  }
+
   const ideReadyCount = [...loaded.values()].filter((r) => r.ideReady).length;
   console.log(
     `Validated ${listed.length} language pack(s) against ${logicalTokens.allTokens.length} logical token(s); ${ideReadyCount} IDE-ready.`,
   );
+  if (ambiguities.length > 0) {
+    const byPack = new Map();
+    for (const a of ambiguities) byPack.set(a.pack, (byPack.get(a.pack) ?? 0) + 1);
+    console.log(
+      `Secondary-alias ambiguities: ${ambiguities.length} (allowed; ` +
+        [...byPack.entries()].map(([p, n]) => `${p}: ${n}`).join(', ') + ')',
+    );
+  }
+
+  if (logicalTokens.draftTokens.length > 0) {
+    const pkg = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
+    const minorOf = (v) => Number(String(v).split('.')[1] ?? 0);
+    const currentMinor = minorOf(pkg.version);
+    for (const draft of logicalTokens.draftTokens) {
+      const introducedMinor = draft.introducedIn ? minorOf(draft.introducedIn) : currentMinor;
+      const age = Math.max(0, currentMinor - introducedMinor);
+      if (age >= 2) {
+        console.warn(
+          `WARNING: draft token ${draft.logical} (introduced ${draft.introducedIn ?? 'unknown'}) is ${age} minor cycles old — promote to standard/core (then run npm run ensure-tokens) or drop it.`,
+        );
+      } else {
+        console.log(`Draft tokens: ${logicalTokens.draftTokens.map((d) => d.logical).join(', ')} — not yet required, excluded from coverage denominators.`);
+        break;
+      }
+    }
+  }
 }
 
 main();
+

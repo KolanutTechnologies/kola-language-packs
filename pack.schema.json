@@ -29,6 +29,11 @@
       "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$",
       "description": "BCP-47 language tag with optional region (e.g. pcm-NG, yo-NG)"
     },
+    "direction": {
+      "type": "string",
+      "enum": ["ltr", "rtl"],
+      "description": "Script direction for IDE chrome mirroring. Absent defaults to ltr."
+    },
     "countries": {
       "type": "array",
       "description": "ISO 3166-1 alpha-2 country codes where this pack variant applies",
@@ -109,35 +114,14 @@
     },
     "keywords": {
       "type": "object",
-      "description": "Logical token → native phrase(s). Value is string or string[].",
-      "additionalProperties": {
-        "$ref": "#/$defs/glossValue"
-      }
-    },
-    "glossary": {
-      "type": "object",
-      "description": "Teaching vocabulary for identifier hints (lowercase English keys). Optional in pack.json if glossary.json exists.",
-      "additionalProperties": {
-        "$ref": "#/$defs/glossValue"
-      }
-    },
-    "placeholders": {
-      "type": "object",
-      "description": "Code Block slot labels. Optional in pack.json if placeholders.json exists.",
-      "additionalProperties": {
-        "$ref": "#/$defs/glossValue"
-      }
-    },
-    "commonLiterals": {
-      "type": "object",
-      "description": "Common string literals in beginner lessons (English keys, e.g. Hello). Optional in pack.json if common-literals.json exists.",
+      "description": "Logical token → native phrase(s). Value is string, string[], or { phrases, confidence }.",
       "additionalProperties": {
         "$ref": "#/$defs/glossValue"
       }
     }
   },
   "$defs": {
-    "glossValue": {
+    "phraseList": {
       "oneOf": [
         {
           "type": "string",
@@ -150,6 +134,33 @@
             "minLength": 1
           },
           "minItems": 1
+        }
+      ]
+    },
+    "glossValue": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/phraseList"
+        },
+        {
+          "type": "object",
+          "description": "Phrases with a per-entry fail-safe confidence. `draft` entries are staged but never rendered.",
+          "properties": {
+            "phrases": {
+              "$ref": "#/$defs/phraseList"
+            },
+            "confidence": {
+              "enum": [
+                "verified",
+                "community",
+                "draft"
+              ]
+            }
+          },
+          "required": [
+            "phrases"
+          ],
+          "additionalProperties": false
         }
       ]
     }

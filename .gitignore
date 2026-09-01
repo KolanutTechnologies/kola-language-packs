@@ -11,4 +11,8 @@ research/
 .cursor/
 release-body.md
 
-.env
+# Local CI/coverage artifacts
+tmp-base-coverage.json
+
+# Template is tracked; real values never are
+!.env.example

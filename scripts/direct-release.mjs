@@ -6,7 +6,6 @@
  * End of every releasable build: node scripts/direct-release.mjs (updates package.json)
  */
 import { appendFile, readFile, writeFile } from 'node:fs/promises';
-import { execSync } from 'node:child_process';
 import { spawnSync } from 'node:child_process';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,7 +15,12 @@ const dryRun = process.argv.includes('--dry-run');
 const isCI = process.env.GITHUB_ACTIONS === 'true';
 
 function runGit(args) {
-  return execSync(['git', ...args].join(' '), { cwd: root, encoding: 'utf8' }).trim();
+  const result = spawnSync('git', args, { cwd: root, encoding: 'utf8' });
+  if (result.status !== 0 || result.error) {
+    const detail = (result.stderr ?? result.error?.message ?? '').trim();
+    throw new Error(`git ${args.join(' ')} failed: ${detail}`);
+  }
+  return result.stdout.trim();
 }
 
 function nextVersion(current, kind) {
