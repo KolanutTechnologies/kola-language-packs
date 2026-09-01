@@ -13,6 +13,8 @@ release-body.md
 
 # Local CI/coverage artifacts
 tmp-base-coverage.json
+tmp-parse-transcript.mjs
+tmp-transcript-parse.json
 
 # Template is tracked; real values never are
 !.env.example

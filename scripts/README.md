@@ -46,11 +46,11 @@ All commands run from the **repo root** (`kola-language-packs/`).
 
 ### `generate-derived.mjs` — via `npm run generate`
 
-**What it does:** Regenerates derived files from source: `keywords.json`, `index.json` fields, `by-country.json`, `by-region.json`.
+**What it does:** Regenerates **derived** files from **source** (`pack.json` keywords → `keywords.json`, plus index lookups). Deterministic: reads what contributors wrote, appends English fallbacks in code. **Not** the deleted `bootstrap-packs.mjs` footgun (that overwrote all packs from ~30 seed templates).
 
 **Flags:** `--check` — fail if derived files are stale (runs inside `npm test`).
 
-**When:** After editing `pack.json` keywords or index metadata. Contributors: run `npm test` before PR.
+**When:** After editing `pack.json` keywords or when maintainers change generator logic. Contributors: run after your pack edit, then `npm test` before PR.
 
 ---
 

@@ -308,6 +308,22 @@ These can land as **patch** or ride along with related **minor** releases:
 | Logical token additions | Maintainers | Only when a shipped target gains new reserved words |
 | UI / Design seeds | Maintainers + IDE | Phases U1–U6 in `uiDesignRoadmap.catalogPhases`; seed from Design emits + encounter telemetry, not invented unused keys |
 | Future mapping (Phase F) | Maintainers + IDE | `futureMappingCandidates` in roadmap JSON; do not start until U1 / 2.0 foundations exist |
+| **Consumer infra (0.18+ → 1.0)** | Maintainers | Reverse lookup index, bundled pack export, match runtime API, regional CODEOWNERS — see table below |
+
+---
+
+## Consumer infrastructure (planned, not shipped in 0.18.x)
+
+These were scoped in the 0.18 pure-source refactor design. They depend on stable `loadPublishedKeywords()` and `ambiguousForms` (shipped in 0.18.2). **Not blockers** for pack authoring today.
+
+| Deliverable | Job | Target release | Status |
+|-------------|-----|----------------|--------|
+| **Reverse-index** (native form → logical token) | IDE Learn undo / reverse map without scanning every pack | **0.36.0** (TypeScript API polish) | Planned |
+| **`all-packs.json` bundle** | Single artifact for tools that cannot walk `packs/` on disk | **0.36.0** | Planned |
+| **Match runtime** (`match` export or sibling) | Packaged longest-match + `ambiguousForms` resolution per [`KEYWORD_ALIASES.md`](./KEYWORD_ALIASES.md) | **0.36.0** | Planned |
+| **CODEOWNERS / regional stewards** | Per-pack review routing (West Africa, Horn, etc.) | **1.0.0** checklist ("Regional maintainer model") | Planned |
+
+Machine hints: `languages-roadmap.json` → `releaseSequence` at `0.36.0` and `1.0.0`. Contract prose: [`KEYWORD_ALIASES.md`](./KEYWORD_ALIASES.md).
 
 ---
 

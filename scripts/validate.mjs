@@ -20,6 +20,8 @@ const packsRoot = join(root, 'packs');
 const logicalTokensPath = join(packsRoot, 'logical-tokens.json');
 const keywordFormAllowlistPath = join(packsRoot, 'keyword-form-allowlist.json');
 
+const CONFIDENCE_LEVELS = new Set(['verified', 'community', 'draft']);
+
 const TIER_SPECS = IDE_TIER_SPECS.map((spec) => ({
   ...spec,
   keyPattern:
@@ -158,6 +160,11 @@ async function validatePack(name, logicalTokens, ajvValidate, errors, ambiguitie
   const byLogical = new Map(logicalTokens.registry.tokens.map((t) => [t.logical, t]));
   for (const [logical, value] of Object.entries(keywords)) {
     const tokenEntry = byLogical.get(logical) ?? { logical };
+    if (value && typeof value === 'object' && !Array.isArray(value) && 'confidence' in value) {
+      if (value.confidence && !CONFIDENCE_LEVELS.has(value.confidence)) {
+        errors.push(`${name}.keywords.${logical}: invalid confidence "${value.confidence}"`);
+      }
+    }
     const natives = nativePhrases(value, tokenEntry);
     if (natives !== null && keywordRawPhrases(value).length !== natives.length) {
       errors.push(

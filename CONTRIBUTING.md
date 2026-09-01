@@ -99,21 +99,23 @@ Coverage OK: ...
 ```
 If you see that, you are done. Open your PR.
 
+### Contributor commands
+
 | Command | What it does | When |
 |---------|--------------|------|
-| `npm run registry` | Updates the "taken names" list (`language-registry.json`) | **Only when adding a new pack** |
+| `npm test` | Validates packs; checks derived files are in sync | **Every PR** |
+| `npm run generate` | Syncs `keywords.json` from your `pack.json` | **After you edit your pack's keywords** |
+| `npm run registry` | Updates the "taken names" list | **Only when adding a new pack** |
 
----
+**Not the old bootstrap footgun:** `generate` reads your native phrases from `pack.json` and writes derived files. It does not overwrite all packs from seed templates (`bootstrap-packs.mjs` was removed in 0.18.0).
 
-### DO NOT run these (contributors)
+Do not run `npm run generate` on packs you did not edit unless a maintainer asked (noise-only PR).
 
-| Command | What it actually does | Why not |
-|---------|----------------------|---------|
-| `npm run bootstrap` | **Overwrites every pack folder** from a maintainer script | Your translations (and others’) can be **wiped** |
-| `npm run build` | Compiles TypeScript for npm | Not needed for translation PRs |
-| `cd` into a `pack.json` file | `pack.json` is a file, not a folder | Use your editor to open it |
+### Skip these (translation PRs)
 
-If a PR runs bootstrap and replaces all packs, maintainers will **reject** it unless it was intentional maintainer work.
+| Command | Why skip |
+|---------|----------|
+| `npm run build` | Compiles TypeScript for npm; not needed for translation-only PRs |
 
 Details: [`scripts/README.md`](./scripts/README.md) · file map: [`packs/REPO_MAP.md`](./packs/REPO_MAP.md)
 
@@ -130,7 +132,7 @@ Example: better isiZulu phrasing in `packs/zulu/`.
 1. **Find your pack** in [`packs/index.json`](./packs/index.json) and open its folder (e.g. `packs/zulu/`).
 2. **Read `scopeNote`** in `pack.json` — confirm this pack matches your dialect/region. If not, see Path B (new variant).
 3. **Open `packs/logical-tokens.json`** — use it as a checklist. Every `"logical"` key (**370** total) must have a translation in your pack.
-4. **Edit translations** in `keywords.json` (easiest) and copy the same changes into `pack.json` → `keywords`.
+4. **Edit translations** in `pack.json` → `keywords` (native phrases only). Run `npm run generate` to refresh `keywords.json`.
 5. **Update metadata if needed** — e.g. clearer `scopeNote`, corrected `countries`, or added dialect aliases. Do not change `languageCode`/`locale` unless you are fixing a mistake or scoping a variant.
 6. **Run validation:**
 
@@ -198,9 +200,9 @@ Use this when the language or **country-specific variant** does not exist yet (e
    | `targets` | `["javascript","python","typescript","go","rust"]` | All five required |
    | `keywords` | `{ "IF": [...], ... }` | All **370** tokens from `logical-tokens.json` |
 
-4. **Edit `keywords.json`** — must be **identical** to the `keywords` object in `pack.json`.
+4. **Edit `pack.json` → `keywords`:** pure native phrases only (English fallbacks are generated into `keywords.json` by `npm test` / `npm run generate`).
 
-   **Keyword mapping rule:** never use another concept's English word as a stand-in. Example: `ELIF` must not be `["else"]` (that word belongs to `ELSE`). Use a native phrase, or this concept's own English (`elif`, `else if`, `elsif`, `elseif`). Two concepts in the same pack must not share the same form (unless documented in [`packs/keyword-form-allowlist.json`](./packs/keyword-form-allowlist.json)). Never put another concept's primary gloss on a second concept as an alias (that breaks Learn undo reverse maps).
+   **Keyword mapping rule:** see [`packs/KEYWORD_ALIASES.md`](./packs/KEYWORD_ALIASES.md). Summary: never use another concept's English word as a stand-in (`ELIF` must not be `["else"]`). **Primary** aliases (first phrase) must be unique per pack. **Secondary** aliases may be shared across logicals; CI exports them to `coverage-summary.json` → `ambiguousForms`. Document genuine homographs in [`packs/keyword-form-allowlist.json`](./packs/keyword-form-allowlist.json).
 
 5. **Add an entry** to [`packs/index.json`](./packs/index.json) (same fields as above; must match `pack.json`).
 

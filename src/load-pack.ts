@@ -1,9 +1,40 @@
 import { readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { GlossTierMap, LanguagePack, PackIndex, ResolvedGlossTier, ResolvedKeyword } from './types.js';
+import type {
+  CoverageSummary,
+  GlossTierMap,
+  KeywordConfidence,
+  KeywordValue,
+  LanguagePack,
+  PackIndex,
+  PublishedKeywordMap,
+  ResolvedGlossTier,
+  ResolvedKeyword,
+} from './types.js';
 
 const rootDir = join(dirname(fileURLToPath(import.meta.url)), '..');
+
+const PACK_NAME_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
+
+function assertValidPackName(name: string): void {
+  if (!PACK_NAME_PATTERN.test(name)) {
+    throw new Error(`Invalid pack name: "${name}"`);
+  }
+}
+
+/** Normalize string | string[] | { phrases, confidence? } to phrase list + optional confidence. */
+export function keywordParts(value: KeywordValue): { phrases: string[]; confidence?: KeywordConfidence } {
+  if (typeof value === 'string') {
+    return { phrases: [value] };
+  }
+  if (Array.isArray(value)) {
+    return { phrases: [...value] };
+  }
+  const phrases =
+    typeof value.phrases === 'string' ? [value.phrases] : [...value.phrases];
+  return { phrases, confidence: value.confidence };
+}
 
 export function getPacksRoot(): string {
   return join(rootDir, 'packs');
@@ -17,13 +48,22 @@ export async function listPackNames(): Promise<string[]> {
 }
 
 export async function loadPack(name: string): Promise<LanguagePack> {
+  assertValidPackName(name);
   const packPath = join(getPacksRoot(), name, 'pack.json');
   const raw = await readFile(packPath, 'utf8');
   return JSON.parse(raw) as LanguagePack;
 }
 
-async function loadOptionalTier(name: string, fileName: keyof Pick<LanguagePack, 'glossary' | 'placeholders' | 'commonLiterals'>) {
-  const tierPath = join(getPacksRoot(), name, tierFileName(fileName));
+type GlossTierName = 'glossary' | 'placeholders' | 'commonLiterals';
+
+function tierFileName(tier: GlossTierName) {
+  if (tier === 'commonLiterals') return 'common-literals.json';
+  return `${tier}.json`;
+}
+
+async function loadOptionalTier(name: string, tier: GlossTierName): Promise<GlossTierMap | undefined> {
+  assertValidPackName(name);
+  const tierPath = join(getPacksRoot(), name, tierFileName(tier));
   try {
     const raw = await readFile(tierPath, 'utf8');
     return JSON.parse(raw) as GlossTierMap;
@@ -32,31 +72,38 @@ async function loadOptionalTier(name: string, fileName: keyof Pick<LanguagePack,
   }
 }
 
-function tierFileName(tier: 'glossary' | 'placeholders' | 'commonLiterals') {
-  if (tier === 'commonLiterals') return 'common-literals.json';
-  return `${tier}.json`;
-}
-
 export async function loadGlossary(name: string): Promise<GlossTierMap | undefined> {
-  const pack = await loadPack(name);
-  return pack.glossary ?? (await loadOptionalTier(name, 'glossary'));
+  return loadOptionalTier(name, 'glossary');
 }
 
 export async function loadPlaceholders(name: string): Promise<GlossTierMap | undefined> {
-  const pack = await loadPack(name);
-  return pack.placeholders ?? (await loadOptionalTier(name, 'placeholders'));
+  return loadOptionalTier(name, 'placeholders');
 }
 
 export async function loadCommonLiterals(name: string): Promise<GlossTierMap | undefined> {
-  const pack = await loadPack(name);
-  return pack.commonLiterals ?? (await loadOptionalTier(name, 'commonLiterals'));
+  return loadOptionalTier(name, 'commonLiterals');
+}
+
+/** Generated runtime map: native phrases plus code-derived English fallbacks. */
+export async function loadPublishedKeywords(name: string): Promise<PublishedKeywordMap> {
+  assertValidPackName(name);
+  const keywordsPath = join(getPacksRoot(), name, 'keywords.json');
+  const raw = await readFile(keywordsPath, 'utf8');
+  return JSON.parse(raw) as PublishedKeywordMap;
+}
+
+/** Latest coverage report including per-pack ambiguousForms for reverse gloss. */
+export async function loadCoverageSummary(): Promise<CoverageSummary> {
+  const summaryPath = join(getPacksRoot(), 'coverage-summary.json');
+  const raw = await readFile(summaryPath, 'utf8');
+  return JSON.parse(raw) as CoverageSummary;
 }
 
 export function resolveKeywords(pack: LanguagePack): ResolvedKeyword[] {
-  return Object.entries(pack.keywords).map(([logical, value]) => ({
-    logical,
-    phrases: Array.isArray(value) ? value : [value],
-  }));
+  return Object.entries(pack.keywords).map(([logical, value]) => {
+    const { phrases, confidence } = keywordParts(value);
+    return { logical, phrases, ...(confidence ? { confidence } : {}) };
+  });
 }
 
 export function resolveGlossTier(tier: GlossTierMap): ResolvedGlossTier[] {
@@ -66,12 +113,13 @@ export function resolveGlossTier(tier: GlossTierMap): ResolvedGlossTier[] {
   }));
 }
 
+/** Author/source view from `pack.json` (pure translations; no generated English fallbacks). */
 export function flattenKeywords(
   pack: LanguagePack,
 ): Record<string, string[]> {
   const out: Record<string, string[]> = {};
   for (const [logical, value] of Object.entries(pack.keywords)) {
-    out[logical] = Array.isArray(value) ? value : [value];
+    out[logical] = keywordParts(value).phrases;
   }
   return out;
 }

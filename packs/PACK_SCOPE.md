@@ -115,4 +115,4 @@ Quick summary:
 3. Edit `pack.json`, `keywords.json`, `index.json`
 4. From repo root: `npm test` then `npm run registry`
 
-Do **not** run `npm run bootstrap` unless you are a maintainer.
+After editing **your** pack's `pack.json`, run `npm run generate` (or `npm test`, which checks derived files). That command reads each pack's source and writes `keywords.json`; it does **not** overwrite translations from seed templates. The old `bootstrap-packs.mjs` footgun was removed in 0.18.0.

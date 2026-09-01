@@ -65,6 +65,10 @@ export function buildKeywordsJson(packKeywords, registryTokens) {
   const out = {};
   for (const [logical, value] of Object.entries(packKeywords)) {
     const entry = byLogical.get(logical) ?? { logical };
+    if (value && typeof value === 'object' && !Array.isArray(value) && value.confidence === 'draft') {
+      out[logical] = [englishFallback(entry)];
+      continue;
+    }
     const natives = nativePhrases(value, entry);
     if (natives === null) {
       out[logical] = rawPhrases(value);

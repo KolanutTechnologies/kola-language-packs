@@ -6,6 +6,28 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.18.2] - 2026-09-01
+
+### Added
+
+- `loadPublishedKeywords()` and `loadCoverageSummary()` npm APIs; `PublishedKeywordMap`, `AmbiguousForm`, and coverage types
+- `keywordParts()` and `KeywordConfidence` types for confident keyword entries in `pack.json`
+- `packs/KEYWORD_ALIASES.md`: keyword alias rules for authors and tools that consume packs
+- Per-pack translation coverage on README (Core, Full, Translated, Shared forms) from `coverage-summary.json`
+- Path traversal guard on pack name in `loadPack` and related loaders
+
+### Changed
+
+- README code example uses `loadPublishedKeywords`; CONTRIBUTING and REPO_MAP updated for pure-source workflow
+- Contributor docs: replace removed `npm run bootstrap` with `npm run generate`
+- Nigerian Pidgin `PRINT` uses `{ phrases, confidence: "community" }` as confident-form example
+
+### Fixed
+
+- npm package `flattenKeywords` documented as author view; runtime consumers should use `loadPublishedKeywords`
+- `direct-release.mjs` no longer treats the next dated CHANGELOG section as `[Unreleased]` when the unreleased block is empty
+
+
 ## [0.18.1] - 2026-09-01
 
 ### Changed
@@ -327,6 +349,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.18.2]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.18.2
 [0.18.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.18.1
 [0.18.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.18.0
 [0.15.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.1
@@ -339,7 +362,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.18.1...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.18.2...HEAD
 [0.16.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.16.0
 [0.15.4]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.4
 [0.15.3]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.3

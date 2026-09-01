@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.18.1",
+  "version": "0.18.2",
   "displayName": "Nigerian Pidgin",
   "description": "Nigerian Pidgin keyword map — bridge language for Nigerian developers",
   "reviewStatus": "starter",
@@ -110,9 +110,12 @@
     "EXPORT": [
       "send out"
     ],
-    "PRINT": [
-      "show am on screen"
-    ],
+    "PRINT": {
+      "phrases": [
+        "show am on screen"
+      ],
+      "confidence": "community"
+    },
     "TRUE": [
       "e correct"
     ],

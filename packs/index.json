@@ -12,7 +12,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -43,7 +43,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -74,7 +74,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -116,7 +116,7 @@
         "North Africa",
         "East Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -150,7 +150,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -181,7 +181,7 @@
       "regions": [
         "Central Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -212,7 +212,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -243,7 +243,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -296,7 +296,7 @@
         "East Africa",
         "Indian Ocean"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -334,7 +334,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -368,7 +368,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -399,7 +399,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -430,7 +430,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -462,7 +462,7 @@
       "regions": [
         "Central Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -493,7 +493,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -524,7 +524,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -556,7 +556,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -592,7 +592,7 @@
         "Southern Africa",
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -624,7 +624,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -657,7 +657,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -688,7 +688,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -722,7 +722,7 @@
       "regions": [
         "Horn of Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -757,7 +757,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -789,7 +789,7 @@
       "regions": [
         "East Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -820,7 +820,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -853,7 +853,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -884,7 +884,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -917,7 +917,7 @@
       "regions": [
         "West Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",
@@ -948,7 +948,7 @@
       "regions": [
         "Southern Africa"
       ],
-      "version": "0.18.1",
+      "version": "0.18.2",
       "targets": [
         "javascript",
         "python",

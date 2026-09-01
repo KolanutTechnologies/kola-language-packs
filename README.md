@@ -180,6 +180,51 @@ Source of truth: [`packs/coverage-summary.json`](./packs/coverage-summary.json)
 †TypeScript has no single official keyword count in the Handbook; the tracked count is our reserved/modifier + type-keyword set for coverage (see notes in `official-target-keywords.json`).
 <!-- coverage-footnote:end -->
 
+## Pack translation coverage
+
+How much of each pack is translated (vs English stubs). Core = the concepts every tool needs first. Translated means a native phrase exists. English-only slots count as untranslated. Help close the gap: [suggest a translation](https://github.com/KolanutTechnologies/kola-language-packs/issues/new?template=translation-suggestion.yml).
+
+Source of truth: [`packs/coverage-summary.json`](./packs/coverage-summary.json)
+
+<!-- pack-coverage:start -->
+| Pack | Core | Full | Translated | Shared forms |
+|------|-----:|-----:|-----------:|-------------:|
+| Ẹdo (`edo`) | 88.5% | 14.5% | 54/370 | 0 |
+| Hausa (`hausa`) | 85.7% | 9.4% | 35/370 | 0 |
+| Igbo (`igbo`) | 85.7% | 9.4% | 35/370 | 0 |
+| Arabic (`arabic`) | 85.7% | 9.1% | 34/370 | 0 |
+| Yorùbá (`yoruba`) | 82.8% | 8.6% | 32/370 | 0 |
+| Swahili (`swahili`) | 85.7% | 8.3% | 31/370 | 0 |
+| isiZulu (`zulu`) | 85.7% | 8.3% | 31/370 | 0 |
+| Amharic (`amharic`) | 85.7% | 8.1% | 30/370 | 0 |
+| French (`french`) | 85.7% | 8.1% | 30/370 | 0 |
+| Luganda (`luganda`) | 82.8% | 8.1% | 30/370 | 0 |
+| Nigerian Pidgin (`nigerian-pidgin`) | 85.7% | 8.1% | 30/370 | 0 |
+| isiXhosa (`xhosa`) | 85.7% | 8.1% | 30/370 | 0 |
+| Afrikaans (`afrikaans`) | 82.8% | 7.8% | 29/370 | 0 |
+| Efik (`efik`) | 82.8% | 7.8% | 29/370 | 0 |
+| Kinyarwanda (`kinyarwanda`) | 82.8% | 7.8% | 29/370 | 0 |
+| Lingala (`lingala`) | 82.8% | 7.8% | 29/370 | 0 |
+| Oromo (`oromo`) | 82.8% | 7.8% | 29/370 | 0 |
+| Somali (`somali`) | 82.8% | 7.8% | 29/370 | 0 |
+| Tigrinya (`tigrinya`) | 82.8% | 7.8% | 29/370 | 0 |
+| Shona (`shona`) | 80% | 7.5% | 28/370 | 0 |
+| Akan (`akan`) | 77.1% | 7.2% | 27/370 | 0 |
+| Twi (`twi`) | 77.1% | 7.2% | 27/370 | 0 |
+| Wolof (`wolof`) | 74.2% | 7% | 26/370 | 0 |
+| Cameroon Pidgin (`cameroon-pidgin`) | 71.4% | 6.7% | 25/370 | 0 |
+| Bambara (`bambara`) | 0% | 0% | 0/370 | 0 |
+| Fulfulde (`fulfulde`) | 0% | 0% | 0/370 | 0 |
+| Portuguese (Africa) (`portuguese-africa`) | 0% | 0% | 0/370 | 0 |
+| Sesotho (`sesotho`) | 0% | 0% | 0/370 | 0 |
+| Setswana (`setswana`) | 0% | 0% | 0/370 | 0 |
+<!-- pack-coverage:end -->
+
+<!-- pack-coverage-footnote:start -->
+**Shared forms:** a non-primary phrase that also appears on another logical token in the same pack. Allowed when primaries stay unique. Full policy: [`packs/KEYWORD_ALIASES.md`](./packs/KEYWORD_ALIASES.md). Machine export: `coverage-summary.json` → `packCoverage.<name>.ambiguousForms`.
+Currently: 0 shared secondary-alias forms (each pack keeps unique primaries; homographs live in the allowlist until native review adds shared secondaries).
+<!-- pack-coverage-footnote:end -->
+
 ## Spec sources (traceable and linkable)
 
 Source of truth: [`packs/official-target-keywords.json`](./packs/official-target-keywords.json)
@@ -214,13 +259,13 @@ npm install @kolanut/language-packs
 
 <!-- code-example-stats:start -->
 ```typescript
-import { listPackNames, loadPack, flattenKeywords } from '@kolanut/language-packs';
+import { listPackNames, loadPack, loadPublishedKeywords } from '@kolanut/language-packs';
 
 const packs = await listPackNames(); // e.g. 29 packs
 
-const yoruba = await loadPack('yoruba');
-const keywords = flattenKeywords(yoruba);
-// { IF: ['ṣé', 'if'], FOR: ['fun', 'for'], ... } — maps 370 logical tokens
+const yoruba = await loadPack('yoruba'); // metadata + source keywords
+const keywords = await loadPublishedKeywords('yoruba'); // runtime map
+// keywords.IF → ['ṣé', 'ti', 'if'] (370 logical tokens)
 ```
 <!-- code-example-stats:end -->
 
@@ -390,7 +435,7 @@ npm install
 npm test
 ```
 
-**Do not run** `npm run bootstrap` — it overwrites all packs ([`scripts/README.md`](./scripts/README.md)).
+**Edit `pack.json` keywords only.** Run `npm run generate` (or `npm test`) to refresh `keywords.json`. Do not run bulk regenerate scripts unless you are a maintainer ([`scripts/README.md`](./scripts/README.md)).
 
 Docs: [`CONTRIBUTING-SIMPLE.md`](./CONTRIBUTING-SIMPLE.md) (no coding) · [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`packs/REPO_MAP.md`](./packs/REPO_MAP.md) (what each file does) · [`VERSIONING.md`](./VERSIONING.md) · [`CHANGELOG.md`](./CHANGELOG.md)
 
@@ -451,7 +496,7 @@ From the **repo root** only:
 
 - **`npm test`** — every PR (checks your files; does not delete anything)
 - **`npm run registry`** — only when adding a new pack
-- **Never `npm run bootstrap`** as a contributor — overwrites all packs
+- **`npm run generate`** only after you edit **your** pack's source (`pack.json`). It syncs derived files from source; it is not the old bootstrap footgun (that script was deleted in 0.18.0)
 
 Details: [`CONTRIBUTING.md`](./CONTRIBUTING.md) · [`scripts/README.md`](./scripts/README.md)
 
@@ -476,7 +521,7 @@ This section is only relevant if you’re maintaining the package or editing gen
 - Regenerate derived pack files after changing the source definitions:
 
 ```bash
-npm run bootstrap
+npm run generate
 ```
 
 </details>

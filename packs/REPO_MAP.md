@@ -26,12 +26,13 @@ Quick map of this repository. **Contributors** mostly touch `packs/<language>/` 
 | `packs/NAMING_GUIDE.md` | Naming, locale format, new pack steps |
 | `packs/DIALECTS.md` | Dialect → aliases vs new pack |
 | `packs/GLOSSARY.md` | ISO 639, ISO 3166-1, BCP-47 explained |
+| `packs/KEYWORD_ALIASES.md` | Keyword alias rules, polysemy vs bad mapping, tool contract |
 
 ## Do not edit (unless maintainer)
 
 | Path | Purpose |
 |------|---------|
-| `packs/logical-tokens.json` | Shared concept registry — separate PR to add concepts |
+| `packs/logical-tokens.json` | Shared concept registry. Separate PR to add concepts |
 | `packs/official-target-keywords.json` | Spec-backed keyword lists per programming language |
 | `packs/target-coverage.json` | Maps tokens → target keywords |
 | `packs/coverage-summary.json` | **Auto-generated** coverage report |
@@ -40,8 +41,8 @@ Quick map of this repository. **Contributors** mostly touch `packs/<language>/` 
 | `packs/language-registry.json` | **Auto-generated** — run `npm run registry` after new pack |
 | `scripts/*` | Validation and generation — see [`scripts/README.md`](../scripts/README.md) |
 | `pack.schema.json` | JSON Schema — required fields and formats for `pack.json` |
-| `src/` | TypeScript npm API (`loadPack`, etc.) |
-| `dist/` | **Built output** for npm — from `npm run build` |
+| `src/` | TypeScript npm API (`loadPack`, `loadPublishedKeywords`, `loadCoverageSummary`, …) |
+| `dist/` | **Built output** for npm. From `npm run build` |
 
 ---
 
@@ -61,7 +62,7 @@ A **contract** for `pack.json`. It defines:
 
 | File | Purpose |
 |------|---------|
-| `package.json` | npm package `@kolanut/language-packs` — version, scripts, publish config |
+| `package.json` | npm package `@kolanut/language-packs`: version, scripts, publish config |
 | `README.md` | Project overview for GitHub and npm |
 | `CHANGELOG.md` | Release notes (what changed each version) |
 | `VERSIONING.md` | How npm version and pack versions relate |
@@ -74,8 +75,8 @@ A **contract** for `pack.json`. It defines:
 | Mistake | What happens |
 |---------|----------------|
 | Wrong pack folder | PR review catches it |
-| Invalid JSON / missing fields | `npm test` fails — fix before merge |
-| Ran `npm run bootstrap` as contributor | May overwrite all packs — **maintainers will reject** |
+| Invalid JSON / missing fields | `npm test` fails. Fix before merge |
+| Bulk-regenerated all packs without source edits | Maintainers will ask for justification |
 | Duplicate locale in `index.json` | `npm test` fails |
 
-You do not break npm or production by a bad PR — CI runs `npm test` before merge.
+You do not break npm or production by a bad PR. CI runs `npm test` before merge.

@@ -67,7 +67,10 @@ function classifyCommitsSince(ref) {
 }
 
 function extractUnreleased(changelog) {
-  const match = changelog.match(/## \[Unreleased\]\s*\n([\s\S]*?)(?=\n## \[|\n\[Unreleased\]:|$)/);
+  // Do not use \s* after [Unreleased] — it can swallow blank lines and swallow the next ## section into the capture.
+  const match = changelog.match(
+    /## \[Unreleased\]\r?\n([\s\S]*?)(?=\r?\n## \[\d+\.\d+\.\d+\]|\r?\n## \[Unreleased\]|\r?\n\[Unreleased\]:|$)/,
+  );
   if (!match) return '';
   return match[1].trim();
 }
@@ -167,12 +170,15 @@ async function main() {
   const pkgPath = join(root, 'package.json');
   const pkg = JSON.parse(await readFile(pkgPath, 'utf8'));
   const pkgVersion = pkg.version;
+  const unreleasedBody = extractUnreleased(changelog);
+  const hasUnreleasedNotes = hasReleaseNotes(unreleasedBody);
 
   // Local build already prepared this version; CI only tags and publishes.
   if (
     compareSemver(pkgVersion, lastTagVersion) > 0 &&
     hasChangelogSection(changelog, pkgVersion) &&
-    !tagExists(pkgVersion)
+    !tagExists(pkgVersion) &&
+    !hasUnreleasedNotes
   ) {
     console.log(`Prepared release v${pkgVersion} (package.json ahead of ${lastTag}); ready to tag.`);
     if (!dryRun) await writeReleaseBody(pkgVersion);
@@ -188,25 +194,40 @@ async function main() {
     return;
   }
 
-  const bump = classifyCommitsSince(lastTag);
+  let bump;
+  let baseVersion = lastTagVersion;
+  if (
+    compareSemver(pkgVersion, lastTagVersion) > 0 &&
+    hasChangelogSection(changelog, pkgVersion) &&
+    hasUnreleasedNotes
+  ) {
+    baseVersion = pkgVersion;
+    bump = 'patch';
+  } else {
+    bump = classifyCommitsSince(lastTag);
+    if (compareSemver(pkgVersion, lastTagVersion) > 0 && hasChangelogSection(changelog, pkgVersion)) {
+      baseVersion = pkgVersion;
+    }
+  }
+
   if (!bump) {
     console.log(`Skip: no feat/fix commits since ${lastTag}.`);
     await setOutput('released', 'false');
     return;
   }
 
-  const next = nextVersion(lastTagVersion, bump);
-  const unreleasedBody = extractUnreleased(changelog);
-  if (!hasReleaseNotes(unreleasedBody)) {
+  if (!hasUnreleasedNotes) {
     console.log('Skip: [Unreleased] has no changelog bullets.');
     await setOutput('released', 'false');
     return;
   }
 
+  const next = nextVersion(baseVersion, bump);
+
   const date = new Date().toISOString().slice(0, 10);
   const newChangelog = applyChangelogRelease(changelog, next, unreleasedBody, date);
 
-  console.log(`Release ${lastTagVersion} → ${next} (${bump}) since ${lastTag}`);
+  console.log(`Release ${baseVersion} → ${next} (${bump}) since ${lastTag}`);
 
   if (dryRun) {
     console.log('Dry run: no files written.');

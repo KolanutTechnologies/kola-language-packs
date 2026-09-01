@@ -211,9 +211,12 @@ npm test
 |---------|---------------|--------------------------|
 | `npm test` | “Are my files valid?” | **No** — safe always |
 | `npm run registry` | “Refresh the taken-names list” | Only updates `language-registry.json` |
-| `npm run bootstrap` | “Replace ALL packs from script” | **Yes — wipes hand edits** — maintainers only |
+| `npm run generate` | Regenerates `keywords.json` and derived indexes from `pack.json` | **Yes** — run after editing source keywords |
+| `npm test` | Validates packs, coverage, README sync, UTF-8 guard | **No** — safe always |
 
-**`npm run bootstrap` does not mean “refresh” or “validate”.** It regenerates every pack from `scripts/bootstrap-packs.mjs`. Contributors must **never** run it.
+**Do not hand-edit `keywords.json`.** Edit `pack.json` → `keywords`, then run `npm run generate` or `npm test`.
+
+**`npm run generate` is not a substitute for `npm test`.** Always run `npm test` before a PR.
 
 **Good `npm test` output:**
 ```text
