@@ -112,7 +112,7 @@ Quick summary:
 
 1. Check `language-registry.json` → `taken`
 2. Copy `packs/hausa` → `packs/your-pack-name`
-3. Edit `pack.json`, `keywords.json`, `index.json`
+3. Edit `pack.json`, run `npm run generate`, update `index.json` for new packs
 4. From repo root: `npm test` then `npm run registry`
 
 After editing **your** pack's `pack.json`, run `npm run generate` (or `npm test`, which checks derived files). That command reads each pack's source and writes `keywords.json`; it does **not** overwrite translations from seed templates. The old `bootstrap-packs.mjs` footgun was removed in 0.18.0.

@@ -183,8 +183,8 @@ cp -r packs/hausa packs/your-pack-name
 
 Then edit:
 
-1. `packs/your-pack-name/pack.json` — all metadata + keywords  
-2. `packs/your-pack-name/keywords.json` — must match `pack.json` keywords  
+1. `packs/your-pack-name/pack.json` — all metadata + native keywords  
+2. Run `npm run generate` to create `keywords.json` from source  
 3. `packs/index.json` — add your pack entry  
 
 ---
@@ -220,7 +220,7 @@ npm test
 
 **Good `npm test` output:**
 ```text
-Validated 25 language pack(s) against 112 logical token(s).
+Validated 29 language pack(s) against 370 logical token(s).
 Coverage OK: ...
 ```
 

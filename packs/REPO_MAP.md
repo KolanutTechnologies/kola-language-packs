@@ -8,9 +8,14 @@ Quick map of this repository. **Contributors** mostly touch `packs/<language>/` 
 
 | Path | Purpose |
 |------|---------|
-| `packs/<name>/pack.json` | Metadata + all keyword translations |
-| `packs/<name>/keywords.json` | Same keywords as `pack.json` (for tools) |
+| `packs/<name>/pack.json` | Metadata + native keyword phrases (source) |
 | `packs/index.json` | Directory of all packs — add a row for **new** packs only |
+
+## Generated (do not hand-edit)
+
+| Path | Purpose |
+|------|---------|
+| `packs/<name>/keywords.json` | Published keywords (natives + code-derived English). Run `npm run generate` after editing `pack.json` |
 
 ## You read these (contributors)
 

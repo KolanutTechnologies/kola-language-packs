@@ -50,8 +50,8 @@ Every contribution is a **language pack** under `packs/<name>/`. You translate p
 
 | File | What to do |
 |------|------------|
-| `packs/<name>/pack.json` | Edit metadata + `keywords` |
-| `packs/<name>/keywords.json` | Edit the same `keywords` (must match `pack.json` exactly) |
+| `packs/<name>/pack.json` | Edit metadata + native `keywords` (source) |
+| `packs/<name>/keywords.json` | **Generated** — run `npm run generate` after editing `pack.json`; do not hand-edit |
 | `packs/logical-tokens.json` | Read only — your translation checklist |
 | `packs/index.json` | Add an entry only when creating a **new** pack |
 
@@ -151,11 +151,13 @@ Single phrase:
 "IF": "uma"
 ```
 
-Multiple aliases (recommended — include English fallback last):
+Multiple native aliases:
 
 ```json
-"IF": ["uma", "kepha uma", "if"]
+"IF": ["uma", "kepha uma"]
 ```
+
+English fallbacks are appended in generated `keywords.json` by `npm run generate`, not written in `pack.json`.
 
 ---
 
@@ -235,7 +237,7 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 - [ ] `scopeNote` explains what is in scope and what belongs in a different pack
 - [ ] All **370** logical tokens from `logical-tokens.json` have translations in `keywords`
 - [ ] No keyword form steals another concept's English (e.g. not `ELIF: ["else"]`) or another concept's primary gloss as an alias
-- [ ] `keywords.json` and `pack.json` → `keywords` are **identical**
+- [ ] After keyword edits: `npm run generate` (or `npm test`) so derived `keywords.json` matches `pack.json`
 - [ ] `targets` lists all five: `javascript`, `python`, `typescript`, `go`, `rust`
 - [ ] `npm test` passes locally
 - [ ] One language pack per PR
@@ -257,7 +259,7 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 - Changing one or two words without checking the full token list
 - Mixing phrases from different countries in one pack (e.g. Nigerian + Ghanaian pidgin)
 - Editing `logical-tokens.json` instead of the language pack
-- Updating only `keywords.json` but forgetting `pack.json` (or vice versa)
+- Editing `pack.json` keywords without running `npm run generate` (derived files drift)
 - Stubbing a concept with a different concept's English word (e.g. `ELIF: ["else"]`)
 
 ---
@@ -274,8 +276,8 @@ Use this list — incomplete PRs will fail CI or be sent back for revision.
 
 ```
 packs/yoruba/
-├── pack.json       ← metadata + keyword mappings
-└── keywords.json   ← same keyword mappings (for tooling)
+├── pack.json       ← metadata + native keyword phrases (you edit)
+└── keywords.json   ← generated published shape (tools read this at runtime)
 ```
 
 ### Required metadata example
@@ -322,7 +324,7 @@ See [`packs/target-coverage.json`](./packs/target-coverage.json) for how each to
 1. **Submit your PR** — one language pack per PR
 2. **Native speaker review** — accuracy and naturalness
 3. **Automated checks** — CI runs `npm test` (validation + coverage)
-4. **Merge and release** — release-please batches releasable PRs into a Release PR; maintainer merges when ready to publish
+4. **Merge and release** — maintainer merges to `main`; CI tags and publishes npm via [`scripts/direct-release.mjs`](./scripts/direct-release.mjs) (Flow B: prepared version on `main`, tag-only in CI)
 
 Most PRs are reviewed within 1–2 weeks.
 
@@ -334,23 +336,22 @@ Contributors can also use GitHub issue forms ([`CONTRIBUTING-SIMPLE.md`](./CONTR
 
 | Label | Form | Your job |
 |-------|------|----------|
-| `translation-suggestion` | Suggest a translation | Add alias or replace phrasing in `packs/<name>/keywords.json` and `pack.json` → `keywords`; credit submitter in `contributors` when appropriate |
+| `translation-suggestion` | Suggest a translation | Edit `packs/<name>/pack.json` → `keywords`; run `npm run generate`; credit submitter in `contributors` when appropriate |
 | `translation-review` | Report unnatural phrasing | Same as above; close with link to merged PR or commit |
 
 **Triage checklist:**
 
 1. Confirm pack scope ([`PACK_SCOPE.md`](./packs/PACK_SCOPE.md), [`DIALECTS.md`](./packs/DIALECTS.md)).
-2. Keep English fallback as last alias when adding arrays.
-3. Sync `keywords.json` and `pack.json` → `keywords` identically.
-4. Run `npm test` from repo root.
-5. Open a PR (or batch several issues). Reference the issue number.
-6. Comment on the issue when shipped; thank the contributor.
+2. Edit native phrases in `pack.json` only (no English fallbacks in source arrays).
+3. Run `npm run generate`, then `npm test` from repo root.
+4. Open a PR (or batch several issues). Reference the issue number.
+5. Comment on the issue when shipped; thank the contributor.
 
-When adding a new pack, run `npm run issue-templates:sync` (or `npm test`) so GitHub issue form dropdowns stay current. Do not hand-edit lines between `# sync:pack-options` / `# sync:concept-options` markers. See [issue-template-sync](../../rules/issue-template-sync.mdc).
+When adding a new pack, run `npm test` (syncs issue templates). Do not hand-edit lines between `# sync:pack-options` / `# sync:concept-options` markers in `.github/ISSUE_TEMPLATE/`.
 
 ### PR titles (for automated changelog)
 
-Use [Conventional Commits](https://www.conventionalcommits.org/) in your **squash merge title** so release-please can write the changelog:
+Use [Conventional Commits](https://www.conventionalcommits.org/) in PR titles (`fix:`, `feat:`). Maintainers run `node scripts/direct-release.mjs` before push for releasable builds.
 
 | Prefix | When to use | Example title |
 |--------|-------------|---------------|

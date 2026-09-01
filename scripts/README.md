@@ -139,6 +139,7 @@ All commands run from the **repo root** (`kola-language-packs/`).
 | npm command | Script | Changes files? | Contributor? |
 |-------------|--------|----------------|--------------|
 | `npm test` | validate + coverage + README sync + issue templates | coverage-summary + README.md + ISSUE_TEMPLATE | **Yes — always** |
+| `npm run generate` | generate-derived | keywords.json, index fields, by-country, by-region | After editing `pack.json` keywords |
 | `npm run readme:sync` | update-readme-metrics | README.md | After pack/target/token changes |
 | `npm run issue-templates:sync` | sync-issue-templates | `.github/ISSUE_TEMPLATE/*.yml` | After new pack or core logical token |
 | `npm run registry` | generate-language-registry | language-registry.json | New pack only |

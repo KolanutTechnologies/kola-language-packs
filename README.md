@@ -403,8 +403,8 @@ Maintainers apply your suggestion and credit you in the pack.
 
 | File | Your role |
 |------|-----------|
-| `packs/<language>/pack.json` | **Edit** — metadata (`locale`, `countries`, `regions`, `scopeNote`) + keyword mappings |
-| `packs/<language>/keywords.json` | **Edit** — same keyword mappings (must match `pack.json`) |
+| `packs/<language>/pack.json` | **Edit** — metadata + native keyword phrases (source) |
+| `packs/<language>/keywords.json` | **Generated** — run `npm run generate` after editing `pack.json`; do not hand-edit |
 | `packs/logical-tokens.json` | **Read only** — checklist of all 370 concepts; do not edit for translations |
 | `packs/index.json` | **Edit only when adding a new pack** |
 | [`packs/language-registry.json`](./packs/language-registry.json) | **Check before naming** — shipped + planned identifiers |
