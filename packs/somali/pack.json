@@ -11,7 +11,7 @@
   "regions": [
     "Horn of Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Somali",
   "description": "Somali keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -37,123 +37,94 @@
   ],
   "keywords": {
     "IF": [
-      "haddii",
-      "if"
+      "haddii"
     ],
     "ELSE": [
-      "haddii kale",
-      "else"
+      "haddii kale"
     ],
     "FOR": [
-      "u",
-      "for"
+      "u"
     ],
     "WHILE": [
-      "intii",
-      "while"
+      "intii"
     ],
     "BREAK": [
-      "jebi",
-      "break"
+      "jebi"
     ],
     "CONTINUE": [
-      "sii wad",
-      "continue"
+      "sii wad"
     ],
     "SWITCH": [
-      "dooro",
-      "switch"
+      "dooro"
     ],
     "CASE": [
-      "kiis",
-      "case"
+      "kiis"
     ],
     "DEFAULT": [
-      "asal ahaan",
-      "default"
+      "asal ahaan"
     ],
     "FUNCTION": [
-      "shaqo",
-      "function"
+      "shaqo"
     ],
     "RETURN": [
-      "soo celi",
-      "return"
+      "soo celi"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "sug",
-      "await"
+      "sug"
     ],
     "TRY": [
-      "isku day",
-      "try"
+      "isku day"
     ],
     "CATCH": [
-      "qab",
-      "catch"
+      "qab"
     ],
     "FINALLY": [
-      "ugu dambeyn",
-      "finally"
+      "ugu dambeyn"
     ],
     "THROW": [
-      "tuur",
-      "throw"
+      "tuur"
     ],
     "LET": [
-      "u oggol",
-      "let"
+      "u oggol"
     ],
     "CONST": [
-      "joogto ah",
-      "const"
+      "joogto ah"
     ],
     "CLASS": [
-      "fasal",
-      "class"
+      "fasal"
     ],
     "EXTENDS": [
-      "kordhi",
-      "extends"
+      "kordhi"
     ],
     "NEW": [
-      "cusub",
-      "new"
+      "cusub"
     ],
     "THIS": [
-      "kan",
-      "this"
+      "kan"
     ],
     "IMPORT": [
-      "soo deji",
-      "import"
+      "soo deji"
     ],
     "EXPORT": [
-      "dhoof",
-      "export"
+      "dhoof"
     ],
     "PRINT": [
-      "daabac",
-      "print"
+      "daabac"
     ],
     "TRUE": [
-      "run",
-      "true"
+      "run"
     ],
     "FALSE": [
-      "been",
-      "false"
+      "been"
     ],
     "NULL": [
-      "waxba",
-      "null"
+      "waxba"
     ],
     "UNDEFINED": [
-      "aan la qeexin",
-      "undefined"
+      "aan la qeexin"
     ],
     "ELIF": [
       "elif"

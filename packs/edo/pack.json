@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Ẹdo",
   "description": "Edo (Bini) keyword map - starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -35,217 +35,164 @@
   "keywords": {
     "IF": [
       "deghẹ",
-      "deghe",
-      "if"
+      "deghe"
     ],
     "ELSE": [
-      "sokpan",
-      "else"
+      "sokpan"
     ],
     "ELIF": [
-      "deghẹọvbehe",
-      "elif"
+      "deghẹọvbehe"
     ],
     "FOR": [
-      "ne",
-      "for"
+      "ne"
     ],
     "WHILE": [
-      "ghi",
-      "while"
+      "ghi"
     ],
     "BREAK": [
-      "baan",
-      "break"
+      "baan"
     ],
     "CONTINUE": [
-      "dọlọ",
-      "continue"
+      "dọlọ"
     ],
     "SWITCH": [
-      "zẹ",
-      "switch"
+      "zẹ"
     ],
     "CASE": [
-      "ẹzọ",
-      "case"
+      "ẹzọ"
     ],
     "DEFAULT": [
-      "ẹkẹke",
-      "default"
+      "ẹkẹke"
     ],
     "FUNCTION": [
-      "iwinna",
-      "function"
+      "iwinna"
     ],
     "RETURN": [
-      "werriegbe",
-      "return"
+      "werriegbe"
     ],
     "ASYNC": [
-      "ẹghẹghẹ",
-      "async"
+      "ẹghẹghẹ"
     ],
     "AWAIT": [
       "diakhẹẹ",
-      "khẹ",
-      "await"
+      "khẹ"
     ],
     "TRY": [
-      "hia",
-      "try"
+      "hia"
     ],
     "CATCH": [
-      "mu",
-      "catch"
+      "mu"
     ],
     "FINALLY": [
-      "he",
-      "finally"
+      "he"
     ],
     "THROW": [
-      "rhiefua",
-      "throw"
+      "rhiefua"
     ],
     "LET": [
-      "ya",
-      "let"
+      "ya"
     ],
     "CONST": [
-      "ẹighẹẹ",
-      "const"
+      "ẹighẹẹ"
     ],
     "CLASS": [
-      "ẹgbẹ",
-      "class"
+      "ẹgbẹ"
     ],
     "EXTENDS": [
-      "lele",
-      "extends"
+      "lele"
     ],
     "NEW": [
-      "ọgbọn",
-      "new"
+      "ọgbọn"
     ],
     "THIS": [
-      "ọna",
-      "this"
+      "ọna"
     ],
     "IMPORT": [
-      "rhielaoẹ",
-      "import"
+      "rhielaoẹ"
     ],
     "EXPORT": [
-      "ladian",
-      "export"
+      "ladian"
     ],
     "PRINT": [
-      "gbẹn",
-      "print"
+      "gbẹn"
     ],
     "TRUE": [
-      "ẹẹn",
-      "true"
+      "ẹẹn"
     ],
     "FALSE": [
-      "ẹo",
-      "false"
+      "ẹo"
     ],
     "NULL": [
-      "ihoi",
-      "null"
+      "ihoi"
     ],
     "UNDEFINED": [
-      "ẹirẹn",
-      "undefined"
+      "ẹirẹn"
     ],
     "AND": [
-      "kevbe",
-      "and"
+      "kevbe"
     ],
     "OR": [
-      "ra",
-      "or"
+      "ra"
     ],
     "NOT": [
-      "ẹi",
-      "not"
+      "ẹi"
     ],
     "IN": [
-      "vbe",
-      "in"
+      "vbe"
     ],
     "IS": [
-      "ọrẹ",
-      "is"
+      "ọrẹ"
     ],
     "OF": [
-      "ọghe",
-      "of"
+      "ọghe"
     ],
     "WITH": [
-      "debae",
-      "with"
+      "debae"
     ],
     "FROM": [
-      "ke",
-      "from"
+      "ke"
     ],
     "AS": [
-      "vbene",
-      "as"
+      "vbene"
     ],
     "DO": [
-      "ru",
-      "do"
+      "ru"
     ],
     "PASS": [
-      "gberra",
-      "pass"
+      "gberra"
     ],
     "WHEN": [
-      "ẹghẹ",
-      "when"
+      "ẹghẹ"
     ],
     "WHERE": [
-      "ehe",
-      "where"
+      "ehe"
     ],
     "END": [
-      "fo",
-      "end"
+      "fo"
     ],
     "FINAL": [
-      "fofo",
-      "final"
+      "fofo"
     ],
     "NIL": [
-      "ohogha",
-      "nil"
+      "ohogha"
     ],
     "NONE": [
-      "rhokpa",
-      "none"
+      "rhokpa"
     ],
     "VAR": [
-      "emwin",
-      "var"
+      "emwin"
     ],
     "DELETE": [
-      "hin",
-      "delete"
+      "hin"
     ],
     "SUPER": [
-      "ọdiọnmwan",
-      "super"
+      "ọdiọnmwan"
     ],
     "TYPE": [
-      "ughughan",
-      "type"
+      "ughughan"
     ],
     "ENUM": [
-      "usun",
-      "enum"
+      "usun"
     ],
     "LOOP": [
       "loop"
@@ -803,8 +750,7 @@
       "vararg"
     ],
     "INIT": [
-      "suẹn",
-      "init"
+      "suẹn"
     ],
     "OPEN": [
       "open"

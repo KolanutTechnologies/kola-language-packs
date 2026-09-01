@@ -1,50 +1,38 @@
 {
   "condition": [
-    "if condition",
-    "condition"
+    "if condition"
   ],
   "name": [
-    "nem",
-    "name"
+    "nem"
   ],
   "data_value": [
-    "wetin e worth",
-    "data_value"
+    "wetin e worth"
   ],
   "message": [
-    "write-up",
-    "message"
+    "write-up"
   ],
   "index": [
-    "position",
-    "index"
+    "position"
   ],
   "item": [
-    "thing",
-    "item"
+    "thing"
   ],
   "body": [
-    "main part",
-    "body"
+    "main part"
   ],
   "expression": [
-    "how you talk am",
-    "expression"
+    "how you talk am"
   ],
   "variable": [
-    "wetin dey change",
-    "variable"
+    "wetin dey change"
   ],
   "array": [
-    "list",
-    "array"
+    "list"
   ],
   "function": [
-    "work wey e dey do",
-    "function"
+    "work wey e dey do"
   ],
   "class": [
-    "group type",
-    "class"
+    "group type"
   ]
 }

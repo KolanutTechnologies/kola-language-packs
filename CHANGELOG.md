@@ -6,6 +6,14 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 
 ## [Unreleased]
 
+## [0.18.1] - 2026-09-01
+
+### Changed
+
+- **Breaking (authoring):** `pack.json` keywords are pure native (or bare English stubs); English fallbacks live in generated `keywords.json` only
+- All 29 shipped packs migrated to pure-source `pack.json`; regenerated `keywords.json`, `index.json`, `by-country.json`, and `by-region.json`
+- Phase G union-TAM planned packs in `languages-roadmap.json` (Spanish, Haitian Creole, Filipino, Indonesian, Nepali at 1.4.0)
+
 ## [0.18.0] - 2026-09-01
 
 ### Added
@@ -319,6 +327,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 - 25 African language packs (112 logical tokens each)
 - npm package `@kolanut/language-packs`
 - Validation and keyword coverage checks
+[0.18.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.18.1
 [0.18.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.18.0
 [0.15.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.1
 [0.15.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.0
@@ -330,7 +339,7 @@ Automated releases on push to `main` via [`scripts/direct-release.mjs`](./script
 [0.12.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.1
 [0.12.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.12.0
 [0.11.1]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.11.1
-[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.18.0...HEAD
+[Unreleased]: https://github.com/KolanutTechnologies/kola-language-packs/compare/v0.18.1...HEAD
 [0.16.0]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.16.0
 [0.15.4]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.4
 [0.15.3]: https://github.com/KolanutTechnologies/kola-language-packs/releases/tag/v0.15.3

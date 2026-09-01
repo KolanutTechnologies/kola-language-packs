@@ -1,62 +1,47 @@
 {
   "Hello": [
-    "Agoo",
-    "Hello"
+    "Agoo"
   ],
   "Error": [
-    "Mfomso",
-    "Error"
+    "Mfomso"
   ],
   "Success": [
-    "Ɛyɛ yie",
-    "Success"
+    "Ɛyɛ yie"
   ],
   "Welcome": [
-    "Akwaaba",
-    "Welcome"
+    "Akwaaba"
   ],
   "Goodbye": [
-    "Nante yie",
-    "Goodbye"
+    "Nante yie"
   ],
   "Yes": [
-    "Aane",
-    "Yes"
+    "Aane"
   ],
   "No": [
-    "Daabi",
-    "No"
+    "Daabi"
   ],
   "Done": [
-    "Awie",
-    "Done"
+    "Awie"
   ],
   "Loading": [
-    "Ɛre load",
-    "Loading"
+    "Ɛre load"
   ],
   "Failed": [
-    "Antumi",
-    "Failed"
+    "Antumi"
   ],
   "Cancel": [
-    "Twa mu",
-    "Cancel"
+    "Twa mu"
   ],
   "Submit": [
-    "Fa kɔ",
-    "Submit"
+    "Fa kɔ"
   ],
   "Search": [
-    "Hwehwɛ",
-    "Search"
+    "Hwehwɛ"
   ],
   "Warning": [
-    "Kɔkɔbɔ",
-    "Warning"
+    "Kɔkɔbɔ"
   ],
   "Please wait": [
-    "Yɛsrɛ twɛn",
-    "Please wait"
+    "Yɛsrɛ twɛn"
   ]
 }

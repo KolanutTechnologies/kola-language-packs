@@ -1,50 +1,38 @@
 {
   "condition": [
-    "ọnọdụ",
-    "condition"
+    "ọnọdụ"
   ],
   "name": [
-    "aha",
-    "name"
+    "aha"
   ],
   "data_value": [
-    "uru",
-    "data_value"
+    "uru"
   ],
   "message": [
-    "ozi",
-    "message"
+    "ozi"
   ],
   "index": [
-    "ọnụọgụ",
-    "index"
+    "ọnụọgụ"
   ],
   "item": [
-    "ihe",
-    "item"
+    "ihe"
   ],
   "body": [
-    "ime",
-    "body"
+    "ime"
   ],
   "expression": [
-    "okwu",
-    "expression"
+    "okwu"
   ],
   "variable": [
-    "gbanwere",
-    "variable"
+    "gbanwere"
   ],
   "array": [
-    "ndepụta",
-    "array"
+    "ndepụta"
   ],
   "function": [
-    "ọrụ",
-    "function"
+    "ọrụ"
   ],
   "class": [
-    "klasi",
-    "class"
+    "klasi"
   ]
 }

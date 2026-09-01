@@ -11,7 +11,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Hausa",
   "description": "Hausa keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -37,153 +37,121 @@
   ],
   "keywords": {
     "IF": [
-      "idan",
-      "if"
+      "idan"
     ],
     "ELSE": [
       "in ba haka ba",
       "sai",
-      "imbahakaba",
-      "else"
+      "imbahakaba"
     ],
     "FOR": [
       "domi",
       "ga",
-      "ma",
-      "for"
+      "ma"
     ],
     "WHILE": [
       "yayin da",
       "yayinda",
-      "indai",
-      "while"
+      "indai"
     ],
     "BREAK": [
-      "tsaya",
-      "break"
+      "tsaya"
     ],
     "CONTINUE": [
       "ci gaba",
-      "ci_gaba",
-      "continue"
+      "ci_gaba"
     ],
     "SWITCH": [
-      "zaɓi",
-      "switch"
+      "zaɓi"
     ],
     "CASE": [
       "lokaci",
-      "hali",
-      "case"
+      "hali"
     ],
     "DEFAULT": [
-      "tsoho",
-      "default"
+      "tsoho"
     ],
     "FUNCTION": [
-      "aiki",
-      "function"
+      "aiki"
     ],
     "RETURN": [
-      "dawo",
-      "return"
+      "dawo"
     ],
     "ASYNC": [
       "jira",
-      "ba_jira",
-      "async"
+      "ba_jira"
     ],
     "AWAIT": [
-      "jira don",
-      "await"
+      "jira don"
     ],
     "TRY": [
-      "gwada",
-      "try"
+      "gwada"
     ],
     "CATCH": [
-      "kama",
-      "catch"
+      "kama"
     ],
     "FINALLY": [
       "a ƙarshe",
-      "karshe",
-      "finally"
+      "karshe"
     ],
     "THROW": [
-      "jefa",
-      "throw"
+      "jefa"
     ],
     "LET": [
-      "bari",
-      "let"
+      "bari"
     ],
     "CONST": [
-      "tabbatacce",
-      "const"
+      "tabbatacce"
     ],
     "CLASS": [
       "rukuni",
       "aji",
-      "tsarin",
-      "class"
+      "tsarin"
     ],
     "EXTENDS": [
-      "kara",
-      "extends"
+      "kara"
     ],
     "NEW": [
-      "sabo",
-      "new"
+      "sabo"
     ],
     "THIS": [
-      "wannan",
-      "this"
+      "wannan"
     ],
     "IMPORT": [
       "shigo da",
       "shigo",
-      "karo",
-      "import"
+      "karo"
     ],
     "EXPORT": [
-      "fitar da",
-      "export"
+      "fitar da"
     ],
     "PRINT": [
       "nuna",
       "buga",
-      "rubuta",
-      "print"
+      "rubuta"
     ],
     "TRUE": [
-      "gaskiya",
-      "true"
+      "gaskiya"
     ],
     "FALSE": [
-      "karya",
-      "false"
+      "karya"
     ],
     "NULL": [
       "babu komai",
-      "babu",
-      "null"
+      "babu"
     ],
     "UNDEFINED": [
-      "ba a bayyana ba",
-      "undefined"
+      "ba a bayyana ba"
     ],
     "ELIF": [
       "koidan",
-      "kokuma",
-      "elif"
+      "kokuma"
     ],
     "LOOP": [
       "loop"
     ],
     "MATCH": [
-      "duba",
-      "match"
+      "duba"
     ],
     "GOTO": [
       "goto"
@@ -303,16 +271,13 @@
       "map"
     ],
     "AND": [
-      "da",
-      "and"
+      "da"
     ],
     "OR": [
-      "ko",
-      "or"
+      "ko"
     ],
     "NOT": [
-      "ba",
-      "not"
+      "ba"
     ],
     "IN": [
       "in"

@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "kies",
-    "switch"
+    "match"
   ],
   "CASE": [
     "geval",
@@ -37,7 +37,7 @@
   ],
   "FUNCTION": [
     "funksie",
-    "function"
+    "def"
   ],
   "RETURN": [
     "gee terug",
@@ -56,7 +56,7 @@
   ],
   "CATCH": [
     "vang",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "uiteindelik",
@@ -88,7 +88,7 @@
   ],
   "THIS": [
     "hierdie",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "voer in",
@@ -112,11 +112,11 @@
   ],
   "NULL": [
     "leeg",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "ongedefinieerd",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

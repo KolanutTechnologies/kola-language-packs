@@ -9,7 +9,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Afrikaans",
   "description": "Afrikaans keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -35,123 +35,94 @@
   ],
   "keywords": {
     "IF": [
-      "as",
-      "if"
+      "as"
     ],
     "ELSE": [
-      "anders",
-      "else"
+      "anders"
     ],
     "FOR": [
-      "vir",
-      "for"
+      "vir"
     ],
     "WHILE": [
-      "terwyl",
-      "while"
+      "terwyl"
     ],
     "BREAK": [
-      "breek",
-      "break"
+      "breek"
     ],
     "CONTINUE": [
-      "gaan voort",
-      "continue"
+      "gaan voort"
     ],
     "SWITCH": [
-      "kies",
-      "switch"
+      "kies"
     ],
     "CASE": [
-      "geval",
-      "case"
+      "geval"
     ],
     "DEFAULT": [
-      "verstek",
-      "default"
+      "verstek"
     ],
     "FUNCTION": [
-      "funksie",
-      "function"
+      "funksie"
     ],
     "RETURN": [
-      "gee terug",
-      "return"
+      "gee terug"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "wag",
-      "await"
+      "wag"
     ],
     "TRY": [
-      "probeer",
-      "try"
+      "probeer"
     ],
     "CATCH": [
-      "vang",
-      "catch"
+      "vang"
     ],
     "FINALLY": [
-      "uiteindelik",
-      "finally"
+      "uiteindelik"
     ],
     "THROW": [
-      "gooi",
-      "throw"
+      "gooi"
     ],
     "LET": [
-      "laat",
-      "let"
+      "laat"
     ],
     "CONST": [
-      "konstant",
-      "const"
+      "konstant"
     ],
     "CLASS": [
-      "klas",
-      "class"
+      "klas"
     ],
     "EXTENDS": [
-      "brei uit",
-      "extends"
+      "brei uit"
     ],
     "NEW": [
-      "nuut",
-      "new"
+      "nuut"
     ],
     "THIS": [
-      "hierdie",
-      "this"
+      "hierdie"
     ],
     "IMPORT": [
-      "voer in",
-      "import"
+      "voer in"
     ],
     "EXPORT": [
-      "voer uit",
-      "export"
+      "voer uit"
     ],
     "PRINT": [
-      "druk",
-      "print"
+      "druk"
     ],
     "TRUE": [
-      "waar",
-      "true"
+      "waar"
     ],
     "FALSE": [
-      "onwaar",
-      "false"
+      "onwaar"
     ],
     "NULL": [
-      "leeg",
-      "null"
+      "leeg"
     ],
     "UNDEFINED": [
-      "ongedefinieerd",
-      "undefined"
+      "ongedefinieerd"
     ],
     "ELIF": [
       "elif"

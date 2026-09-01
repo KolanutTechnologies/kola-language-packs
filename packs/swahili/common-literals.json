@@ -1,62 +1,47 @@
 {
   "Hello": [
-    "Habari",
-    "Hello"
+    "Habari"
   ],
   "Error": [
-    "Kosa",
-    "Error"
+    "Kosa"
   ],
   "Success": [
-    "Imefanikiwa",
-    "Success"
+    "Imefanikiwa"
   ],
   "Welcome": [
-    "Karibu",
-    "Welcome"
+    "Karibu"
   ],
   "Goodbye": [
-    "Kwaheri",
-    "Goodbye"
+    "Kwaheri"
   ],
   "Yes": [
-    "Ndiyo",
-    "Yes"
+    "Ndiyo"
   ],
   "No": [
-    "Hapana",
-    "No"
+    "Hapana"
   ],
   "Done": [
-    "Imekamilika",
-    "Done"
+    "Imekamilika"
   ],
   "Loading": [
-    "Inapakia",
-    "Loading"
+    "Inapakia"
   ],
   "Failed": [
-    "Imeshindwa",
-    "Failed"
+    "Imeshindwa"
   ],
   "Cancel": [
-    "Ghairi",
-    "Cancel"
+    "Ghairi"
   ],
   "Submit": [
-    "Wasilisha",
-    "Submit"
+    "Wasilisha"
   ],
   "Search": [
-    "Tafuta",
-    "Search"
+    "Tafuta"
   ],
   "Warning": [
-    "Onyo",
-    "Warning"
+    "Onyo"
   ],
   "Please wait": [
-    "Tafadhali subiri",
-    "Please wait"
+    "Tafadhali subiri"
   ]
 }

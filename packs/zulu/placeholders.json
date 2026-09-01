@@ -1,50 +1,38 @@
 {
   "condition": [
-    "isimo",
-    "condition"
+    "isimo"
   ],
   "name": [
-    "igama",
-    "name"
+    "igama"
   ],
   "value": [
-    "inani lemigqa",
-    "value"
+    "inani lemigqa"
   ],
   "message": [
-    "umlayezo",
-    "message"
+    "umlayezo"
   ],
   "index": [
-    "incomba",
-    "index"
+    "incomba"
   ],
   "item": [
-    "into",
-    "item"
+    "into"
   ],
   "body": [
-    "umzimba",
-    "body"
+    "umzimba"
   ],
   "expression": [
-    "isibonakaliso",
-    "expression"
+    "isibonakaliso"
   ],
   "variable": [
-    "okuguquguqukayo",
-    "variable"
+    "okuguquguqukayo"
   ],
   "array": [
-    "uhlu",
-    "array"
+    "uhlu"
   ],
   "function": [
-    "umsebenzi",
-    "function"
+    "umsebenzi"
   ],
   "class": [
-    "ikilasi",
-    "class"
+    "ikilasi"
   ]
 }

@@ -1,62 +1,47 @@
 {
   "Hello": [
-    "How far",
-    "Hello"
+    "How far"
   ],
   "Error": [
-    "Wahala",
-    "Error"
+    "Wahala"
   ],
   "Success": [
-    "E work",
-    "Success"
+    "E work"
   ],
   "Welcome": [
-    "You welcome",
-    "Welcome"
+    "You welcome"
   ],
   "Goodbye": [
-    "Bye bye",
-    "Goodbye"
+    "Bye bye"
   ],
   "Yes": [
-    "Ehen",
-    "Yes"
+    "Ehen"
   ],
   "No": [
-    "Nah",
-    "No"
+    "Nah"
   ],
   "Done": [
-    "Don finish",
-    "Done"
+    "Don finish"
   ],
   "Loading": [
-    "E dey load",
-    "Loading"
+    "E dey load"
   ],
   "Failed": [
-    "E fail",
-    "Failed"
+    "E fail"
   ],
   "Cancel": [
-    "Cancel am",
-    "Cancel"
+    "Cancel am"
   ],
   "Submit": [
-    "Send am",
-    "Submit"
+    "Send am"
   ],
   "Search": [
-    "Find am",
-    "Search"
+    "Find am"
   ],
   "Warning": [
-    "Take note",
-    "Warning"
+    "Take note"
   ],
   "Please wait": [
-    "Abeg wait",
-    "Please wait"
+    "Abeg wait"
   ]
 }

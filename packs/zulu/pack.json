@@ -8,7 +8,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "isiZulu",
   "description": "Zulu keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -34,128 +34,97 @@
   ],
   "keywords": {
     "IF": [
-      "uma",
-      "if"
+      "uma"
     ],
     "ELSE": [
-      "kungenjalo",
-      "else"
+      "kungenjalo"
     ],
     "FOR": [
-      "ngoba",
-      "for"
+      "ngoba"
     ],
     "WHILE": [
-      "ngenkathi",
-      "while"
+      "ngenkathi"
     ],
     "BREAK": [
-      "phula",
-      "break"
+      "phula"
     ],
     "CONTINUE": [
-      "qhubeka",
-      "continue"
+      "qhubeka"
     ],
     "SWITCH": [
-      "khetha",
-      "switch"
+      "khetha"
     ],
     "CASE": [
-      "icala",
-      "case"
+      "icala"
     ],
     "DEFAULT": [
-      "okuzenzakalelayo",
-      "default"
+      "okuzenzakalelayo"
     ],
     "FUNCTION": [
-      "umsebenzi",
-      "function"
+      "umsebenzi"
     ],
     "RETURN": [
-      "buyisa",
-      "return"
+      "buyisa"
     ],
     "ASYNC": [
-      "ngokulandelana",
-      "async"
+      "ngokulandelana"
     ],
     "AWAIT": [
-      "linda",
-      "await"
+      "linda"
     ],
     "TRY": [
-      "zama",
-      "try"
+      "zama"
     ],
     "CATCH": [
-      "bamba",
-      "catch"
+      "bamba"
     ],
     "FINALLY": [
-      "ekugcineni",
-      "finally"
+      "ekugcineni"
     ],
     "THROW": [
-      "phonsa",
-      "throw"
+      "phonsa"
     ],
     "LET": [
-      "vumela",
-      "let"
+      "vumela"
     ],
     "CONST": [
-      "okuqinile",
-      "const"
+      "okuqinile"
     ],
     "CLASS": [
-      "ikilasi",
-      "class"
+      "ikilasi"
     ],
     "EXTENDS": [
-      "andisa",
-      "extends"
+      "andisa"
     ],
     "NEW": [
-      "okusha",
-      "new"
+      "okusha"
     ],
     "THIS": [
-      "lokhu",
-      "this"
+      "lokhu"
     ],
     "IMPORT": [
-      "ngenisa",
-      "import"
+      "ngenisa"
     ],
     "EXPORT": [
-      "khipha",
-      "export"
+      "khipha"
     ],
     "PRINT": [
-      "printa",
-      "print"
+      "printa"
     ],
     "TRUE": [
-      "iqiniso",
-      "true"
+      "iqiniso"
     ],
     "FALSE": [
-      "amanga",
-      "false"
+      "amanga"
     ],
     "NULL": [
-      "lutho",
-      "null"
+      "lutho"
     ],
     "UNDEFINED": [
-      "akuchazwanga",
-      "undefined"
+      "akuchazwanga"
     ],
     "ELIF": [
-      "kungenjalo uma",
-      "elif"
+      "kungenjalo uma"
     ],
     "LOOP": [
       "loop"

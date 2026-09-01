@@ -1,125 +1,95 @@
 {
   "name": [
-    "suna",
-    "name"
+    "suna"
   ],
   "count": [
-    "adadi",
-    "count"
+    "adadi"
   ],
   "price": [
-    "farashi",
-    "price"
+    "farashi"
   ],
   "user": [
-    "mai amfani",
-    "user"
+    "mai amfani"
   ],
   "total": [
-    "jimilla",
-    "total"
+    "jimilla"
   ],
   "message": [
-    "sako",
-    "message"
+    "sako"
   ],
   "error": [
-    "kuskure",
-    "error"
+    "kuskure"
   ],
   "payload": [
-    "bayanai",
-    "payload"
+    "bayanai"
   ],
   "item_list": [
-    "jerin",
-    "item_list"
+    "jerin"
   ],
   "index": [
-    "lamba",
-    "index"
+    "lamba"
   ],
   "data_value": [
-    "daraja",
-    "data_value"
+    "daraja"
   ],
   "item": [
-    "abu",
-    "item"
+    "abu"
   ],
   "num": [
-    "lissafi",
-    "num"
+    "lissafi"
   ],
   "text": [
-    "rubutu",
-    "text"
+    "rubutu"
   ],
   "result": [
-    "sakamako",
-    "result"
+    "sakamako"
   ],
   "input": [
     "rubuta",
-    "shigarwa",
-    "input"
+    "shigarwa"
   ],
   "output": [
     "buga",
     "nuna",
-    "fitarwa",
-    "output"
+    "fitarwa"
   ],
   "file_ref": [
-    "fayil",
-    "file_ref"
+    "fayil"
   ],
   "path": [
-    "hanya",
-    "path"
+    "hanya"
   ],
   "length": [
-    "tsawo",
-    "length"
+    "tsawo"
   ],
   "size": [
-    "girma",
-    "size"
+    "girma"
   ],
   "key": [
-    "makulli",
-    "key"
+    "makulli"
   ],
   "kind": [
-    "nau'i",
-    "kind"
+    "nau'i"
   ],
   "status": [
-    "matsayi",
-    "status"
+    "matsayi"
   ],
   "flag": [
-    "alama",
-    "flag"
+    "alama"
   ],
   "id": [
-    "tambari",
-    "id"
+    "tambari"
   ],
   "age": [
-    "shekaru",
-    "age"
+    "shekaru"
   ],
   "score": [
-    "maki",
-    "score"
+    "maki"
   ],
   "amount": [
-    "yawa",
-    "amount"
+    "yawa"
   ],
   "password": [
-    "kalmar sirri",
-    "password"
+    "kalmar sirri"
   ]
 }

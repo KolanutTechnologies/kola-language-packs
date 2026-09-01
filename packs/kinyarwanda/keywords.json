@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "hitamo",
-    "switch"
+    "match"
   ],
   "CASE": [
     "urubanza",
@@ -37,7 +37,7 @@
   ],
   "FUNCTION": [
     "akazi",
-    "function"
+    "def"
   ],
   "RETURN": [
     "garuka",
@@ -56,7 +56,7 @@
   ],
   "CATCH": [
     "fata",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "amaherezo",
@@ -88,7 +88,7 @@
   ],
   "THIS": [
     "ibi",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "injiza",
@@ -112,11 +112,11 @@
   ],
   "NULL": [
     "nta kintu",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "ntibisobanurwa",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

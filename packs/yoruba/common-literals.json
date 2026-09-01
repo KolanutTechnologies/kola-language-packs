@@ -1,62 +1,47 @@
 {
   "Hello": [
-    "Ẹ n lẹ",
-    "Hello"
+    "Ẹ n lẹ"
   ],
   "Error": [
-    "Aṣiṣe",
-    "Error"
+    "Aṣiṣe"
   ],
   "Success": [
-    "Aṣeyọri",
-    "Success"
+    "Aṣeyọri"
   ],
   "Welcome": [
-    "Kaabo",
-    "Welcome"
+    "Kaabo"
   ],
   "Goodbye": [
-    "O dàbọ",
-    "Goodbye"
+    "O dàbọ"
   ],
   "Yes": [
-    "Bẹẹni",
-    "Yes"
+    "Bẹẹni"
   ],
   "No": [
-    "Rara",
-    "No"
+    "Rara"
   ],
   "Done": [
-    "Parí",
-    "Done"
+    "Parí"
   ],
   "Loading": [
-    "N gbà wọlé",
-    "Loading"
+    "N gbà wọlé"
   ],
   "Failed": [
-    "Kùnà",
-    "Failed"
+    "Kùnà"
   ],
   "Cancel": [
-    "Fagilé",
-    "Cancel"
+    "Fagilé"
   ],
   "Submit": [
-    "Fi ránṣẹ",
-    "Submit"
+    "Fi ránṣẹ"
   ],
   "Search": [
-    "Wá",
-    "Search"
+    "Wá"
   ],
   "Warning": [
-    "Ìkìlọ",
-    "Warning"
+    "Ìkìlọ"
   ],
   "Please wait": [
-    "Jọ̀wọ́ dúró",
-    "Please wait"
+    "Jọ̀wọ́ dúró"
   ]
 }

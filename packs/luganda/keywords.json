@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "londa",
-    "switch"
+    "match"
   ],
   "CASE": [
     "omulamwa",
@@ -37,7 +37,7 @@
   ],
   "FUNCTION": [
     "omulimu",
-    "function"
+    "def"
   ],
   "RETURN": [
     "komawo",
@@ -56,7 +56,7 @@
   ],
   "CATCH": [
     "kwata",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "oluvannyuma",
@@ -88,7 +88,7 @@
   ],
   "THIS": [
     "kino",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "yingiza",
@@ -112,11 +112,11 @@
   ],
   "NULL": [
     "tewali kintu",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "tekinnyonnyoddwa",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "wabula singa",

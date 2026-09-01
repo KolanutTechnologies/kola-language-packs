@@ -10,7 +10,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Wolof",
   "description": "Wolof keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -36,120 +36,94 @@
   ],
   "keywords": {
     "IF": [
-      "su",
-      "if"
+      "su"
     ],
     "ELSE": [
-      "du ko",
-      "else"
+      "du ko"
     ],
     "FOR": [
-      "ngir",
-      "for"
+      "ngir"
     ],
     "WHILE": [
-      "bi",
-      "while"
+      "bi"
     ],
     "BREAK": [
-      "tàgg",
-      "break"
+      "tàgg"
     ],
     "CONTINUE": [
-      "dem",
-      "continue"
+      "dem"
     ],
     "SWITCH": [
-      "tann",
-      "switch"
+      "tann"
     ],
     "CASE": [
-      "mbir",
-      "case"
+      "mbir"
     ],
     "DEFAULT": [
-      "defo",
-      "default"
+      "defo"
     ],
     "FUNCTION": [
-      "liggéey",
-      "function"
+      "liggéey"
     ],
     "RETURN": [
-      "dellu",
-      "return"
+      "dellu"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "xar",
-      "await"
+      "xar"
     ],
     "TRY": [
-      "jéem",
-      "try"
+      "jéem"
     ],
     "CATCH": [
-      "jël",
-      "catch"
+      "jël"
     ],
     "FINALLY": [
-      "gannaaw",
-      "finally"
+      "gannaaw"
     ],
     "THROW": [
-      "yóbb",
-      "throw"
+      "yóbb"
     ],
     "LET": [
-      "may",
-      "let"
+      "may"
     ],
     "CONST": [
-      "dëgg",
-      "const"
+      "dëgg"
     ],
     "CLASS": [
       "class"
     ],
     "EXTENDS": [
-      "yokk",
-      "extends"
+      "yokk"
     ],
     "NEW": [
-      "bu bees",
-      "new"
+      "bu bees"
     ],
     "THIS": [
-      "lii",
-      "this"
+      "lii"
     ],
     "IMPORT": [
       "import"
     ],
     "EXPORT": [
-      "génne",
-      "export"
+      "génne"
     ],
     "PRINT": [
-      "wone",
-      "print"
+      "wone"
     ],
     "TRUE": [
       "true"
     ],
     "FALSE": [
-      "dul dëgg",
-      "false"
+      "dul dëgg"
     ],
     "NULL": [
-      "dara",
-      "null"
+      "dara"
     ],
     "UNDEFINED": [
-      "du am",
-      "undefined"
+      "du am"
     ],
     "ELIF": [
       "elif"

@@ -30,7 +30,7 @@
     "East Africa",
     "Indian Ocean"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "French",
   "description": "French keyword map for Francophone Africa — starter pack",
   "reviewStatus": "starter",
@@ -56,124 +56,94 @@
   ],
   "keywords": {
     "IF": [
-      "si",
-      "if"
+      "si"
     ],
     "ELSE": [
-      "sinon",
-      "else"
+      "sinon"
     ],
     "FOR": [
-      "pour",
-      "for"
+      "pour"
     ],
     "WHILE": [
-      "tant que",
-      "while"
+      "tant que"
     ],
     "BREAK": [
-      "casser",
-      "break"
+      "casser"
     ],
     "CONTINUE": [
-      "continuer",
-      "continue"
+      "continuer"
     ],
     "SWITCH": [
-      "choisir",
-      "switch"
+      "choisir"
     ],
     "CASE": [
-      "cas",
-      "case"
+      "cas"
     ],
     "DEFAULT": [
-      "par défaut",
-      "default"
+      "par défaut"
     ],
     "FUNCTION": [
-      "fonction",
-      "function"
+      "fonction"
     ],
     "RETURN": [
-      "retourner",
-      "return"
+      "retourner"
     ],
     "ASYNC": [
-      "asynchrone",
-      "async"
+      "asynchrone"
     ],
     "AWAIT": [
-      "attendre",
-      "await"
+      "attendre"
     ],
     "TRY": [
-      "essayer",
-      "try"
+      "essayer"
     ],
     "CATCH": [
-      "attraper",
-      "catch"
+      "attraper"
     ],
     "FINALLY": [
-      "enfin",
-      "finally"
+      "enfin"
     ],
     "THROW": [
-      "lancer",
-      "throw"
+      "lancer"
     ],
     "LET": [
-      "soit",
-      "let"
+      "soit"
     ],
     "CONST": [
-      "constante",
-      "const"
+      "constante"
     ],
     "CLASS": [
-      "classe",
-      "class"
+      "classe"
     ],
     "EXTENDS": [
-      "étend",
-      "extends"
+      "étend"
     ],
     "NEW": [
-      "nouveau",
-      "new"
+      "nouveau"
     ],
     "THIS": [
-      "ceci",
-      "this"
+      "ceci"
     ],
     "IMPORT": [
-      "importer",
-      "import"
+      "importer"
     ],
     "EXPORT": [
-      "exporter",
-      "export"
+      "exporter"
     ],
     "PRINT": [
-      "afficher",
-      "print"
+      "afficher"
     ],
     "TRUE": [
-      "vrai",
-      "true"
+      "vrai"
     ],
     "FALSE": [
-      "faux",
-      "false"
+      "faux"
     ],
     "NULL": [
-      "nul",
-      "null"
+      "nul"
     ],
     "UNDEFINED": [
-      "indéfini",
-      "undefined"
+      "indéfini"
     ],
     "ELIF": [
       "elif"

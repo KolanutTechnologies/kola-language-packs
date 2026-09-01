@@ -1,50 +1,38 @@
 {
   "condition": [
-    "ipò",
-    "condition"
+    "ipò"
   ],
   "name": [
-    "orukọ",
-    "name"
+    "orukọ"
   ],
   "data_value": [
-    "iye",
-    "data_value"
+    "iye"
   ],
   "message": [
-    "ifiranṣẹ",
-    "message"
+    "ifiranṣẹ"
   ],
   "index": [
-    "atiọka",
-    "index"
+    "atiọka"
   ],
   "item": [
-    "nkan",
-    "item"
+    "nkan"
   ],
   "body": [
-    "ara",
-    "body"
+    "ara"
   ],
   "expression": [
-    "ìfihàn",
-    "expression"
+    "ìfihàn"
   ],
   "variable": [
-    "ayè",
-    "variable"
+    "ayè"
   ],
   "array": [
-    "akojọ",
-    "array"
+    "akojọ"
   ],
   "function": [
-    "iṣẹ",
-    "function"
+    "iṣẹ"
   ],
   "class": [
-    "kilasi",
-    "class"
+    "kilasi"
   ]
 }

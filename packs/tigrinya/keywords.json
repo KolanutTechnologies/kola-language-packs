@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "ምረጽ",
-    "switch"
+    "match"
   ],
   "CASE": [
     "ጉዳይ",
@@ -37,7 +37,7 @@
   ],
   "FUNCTION": [
     "ተግባር",
-    "function"
+    "def"
   ],
   "RETURN": [
     "መልስ",
@@ -56,7 +56,7 @@
   ],
   "CATCH": [
     "ዓቅም",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "ናይ መወዳእታ",
@@ -88,7 +88,7 @@
   ],
   "THIS": [
     "እዚ",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "ኣእት",
@@ -112,11 +112,11 @@
   ],
   "NULL": [
     "ባዶ",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "ዘይተገልጸ",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

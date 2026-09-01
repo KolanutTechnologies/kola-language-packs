@@ -1,99 +1,75 @@
 {
   "name": [
-    "din",
-    "name"
+    "din"
   ],
   "count": [
-    "nɔn",
-    "count"
+    "nɔn"
   ],
   "price": [
-    "boɔ",
-    "price"
+    "boɔ"
   ],
   "user": [
-    "ɔdefo",
-    "user"
+    "ɔdefo"
   ],
   "total": [
-    "nyinaa",
-    "total"
+    "nyinaa"
   ],
   "message": [
-    "asɛm",
-    "message"
+    "asɛm"
   ],
   "error": [
-    "mfomso",
-    "error"
+    "mfomso"
   ],
   "payload": [
-    "data",
-    "payload"
+    "data"
   ],
   "item_list": [
-    "nhyehyɛe",
-    "item_list"
+    "nhyehyɛe"
   ],
   "index": [
-    "nɔnhwɛ",
-    "index"
+    "nɔnhwɛ"
   ],
   "data_value": [
-    "tutu",
-    "data_value"
+    "tutu"
   ],
   "item": [
-    "ade",
-    "item"
+    "ade"
   ],
   "num": [
-    "nɔnhyɛn",
-    "num"
+    "nɔnhyɛn"
   ],
   "text": [
-    "nsɛm",
-    "text"
+    "nsɛm"
   ],
   "result": [
-    "nsunsuanso",
-    "result"
+    "nsunsuanso"
   ],
   "input": [
-    "de ba",
-    "input"
+    "de ba"
   ],
   "output": [
-    "de fi",
-    "output"
+    "de fi"
   ],
   "file_ref": [
-    "fael",
-    "file_ref"
+    "fael"
   ],
   "path": [
-    "kwan",
-    "path"
+    "kwan"
   ],
   "length": [
-    "tenten",
-    "length"
+    "tenten"
   ],
   "size": [
-    "kɛse",
-    "size"
+    "kɛse"
   ],
   "key": [
-    "safo",
-    "key"
+    "safo"
   ],
   "kind": [
-    "soro",
-    "kind"
+    "soro"
   ],
   "status": [
-    "tebea",
-    "status"
+    "tebea"
   ],
   "flag": [
     "flag",
@@ -104,16 +80,13 @@
     "id"
   ],
   "age": [
-    "mfe",
-    "age"
+    "mfe"
   ],
   "score": [
-    "sika",
-    "score"
+    "sika"
   ],
   "amount": [
-    "sika dodow",
-    "amount"
+    "sika dodow"
   ],
   "password": [
     "password",

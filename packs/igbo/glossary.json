@@ -1,124 +1,94 @@
 {
   "name": [
-    "aha",
-    "name"
+    "aha"
   ],
   "count": [
-    "ọgụgụ",
-    "count"
+    "ọgụgụ"
   ],
   "price": [
-    "ọnụ ahịa",
-    "price"
+    "ọnụ ahịa"
   ],
   "user": [
-    "onye ọrụ",
-    "user"
+    "onye ọrụ"
   ],
   "total": [
-    "ngụkọta",
-    "total"
+    "ngụkọta"
   ],
   "message": [
-    "ozi",
-    "message"
+    "ozi"
   ],
   "error": [
-    "njehie",
-    "error"
+    "njehie"
   ],
   "payload": [
-    "ụdịdị",
-    "payload"
+    "ụdịdị"
   ],
   "item_list": [
-    "ndepụta",
-    "item_list"
+    "ndepụta"
   ],
   "index": [
-    "ọnụọgụ",
-    "index"
+    "ọnụọgụ"
   ],
   "data_value": [
-    "uru",
-    "data_value"
+    "uru"
   ],
   "item": [
-    "ihe",
-    "item"
+    "ihe"
   ],
   "num": [
-    "nọmba",
-    "num"
+    "nọmba"
   ],
   "text": [
-    "ederede",
-    "text"
+    "ederede"
   ],
   "result": [
-    "nsonaazụ",
-    "result"
+    "nsonaazụ"
   ],
   "input": [
-    "ntinye",
-    "input"
+    "ntinye"
   ],
   "output": [
     "pụta",
     "deputa",
-    "mpụta",
-    "output"
+    "mpụta"
   ],
   "file_ref": [
-    "faịlụ",
-    "file_ref"
+    "faịlụ"
   ],
   "path": [
-    "ụzọ",
-    "path"
+    "ụzọ"
   ],
   "length": [
-    "ogologo",
-    "length"
+    "ogologo"
   ],
   "size": [
-    "nha",
-    "size"
+    "nha"
   ],
   "key": [
-    "igodo",
-    "key"
+    "igodo"
   ],
   "kind": [
-    "ụdị",
-    "kind"
+    "ụdị"
   ],
   "status": [
-    "ọnọdụ",
-    "status"
+    "ọnọdụ"
   ],
   "flag": [
-    "akara",
-    "flag"
+    "akara"
   ],
   "id": [
-    "njirimara",
-    "id"
+    "njirimara"
   ],
   "age": [
-    "afọ",
-    "age"
+    "afọ"
   ],
   "score": [
-    "oke akara",
-    "score"
+    "oke akara"
   ],
   "amount": [
-    "ego",
-    "amount"
+    "ego"
   ],
   "password": [
-    "okwuntughe",
-    "password"
+    "okwuntughe"
   ]
 }

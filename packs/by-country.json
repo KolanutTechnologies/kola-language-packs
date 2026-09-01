@@ -1,62 +1,6 @@
 {
-  "version": "0.17.1",
+  "version": "0.18.1",
   "byCountry": {
-    "NG": [
-      "fulfulde",
-      "hausa",
-      "igbo",
-      "nigerian-pidgin",
-      "yoruba"
-    ],
-    "BJ": [
-      "french",
-      "yoruba"
-    ],
-    "TG": [
-      "french",
-      "yoruba"
-    ],
-    "NE": [
-      "french",
-      "fulfulde",
-      "hausa"
-    ],
-    "GH": [
-      "hausa",
-      "twi"
-    ],
-    "SD": [
-      "arabic",
-      "hausa"
-    ],
-    "KE": [
-      "oromo",
-      "somali",
-      "swahili"
-    ],
-    "TZ": [
-      "swahili"
-    ],
-    "UG": [
-      "luganda",
-      "swahili"
-    ],
-    "CD": [
-      "french",
-      "lingala",
-      "swahili"
-    ],
-    "RW": [
-      "french",
-      "kinyarwanda",
-      "swahili"
-    ],
-    "ET": [
-      "amharic",
-      "oromo",
-      "somali",
-      "tigrinya"
-    ],
     "ZA": [
       "afrikaans",
       "sesotho",
@@ -64,46 +8,27 @@
       "xhosa",
       "zulu"
     ],
-    "SO": [
-      "arabic",
-      "somali"
-    ],
-    "DJ": [
-      "arabic",
-      "french",
-      "somali"
-    ],
-    "SN": [
-      "bambara",
-      "french",
-      "fulfulde",
-      "wolof"
-    ],
-    "GM": [
-      "fulfulde",
-      "wolof"
-    ],
-    "MR": [
-      "arabic",
-      "french",
-      "wolof"
-    ],
-    "CG": [
-      "french",
-      "lingala"
-    ],
-    "ZW": [
-      "shona"
-    ],
-    "ER": [
-      "tigrinya"
-    ],
     "NA": [
       "afrikaans",
       "setswana"
     ],
+    "GH": [
+      "akan",
+      "hausa",
+      "twi"
+    ],
+    "ET": [
+      "amharic",
+      "oromo",
+      "somali",
+      "tigrinya"
+    ],
     "EG": [
       "arabic"
+    ],
+    "SD": [
+      "arabic",
+      "hausa"
     ],
     "LY": [
       "arabic"
@@ -117,12 +42,22 @@
     "MA": [
       "arabic"
     ],
+    "MR": [
+      "arabic",
+      "french",
+      "wolof"
+    ],
+    "SO": [
+      "arabic",
+      "somali"
+    ],
+    "DJ": [
+      "arabic",
+      "french",
+      "somali"
+    ],
     "KM": [
       "arabic",
-      "french"
-    ],
-    "CI": [
-      "bambara",
       "french"
     ],
     "ML": [
@@ -130,20 +65,67 @@
       "french",
       "fulfulde"
     ],
+    "SN": [
+      "bambara",
+      "french",
+      "fulfulde",
+      "wolof"
+    ],
+    "CI": [
+      "bambara",
+      "french"
+    ],
     "BF": [
       "bambara",
       "french",
       "fulfulde"
     ],
     "CM": [
+      "cameroon-pidgin",
       "french",
       "fulfulde"
+    ],
+    "NG": [
+      "edo",
+      "efik",
+      "fulfulde",
+      "hausa",
+      "igbo",
+      "nigerian-pidgin",
+      "yoruba"
+    ],
+    "NE": [
+      "french",
+      "fulfulde",
+      "hausa"
+    ],
+    "TG": [
+      "french",
+      "yoruba"
+    ],
+    "BJ": [
+      "french",
+      "yoruba"
     ],
     "GA": [
       "french"
     ],
+    "CG": [
+      "french",
+      "lingala"
+    ],
+    "CD": [
+      "french",
+      "lingala",
+      "swahili"
+    ],
     "MG": [
       "french"
+    ],
+    "RW": [
+      "french",
+      "kinyarwanda",
+      "swahili"
     ],
     "BI": [
       "french"
@@ -158,11 +140,18 @@
       "french",
       "fulfulde"
     ],
-    "LS": [
-      "sesotho"
+    "GM": [
+      "fulfulde",
+      "wolof"
     ],
-    "BW": [
-      "setswana"
+    "UG": [
+      "luganda",
+      "swahili"
+    ],
+    "KE": [
+      "oromo",
+      "somali",
+      "swahili"
     ],
     "AO": [
       "portuguese-africa"
@@ -178,6 +167,21 @@
     ],
     "ST": [
       "portuguese-africa"
+    ],
+    "LS": [
+      "sesotho"
+    ],
+    "BW": [
+      "setswana"
+    ],
+    "ZW": [
+      "shona"
+    ],
+    "TZ": [
+      "swahili"
+    ],
+    "ER": [
+      "tigrinya"
     ]
   }
 }

@@ -8,7 +8,7 @@
   "regions": [
     "Southern Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Shona",
   "description": "Shona keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -34,122 +34,94 @@
   ],
   "keywords": {
     "IF": [
-      "kana",
-      "if"
+      "kana"
     ],
     "ELSE": [
-      "kana zvisina kudaro",
-      "else"
+      "kana zvisina kudaro"
     ],
     "FOR": [
-      "kuti",
-      "for"
+      "kuti"
     ],
     "WHILE": [
-      "panguva",
-      "while"
+      "panguva"
     ],
     "BREAK": [
-      "pambura",
-      "break"
+      "pambura"
     ],
     "CONTINUE": [
-      "ramba",
-      "continue"
+      "ramba"
     ],
     "SWITCH": [
-      "sarudza",
-      "switch"
+      "sarudza"
     ],
     "CASE": [
-      "mamiriro",
-      "case"
+      "mamiriro"
     ],
     "DEFAULT": [
-      "chikamu",
-      "default"
+      "chikamu"
     ],
     "FUNCTION": [
-      "basa",
-      "function"
+      "basa"
     ],
     "RETURN": [
-      "dzosa",
-      "return"
+      "dzosa"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "mirira",
-      "await"
+      "mirira"
     ],
     "TRY": [
-      "edza",
-      "try"
+      "edza"
     ],
     "CATCH": [
-      "bata",
-      "catch"
+      "bata"
     ],
     "FINALLY": [
-      "pakupedzisira",
-      "finally"
+      "pakupedzisira"
     ],
     "THROW": [
-      "tonga",
-      "throw"
+      "tonga"
     ],
     "LET": [
-      "regai",
-      "let"
+      "regai"
     ],
     "CONST": [
-      "chakavakwa",
-      "const"
+      "chakavakwa"
     ],
     "CLASS": [
       "class"
     ],
     "EXTENDS": [
-      "wedzera",
-      "extends"
+      "wedzera"
     ],
     "NEW": [
-      "itsva",
-      "new"
+      "itsva"
     ],
     "THIS": [
-      "ichi",
-      "this"
+      "ichi"
     ],
     "IMPORT": [
-      "isa",
-      "import"
+      "isa"
     ],
     "EXPORT": [
-      "buda",
-      "export"
+      "buda"
     ],
     "PRINT": [
-      "printa",
-      "print"
+      "printa"
     ],
     "TRUE": [
-      "chokwadi",
-      "true"
+      "chokwadi"
     ],
     "FALSE": [
-      "nhema",
-      "false"
+      "nhema"
     ],
     "NULL": [
-      "hapana",
-      "null"
+      "hapana"
     ],
     "UNDEFINED": [
-      "hazvisi",
-      "undefined"
+      "hazvisi"
     ],
     "ELIF": [
       "elif"

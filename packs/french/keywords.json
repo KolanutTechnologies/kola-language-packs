@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "choisir",
-    "switch"
+    "match"
   ],
   "CASE": [
     "cas",
@@ -37,7 +37,7 @@
   ],
   "FUNCTION": [
     "fonction",
-    "function"
+    "def"
   ],
   "RETURN": [
     "retourner",
@@ -57,7 +57,7 @@
   ],
   "CATCH": [
     "attraper",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "enfin",
@@ -89,7 +89,7 @@
   ],
   "THIS": [
     "ceci",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "importer",
@@ -113,11 +113,11 @@
   ],
   "NULL": [
     "nul",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "indéfini",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

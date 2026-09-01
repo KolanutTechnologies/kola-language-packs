@@ -9,7 +9,7 @@
   "regions": [
     "Central Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Lingala",
   "description": "Lingala keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -35,123 +35,94 @@
   ],
   "keywords": {
     "IF": [
-      "soki",
-      "if"
+      "soki"
     ],
     "ELSE": [
-      "soki te",
-      "else"
+      "soki te"
     ],
     "FOR": [
-      "mpo na",
-      "for"
+      "mpo na"
     ],
     "WHILE": [
-      "ntango",
-      "while"
+      "ntango"
     ],
     "BREAK": [
-      "kata",
-      "break"
+      "kata"
     ],
     "CONTINUE": [
-      "kobaluka",
-      "continue"
+      "kobaluka"
     ],
     "SWITCH": [
-      "pona",
-      "switch"
+      "pona"
     ],
     "CASE": [
-      "likambo",
-      "case"
+      "likambo"
     ],
     "DEFAULT": [
-      "mokonzi",
-      "default"
+      "mokonzi"
     ],
     "FUNCTION": [
-      "mosala",
-      "function"
+      "mosala"
     ],
     "RETURN": [
-      "zongisa",
-      "return"
+      "zongisa"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "zela",
-      "await"
+      "zela"
     ],
     "TRY": [
-      "meka",
-      "try"
+      "meka"
     ],
     "CATCH": [
-      "kanga",
-      "catch"
+      "kanga"
     ],
     "FINALLY": [
-      "nsuka",
-      "finally"
+      "nsuka"
     ],
     "THROW": [
-      "tia",
-      "throw"
+      "tia"
     ],
     "LET": [
-      "tika",
-      "let"
+      "tika"
     ],
     "CONST": [
-      "makasi",
-      "const"
+      "makasi"
     ],
     "CLASS": [
-      "kelasi",
-      "class"
+      "kelasi"
     ],
     "EXTENDS": [
-      "kolongola",
-      "extends"
+      "kolongola"
     ],
     "NEW": [
-      "sika",
-      "new"
+      "sika"
     ],
     "THIS": [
-      "oyo",
-      "this"
+      "oyo"
     ],
     "IMPORT": [
-      "kota",
-      "import"
+      "kota"
     ],
     "EXPORT": [
-      "bima",
-      "export"
+      "bima"
     ],
     "PRINT": [
-      "koloba",
-      "print"
+      "koloba"
     ],
     "TRUE": [
-      "solo",
-      "true"
+      "solo"
     ],
     "FALSE": [
-      "lobi",
-      "false"
+      "lobi"
     ],
     "NULL": [
-      "eloko te",
-      "null"
+      "eloko te"
     ],
     "UNDEFINED": [
-      "eponami te",
-      "undefined"
+      "eponami te"
     ],
     "ELIF": [
       "elif"

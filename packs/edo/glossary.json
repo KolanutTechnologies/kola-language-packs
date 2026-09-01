@@ -1,122 +1,92 @@
 {
   "name": [
-    "eni",
-    "name"
+    "eni"
   ],
   "count": [
-    "ka",
-    "count"
+    "ka"
   ],
   "price": [
-    "igho",
-    "price"
+    "igho"
   ],
   "user": [
-    "ọlọmwẹn",
-    "user"
+    "ọlọmwẹn"
   ],
   "total": [
-    "ehia",
-    "total"
+    "ehia"
   ],
   "message": [
-    "iyẹn",
-    "message"
+    "iyẹn"
   ],
   "error": [
-    "arawọ",
-    "error"
+    "arawọ"
   ],
   "payload": [
-    "egbeemwin",
-    "payload"
+    "egbeemwin"
   ],
   "item_list": [
-    "usun emwin",
-    "item_list"
+    "usun emwin"
   ],
   "index": [
-    "atan",
-    "index"
+    "atan"
   ],
   "data_value": [
-    "ughughan",
-    "data_value"
+    "ughughan"
   ],
   "item": [
-    "okhian",
-    "item"
+    "okhian"
   ],
   "num": [
-    "nọmba",
-    "num"
+    "nọmba"
   ],
   "text": [
-    "ẹmwẹ",
-    "text"
+    "ẹmwẹ"
   ],
   "result": [
-    "iyẹnmwin",
-    "result"
+    "iyẹnmwin"
   ],
   "input": [
-    "mu rre",
-    "input"
+    "mu rre"
   ],
   "output": [
-    "ladian",
-    "output"
+    "ladian"
   ],
   "file_ref": [
-    "ebe",
-    "file_ref"
+    "ebe"
   ],
   "path": [
-    "odẹ",
-    "path"
+    "odẹ"
   ],
   "length": [
-    "uhunmwẹn",
-    "length"
+    "uhunmwẹn"
   ],
   "size": [
-    "ẹse",
-    "size"
+    "ẹse"
   ],
   "key": [
-    "ukoko",
-    "key"
+    "ukoko"
   ],
   "kind": [
-    "ẹgbẹọkpa",
-    "kind"
+    "ẹgbẹọkpa"
   ],
   "status": [
-    "ẹghẹmwẹn",
-    "status"
+    "ẹghẹmwẹn"
   ],
   "flag": [
-    "amẹmwiẹ",
-    "flag"
+    "amẹmwiẹ"
   ],
   "id": [
-    "idẹn",
-    "id"
+    "idẹn"
   ],
   "age": [
-    "ukpo",
-    "age"
+    "ukpo"
   ],
   "score": [
-    "ọnrẹn",
-    "score"
+    "ọnrẹn"
   ],
   "amount": [
-    "ẹkhẹ",
-    "amount"
+    "ẹkhẹ"
   ],
   "password": [
-    "unuẹkhokho",
-    "password"
+    "unuẹkhokho"
   ]
 }

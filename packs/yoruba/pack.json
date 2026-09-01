@@ -10,7 +10,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Yorùbá",
   "description": "Yoruba keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -37,150 +37,120 @@
   "keywords": {
     "IF": [
       "ṣé",
-      "ti",
-      "if"
+      "ti"
     ],
     "ELSE": [
       "bẹ́ẹ̀kọ́",
       "tàbí",
-      "bibeeko",
-      "else"
+      "bibeeko"
     ],
     "FOR": [
-      "fun",
-      "for"
+      "fun"
     ],
     "WHILE": [
       "nígbà tí",
       "nígbàtí",
       "nigbati",
-      "nigba",
-      "while"
+      "nigba"
     ],
     "BREAK": [
       "dá",
-      "kúrò",
-      "break"
+      "kúrò"
     ],
     "CONTINUE": [
-      "tẹ̀síwájú",
-      "continue"
+      "tẹ̀síwájú"
     ],
     "SWITCH": [
       "yàn",
-      "yí",
-      "switch"
+      "yí"
     ],
     "CASE": [
       "ìpò",
-      "ìru",
-      "case"
+      "ìru"
     ],
     "DEFAULT": [
       "àìyípadà",
-      "padasi",
-      "default"
+      "padasi"
     ],
     "FUNCTION": [
       "iṣẹ",
       "iṣẹ́",
-      "ise",
-      "function"
+      "ise"
     ],
     "RETURN": [
       "padà",
-      "pada",
-      "return"
+      "pada"
     ],
     "ASYNC": [
-      "nígbà",
-      "async"
+      "nígbà"
     ],
     "AWAIT": [
-      "dúró",
-      "await"
+      "dúró"
     ],
     "TRY": [
-      "gbìyànjú",
-      "try"
+      "gbìyànjú"
     ],
     "CATCH": [
-      "tì",
-      "catch"
+      "tì"
     ],
     "FINALLY": [
-      "ìparí",
-      "finally"
+      "ìparí"
     ],
     "THROW": [
-      "jù",
-      "throw"
+      "jù"
     ],
     "LET": [
       "jẹ́ kí",
-      "jẹ́kí",
-      "let"
+      "jẹ́kí"
     ],
     "CONST": [
       "const"
     ],
     "CLASS": [
-      "ìlò",
-      "class"
+      "ìlò"
     ],
     "EXTENDS": [
-      "ṣe àfikún",
-      "extends"
+      "ṣe àfikún"
     ],
     "NEW": [
-      "tuntun",
-      "new"
+      "tuntun"
     ],
     "THIS": [
-      "èyí",
-      "this"
+      "èyí"
     ],
     "IMPORT": [
       "gba",
-      "gbewọlé",
-      "import"
+      "gbewọlé"
     ],
     "EXPORT": [
-      "fi sílẹ̀",
-      "export"
+      "fi sílẹ̀"
     ],
     "PRINT": [
       "ìfìdísílẹ̀",
       "sope",
       "tejade",
-      "tẹ",
-      "print"
+      "tẹ"
     ],
     "TRUE": [
       "ìtọ́",
       "òótọ́",
-      "sotito",
-      "true"
+      "sotito"
     ],
     "FALSE": [
       "ìtàn",
       "irọ́",
-      "seke",
-      "false"
+      "seke"
     ],
     "NULL": [
       "ohun kan",
-      "ofo",
-      "null"
+      "ofo"
     ],
     "UNDEFINED": [
-      "àìfìdíò",
-      "undefined"
+      "àìfìdíò"
     ],
     "ELIF": [
       "tàbí ṣé",
-      "si_ti",
-      "elif"
+      "si_ti"
     ],
     "LOOP": [
       "loop"
@@ -306,12 +276,10 @@
       "map"
     ],
     "AND": [
-      "ati",
-      "and"
+      "ati"
     ],
     "OR": [
-      "tabi",
-      "or"
+      "tabi"
     ],
     "NOT": [
       "not"

@@ -1,50 +1,38 @@
 {
   "condition": [
-    "yanayi",
-    "condition"
+    "yanayi"
   ],
   "name": [
-    "suna",
-    "name"
+    "suna"
   ],
   "data_value": [
-    "daraja",
-    "data_value"
+    "daraja"
   ],
   "message": [
-    "sako",
-    "message"
+    "sako"
   ],
   "index": [
-    "lamba",
-    "index"
+    "lamba"
   ],
   "item": [
-    "abu",
-    "item"
+    "abu"
   ],
   "body": [
-    "jiki",
-    "body"
+    "jiki"
   ],
   "expression": [
-    "magana",
-    "expression"
+    "magana"
   ],
   "variable": [
-    "sauyi",
-    "variable"
+    "sauyi"
   ],
   "array": [
-    "jerin",
-    "array"
+    "jerin"
   ],
   "function": [
-    "aiki",
-    "function"
+    "aiki"
   ],
   "class": [
-    "darasi",
-    "class"
+    "darasi"
   ]
 }

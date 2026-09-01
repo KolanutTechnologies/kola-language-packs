@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Akan",
   "description": "Akan keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -34,123 +34,96 @@
   ],
   "keywords": {
     "IF": [
-      "sɛ",
-      "if"
+      "sɛ"
     ],
     "ELSE": [
-      "sɛ ɛnyɛ saa a",
-      "else"
+      "sɛ ɛnyɛ saa a"
     ],
     "FOR": [
-      "ma",
-      "for"
+      "ma"
     ],
     "WHILE": [
-      "bere a",
-      "while"
+      "bere a"
     ],
     "BREAK": [
-      "bua",
-      "break"
+      "bua"
     ],
     "CONTINUE": [
-      "toa so",
-      "continue"
+      "toa so"
     ],
     "SWITCH": [
-      "paw",
-      "switch"
+      "paw"
     ],
     "CASE": [
-      "sɛbea",
-      "case"
+      "sɛbea"
     ],
     "DEFAULT": [
-      "deɛ ɛwɔ hɔ",
-      "default"
+      "deɛ ɛwɔ hɔ"
     ],
     "FUNCTION": [
       "adwuma",
-      "dwuma",
-      "function"
+      "dwuma"
     ],
     "RETURN": [
-      "san kɔ",
-      "return"
+      "san kɔ"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "twɛn",
-      "await"
+      "twɛn"
     ],
     "TRY": [
-      "bɔ mmɔden",
-      "try"
+      "bɔ mmɔden"
     ],
     "CATCH": [
-      "kyere",
-      "catch"
+      "kyere"
     ],
     "FINALLY": [
-      "ewie",
-      "finally"
+      "ewie"
     ],
     "THROW": [
-      "to gu",
-      "throw"
+      "to gu"
     ],
     "LET": [
       "let"
     ],
     "CONST": [
-      "gyina pintinn",
-      "const"
+      "gyina pintinn"
     ],
     "CLASS": [
       "kuw",
-      "ekuri",
-      "class"
+      "ekuri"
     ],
     "EXTENDS": [
       "extends"
     ],
     "NEW": [
-      "foforo",
-      "new"
+      "foforo"
     ],
     "THIS": [
-      "wei",
-      "this"
+      "wei"
     ],
     "IMPORT": [
-      "fa ba",
-      "import"
+      "fa ba"
     ],
     "EXPORT": [
-      "ma kɔ",
-      "export"
+      "ma kɔ"
     ],
     "PRINT": [
-      "kyerɛ",
-      "print"
+      "kyerɛ"
     ],
     "TRUE": [
-      "nokware",
-      "true"
+      "nokware"
     ],
     "FALSE": [
-      "atoro",
-      "false"
+      "atoro"
     ],
     "NULL": [
-      "hwee",
-      "null"
+      "hwee"
     ],
     "UNDEFINED": [
-      "nnyɛ nkyerɛase",
-      "undefined"
+      "nnyɛ nkyerɛase"
     ],
     "ELIF": [
       "elif"

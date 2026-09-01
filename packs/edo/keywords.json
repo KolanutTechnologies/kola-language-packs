@@ -30,7 +30,7 @@
   ],
   "SWITCH": [
     "zẹ",
-    "switch"
+    "match"
   ],
   "CASE": [
     "ẹzọ",
@@ -42,7 +42,7 @@
   ],
   "FUNCTION": [
     "iwinna",
-    "function"
+    "def"
   ],
   "RETURN": [
     "werriegbe",
@@ -63,7 +63,7 @@
   ],
   "CATCH": [
     "mu",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "he",
@@ -95,7 +95,7 @@
   ],
   "THIS": [
     "ọna",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "rhielaoẹ",
@@ -119,11 +119,11 @@
   ],
   "NULL": [
     "ihoi",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "ẹirẹn",
-    "undefined"
+    "none"
   ],
   "AND": [
     "kevbe",
@@ -187,7 +187,7 @@
   ],
   "NIL": [
     "ohogha",
-    "nil"
+    "none"
   ],
   "NONE": [
     "rhokpa",

@@ -32,7 +32,7 @@
   "SWITCH": [
     "họrọ",
     "dịka",
-    "switch"
+    "match"
   ],
   "CASE": [
     "ọnọdụ",
@@ -45,7 +45,7 @@
   "FUNCTION": [
     "ọrụ",
     "kowa",
-    "function"
+    "def"
   ],
   "RETURN": [
     "lọghachi",
@@ -70,7 +70,7 @@
   "CATCH": [
     "jide",
     "ewezuga",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "ikpeazụ",
@@ -108,7 +108,7 @@
   "THIS": [
     "nke a",
     "nkea",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "bubata",
@@ -140,11 +140,11 @@
   "NULL": [
     "efu",
     "odighi",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "akọwaghị",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "ozobu",

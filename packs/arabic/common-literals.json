@@ -1,62 +1,47 @@
 {
   "Hello": [
-    "مرحبا",
-    "Hello"
+    "مرحبا"
   ],
   "Error": [
-    "خطأ",
-    "Error"
+    "خطأ"
   ],
   "Success": [
-    "نجاح",
-    "Success"
+    "نجاح"
   ],
   "Welcome": [
-    "أهلا",
-    "Welcome"
+    "أهلا"
   ],
   "Goodbye": [
-    "وداعا",
-    "Goodbye"
+    "وداعا"
   ],
   "Yes": [
-    "نعم",
-    "Yes"
+    "نعم"
   ],
   "No": [
-    "لا",
-    "No"
+    "لا"
   ],
   "Done": [
-    "تم",
-    "Done"
+    "تم"
   ],
   "Loading": [
-    "جاري التحميل",
-    "Loading"
+    "جاري التحميل"
   ],
   "Failed": [
-    "فشل",
-    "Failed"
+    "فشل"
   ],
   "Cancel": [
-    "إلغاء",
-    "Cancel"
+    "إلغاء"
   ],
   "Submit": [
-    "إرسال",
-    "Submit"
+    "إرسال"
   ],
   "Search": [
-    "بحث",
-    "Search"
+    "بحث"
   ],
   "Warning": [
-    "تحذير",
-    "Warning"
+    "تحذير"
   ],
   "Please wait": [
-    "يرجى الانتظار",
-    "Please wait"
+    "يرجى الانتظار"
   ]
 }

@@ -1,50 +1,38 @@
 {
   "condition": [
-    "hali",
-    "condition"
+    "hali"
   ],
   "name": [
-    "jina",
-    "name"
+    "jina"
   ],
   "value": [
-    "thamani",
-    "value"
+    "thamani"
   ],
   "message": [
-    "ujumbe",
-    "message"
+    "ujumbe"
   ],
   "index": [
-    "faharasa",
-    "index"
+    "faharasa"
   ],
   "item": [
-    "kipengele",
-    "item"
+    "kipengele"
   ],
   "body": [
-    "mwili",
-    "body"
+    "mwili"
   ],
   "expression": [
-    "usemi",
-    "expression"
+    "usemi"
   ],
   "variable": [
-    "kigezo",
-    "variable"
+    "kigezo"
   ],
   "array": [
-    "orodha",
-    "array"
+    "orodha"
   ],
   "function": [
-    "kazi",
-    "function"
+    "kazi"
   ],
   "class": [
-    "darasa",
-    "class"
+    "darasa"
   ]
 }

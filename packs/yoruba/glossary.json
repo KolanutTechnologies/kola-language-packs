@@ -1,123 +1,93 @@
 {
   "name": [
-    "orukọ",
-    "name"
+    "orukọ"
   ],
   "count": [
-    "iye",
-    "count"
+    "iye"
   ],
   "price": [
-    "owo",
-    "price"
+    "owo"
   ],
   "user": [
-    "olumulo",
-    "user"
+    "olumulo"
   ],
   "total": [
-    "lapapọ",
-    "total"
+    "lapapọ"
   ],
   "message": [
-    "ifiranṣẹ",
-    "message"
+    "ifiranṣẹ"
   ],
   "error": [
-    "aṣiṣe",
-    "error"
+    "aṣiṣe"
   ],
   "payload": [
-    "alaye",
-    "payload"
+    "alaye"
   ],
   "item_list": [
-    "akojọ",
-    "item_list"
+    "akojọ"
   ],
   "index": [
-    "atiọka",
-    "index"
+    "atiọka"
   ],
   "data_value": [
-    "àpapọ",
-    "data_value"
+    "àpapọ"
   ],
   "item": [
-    "nkan",
-    "item"
+    "nkan"
   ],
   "num": [
-    "nọmba",
-    "num"
+    "nọmba"
   ],
   "text": [
-    "ọrọ",
-    "text"
+    "ọrọ"
   ],
   "result": [
-    "abajade",
-    "result"
+    "abajade"
   ],
   "input": [
-    "ibewọle",
-    "input"
+    "ibewọle"
   ],
   "output": [
     "sope",
-    "ibujade",
-    "output"
+    "ibujade"
   ],
   "file_ref": [
-    "faili",
-    "file_ref"
+    "faili"
   ],
   "path": [
-    "ọna",
-    "path"
+    "ọna"
   ],
   "length": [
-    "giga",
-    "length"
+    "giga"
   ],
   "size": [
-    "iwọn",
-    "size"
+    "iwọn"
   ],
   "key": [
-    "bọtini",
-    "key"
+    "bọtini"
   ],
   "kind": [
-    "iru",
-    "kind"
+    "iru"
   ],
   "status": [
-    "ipò",
-    "status"
+    "ipò"
   ],
   "flag": [
-    "ami",
-    "flag"
+    "ami"
   ],
   "id": [
-    "ìdàmọ̀",
-    "id"
+    "ìdàmọ̀"
   ],
   "age": [
-    "ọjọ ori",
-    "age"
+    "ọjọ ori"
   ],
   "score": [
-    "dídún",
-    "score"
+    "dídún"
   ],
   "amount": [
-    "iye owó",
-    "amount"
+    "iye owó"
   ],
   "password": [
-    "ọrọ igbaniwọle",
-    "password"
+    "ọrọ igbaniwọle"
   ]
 }

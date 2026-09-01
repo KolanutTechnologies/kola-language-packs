@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "اختر",
-    "switch"
+    "match"
   ],
   "CASE": [
     "حالة",
@@ -37,7 +37,7 @@
   ],
   "FUNCTION": [
     "دالة",
-    "function"
+    "def"
   ],
   "RETURN": [
     "ارجع",
@@ -57,7 +57,7 @@
   ],
   "CATCH": [
     "امسك",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "أخيرا",
@@ -90,7 +90,7 @@
   ],
   "THIS": [
     "هذا",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "استورد",
@@ -116,11 +116,11 @@
   ],
   "NULL": [
     "فارغ",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "غير معرّف",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

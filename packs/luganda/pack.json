@@ -8,7 +8,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Luganda",
   "description": "Luganda keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -34,127 +34,97 @@
   ],
   "keywords": {
     "IF": [
-      "singa",
-      "if"
+      "singa"
     ],
     "ELSE": [
-      "wabula",
-      "else"
+      "wabula"
     ],
     "FOR": [
-      "okulaga",
-      "for"
+      "okulaga"
     ],
     "WHILE": [
-      "ekiseera",
-      "while"
+      "ekiseera"
     ],
     "BREAK": [
-      "menya",
-      "break"
+      "menya"
     ],
     "CONTINUE": [
-      "eyongera",
-      "continue"
+      "eyongera"
     ],
     "SWITCH": [
-      "londa",
-      "switch"
+      "londa"
     ],
     "CASE": [
-      "omulamwa",
-      "case"
+      "omulamwa"
     ],
     "DEFAULT": [
-      "ekintu ekisooka",
-      "default"
+      "ekintu ekisooka"
     ],
     "FUNCTION": [
-      "omulimu",
-      "function"
+      "omulimu"
     ],
     "RETURN": [
-      "komawo",
-      "return"
+      "komawo"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "linda",
-      "await"
+      "linda"
     ],
     "TRY": [
-      "gezaako",
-      "try"
+      "gezaako"
     ],
     "CATCH": [
-      "kwata",
-      "catch"
+      "kwata"
     ],
     "FINALLY": [
-      "oluvannyuma",
-      "finally"
+      "oluvannyuma"
     ],
     "THROW": [
-      "suula",
-      "throw"
+      "suula"
     ],
     "LET": [
-      "leka",
-      "let"
+      "leka"
     ],
     "CONST": [
-      "ekigumu",
-      "const"
+      "ekigumu"
     ],
     "CLASS": [
-      "ekibiina",
-      "class"
+      "ekibiina"
     ],
     "EXTENDS": [
-      "gattako",
-      "extends"
+      "gattako"
     ],
     "NEW": [
-      "kipya",
-      "new"
+      "kipya"
     ],
     "THIS": [
-      "kino",
-      "this"
+      "kino"
     ],
     "IMPORT": [
-      "yingiza",
-      "import"
+      "yingiza"
     ],
     "EXPORT": [
-      "fulumya ebweru",
-      "export"
+      "fulumya ebweru"
     ],
     "PRINT": [
-      "fulumya ku skrini",
-      "print"
+      "fulumya ku skrini"
     ],
     "TRUE": [
-      "amazima",
-      "true"
+      "amazima"
     ],
     "FALSE": [
-      "obulimba",
-      "false"
+      "obulimba"
     ],
     "NULL": [
-      "tewali kintu",
-      "null"
+      "tewali kintu"
     ],
     "UNDEFINED": [
-      "tekinnyonnyoddwa",
-      "undefined"
+      "tekinnyonnyoddwa"
     ],
     "ELIF": [
-      "wabula singa",
-      "elif"
+      "wabula singa"
     ],
     "LOOP": [
       "loop"

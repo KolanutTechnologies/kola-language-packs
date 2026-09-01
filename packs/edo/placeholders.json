@@ -1,50 +1,38 @@
 {
   "condition": [
-    "deghẹ",
-    "condition"
+    "deghẹ"
   ],
   "name": [
-    "eni",
-    "name"
+    "eni"
   ],
   "value": [
-    "ughughan",
-    "value"
+    "ughughan"
   ],
   "message": [
-    "iyẹn",
-    "message"
+    "iyẹn"
   ],
   "index": [
-    "atan",
-    "index"
+    "atan"
   ],
   "item": [
-    "okhian",
-    "item"
+    "okhian"
   ],
   "body": [
-    "egbe",
-    "body"
+    "egbe"
   ],
   "expression": [
-    "ẹmwẹ ruẹ",
-    "expression"
+    "ẹmwẹ ruẹ"
   ],
   "variable": [
-    "emwin ya",
-    "variable"
+    "emwin ya"
   ],
   "array": [
-    "usun",
-    "array"
+    "usun"
   ],
   "function": [
-    "iwinna",
-    "function"
+    "iwinna"
   ],
   "class": [
-    "ẹgbẹ",
-    "class"
+    "ẹgbẹ"
   ]
 }

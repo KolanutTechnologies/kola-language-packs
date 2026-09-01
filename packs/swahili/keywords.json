@@ -28,7 +28,7 @@
   "SWITCH": [
     "chagua",
     "badili",
-    "switch"
+    "match"
   ],
   "CASE": [
     "kesi",
@@ -42,7 +42,7 @@
   "FUNCTION": [
     "kazi",
     "unda",
-    "function"
+    "def"
   ],
   "RETURN": [
     "rudisha",
@@ -62,7 +62,7 @@
   ],
   "CATCH": [
     "kamata",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "hatimaye",
@@ -95,7 +95,7 @@
   ],
   "THIS": [
     "hii",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "agiza",
@@ -122,11 +122,11 @@
   ],
   "NULL": [
     "tupu",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "haijabainishwa",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "au kama",

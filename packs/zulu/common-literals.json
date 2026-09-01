@@ -1,62 +1,47 @@
 {
   "Hello": [
-    "Sawubona",
-    "Hello"
+    "Sawubona"
   ],
   "Error": [
-    "Iphutha",
-    "Error"
+    "Iphutha"
   ],
   "Success": [
-    "Impumelelo",
-    "Success"
+    "Impumelelo"
   ],
   "Welcome": [
-    "Wamukelekile",
-    "Welcome"
+    "Wamukelekile"
   ],
   "Goodbye": [
-    "Hamba kahle",
-    "Goodbye"
+    "Hamba kahle"
   ],
   "Yes": [
-    "Yebo",
-    "Yes"
+    "Yebo"
   ],
   "No": [
-    "Cha",
-    "No"
+    "Cha"
   ],
   "Done": [
-    "Kwenziwe",
-    "Done"
+    "Kwenziwe"
   ],
   "Loading": [
-    "Iyalayisha",
-    "Loading"
+    "Iyalayisha"
   ],
   "Failed": [
-    "Yehlulekile",
-    "Failed"
+    "Yehlulekile"
   ],
   "Cancel": [
-    "Khansela",
-    "Cancel"
+    "Khansela"
   ],
   "Submit": [
-    "Thumela",
-    "Submit"
+    "Thumela"
   ],
   "Search": [
-    "Sesha",
-    "Search"
+    "Sesha"
   ],
   "Warning": [
-    "Isexwayiso",
-    "Warning"
+    "Isexwayiso"
   ],
   "Please wait": [
-    "Sicela ulinde",
-    "Please wait"
+    "Sicela ulinde"
   ]
 }

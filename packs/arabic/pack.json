@@ -2,6 +2,7 @@
   "name": "arabic",
   "languageCode": "ar",
   "locale": "ar-EG",
+  "direction": "rtl",
   "countries": [
     "EG",
     "SD",
@@ -18,7 +19,7 @@
     "North Africa",
     "East Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Arabic",
   "description": "Arabic keyword map for North and East Africa — starter pack",
   "reviewStatus": "starter",
@@ -44,127 +45,97 @@
   ],
   "keywords": {
     "IF": [
-      "إذا",
-      "if"
+      "إذا"
     ],
     "ELSE": [
-      "وإلا",
-      "else"
+      "وإلا"
     ],
     "FOR": [
-      "ل",
-      "for"
+      "ل"
     ],
     "WHILE": [
-      "بينما",
-      "while"
+      "بينما"
     ],
     "BREAK": [
-      "اكسر",
-      "break"
+      "اكسر"
     ],
     "CONTINUE": [
-      "استمر",
-      "continue"
+      "استمر"
     ],
     "SWITCH": [
-      "اختر",
-      "switch"
+      "اختر"
     ],
     "CASE": [
-      "حالة",
-      "case"
+      "حالة"
     ],
     "DEFAULT": [
-      "افتراضي",
-      "default"
+      "افتراضي"
     ],
     "FUNCTION": [
-      "دالة",
-      "function"
+      "دالة"
     ],
     "RETURN": [
-      "ارجع",
-      "return"
+      "ارجع"
     ],
     "ASYNC": [
-      "غير متزامن",
-      "async"
+      "غير متزامن"
     ],
     "AWAIT": [
-      "انتظر",
-      "await"
+      "انتظر"
     ],
     "TRY": [
-      "حاول",
-      "try"
+      "حاول"
     ],
     "CATCH": [
-      "امسك",
-      "catch"
+      "امسك"
     ],
     "FINALLY": [
-      "أخيرا",
-      "finally"
+      "أخيرا"
     ],
     "THROW": [
-      "ارم",
-      "throw"
+      "ارم"
     ],
     "LET": [
       "دع",
-      "حدد",
-      "let"
+      "حدد"
     ],
     "CONST": [
-      "ثابت",
-      "const"
+      "ثابت"
     ],
     "CLASS": [
-      "فئة",
-      "class"
+      "فئة"
     ],
     "EXTENDS": [
-      "يمتد",
-      "extends"
+      "يمتد"
     ],
     "NEW": [
-      "جديد",
-      "new"
+      "جديد"
     ],
     "THIS": [
-      "هذا",
-      "this"
+      "هذا"
     ],
     "IMPORT": [
       "استورد",
-      "ضمن",
-      "import"
+      "ضمن"
     ],
     "EXPORT": [
-      "صدّر",
-      "export"
+      "صدّر"
     ],
     "PRINT": [
       "اطبع",
-      "قول",
-      "print"
+      "قول"
     ],
     "TRUE": [
-      "صحيح",
-      "true"
+      "صحيح"
     ],
     "FALSE": [
-      "خطأ",
-      "false"
+      "خطأ"
     ],
     "NULL": [
-      "فارغ",
-      "null"
+      "فارغ"
     ],
     "UNDEFINED": [
-      "غير معرّف",
-      "undefined"
+      "غير معرّف"
     ],
     "ELIF": [
       "elif"
@@ -191,8 +162,7 @@
       "yield"
     ],
     "LAMBDA": [
-      "لامدا",
-      "lambda"
+      "لامدا"
     ],
     "DEFER": [
       "defer"
@@ -294,12 +264,10 @@
       "map"
     ],
     "AND": [
-      "و",
-      "and"
+      "و"
     ],
     "OR": [
-      "أو",
-      "or"
+      "أو"
     ],
     "NOT": [
       "not"
@@ -314,8 +282,7 @@
       "del"
     ],
     "DO": [
-      "إفعل",
-      "do"
+      "إفعل"
     ],
     "DEBUGGER": [
       "debugger"

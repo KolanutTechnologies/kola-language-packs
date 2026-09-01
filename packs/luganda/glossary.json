@@ -1,122 +1,92 @@
 {
   "name": [
-    "erinnya",
-    "name"
+    "erinnya"
   ],
   "count": [
-    "okubala",
-    "count"
+    "okubala"
   ],
   "price": [
-    "omutindo",
-    "price"
+    "omutindo"
   ],
   "user": [
-    "omukozesa",
-    "user"
+    "omukozesa"
   ],
   "total": [
-    "omugatte",
-    "total"
+    "omugatte"
   ],
   "message": [
-    "obubaka",
-    "message"
+    "obubaka"
   ],
   "error": [
-    "ensobi",
-    "error"
+    "ensobi"
   ],
   "payload": [
-    "amawulire",
-    "payload"
+    "amawulire"
   ],
   "item_list": [
-    "olukalala",
-    "item_list"
+    "olukalala"
   ],
   "index": [
-    "omuwendo gw'ekifo",
-    "index"
+    "omuwendo gw'ekifo"
   ],
   "data_value": [
-    "omuwendo gw'amawulire",
-    "data_value"
+    "omuwendo gw'amawulire"
   ],
   "item": [
-    "ekintu",
-    "item"
+    "ekintu"
   ],
   "num": [
-    "namba",
-    "num"
+    "namba"
   ],
   "text": [
-    "ebyawandiikibwa",
-    "text"
+    "ebyawandiikibwa"
   ],
   "result": [
-    "ekivaamu",
-    "result"
+    "ekivaamu"
   ],
   "input": [
-    "okuyingiza",
-    "input"
+    "okuyingiza"
   ],
   "output": [
-    "okuvaamu",
-    "output"
+    "okuvaamu"
   ],
   "file_ref": [
-    "fayiro",
-    "file_ref"
+    "fayiro"
   ],
   "path": [
-    "ekkubo",
-    "path"
+    "ekkubo"
   ],
   "length": [
-    "obuwanvu",
-    "length"
+    "obuwanvu"
   ],
   "size": [
-    "obunene",
-    "size"
+    "obunene"
   ],
   "key": [
-    "ekinnyonnyola",
-    "key"
+    "ekinnyonnyola"
   ],
   "kind": [
-    "ekika",
-    "kind"
+    "ekika"
   ],
   "status": [
-    "embeera",
-    "status"
+    "embeera"
   ],
   "flag": [
-    "obubonero",
-    "flag"
+    "obubonero"
   ],
   "id": [
-    "ekikongojja",
-    "id"
+    "ekikongojja"
   ],
   "age": [
-    "emyaka",
-    "age"
+    "emyaka"
   ],
   "score": [
-    "obubonero bw'okubala",
-    "score"
+    "obubonero bw'okubala"
   ],
   "amount": [
-    "omugatte gw'ensimbi",
-    "amount"
+    "omugatte gw'ensimbi"
   ],
   "password": [
-    "ekyama",
-    "password"
+    "ekyama"
   ]
 }

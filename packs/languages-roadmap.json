@@ -1,7 +1,7 @@
 {
-  "version": "0.17.1",
+  "version": "0.18.1",
   "npmVersionBaseline": "0.11.1",
-  "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, UI/Design catalog phases, and Phase F future mapping candidates. Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
+  "description": "Versioned product roadmap for African language packs, programming targets, logical tokens, IDE gloss tiers, UI/Design catalog phases, Phase F future mapping, and Phase G union-TAM packs (after African 1.0). Human guide: packs/ROADMAP.md. Layer ceilings: packs/TIERS.md.",
   "productJob": {
     "pain": "Learning and writing code in a second language costs attention. Part of the mind translates surface words instead of solving the problem.",
     "job": "Help people learn and write code in languages they actually think in, via shared versioned maps that tools can transpile and reverse-map."
@@ -217,6 +217,62 @@
       ],
       "priority": "low",
       "targetRelease": "0.20.0"
+    },
+    {
+      "name": "spanish",
+      "languageCode": "es",
+      "locale": "es-CO",
+      "regions": [
+        "Latin America",
+        "Caribbean"
+      ],
+      "priority": "medium",
+      "targetRelease": "1.4.0",
+      "note": "Phase G union TAM. One pack for Latin American Spanish (Colombia, Cuba, and peers). Not country stickers. After African 1.0 (68 packs). Arabic already ships."
+    },
+    {
+      "name": "haitian-creole",
+      "languageCode": "ht",
+      "locale": "ht-HT",
+      "regions": [
+        "Caribbean"
+      ],
+      "priority": "medium",
+      "targetRelease": "1.4.0",
+      "note": "Phase G. Haitian Creole — not French, not Mauritian/Seychelles creole (those stay African Indian-Ocean packs)."
+    },
+    {
+      "name": "filipino",
+      "languageCode": "fil",
+      "locale": "fil-PH",
+      "regions": [
+        "Southeast Asia"
+      ],
+      "priority": "medium",
+      "targetRelease": "1.4.0",
+      "note": "Phase G union TAM. Filipino (standardized); Tagalog aliases belong in this pack, not a second folder."
+    },
+    {
+      "name": "indonesian",
+      "languageCode": "id",
+      "locale": "id-ID",
+      "regions": [
+        "Southeast Asia"
+      ],
+      "priority": "medium",
+      "targetRelease": "1.4.0",
+      "note": "Phase G union TAM. After African 1.0."
+    },
+    {
+      "name": "nepali",
+      "languageCode": "ne",
+      "locale": "ne-NP",
+      "regions": [
+        "South Asia"
+      ],
+      "priority": "medium",
+      "targetRelease": "1.4.0",
+      "note": "Phase G union TAM. After African 1.0."
     }
   ],
   "plannedBacklog": {
@@ -1283,7 +1339,7 @@
       "Pick one target from plannedDetails — do not batch multiple targets in one PR",
       "Add spec URL to official-target-keywords.json sources",
       "Add targets.{id} emits to every logical token (empty string where no keyword)",
-      "Run npm run bootstrap to refresh all packs",
+      "Run npm run ensure-tokens then npm test to refresh packs",
       "Run npm test and npm run readme:sync"
     ]
   },
@@ -1649,6 +1705,15 @@
       "status": "planned"
     },
     {
+      "release": "1.4.0",
+      "bump": "minor",
+      "focus": "Phase G union-TAM packs: spanish, haitian-creole, filipino, indonesian, nepali. After African 1.0. Arabic already ships.",
+      "metrics": {
+        "unionTamPacks": 5
+      },
+      "status": "planned"
+    },
+    {
       "release": "2.0.0",
       "bump": "major",
       "focus": "Stdlib/builtins tier (~150 starter concepts); separate coverage rules",
@@ -1678,5 +1743,22 @@
       },
       "status": "planned"
     }
-  ]
+  ],
+  "unionTamPacks": {
+    "description": "Keyword packs for people outside Africa who share the same constraint (think-in-your-language on a mid-range phone). Same schema as African packs. Do not start until African 1.0 (68 packs) ships. Arabic already shipped (North Africa + union). One language = one pack, not one country.",
+    "phase": "G",
+    "targetRelease": "1.4.0",
+    "gate": "After African 1.0.0 (68 packs). Do not pause African expansion for these.",
+    "packs": [
+      "spanish",
+      "haitian-creole",
+      "filipino",
+      "indonesian",
+      "nepali"
+    ],
+    "alreadyShippedUnion": [
+      "arabic",
+      "french"
+    ]
+  }
 }

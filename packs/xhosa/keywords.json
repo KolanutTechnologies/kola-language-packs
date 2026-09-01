@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "khetha",
-    "switch"
+    "match"
   ],
   "CASE": [
     "ityala",
@@ -37,7 +37,7 @@
   ],
   "FUNCTION": [
     "umsebenzi",
-    "function"
+    "def"
   ],
   "RETURN": [
     "buyisa",
@@ -57,7 +57,7 @@
   ],
   "CATCH": [
     "bamba",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "ekugqibeleni",
@@ -89,7 +89,7 @@
   ],
   "THIS": [
     "le",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "ngenisa",
@@ -113,11 +113,11 @@
   ],
   "NULL": [
     "into",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "ingachazwanga",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

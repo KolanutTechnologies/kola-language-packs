@@ -9,7 +9,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Tigrinya",
   "description": "Tigrinya keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -35,123 +35,94 @@
   ],
   "keywords": {
     "IF": [
-      "ከ",
-      "if"
+      "ከ"
     ],
     "ELSE": [
-      "ካልእ",
-      "else"
+      "ካልእ"
     ],
     "FOR": [
-      "ን",
-      "for"
+      "ን"
     ],
     "WHILE": [
-      "ሰዓት",
-      "while"
+      "ሰዓት"
     ],
     "BREAK": [
-      "ሰብር",
-      "break"
+      "ሰብር"
     ],
     "CONTINUE": [
-      "ቀጽል",
-      "continue"
+      "ቀጽል"
     ],
     "SWITCH": [
-      "ምረጽ",
-      "switch"
+      "ምረጽ"
     ],
     "CASE": [
-      "ጉዳይ",
-      "case"
+      "ጉዳይ"
     ],
     "DEFAULT": [
-      "ነባሪ",
-      "default"
+      "ነባሪ"
     ],
     "FUNCTION": [
-      "ተግባር",
-      "function"
+      "ተግባር"
     ],
     "RETURN": [
-      "መልስ",
-      "return"
+      "መልስ"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "ጽበ",
-      "await"
+      "ጽበ"
     ],
     "TRY": [
-      "ፈትን",
-      "try"
+      "ፈትን"
     ],
     "CATCH": [
-      "ዓቅም",
-      "catch"
+      "ዓቅም"
     ],
     "FINALLY": [
-      "ናይ መወዳእታ",
-      "finally"
+      "ናይ መወዳእታ"
     ],
     "THROW": [
-      "ደርድር",
-      "throw"
+      "ደርድር"
     ],
     "LET": [
-      "ተው",
-      "let"
+      "ተው"
     ],
     "CONST": [
-      "ቋሚ",
-      "const"
+      "ቋሚ"
     ],
     "CLASS": [
-      "ክፍሊ",
-      "class"
+      "ክፍሊ"
     ],
     "EXTENDS": [
-      "ዘርግ",
-      "extends"
+      "ዘርግ"
     ],
     "NEW": [
-      "ሓድሽ",
-      "new"
+      "ሓድሽ"
     ],
     "THIS": [
-      "እዚ",
-      "this"
+      "እዚ"
     ],
     "IMPORT": [
-      "ኣእት",
-      "import"
+      "ኣእት"
     ],
     "EXPORT": [
-      "ላእ",
-      "export"
+      "ላእ"
     ],
     "PRINT": [
-      "ሓትም",
-      "print"
+      "ሓትም"
     ],
     "TRUE": [
-      "ሓቂ",
-      "true"
+      "ሓቂ"
     ],
     "FALSE": [
-      "ሓሶት",
-      "false"
+      "ሓሶት"
     ],
     "NULL": [
-      "ባዶ",
-      "null"
+      "ባዶ"
     ],
     "UNDEFINED": [
-      "ዘይተገልጸ",
-      "undefined"
+      "ዘይተገልጸ"
     ],
     "ELIF": [
       "elif"

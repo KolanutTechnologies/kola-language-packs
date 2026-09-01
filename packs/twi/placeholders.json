@@ -1,50 +1,38 @@
 {
   "condition": [
-    "tebea",
-    "condition"
+    "tebea"
   ],
   "name": [
-    "din",
-    "name"
+    "din"
   ],
   "value": [
-    "bo",
-    "value"
+    "bo"
   ],
   "message": [
-    "asɛm",
-    "message"
+    "asɛm"
   ],
   "index": [
-    "nɔnhwɛ",
-    "index"
+    "nɔnhwɛ"
   ],
   "item": [
-    "ade",
-    "item"
+    "ade"
   ],
   "body": [
-    "nipadua",
-    "body"
+    "nipadua"
   ],
   "expression": [
-    "kasafua",
-    "expression"
+    "kasafua"
   ],
   "variable": [
-    "soro",
-    "variable"
+    "soro"
   ],
   "array": [
-    "nhyehyɛe",
-    "array"
+    "nhyehyɛe"
   ],
   "function": [
-    "adwuma",
-    "function"
+    "adwuma"
   ],
   "class": [
-    "kuw",
-    "class"
+    "kuw"
   ]
 }

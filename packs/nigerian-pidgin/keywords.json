@@ -26,7 +26,7 @@
   ],
   "SWITCH": [
     "check which one",
-    "switch"
+    "match"
   ],
   "CASE": [
     "when e be",
@@ -38,7 +38,7 @@
   ],
   "FUNCTION": [
     "make function for",
-    "function"
+    "def"
   ],
   "RETURN": [
     "bring back",
@@ -58,7 +58,7 @@
   ],
   "CATCH": [
     "if e fail catch am",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "last last",
@@ -91,7 +91,7 @@
   ],
   "THIS": [
     "this one here",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "carry come",
@@ -102,7 +102,7 @@
     "export"
   ],
   "PRINT": [
-    "show for screen",
+    "show am on screen",
     "print"
   ],
   "TRUE": [
@@ -115,11 +115,11 @@
   ],
   "NULL": [
     "nothing dey",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "e no define",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

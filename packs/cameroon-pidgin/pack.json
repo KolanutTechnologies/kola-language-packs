@@ -8,7 +8,7 @@
   "regions": [
     "Central Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Cameroon Pidgin",
   "description": "Cameroon Pidgin keyword map — bridge language for Cameroonian developers",
   "reviewStatus": "starter",
@@ -37,116 +37,91 @@
       "if"
     ],
     "ELSE": [
-      "if no be so",
-      "else"
+      "if no be so"
     ],
     "FOR": [
       "for"
     ],
     "WHILE": [
-      "while e dey",
-      "while"
+      "while e dey"
     ],
     "BREAK": [
-      "stop",
-      "break"
+      "stop"
     ],
     "CONTINUE": [
       "continue"
     ],
     "SWITCH": [
-      "check which one",
-      "switch"
+      "check which one"
     ],
     "CASE": [
-      "if na",
-      "case"
+      "if na"
     ],
     "DEFAULT": [
-      "if nothing match",
-      "default"
+      "if nothing match"
     ],
     "FUNCTION": [
-      "make function",
-      "function"
+      "make function"
     ],
     "RETURN": [
-      "bring back",
-      "return"
+      "bring back"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "wait for",
-      "await"
+      "wait for"
     ],
     "TRY": [
-      "try am",
-      "try"
+      "try am"
     ],
     "CATCH": [
-      "catch am",
-      "catch"
+      "catch am"
     ],
     "FINALLY": [
-      "for last",
-      "finally"
+      "for last"
     ],
     "THROW": [
-      "throw am",
-      "throw"
+      "throw am"
     ],
     "LET": [
-      "make we talk say",
-      "let"
+      "make we talk say"
     ],
     "CONST": [
-      "e no go change",
-      "const"
+      "e no go change"
     ],
     "CLASS": [
-      "kind of thing",
-      "class"
+      "kind of thing"
     ],
     "EXTENDS": [
-      "e come from",
-      "extends"
+      "e come from"
     ],
     "NEW": [
-      "new one",
-      "new"
+      "new one"
     ],
     "THIS": [
-      "this one",
-      "this"
+      "this one"
     ],
     "IMPORT": [
-      "bring come",
-      "import"
+      "bring come"
     ],
     "EXPORT": [
-      "send go",
-      "export"
+      "send go"
     ],
     "PRINT": [
       "print"
     ],
     "TRUE": [
-      "e correct",
-      "true"
+      "e correct"
     ],
     "FALSE": [
-      "e no correct",
-      "false"
+      "e no correct"
     ],
     "NULL": [
-      "nothing",
-      "null"
+      "nothing"
     ],
     "UNDEFINED": [
-      "e no define",
-      "undefined"
+      "e no define"
     ],
     "ELIF": [
       "elif"

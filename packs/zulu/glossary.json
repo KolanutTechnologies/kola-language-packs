@@ -1,122 +1,92 @@
 {
   "name": [
-    "igama",
-    "name"
+    "igama"
   ],
   "count": [
-    "ibalo",
-    "count"
+    "ibalo"
   ],
   "price": [
-    "intengo",
-    "price"
+    "intengo"
   ],
   "user": [
-    "umsebenzisi",
-    "user"
+    "umsebenzisi"
   ],
   "total": [
-    "isamba",
-    "total"
+    "isamba"
   ],
   "message": [
-    "umlayezo",
-    "message"
+    "umlayezo"
   ],
   "error": [
-    "iphutha",
-    "error"
+    "iphutha"
   ],
   "payload": [
-    "idatha",
-    "payload"
+    "idatha"
   ],
   "item_list": [
-    "uhlu",
-    "item_list"
+    "uhlu"
   ],
   "index": [
-    "incomba",
-    "index"
+    "incomba"
   ],
   "data_value": [
-    "inani",
-    "data_value"
+    "inani"
   ],
   "item": [
-    "into",
-    "item"
+    "into"
   ],
   "num": [
-    "inombolo",
-    "num"
+    "inombolo"
   ],
   "text": [
-    "umbhalo",
-    "text"
+    "umbhalo"
   ],
   "result": [
-    "umphumela",
-    "result"
+    "umphumela"
   ],
   "input": [
-    "okokufaka",
-    "input"
+    "okokufaka"
   ],
   "output": [
-    "okokukhipha",
-    "output"
+    "okokukhipha"
   ],
   "file_ref": [
-    "ifayela",
-    "file_ref"
+    "ifayela"
   ],
   "path": [
-    "indlela",
-    "path"
+    "indlela"
   ],
   "length": [
-    "ubude",
-    "length"
+    "ubude"
   ],
   "size": [
-    "usayizi",
-    "size"
+    "usayizi"
   ],
   "key": [
-    "ukhiye",
-    "key"
+    "ukhiye"
   ],
   "kind": [
-    "uhlobo",
-    "kind"
+    "uhlobo"
   ],
   "status": [
-    "isimo",
-    "status"
+    "isimo"
   ],
   "flag": [
-    "ifulegi",
-    "flag"
+    "ifulegi"
   ],
   "id": [
-    "isazisi",
-    "id"
+    "isazisi"
   ],
   "age": [
-    "iminyaka",
-    "age"
+    "iminyaka"
   ],
   "score": [
-    "amaphuzu",
-    "score"
+    "amaphuzu"
   ],
   "amount": [
-    "imali",
-    "amount"
+    "imali"
   ],
   "password": [
-    "iphasiwedi",
-    "password"
+    "iphasiwedi"
   ]
 }

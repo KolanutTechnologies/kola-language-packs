@@ -1,62 +1,47 @@
 {
   "Hello": [
-    "Sannu",
-    "Hello"
+    "Sannu"
   ],
   "Error": [
-    "Kuskure",
-    "Error"
+    "Kuskure"
   ],
   "Success": [
-    "Nasara",
-    "Success"
+    "Nasara"
   ],
   "Welcome": [
-    "Barka da zuwa",
-    "Welcome"
+    "Barka da zuwa"
   ],
   "Goodbye": [
-    "Sai an jima",
-    "Goodbye"
+    "Sai an jima"
   ],
   "Yes": [
-    "Ee",
-    "Yes"
+    "Ee"
   ],
   "No": [
-    "A'a",
-    "No"
+    "A'a"
   ],
   "Done": [
-    "An gama",
-    "Done"
+    "An gama"
   ],
   "Loading": [
-    "Ana lodawa",
-    "Loading"
+    "Ana lodawa"
   ],
   "Failed": [
-    "Ya gaza",
-    "Failed"
+    "Ya gaza"
   ],
   "Cancel": [
-    "Soke",
-    "Cancel"
+    "Soke"
   ],
   "Submit": [
-    "Aika",
-    "Submit"
+    "Aika"
   ],
   "Search": [
-    "Nemo",
-    "Search"
+    "Nemo"
   ],
   "Warning": [
-    "Gargadi",
-    "Warning"
+    "Gargadi"
   ],
   "Please wait": [
-    "Don jira",
-    "Please wait"
+    "Don jira"
   ]
 }

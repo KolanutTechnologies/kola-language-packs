@@ -8,7 +8,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Kinyarwanda",
   "description": "Kinyarwanda keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -34,123 +34,94 @@
   ],
   "keywords": {
     "IF": [
-      "niba",
-      "if"
+      "niba"
     ],
     "ELSE": [
-      "ubundi",
-      "else"
+      "ubundi"
     ],
     "FOR": [
-      "kuri",
-      "for"
+      "kuri"
     ],
     "WHILE": [
-      "igihe",
-      "while"
+      "igihe"
     ],
     "BREAK": [
-      "vunika",
-      "break"
+      "vunika"
     ],
     "CONTINUE": [
-      "komeza",
-      "continue"
+      "komeza"
     ],
     "SWITCH": [
-      "hitamo",
-      "switch"
+      "hitamo"
     ],
     "CASE": [
-      "urubanza",
-      "case"
+      "urubanza"
     ],
     "DEFAULT": [
-      "bisanzwe",
-      "default"
+      "bisanzwe"
     ],
     "FUNCTION": [
-      "akazi",
-      "function"
+      "akazi"
     ],
     "RETURN": [
-      "garuka",
-      "return"
+      "garuka"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "tegereza",
-      "await"
+      "tegereza"
     ],
     "TRY": [
-      "gerageza",
-      "try"
+      "gerageza"
     ],
     "CATCH": [
-      "fata",
-      "catch"
+      "fata"
     ],
     "FINALLY": [
-      "amaherezo",
-      "finally"
+      "amaherezo"
     ],
     "THROW": [
-      "terera",
-      "throw"
+      "terera"
     ],
     "LET": [
-      "reka",
-      "let"
+      "reka"
     ],
     "CONST": [
-      "ikomeye",
-      "const"
+      "ikomeye"
     ],
     "CLASS": [
-      "ishuri",
-      "class"
+      "ishuri"
     ],
     "EXTENDS": [
-      "ongera",
-      "extends"
+      "ongera"
     ],
     "NEW": [
-      "gishya",
-      "new"
+      "gishya"
     ],
     "THIS": [
-      "ibi",
-      "this"
+      "ibi"
     ],
     "IMPORT": [
-      "injiza",
-      "import"
+      "injiza"
     ],
     "EXPORT": [
-      "ohereza",
-      "export"
+      "ohereza"
     ],
     "PRINT": [
-      "andika",
-      "print"
+      "andika"
     ],
     "TRUE": [
-      "ukuri",
-      "true"
+      "ukuri"
     ],
     "FALSE": [
-      "ikinyoma",
-      "false"
+      "ikinyoma"
     ],
     "NULL": [
-      "nta kintu",
-      "null"
+      "nta kintu"
     ],
     "UNDEFINED": [
-      "ntibisobanurwa",
-      "undefined"
+      "ntibisobanurwa"
     ],
     "ELIF": [
       "elif"

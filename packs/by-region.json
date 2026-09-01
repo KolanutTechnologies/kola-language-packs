@@ -1,8 +1,20 @@
 {
-  "version": "0.17.1",
+  "version": "0.18.1",
   "byRegion": {
+    "Southern Africa": [
+      "afrikaans",
+      "portuguese-africa",
+      "sesotho",
+      "setswana",
+      "shona",
+      "xhosa",
+      "zulu"
+    ],
     "West Africa": [
+      "akan",
       "bambara",
+      "edo",
+      "efik",
       "french",
       "fulfulde",
       "hausa",
@@ -23,27 +35,19 @@
       "swahili",
       "tigrinya"
     ],
-    "Southern Africa": [
-      "afrikaans",
-      "portuguese-africa",
-      "sesotho",
-      "setswana",
-      "shona",
-      "xhosa",
-      "zulu"
-    ],
-    "Horn of Africa": [
-      "somali"
-    ],
-    "Central Africa": [
-      "french",
-      "lingala"
-    ],
     "North Africa": [
       "arabic"
     ],
+    "Central Africa": [
+      "cameroon-pidgin",
+      "french",
+      "lingala"
+    ],
     "Indian Ocean": [
       "french"
+    ],
+    "Horn of Africa": [
+      "somali"
     ]
   }
 }

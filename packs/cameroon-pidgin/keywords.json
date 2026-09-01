@@ -22,7 +22,7 @@
   ],
   "SWITCH": [
     "check which one",
-    "switch"
+    "match"
   ],
   "CASE": [
     "if na",
@@ -34,7 +34,7 @@
   ],
   "FUNCTION": [
     "make function",
-    "function"
+    "def"
   ],
   "RETURN": [
     "bring back",
@@ -53,7 +53,7 @@
   ],
   "CATCH": [
     "catch am",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "for last",
@@ -85,7 +85,7 @@
   ],
   "THIS": [
     "this one",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "bring come",
@@ -108,11 +108,11 @@
   ],
   "NULL": [
     "nothing",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "e no define",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

@@ -25,7 +25,7 @@
   ],
   "SWITCH": [
     "paw",
-    "switch"
+    "match"
   ],
   "CASE": [
     "sɛbea",
@@ -38,7 +38,7 @@
   "FUNCTION": [
     "adwuma",
     "dwuma",
-    "function"
+    "def"
   ],
   "RETURN": [
     "san kɔ",
@@ -57,7 +57,7 @@
   ],
   "CATCH": [
     "kyere",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "ewie",
@@ -88,7 +88,7 @@
   ],
   "THIS": [
     "wei",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "fa ba",
@@ -112,11 +112,11 @@
   ],
   "NULL": [
     "hwee",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "nnyɛ nkyerɛase",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"

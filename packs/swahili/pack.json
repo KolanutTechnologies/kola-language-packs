@@ -12,7 +12,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Swahili",
   "description": "Swahili keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -39,136 +39,105 @@
   "keywords": {
     "IF": [
       "ikiwa",
-      "kama",
-      "if"
+      "kama"
     ],
     "ELSE": [
       "vinginevyo",
-      "sivyo",
-      "else"
+      "sivyo"
     ],
     "FOR": [
-      "kwa",
-      "for"
+      "kwa"
     ],
     "WHILE": [
-      "wakati",
-      "while"
+      "wakati"
     ],
     "BREAK": [
-      "vunja",
-      "break"
+      "vunja"
     ],
     "CONTINUE": [
-      "endelea",
-      "continue"
+      "endelea"
     ],
     "SWITCH": [
       "chagua",
-      "badili",
-      "switch"
+      "badili"
     ],
     "CASE": [
-      "kesi",
-      "case"
+      "kesi"
     ],
     "DEFAULT": [
       "chaguo msingi",
-      "kawaida",
-      "default"
+      "kawaida"
     ],
     "FUNCTION": [
       "kazi",
-      "unda",
-      "function"
+      "unda"
     ],
     "RETURN": [
-      "rudisha",
-      "return"
+      "rudisha"
     ],
     "ASYNC": [
-      "asynchronous",
-      "async"
+      "asynchronous"
     ],
     "AWAIT": [
-      "subiri",
-      "await"
+      "subiri"
     ],
     "TRY": [
-      "jaribu",
-      "try"
+      "jaribu"
     ],
     "CATCH": [
-      "kamata",
-      "catch"
+      "kamata"
     ],
     "FINALLY": [
-      "hatimaye",
-      "finally"
+      "hatimaye"
     ],
     "THROW": [
-      "tupa",
-      "throw"
+      "tupa"
     ],
     "LET": [
       "acha",
-      "fanya",
-      "let"
+      "fanya"
     ],
     "CONST": [
-      "thabiti",
-      "const"
+      "thabiti"
     ],
     "CLASS": [
-      "darasa",
-      "class"
+      "darasa"
     ],
     "EXTENDS": [
-      "panua",
-      "extends"
+      "panua"
     ],
     "NEW": [
-      "mpya",
-      "new"
+      "mpya"
     ],
     "THIS": [
-      "hii",
-      "this"
+      "hii"
     ],
     "IMPORT": [
       "agiza",
-      "tumia",
-      "import"
+      "tumia"
     ],
     "EXPORT": [
-      "hamisha",
-      "export"
+      "hamisha"
     ],
     "PRINT": [
       "chapisha",
-      "andika",
-      "print"
+      "andika"
     ],
     "TRUE": [
-      "kweli",
-      "true"
+      "kweli"
     ],
     "FALSE": [
       "uongo",
-      "sikweli",
-      "false"
+      "sikweli"
     ],
     "NULL": [
-      "tupu",
-      "null"
+      "tupu"
     ],
     "UNDEFINED": [
-      "haijabainishwa",
-      "undefined"
+      "haijabainishwa"
     ],
     "ELIF": [
-      "au kama",
-      "elif"
+      "au kama"
     ],
     "LOOP": [
       "loop"

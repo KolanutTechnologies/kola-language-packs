@@ -1,5 +1,5 @@
 {
-  "description": "Intentional same-form / cross-English homographs. Most collisions are bugs (e.g. ELIF: [\"else\"]). Only list genuine native words that match another logical's English emit, after native-speaker review.",
+  "description": "Genuine linguistic homographs and cross-language keyword coincidences, confirmed by native-speaker review. Policy: packs/KEYWORD_ALIASES.md. Shared SECONDARY aliases are allowed by default and tracked in coverage-summary.json ambiguousForms. Only PRIMARY-alias collisions and cross-token English stubs need an entry here.",
   "howToUse": "Each entry: pack slug, form (lowercase), logicals allowed to use it, note. Validation in scripts/validate.mjs reads this file. Prefer distinct phrases when possible; allowlist is the exception path.",
   "entries": [
     {

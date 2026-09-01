@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Nigerian Pidgin",
   "description": "Nigerian Pidgin keyword map — bridge language for Nigerian developers",
   "reviewStatus": "starter",
@@ -34,126 +34,96 @@
   ],
   "keywords": {
     "IF": [
-      "if case say",
-      "if"
+      "if case say"
     ],
     "ELSE": [
-      "if e no be so",
-      "else"
+      "if e no be so"
     ],
     "FOR": [
       "do am again again",
-      "do am",
-      "for"
+      "do am"
     ],
     "WHILE": [
-      "keep doing am while",
-      "while"
+      "keep doing am while"
     ],
     "BREAK": [
-      "stop am",
-      "break"
+      "stop am"
     ],
     "CONTINUE": [
-      "continue am",
-      "continue"
+      "continue am"
     ],
     "SWITCH": [
-      "check which one",
-      "switch"
+      "check which one"
     ],
     "CASE": [
-      "when e be",
-      "case"
+      "when e be"
     ],
     "DEFAULT": [
-      "if nothing match",
-      "default"
+      "if nothing match"
     ],
     "FUNCTION": [
-      "make function for",
-      "function"
+      "make function for"
     ],
     "RETURN": [
-      "bring back",
-      "return"
+      "bring back"
     ],
     "ASYNC": [
-      "wait small first",
-      "async"
+      "wait small first"
     ],
     "AWAIT": [
-      "wait for am",
-      "await"
+      "wait for am"
     ],
     "TRY": [
-      "try am",
-      "try"
+      "try am"
     ],
     "CATCH": [
-      "if e fail catch am",
-      "catch"
+      "if e fail catch am"
     ],
     "FINALLY": [
-      "last last",
-      "finally"
+      "last last"
     ],
     "THROW": [
-      "throw am",
-      "throw"
+      "throw am"
     ],
     "LET": [
       "make we say",
-      "make",
-      "let"
+      "make"
     ],
     "CONST": [
-      "e no go change say",
-      "const"
+      "e no go change say"
     ],
     "CLASS": [
-      "kind of thing",
-      "class"
+      "kind of thing"
     ],
     "EXTENDS": [
-      "e come from",
-      "extends"
+      "e come from"
     ],
     "NEW": [
-      "new new",
-      "new"
+      "new new"
     ],
     "THIS": [
-      "this one here",
-      "this"
+      "this one here"
     ],
     "IMPORT": [
-      "carry come",
-      "import"
+      "carry come"
     ],
     "EXPORT": [
-      "send out",
-      "export"
+      "send out"
     ],
     "PRINT": [
-      "show for screen",
-      "print"
+      "show am on screen"
     ],
     "TRUE": [
-      "e correct",
-      "true"
+      "e correct"
     ],
     "FALSE": [
-      "e no correct",
-      "false"
+      "e no correct"
     ],
     "NULL": [
-      "nothing dey",
-      "null"
+      "nothing dey"
     ],
     "UNDEFINED": [
-      "e no define",
-      "undefined"
+      "e no define"
     ],
     "ELIF": [
       "elif"

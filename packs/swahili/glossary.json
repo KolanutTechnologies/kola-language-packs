@@ -1,124 +1,94 @@
 {
   "name": [
-    "jina",
-    "name"
+    "jina"
   ],
   "count": [
-    "hesabu",
-    "count"
+    "hesabu"
   ],
   "price": [
-    "bei",
-    "price"
+    "bei"
   ],
   "user": [
-    "mtumiaji",
-    "user"
+    "mtumiaji"
   ],
   "total": [
-    "jumla",
-    "total"
+    "jumla"
   ],
   "message": [
-    "ujumbe",
-    "message"
+    "ujumbe"
   ],
   "error": [
-    "kosa",
-    "error"
+    "kosa"
   ],
   "payload": [
-    "data",
-    "payload"
+    "data"
   ],
   "item_list": [
-    "orodha",
-    "item_list"
+    "orodha"
   ],
   "index": [
-    "faharasa",
-    "index"
+    "faharasa"
   ],
   "data_value": [
-    "thamani",
-    "data_value"
+    "thamani"
   ],
   "item": [
-    "kipengele",
-    "item"
+    "kipengele"
   ],
   "num": [
-    "nambari",
-    "num"
+    "nambari"
   ],
   "text": [
-    "maandishi",
-    "text"
+    "maandishi"
   ],
   "result": [
-    "matokeo",
-    "result"
+    "matokeo"
   ],
   "input": [
     "jaza",
-    "pembejeo",
-    "input"
+    "pembejeo"
   ],
   "output": [
     "andika",
-    "pato",
-    "output"
+    "pato"
   ],
   "file_ref": [
-    "faili",
-    "file_ref"
+    "faili"
   ],
   "path": [
-    "njia",
-    "path"
+    "njia"
   ],
   "length": [
-    "urefu",
-    "length"
+    "urefu"
   ],
   "size": [
-    "ukubwa",
-    "size"
+    "ukubwa"
   ],
   "key": [
-    "ufunguo",
-    "key"
+    "ufunguo"
   ],
   "kind": [
-    "aina",
-    "kind"
+    "aina"
   ],
   "status": [
-    "hali",
-    "status"
+    "hali"
   ],
   "flag": [
-    "bendera",
-    "flag"
+    "bendera"
   ],
   "id": [
-    "kitambulisho",
-    "id"
+    "kitambulisho"
   ],
   "age": [
-    "umri",
-    "age"
+    "umri"
   ],
   "score": [
-    "alama",
-    "score"
+    "alama"
   ],
   "amount": [
-    "kiasi",
-    "amount"
+    "kiasi"
   ],
   "password": [
-    "nenosiri",
-    "password"
+    "nenosiri"
   ]
 }

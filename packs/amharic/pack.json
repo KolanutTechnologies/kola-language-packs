@@ -8,7 +8,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Amharic",
   "description": "Amharic keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -34,124 +34,94 @@
   ],
   "keywords": {
     "IF": [
-      "ከሆነ",
-      "if"
+      "ከሆነ"
     ],
     "ELSE": [
-      "ካልሆነ",
-      "else"
+      "ካልሆነ"
     ],
     "FOR": [
-      "ለ",
-      "for"
+      "ለ"
     ],
     "WHILE": [
-      "በሚሆንበት",
-      "while"
+      "በሚሆንበት"
     ],
     "BREAK": [
-      "ሰብር",
-      "break"
+      "ሰብር"
     ],
     "CONTINUE": [
-      "ቀጥል",
-      "continue"
+      "ቀጥል"
     ],
     "SWITCH": [
-      "ምረጥ",
-      "switch"
+      "ምረጥ"
     ],
     "CASE": [
-      "ጉዳይ",
-      "case"
+      "ጉዳይ"
     ],
     "DEFAULT": [
-      "ነባሪ",
-      "default"
+      "ነባሪ"
     ],
     "FUNCTION": [
-      "ተግባር",
-      "function"
+      "ተግባር"
     ],
     "RETURN": [
-      "መልስ",
-      "return"
+      "መልስ"
     ],
     "ASYNC": [
-      "ማስመ",
-      "async"
+      "ማስመ"
     ],
     "AWAIT": [
-      "ጠብቅ",
-      "await"
+      "ጠብቅ"
     ],
     "TRY": [
-      "ሞክር",
-      "try"
+      "ሞክር"
     ],
     "CATCH": [
-      "ያዝ",
-      "catch"
+      "ያዝ"
     ],
     "FINALLY": [
-      "መጨረሻ",
-      "finally"
+      "መጨረሻ"
     ],
     "THROW": [
-      "ድርድር",
-      "throw"
+      "ድርድር"
     ],
     "LET": [
-      "ተው",
-      "let"
+      "ተው"
     ],
     "CONST": [
-      "ቋሚ",
-      "const"
+      "ቋሚ"
     ],
     "CLASS": [
-      "ክፍል",
-      "class"
+      "ክፍል"
     ],
     "EXTENDS": [
-      "ዘርጋ",
-      "extends"
+      "ዘርጋ"
     ],
     "NEW": [
-      "አዲስ",
-      "new"
+      "አዲስ"
     ],
     "THIS": [
-      "ይህ",
-      "this"
+      "ይህ"
     ],
     "IMPORT": [
-      "አስመጣ",
-      "import"
+      "አስመጣ"
     ],
     "EXPORT": [
-      "ላክ",
-      "export"
+      "ላክ"
     ],
     "PRINT": [
-      "አትም",
-      "print"
+      "አትም"
     ],
     "TRUE": [
-      "እውነት",
-      "true"
+      "እውነት"
     ],
     "FALSE": [
-      "ሐሰት",
-      "false"
+      "ሐሰት"
     ],
     "NULL": [
-      "ባዶ",
-      "null"
+      "ባዶ"
     ],
     "UNDEFINED": [
-      "ያልተገለጸ",
-      "undefined"
+      "ያልተገለጸ"
     ],
     "ELIF": [
       "elif"

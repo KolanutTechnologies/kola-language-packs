@@ -1,5 +1,5 @@
 {
-  "version": "0.17.1",
+  "version": "0.18.1",
   "description": "Reserved pack names and locales for contributors. Read the sections below BEFORE searching taken.*. Auto-generated — run npm run registry from repo root after adding a pack.",
   "howToUse": [
     "1. Read namingRules — how to pick name, languageCode, and locale.",
@@ -30,6 +30,12 @@
       "CD": "DR Congo",
       "CG": "Congo",
       "CI": "Ivory Coast",
+      "HT": "Haiti",
+      "ID": "Indonesia",
+      "NP": "Nepal",
+      "PH": "Philippines",
+      "CO": "Colombia",
+      "CU": "Cuba",
       "CM": "Cameroon",
       "CV": "Cabo Verde",
       "DJ": "Djibouti",
@@ -87,11 +93,14 @@
       "chichewa",
       "edo",
       "efik",
+      "filipino",
       "french",
       "fulfulde",
+      "haitian-creole",
       "hausa",
       "hausa-niger",
       "igbo",
+      "indonesian",
       "kikongo",
       "kinyarwanda",
       "kirundi",
@@ -99,6 +108,7 @@
       "luganda",
       "malagasy",
       "ndebele",
+      "nepali",
       "nigerian-pidgin",
       "oromo",
       "portuguese-africa",
@@ -107,6 +117,7 @@
       "shona",
       "somali",
       "sotho-northern",
+      "spanish",
       "swahili",
       "tamazight",
       "tigrinya",
@@ -193,6 +204,15 @@
         "status": "shipped"
       },
       {
+        "locale": "es-CO",
+        "pack": "spanish",
+        "displayName": "Spanish",
+        "languageCode": "es",
+        "countryCode": "CO",
+        "countryName": "Colombia",
+        "status": "planned"
+      },
+      {
         "locale": "ff-NG",
         "pack": "fulfulde",
         "displayName": "Fulfulde",
@@ -200,6 +220,15 @@
         "countryCode": "NG",
         "countryName": "Nigeria",
         "status": "shipped"
+      },
+      {
+        "locale": "fil-PH",
+        "pack": "filipino",
+        "displayName": "Filipino",
+        "languageCode": "fil",
+        "countryCode": "PH",
+        "countryName": "Philippines",
+        "status": "planned"
       },
       {
         "locale": "fr-SN",
@@ -227,6 +256,24 @@
         "countryCode": "NG",
         "countryName": "Nigeria",
         "status": "shipped"
+      },
+      {
+        "locale": "ht-HT",
+        "pack": "haitian-creole",
+        "displayName": "Haitian Creole",
+        "languageCode": "ht",
+        "countryCode": "HT",
+        "countryName": "Haiti",
+        "status": "planned"
+      },
+      {
+        "locale": "id-ID",
+        "pack": "indonesian",
+        "displayName": "Indonesian",
+        "languageCode": "id",
+        "countryCode": "ID",
+        "countryName": "Indonesia",
+        "status": "planned"
       },
       {
         "locale": "ig-NG",
@@ -271,6 +318,15 @@
         "languageCode": "mg",
         "countryCode": "MG",
         "countryName": "Madagascar",
+        "status": "planned"
+      },
+      {
+        "locale": "ne-NP",
+        "pack": "nepali",
+        "displayName": "Nepali",
+        "languageCode": "ne",
+        "countryCode": "NP",
+        "countryName": "Nepal",
         "status": "planned"
       },
       {
@@ -499,15 +555,20 @@
       "bin-NG",
       "bm-ML",
       "efi-NG",
+      "es-CO",
       "ff-NG",
+      "fil-PH",
       "fr-SN",
       "ha-NE",
       "ha-NG",
+      "ht-HT",
+      "id-ID",
       "ig-NG",
       "kg-CD",
       "lg-UG",
       "ln-CD",
       "mg-MG",
+      "ne-NP",
       "nr-ZA",
       "nso-ZA",
       "ny-MW",
@@ -1155,6 +1216,67 @@
       ],
       "priority": "low",
       "note": null,
+      "status": "planned"
+    },
+    {
+      "name": "spanish",
+      "languageCode": "es",
+      "locale": "es-CO",
+      "displayName": "Spanish",
+      "regions": [
+        "Latin America",
+        "Caribbean"
+      ],
+      "priority": "medium",
+      "note": "Phase G union TAM. One pack for Latin American Spanish (Colombia, Cuba, and peers). Not country stickers. After African 1.0 (68 packs). Arabic already ships.",
+      "status": "planned"
+    },
+    {
+      "name": "haitian-creole",
+      "languageCode": "ht",
+      "locale": "ht-HT",
+      "displayName": "Haitian Creole",
+      "regions": [
+        "Caribbean"
+      ],
+      "priority": "medium",
+      "note": "Phase G. Haitian Creole — not French, not Mauritian/Seychelles creole (those stay African Indian-Ocean packs).",
+      "status": "planned"
+    },
+    {
+      "name": "filipino",
+      "languageCode": "fil",
+      "locale": "fil-PH",
+      "displayName": "Filipino",
+      "regions": [
+        "Southeast Asia"
+      ],
+      "priority": "medium",
+      "note": "Phase G union TAM. Filipino (standardized); Tagalog aliases belong in this pack, not a second folder.",
+      "status": "planned"
+    },
+    {
+      "name": "indonesian",
+      "languageCode": "id",
+      "locale": "id-ID",
+      "displayName": "Indonesian",
+      "regions": [
+        "Southeast Asia"
+      ],
+      "priority": "medium",
+      "note": "Phase G union TAM. After African 1.0.",
+      "status": "planned"
+    },
+    {
+      "name": "nepali",
+      "languageCode": "ne",
+      "locale": "ne-NP",
+      "displayName": "Nepali",
+      "regions": [
+        "South Asia"
+      ],
+      "priority": "medium",
+      "note": "Phase G union TAM. After African 1.0.",
       "status": "planned"
     }
   ]

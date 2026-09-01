@@ -1,50 +1,38 @@
 {
   "condition": [
-    "embeera",
-    "condition"
+    "embeera"
   ],
   "name": [
-    "erinnya",
-    "name"
+    "erinnya"
   ],
   "value": [
-    "omuwendo gw'amawulire",
-    "value"
+    "omuwendo gw'amawulire"
   ],
   "message": [
-    "obubaka",
-    "message"
+    "obubaka"
   ],
   "index": [
-    "omuwendo gw'ekifo",
-    "index"
+    "omuwendo gw'ekifo"
   ],
   "item": [
-    "ekintu",
-    "item"
+    "ekintu"
   ],
   "body": [
-    "omubiri",
-    "body"
+    "omubiri"
   ],
   "expression": [
-    "enjogera",
-    "expression"
+    "enjogera"
   ],
   "variable": [
-    "ekyukakyuka",
-    "variable"
+    "ekyukakyuka"
   ],
   "array": [
-    "olukalala",
-    "array"
+    "olukalala"
   ],
   "function": [
-    "omulimu",
-    "function"
+    "omulimu"
   ],
   "class": [
-    "ekibiina",
-    "class"
+    "ekibiina"
   ]
 }

@@ -1,50 +1,38 @@
 {
   "condition": [
-    "شرط",
-    "condition"
+    "شرط"
   ],
   "name": [
-    "اسم",
-    "name"
+    "اسم"
   ],
   "value": [
-    "قيمة",
-    "value"
+    "قيمة"
   ],
   "message": [
-    "رسالة",
-    "message"
+    "رسالة"
   ],
   "index": [
-    "فهرس",
-    "index"
+    "فهرس"
   ],
   "item": [
-    "عنصر",
-    "item"
+    "عنصر"
   ],
   "body": [
-    "جسم",
-    "body"
+    "جسم"
   ],
   "expression": [
-    "تعبير",
-    "expression"
+    "تعبير"
   ],
   "variable": [
-    "متغير",
-    "variable"
+    "متغير"
   ],
   "array": [
-    "مصفوفة",
-    "array"
+    "مصفوفة"
   ],
   "function": [
-    "دالة",
-    "function"
+    "دالة"
   ],
   "class": [
-    "فئة",
-    "class"
+    "فئة"
   ]
 }

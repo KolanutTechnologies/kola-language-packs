@@ -9,7 +9,7 @@
   "regions": [
     "East Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Oromo",
   "description": "Oromo keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -35,123 +35,94 @@
   ],
   "keywords": {
     "IF": [
-      "yoo",
-      "if"
+      "yoo"
     ],
     "ELSE": [
-      "kana malee",
-      "else"
+      "kana malee"
     ],
     "FOR": [
-      "waan",
-      "for"
+      "waan"
     ],
     "WHILE": [
-      "yeroo",
-      "while"
+      "yeroo"
     ],
     "BREAK": [
-      "cabsi",
-      "break"
+      "cabsi"
     ],
     "CONTINUE": [
-      "itti fufi",
-      "continue"
+      "itti fufi"
     ],
     "SWITCH": [
-      "filadhu",
-      "switch"
+      "filadhu"
     ],
     "CASE": [
-      "dhimma",
-      "case"
+      "dhimma"
     ],
     "DEFAULT": [
-      "baramaa",
-      "default"
+      "baramaa"
     ],
     "FUNCTION": [
-      "hojii",
-      "function"
+      "hojii"
     ],
     "RETURN": [
-      "deebisi",
-      "return"
+      "deebisi"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "eegi",
-      "await"
+      "eegi"
     ],
     "TRY": [
-      "yaali",
-      "try"
+      "yaali"
     ],
     "CATCH": [
-      "qabachuu",
-      "catch"
+      "qabachuu"
     ],
     "FINALLY": [
-      "dhumarratti",
-      "finally"
+      "dhumarratti"
     ],
     "THROW": [
-      "darbi",
-      "throw"
+      "darbi"
     ],
     "LET": [
-      "hayyami",
-      "let"
+      "hayyami"
     ],
     "CONST": [
-      "dhabbataa",
-      "const"
+      "dhabbataa"
     ],
     "CLASS": [
-      "garee",
-      "class"
+      "garee"
     ],
     "EXTENDS": [
-      "dabalata",
-      "extends"
+      "dabalata"
     ],
     "NEW": [
-      "haaraa",
-      "new"
+      "haaraa"
     ],
     "THIS": [
-      "kana",
-      "this"
+      "kana"
     ],
     "IMPORT": [
-      "galchi",
-      "import"
+      "galchi"
     ],
     "EXPORT": [
-      "ergi",
-      "export"
+      "ergi"
     ],
     "PRINT": [
-      "maxxansi",
-      "print"
+      "maxxansi"
     ],
     "TRUE": [
-      "dhugaa",
-      "true"
+      "dhugaa"
     ],
     "FALSE": [
-      "soba",
-      "false"
+      "soba"
     ],
     "NULL": [
-      "homaa",
-      "null"
+      "homaa"
     ],
     "UNDEFINED": [
-      "hin ibsamne",
-      "undefined"
+      "hin ibsamne"
     ],
     "ELIF": [
       "elif"

@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Efik",
   "description": "Efik keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -35,123 +35,94 @@
   "keywords": {
     "IF": [
       "ke",
-      "sok",
-      "if"
+      "sok"
     ],
     "ELSE": [
-      "keed",
-      "else"
+      "keed"
     ],
     "FOR": [
-      "na",
-      "for"
+      "na"
     ],
     "WHILE": [
-      "ke ini",
-      "while"
+      "ke ini"
     ],
     "BREAK": [
-      "tre",
-      "break"
+      "tre"
     ],
     "CONTINUE": [
-      "ka iso",
-      "continue"
+      "ka iso"
     ],
     "SWITCH": [
-      "sat",
-      "switch"
+      "sat"
     ],
     "CASE": [
-      "ini",
-      "case"
+      "ini"
     ],
     "DEFAULT": [
-      "nditoi",
-      "default"
+      "nditoi"
     ],
     "FUNCTION": [
-      "ufok",
-      "function"
+      "ufok"
     ],
     "RETURN": [
-      "fiak",
-      "return"
+      "fiak"
     ],
     "ASYNC": [
       "async"
     ],
     "AWAIT": [
-      "bet",
-      "await"
+      "bet"
     ],
     "TRY": [
-      "nam",
-      "try"
+      "nam"
     ],
     "CATCH": [
-      "nyim",
-      "catch"
+      "nyim"
     ],
     "FINALLY": [
-      "ke mme",
-      "finally"
+      "ke mme"
     ],
     "THROW": [
-      "nuk",
-      "throw"
+      "nuk"
     ],
     "LET": [
-      "yak",
-      "let"
+      "yak"
     ],
     "CONST": [
-      "nkanna",
-      "const"
+      "nkanna"
     ],
     "CLASS": [
-      "otúk",
-      "class"
+      "otúk"
     ],
     "EXTENDS": [
-      "toho",
-      "extends"
+      "toho"
     ],
     "NEW": [
-      "ufok fo",
-      "new"
+      "ufok fo"
     ],
     "THIS": [
-      "idem",
-      "this"
+      "idem"
     ],
     "IMPORT": [
-      "bo",
-      "import"
+      "bo"
     ],
     "EXPORT": [
-      "nó",
-      "export"
+      "nó"
     ],
     "PRINT": [
-      "wut",
-      "print"
+      "wut"
     ],
     "TRUE": [
-      "eti",
-      "true"
+      "eti"
     ],
     "FALSE": [
-      "inyene",
-      "false"
+      "inyene"
     ],
     "NULL": [
-      "nkpo",
-      "null"
+      "nkpo"
     ],
     "UNDEFINED": [
-      "nde",
-      "undefined"
+      "nde"
     ],
     "ELIF": [
       "elif"

@@ -1,122 +1,92 @@
 {
   "name": [
-    "nem",
-    "name"
+    "nem"
   ],
   "count": [
-    "numba",
-    "count"
+    "numba"
   ],
   "price": [
-    "money price",
-    "price"
+    "money price"
   ],
   "user": [
-    "person wey dey use am",
-    "user"
+    "person wey dey use am"
   ],
   "total": [
-    "everything together",
-    "total"
+    "everything together"
   ],
   "message": [
-    "write-up",
-    "message"
+    "write-up"
   ],
   "error": [
-    "mistake",
-    "error"
+    "mistake"
   ],
   "payload": [
-    "information",
-    "payload"
+    "information"
   ],
   "item_list": [
-    "group list",
-    "item_list"
+    "group list"
   ],
   "index": [
-    "position",
-    "index"
+    "position"
   ],
   "data_value": [
-    "wetin e worth",
-    "data_value"
+    "wetin e worth"
   ],
   "item": [
-    "thing",
-    "item"
+    "thing"
   ],
   "num": [
-    "digit",
-    "num"
+    "digit"
   ],
   "text": [
-    "written word",
-    "text"
+    "written word"
   ],
   "result": [
-    "wetin comot",
-    "result"
+    "wetin comot"
   ],
   "input": [
-    "wetin you type",
-    "input"
+    "wetin you type"
   ],
   "output": [
-    "wetin e give",
-    "output"
+    "wetin e give"
   ],
   "file_ref": [
-    "file dem",
-    "file_ref"
+    "file dem"
   ],
   "path": [
-    "road",
-    "path"
+    "road"
   ],
   "length": [
-    "how long",
-    "length"
+    "how long"
   ],
   "size": [
-    "how big",
-    "size"
+    "how big"
   ],
   "key": [
-    "lock key",
-    "key"
+    "lock key"
   ],
   "kind": [
-    "sort",
-    "kind"
+    "sort"
   ],
   "status": [
-    "where e dey",
-    "status"
+    "where e dey"
   ],
   "flag": [
-    "marker",
-    "flag"
+    "marker"
   ],
   "id": [
-    "mark id",
-    "id"
+    "mark id"
   ],
   "age": [
-    "how old",
-    "age"
+    "how old"
   ],
   "score": [
-    "point",
-    "score"
+    "point"
   ],
   "amount": [
-    "how much",
-    "amount"
+    "how much"
   ],
   "password": [
-    "secret word",
-    "password"
+    "secret word"
   ]
 }

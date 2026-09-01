@@ -8,7 +8,7 @@
   "regions": [
     "West Africa"
   ],
-  "version": "0.17.1",
+  "version": "0.18.1",
   "displayName": "Igbo",
   "description": "Igbo keyword map — starter pack (community contributions welcome)",
   "reviewStatus": "starter",
@@ -35,155 +35,124 @@
   "keywords": {
     "IF": [
       "ọ bụrụ na",
-      "oburu",
-      "if"
+      "oburu"
     ],
     "ELSE": [
       "ọ bụghị ma ọ bụ",
-      "ozo",
-      "else"
+      "ozo"
     ],
     "FOR": [
-      "maka",
-      "for"
+      "maka"
     ],
     "WHILE": [
-      "mgbe",
-      "while"
+      "mgbe"
     ],
     "BREAK": [
       "kwụsị",
       "nkwụsị",
-      "ikwusi",
-      "break"
+      "ikwusi"
     ],
     "CONTINUE": [
       "ga n'ihu",
       "gaaba",
-      "gaa",
-      "continue"
+      "gaa"
     ],
     "SWITCH": [
       "họrọ",
-      "dịka",
-      "switch"
+      "dịka"
     ],
     "CASE": [
-      "ọnọdụ",
-      "case"
+      "ọnọdụ"
     ],
     "DEFAULT": [
-      "ndabara",
-      "default"
+      "ndabara"
     ],
     "FUNCTION": [
       "ọrụ",
-      "kowa",
-      "function"
+      "kowa"
     ],
     "RETURN": [
       "lọghachi",
       "laghachi",
-      "ibia",
-      "return"
+      "ibia"
     ],
     "ASYNC": [
-      "ngwa ngwa",
-      "async"
+      "ngwa ngwa"
     ],
     "AWAIT": [
-      "chere",
-      "await"
+      "chere"
     ],
     "TRY": [
       "nwaa",
       "trai",
-      "nwapụ",
-      "try"
+      "nwapụ"
     ],
     "CATCH": [
       "jide",
-      "ewezuga",
-      "catch"
+      "ewezuga"
     ],
     "FINALLY": [
       "ikpeazụ",
-      "nikpaazu",
-      "finally"
+      "nikpaazu"
     ],
     "THROW": [
       "tụba",
       "bulie",
-      "tufuo",
-      "throw"
+      "tufuo"
     ],
     "LET": [
       "ka",
-      "nye",
-      "let"
+      "nye"
     ],
     "CONST": [
-      "nkịtị",
-      "const"
+      "nkịtị"
     ],
     "CLASS": [
       "klasi",
-      "klas",
-      "class"
+      "klas"
     ],
     "EXTENDS": [
-      "gbatịa",
-      "extends"
+      "gbatịa"
     ],
     "NEW": [
-      "ọhụrụ",
-      "new"
+      "ọhụrụ"
     ],
     "THIS": [
       "nke a",
-      "nkea",
-      "this"
+      "nkea"
     ],
     "IMPORT": [
       "bubata",
       "ibubata",
-      "nwetakwa",
-      "import"
+      "nwetakwa"
     ],
     "EXPORT": [
-      "pụta",
-      "export"
+      "pụta"
     ],
     "PRINT": [
       "gosipụta",
-      "deputa",
-      "print"
+      "deputa"
     ],
     "TRUE": [
       "eziokwu",
       "ezi",
-      "naEzi",
-      "true"
+      "naEzi"
     ],
     "FALSE": [
       "ụgha",
       "asi",
-      "naỤgha",
-      "false"
+      "naỤgha"
     ],
     "NULL": [
       "efu",
-      "odighi",
-      "null"
+      "odighi"
     ],
     "UNDEFINED": [
-      "akọwaghị",
-      "undefined"
+      "akọwaghị"
     ],
     "ELIF": [
       "ozobu",
-      "maOBuru",
-      "elif"
+      "maOBuru"
     ],
     "LOOP": [
       "loop"
@@ -207,8 +176,7 @@
       "yield"
     ],
     "LAMBDA": [
-      "lamuda",
-      "lambda"
+      "lamuda"
     ],
     "DEFER": [
       "defer"
@@ -310,17 +278,14 @@
       "map"
     ],
     "AND": [
-      "ma",
-      "and"
+      "ma"
     ],
     "OR": [
       "obu",
-      "maọbụ",
-      "or"
+      "maọbụ"
     ],
     "NOT": [
-      "obughi",
-      "not"
+      "obughi"
     ],
     "IN": [
       "in"

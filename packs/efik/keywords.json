@@ -26,7 +26,7 @@
   ],
   "SWITCH": [
     "sat",
-    "switch"
+    "match"
   ],
   "CASE": [
     "ini",
@@ -38,7 +38,7 @@
   ],
   "FUNCTION": [
     "ufok",
-    "function"
+    "def"
   ],
   "RETURN": [
     "fiak",
@@ -57,7 +57,7 @@
   ],
   "CATCH": [
     "nyim",
-    "catch"
+    "except"
   ],
   "FINALLY": [
     "ke mme",
@@ -89,7 +89,7 @@
   ],
   "THIS": [
     "idem",
-    "this"
+    "self"
   ],
   "IMPORT": [
     "bo",
@@ -113,11 +113,11 @@
   ],
   "NULL": [
     "nkpo",
-    "null"
+    "none"
   ],
   "UNDEFINED": [
     "nde",
-    "undefined"
+    "none"
   ],
   "ELIF": [
     "elif"
